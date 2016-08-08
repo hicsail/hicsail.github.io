@@ -1,49 +1,97 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>SAIL</title>
-		<link rel="stylesheet" href="stylesheets/styles.css">
-		<link rel="stylesheet" href="stylesheets/github-light.css">
-		<meta name="viewport" content="width=device-width">
-	</head>
-	<body>
-		<div class="wrapper">
-			<header>
-				<a href="index.html">
-				<img id="logo" src="./images/s_logo.svg">
-				</a>
-				<!--
-				<nav>
-					<ul>
-					  <li><a href="#about">About</a></li>
-					  <li><a href="#projects">Projects</a></li>
-					  <li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-				-->
-			</header>
-			<section id="about">
-				<img id="pattern" src="./images/s_pattern.png">
-				<p class="blurb">
-				The Software and Application Innovation Lab at the Hariri Institute for Computing is part of Boston University's research department. The group's goal is to develop cutting edge software to solve tech problems and create new opportunities for students and administrators. 
-				</p>
-				<p class="blurb">
-				For more information or to apply to join SAIL, please contact 
-				<a href="mailto:fjansen@bu.edu">Frederick Jansen</a> or
-				<a href="mailto:lapets@bu.edu">Andrei Lapets</a>.
-			</section>
-			<br>
-			<br>
-			
-			<footer>
-				<a href="http://www.bu.edu/"><img id="bu_logo" src="./images/bu-logo.gif"></a>
-				<a href="http://www.bu.edu/hic/" id="hic">Rafik B. Hariri Institute for Computing<br>and Computational Science & Computing</a>
-			</footer>
+---
+layout: default
+---
+<div id="fullpage">
+
+	<div id="section0" class="section" data-anchor="about">
+		<section class="content" >
+			<div class="sleft">
+			  <h2>Software & Application Innovation Lab</h2>
+			  <p>The Software & Application Innovation Lab (SAIL) at Boston University’s Hariri Institute for Computing provides professional software consulting, design, and development capacity to support research efforts across Boston University that involve or require custom software, computational, and data-centric components. SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
+			</div>
+			<div class="sright">
+				<!--<div class="patternbox">
+					<div class="testblock">
+						<div class="testunit">
+						</div>
+					</div>
+					<div class="testblock">
+						<div class="testunit">
+						</div>
+					</div>
+					<div class="testblock">
+						<div class="testunit">
+						</div>
+					</div>
+				</div>-->
+				<div class="row">
+					<div id="svg" class="col-md-9">
+					</div>
+					<div class="col-md-3">
+						<form id="pattern-options">
+							<div class="form-group">
+							  <label for="pattern-size">Pattern Size</label>
+							  <input id="pattern-size" class="form-control" type="numeric" value="240">
+							</div>
+							<div class="form-group">
+							  <label for="grid-size-x">Grid Size X</label>
+							  <input id="grid-size-x" class="form-control" type="numeric" value="3">
+							</div>
+							<div class="form-group">
+							  <label for="grid-size-y">Grid Size Y</label>
+							  <input id="grid-size-y" class="form-control" type="numeric" value="3">
+							</div>
+							<hr />
+							<div class="form-group">
+							  <label for="svg-text">SVG Output</label>
+							  <textarea id="svg-text" class="form-control"></textarea>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<div id="section1" class="section" data-anchor="projects">
+		
+		<div class="sleft entries">
+			<h2 id="entrytitle">Projects</h2>
+			<p id="entrytext"></p>
+			<a id="entrylink" href=""></a>
+		</div>
+		<div class="sright">
+			{% for post in site.posts %}
+			<div>
+				<img class="pimg thumbnail" src="{{ post.image }}">
+				<h2 class="ptitle pcontent">{{ post.title }}</h2>
+				<p class="ptext pcontent">{{ post.excerpt }}</p>
+				<a class="pcontent" href="{{ post.url }}"></a>
+			</div>
+			{% endfor %}
+			<img class="thumbnail" src="/img/p4.svg">
+			<img class="thumbnail" src="/img/p5.svg">
+			<img class="thumbnail" src="/img/p6.svg">
+			<img class="thumbnail" src="/img/p7.svg">
+			<img class="thumbnail" src="/img/p8.svg">
+			<img class="thumbnail" src="/img/p9.svg">
+			<img class="thumbnail" src="/img/p10.svg">
+			<img class="thumbnail" src="/img/p11.svg">
+			<img class="thumbnail" src="/img/p12.svg">
+			<img class="thumbnail" src="/img/p13.svg">
+			<img class="thumbnail" src="/img/p14.svg">
+			<img class="thumbnail" src="/img/p15.svg">
+			<img class="thumbnail" src="/img/p16.svg">
+			<img class="thumbnail" src="/img/p17.svg">
+			<img class="thumbnail" src="/img/p18.svg">
+		</div>
+	</div>
+	<div id="section2" class="section" data-anchor="contact">
+		<div class="sleft">
+			<h2>Contact Us</h2>
+		</div>
+		<div class="sright">
 			
 		</div>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="javascripts/scale.fix.js"></script>
-	</body>
-</html>
+	</div>
+</div>
