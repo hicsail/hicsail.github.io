@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>  Dietary Approaches to Stopping Hypertension (DASH) for Health App |  SAIL </title>
+	<link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/jquery.fullPage.css">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+ 
+	<div id="main">
+ 
+		<header>
+			<img id="logo" src="/img/s_logo.svg">
+			<h1 id="wordmark">SAIL</h1>
+			<nav role="navigation">
+			<div id="mobilenav">
+			</div>
+			<input type="checkbox" id="ham">
+			<label for="ham">
+				<ul id="menu">
+					<li class="tlink" data-menuanchor="about"><a id="labout" class="llink ldefault" href="#about">ABOUT</a></li>
+					<li class="tlink" data-menuanchor="projects"><a id="lprojects" class="llink ldefault" href="#projects">PROJECTS</a></li>
+					<li class="tlink" data-menuanchor="contact"><a id="lcontact" class="llink ldefault" href="#contact">CONTACT</a></li>
+				</ul>
+			</label>
+			</nav>
+		</header>
+	 
+		<h2 class="content">Dietary Approaches to Stopping Hypertension (DASH) for Health App</h2>
+ 
+<img src="/img/dash-t.jpg" />
+ 
+SAIL worked with BU Medical Campus IT to design and build a cross-platform mobile application for Devin Mann, Associate Professor of Medicine at BU and an Associate Chief Medical Information Officer at Boston Medical Center. The app enables users to track their food consumption by tapping tiles that correspond to the eight components of a healthy diet. The app connects via Bluetooth to a blood pressure monitor, scale, and pedometer; it also allows users to connect with health coaches through a messaging function. This work demonstrates how a resource like SAIL can enable a successful and sustained mobile health research ecosystem at BU.
+<br><br>
+<span class="contitle">Contributors:</span><br>
+<span class="cont">
+<a href="test" id="conlink">Frederick Jansen</a> Software Engineer
+</span>
+	 
+		<footer>
+			<a href="http://www.bu.edu/"><img id="bu_logo" src="/img/bu-logo.gif"></a>
+			<a href="http://www.bu.edu/hic/" id="hic">Rafik B. Hariri Institute for Computing<br>and Computational Science & Computing</a>
+		</footer>
+ 
+	</div>
+  
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+	<!--FlowType------>
+	<script src="js/flowtype.js"></script>
+	<script>
+		$('#fullpage').flowtype({
+			minFont : 18,
+			maxFont : 26
+		});
+	</script>
+	
+	<!--JS FullPage scroll-->
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				//Navigation
+				anchors: ['about', 'projects', 'contact'],
+				menu: '#menu',
+				navigation: false,
+				navigationPosition: 'right',
+				navigationTooltips: ['about', 'projects', 'contact'],
+				showActiveTooltip: false,
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+
+				//Scrolling
+				css3: true,
+				scrollingSpeed: 500,
+				autoScrolling: true,
+				fitToSection: true,
+				fitToSectionDelay: 1000,
+				scrollBar: false,
+				easing: 'easeInOutCubic',
+				easingcss3: 'ease',
+				loopBottom: false,
+				loopTop: false,
+				loopHorizontal: true,
+				continuousVertical: false,
+				normalScrollElements: '#element1, .element2',
+				scrollOverflow: false,
+				scrollOverflowOptions: null,
+				touchSensitivity: 15,
+				normalScrollElementTouchThreshold: 5,
+				bigSectionsDestination: null,
+
+				//Design
+				controlArrows: true,
+				verticalCentered: false,
+				responsiveWidth: 0,
+				responsiveHeight: 0,
+				keyboardScrolling: false,
+
+				//events
+				onLeave: function(index, nextIndex, direction){},
+				afterLoad: function(anchorLink, index){},
+				afterRender: function(){},
+				afterResize: function(){},
+				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+			});
+		});
+	</script>
+	<!--Disable Mouse Scroll-->
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage.setAllowScrolling(false, 'up, down');({
+			});
+		});
+	</script>
+	<!--SAIL Pattern Generator-->
+	<script src="js/d3.min.js"></script>
+	<script src="js/generator.js"></script>
+	<!--Link Hover and Active Colors-->
+	<script>
+		$('a').mouseenter(function(e) {
+			var colors = ['lred', 'lorange', 'lgreen', 'lblue'];
+			var randomnumber = Math.floor(Math.random() * colors.length);
+			$(this).removeClass('ldefault');
+			$(this).addClass(colors[randomnumber]);
+			});
+		$('a').mouseleave(function(e) {
+			$(this).removeClass('lred lorange lgreen lblue');
+			$(this).addClass('ldefault');
+		});
+
+		var $div = $("body");
+		var observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.attributeName === "class") {
+					var attributeValue = $(mutation.target).prop(mutation.attributeName);
+					if (attributeValue === "fp-viewing-about") {
+						var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
+						var arandomnumber = Math.floor(Math.random() * acolors.length);
+						$('a').removeClass('ared aorange agreen ablue');
+						$('a').addClass('ldefault');
+						$('#labout').removeClass('ldefault');
+						$('#labout').addClass(acolors[arandomnumber]);
+					} else if (attributeValue === "fp-viewing-projects") {
+						var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
+						var arandomnumber = Math.floor(Math.random() * acolors.length);
+						$('a').removeClass('ared aorange agreen ablue');
+						$('a').addClass('ldefault');
+						$('#lprojects').removeClass('ldefault');
+						$('#lprojects').addClass(acolors[arandomnumber]);
+					} else if (attributeValue === "fp-viewing-contact") {
+						var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
+						var arandomnumber = Math.floor(Math.random() * acolors.length);
+						$('a').removeClass('ared aorange agreen ablue');
+						$('a').addClass('ldefault');
+						$('#lcontact').removeClass('ldefault');
+						$('#lcontact').addClass(acolors[arandomnumber]);
+					} else {
+						$('a').removeClass('ared aorange agreen ablue');
+						$('a').addClass('ldefault');
+					}
+				};
+			});
+		});
+
+		observer.observe($div[0],  {
+			attributes: true
+		});
+	</script>
+	<!--Nav Hamburger toggle-->
+	<script>
+	$('#ham').click(function() {
+		$('#mobilenav').toggleClass('mactive');
+	});
+	</script>
+	<!--Switching post content-->
+	<script>
+		$(".sright").on('click', '.pimg', function() {
+			$("#entrytitle").html($(this).siblings("h2").html());
+			$("#entrytext").html($(this).siblings("p").html());
+			$("#entrylink").attr("href", $(this).siblings("a").attr("href"));
+			$("#entrylink").html("READ MORE");
+		});
+	</script>
+	
+  
+</body>
+</html>

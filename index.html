@@ -6,24 +6,12 @@ layout: default
 	<div id="section0" class="section" data-anchor="about">
 		<section class="content" >
 			<div class="sleft">
-			  <h2>Software & Application Innovation Lab</h2>
-			  <p>The Software & Application Innovation Lab (SAIL) at Boston University’s Hariri Institute for Computing provides professional software consulting, design, and development capacity to support research efforts across Boston University that involve or require custom software, computational, and data-centric components. SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
+				<div class="leftcontent">
+					<h2>Software & Application Innovation Lab</h2>
+					<p>The Software & Application Innovation Lab (SAIL) at Boston University’s Hariri Institute for Computing provides professional software consulting, design, and development capacity to support research efforts across Boston University that involve or require custom software, computational, and data-centric components. SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
+				</div>
 			</div>
 			<div class="sright">
-				<!--<div class="patternbox">
-					<div class="testblock">
-						<div class="testunit">
-						</div>
-					</div>
-					<div class="testblock">
-						<div class="testunit">
-						</div>
-					</div>
-					<div class="testblock">
-						<div class="testunit">
-						</div>
-					</div>
-				</div>-->
 				<div class="row">
 					<div id="svg" class="col-md-9">
 					</div>
@@ -35,11 +23,11 @@ layout: default
 							</div>
 							<div class="form-group">
 							  <label for="grid-size-x">Grid Size X</label>
-							  <input id="grid-size-x" class="form-control" type="numeric" value="3">
+							  <input id="grid-size-x" class="form-control" type="numeric" value="8">
 							</div>
 							<div class="form-group">
 							  <label for="grid-size-y">Grid Size Y</label>
-							  <input id="grid-size-y" class="form-control" type="numeric" value="3">
+							  <input id="grid-size-y" class="form-control" type="numeric" value="5">
 							</div>
 							<hr />
 							<div class="form-group">
@@ -56,39 +44,46 @@ layout: default
 	<div id="section1" class="section" data-anchor="projects">
 		
 		<div class="sleft entries">
-			<h2 id="entrytitle">Projects</h2>
-			<p id="entrytext"></p>
-			<a id="entrylink" href=""></a>
-		</div>
-		<div class="sright">
-			{% for post in site.posts %}
-			<div>
-				<img class="pimg thumbnail" src="{{ post.image }}">
-				<h2 class="ptitle pcontent">{{ post.title }}</h2>
-				<p class="ptext pcontent">{{ post.excerpt }}</p>
-				<a class="pcontent" href="{{ post.url }}"></a>
+			<div class="leftcontent">
+				<h2 id="entrytitle">Projects</h2>
+				<p id="entrytext"></p>
+				<a id="entrylink" href=""></a>
 			</div>
-			{% endfor %}
-			<img class="thumbnail" src="/img/p4.svg">
-			<img class="thumbnail" src="/img/p5.svg">
-			<img class="thumbnail" src="/img/p6.svg">
-			<img class="thumbnail" src="/img/p7.svg">
-			<img class="thumbnail" src="/img/p8.svg">
-			<img class="thumbnail" src="/img/p9.svg">
-			<img class="thumbnail" src="/img/p10.svg">
-			<img class="thumbnail" src="/img/p11.svg">
-			<img class="thumbnail" src="/img/p12.svg">
-			<img class="thumbnail" src="/img/p13.svg">
-			<img class="thumbnail" src="/img/p14.svg">
-			<img class="thumbnail" src="/img/p15.svg">
-			<img class="thumbnail" src="/img/p16.svg">
-			<img class="thumbnail" src="/img/p17.svg">
-			<img class="thumbnail" src="/img/p18.svg">
+		</div>
+		<div class="sright projectthumbs">
+			<div id="thumbnailcontainer">
+				{% for post in site.posts %}
+				<div>
+					<img class="pimg thumbnail" src="{{ post.image }}">
+					<h2 class="ptitle pcontent">{{ post.title }}</h2>
+					<p class="ptext pcontent">{{ post.excerpt }}</p>
+					<a class="pcontent" href="{{ post.url }}"></a>
+				</div>
+				{% endfor %}
+				<img class="thumbnail" src="/img/p4.svg">
+				<img class="thumbnail" src="/img/p5.svg">
+				<img class="thumbnail" src="/img/p6.svg">
+				<img class="thumbnail" src="/img/p7.svg">
+				<img class="thumbnail" src="/img/p8.svg">
+				<img class="thumbnail" src="/img/p9.svg">
+				<img class="thumbnail" src="/img/p10.svg">
+				<img class="thumbnail" src="/img/p11.svg">
+				<img class="thumbnail" src="/img/p12.svg">
+				<img class="thumbnail" src="/img/p13.svg">
+				<img class="thumbnail" src="/img/p14.svg">
+				<img class="thumbnail" src="/img/p15.svg">
+				<img class="thumbnail" src="/img/p16.svg">
+				<img class="thumbnail" src="/img/p17.svg">
+				<img class="thumbnail" src="/img/p18.svg">
+			</div>
 		</div>
 	</div>
 	<div id="section2" class="section" data-anchor="contact">
 		<div class="sleft">
-			<h2>Contact Us</h2>
+			<div class="leftcontent">
+				<h2>Contact Us</h2>
+				<p></p>
+			</div>
 		</div>
 		<div class="sright">
 			

@@ -40,8 +40,17 @@
   
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	
+	<!--FlowType------>
+	<script src="js/flowtype.js"></script>
+	<script>
+		$('#fullpage').flowtype({
+			minFont : 18,
+			maxFont : 26
+		});
+	</script>
+	
 	<!--JS FullPage scroll-->
-	<script src="/js/jquery.fullPage.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -80,6 +89,7 @@
 				verticalCentered: false,
 				responsiveWidth: 0,
 				responsiveHeight: 0,
+				keyboardScrolling: false,
 
 				//events
 				onLeave: function(index, nextIndex, direction){},
@@ -88,6 +98,13 @@
 				afterResize: function(){},
 				afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 				onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+			});
+		});
+	</script>
+	<!--Disable Mouse Scroll-->
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage.setAllowScrolling(false, 'up, down');({
 			});
 		});
 	</script>
@@ -153,11 +170,11 @@
 	</script>
 	<!--Switching post content-->
 	<script>
-		$(".sright").on('click', '.thumbnail', function() {
+		$(".sright").on('click', '.pimg', function() {
 			$("#entrytitle").html($(this).siblings("h2").html());
 			$("#entrytext").html($(this).siblings("p").html());
 			$("#entrylink").attr("href", $(this).siblings("a").attr("href"));
-			$("#entrylink").html("Read More");
+			$("#entrylink").html("READ MORE");
 		});
 	</script>
 	
