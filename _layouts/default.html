@@ -13,17 +13,19 @@
 	<div id="main">
  
 		<header>
-			<img id="logo" src="/img/s_logo.svg">
-			<h1 id="wordmark">SAIL</h1>
+			<a id='logolink' href='/'>
+				<img id="logo" src="/img/s_logo.svg">
+				<h1 id="wordmark">SAIL</h1>
+			</a>
 			<nav role="navigation">
 			<div id="mobilenav">
 			</div>
 			<input type="checkbox" id="ham">
 			<label for="ham">
-				<ul id="menu">
-					<li class="tlink" data-menuanchor="about"><a id="labout" class="llink ldefault" href="#about">ABOUT</a></li>
-					<li class="tlink" data-menuanchor="projects"><a id="lprojects" class="llink ldefault" href="#projects">PROJECTS</a></li>
-					<li class="tlink" data-menuanchor="contact"><a id="lcontact" class="llink ldefault" href="#contact">CONTACT</a></li>
+				<ul class="menu menuunder">
+					<li class="tlink" data-menuanchor="about"><a id="labout" class="llink ldefault" href="/#about">ABOUT</a></li>
+					<li class="tlink" data-menuanchor="projects"><a id="lprojects" class="llink ldefault" href="/#projects">PROJECTS</a></li>
+					<li class="tlink" data-menuanchor="contact"><a id="lcontact" class="llink ldefault" href="/#contact">CONTACT</a></li>
 				</ul>
 			</label>
 			</nav>
@@ -41,7 +43,7 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	
 	<!--FlowType------>
-	<script src="js/flowtype.js"></script>
+	<script src="/js/flowtype.js"></script>
 	<script>
 		$('#fullpage').flowtype({
 			minFont : 18,
@@ -50,7 +52,7 @@
 	</script>
 	
 	<!--JS FullPage scroll-->
-	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="/js/jquery.fullPage.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -166,6 +168,25 @@
 	<script>
 	$('#ham').click(function() {
 		$('#mobilenav').toggleClass('mactive');
+		if ( $('.menu').hasClass('menuunder')) {
+			$('.menu').delay(270).queue(
+				function() {
+					$(this).toggleClass('menuunder');
+					$(this).toggleClass('menuover');
+					$(this).dequeue();
+				});
+		} else {
+			$('.menu').toggleClass('menuunder');
+			$('.menu').toggleClass('menuover');
+		}
+	});
+	</script>
+	<script>
+	$('.llink').click(function() {
+		$('#ham').prop('checked', false);
+		$('#mobilenav').removeClass('mactive');
+		$('.menu').removeClass('menuover');
+		$('.menu').addClass('menuunder');
 	});
 	</script>
 	<!--Switching post content-->
@@ -175,6 +196,10 @@
 			$("#entrytext").html($(this).siblings("p").html());
 			$("#entrylink").attr("href", $(this).siblings("a").attr("href"));
 			$("#entrylink").html("READ MORE");
+		});
+		$(".sright").on('click', '.personimg', function() {
+			$("#contacttitle").html($(this).siblings("h2").html());
+			$("#contacttext").html($(this).siblings("p").html());
 		});
 	</script>
 	
