@@ -1,9 +1,21 @@
 ---
 layout: default
 ---
+
+<div id="fullpage">
+
+	<div id="section0" class="section" data-anchor="about">
+		<section class="content" >
+			<div class="sleft">
+				<div class="leftcontent">
+					<h2 class="content">{{page.title}}</h2>
+					<p>{{ content }}</p>
+				</div>
+			</div>
+			<div class="sright">
+				<img src="{{ page.image }}" />
+			</div>
+		</section>
+	</div>
+</div>
  
-<h2 class="content">{{page.title}}</h2>
- 
-<img src="{{ page.image }}" />
- 
-{{ content }}

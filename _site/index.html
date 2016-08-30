@@ -13,17 +13,19 @@
 	<div id="main">
  
 		<header>
-			<img id="logo" src="/img/s_logo.svg">
-			<h1 id="wordmark">SAIL</h1>
+			<a id='logolink' href='/'>
+				<img id="logo" src="/img/s_logo.svg">
+				<h1 id="wordmark">SAIL</h1>
+			</a>
 			<nav role="navigation">
 			<div id="mobilenav">
 			</div>
 			<input type="checkbox" id="ham">
 			<label for="ham">
-				<ul id="menu">
-					<li class="tlink" data-menuanchor="about"><a id="labout" class="llink ldefault" href="#about">ABOUT</a></li>
-					<li class="tlink" data-menuanchor="projects"><a id="lprojects" class="llink ldefault" href="#projects">PROJECTS</a></li>
-					<li class="tlink" data-menuanchor="contact"><a id="lcontact" class="llink ldefault" href="#contact">CONTACT</a></li>
+				<ul class="menu menuunder">
+					<li class="tlink" data-menuanchor="about"><a id="labout" class="llink ldefault" href="/#about">ABOUT</a></li>
+					<li class="tlink" data-menuanchor="projects"><a id="lprojects" class="llink ldefault" href="/#projects">PROJECTS</a></li>
+					<li class="tlink" data-menuanchor="contact"><a id="lcontact" class="llink ldefault" href="/#contact">CONTACT</a></li>
 				</ul>
 			</label>
 			</nav>
@@ -78,7 +80,7 @@
 				<a id="entrylink" href=""></a>
 			</div>
 		</div>
-		<div class="sright projectthumbs">
+		<div class="sright personthumbs">
 			<div id="thumbnailcontainer">
 				
 				<div>
@@ -90,7 +92,7 @@
 <span class="cont">
 <a href="test" id="conlink">Frederick Jansen</a> Software Engineer
 </span></p>
-					<a class="pcontent" href="/2016/07/28/third/"></a>
+					<a class="pcontent" href="/project/2016/07/28/third/"></a>
 				</div>
 				
 				<div>
@@ -103,7 +105,7 @@
 <a href="test" id="conlink">Ben Getchell</a> Software Engineer Intern<br>
 <a href="test" id="conlink">Frederick Jansen</a> Software Engineer<br>
 </span></p>
-					<a class="pcontent" href="/2016/07/28/Second/"></a>
+					<a class="pcontent" href="/project/2016/07/28/Second/"></a>
 				</div>
 				
 				<div>
@@ -119,7 +121,7 @@
 </span>
 <!--excerpt--> 
 </p>
-					<a class="pcontent" href="/2016/07/19/Test/"></a>
+					<a class="pcontent" href="/project/2016/07/19/Test/"></a>
 				</div>
 				
 				<img class="thumbnail" src="/img/p4.svg">
@@ -143,12 +145,44 @@
 	<div id="section2" class="section" data-anchor="contact">
 		<div class="sleft">
 			<div class="leftcontent">
-				<h2>Contact Us</h2>
-				<p></p>
+				<h2 id='contacttitle'>Contact Us</h2>
+				<p id='contacttext'>If you think SAIL may be able to help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a class='conlink' href='http://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or contact Andrei Lapets (<a class='conlink' href="mailto:lapets@bu.edu?subject=Question%20about%20SAIL">lapets@bu.edu</a>), Director of Research Development, directly. If you are seeking other forms of support for your research (including seed funding), you may also want to review the <a class='conlink' href='http://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.
+				<br><br>SAIL is seeking professional software engineers and student software engineer interns. Please contact Andrei Lapets (<a class='conlink' href="mailto:lapets@bu.edu?subject=SAIL%20Application">lapets@bu.edu</a>) or Frederick Jansen (<a class='conlink' href="mailto:fjansen@bu.edu?subject=SAIL%20Application">fjansen@bu.edu</a>) if you are interested applying for a position.</p>
 			</div>
 		</div>
-		<div class="sright">
-			
+		<div class="sright projectthumbs">
+			<div id="thumbnailcontainer">
+				
+				<div>
+					<img class="personimg thumbnail" src="/img/alapets.jpg">
+					<h2 class="persontitle personcontent">Andrei Lapets</h2>
+					<p class="persontext personcontent">Andrei Lapets, Director of Research Development, Computer Science lecturer and formerly an Institute Postdoctoral Fellow, develops and manages strategic research initiatives. He provides support for faculty, researchers, and students who are planning, proposing, or engaging in interdisciplinary or collaborative research efforts. Andrei also guides the Hariri Research Award program and oversees the Software and Application Innovation Lab (SAIL).
+<br><br>
+<a id='conlink' href="mailto:lapets@bu.edu?subject=SAIL%20Application">lapets@bu.edu</a></p>
+				</div>
+				
+				<div>
+					<img class="personimg thumbnail" src="/img/fjansen.jpg">
+					<h2 class="persontitle personcontent">Frederick Jansen</h2>
+					<p class="persontext personcontent">Frederick Jansen, Software Engineer, is responsible for the design and development of software in support of computational research and is part of the Software and Application Innovation Lab (SAIL).
+<br><br>
+<a id='conlink' href="mailto:fjansen@bu.edu?subject=SAIL%20Application">fjansen@bu.edu</a></p>
+				</div>
+				
+				<img class="thumbnail" src="/img/p4.svg">
+				<img class="thumbnail" src="/img/p5.svg">
+				<img class="thumbnail" src="/img/p6.svg">
+				<img class="thumbnail" src="/img/p7.svg">
+				<img class="thumbnail" src="/img/p8.svg">
+				<img class="thumbnail" src="/img/p9.svg">
+				<img class="thumbnail" src="/img/p10.svg">
+				<img class="thumbnail" src="/img/p11.svg">
+				<img class="thumbnail" src="/img/p12.svg">
+				<img class="thumbnail" src="/img/p13.svg">
+				<img class="thumbnail" src="/img/p14.svg">
+				<img class="thumbnail" src="/img/p15.svg">
+				<img class="thumbnail" src="/img/p16.svg">
+			</div>
 		</div>
 	</div>
 </div>
@@ -163,7 +197,7 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	
 	<!--FlowType------>
-	<script src="js/flowtype.js"></script>
+	<script src="/js/flowtype.js"></script>
 	<script>
 		$('#fullpage').flowtype({
 			minFont : 18,
@@ -172,7 +206,7 @@
 	</script>
 	
 	<!--JS FullPage scroll-->
-	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="/js/jquery.fullPage.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -288,6 +322,25 @@
 	<script>
 	$('#ham').click(function() {
 		$('#mobilenav').toggleClass('mactive');
+		if ( $('.menu').hasClass('menuunder')) {
+			$('.menu').delay(270).queue(
+				function() {
+					$(this).toggleClass('menuunder');
+					$(this).toggleClass('menuover');
+					$(this).dequeue();
+				});
+		} else {
+			$('.menu').toggleClass('menuunder');
+			$('.menu').toggleClass('menuover');
+		}
+	});
+	</script>
+	<script>
+	$('.llink').click(function() {
+		$('#ham').prop('checked', false);
+		$('#mobilenav').removeClass('mactive');
+		$('.menu').removeClass('menuover');
+		$('.menu').addClass('menuunder');
 	});
 	</script>
 	<!--Switching post content-->
@@ -297,6 +350,10 @@
 			$("#entrytext").html($(this).siblings("p").html());
 			$("#entrylink").attr("href", $(this).siblings("a").attr("href"));
 			$("#entrylink").html("READ MORE");
+		});
+		$(".sright").on('click', '.personimg', function() {
+			$("#contacttitle").html($(this).siblings("h2").html());
+			$("#contacttext").html($(this).siblings("p").html());
 		});
 	</script>
 	
