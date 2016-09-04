@@ -1,5 +1,9 @@
 $(function () {
-  var patternSize = 240, gridSizeX = 8, gridSizeY = 5;
+  var patternSize = 240, 
+      gridSizeX = 8,
+      gridSizeY = 5,
+      numHor = gridSizeX * 4,
+      numVer = gridSizeY * 4;
   var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#FFFFFF'];
 
   // -----------------------------------------------------------------------------------
@@ -27,7 +31,7 @@ $(function () {
           rotateTriangle(target);
         } else {
           var currentColor = d3.select(target).attr('fill');
-          var color = randomColor(100, 100);
+          var color = randomColor(numHor/4, d3.select(target).attr('column'));
           d3.select(target).attr('fill', color).attr('data', curTime);
         }
       }
@@ -37,11 +41,7 @@ $(function () {
   }
 
   function drawSVG(svg) {
-    var numHor = gridSizeX * 4,
-      numVer = gridSizeY * 4,
-      triangleWidth = patternSize / 4,
-      polys = [];
-
+    var triangleWidth = patternSize / 4, polys = [];
     for (var j = 0; j < numVer; j++) {
       for (var i = 0; i < numHor; i++) {
         var rotated = Math.round(Math.random());
@@ -54,7 +54,8 @@ $(function () {
         g.append('polygon')
           .attr('points', points)
           .attr('fill', color)
-          .attr('opacity', Math.min(1.0, (4*i)/numHor));
+          .attr('opacity', Math.min(1.0, (4*i)/numHor))
+          .attr('column', i);
         polys.push(buildPoly(points, color));
 
         // Draw second part of square
@@ -63,7 +64,8 @@ $(function () {
         g.append('polygon')
           .attr('points', points)
           .attr('fill', color)
-          .attr('opacity', Math.min(1.0, (4*i)/numHor));
+          .attr('opacity', Math.min(1.0, (4*i)/numHor))
+          .attr('column', i);
         polys.push(buildPoly(points, color));
       }
     }
