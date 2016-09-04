@@ -73,7 +73,7 @@ $(function () {
         var rotated = Math.round(Math.random());
         var x = i * triangleWidth;
         var y = j * triangleWidth;
-        var color = randomColor(numHor, i);
+        var color = randomColor(numHor, (0.75*numHor) + (0.25*i)); // Start gradient 3/4 of the way to the edge.
 
         var points = getSVGPoints(x, y, triangleWidth, false, rotated);
         var g = svg.append('g');
