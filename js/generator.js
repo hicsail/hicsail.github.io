@@ -20,12 +20,12 @@ $(function () {
 
     // Change color randomly on mouseover.
     svg.on('mousemove', function () {
+      var target = d3.event.target;
       var curTime = (new Date).getTime();
       if (curTime - d3.select(target).attr('data') > 1000) {
         if (d3.event.shiftKey) {
-          rotateTriangle(d3.event.target);
+          rotateTriangle(target);
         } else {
-          var target = d3.event.target;
           var currentColor = d3.select(target).attr('fill');
           var color = randomColor(100, 100);
           d3.select(target).attr('fill', color).attr('data', curTime);
