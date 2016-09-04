@@ -79,7 +79,8 @@ $(function () {
         var g = svg.append('g');
         g.append('polygon')
           .attr('points', points)
-          .attr('fill', color);
+          .attr('fill', color)
+          .attr('opacity', Math.min(1.0, (4*i)/numHor));
         polys.push(buildPoly(points, color));
 
         // Draw second part of square
