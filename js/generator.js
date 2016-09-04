@@ -293,7 +293,7 @@ $(function () {
   function randomColor(range, point) {
     var range = (range == null) ? 100 : range;
     var point = (point == null) ? (range/50) : point;
-    var rnd = Math.round(Math.random()*(range-1));
+    var rnd = Math.random()*range;
     var choices = [colors[0], colors[1], colors[2], colors[3]];
     return (rnd > point) ? colors[4] : choices[Math.round(Math.random() * (choices.length-1))];
   }
