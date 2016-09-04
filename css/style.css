@@ -292,11 +292,22 @@
 	}
 	
 	.leftcontent{
+        display: table;
+        height: 100%;
 		margin: 0 75px 0 50px;
 		direction: ltr;
 		padding-bottom: 50px;
 	}
-	
+
+    .leftcontent p {
+        margin-bottom:20px;
+	}
+
+    .leftcontent .textblock {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
 	.contitle{
 	}
 	
