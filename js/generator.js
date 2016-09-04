@@ -73,8 +73,8 @@ $(function () {
         var rotated = Math.round(Math.random());
         var x = i * triangleWidth;
         var y = j * triangleWidth;
-        var color = randomColor(numHor/4, i); // Start gradient 3/4 of the way to the edge.
 
+        var color = randomColor(numHor/4, i); // Start gradient 3/4 of the way to the edge.
         var points = getSVGPoints(x, y, triangleWidth, false, rotated);
         var g = svg.append('g');
         g.append('polygon')
@@ -84,11 +84,12 @@ $(function () {
         polys.push(buildPoly(points, color));
 
         // Draw second part of square
-        color = randomColor(numHor, i);
+        color = randomColor(numHor/4, i); // Start gradient 3/4 of the way to the edge.
         points = getSVGPoints(x, y, triangleWidth, true, rotated);
         g.append('polygon')
           .attr('points', points)
-          .attr('fill', color);
+          .attr('fill', color)
+          .attr('opacity', Math.min(1.0, (4*i)/numHor));
         polys.push(buildPoly(points, color));
       }
     }
