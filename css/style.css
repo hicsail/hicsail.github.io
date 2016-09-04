@@ -300,7 +300,9 @@
 	}
 
     .leftcontent p {
-        margin-bottom:20px;
+        text-align: justify;
+        margin-top: 10px;
+        margin-bottom: 10px;
 	}
 
     .leftcontent .textblock {
