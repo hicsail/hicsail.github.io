@@ -300,7 +300,7 @@ $(function () {
    * @returns {string} Hex color value
    */
   function randomColor() {
-    return colors[Math.round(Math.random() * (colors.length - 1))]
+    return choices[Math.round(Math.random() * (choices.length - 1))];
   }
 
   /**
