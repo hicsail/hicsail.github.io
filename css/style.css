@@ -296,7 +296,7 @@
         height: 100%;
 		margin: 0 75px 0 50px;
 		direction: ltr;
-		padding-bottom: 50px;
+		padding-bottom: 0px;
 	}
 
     .leftcontent p {

@@ -18,9 +18,9 @@ $(function () {
       // Fixes need for 1 px overlap hack
       .attr('shape-rendering', 'crispEdges');
 
-    // Rotate on Alt/Option click, change color on click
-    svg.on('click', function () {
-      if (d3.event.altKey) {
+    // Change color randomly on mouseover.
+    svg.on('mousemove', function () {
+      if (d3.event.shiftKey) {
         rotateTriangle(d3.event.target);
       } else {
         changeColor(d3.event.target);
@@ -136,9 +136,8 @@ $(function () {
    * @param target D3 element
    */
   function changeColor(target) {
-    var currentColor = d3.select(target).attr('fill'),
-      color = cycleColor(currentColor);
-
+    var currentColor = d3.select(target).attr('fill');
+    var color = randomColor();
     d3.select(target)
       .attr('fill', color);
   }
@@ -185,27 +184,6 @@ $(function () {
     var rnd = Math.random()*range;
     var choices = [colors[0], colors[1], colors[2], colors[3]];
     return (rnd > point) ? colors[4] : choices[Math.round(Math.random() * (choices.length-1))];
-  }
-
-  /**
-   * Get next color from colors array
-   * @param currentColor Current color in array
-   * @returns {string} Hex color value
-   */
-  function cycleColor(currentColor) {
-    var color;
-
-    for (var i = 0; i < colors.length; i++) {
-      if (i === colors.length - 1) {
-        // Start from first color if end of array
-        color = colors[0];
-        break;
-      } else if (colors[i] === currentColor) {
-        color = colors[i + 1];
-        break;
-      }
-    }
-    return color;
   }
 
   // -------------------
