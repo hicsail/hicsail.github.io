@@ -352,7 +352,7 @@
 		float: right;
 	}
 
-    .sright row {
+    .sright .row {
         overflow: hidden;
     }
 
