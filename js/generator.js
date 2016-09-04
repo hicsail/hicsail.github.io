@@ -23,7 +23,10 @@ $(function () {
       if (d3.event.shiftKey) {
         rotateTriangle(d3.event.target);
       } else {
-        changeColor(d3.event.target);
+        var target = d3.event.target;
+        var currentColor = d3.select(target).attr('fill');
+        var color = randomColor(100, 100);
+        d3.select(target).attr('fill', color);
       }
     });
 
@@ -129,17 +132,6 @@ $(function () {
     otherPoints = coordsToString(otherPoints);
     currentTriangle.attr('points', thisPoints);
     otherTriangle.attr('points', otherPoints);
-  }
-
-  /**
-   * Change color of D3 target to next in list
-   * @param target D3 element
-   */
-  function changeColor(target) {
-    var currentColor = d3.select(target).attr('fill');
-    var color = randomColor();
-    d3.select(target)
-      .attr('fill', color);
   }
 
   /**
