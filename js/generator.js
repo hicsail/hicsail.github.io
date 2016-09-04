@@ -73,7 +73,7 @@ $(function () {
         var rotated = Math.round(Math.random());
         var x = i * triangleWidth;
         var y = j * triangleWidth;
-        var color = randomColor();
+        var color = randomColor(numHor, i);
 
         var points = getSVGPoints(x, y, triangleWidth, false, rotated);
         var g = svg.append('g');
@@ -83,7 +83,7 @@ $(function () {
         polys.push(buildPoly(points, color));
 
         // Draw second part of square
-        color = randomColor();
+        color = randomColor(numHor, i);
         points = getSVGPoints(x, y, triangleWidth, true, rotated);
         g.append('polygon')
           .attr('points', points)
@@ -284,12 +284,15 @@ $(function () {
   }
 
   /**
-   * Get random color from colors array
-   * @returns {string} Hex color value
+   * Get random color from colors array based on a point in a given integer range.
+   * The probability of white being selected is parameterized by the point.
+   * @returns {string} Hex color value.
    */
-  function randomColor() {
-    var choices = [colors[0], colors[1], colors[2], colors[3], colors[4], colors[4]];
-    return choices[Math.round(Math.random() * (choices.length - 1))];
+  function randomColor(range, point) {
+    var range = (range == null) ? 100 : range;
+    var point = (point == null) ? (range/50) : point;
+    var rnd = Math.round(Math.random()*(range-1));
+    return (rnd > point) ? colors[4] : colors[Math.round(Math.random() * (colors.length-1))];
   }
 
   /**
