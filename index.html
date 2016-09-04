@@ -3,113 +3,119 @@ layout: default
 ---
 <div id="fullpage">
 
-	<div id="section0" class="section" data-anchor="about">
-		<section class="content" >
-			<div class="sleft">
-				<div class="leftcontent">
-					<!-- <h2>Software & Application Innovation Lab</h2> -->
-					<p>The <b>Software & Application Innovation Lab</b> (SAIL) at Boston University's <a href="http://www.bu.edu/hic/">Hariri Institute for Computing</a> provides professional software consulting, design, and development capacity to support research efforts across Boston University that involve or require custom software, computational, and data-centric components. SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
-				</div>
-			</div>
-			<div class="sright">
-				<div class="row">
-					<div id="svg" class="col-md-9">
-					</div>
-					<div class="col-md-3">
-						<form id="pattern-options">
-							<div class="form-group">
-							  <label for="pattern-size">Pattern Size</label>
-							  <input id="pattern-size" class="form-control" type="numeric" value="240">
-							</div>
-							<div class="form-group">
-							  <label for="grid-size-x">Grid Size X</label>
-							  <input id="grid-size-x" class="form-control" type="numeric" value="8">
-							</div>
-							<div class="form-group">
-							  <label for="grid-size-y">Grid Size Y</label>
-							  <input id="grid-size-y" class="form-control" type="numeric" value="5">
-							</div>
-							<hr />
-							<div class="form-group">
-							  <label for="svg-text">SVG Output</label>
-							  <textarea id="svg-text" class="form-control"></textarea>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	
-	<div id="section1" class="section" data-anchor="projects">
-		
-		<div class="sleft entries">
-			<div class="leftcontent">
-				<!-- <h2 id="entrytitle">Projects</h2> -->
-				<p id="entrytext"></p>
-				<a id="entrylink" href=""></a>
-			</div>
-		</div>
-		<div class="sright personthumbs">
-			<div id="thumbnailcontainer">
-				{% for post in site.categories.project %}
-				<div>
-					<img class="pimg thumbnail" src="{{ post.image }}">
-					<h2 class="ptitle pcontent">{{ post.title }}</h2>
-					<p class="ptext pcontent">{{ post.excerpt }}</p>
-					<a class="pcontent" href="{{ post.url }}"></a>
-				</div>
-				{% endfor %}
-				<img class="thumbnail" src="/img/p4.svg">
-				<img class="thumbnail" src="/img/p5.svg">
-				<img class="thumbnail" src="/img/p6.svg">
-				<img class="thumbnail" src="/img/p7.svg">
-				<img class="thumbnail" src="/img/p8.svg">
-				<img class="thumbnail" src="/img/p9.svg">
-				<img class="thumbnail" src="/img/p10.svg">
-				<img class="thumbnail" src="/img/p11.svg">
-				<img class="thumbnail" src="/img/p12.svg">
-				<img class="thumbnail" src="/img/p13.svg">
-				<img class="thumbnail" src="/img/p14.svg">
-				<img class="thumbnail" src="/img/p15.svg">
-				<img class="thumbnail" src="/img/p16.svg">
-				<img class="thumbnail" src="/img/p17.svg">
-				<img class="thumbnail" src="/img/p18.svg">
-			</div>
-		</div>
-	</div>
-	<div id="section2" class="section" data-anchor="contact">
-		<div class="sleft">
-			<div class="leftcontent">
-				<!-- <h2 id='contacttitle'>Contact Us</h2> -->
-				<p id='contacttext'>If you think SAIL may be able to help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a class='conlink' href='http://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or contact Andrei Lapets (<a class='conlink' href="mailto:lapets@bu.edu?subject=Question%20about%20SAIL">lapets@bu.edu</a>), Director of Research Development, directly. If you are seeking other forms of support for your research (including seed funding), you may also want to review the <a class='conlink' href='http://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.
-				<br><br>
-                SAIL is seeking professional software engineers and student software engineer interns. Please contact Andrei Lapets (<a class='conlink' href="mailto:lapets@bu.edu?subject=SAIL%20Application">lapets@bu.edu</a>) or Frederick Jansen (<a class='conlink' href="mailto:fjansen@bu.edu?subject=SAIL%20Application">fjansen@bu.edu</a>) if you are interested applying for a position.</p>
-			</div>
-		</div>
-		<div class="sright projectthumbs">
-			<div id="thumbnailcontainer">
-				{% for post in site.categories.person %}
-				<div>
-					<img class="personimg thumbnail" src="{{ post.image }}">
-					<h2 class="persontitle personcontent">{{ post.title }}</h2>
-					<p class="persontext personcontent">{{ post.excerpt }}</p>
-				</div>
-				{% endfor %}
-				<img class="thumbnail" src="/img/p4.svg">
-				<img class="thumbnail" src="/img/p5.svg">
-				<img class="thumbnail" src="/img/p6.svg">
-				<img class="thumbnail" src="/img/p7.svg">
-				<img class="thumbnail" src="/img/p8.svg">
-				<img class="thumbnail" src="/img/p9.svg">
-				<img class="thumbnail" src="/img/p10.svg">
-				<img class="thumbnail" src="/img/p11.svg">
-				<img class="thumbnail" src="/img/p12.svg">
-				<img class="thumbnail" src="/img/p13.svg">
-				<img class="thumbnail" src="/img/p14.svg">
-				<img class="thumbnail" src="/img/p15.svg">
-				<img class="thumbnail" src="/img/p16.svg">
-			</div>
-		</div>
-	</div>
+    <div id="section0" class="section" data-anchor="about">
+        <section class="content" >
+            <div class="sleft">
+                <div class="leftcontent">
+                    <!-- <h2>Software & Application Innovation Lab</h2> -->
+                    <div class="textblock">
+                        <p>The <b>Software & Application Innovation Lab</b> (SAIL) at Boston University's <a class='conlink' href="http://www.bu.edu/hic/">Hariri Institute for Computing</a> provides professional software consulting, design, and development capacity to support research efforts across Boston University that involve or require custom software, computational, and data-centric components.</p>
+                        <p>SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sright">
+                <div class="row">
+                    <div id="svg" class="col-md-9">
+                    </div>
+                    <div class="col-md-3">
+                        <form id="pattern-options">
+                            <div class="form-group">
+                              <label for="pattern-size">Pattern Size</label>
+                              <input id="pattern-size" class="form-control" type="numeric" value="240">
+                            </div>
+                            <div class="form-group">
+                              <label for="grid-size-x">Grid Size X</label>
+                              <input id="grid-size-x" class="form-control" type="numeric" value="8">
+                            </div>
+                            <div class="form-group">
+                              <label for="grid-size-y">Grid Size Y</label>
+                              <input id="grid-size-y" class="form-control" type="numeric" value="5">
+                            </div>
+                            <hr />
+                            <div class="form-group">
+                              <label for="svg-text">SVG Output</label>
+                              <textarea id="svg-text" class="form-control"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="section1" class="section" data-anchor="projects">
+        
+        <div class="sleft entries">
+            <div class="leftcontent">
+                <!-- <h2 id="entrytitle">Projects</h2> -->
+                <p id="entrytext"></p>
+                <a id="entrylink" href=""></a>
+            </div>
+        </div>
+        <div class="sright personthumbs">
+            <div id="thumbnailcontainer">
+                {% for post in site.categories.project %}
+                <div>
+                    <img class="pimg thumbnail" src="{{ post.image }}">
+                    <h2 class="ptitle pcontent">{{ post.title }}</h2>
+                    <p class="ptext pcontent">{{ post.excerpt }}</p>
+                    <a class="pcontent" href="{{ post.url }}"></a>
+                </div>
+                {% endfor %}
+                <img class="thumbnail" src="/img/p4.svg">
+                <img class="thumbnail" src="/img/p5.svg">
+                <img class="thumbnail" src="/img/p6.svg">
+                <img class="thumbnail" src="/img/p7.svg">
+                <img class="thumbnail" src="/img/p8.svg">
+                <img class="thumbnail" src="/img/p9.svg">
+                <img class="thumbnail" src="/img/p10.svg">
+                <img class="thumbnail" src="/img/p11.svg">
+                <img class="thumbnail" src="/img/p12.svg">
+                <img class="thumbnail" src="/img/p13.svg">
+                <img class="thumbnail" src="/img/p14.svg">
+                <img class="thumbnail" src="/img/p15.svg">
+                <img class="thumbnail" src="/img/p16.svg">
+                <img class="thumbnail" src="/img/p17.svg">
+                <img class="thumbnail" src="/img/p18.svg">
+            </div>
+        </div>
+    </div>
+    <div id="section2" class="section" data-anchor="contact">
+        <div class="sleft">
+            <div class="leftcontent">
+                <!-- <h2 id='contacttitle'>Contact Us</h2> -->
+                <div class="textblock">
+                    <p id='contacttext'>If you think SAIL may be able to help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a class='conlink' href='http://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or contact Andrei Lapets (<a class='conlink' href="mailto:lapets@bu.edu?subject=Question%20about%20SAIL">lapets@bu.edu</a>), Director of Research Development, directly. If you are seeking other forms of support for your research (including seed funding), you may also want to review the <a class='conlink' href='http://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.
+                    </p>
+                    <p>SAIL is seeking professional software engineers and student software engineer interns. Please contact Andrei Lapets (<a class='conlink' href="mailto:lapets@bu.edu?subject=SAIL%20Application">lapets@bu.edu</a>) or Frederick Jansen (<a class='conlink' href="mailto:fjansen@bu.edu?subject=SAIL%20Application">fjansen@bu.edu</a>) if you are interested applying for a position.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sright projectthumbs">
+            <div id="thumbnailcontainer">
+                {% for post in site.categories.person %}
+                <div>
+                    <img class="personimg thumbnail" src="{{ post.image }}">
+                    <h2 class="persontitle personcontent">{{ post.title }}</h2>
+                    <p class="persontext personcontent">{{ post.excerpt }}</p>
+                </div>
+                {% endfor %}
+                <img class="thumbnail" src="/img/p4.svg">
+                <img class="thumbnail" src="/img/p5.svg">
+                <img class="thumbnail" src="/img/p6.svg">
+                <img class="thumbnail" src="/img/p7.svg">
+                <img class="thumbnail" src="/img/p8.svg">
+                <img class="thumbnail" src="/img/p9.svg">
+                <img class="thumbnail" src="/img/p10.svg">
+                <img class="thumbnail" src="/img/p11.svg">
+                <img class="thumbnail" src="/img/p12.svg">
+                <img class="thumbnail" src="/img/p13.svg">
+                <img class="thumbnail" src="/img/p14.svg">
+                <img class="thumbnail" src="/img/p15.svg">
+                <img class="thumbnail" src="/img/p16.svg">
+            </div>
+        </div>
+    </div>
 </div>
