@@ -1,14 +1,11 @@
 $(function () {
-  var patternSize = $('#pattern-size').val();
-  var gridSizeX = $('#grid-size-x').val();
-  var gridSizeY = $('#grid-size-y').val();
-  var svgField = $('#svg-text');
+  var patternSize = 240, gridSizeX = 8, gridSizeY = 5;
   var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#FFFFFF'];
-  // Set to 0 for canvas
+  // Set to 0 for canvas.
   var useSVG = 1;
 
   /**
-   * Setup listeners for Bootstrap form
+   * Setup listeners for Bootstrap form.
    */
   function setupListeners() {
     $('form :input').change(function (e) {
@@ -60,8 +57,6 @@ $(function () {
       } else {
         changeColor(d3.event.target);
       }
-      // Update SVG output for every change
-      svgField.val(svg[0][0].outerHTML);
     });
 
     return svg;
@@ -96,7 +91,6 @@ $(function () {
         polys.push(buildPoly(points, color));
       }
     }
-    svgField.val(svg[0][0].outerHTML);
   }
 
   function getSVGPoints(x, y, width, flipped, rotated) {
@@ -237,8 +231,6 @@ $(function () {
         }
       }
     }
-    var svg = addSVGHeader(polys);
-    svgField.val(svg);
   }
 
   function drawTriangle(ctx, x, y, width, color, flipped, rotated) {
@@ -252,18 +244,14 @@ $(function () {
     // Define rotation
     if (!flipped) {
       if (rotated) {
-        // ◺
         rad = 270 * pi / 180;
       } else {
-        // ◸
         rad = 0;
       }
     } else {
       if (rotated) {
-        // ◹
         rad = 90 * pi / 180;
       } else {
-        // ◿
         rad = pi;
       }
     }
@@ -325,18 +313,6 @@ $(function () {
     return color;
   }
 
-  /**
-   * Add SVG header to elements
-   * @param polys Array of SVG elements
-   * @returns {string} Full SVG object
-   */
-  function addSVGHeader(polys) {
-    var svg = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg" x="0" y="0" shape-rendering="crispEdges" >\n';
-    svg += polys.join('\n');
-    svg += '\n</svg>';
-    return svg;
-  }
-
   // -------------------
   // Application start
   // -------------------
@@ -348,5 +324,4 @@ $(function () {
   } else {
     drawCanvas();
   }
-
 });
