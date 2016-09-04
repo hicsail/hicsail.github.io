@@ -286,7 +286,7 @@
 		width: 50%;
 		margin-top: 50px;
 		float: left;
-		overflow-y: scroll;
+		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
 		height: calc(100vh - 100px);
 	}
@@ -340,13 +340,13 @@
 	}
 	
 	.projectthumbs{
-		overflow-y: scroll;
+		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
 		background-color: #fefefe;
 	}
 	
 	.personthumbs{
-		overflow-y: scroll;
+		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
 		background-color: #fefefe;
 	}
@@ -447,7 +447,7 @@
 		}
 		
 		#thumbnailcontainer{
-			overflow-x: scroll;
+			overflow-x: hidden;
 			width: 360vh;
 		}
 		
