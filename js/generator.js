@@ -170,6 +170,10 @@ $(function () {
   //
   // -----------------------------------------------------------------------------------
 
+  function buildPoly(points, color) {
+    return '<polygon fill="' + color + '" points="' + points + '"></polygon>';
+  }
+
   /**
    * Get random color from colors array based on a point in a given integer range.
    * The probability of white being selected is parameterized by the point.
