@@ -201,7 +201,7 @@
 		width: 100%;
 		position: fixed;
 		height: 50px;
-		background-color: #0d0d0d;
+		background-color: #000000;
 		z-index: 100;
 	}
 	
@@ -416,7 +416,7 @@
 		position: fixed;
 		bottom: 0;
 		height: 63px;
-		background-color: #0d0d0d;
+		background-color: #000000;
 		z-index: 100;
 	}
 	
