@@ -102,10 +102,9 @@
 			});
 		});
 	</script>
-	<!--Disable Mouse Scroll-->
 	<script>
 		$(document).ready(function() {
-			//$('#fullpage').fullpage.setAllowScrolling(false, 'up, down');({});
+			//$('#fullpage').fullpage.setAllowScrolling(false, 'up, down');({}); // Disable mouse scroll.
 		});
 	</script>
 	<!--SAIL Pattern Generator-->
@@ -162,7 +161,7 @@
 			attributes: true
 		});
 	</script>
-	<!--Nav Hamburger toggle-->
+	<!-- Nav Hamburger toggle. -->
 	<script>
 	$('#ham').click(function() {
 		$('#mobilenav').toggleClass('mactive');
@@ -189,7 +188,7 @@
 	</script>
 	<!--Switching post content-->
 	<script>
-		$(".sright").on('click', '.pimg', function() {
+		/*$(".sright").on('click', '.pimg', function() {
 			$("#entrytitle").html($(this).siblings("h2").html());
 			$("#entrytext").html($(this).siblings("p").html());
 			$("#entrylink").attr("href", $(this).siblings("a").attr("href"));
@@ -198,7 +197,7 @@
 		$(".sright").on('click', '.personimg', function() {
 			$("#contacttitle").html($(this).siblings("h2").html());
 			$("#contacttext").html($(this).siblings("p").html());
-		});
+		});*/
 	</script>
 </body>
 </html>
