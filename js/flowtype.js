@@ -28,8 +28,10 @@
       changes = function(el) {
          var $el = $(el),
             elw = $el.width(),
+            elh = $el.height(),
             width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
-            fontBase = width / settings.fontRatio,
+            height = elh > settings.maximum ? settings.maximum : elh < settings.minimum ? settings.minimum : elh,
+            fontBase = Math.min(width / settings.fontRatio, height / settings.fontRatio),
             fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
          $el.css('font-size', fontSize + 'px');
       };
