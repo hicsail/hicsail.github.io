@@ -16,7 +16,9 @@ $(function () {
     var svg = d3.select('#' + id)
       .html('') // Empty HTML first, parameters might have changed.
       .append('svg')
-      .attr('width', '100%')
+      .attr('viewBox', '0 0 1700 1200')
+      .attr('preserveAspectRatio', 'xMinYMin slice')
+      .attr('height', '100%')
       .attr('height', '100%')
       // Crisp edges makes sure the aliasing doesn't produce a thin line in between triangles
       // Fixes need for 1 px overlap hack

@@ -360,12 +360,23 @@
 		height: calc(100vh - 100px);
 		margin-top: 50px;
 		float: right;
+        display:flex;
 	}
 
     .sright .row {
         overflow: hidden;
+        height:100%;
+        margin:0 auto;
+        padding:0;
+        display:flex;
+        align-items:stretch;
     }
 
+    .sright .row .svg_wrapper {
+        display:flex;
+        align-items:stretch;
+    }
+    
 	.projectthumbs{
 		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
