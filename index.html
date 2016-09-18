@@ -35,7 +35,7 @@ layout: default
         </div>
         <!--div class="sright" style="display:none;">
             <div id="thumbnailcontainer">
-                {% for post in site.categories.project %}
+                {% for post in site.categories.project_ %}
                 <div>
                     <img class="pimg thumbnail" src="{{ post.image }}">
                     <h2 class="ptitle pcontent">{{ post.title }}</h2>
@@ -67,7 +67,7 @@ layout: default
         </div>
         <!--div class="sright">
             <div id="thumbnailcontainer">
-                {% for post in site.categories.person %}
+                {% for post in site.categories.person_ %}
                 <div>
                     <img class="personimg thumbnail" src="{{ post.image }}">
                     <h2 class="persontitle personcontent">{{ post.title }}</h2>
