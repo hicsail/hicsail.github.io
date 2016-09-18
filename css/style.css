@@ -283,18 +283,6 @@ label { position: relative; top: 0px; }
 
 .sright .row .svg_wrapper { display:flex; align-items:stretch; }
 
-.projectthumbs {
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  background-color: #fefefe;
-}
-
-.personthumbs {
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  background-color: #fefefe;
-}
-
 #generator { position: relative; }
 
 .col-md-3 { display: none; }
