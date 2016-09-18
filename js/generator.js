@@ -46,7 +46,7 @@ $(function () {
         g.append('polygon')
           .attr('points', points)
           .attr('fill', color)
-          .attr('opacity', Math.min(1.0, (4*i)/numHor))
+          .attr('opacity', Math.min(1.0, (4*i)/numHor, (4*j)/numVer))
           .attr('column', i);
         polys.push(buildPoly(points, color));
 
@@ -56,7 +56,7 @@ $(function () {
         g.append('polygon')
           .attr('points', points)
           .attr('fill', color)
-          .attr('opacity', Math.min(1.0, (4*i)/numHor))
+          .attr('opacity', Math.min(1.0, (4*i)/numHor, (4*j)/numVer))
           .attr('column', i);
         polys.push(buildPoly(points, color));
       }
