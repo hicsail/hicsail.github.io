@@ -1,22 +1,12 @@
 $(function () {
-  var patternSize = 240, 
-      gridSizeX = 8,
-      gridSizeY = 5,
-      numHor = gridSizeX * 4,
-      numVer = gridSizeY * 4;
+  var patternSize = 240, numHor = 32, numVer = 10;
   var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#FFFFFF'];
-
-  // -----------------------------------------------------------------------------------
-  //
-  // SVG CODE
-  //
-  // -----------------------------------------------------------------------------------
 
   function setupSVG(id) {
     var svg = d3.select('#' + id)
       .html('') // Empty HTML first, parameters might have changed.
       .append('svg')
-      .attr('viewBox', '0 0 1700 1200')
+      .attr('viewBox', '0 0 1700 500')
       .attr('preserveAspectRatio', 'xMinYMin slice')
       .attr('height', '100%')
       .attr('height', '100%')
@@ -60,7 +50,7 @@ $(function () {
           .attr('column', i);
         polys.push(buildPoly(points, color));
 
-        // Draw second part of square
+        // Draw second part of square.
         color = randomColor(numHor/4, i); // Start gradient 3/4 of the way to the edge.
         points = getSVGPoints(x, y, triangleWidth, true, rotated);
         g.append('polygon')
@@ -77,24 +67,24 @@ $(function () {
     var points = [[x, y], [x + width, y], [x, y + width]];
 
     for (var i = 0; i < points.length; i++) {
-      // Move to origin to rotate
+      // Move to origin to rotate.
       points[i][0] -= x + width / 2;
       points[i][1] -= y + width / 2;
 
       if (!flipped) {
         if (rotated) {
-          // Rotate 270 degrees
-          [points[i][0], points[i][1]] = [points[i][1], -points[i][0]]
+          // Rotate 270 degrees.
+          [points[i][0], points[i][1]] = [points[i][1], -points[i][0]];
         } else {
-          // Do nothing, default form
+          // Do nothing, default form.
         }
       } else {
         if (rotated) {
-          // Rotate 90 degrees
-          [points[i][0], points[i][1]] = [-points[i][1], points[i][0]]
+          // Rotate 90 degrees.
+          [points[i][0], points[i][1]] = [-points[i][1], points[i][0]];
         } else {
-          // Rotate 180 degrees
-          [points[i][0], points[i][1]] = [-points[i][0], -points[i][1]]
+          // Rotate 180 degrees.
+          [points[i][0], points[i][1]] = [-points[i][0], -points[i][1]];
         }
       }
 
@@ -113,10 +103,7 @@ $(function () {
       otherTriangle = d3.select(target.nextElementSibling);
     }
     var otherPoints = stringToCoords(otherTriangle.attr('points'));
-
-    var width = Math.max(Math.abs(thisPoints[0][0] - thisPoints[1][0]), Math.abs(thisPoints[0][0] - thisPoints[2][0])),
-      x, y;
-
+    var x, y, width = Math.max(Math.abs(thisPoints[0][0] - thisPoints[1][0]), Math.abs(thisPoints[0][0] - thisPoints[2][0]));
     x = Math.min(thisPoints[0][0], thisPoints[1][0], thisPoints[2][0]);
     y = Math.min(thisPoints[0][1], thisPoints[1][1], thisPoints[2][1]);
 
@@ -161,12 +148,6 @@ $(function () {
     }
     return coords;
   }
-
-  // -----------------------------------------------------------------------------------
-  //
-  // CANVAS CODE
-  //
-  // -----------------------------------------------------------------------------------
 
   function buildPoly(points, color) {
     return '<polygon fill="' + color + '" points="' + points + '"></polygon>';
