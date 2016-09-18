@@ -1,12 +1,12 @@
 $(function () {
-  var patternSize = 240, numHor = 32, numVer = 10;
+  var patternSize = 240, numHor = 32, numVer = 14;
   var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#FFFFFF'];
 
   function setupSVG(id) {
     var svg = d3.select('#' + id)
       .html('') // Empty HTML first, parameters might have changed.
       .append('svg')
-      .attr('viewBox', '0 0 1700 500')
+      .attr('viewBox', '0 0 1700 750')
       .attr('preserveAspectRatio', 'xMinYMin slice')
       .attr('height', '100%')
       .attr('height', '100%')
