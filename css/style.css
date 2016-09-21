@@ -300,11 +300,8 @@ label { position:relative; top:0px; }
 }
 
 .pimg:hover { opacity:0.75; cursor:pointer; }
-
 .pcontent { display:none; }
-
 .personimg:hover { opacity:0.75; cursor:pointer; }
-
 .personcontent { display:none; }
 
 footer { width:100%; height:63px; position:fixed; bottom:0; background-color:#000000; z-index:100; }
