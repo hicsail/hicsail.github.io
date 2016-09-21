@@ -10,8 +10,8 @@ $(function () {
       .attr('preserveAspectRatio', 'xMinYMin slice')
       .attr('height', '100%')
       .attr('height', '100%')
-      // Crisp edges makes sure the aliasing doesn't produce a thin line in between triangles
-      // Fixes need for 1 px overlap hack
+      // Crisp edges makes sure the aliasing doesn't produce a thin line in between triangles.
+      // Fixes need for 1 px overlap hack.
       .attr('shape-rendering', 'crispEdges');
 
     // Change color randomly on mouseover.
