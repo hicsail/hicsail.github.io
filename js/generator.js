@@ -6,7 +6,7 @@ $(function () {
     var svg = d3.select('#' + id)
       .html('') // Empty HTML first, parameters might have changed.
       .append('svg')
-      .attr('viewBox', '0 0 1700 750')
+      .attr('viewBox', '0 0 1700 734')
       .attr('preserveAspectRatio', 'xMinYMin slice')
       .attr('height', '100%')
       .attr('height', '100%')
