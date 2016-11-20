@@ -4,10 +4,12 @@
   <meta charset=utf-8 />
   <title>SAIL</title>
   <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,"><!-- Suppress browser favicon.ico request. -->
-  <link rel="stylesheet" href="//hicsail.github.io/css/fonts.css">
-  <link rel="stylesheet" href="//hicsail.github.io/css/normalize.css">
-  <link rel="stylesheet" href="//hicsail.github.io/css/jquery.fullPage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.css">
   <style type="text/css">
+  	@font-face { font-family: 'Karbon'; src: url('../fonts/KarbonWeb-Regular.eot'); src: url('../fonts/KarbonWeb-Regular.eot') format('embedded-opentype'), url('../fonts/KarbonWeb-Regular.woff2') format('woff2'), url('../fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
+	@font-face { font-family: 'Karbon'; src: url('../fonts/KarbonWeb-Medium.eot'); src: url('../fonts/KarbonWeb-Medium.eot') format('embedded-opentype'), url('../fonts/KarbonWeb-Medium.woff2') format('woff2'), url('../fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
+
     html { width:100%; min-height:100%; margin:0; font-size:100%; -webkit-font-smoothing:antialiased; background-color:#fefefe; overflow-x:hidden; }
     body { height:100%; width:100%; margin:0 auto; position:relative; font-size:18px; }
     svg { position:absolute; display:block; top:0; left:0; width:100%; height:100%; align-items:stretch; }
@@ -177,11 +179,38 @@
     </footer>
   </div>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="//hicsail.github.io/js/flowtype.js"></script>
+  <script>
+    (function($) {
+      $.fn.flowtype = function(options) {
+        var settings = $.extend({
+          maximum   : 9999,
+          minimum   : 1,
+          maxFont   : 9999,
+          minFont   : 1,
+          fontRatio : 35
+        }, options),
+        changes = function(el) {
+          var $el = $(el),
+              elw = $el.width(), elh = $el.parent().parent().height(),
+              width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
+              height = elh > settings.maximum ? settings.maximum : elh < settings.minimum ? settings.minimum : elh;
+          var fontBase = fontBase = Math.min(width / settings.fontRatio, height / (0.8*settings.fontRatio)),
+              fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
+          $el.css('font-size', fontSize + 'px');
+        };
+      return this.each(
+        function() {
+         var that = this; // Context for resize callback
+         $(window).resize(function(){changes(that);}); // Make changes upon resize
+         changes(this); // Set changes on load
+        });
+      };
+    }(jQuery));
+  </script>
   <script>
     $('#fullpage').flowtype({ minFont: 10, maxFont: 22 });
   </script>
-  <script src="//hicsail.github.io/js/jquery.fullPage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.js"></script>
   <script>
     // Determine the navigation menu options from the sections.
     var options = [];
@@ -241,7 +270,7 @@
     //$(document).ready(function() { $('#fullpage').fullpage.setAllowScrolling(false, 'up, down');({}); }); // Disable mouse scroll.
   </script>
   <!-- SAIL pattern generator. -->
-  <script src="//hicsail.github.io/js/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>
   <script>
     $(function () {
       var patternSize = 240, numHor = 32, numVer = 14;
