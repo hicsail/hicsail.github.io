@@ -5,92 +5,76 @@
   <title>SAIL</title>
   <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,"><!-- Suppress browser favicon.ico request. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.css">
   <style type="text/css">
-  	@font-face { font-family: 'Karbon'; src: url('../fonts/KarbonWeb-Regular.eot'); src: url('../fonts/KarbonWeb-Regular.eot') format('embedded-opentype'), url('../fonts/KarbonWeb-Regular.woff2') format('woff2'), url('../fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
-	@font-face { font-family: 'Karbon'; src: url('../fonts/KarbonWeb-Medium.eot'); src: url('../fonts/KarbonWeb-Medium.eot') format('embedded-opentype'), url('../fonts/KarbonWeb-Medium.woff2') format('woff2'), url('../fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
+  	@font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Regular.eot'); src:url('../fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Regular.woff2') format('woff2'),url('../fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
+	@font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Medium.eot'); src:url('../fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Medium.woff2') format('woff2'),url('../fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
 
-    html { width:100%; min-height:100%; margin:0; font-size:100%; -webkit-font-smoothing:antialiased; background-color:#fefefe; overflow-x:hidden; }
-    body { height:100%; width:100%; margin:0 auto; position:relative; font-size:18px; }
-    svg { position:absolute; display:block; top:0; left:0; width:100%; height:100%; align-items:stretch; }
-    h2,h3,h4,h5,h6,p { line-height:1.45; }
-    h1 { line-height:55px; font-family:'Karbon'; font-size:2.3em; font-weight:normal; font-feature-settings:"kern"; text-shadow:0 0 1px rgba(200,200,200,0.5); color:#fefefe; }
-    h2 { text-align:left; line-height:1.1em; font-family:'Karbon'; font-size:2em; font-weight:bold; text-shadow:0 0 1px rgba(0,0,0,0.4); color:#181818; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
-    p { font-family:'Karbon'; font-size:0.92em; color:#181818; font-weight:normal; letter-spacing:0.01em; text-shadow:0 0 1px rgba(0,0,0,0.4); margin:0 0 0 0; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
-    a { text-decoration:underline; color:#fefefe; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    a:visited { color:#fefefe; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    a:hover { color:#fefefe; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
+    html { width:100%; min-height:100%; margin:0; font-size:100%; -webkit-font-smoothing:antialiased; background-color:#FFFFFF; }
+    body { height:100%; width:100%; margin:0 auto; position:relative; font-family:'Karbon'; font-size:20px; }
 
-    /* Link color settings. */
-    .ldefault:visited { color:#fefefe; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .ldefault:hover { color:#fefefe; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .lred, .lred:hover, .lred:visited { color:#E0533B; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .lorange, .lorange:hover, .lorange:visited { color:#EBB54A; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .lgreen, .lgreen:hover, .lgreen:visited { color:#94ed6b; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .ared, .ared:hover, .ared:visited { color:#E0533B; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .aorange, .aorange:hover, .aorange:visited { color:#EBB54A; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .agreen, .agreen:hover, .agreen:visited { color:#94ed6b; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .ablue, .ablue:hover, .ablue:visited { color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
-    .conlink { color:#181818; }
-    .conlink:visited { color:#181818; }
-
-    /* Body. */
-    .wrapper { width:100%; background-color:#fefefe; position:relative; }
-    header { width:100%; position:fixed; height:50px; background-color:#000000; z-index:100; }
+    header { width:100%; position:fixed; height:50px; background-color:#FFFFFF; z-index:100; }
+    h1 { font-size:46px; font-weight:normal; font-feature-settings:"kern"; display:inline-block; float:left; line-height:50px; margin:-1px 0 0px 15px; color:#222222; }
     #logolink { height:50px; position:relative; display:block; float:left; z-index:999; }
     #logo { width:50px; position:relative; top:50%; transform:translateY(-50%); float:left; }
-    #wordmark { position:relative; display:inline-block; float:left; line-height:50px; margin:-1px 0 0px 15px; }
     .menu { position:relative; list-style:none; margin:0; height:50px; margin-right:25px; display:-webkit-box; display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-flex-flow:row wrap; justify-content:flex-end; }
     #ham { display:none; opacity:0; position:absolute; }
     label { position:relative; top:0px; }
-    .tlink { position:relative; margin-left:25px; }
-    .tlink a { font-weight:bold; font-family:'Karbon'; font-size:0.95em; line-height:50px; letter-spacing:0.03em; text-decoration:none; font-feature-settings:"kern"; text-shadow:0 0 1px rgba(200,200,200,0.5); }
-    .section { position:relative; height:100vh; }
-    .section > div:first-of-type { position:relative; direction:rtl; width:50%; margin-top:50px; float:left; overflow-y:hidden; -webkit-overflow-scrolling:touch; height:calc(100vh - 100px); }
-    .section > div:first-of-type > div { display:table; height:100%; margin:0 75px 0 50px; direction:ltr; padding-bottom:0px; }
-    .section > div:first-of-type > div > div { display:table-cell; vertical-align:middle; }
-    .section > div:first-of-type > div > div > p { text-align:justify; margin-top:12px; margin-bottom:12px; }
-    #conlink { color:#181818; font-weight:bold; font-family:'Karbon'; font-style:normal; }
-    #entrytext { margin-bottom:40px; }
-    #entrylink { font-weight:bold; font-family:'Karbon'; font-size:0.8em; line-height:1em; letter-spacing:0.03em; text-decoration:none; padding:10px 15px; background-color:#181818; }
-    .sright { position:relative; width:50%; height:calc(100vh - 100px); margin-top:50px; float:right; display:flex; }
-    .sright > div { overflow:hidden; height:100%; margin:0 auto; padding:0; display:flex; align-items:stretch; }
-    .sright > div > .svg_wrapper { display:flex; align-items:stretch; }
-    #generator { position:relative; }
-    .col-md-3 { display:none; }
-    footer { width:100%; height:63px; position:fixed; bottom:0; background-color:#000000; z-index:100; }
-    #bu_logo { display:block; height:50px; float:left; }
-    #bu_hic_logo { max-width:90%; }
-    #hic { display:block; height:50px; float:left; font-size:0.65em; line-height:17px; margin:8px 0 8px 15px; text-decoration:none; }
+    .menu > li { position:relative; margin-left:25px; }
+    .menu > li > a { line-height:50px; letter-spacing:0.03em; text-decoration:none; font-feature-settings:"kern"; text-shadow:0 0 1px rgba(200,200,200,0.5); color:#222222; cursor:pointer; }
 
-    @media all and (max-width:1250px) { .thumbnail { width:calc(100% / 2); } }
-    @media all and (max-width:900px) {
-      .section > div:first-of-type { width:100%; height:calc(80vh - 100px); }
-      .section > div:first-of-type > div { margin:0 50px 0 50px; }
-      .sright { width:100%; height:20vh; overflow-y:hidden; margin-top:0px; white-space:nowrap; }
-      #thumbnailcontainer { overflow-x:hidden; width:360vh; }
-      .thumbnail { width:20vh; display:table-cell; }
+    .plate { display:table; top:50px; margin:15px 55px 15px 55px; background-color:#FFFFFF; }
+    .plate:first-of-type { margin-top:215px; }
+    .tile { display:table-cell; width:50%; vertical-align:middle; padding:0px 50px 0px 50px; text-align:justify; }
+    .pattern { width:100%; margin-bottom:-5px; background-color:#FFFFFF; }
+    .break { height:200px; }
+    .tile > p { line-height:1.45; letter-spacing:0.01em; text-shadow:0 0 1px rgba(0,0,0,0.4); text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
+    .tile > ol > li { list-style-type:none; margin-top:5px; }
+    .extra { text-align:center; }
+    .extra > div { float:center; height:400px; }
+    .extra > div > div { display:inline-block; position:relative; height:400px; width:600px; top:-405px; }
+    #pattern_main { top:0px; }
+
+    a { text-decoration:none; color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
+    a:visited { color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
+    a:hover { color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
+    .lred, .lred:hover, .lred:visited { color:#E0533B; }
+    .lorange, .lorange:hover, .lorange:visited { color:#EBB54A; }
+    .lgreen, .lgreen:hover, .lgreen:visited { color:#94ed6b; }
+    .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; }
+
+    footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
+    #github { display:table-cell; float:right; }
+    #github > img { height:30px; margin:19px; opacity:0.6; }
+    #github > img:hover { opacity:0.8; }
+    #bu_hic_logo { display:table-cell; vertical-align:middle; max-width:75%; float:left; }
+
+    @media all and (max-width:1300px) { // Was 900 before.
+      .plate { }
+      .tile { float:center; width:100vw; padding:60px 0px 60px 0px; }
+      .extra { display:none; }
+      .tile > p { float:center; max-width:900px; margin:0 auto; }
+      .tile > ol { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
     }
-
-    /* Small screens. */
     @media all and (max-width:500px) {
-      nav { background-color:#181818; height:50px; }
-      #mobilenav::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:-8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#fefefe; }
-      #mobilenav { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:21px; z-index:99; background-color:#fefefe; }
-      #mobilenav::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#fefefe; }
-      #mobilenav.mactive::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:0px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#fefefe; transform:rotate(45deg); -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
-      #mobilenav.mactive { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:0px; z-index:99; background-color:#fefefe; -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
-      #mobilenav.mactive::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:0px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#fefefe; transform:rotate(-45deg); -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
+      body { font-size:18px; }
+      nav { background-color:#FFFFFF; height:50px; }
+      #mobilenav::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:-8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
+      #mobilenav { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
+      #mobilenav::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
+      #mobilenav.mactive::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:0px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; transform:rotate(45deg); -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
+      #mobilenav.mactive { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:0px; z-index:99; background-color:#000000; -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
+      #mobilenav.mactive::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:0px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; transform:rotate(-45deg); -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
       .menu { flex-direction:column; width:100%; margin:0 0 0 0; padding:0 0 0 0; height:150px; }
       .menuunder { z-index:-1; }
       .menuover { z-index:999; }
       label { top:-150px; z-index:-1; }
-      #ham { display:block; position:relative; cursor:pointer; float:right; margin:0px 25px 0px 0px; top:50%; transform:translateY(-50%) scale(1.62,1.54); background-color:#fefefe; }
+      #ham { display:block; position:relative; cursor:pointer; float:right; margin:0px 25px 0px 0px; top:50%; transform:translateY(-50%) scale(1.62,1.54); background-color:#000000; }
       #ham:checked + label { top:0px; -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
-      .tlink { margin-left:0px; width:100%; height:50px; box-sizing:border-box; border-top:2px solid #fefefe; background-color:#181818; }
-      .tlink a { text-align:center; margin:0 auto; display:block; }
-      .section > div:first-of-type > div { margin:0 30px 0 30px; }
+      .menu > li { margin-left:0px; width:100%; height:50px; box-sizing:border-box; border-top:2px solid #000000; background-color:#FFFFFF; border:1px solid #000000; }
+      .menu > li { margin-left:0px; margin-bottom:-1px;}
+      .menu > li > a { text-align:center; margin:0 auto; display:block; }
+      .plate { margin-top:55px; }
+      .tile > ol { margin-left:-15px; }
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,188 +89,94 @@
   </script>
 </head>
 <body>
-  <div id="main">
+  <div>
+    <a id="about" name="about"></a>
     <header>
       <a id='logolink' href='/'>
-        <img id="logo" src="//hicsail.github.io/img/s_logo.png">
-        <h1 id="wordmark">SAIL</h1>
+        <!--img id="logo" src="//hicsail.github.io/img/s_logo.png"-->
+        <h1>SAIL</h1>
       </a>
       <nav role="navigation">
         <div id="mobilenav"></div>
         <input type="checkbox" id="ham">
         <label for="ham">
           <ul class="menu menuunder">
-            <li class="tlink" data-menuanchor="about"><a id="labout" class="llink ldefault" href="/#about">ABOUT</a></li>
-            <li class="tlink" data-menuanchor="projects"><a id="lprojects" class="llink ldefault" href="/#projects">PROJECTS</a></li>
-            <li class="tlink" data-menuanchor="contact"><a id="lcontact" class="llink ldefault" href="/#contact">CONTACT</a></li>
-            <li class="tlink" data-menuanchor="join"><a id="ljoin" class="llink ldefault" href="/#join">JOIN</a></li>
+            <li><a onclick="return go('about');">ABOUT</a></li>
+            <li><a onclick="return go('collaborate');">COLLABORATE</a></li>
+            <li><a onclick="return go('join');">JOIN</a></li>
           </ul>
         </label>
       </nav>
     </header>
-    <div id="fullpage">
-      <div class="section" data-anchor="about">
-        <div>
-          <div>
+    <div>
+      <!--div id="svg_bg" style="position:fixed; right:0px; top:0px; width:100vw; height:100vh;"></div-->
+      <!--div style="position:absolute; right:0px; top:0px; width:75vw; height:50vh;"><div id="svg_one"></div></div-->
+      <div style="position:absolute">
+        <div class="pattern" id="svg_top"></div>
+        <div class="plate">
+          <div class="tile">
+            <p>The <b>Software & Application Innovation Lab</b> (SAIL) at the <a href="http://www.bu.edu/hic/">Hariri Institute for Computing</a> is a professional software design and development lab that serves as a collaborative resource for computational and data-driven research efforts across <a href="http://www.bu.edu">Boston University</a>.</p>
+            <p>Supported projects focus on a wide range of topics and technologies, from using natural language processing to analyze large literature corpora, to solving record linkage problems for public health and economics applications, to building mobile applications for medical studies, to building smart-city services and platforms.</p>
+            <p>SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
+          </div>
+          <!--div class="tile extra">
             <div>
-              <p>The <b>Software & Application Innovation Lab</b> (SAIL) at the <a class='conlink' href="http://www.bu.edu/hic/">Hariri Institute for Computing</a> is a professional software design and development lab that serves as a collaborative resource for computational and data-driven research efforts across Boston University.</p>
-              <p>Supported projects focus on a wide range of topics and technologies, from using natural language processing to analyze large literature corpora, to solving record linkage problems for public health and economics applications, to building mobile applications for medical studies, to building smart-city services and platforms.</p>
-              <p>SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
+              <div id="pattern_main"></div>
             </div>
+          </div-->
+        </div>
+        <div class="pattern" id="svg_two_a"></div>
+        <a id="collaborate" name="collaborate"></a>
+        <div class="pattern" id="svg_two_b"></div>
+        <!--div class="break"></div-->
+        <div class="plate">
+          <div class="tile">
+            <p>Across Boston University, the quality and the potential impact of research activities (as well as the success of both students and researchers) are increasingly dependent on the ability to work with data and computational approaches, the development of quality software applications and services, and familiarity with software development practices.</p>
+            <p>SAIL has provided consultations, project and budget planning assistance, prototype and software application development, and other forms of support to numerous research efforts funded by the Hariri Research Awards, the National Science Foundation, the National Institutes of Health, and other agencies. SAIL has worked with over 40 clients across 12 schools at Boston University.</p>
+            <p>If you would like to explore how SAIL can help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a href='http://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or contact <a href="mailto:lapets@bu.edu?subject=Question%20about%20SAIL">Andrei Lapets</a>, Director of Research Development, directly.</p>
+            <p>If you are seeking other forms of support (including seed funding) for a research effort that requires computational science expertise or software engineering resources, you may also want to review the <a href='http://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.</p>
           </div>
         </div>
-        <div class="sright"><div><div id="svg_one" class="col-md-9 svg_wrapper"></div></div></div>
-      </div>
-      <div class="section" data-anchor="projects">
-        <div>
-          <div>
+        <div class="pattern" id="svg_three_a"></div>
+        <a id="join" name="join"></a>
+        <div class="pattern" id="svg_three_b"></div>
+        <div class="plate">
+          <div class="tile extra">
             <div>
-              <p>Across Boston University, the quality and the potential impact of research activities (as well as the success of both students and researchers) are increasingly dependent on the ability to work with data and computational approaches, the development of quality software applications and services, and familiarity with software development practices.</p>
-              <p>SAIL has provided consultations, project and budget planning assistance, prototype and software application development, and other forms of support to numerous research efforts funded by the Hariri Research Awards, the National Science Foundation, the National Institutes of Health, and other agencies. SAIL has worked with over 40 clients across 12 schools at Boston University.</p>
+              <img src="img/offices.png" style="display:none;"/>
+              <!--div id="pattern_offices"></div-->
             </div>
           </div>
-        </div>
-        <div class="sright"><div><div id="svg_two" class="col-md-9 svg_wrapper"></div></div></div>
-      </div>
-      <div class="section" data-anchor="contact">
-        <div>
-          <div>
-            <div>
-              <p>If you would like to explore how SAIL can help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a class='conlink' href='http://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or contact <a class='conlink' href="mailto:lapets@bu.edu?subject=Question%20about%20SAIL">Andrei Lapets</a>, Director of Research Development, directly.</p>
-              <p>If you are seeking other forms of support (including seed funding) for a research effort that requires computational science expertise or software engineering resources, you may also want to review the <a class='conlink' href='http://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.</p>
-              <p>SAIL is seeking professional software engineers. Please contact <a class='conlink' href="mailto:lapets@bu.edu?subject=SAIL%20Application">Andrei Lapets</a> or <a class='conlink' href="mailto:fjansen@bu.edu?subject=SAIL%20Application">Frederick Jansen</a> if you are interested in joining our team.</p>
-            </div>
+          <div class="tile">
+            <p>SAIL offers paid internship opportunities for undergraduate and graduate students at Boston University who are interested in gaining experience working in a professional software development environment situated in a research university context. Apply to join our team in one of the following roles below.</p>
+            <ol>
+              <li><a href="http://sail.bu.edu/apply">Software Engineer Intern</a></li>
+              <li><a href="https://goo.gl/forms/2v2cdZRKaRBfuvPq2">UI/UX Design Intern</a></li>
+              <li><a href="https://goo.gl/forms/rAXYUWzzcE8r4ZRr2">Graphic Design Intern</a></li>
+            </ol>
+            <p>SAIL is also seeking professional software engineers. Please contact <a href="mailto:lapets@bu.edu">Andrei Lapets</a> if you are interested in applying for a full-time position.</p>
           </div>
         </div>
-        <div class="sright"><div><div id="svg_three" class="col-md-9 svg_wrapper"></div></div></div>
-      </div>
-      <div class="section" data-anchor="join">
-        <div>
-          <div>
-            <div>
-              <p>SAIL offers paid internship opportunities for undergraduate and graduate students at Boston University who are interested in gaining experience working in a professional software development environment situated in a research university context. Apply to join our team in one of the following roles for Spring 2017 and Summer 2017.</p>
-              <p><a class="conlink" href="http://sail.bu.edu/apply">Software Engineer Intern</a><br>
-              <a class="conlink" href="https://goo.gl/forms/2v2cdZRKaRBfuvPq2">UI/UX Design Intern</a><br>
-              <a class="conlink" href="https://goo.gl/forms/rAXYUWzzcE8r4ZRr2">Graphic Design Intern</a><br></p>
-            </div>
-          </div>
-        </div>
-        <div class="sright"><div><div id="svg_four" class="col-md-9 svg_wrapper"></div></div></div>
+        <div class="pattern" id="pattern_footer"></div>
+        <footer>
+          <a href="http://www.bu.edu/hic"><img id="bu_hic_logo" src="//hicsail.github.io/img/hic.png"/></a>
+          <a id="github" href="http://github.com/hicsail"><img src="img/GitHub-Mark-64px.png"/></a>
+        </footer>
       </div>
     </div>
-    <footer>
-      <a href="http://www.bu.edu/hic"><img id="bu_hic_logo" src="//hicsail.github.io/img/hic.png"></a>
-    </footer>
   </div>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script>
-    (function($) {
-      $.fn.flowtype = function(options) {
-        var settings = $.extend({
-          maximum   : 9999,
-          minimum   : 1,
-          maxFont   : 9999,
-          minFont   : 1,
-          fontRatio : 35
-        }, options),
-        changes = function(el) {
-          var $el = $(el),
-              elw = $el.width(), elh = $el.parent().parent().height(),
-              width = elw > settings.maximum ? settings.maximum : elw < settings.minimum ? settings.minimum : elw,
-              height = elh > settings.maximum ? settings.maximum : elh < settings.minimum ? settings.minimum : elh;
-          var fontBase = fontBase = Math.min(width / settings.fontRatio, height / (0.8*settings.fontRatio)),
-              fontSize = fontBase > settings.maxFont ? settings.maxFont : fontBase < settings.minFont ? settings.minFont : fontBase;
-          $el.css('font-size', fontSize + 'px');
-        };
-      return this.each(
-        function() {
-         var that = this; // Context for resize callback
-         $(window).resize(function(){changes(that);}); // Make changes upon resize
-         changes(this); // Set changes on load
-        });
-      };
-    }(jQuery));
-  </script>
-  <script>
-    $('#fullpage').flowtype({ minFont: 10, maxFont: 22 });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.js"></script>
-  <script>
-    // Determine the navigation menu options from the sections.
-    var options = [];
-    $(".section").each(function() { options.push($(this).attr('data-anchor')); });
-
-    // Prepare the navigation functionality.
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        // Navigation.
-        anchors: options,
-        menu: '#menu',
-        navigation: false,
-        navigationPosition: 'right',
-        navigationTooltips: options,
-        showActiveTooltip: false,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-
-        // Scrolling.
-        css3: true,
-        scrollingSpeed: 500,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: false,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: true,
-        continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
-        scrollOverflow: false,
-        scrollOverflowOptions: null,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-        bigSectionsDestination: null,
-
-        // Design.
-        controlArrows: true,
-        verticalCentered: false,
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-        keyboardScrolling: false,
-
-        // Events.
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-      });
-    });
-  </script>
-  <script>
-    //$(document).ready(function() { $('#fullpage').fullpage.setAllowScrolling(false, 'up, down');({}); }); // Disable mouse scroll.
-  </script>
-  <!-- SAIL pattern generator. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>
   <script>
     $(function () {
-      var patternSize = 240, numHor = 32, numVer = 14;
-      var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#FFFFFF'];
-
-      function setupSVG(id) {
+      function patternCreate(id, tileSize, numRows, numCols, wgtFn, colors, modes) {
         var svg = d3.select('#' + id)
           .html('') // Empty HTML first, parameters might have changed.
           .append('svg')
-          .attr('viewBox', '0 0 1700 734')
-          .attr('preserveAspectRatio', 'xMinYMin slice')
-          .attr('height', '100%')
-          .attr('height', '100%')
-          // Crisp edges makes sure the aliasing doesn't produce a thin line in between triangles.
-          // Fixes need for 1 px overlap hack.
-          .attr('shape-rendering', 'crispEdges');
+          .attr('viewBox', '0 0 ' + (tileSize*numCols) + ' ' + (tileSize*numRows))
+          .attr('preserveAspectRatio', 'xMidYMid slice')
+          .attr('height', '100%').attr('width', '100%')
+          .attr('shape-rendering', 'crispEdges'); // So aliasing doesn't produce thin line between triangles.
 
         // Change color randomly on mouseover.
         svg.on('mousemove', function () {
@@ -296,52 +186,38 @@
             if (d3.event.shiftKey) {
               rotateTriangle(target);
             } else {
-              var currentColor = d3.select(target).attr('fill');
-              var color = randomColor(numHor/4, 1 + Math.min(d3.select(target).attr('row'), d3.select(target).attr('column')));
-              d3.select(target).attr('fill', color).attr('data', curTime);
+              var opacity = d3.select(target).attr('opacity'), opacity_ = Math.max(Math.random(), opacity);
+              d3.select(target).attr('fill', randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
             }
           }
         });
 
-        return svg;
+        patternDraw(svg, tileSize, numRows, numCols, wgtFn, colors, modes);
       }
 
-      function drawSVG(svg) {
-        var triangleWidth = patternSize / 4, polys = [];
-        for (var j = 0; j < numVer; j++) {
-          for (var i = 0; i < numHor; i++) {
-            var rotated = Math.round(Math.random());
-            var x = i * triangleWidth;
-            var y = j * triangleWidth;
-
-            var color = randomColor(numHor/4, 1 + Math.min(j,i)); // Start gradient 3/4 of the way to the edge.
-            var points = getSVGPoints(x, y, triangleWidth, false, rotated);
-            var g = svg.append('g');
-            g.append('polygon')
-              .attr('points', points)
-              .attr('fill', color)
-              .attr('opacity', Math.max(0.1, Math.min(1.0, (4*i)/numHor, (4*j)/numVer)))
-              .attr('row', j)
-              .attr('column', i);
-            polys.push(buildPoly(points, color));
-
-            // Draw second part of square.
-            color = randomColor(numHor/4, 1 + Math.min(j,i)); // Start gradient 3/4 of the way to the edge.
-            points = getSVGPoints(x, y, triangleWidth, true, rotated);
-            g.append('polygon')
-              .attr('points', points)
-              .attr('fill', color)
-              .attr('opacity', Math.max(0.1, Math.min(1.0, (4*i)/numHor, (4*j)/numVer)))
-              .attr('row', j)
-              .attr('column', i);
-            polys.push(buildPoly(points, color));
+      function patternDraw(svg, tileSize, numRows, numCols, wgtFn, colors, modes) {
+        for (var r = 0; r < numRows; r++) {
+          for (var c = 0; c < numCols; c++) {
+            var rotated = Math.round(Math.random()), x = c*tileSize, y = r*tileSize, g = svg.append('g');
+            triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, false, x, y);
+            triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, true, x, y);
           }
         }
       }
 
+      function triangleDraw(g, tileSize, r, c, wgt, colors, modes, rotated, flipped, x, y) {
+        var color = randomColor(wgt, colors), points = getSVGPoints(x, y, tileSize, flipped, rotated);
+        var polygon = g.append('polygon').attr('points', points).attr('row', r).attr('column', c);
+        if (modes == null || modes.opacity == true)
+          polygon.attr('opacity', wgt*1.2);
+        if (color == null)
+          polygon.attr('opacity', 0);
+        else
+          polygon.attr('fill', color);
+      }
+
       function getSVGPoints(x, y, width, flipped, rotated) {
         var points = [[x, y], [x + width, y], [x, y + width]];
-
         for (var i = 0; i < points.length; i++) {
           // Move to origin to rotate.
           points[i][0] -= x + width / 2;
@@ -349,18 +225,15 @@
 
           if (!flipped) {
             if (rotated) {
-              // Rotate 270 degrees.
-              [points[i][0], points[i][1]] = [points[i][1], -points[i][0]];
+              [points[i][0], points[i][1]] = [points[i][1], -points[i][0]]; // Rotate 270 degrees.
             } else {
               // Do nothing, default form.
             }
           } else {
             if (rotated) {
-              // Rotate 90 degrees.
-              [points[i][0], points[i][1]] = [-points[i][1], points[i][0]];
+              [points[i][0], points[i][1]] = [-points[i][1], points[i][0]]; // Rotate 90 degrees.
             } else {
-              // Rotate 180 degrees.
-              [points[i][0], points[i][1]] = [-points[i][0], -points[i][1]];
+              [points[i][0], points[i][1]] = [-points[i][0], -points[i][1]]; // Rotate 180 degrees.
             }
           }
 
@@ -371,13 +244,11 @@
       }
 
       function rotateTriangle(target) {
-        var currentTriangle = d3.select(target),
-          thisPoints = stringToCoords(currentTriangle.attr('points'));
-
-        var otherTriangle = d3.select(target.previousElementSibling);
-        if (otherTriangle.empty()) {
+        var currentTriangle = d3.select(target), 
+            thisPoints = stringToCoords(currentTriangle.attr('points')), 
+            otherTriangle = d3.select(target.previousElementSibling);
+        if (otherTriangle.empty())
           otherTriangle = d3.select(target.nextElementSibling);
-        }
         var otherPoints = stringToCoords(otherTriangle.attr('points'));
         var x, y, width = Math.max(Math.abs(thisPoints[0][0] - thisPoints[1][0]), Math.abs(thisPoints[0][0] - thisPoints[2][0]));
         x = Math.min(thisPoints[0][0], thisPoints[1][0], thisPoints[2][0]);
@@ -388,20 +259,16 @@
           thisPoints[i][1] -= y + width / 2;
           otherPoints[i][0] -= x + width / 2;
           otherPoints[i][1] -= y + width / 2;
-
           [thisPoints[i][0], thisPoints[i][1]] = [-thisPoints[i][1], thisPoints[i][0]];
           [otherPoints[i][0], otherPoints[i][1]] = [-otherPoints[i][1], otherPoints[i][0]];
-
           thisPoints[i][0] += x + width / 2;
           thisPoints[i][1] += y + width / 2;
           otherPoints[i][0] += x + width / 2;
           otherPoints[i][1] += y + width / 2;
         }
 
-        thisPoints = coordsToString(thisPoints);
-        otherPoints = coordsToString(otherPoints);
-        currentTriangle.attr('points', thisPoints);
-        otherTriangle.attr('points', otherPoints);
+        currentTriangle.attr('points', coordsToString(thisPoints));
+        otherTriangle.attr('points', coordsToString(otherPoints));
       }
 
       /**
@@ -411,120 +278,86 @@
          */
       function coordsToString(points) {
         var coordsStr = '';
-        for (var i = 0; i < points.length; i++) {
+        for (var i = 0; i < points.length; i++)
           coordsStr += points[i].join(',') + ' ';
-        }
         return coordsStr.trim();
       }
 
       function stringToCoords(str) {
         var coords = str.split(' ');
-        for (var i = 0; i < coords.length; i++) {
+        for (var i = 0; i < coords.length; i++)
           coords[i] = coords[i].split(',').map(Number);
-        }
         return coords;
-      }
-
-      function buildPoly(points, color) {
-        return '<polygon fill="' + color + '" points="' + points + '"></polygon>';
       }
 
       /**
        * Get random color from colors array based on a point in a given integer range.
        * The probability of white being selected is parameterized by the point.
-       * @returns {string} Hex color value.
+       * @returns {string} hex color value.
        */
-      function randomColor(range, point) {
-        var range = (range == null) ? 100 : range;
-        var point = (point == null) ? (range/50) : point;
-        var rnd = Math.random()*range;
+      function randomColor(probability, colors) {
+        var colors = colors != null ? colors : ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#FFFFFF'];
         var choices = [colors[0], colors[1], colors[2], colors[3]];
-        return (rnd > point) ? colors[4] : choices[Math.round(Math.random() * (choices.length-1))];
+        return (Math.random() <= probability) ? choices[Math.round(Math.random() * (choices.length-1))] : colors[4];
       }
 
+      var aggFn = function (agg, base, fs) { return function (r, nr, c, nc) { var v = base; for (var i = 0; i < fs.length; i++) v = agg(v, fs[i](r, nr, c, nc)); return v; }; };
+      var minFn = function (fs) { return aggFn(Math.min, 1, fs); }, maxFn = function (fs) { return aggFn(Math.max, 0, fs); };
+      var cornerTopRight = function (tr,tc0) { return function (r,nr,c,nc) { var tc = 1-tc0; return Math.min(c >= tc*nc ? (c-tc*nc)/((1-tc)*nc) : 0, r <= (tr*nr) ? ((tr*nr) - r)/(tr*nr) : 0); }; };
+      var cornerTopLeft = function (tr,tc) { return function (r,nr,c,nc) { return Math.min(c >= tc*nc ? 0 : ((tc*nc)-c)/(tc*nc), r <= (tr*nr) ? ((tr*nr)-r)/(tr*nr) : 0); }; };
+      var cornerBottomLeft = function (tr0,tc) { return function (r,nr,c,nc) { var tr = 1-tr0; return Math.min(c >= tc*nc ? 0 : ((tc*nc)-c)/(tc*nc), r <= (tr*nr) ? 0 : 1 - ((nr-r)/((1-tr)*nr))); }; };
+      var cornerBottomRight = function (tr0,tc0) { return function (r,nr,c,nc) { var tc = 1-tc0, tr = 1-tr0; return Math.min(c >= tc*nc ? (c-tc*nc)/((1-tc)*nc) : 0, r <= (tr*nr) ? 0 : 1 - ((nr-r)/((1-tr)*nr))); }; };
+      var center = function (r,nr,c,nc) { return Math.min(1-Math.abs(nc/2-c)/(nc/2), 1-Math.abs(nr/2-r)/(nr/2)); };
+      var edges = function (r,nr,c,nc) { return 1-Math.sqrt(Math.min(1-Math.abs(nc/2-c)/(nc/2), 1-Math.abs(nr/2-r)/(nr/2))); };
+      var rift = function (r,nr,c,nc) { var r = nr-r; return Math.pow(1 - Math.abs(c/nc - r/nr), 4); };
+      var path = function (r,nr,c,nc) { return Math.pow(Math.abs(c/nc - r/nr), 1.1); };
+      var path2 = function (r,nr,c,nc) { return (((nr-r)+c < 11) || (r+(nc-c) < 11))  ? 0.99 : 0; };
+
       // Construct and render the interactive visualizations.
-      drawSVG(setupSVG('svg_one'));
-      drawSVG(setupSVG('svg_two'));
-      drawSVG(setupSVG('svg_three'));
-      drawSVG(setupSVG('svg_four'));
+      //patternCreate('svg_bg', 60, 29, 50, function (r, nr, c, nc) { return Math.abs(nr/2 - r)/(nr/2); } );
+      //patternCreate('svg_one', 60, 20, 35, maxFn([cornerTopRight(0.9, 0.15), cornerTopRight(0.3, 0.9)]));
+      //patternCreate('pattern_main', 60, 20, 35, maxFn([rift]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
+      patternCreate('svg_top', 60, 20, 75, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.6, 1)]));
+      patternCreate('pattern_main', 60, 15, 35, maxFn([center]));
+      //patternCreate('pattern_offices', 60, 20, 35, maxFn([path, path2]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
+      patternCreate('svg_two_a', 60, 10, 75, maxFn([cornerBottomLeft(1, 0.05), cornerBottomLeft(0.5, 0.5), cornerBottomLeft(0.1, 1)]));
+      patternCreate('svg_two_b', 60, 10, 75, maxFn([cornerTopLeft(1, 0.2), cornerTopLeft(0.2, 0.6)]));
+      patternCreate('svg_three_a', 60, 10, 75, maxFn([cornerBottomRight(1, 0.05), cornerBottomRight(0.5, 0.5), cornerBottomRight(0.1, 1)]));
+      patternCreate('svg_three_b', 60, 10, 75, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.2, 0.6)]));
+      patternCreate('pattern_footer', 60, 10, 75, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }]) );
+      $("img").show(); // Do not show images until all patterns have been rendered.
     });
   </script>
-  
-  <!-- Link hover and active colors. -->
   <script>
+    function go(target) {
+      $('html,body').animate({scrollTop:$('#'+target).offset().top},500);
+      setTimeout(function() { location.hash = '#' + target; }, 550);
+      return false;
+    }
     $('a').mouseenter(function(e) {
-      var colors = ['lred', 'lorange', 'lgreen', 'lblue'];
-      var randomnumber = Math.floor(Math.random() * colors.length);
-      $(this).removeClass('ldefault');
-      $(this).addClass(colors[randomnumber]);
+      var colors = ['lred', 'lorange', 'lgreen'];
+      $(this).addClass(colors[Math.floor(Math.random() * colors.length)]);
     });
     $('a').mouseleave(function(e) {
       $(this).removeClass('lred lorange lgreen lblue');
-      $(this).addClass('ldefault');
     });
-
-    var $div = $("body");
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === "class") {
-          var attributeValue = $(mutation.target).prop(mutation.attributeName);
-          if (attributeValue === "fp-viewing-about") {
-            var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
-            var arandomnumber = Math.floor(Math.random() * acolors.length);
-            $('a').removeClass('ared aorange agreen ablue');
-            $('a').addClass('ldefault');
-            $('#labout').removeClass('ldefault');
-            $('#labout').addClass(acolors[arandomnumber]);
-          } else if (attributeValue === "fp-viewing-projects") {
-            var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
-            var arandomnumber = Math.floor(Math.random() * acolors.length);
-            $('a').removeClass('ared aorange agreen ablue');
-            $('a').addClass('ldefault');
-            $('#lprojects').removeClass('ldefault');
-            $('#lprojects').addClass(acolors[arandomnumber]);
-          } else if (attributeValue === "fp-viewing-contact") {
-            var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
-            var arandomnumber = Math.floor(Math.random() * acolors.length);
-            $('a').removeClass('ared aorange agreen ablue');
-            $('a').addClass('ldefault');
-            $('#lcontact').removeClass('ldefault');
-            $('#lcontact').addClass(acolors[arandomnumber]);
-          } else if (attributeValue === "fp-viewing-join") {
-            var acolors = ['ared', 'aorange', 'agreen', 'ablue'];
-            var arandomnumber = Math.floor(Math.random() * acolors.length);
-            $('a').removeClass('ared aorange agreen ablue');
-            $('a').addClass('ldefault');
-            $('#ljoin').removeClass('ldefault');
-            $('#ljoin').addClass(acolors[arandomnumber]);
-          } else {
-            $('a').removeClass('ared aorange agreen ablue');
-            $('a').addClass('ldefault');
-          }
-        }; // if
-      }); // forEach
-    }); // MutationObserver
-
-    observer.observe($div[0], { attributes: true });
   </script>
-  <!-- Nav hamburger toggle. -->
   <script>
     $('#ham').click(function() {
       $('#mobilenav').toggleClass('mactive');
       if ( $('.menu').hasClass('menuunder')) {
         $('.menu').delay(270).queue(
-            function() {
-                $(this).toggleClass('menuunder');
-                $(this).toggleClass('menuover');
-                $(this).dequeue();
-            });
+          function() {
+            $(this).toggleClass('menuunder');
+            $(this).toggleClass('menuover');
+            $(this).dequeue();
+          });
       } else {
         $('.menu').toggleClass('menuunder');
         $('.menu').toggleClass('menuover');
       }
     });
-  </script>
-  <script>
-    $('.llink').click(function() {
+    $('.menu a').click(function() {
       $('#ham').prop('checked', false);
       $('#mobilenav').removeClass('mactive');
       $('.menu').removeClass('menuover');
