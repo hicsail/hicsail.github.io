@@ -91,8 +91,7 @@
   </script>
 </head>
 <body>
-  <div>
-    <a id="about" name="about"></a>
+  <div id="container" style="display:none;">
     <header>
       <div>
         <a id='logolink' href='/'>
@@ -104,9 +103,9 @@
           <input type="checkbox" id="ham">
           <label for="ham">
             <ul class="menu menuunder">
-              <li><a onclick="return go('about');">ABOUT</a></li>
-              <li><a onclick="return go('collaborate');">COLLABORATE</a></li>
-              <li><a onclick="return go('join');">JOIN</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#collaborate">COLLABORATE</a></li>
+              <li><a href="#join">JOIN</a></li>
             </ul>
           </label>
         </nav>
@@ -116,6 +115,7 @@
       <!--div id="svg_bg" style="position:fixed; right:0px; top:0px; width:100vw; height:100vh;"></div-->
       <!--div style="position:absolute; right:0px; top:0px; width:75vw; height:50vh;"><div id="svg_one"></div></div-->
       <div>
+        <a name="about"></a>
         <div class="pattern" id="svg_top"></div>
         <div class="plate">
           <div class="tile">
@@ -126,7 +126,7 @@
           <!--div class="tile extra"><div><div id="pattern_main"></div></div></div-->
         </div>
         <div class="pattern" id="svg_two_a"></div>
-        <a id="collaborate" name="collaborate"></a>
+        <a name="collaborate"></a>
         <div class="pattern" id="svg_two_b"></div>
         <!--div class="break"></div-->
         <div class="plate">
@@ -138,7 +138,7 @@
           </div>
         </div>
         <div class="pattern" id="svg_three_a"></div>
-        <a id="join" name="join"></a>
+            <a name="join"></a>
         <div class="pattern" id="svg_three_b"></div>
         <div class="plate">
           <div class="tile extra">
@@ -343,14 +343,25 @@
       patternCreate('svg_three_b', 60, 10, 75, minFn([circTopRight, right]));
       patternCreate('pattern_footer', 60, 10, 75, minFn([left, right, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }])]) );
       $("img").show(); // Do not show images until all patterns have been rendered.
+      $("#container").show();
+      // Move to target after rendering completes.
+      if (location.href.indexOf("#") != -1)
+        location.href = location.href;
     });
   </script>
   <script>
-    function go(target) {
-      $('html,body').animate({scrollTop:$('#'+target).offset().top},500);
-      setTimeout(function() { location.hash = '#' + target; }, 550);
-      return false;
-    }
+    /*$(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({scrollTop: target.offset().top}, 300);
+            return false;
+          }
+        }
+      });
+    });*/
     $('a').mouseenter(function(e) {
       var colors = ['lred', 'lorange', 'lgreen'];
       $(this).addClass(colors[Math.floor(Math.random() * colors.length)]);
