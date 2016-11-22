@@ -11,8 +11,10 @@
 
     html { width:100%; min-height:100%; margin:0; font-size:100%; -webkit-font-smoothing:antialiased; background-color:#FFFFFF; }
     body { height:100%; width:100%; margin:0 auto; position:relative; font-family:'Karbon'; font-size:20px; }
+    body > div > div > div { position:absolute; width:100%; }
 
     header { width:100%; position:fixed; height:50px; background-color:#FFFFFF; z-index:100; }
+    header > div { max-width:1400px; margin:0 auto; }
     h1 { font-size:46px; font-weight:normal; font-feature-settings:"kern"; display:inline-block; float:left; line-height:50px; margin:-1px 0 0px 15px; color:#222222; }
     #logolink { height:50px; position:relative; display:block; float:left; z-index:999; }
     #logo { width:50px; position:relative; top:50%; transform:translateY(-50%); float:left; }
@@ -22,17 +24,15 @@
     .menu > li { position:relative; margin-left:25px; }
     .menu > li > a { line-height:50px; letter-spacing:0.03em; text-decoration:none; font-feature-settings:"kern"; text-shadow:0 0 1px rgba(200,200,200,0.5); color:#222222; cursor:pointer; }
 
-    .plate { display:table; top:50px; margin:15px 55px 15px 55px; background-color:#FFFFFF; }
-    .plate:first-of-type { margin-top:215px; }
+    .plate { display:table; max-width:1200px; margin:0 auto; background-color:#FFFFFF; }
     .tile { display:table-cell; width:50%; vertical-align:middle; padding:0px 50px 0px 50px; text-align:justify; }
-    .pattern { width:100%; margin-bottom:-5px; background-color:#FFFFFF; }
-    .break { height:200px; }
+    .pattern { width:100%; max-width:1400px; margin:0 auto; margin-bottom:-5px; background-color:#FFFFFF; }
+    /* .break { height:200px; } */
     .tile > p { line-height:1.45; letter-spacing:0.01em; text-shadow:0 0 1px rgba(0,0,0,0.4); text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
     .tile > ol > li { list-style-type:none; margin-top:5px; }
     .extra { text-align:center; }
     .extra > div { float:center; height:400px; }
     .extra > div > div { display:inline-block; position:relative; height:400px; width:600px; top:-405px; }
-    #pattern_main { top:0px; }
 
     a { text-decoration:none; color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
     a:visited { color:#73a6fc; -webkit-transition:color, 0.3s ease-out; -moz-transition:color, 0.3s ease-out; -o-transition:color, 0.3s ease-out; transition:color, 0.3s ease-out; -webkit-backface-visibility:hidden; }
@@ -43,16 +43,17 @@
     .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; }
 
     footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
+    footer > div { max-width:1400px; margin:0 auto; }
     #github { display:table-cell; float:right; }
-    #github > img { height:30px; margin:19px; opacity:0.6; }
+    #github > img { height:30px; margin:16px; opacity:0.6; }
     #github > img:hover { opacity:0.8; }
     #bu_hic_logo { display:table-cell; vertical-align:middle; max-width:75%; float:left; }
 
-    @media all and (max-width:1300px) { // Was 900 before.
-      .plate { }
+    @media all and (max-width:1300px) {
+      .plate { padding:0px 55px 0px 55px; }
       .tile { float:center; width:100vw; padding:60px 0px 60px 0px; }
       .extra { display:none; }
-      .tile > p { float:center; max-width:900px; margin:0 auto; }
+      .tile > p { float:center; max-width:900px; margin:0 auto; margin-bottom:15px; }
       .tile > ol { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
     }
     @media all and (max-width:500px) {
@@ -73,7 +74,8 @@
       .menu > li { margin-left:0px; width:100%; height:50px; box-sizing:border-box; border-top:2px solid #000000; background-color:#FFFFFF; border:1px solid #000000; }
       .menu > li { margin-left:0px; margin-bottom:-1px;}
       .menu > li > a { text-align:center; margin:0 auto; display:block; }
-      .plate { margin-top:55px; }
+      .plate { margin-top:0px; }
+      .tile > p { line-height:1.3; }
       .tile > ol { margin-left:-15px; }
     }
   </style>
@@ -92,26 +94,28 @@
   <div>
     <a id="about" name="about"></a>
     <header>
-      <a id='logolink' href='/'>
-        <!--img id="logo" src="//hicsail.github.io/img/s_logo.png"-->
-        <h1>SAIL</h1>
-      </a>
-      <nav role="navigation">
-        <div id="mobilenav"></div>
-        <input type="checkbox" id="ham">
-        <label for="ham">
-          <ul class="menu menuunder">
-            <li><a onclick="return go('about');">ABOUT</a></li>
-            <li><a onclick="return go('collaborate');">COLLABORATE</a></li>
-            <li><a onclick="return go('join');">JOIN</a></li>
-          </ul>
-        </label>
-      </nav>
+      <div>
+        <a id='logolink' href='/'>
+          <!--img id="logo" src="//hicsail.github.io/img/s_logo.png"-->
+          <h1>SAIL</h1>
+        </a>
+        <nav role="navigation">
+          <div id="mobilenav"></div>
+          <input type="checkbox" id="ham">
+          <label for="ham">
+            <ul class="menu menuunder">
+              <li><a onclick="return go('about');">ABOUT</a></li>
+              <li><a onclick="return go('collaborate');">COLLABORATE</a></li>
+              <li><a onclick="return go('join');">JOIN</a></li>
+            </ul>
+          </label>
+        </nav>
+      </div>
     </header>
     <div>
       <!--div id="svg_bg" style="position:fixed; right:0px; top:0px; width:100vw; height:100vh;"></div-->
       <!--div style="position:absolute; right:0px; top:0px; width:75vw; height:50vh;"><div id="svg_one"></div></div-->
-      <div style="position:absolute">
+      <div>
         <div class="pattern" id="svg_top"></div>
         <div class="plate">
           <div class="tile">
@@ -119,11 +123,7 @@
             <p>Supported projects focus on a wide range of topics and technologies, from using natural language processing to analyze large literature corpora, to solving record linkage problems for public health and economics applications, to building mobile applications for medical studies, to building smart-city services and platforms.</p>
             <p>SAIL is committed to promoting innovation within the research community and will learn new technologies and techniques as determined by the needs of any given project.</p>
           </div>
-          <!--div class="tile extra">
-            <div>
-              <div id="pattern_main"></div>
-            </div>
-          </div-->
+          <!--div class="tile extra"><div><div id="pattern_main"></div></div></div-->
         </div>
         <div class="pattern" id="svg_two_a"></div>
         <a id="collaborate" name="collaborate"></a>
@@ -144,7 +144,7 @@
           <div class="tile extra">
             <div>
               <img src="//hicsail.github.io/img/offices.png" style="display:none;"/>
-              <div id="pattern_offices"></div>
+              <!--div id="pattern_offices"></div-->
             </div>
           </div>
           <div class="tile">
@@ -159,8 +159,10 @@
         </div>
         <div class="pattern" id="pattern_footer"></div>
         <footer>
-          <a href="http://www.bu.edu/hic"><img id="bu_hic_logo" src="//hicsail.github.io/img/hic.png"/></a>
-          <a id="github" href="http://github.com/hicsail"><img src="img/GitHub-Mark-64px.png"/></a>
+          <div>
+            <a href="http://www.bu.edu/hic"><img id="bu_hic_logo" src="//hicsail.github.io/img/hic.png"/></a>
+            <a id="github" href="http://github.com/hicsail"><img src="img/GitHub-Mark-64px.png"/></a>
+          </div>
         </footer>
       </div>
     </div>
@@ -303,10 +305,23 @@
 
       var aggFn = function (agg, base, fs) { return function (r, nr, c, nc) { var v = base; for (var i = 0; i < fs.length; i++) v = agg(v, fs[i](r, nr, c, nc)); return v; }; };
       var minFn = function (fs) { return aggFn(Math.min, 1, fs); }, maxFn = function (fs) { return aggFn(Math.max, 0, fs); };
+      var circTopRight = function (r,nr,c,nc) { 
+        var x = c/nc, y = (nr-r)/nr, a = 1-x, b = 1-y;
+        var fromBottomLeft = Math.min(x, y, Math.pow((Math.pow(x,2) + Math.pow(y,2)),4));
+        var fromTopRight = a+b < 0.2 ? Math.min(a, b) : 1;
+        return 0.8 * Math.min(fromBottomLeft, 1);
+      };
+      var circTopLeft = function (r,nr,c,nc) { 
+        var x = (nc-c)/nc, y = (nr-r)/nr, a = 1-x, b = 1-y;
+        var fromBottomLeft = Math.min(0.8*x, y, Math.pow((Math.pow(x,2) + Math.pow(y,2)),16));
+        return 0.8 *fromBottomLeft;
+      };
       var cornerTopRight = function (tr,tc0) { return function (r,nr,c,nc) { var tc = 1-tc0; return Math.min(c >= tc*nc ? (c-tc*nc)/((1-tc)*nc) : 0, r <= (tr*nr) ? ((tr*nr) - r)/(tr*nr) : 0); }; };
       var cornerTopLeft = function (tr,tc) { return function (r,nr,c,nc) { return Math.min(c >= tc*nc ? 0 : ((tc*nc)-c)/(tc*nc), r <= (tr*nr) ? ((tr*nr)-r)/(tr*nr) : 0); }; };
       var cornerBottomLeft = function (tr0,tc) { return function (r,nr,c,nc) { var tr = 1-tr0; return Math.min(c >= tc*nc ? 0 : ((tc*nc)-c)/(tc*nc), r <= (tr*nr) ? 0 : 1 - ((nr-r)/((1-tr)*nr))); }; };
       var cornerBottomRight = function (tr0,tc0) { return function (r,nr,c,nc) { var tc = 1-tc0, tr = 1-tr0; return Math.min(c >= tc*nc ? (c-tc*nc)/((1-tc)*nc) : 0, r <= (tr*nr) ? 0 : 1 - ((nr-r)/((1-tr)*nr))); }; };
+      var left = function (r,nr,c,nc) { return (c<6) ? c/6 : 1; };
+      var right = function (r,nr,c,nc) { return ((nc-c)<6) ? (nc-c)/6 : 1; };
       var center = function (r,nr,c,nc) { return Math.min(1-Math.abs(nc/2-c)/(nc/2), 1-Math.abs(nr/2-r)/(nr/2)); };
       var edges = function (r,nr,c,nc) { return 1-Math.sqrt(Math.min(1-Math.abs(nc/2-c)/(nc/2), 1-Math.abs(nr/2-r)/(nr/2))); };
       var rift = function (r,nr,c,nc) { var r = nr-r; return Math.pow(1 - Math.abs(c/nc - r/nr), 4); };
@@ -317,14 +332,16 @@
       //patternCreate('svg_bg', 60, 29, 50, function (r, nr, c, nc) { return Math.abs(nr/2 - r)/(nr/2); } );
       //patternCreate('svg_one', 60, 20, 35, maxFn([cornerTopRight(0.9, 0.15), cornerTopRight(0.3, 0.9)]));
       //patternCreate('pattern_main', 60, 20, 35, maxFn([rift]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
-      patternCreate('svg_top', 60, 20, 75, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.6, 1)]));
-      patternCreate('pattern_main', 60, 15, 35, maxFn([center]));
+      patternCreate('svg_top', 60, 20, 75, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.6, 1)])]));
+      //patternCreate('pattern_main', 60, 15, 35, maxFn([center]));
       //patternCreate('pattern_offices', 60, 20, 35, maxFn([path, path2]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
-      patternCreate('svg_two_a', 60, 10, 75, maxFn([cornerBottomLeft(1, 0.05), cornerBottomLeft(0.5, 0.5), cornerBottomLeft(0.1, 1)]));
-      patternCreate('svg_two_b', 60, 10, 75, maxFn([cornerTopLeft(1, 0.2), cornerTopLeft(0.2, 0.6)]));
-      patternCreate('svg_three_a', 60, 10, 75, maxFn([cornerBottomRight(1, 0.05), cornerBottomRight(0.5, 0.5), cornerBottomRight(0.1, 1)]));
-      patternCreate('svg_three_b', 60, 10, 75, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.2, 0.6)]));
-      patternCreate('pattern_footer', 60, 10, 75, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }]) );
+      patternCreate('svg_two_a', 60, 10, 75, minFn([left, maxFn([cornerBottomLeft(1, 0.05), cornerBottomLeft(0.5, 0.5), cornerBottomLeft(0.1, 1)])]));
+      //patternCreate('svg_two_b', 60, 10, 75, minFn([left, maxFn([cornerTopLeft(1, 0.2), cornerTopLeft(0.2, 0.6)])]));
+      patternCreate('svg_two_b', 60, 10, 75, minFn([circTopLeft, left]));
+      patternCreate('svg_three_a', 60, 10, 75, minFn([right, maxFn([cornerBottomRight(1, 0.05), cornerBottomRight(0.5, 0.5), cornerBottomRight(0.1, 1)])]));
+      //patternCreate('svg_three_b', 60, 10, 75, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.2, 0.6)])]));
+      patternCreate('svg_three_b', 60, 10, 75, minFn([circTopRight, right]));
+      patternCreate('pattern_footer', 60, 10, 75, minFn([left, right, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }])]) );
       $("img").show(); // Do not show images until all patterns have been rendered.
     });
   </script>
