@@ -5,6 +5,7 @@
   <title>SAIL</title>
   <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,"><!-- Suppress browser favicon.ico request. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css">
   	@font-face { font-family:'Karbon'; src:url('//hicsail.github.io/fonts/KarbonWeb-Regular.eot'); src:url('//hicsail.github.io/fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('//hicsail.github.io/fonts/KarbonWeb-Regular.woff2') format('woff2'),url('//hicsail.github.io/fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
 	@font-face { font-family:'Karbon'; src:url('//hicsail.github.io/fonts/KarbonWeb-Medium.eot'); src:url('//hicsail.github.io/fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('//hicsail.github.io/fonts/KarbonWeb-Medium.woff2') format('woff2'),url('//hicsail.github.io/fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
@@ -36,7 +37,7 @@
       line-height:1.45; letter-spacing:0.01em; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1";
     }
     .tile > .people > div { display:inline-block; *display:inline; zoom:1; margin:0px 0px 20px 0px; }
-    .tile > .people > div > span { display:block; font-size:16px; color:#555555; }
+    .tile > .people > div > span { display:block; margin-top:-6px; font-size:16px; color:#555555; }
     .tile > .people > span { width:100%; display:inline-block; font-size:0; line-height:0; }
     .extra { text-align:center; }
     .extra > div { float:center; height:400px; }
@@ -52,10 +53,10 @@
 
     footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
     footer > div { max-width:1400px; margin:0 auto; }
-    #github { display:table-cell; float:right; }
-    #github > img { height:30px; margin:16px; opacity:0.6; }
-    #github > img:hover { opacity:0.8; }
-    #bu_hic_logo { display:table-cell; vertical-align:middle; max-width:75%; float:left; }
+    footer > div > .link { display:table-cell; float:right; }
+    footer > div > .link > i { margin:18px 6px 18px 6px; font-size:28px; color:#FFFFFF; opacity:0.5; }
+    footer > div > .link > i:hover { opacity:0.8; }
+    footer > div > a > img { display:table-cell; vertical-align:middle; max-width:67%; float:left; }
 
     @media all and (max-width:1300px) {
       .plate { padding:0px 55px 0px 55px; }
@@ -182,8 +183,11 @@
         <div class="pattern" id="pattern_footer"></div>
         <footer>
           <div>
-            <a href="http://www.bu.edu/hic"><img id="bu_hic_logo" src="//hicsail.github.io/img/hic.png"/></a>
-            <a id="github" href="http://github.com/hicsail"><img src="//hicsail.github.io/img/GitHub-Mark-64px.png"/></a>
+            <a href="http://www.bu.edu/hic"><img src="//hicsail.github.io/img/hic.png"/></a>
+            <a class="link" href="http://github.com/hicsail"><i class="fa fa-github"></i></a>
+            <a class="link" href="https://www.linkedin.com/company/boston-university-software-&-application-innovation-lab"><i class="fa fa-linkedin-square"></i></a>
+            <a class="link" href="mailto:hicsail@bu.edu"><i class="fa fa-envelope-o"></i></a>
+            <a class="link" href="https://www.bu.edu/maps/?id=3652"><i class="fa fa-map-marker"></i></a>
           </div>
         </footer>
       </div>
@@ -220,13 +224,43 @@
       }
 
       function patternDraw(svg, tileSize, numRows, numCols, wgtFn, colors, modes) {
-        for (var r = 0; r < numRows; r++) {
-          for (var c = 0; c < numCols; c++) {
-            var rotated = Math.round(Math.random()), x = c*tileSize, y = r*tileSize, g = svg.append('g');
-            triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, false, x, y);
-            triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, true, x, y);
+        /*function patternRow(r) {
+          if (r < numRows) {
+            for (var c = 0; c < numCols; c++) {
+              var rotated = Math.round(Math.random()), x = c*tileSize, y = r*tileSize, g = svg.append('g');
+              triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, false, x, y);
+              triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, true, x, y);
+            }
+            setTimeout(function () { patternRow(r+1); }, 1);
           }
         }
+        patternRow(0);*/
+        
+        /*function draw(r, c) {
+          if (r < numRows) {
+              var rotated = Math.round(Math.random()), x = c*tileSize, y = r*tileSize, g = svg.append('g');
+              triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, false, x, y);
+              triangleDraw(g, tileSize, r, c, wgtFn(r, numRows, c, numCols), colors, modes, rotated, true, x, y);
+              c++;
+              r += (c == numCols) ? 1 : 0;
+              c %= numCols;
+              setTimeout(function () { draw(r, c); }, 0);
+          }
+        }
+        draw(0, 0);*/
+        
+        setTimeout(function () {
+          for (var r = 0; r < numRows; r++) {
+            for (var c = 0; c < numCols; c++) {
+              var rotated = Math.round(Math.random()), x = c*tileSize, y = r*tileSize, g = svg.append('g');
+              var wgt1 = wgtFn(r, numRows, c, numCols), wgt2 = wgtFn(r, numRows, c, numCols);
+              if (wgt1 > 0)
+                triangleDraw(g, tileSize, r, c, wgt1, colors, modes, rotated, false, x, y);
+              if (wgt2 > 0)
+                triangleDraw(g, tileSize, r, c, wgt2, colors, modes, rotated, true, x, y);
+            }
+          }
+        }, 0);
       }
 
       function triangleDraw(g, tileSize, r, c, wgt, colors, modes, rotated, flipped, x, y) {
