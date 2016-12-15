@@ -58,7 +58,7 @@
     .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; }
 
     footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
-    footer > div { max-width:1400px; margin:0 auto; }
+    footer > div { max-width:1400px; margin:0 auto; padding-right:12px; }
     footer > div > .link { display:table-cell; float:right; }
     footer > div > .link > i { margin:18px 6px 18px 6px; font-size:28px; color:#FFFFFF; opacity:0.5; }
     footer > div > .link > i:hover { opacity:0.8; }
@@ -127,37 +127,49 @@
       { 'icons': ['institution', 'gavel', 'balance-scale'],
         'title': 'Amicus Curiae Briefs',
         'text': 'A web-based query interface for a data set describing the network of amicus curiae briefs (and signing organizations) filed in support of or against a side in Supreme Court cases over the past century.',
-        'pi': '<a href="http://www.bu.edu/polisci/people/faculty/christenson/">Dino Christenson</a>, Associate Professor, CAS Political Science',
+        'investigators': '<a href="http://www.bu.edu/polisci/people/faculty/christenson/">Dino Christenson</a>, Associate Professor, CAS Political Science',
         'interns': 'Raphael Baysa'
       },
       { 'icons': ['mobile', 'commenting-o'],
         'title': 'Smoking Cessation Mobile App',
         'text': 'Development and deployment (within the context of a study) of a behavioral intervention mobile app to help individuals interested in quitting smoking.',
-        'pi': '<a href="https://www.bu.edu/dental/profile/belinda-borrelli/">Belinda Borrelli</a>, Professor, SDM',
+        'investigators': '<a href="https://www.bu.edu/dental/profile/belinda-borrelli/">Belinda Borrelli</a>, Professor, SDM',
         'interns': 'Jacqueline You, David Wang, Ekaterina Prokopeva'
       },
       { 'icons': ['check-square-o', 'bar-chart'],
         'title': 'Spinal Cord Injury - Functional Index',
         'text': 'Construction of an adaptive web survey platform (including an accessible front-end web application, back-end database and API, and algorithm translations) to help spinal cord injury patients assess their progress.',
-        'pi': '<a href="https://www.bu.edu/sph/profile/mary-slavin/">Mary Slavin</a>, Research Assistant Professor, SPH',
+        'investigators': '<a href="https://www.bu.edu/sph/profile/mary-slavin/">Mary Slavin</a>, Research Assistant Professor, SPH',
         'interns': ''
       },
       { 'icons': ['shopping-cart'],
         'title': 'IKEA Data Record Linkage',
         'text': 'Using machine learning techniques to solve the record linkage problem for a data set to enable the identification and comparison of IKEA catalogue items across seven countries over decades.',
-        'pi': '<a href="http://people.bu.edu/mbaxter/">Marianne Baxter</a>, Professor, CAS Economics',
+        'investigators': '<a href="http://people.bu.edu/mbaxter/">Marianne Baxter</a>, Professor, CAS Economics',
         'interns': ''
       },
       { 'icons': ['eye'],
         'title': 'Eye Tracking',
         'text': 'Unifying, converting, and enhancing a mix of scripts for parsing eye tracking data, with a particular focus on automatically interpolating data produced by eye tracking hardware used for experiments in cognitive science and linguistics.',
-        'pi': '<a href="http://blogs.bu.edu/sarunach/">Sudha Arunachalam</a>, Assistant Professor, SAR',
+        'investigators': '<a href="http://blogs.bu.edu/sarunach/">Sudha Arunachalam</a>, Assistant Professor, SAR',
         'interns': ''
       },
       { 'icons': ['book', 'graduation-cap'],
         'title': 'Views of Education across Nations',
         'text': 'Application of natural language processing techniques (NLP) such as frequency analysis, sentiment analysis, and topic modeling to a data set of British and Danish novels to explore how views of education influence historical trends.',
-        'pi': '<a href="https://www.bu.edu/polisci/people/faculty/martin/">Cathie Jo Martin</a>, Professor, CAS Political Science',
+        'investigators': '<a href="https://www.bu.edu/polisci/people/faculty/martin/">Cathie Jo Martin</a>, Professor, CAS Political Science',
+        'interns': ''
+      },
+      { 'icons': ['bolt', 'plug'],
+        'title': 'Power Grid Topology Control Optimization',
+        'text': 'Porting, profiling, parallelizing, and optimizing algorithms that control power grid transmission topologies (in preparation for incorporation of the algorithms into production-quality applications).',
+        'investigators': '<a href="http://www.bu.edu/pcms/caramanis/">Michael Caramanis</a>, Prof. &amp; <a href="http://www.bu.edu/eng/profile/pablo-a-ruiz-phd/">Pablo Ruiz</a>, Research Assoc. Prof., ENG',
+        'interns': ''
+      },
+      { 'icons': ['users', 'lock'],
+        'title': 'Multi-Party Computation for 100% Talent',
+        'text': 'Design, implementation, and deployment of a secure protocol and web application to <a href="https://www.bu.edu/today/2015/computational-thinking-breaks-a-logjam/">support a secure data collection process</a> involving <a href="http://www.bostonwomensworkforcecouncil.com/corporate-signatories/">over 100</a> of the largest employer organizations in Boston.',
+        'investigators': '<a href="http://www.bostonwomensworkforcecouncil.com/">Boston Women\'s Workforce Council</a> &amp; <a href="https://www.boston.gov/">City of Boston</a>',
         'interns': ''
       }
     ];
@@ -168,7 +180,7 @@
       var template = function (p, i) { return '<table>' +
         '<tr><td style="color:#333333;"><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
         '<tr><td></td><td style="font-size:16px;"><p>' + p.text + '</p></td></tr>' +
-        '<tr><td></td><td style="font-size:16px;"><b>PI:</b> ' + p.pi + '</td></tr>' +
+        '<tr><td></td><td style="font-size:16px;"><b>PI(s):</b> ' + p.investigators + '</td></tr>' +
         //'<tr><td></td><td style="font-size:16px;"><b>Interns:</b> ' + p.interns + '</td></tr>'
         '</table>'; };
       for (var i = 0; i < projects.length; i++)
