@@ -33,8 +33,8 @@
     .tile > ol > li { list-style-type:none; margin-top:5px; }
     .tile > #projects { margin-top:30px; margin-bottom:30px; }
     .tile > #projects > table { margin-left:2%; margin-right:3%; margin-top:25px; margin-bottom:25px; display:inline-block; width:45%; font-size:26px; }
-    .tile > #projects > table td:first-of-type { text-align:center; }
-    .tile > #projects > table i { width:23px; margin-right:10px; font-size:22px; -webkit-filter:brightness(75%); filter:brightness(75%); }
+    .tile > #projects > table td:first-of-type { width:36px; text-align:center; }
+    .tile > #projects > table i { display:block; width:23px; margin:0 auto; font-size:22px; -webkit-filter:brightness(75%); filter:brightness(75%); }
     .tile > #projects > table span { display:block; }
     .tile > #projects > table p { margin:2px 0px 2px 0px; }
     .tile > .people {
@@ -99,6 +99,8 @@
       .tile { padding:40px 0px 40px 0px; }
       .tile > p { line-height:1.3; }
       .tile > ol { margin-left:-15px; }
+      .tile > #projects > table { width:97%; margin-left:0%; margin-right:3%; padding:0px; }
+      .tile > #projects > table td:first-of-type { width:30px; }
       .tile > #projects > table i { width:14px; font-size:16px; }
       .tile > #projects > table span { font-size:16px; font-weight:bold; }
       .tile > #projects > table p { font-size:14px; }
@@ -183,7 +185,7 @@
       var div = document.getElementById("projects");
       var colors = _.shuffle(theme);
       var template = function (p, i) { return '<table>' +
-        '<tr><td style="color:#333333;"><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
+        '<tr><td><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
         '<tr><td></td><td style="font-size:16px;"><p>' + p.text + '</p></td></tr>' +
         '<tr><td></td><td style="font-size:16px;"><b>PI(s):</b> ' + p.investigators + '</td></tr>' +
         //'<tr><td></td><td style="font-size:16px;"><b>Interns:</b> ' + p.interns + '</td></tr>'
