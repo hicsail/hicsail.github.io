@@ -59,11 +59,15 @@
     .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; }
 
     footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
-    footer > div { max-width:1400px; margin:0 auto; padding-right:12px; }
-    footer > div > .link { display:table-cell; float:right; }
-    footer > div > .link > i { margin:18px 6px 18px 6px; font-size:28px; color:#FFFFFF; opacity:0.5; }
-    footer > div > .link > i:hover { opacity:0.8; }
-    footer > div > a > img { display:table-cell; vertical-align:middle; max-width:60%; float:left; }
+    footer > div { height:65px; max-width:1400px; margin:0 auto; }
+    footer > div > table { height:65px; width:100%; border-spacing:0px; }
+    footer > div > table td { height:65px; padding:0px; }
+    footer > div > table td:first-of-type { width:55%; padding-left:0px; text-align:left; }
+    footer > div > table td:last-of-type { width:45%; padding-right:10px; text-align:right; }
+    footer > div > table .link { display:table-cell; float:right; }
+    footer > div > table .link > i { margin:0px 6px 0px 6px; font-size:28px; color:#FFFFFF; opacity:0.5; }
+    footer > div > table .link > i:hover { opacity:0.8; }
+    footer > div > table img { max-width:100%; margin-top:2px; margin-bottom:-2px; cursor:pointer; }
 
     @media all and (max-width:1300px) {
       .plate { padding:0px 55px 0px 55px; }
@@ -105,7 +109,11 @@
       .tile > #projects > table span { font-size:16px; font-weight:bold; }
       .tile > #projects > table p { font-size:14px; }
       .team { padding:0px; }
-      footer > div > .link > i { margin:22px 4px 22px 4px; font-size:22px; }
+      footer > div > table .link > i { margin:0px 4px 0px 4px; font-size:22px; }
+    }
+
+    @media all and (max-width:340px) {
+      footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; }
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -278,11 +286,17 @@
         <div class="pattern" id="pattern_footer"></div>
         <footer>
           <div>
-            <a href="http://www.bu.edu/hic"><img src="//hicsail.github.io/img/hic.png"/></a>
-            <a class="link" href="http://github.com/hicsail"><i class="fa fa-github"></i></a>
-            <a class="link" href="https://www.linkedin.com/company/boston-university-software-&-application-innovation-lab"><i class="fa fa-linkedin-square"></i></a>
-            <a class="link" href="mailto:hicsail@bu.edu"><i class="fa fa-envelope-o"></i></a>
-            <a class="link" href="https://www.bu.edu/maps/?id=3652"><i class="fa fa-map-marker"></i></a>
+            <table>
+              <tr>
+                <td><img onclick="location.href='http://www.bu.edu/hic';" src="//hicsail.github.io/img/hic.png"/></td>
+                <td>
+                  <a class="link" href="http://github.com/hicsail"><i class="fa fa-github"></i></a>
+                  <a class="link" href="https://www.linkedin.com/company/boston-university-software-&-application-innovation-lab"><i class="fa fa-linkedin-square"></i></a>
+                  <a class="link" href="mailto:hicsail@bu.edu"><i class="fa fa-envelope-o"></i></a>
+                  <a class="link" href="https://www.bu.edu/maps/?id=3652"><i class="fa fa-map-marker"></i></a>
+                </td>
+              </tr>
+            </table>
           </div>
         </footer>
       </div>
@@ -470,7 +484,6 @@
 
       // List the project summaries.
       listProjects();
-      
       // Construct and render the interactive visualizations.
       //patternCreate('svg_bg', 60, 29, 50, function (r, nr, c, nc) { return Math.abs(nr/2 - r)/(nr/2); } );
       //patternCreate('svg_one', 60, 20, 35, maxFn([cornerTopRight(0.9, 0.15), cornerTopRight(0.3, 0.9)]));
