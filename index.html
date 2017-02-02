@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SAIL</title>
-  <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,"><!-- Suppress browser favicon.ico request. -->
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;,"><!-- Suppress browser favicon.ico request. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css">
@@ -116,7 +117,6 @@
       footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; }
     }
   </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -220,7 +220,7 @@
           <!--img id="logo" src="//hicsail.github.io/img/s_logo.png"-->
           <h1>SAIL</h1>
         </a>
-        <nav role="navigation">
+        <nav>
           <div id="mobilenav"></div>
           <input type="checkbox" id="ham">
           <label for="ham">
@@ -237,7 +237,7 @@
       <!--div id="svg_bg" style="position:fixed; right:0px; top:0px; width:100vw; height:100vh;"></div-->
       <!--div style="position:absolute; right:0px; top:0px; width:75vw; height:50vh;"><div id="svg_one"></div></div-->
       <div>
-        <a name="about"></a>
+        <a id="about"></a>
         <div class="pattern" id="svg_top"></div>
         <div class="plate">
           <div class="tile">
@@ -248,7 +248,7 @@
           <!--div class="tile extra"><div><div id="pattern_main"></div></div></div-->
         </div>
         <div class="pattern" id="svg_two_a"></div>
-        <a name="collaborate"></a>
+        <a id="collaborate"></a>
         <div class="pattern" id="svg_two_b"></div>
         <!--div class="break"></div-->
         <div class="plate">
@@ -261,12 +261,12 @@
           </div>
         </div>
         <div class="pattern" id="svg_three_a"></div>
-            <a name="join"></a>
+        <a id="join"></a>
         <div class="pattern" id="svg_three_b"></div>
         <div class="plate">
           <div class="tile extra">
             <div>
-              <img src="//hicsail.github.io/img/offices.png" style="display:none;"/>
+              <img src="//hicsail.github.io/img/offices.png" style="display:none;" alt="Hariri Institute for Computing"/>
               <!--div id="pattern_offices"></div-->
             </div>
           </div>
@@ -298,7 +298,7 @@
           <div>
             <table>
               <tr>
-                <td><img onclick="location.href='http://www.bu.edu/hic';" src="//hicsail.github.io/img/hic.png"/></td>
+                <td><img onclick="location.href='http://www.bu.edu/hic';" src="//hicsail.github.io/img/hic.png" alt="Hariri Institute for Computing"/></td>
                 <td>
                   <a class="link" href="http://github.com/hicsail"><i class="fa fa-github"></i></a>
                   <a class="link" href="https://www.linkedin.com/company/boston-university-software-&-application-innovation-lab"><i class="fa fa-linkedin-square"></i></a>
