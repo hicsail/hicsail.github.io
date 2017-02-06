@@ -22,7 +22,7 @@
     #logo { width:50px; position:relative; top:50%; transform:translateY(-50%); float:left; }
     .menu { position:relative; list-style:none; margin:0; height:50px; margin-right:25px; display:-webkit-box; display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-flex-flow:row wrap; justify-content:flex-end; }
     #ham { display:none; opacity:0; position:absolute; }
-    label { position:relative; top:0px; }
+    #menu_container { position:relative; top:0px; }
     .menu > li { position:relative; margin-left:25px; }
     .menu > li > a { line-height:50px; letter-spacing:0.03em; text-decoration:none; font-feature-settings:"kern"; text-shadow:0 0 1px rgba(200,200,200,0.5); color:#222222; cursor:pointer; }
 
@@ -94,9 +94,9 @@
       .menu { flex-direction:column; width:100%; margin:0 0 0 0; padding:0 0 0 0; height:150px; }
       .menuunder { z-index:-1; }
       .menuover { z-index:999; }
-      label { top:-150px; z-index:-1; }
+      #menu_container { top:-150px; z-index:-1; }
       #ham { display:block; position:relative; cursor:pointer; float:right; margin:0px 25px 0px 0px; top:50%; transform:translateY(-50%) scale(1.62,1.54); background-color:#000000; }
-      #ham:checked + label { top:0px; -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
+      #ham:checked + #menu_container { top:0px; -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
       .menu > li { margin-left:0px; width:100%; height:50px; box-sizing:border-box; border-top:2px solid #000000; background-color:#FFFFFF; border:1px solid #000000; }
       .menu > li { margin-left:0px; margin-bottom:-1px;}
       .menu > li > a { text-align:center; margin:0 auto; display:block; }
@@ -223,13 +223,13 @@
         <nav>
           <div id="mobilenav"></div>
           <input type="checkbox" id="ham">
-          <label for="ham">
+          <div id="menu_container">
             <ul class="menu menuunder">
               <li><a href="#about">ABOUT</a></li>
               <li><a href="#collaborate">COLLABORATE</a></li>
               <li><a href="#join">JOIN</a></li>
             </ul>
-          </label>
+          </div>
         </nav>
       </div>
     </header>
