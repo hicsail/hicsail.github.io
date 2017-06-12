@@ -21,7 +21,7 @@
     .pattern { width:100%; max-width:1400px; margin:0 auto; margin-bottom:-5px; background-color:#FFFFFF; }
     /* .break { height:200px; } */
     .tile > p { line-height:1.45; letter-spacing:0.01em; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
-    .tile > p > small { line-height:0.9; color:#777777; }
+    .tile > p > span { font-size:16px; line-height:0.9; color:#777777; }
     .tile > ol > li { list-style-type:none; margin-top:5px; }
     .tile > #projects { margin-top:30px; margin-bottom:30px; }
     .tile > #projects > table { margin-left:2%; margin-right:3%; margin-top:25px; margin-bottom:25px; display:inline-block; width:45%; font-size:26px; }
