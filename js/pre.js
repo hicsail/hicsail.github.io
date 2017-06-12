@@ -70,6 +70,8 @@ var projects = [
 
 function listProjects() {
   var div = document.getElementById("projects");
+  if (div == null)
+    return;
   var colors = _.shuffle(theme);
   var template = function (p, i) { return '<table>' +
     '<tr><td><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
