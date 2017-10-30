@@ -42,9 +42,9 @@ var projects = [
     'investigators': '<a href="http://people.bu.edu/mbaxter/">Marianne Baxter</a>, Professor, CAS Economics',
     'interns': ''
   },*/
-  { 'icons': ['fa-flask'],
+  { 'icons': ['flask'],
     'title': 'Clotho Synthetic Biology Framework',
-    'text': 'Development of the latest version of a framework for engineering synthetic biological systems and managing the data used to create them.',
+    'text': 'Development of the latest production-ready version of a framework for engineering synthetic biological systems and managing the data used to create them.',
     'investigators': '<a href="http://cidarlab.org/doug-densmore/">Douglas Densmore</a>, Associate Professor, ENG ECE',
     'interns': ''
   },
@@ -73,8 +73,8 @@ var projects = [
     'interns': ''
   },*/
   { 'icons': ['users', 'lock'],
-    'title': 'Practical Deployment of Multi-Party Computation',
-    'text': 'Design, implementation, and <a href="https://www.bu.edu/today/2015/computational-thinking-breaks-a-logjam/">deployment</a> of web applications that deliver <a href="https://multiparty.org">modern cryptographic capabilities</a>.',
+    'title': 'Deployment of Multi-Party Computation',
+    'text': 'Design, implementation, and <a href="https://www.bu.edu/today/2015/computational-thinking-breaks-a-logjam/">deployment</a> of web applications that deliver <a href="https://multiparty.org">modern cryptographic capabilities</a> to public and private organizations hoping to analyze their data securely.',
     'investigators': '<a href="https://www.boston.gov/">City of Boston</a>, <a href="http://www.bostonwomensworkforcecouncil.com/">BWWC</a>, <a href="http://www.honda-ri.com/">HRI</a>, and others',
     'interns': ''
   }
