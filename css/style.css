@@ -1,5 +1,5 @@
-    @font-face { font-family:'Karbon'; src:url('//sail.codes/fonts/KarbonWeb-Regular.eot'); src:url('//sail.codes/fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('//sail.codes/fonts/KarbonWeb-Regular.woff2') format('woff2'),url('//sail.codes/fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
-    @font-face { font-family:'Karbon'; src:url('//sail.codes/fonts/KarbonWeb-Medium.eot'); src:url('//sail.codes/fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('//sail.codes/fonts/KarbonWeb-Medium.woff2') format('woff2'),url('//sail.codes/fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
+    @font-face { font-family:'Karbon'; src:url('/fonts/KarbonWeb-Regular.eot'); src:url('/fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('/fonts/KarbonWeb-Regular.woff2') format('woff2'),url('/fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
+    @font-face { font-family:'Karbon'; src:url('/fonts/KarbonWeb-Medium.eot'); src:url('/fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('/fonts/KarbonWeb-Medium.woff2') format('woff2'),url('/fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
 
     html { width:100%; min-height:100%; margin:0; font-size:100%; -webkit-font-smoothing:antialiased; background-color:#FFFFFF; }
     body { height:100%; width:100%; margin:0 auto; position:relative; font-family:'Karbon'; font-size:20px; }
