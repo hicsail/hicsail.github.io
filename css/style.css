@@ -70,6 +70,7 @@
       .tile > #projects > table { display:block; float:center; width:95%; }
       .tile > .people { float:center; max-width:900px; margin:0 auto; }
       .tile > ol { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
+      .tile > p > ul { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
       .team { padding:0px; }
     }
 
