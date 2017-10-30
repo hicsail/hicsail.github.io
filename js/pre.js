@@ -36,10 +36,16 @@ var projects = [
     'investigators': '<a href="https://www.bu.edu/sph/profile/mary-slavin/">Mary Slavin</a>, Research Assistant Professor, SPH',
     'interns': ''
   },
-  { 'icons': ['shopping-cart'],
+  /*{ 'icons': ['shopping-cart'],
     'title': 'IKEA Data Record Linkage',
     'text': 'Using machine learning techniques to solve the record linkage problem for a data set to enable the identification and comparison of IKEA catalogue items across seven countries over decades.',
     'investigators': '<a href="http://people.bu.edu/mbaxter/">Marianne Baxter</a>, Professor, CAS Economics',
+    'interns': ''
+  },*/
+  { 'icons': ['fa-flask'],
+    'title': 'Clotho Synthetic Biology Framework',
+    'text': 'Development of the latest version of a framework for engineering synthetic biological systems and managing the data used to create them.',
+    'investigators': '<a href="http://cidarlab.org/doug-densmore/">Douglas Densmore</a>, Associate Professor, ENG ECE',
     'interns': ''
   },
   { 'icons': ['eye'],
@@ -60,10 +66,16 @@ var projects = [
     'investigators': '<a href="http://www.bu.edu/pcms/caramanis/">Michael Caramanis</a>, Prof. &amp; <a href="http://www.bu.edu/eng/profile/pablo-a-ruiz-phd/">Pablo Ruiz</a>, Research Assoc. Prof., ENG',
     'interns': ''
   },
-  { 'icons': ['users', 'lock'],
+  /*{ 'icons': ['users', 'lock'],
     'title': 'Multi-Party Computation for 100% Talent',
     'text': 'Design, implementation, and deployment of a secure protocol and web application to <a href="https://www.bu.edu/today/2015/computational-thinking-breaks-a-logjam/">support a secure data collection process</a> involving <a href="http://www.bostonwomensworkforcecouncil.com/corporate-signatories/">over 100</a> of the largest employer organizations in Boston.',
     'investigators': '<a href="http://www.bostonwomensworkforcecouncil.com/">Boston Women\'s Workforce Council</a> &amp; <a href="https://www.boston.gov/">City of Boston</a>',
+    'interns': ''
+  },*/
+  { 'icons': ['users', 'lock'],
+    'title': 'Practical Deployment of Multi-Party Computation',
+    'text': 'Design, implementation, and <a href="https://www.bu.edu/today/2015/computational-thinking-breaks-a-logjam/">deployment</a> of web applications that deliver <a href="https://multiparty.org">modern cryptographic capabilities</a>.',
+    'investigators': '<a href="https://www.boston.gov/">City of Boston</a>, <a href="http://www.bostonwomensworkforcecouncil.com/">BWWC</a>, <a href="http://www.honda-ri.com/">HRI</a>, and others',
     'interns': ''
   }
 ];
