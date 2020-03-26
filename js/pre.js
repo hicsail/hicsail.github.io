@@ -6,7 +6,7 @@ newLink.type = 'image/x-icon';
 newLink.href = 'data:image/png;base64,'+favIcon;
 docHead.appendChild(newLink);
 
-var theme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC'];
+var theme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', '#161616'];
 /**
   * Get random color from colors array based on a point in a given integer range.
   * The probability of white being selected is parameterized by the point.
@@ -14,7 +14,7 @@ var theme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC'];
   */
 function randomColor(probability, colors) {
   var colors = colors != null ? colors : theme;
-  return (Math.random() <= probability) ? colors[Math.round(Math.random() * (colors.length-1))] : '#FFFFFF';
+  return (Math.random() <= probability) ? colors[Math.round(Math.random() * (colors.length-1))] : '#161616';
 }
 
 var projects = [

@@ -1,4 +1,5 @@
 $(function () {
+  //wgtFn = 
   function patternCreate(id, tileSize, numRows, numCols, wgtFn, colors, modes) {
     var svg = d3.select('#' + id)
       .html('') // Empty HTML first, parameters might have changed.
@@ -9,23 +10,39 @@ $(function () {
       .attr('shape-rendering', 'crispEdges'); // So aliasing doesn't produce thin line between triangles.
 
     // Change color randomly on mouseover.
-    svg.on('mousemove', function () {
+    // svg.on('mousemove', function () {
+    //   var target = d3.event.target;
+    //   console.log(target);
+    //   var curTime = (new Date).getTime();
+    //   //if you mousover slowly the object it will still change color-- best way?
+    //   if (curTime - d3.select(target).attr('data') > 1000) {
+    //     if (d3.event.shiftKey) {
+    //       rotateTriangle(target);
+    //     } else {
+    //       var opacity = d3.select(target).attr('opacity'), opacity_ = Math.max(Math.random(), opacity);
+    //       d3.select(target).attr('fill', randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
+    //     }
+    //   }
+    // });
+
+    svg.on('mouseover', function () {
       var target = d3.event.target;
       var curTime = (new Date).getTime();
-      if (curTime - d3.select(target).attr('data') > 1000) {
-        if (d3.event.shiftKey) {
-          rotateTriangle(target);
-        } else {
-          var opacity = d3.select(target).attr('opacity'), opacity_ = Math.max(Math.random(), opacity);
-          d3.select(target).attr('fill', randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
-        }
+      if (d3.event.shiftKey) {
+        rotateTriangle(target);
+      } else {
+        var opacity = d3.select(target).attr('opacity'), opacity_ = Math.max(Math.random(), opacity);
+        d3.select(target).attr('fill', randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
+        console.log(d3.select(target).attr('fill'));
       }
+      
     });
-
     patternDraw(svg, tileSize, numRows, numCols, wgtFn, colors, modes);
   }
 
   function patternDraw(svg, tileSize, numRows, numCols, wgtFn, colors, modes) {
+
+    
     /*function patternRow(r) {
       if (r < numRows) {
         for (var c = 0; c < numCols; c++) {
@@ -181,7 +198,7 @@ $(function () {
   //patternCreate('svg_bg', 60, 29, 50, function (r, nr, c, nc) { return Math.abs(nr/2 - r)/(nr/2); } );
   //patternCreate('svg_one', 60, 20, 35, maxFn([cornerTopRight(0.9, 0.15), cornerTopRight(0.3, 0.9)]));
   //patternCreate('pattern_main', 60, 20, 35, maxFn([rift]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
-  patternCreate('svg_top', 60, 17, 75, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.6, 1)])]));
+  patternCreate('svg_top', 60, 5, 8, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.6, 1)])]));
   //patternCreate('pattern_main', 60, 15, 35, maxFn([center]));
   //patternCreate('pattern_offices', 60, 20, 35, maxFn([path, path2]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
   patternCreate('svg_two_a', 60, 10, 75, minFn([left, maxFn([cornerBottomLeft(1, 0.05), cornerBottomLeft(0.5, 0.5), cornerBottomLeft(0.1, 1)])]));

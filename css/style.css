@@ -1,16 +1,58 @@
-    @font-face { font-family:'Karbon'; src:url('/fonts/KarbonWeb-Regular.eot'); src:url('/fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('/fonts/KarbonWeb-Regular.woff2') format('woff2'),url('/fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
-    @font-face { font-family:'Karbon'; src:url('/fonts/KarbonWeb-Medium.eot'); src:url('/fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('/fonts/KarbonWeb-Medium.woff2') format('woff2'),url('/fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
+    @font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Regular.eot'); src:url('../fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Regular.woff2') format('woff2'),url('../fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
+    @font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Medium.eot'); src:url('../fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Medium.woff2') format('woff2'),url('../fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
 
-    html { width:100%; min-height:100%; margin:0; font-size:100%; -webkit-font-smoothing:antialiased; background-color:#FFFFFF; }
-    body { height:100%; width:100%; margin:0 auto; position:relative; font-family:'Karbon'; font-size:20px; }
+    html { 
+      width:100%; 
+      min-height:100%; 
+      margin:0; 
+      font-size:100%; 
+      -webkit-font-smoothing:antialiased; 
+      background-color:#FFFFFF; 
+    }
+    
+    body { 
+      background-color: #161616;
+      height:100%; 
+      width:100%; 
+      margin:0 auto; 
+      position:relative; 
+      font-family:'Karbon'; 
+      font-size:20px; 
+    }
     body > div > div > div { position:absolute; width:100%; }
 
     header { width:100%; position:fixed; height:50px; background-color:#FFFFFF; z-index:100; }
     header > div { max-width:1400px; margin:0 auto; }
-    h1 { font-size:46px; font-weight:normal; font-feature-settings:"kern"; display:inline-block; float:left; line-height:50px; margin:-1px 0 0px 15px; color:#222222; }
+    
+    h1 { 
+      font-size:46px; 
+      font-weight:normal; 
+      font-feature-settings:"kern";
+      display:inline-block; 
+      float:left; 
+      line-height:50px; 
+      margin:-1px 0 0px 15px; 
+      color:#222222; 
+    }
+
     #logolink { height:50px; position:relative; display:block; float:left; z-index:999; }
     #logo { width:50px; position:relative; top:50%; transform:translateY(-50%); float:left; }
-    .menu { position:relative; list-style:none; margin:0; height:50px; margin-right:25px; display:-webkit-box; display:-moz-box; display:-ms-flexbox; display:-webkit-flex; display:flex; -webkit-flex-flow:row wrap; justify-content:flex-end; }
+    
+    .menu { 
+      position:relative; 
+      list-style:none; 
+      margin:0; 
+      height:50px; 
+      margin-right:25px; 
+      display:-webkit-box; 
+      display:-moz-box; 
+      display:-ms-flexbox; 
+      display:-webkit-flex; 
+      display:flex; 
+      -webkit-flex-flow:row wrap; 
+      justify-content:flex-end; 
+    }
+
     #ham { display:none; opacity:0; position:absolute; }
     #menu_container { position:relative; top:0px; }
     .menu > li { position:relative; margin-left:25px; }
@@ -49,6 +91,7 @@
     .lorange, .lorange:hover, .lorange:visited { color:#EBB54A; }
     .lgreen, .lgreen:hover, .lgreen:visited { color:#94ed6b; }
     .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; }
+    
 
     footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
     footer > div { height:65px; max-width:1400px; margin:0 auto; }
@@ -107,4 +150,8 @@
 
     @media all and (max-width:340px) {
       footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; }
+    }
+
+    * {
+      background-color: #161616;
     }
