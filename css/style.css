@@ -12,6 +12,7 @@
     
     body { 
       background-color: #161616;
+      
       height:100%; 
       width:100%; 
       margin:0 auto; 
@@ -60,7 +61,7 @@
 
     .plate { display:table; max-width:1200px; margin:0 auto; background-color:#FFFFFF; }
     .tile { display:table-cell; width:50%; vertical-align:middle; padding:0px 50px 0px 50px; text-align:justify; }
-    .pattern { width:100%; max-width:1400px; margin:0 auto; margin-bottom:-5px; background-color:#FFFFFF; }
+    .pattern { position: relative; width:100%; max-width:1400px; margin:0 auto; margin-bottom:-5px; background-color:#FFFFFF; }
     /* .break { height:200px; } */
     .tile > p { line-height:1.45; letter-spacing:0.01em; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
     .tile > p > span { display:block; font-size:16px; line-height:1.1; color:#777777; }
@@ -152,6 +153,7 @@
       footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; }
     }
 
-    * {
-      background-color: #161616;
-    }
+    .landing *, .landing{
+      background-color: black;
+      color: white;
+    

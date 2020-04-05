@@ -2,7 +2,7 @@ $(function () {
   //wgtFn = 
   function patternCreate(id, tileSize, numRows, numCols, wgtFn, colors, modes) {
     var svg = d3.select('#' + id)
-      .html('') // Empty HTML first, parameters might have changed.
+      .html('') // Empty HTML first, parameters might have changed. Meaning you can't put text in the any div pattern create calls
       .append('svg')
       .attr('viewBox', '0 0 ' + (tileSize*numCols) + ' ' + (tileSize*numRows))
       .attr('preserveAspectRatio', 'xMidYMid slice')
@@ -198,7 +198,7 @@ $(function () {
   //patternCreate('svg_bg', 60, 29, 50, function (r, nr, c, nc) { return Math.abs(nr/2 - r)/(nr/2); } );
   //patternCreate('svg_one', 60, 20, 35, maxFn([cornerTopRight(0.9, 0.15), cornerTopRight(0.3, 0.9)]));
   //patternCreate('pattern_main', 60, 20, 35, maxFn([rift]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
-  patternCreate('svg_top', 60, 5, 8, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.6, 1)])]));
+  patternCreate('svg_top', 60, 7, 16, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(1, 0.7)])]));
   //patternCreate('pattern_main', 60, 15, 35, maxFn([center]));
   //patternCreate('pattern_offices', 60, 20, 35, maxFn([path, path2]), ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', null], {'opacity':false});
   patternCreate('svg_two_a', 60, 10, 75, minFn([left, maxFn([cornerBottomLeft(1, 0.05), cornerBottomLeft(0.5, 0.5), cornerBottomLeft(0.1, 1)])]));
@@ -207,7 +207,7 @@ $(function () {
   patternCreate('svg_three_a', 60, 10, 75, minFn([right, maxFn([cornerBottomRight(1, 0.05), cornerBottomRight(0.5, 0.5), cornerBottomRight(0.1, 1)])]));
   //patternCreate('svg_three_b', 60, 10, 75, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.2, 0.6)])]));
   patternCreate('svg_three_b', 60, 10, 75, minFn([circTopRight, right]));
-  patternCreate('pattern_footer', 60, 10, 75, minFn([left, right, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }])]) );
+  patternCreate('pattern_footer', 60, 5, 8, minFn([left, right, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }])]) );
   $("img").show(); // Do not show images until all patterns have been rendered.
   $("#container").show();
   // Move to target after rendering completes.

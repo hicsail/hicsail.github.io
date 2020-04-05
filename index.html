@@ -44,8 +44,13 @@
       <!--div id="svg_bg" style="position:fixed; right:0px; top:0px; width:100vw; height:100vh;"></div-->
       <!--div style="position:absolute; right:0px; top:0px; width:75vw; height:50vh;"><div id="svg_one"></div></div-->
       <div>
-        <a id="about"></a>
-        <div class="pattern" id="svg_top"></div>
+        <div class="landing">
+          <a id="about"></a>
+          <canvas id="game-canvas"></canvas>
+          <div class="pattern" id="svg_top"></div>
+          
+            <h1 style="position: absolute; top: 50vh; z-index: 700; mix-blend-mode: difference;"> Some cool tagline about SAIL.</h1>
+        </div>
         <div class="plate">
           <div class="tile">
             <p>The <b>Software &amp; Application Innovation Lab</b> (SAIL) at the <a href="https://www.bu.edu/hic/">Hariri Institute for Computing</a> is a professional research, software engineering, and consulting lab that acts as both a driver and a collaborative partner for computational and data-oriented research efforts across <a href="https://www.bu.edu">Boston University</a>.</p>
@@ -57,6 +62,7 @@
         <div class="pattern" id="svg_two_a"></div>
         <a id="collaborate"></a>
         <div class="pattern" id="svg_two_b"></div>
+      
         <!--div class="break"></div-->
         <div class="plate">
           <div class="tile">
@@ -134,5 +140,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>
   <script src="js/post.js"></script>
+  <script src="js/astroids.js"></script>
 </body>
 </html>
