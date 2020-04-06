@@ -8,7 +8,7 @@ const TURN_SPEED = 360 //turn speed - degree speed / second
 const SHIP_VELOCITY = 7 //acclerates by X pixels / s^2
 const FRICTION = 0.05 
 
-const ASTR_COUNT = 500
+const ASTR_COUNT = 77
 const ASTR_SPEED = 12
 const ASTR_SIZE = 100
 const ASTR_VERT = 4
@@ -103,7 +103,7 @@ function createAsteroids () {
             var x = Math.floor(Math.random() * cnvs.width)
             var y = Math.floor(Math.random() * cnvs.height)
         } while ( 
-            distanceBetweenPoints(ship.x,ship.y,x,y) < ASTR_SIZE * 3 + ship.r
+            distanceBetweenPoints(ship.x,ship.y,x,y) < ASTR_SIZE * 1.5 + ship.r
         ); //makes sure that astroids dont render near ship
         
         asteroids.push(newAsteroid(x,y))
@@ -166,7 +166,7 @@ function update(){
 
     //draw ship
     ctx.strokeStyle = "white",
-    ctx.lineWidth = SHIP_SIZE / 20;
+    ctx.lineWidth = SHIP_SIZE / 17;
     ctx.beginPath();
     ctx.moveTo( //start path at nose of ship
         ship.x + ship.r * Math.cos(ship.a),
@@ -218,7 +218,7 @@ function update(){
     //draw asteroids
 
     
-    ctx.lineWidth = SHIP_SIZE / 15;
+    ctx.lineWidth = SHIP_SIZE / 12;
     var x, y, r, a, vet, offsets;
     for (var i = 0; i < asteroids.length; i++) {
         

@@ -41,53 +41,95 @@
       </div>
     </header>
     <div>
-      <!--div id="svg_bg" style="position:fixed; right:0px; top:0px; width:100vw; height:100vh;"></div-->
-      <!--div style="position:absolute; right:0px; top:0px; width:75vw; height:50vh;"><div id="svg_one"></div></div-->
+  
       <div>
         <div class="landing">
           <a id="about"></a>
-          <canvas id="game-canvas"></canvas>
-          <div class="pattern" id="svg_top"></div>
           
-            <h1 style="position: absolute; top: 50vh; z-index: 700; mix-blend-mode: difference;"> Some cool tagline about SAIL.</h1>
+          <!-- <div class="pattern" id="svg_top"></div> -->
+          <h1 class="hero-text"> Lorem ipsum et<br> SAIL something.<br>(more info).</h1>
+
+            <!-- The Game  -->
+            <canvas id="game-canvas"></canvas>
+            <h2 style="position: absolute; top: 50vh; right:45vw;">&darr; see our projects</h2>
+            <div class="info">
+              <b>INSTRUCTIONS</b>
+              <p>Use [&larr;][&uarr;][&rarr;] to MOVE <br> Use SPACEBAR to shoot </p>
+            </div>
+            
         </div>
+
         <div class="plate">
           <div class="tile">
+            <h2>About</h2>
             <p>The <b>Software &amp; Application Innovation Lab</b> (SAIL) at the <a href="https://www.bu.edu/hic/">Hariri Institute for Computing</a> is a professional research, software engineering, and consulting lab that acts as both a driver and a collaborative partner for computational and data-oriented research efforts across <a href="https://www.bu.edu">Boston University</a>.</p>
-            <p>Ongoing projects focus on a wide range of topics and technologies, from developing and deploying novel cybersecurity applications, to applying scalable computing and machine learning techniques to large corpora, to solving record linkage problems for public health and economics applications, to building production-quality web services and mobile apps that enable research in areas such as electronic health and synthetic biology, to prototyping and deploying smart-city services and platforms.</p>
-            <p>SAIL is committed to promoting innovation, best practices, and open source models within the research community. SAIL will learn and help teach new technologies and techniques as determined by the needs of any given project.</p>
           </div>
           <!--div class="tile extra"><div><div id="pattern_main"></div></div></div-->
         </div>
-        <div class="pattern" id="svg_two_a"></div>
+
+        <div class="grid-contain">
+          <h2>Projects</h2>
+          <div class="grid">
+            <div><p>Ongoing projects focus on a wide range of topics and technologies, from developing and deploying novel cybersecurity applications, to prototyping and deploying smart-city services and platforms.</p>
+              <p>SAIL is committed to promoting innovation, best practices, and open source models within the research community. SAIL will learn and help teach new technologies and techniques as determined by the needs of any given project.</p></div>
+            <!-- <div class="proj"></div> -->
+            <div class="proj"></div>
+            <div class="proj"></div>
+            <div class="desc">Desc <a> Link</a></div>
+            <div class="desc">Desc<a> Link</a></div>
+            <div class="desc">Desc<a> Link</a></div>
+            <div class="desc"></div>
+            <div class="proj"></div>
+            <div class="proj"></div>
+          </div>
+      </div>
+
+
+      <div class="plate">
+        <div class="tile">
+          
+        </div> 
+      </div>
+
+        
+        
+        <!-- <div class="pattern" id="svg_two_a"></div> -->
         <a id="collaborate"></a>
-        <div class="pattern" id="svg_two_b"></div>
-      
+        <!-- <div class="pattern" id="svg_two_b"></div> -->
+        <div class="plate">
+        
+        <!-- Going to hard code in projects for now, but would like to know easier ways to do this. -->
+        
+
+        </div>
+
+        
         <!--div class="break"></div-->
         <div class="plate">
           <div class="tile">
             <p>Across Boston University, the quality and the potential impact of research activities (as well as the success of both students and researchers) are increasingly dependent on the ability to work with data and computational approaches, the development of quality software applications and services, and familiarity with software development practices.</p>
             <p>SAIL activities include basic and applied research, prototype and production-quality software application development, consultations, project and budget planning guidance, and other forms of support for projects and research efforts funded by the Hariri Research Awards, the National Science Foundation, the National Institutes of Health, and other agencies. SAIL has worked with over 60 collaborators across 12 schools at Boston University; several examples are described briefly below.</p>
-            <div id="projects"></div>
+            <!-- <div id="projects"></div> -->
             <p>If you would like to explore how SAIL can help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a href='https://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or <a href="mailto:hicsail@bu.edu">contact us</a> directly.</p>
             <p>If you are seeking other forms of support (including seed funding) for a research effort that requires computational science expertise or software engineering resources, you may also want to consider the <a href='https://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.</p>
           </div>
         </div>
-        <div class="pattern" id="svg_three_a"></div>
+        <!-- <div class="pattern" id="svg_three_a"></div> -->
         <a id="join"></a>
-        <div class="pattern" id="svg_three_b"></div>
+        <!-- <div class="pattern" id="svg_three_b"></div> -->
+
+
         <div class="plate">
           <div class="tile extra">
             <div>
               <img src="//sail.codes/img/offices.png" style="display:none;" alt="Hariri Institute for Computing"/>
-              <!--div id="pattern_offices"></div-->
             </div>
           </div>
           <div class="tile">
             <p>SAIL is seeking full-time professional software engineers. See <a href="//sail.bu.edu/join">current opportunities</a> to apply for a full-time position.</p>
             <ol>
               <li><a href="https://sail.bu.edu/join/#full-stack">Software Engineer, Full-Stack</a></li>
-              <!--li><a href="https://sail.bu.edu/join/#cybersecurity">Software Engineer, Cybersecurity</a></li-->
+              <li><a href="https://sail.bu.edu/join/#cybersecurity">Software Engineer, Cybersecurity</a></li>
             </ol>
             <p>SAIL offers paid internship opportunities for undergraduate and graduate students interested in gaining experience working in a professional software development environment situated in a research university context. To apply for the Summer 2020 Internship Program, please submit a resume and cover letter to <a href="mailto:hicsail@bu.edu">hicsail@bu.edu</a>.</p>
             <p>For all other opportunities, events, and updates, please join our <a href="https://tinyurl.com/SAIL-mailing-list">mailing list</a> to be notified.</p>
@@ -114,9 +156,12 @@
               <!--div>Ashni Shah<span>Software Engineer Intern</span></div-->
               <!--div>Christopher Trinh<span>Software Engineer Intern</span></div-->
               <span></span>
+              <h2>Contact Us</h2>
             </div>
           </div>
+          
         </div>
+        
         <div class="pattern" id="pattern_footer"></div>
         <footer>
           <div>

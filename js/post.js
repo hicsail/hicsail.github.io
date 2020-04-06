@@ -207,7 +207,7 @@ $(function () {
   patternCreate('svg_three_a', 60, 10, 75, minFn([right, maxFn([cornerBottomRight(1, 0.05), cornerBottomRight(0.5, 0.5), cornerBottomRight(0.1, 1)])]));
   //patternCreate('svg_three_b', 60, 10, 75, minFn([right, maxFn([cornerTopRight(1, 0.2), cornerTopRight(0.2, 0.6)])]));
   patternCreate('svg_three_b', 60, 10, 75, minFn([circTopRight, right]));
-  patternCreate('pattern_footer', 60, 5, 8, minFn([left, right, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }])]) );
+  patternCreate('pattern_footer', 60, 7, 16, minFn([left, right, maxFn([function (r,nr,c,nc) { return Math.max(0,(r-2)/nr); }])]) );
   $("img").show(); // Do not show images until all patterns have been rendered.
   $("#container").show();
   // Move to target after rendering completes.

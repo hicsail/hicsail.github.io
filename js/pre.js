@@ -6,7 +6,7 @@ newLink.type = 'image/x-icon';
 newLink.href = 'data:image/png;base64,'+favIcon;
 docHead.appendChild(newLink);
 
-var background = '#161616'
+var background = '#FFFFFF'
 
 var theme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', background ];
 /**
