@@ -8,11 +8,14 @@ const TURN_SPEED = 360 //turn speed - degree speed / second
 const SHIP_VELOCITY = 7 //acclerates by X pixels / s^2
 const FRICTION = 0.05 
 
-const ASTR_COUNT = 77
+//render asteroids as a ratio to window size
+const ASTR_COUNT = Math.ceil(window.innerWidth / 30);
 const ASTR_SPEED = 12
 const ASTR_SIZE = 100
 const ASTR_VERT = 4
 const ASTR_ZIG = 0.5 //the random jaggedness of an asteroid
+
+console.log(ASTR_COUNT);
 
 var cnvs = $('#game-canvas').get(0);
 var ctx = cnvs.getContext("2d");
@@ -23,6 +26,7 @@ function draw () {
     cnvs.height = window.innerHeight;
 }
 
+
 draw();
 
 
@@ -30,6 +34,7 @@ draw();
 
 //ship object
 var ship = {
+    show: true,
     x: cnvs.width / 2,
     y: cnvs.height / 2,
     r: SHIP_SIZE / 2,
@@ -165,60 +170,64 @@ function update(){
     ctx.fillRect(0,0,cnvs.width,cnvs.height);
 
     //draw ship
-    ctx.strokeStyle = "white",
-    ctx.lineWidth = SHIP_SIZE / 17;
-    ctx.beginPath();
-    ctx.moveTo( //start path at nose of ship
-        ship.x + ship.r * Math.cos(ship.a),
-        ship.y - ship.r * Math.sin(ship.a),
-    )
-    ctx.lineTo( //draw line to bottom left 
-        ship.x - ship.r * (Math.cos(ship.a) + Math.sin(ship.a)),
-        ship.y + ship.r * (Math.sin(ship.a) - Math.cos(ship.a))
-    )
-    ctx.lineTo(
-        ship.x - ship.r * (Math.cos(ship.a) - Math.sin(ship.a)),
-        ship.y + ship.r * (Math.sin(ship.a) + Math.cos(ship.a))
-    )
-    ctx.closePath();
-    ctx.stroke(); //draws previously defined paths
+    if (ship.show) {
+        ctx.strokeStyle = "white",
+        ctx.lineWidth = SHIP_SIZE / 17;
+        ctx.beginPath();
+        ctx.moveTo( //start path at nose of ship
+            ship.x + ship.r * Math.cos(ship.a),
+            ship.y - ship.r * Math.sin(ship.a),
+        )
+        ctx.lineTo( //draw line to bottom left 
+            ship.x - ship.r * (Math.cos(ship.a) + Math.sin(ship.a)),
+            ship.y + ship.r * (Math.sin(ship.a) - Math.cos(ship.a))
+        )
+        ctx.lineTo(
+            ship.x - ship.r * (Math.cos(ship.a) - Math.sin(ship.a)),
+            ship.y + ship.r * (Math.sin(ship.a) + Math.cos(ship.a))
+        )
+        ctx.closePath();
+        ctx.stroke(); //draws previously defined paths
 
-    ctx.fillStyle ="salmon";
-    ctx.fillRect(ship.x - 2,ship.y - 2,4,4);
+        ctx.fillStyle ="salmon";
+        ctx.fillRect(ship.x - 2,ship.y - 2,4,4);
 
-    //rotate ship
-    ship.a += ship.rot;
+        //rotate ship
+        ship.a += ship.rot;
 
-    //thrusting 
-    if (ship.thrusting) {
-        ship.thrust.x += SHIP_VELOCITY * Math.cos(ship.a) / FPS
-        ship.thrust.y -= SHIP_VELOCITY * Math.sin(ship.a) / FPS
-    } else {
-        ship.thrust.x -= FRICTION * ship.thrust.x
-        ship.thrust.y -= FRICTION * ship.thrust.y
+        //thrusting 
+        if (ship.thrusting) {
+            ship.thrust.x += SHIP_VELOCITY * Math.cos(ship.a) / FPS
+            ship.thrust.y -= SHIP_VELOCITY * Math.sin(ship.a) / FPS
+        } else {
+            ship.thrust.x -= FRICTION * ship.thrust.x
+            ship.thrust.y -= FRICTION * ship.thrust.y
+        }
+
+        //move ship
+        ship.x += ship.thrust.x;
+        ship.y += ship.thrust.y;
+
+        //edges
+        if (ship.x > cnvs.width + ship.r) {
+            ship.x = 0 - ship.r
+        } else if (ship.x < 0 - ship.r) {
+            ship.x = cnvs.width + ship.r
+        }
+        if (ship.y > cnvs.height + ship.r) {
+            ship.y = 0 - ship.r
+        } else if (ship.y < 0 - ship.r) {
+            ship.y = cnvs.height + ship.r
+        }
+
     }
-
-    //move ship
-    ship.x += ship.thrust.x;
-    ship.y += ship.thrust.y;
-
-    //edges
-    if (ship.x > cnvs.width + ship.r) {
-        ship.x = 0 - ship.r
-    } else if (ship.x < 0 - ship.r) {
-        ship.x = cnvs.width + ship.r
-    }
-    if (ship.y > cnvs.height + ship.r) {
-        ship.y = 0 - ship.r
-    } else if (ship.y < 0 - ship.r) {
-        ship.y = cnvs.height + ship.r
-    }
+    
 
 
     //draw asteroids
 
     
-    ctx.lineWidth = SHIP_SIZE / 12;
+    ctx.lineWidth = ASTR_SIZE / 50;
     var x, y, r, a, vet, offsets;
     for (var i = 0; i < asteroids.length; i++) {
         
@@ -287,6 +296,25 @@ function update(){
     
 
 }
+
+if (window.innerWidth <= 500) {
+    ship.show = false;  
+}
+else { ship.show = true; }
+
+
+console.log(window.innerWidth)
+
+
+
+$(window).on("resize", function() {
+    draw();
+    if (window.innerWidth <= 500) {
+        ship.show = false;
+        console.log(window.innerWidth)
+    }
+    else { ship.show = true;}
+});
 
 
 

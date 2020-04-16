@@ -19,13 +19,11 @@
       font-family:'Karbon'; 
       font-size:20px; 
     }
-    body > div > div > div { position:absolute; width:100%; }
 
     header { width:100%; position:fixed; height:50px; background-color:#000000; z-index:100; }
     header > div { max-width:1400px; margin:0 auto; }
     
     h1 { 
-      font-size:46px; 
       font-weight:normal; 
       font-feature-settings:"kern";
       display:inline-block; 
@@ -37,7 +35,7 @@
 
     h2 {
       font-weight: 700;
-      margin-top: 100px;
+      margin-top: 50px;
     }
 
     #logolink { height:50px; position:relative; display:block; float:left; z-index:999; }
@@ -120,10 +118,12 @@
       .tile > ol { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
       .tile > ul { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
       .team { padding:0px; }
+      .landing .hero-text h1 {font-size: 7vw; line-height: 7vw;}
     }
 
     @media all and (max-width:500px) {
       body { font-size:18px; }
+      header h1{color: #000000;}
       nav { background-color:#FFFFFF; height:50px; }
       #mobilenav::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:-8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
@@ -139,7 +139,7 @@
       #ham:checked + #menu_container { top:0px; -webkit-transition:top, 0.3s ease-out; -moz-transition:top, 0.3s ease-out; -o-transition:top, 0.3s ease-out; transition:top, 0.3s ease-out; }
       .menu > li { margin-left:0px; width:100%; height:50px; box-sizing:border-box; border-top:2px solid #000000; background-color:#FFFFFF; border:1px solid #000000; }
       .menu > li { margin-left:0px; margin-bottom:-1px;}
-      .menu > li > a { text-align:center; margin:0 auto; display:block; }
+      .menu > li > a { text-align:center; margin:0 auto; display:block; color: #000000; }
       .plate { margin-top:0px; padding:0px 30px 0px 30px; }
       .tile { padding:40px 0px 40px 0px; }
       .tile > p { line-height:1.3; }
@@ -151,6 +151,12 @@
       .tile > #projects > table p { font-size:14px; }
       .team { padding:0px; }
       footer > div > table .link > i { margin:0px 4px 0px 4px; font-size:22px; }
+      .info { display: none; }
+      .landing .hero-text h1{ 
+        font-size: 12vw;
+        line-height: 5vh;
+
+       }
     }
 
     @media all and (max-width:340px) {
@@ -163,12 +169,28 @@
       color: white;
     }
 
+    .landing::before {
+      content: "";
+      background: linear-gradient(to bottom, transparent 0%, transparent 50%, black 100%);
+      /* background: linear-gradient(to bottom, transparent, black); */
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+
+    }
+
     .hero-text {
       position: absolute;
       top: 17vw;
-      left: 100px;
+      left: 10vh;
       z-index: 50;
-      mix-blend-mode: exclusion;
+      width: 50%;
+      /* mix-blend-mode: exclusion; */
+      
+    }
+
+    .hero-text h1 {
       font-size: 5rem;
       font-weight: 700;
       line-height: 100px;
@@ -185,21 +207,24 @@
     }
     .grid {
       display: grid;
-      width: 100%;
+      /* width: 100vh; */
       /* height: 40vh; */
-      grid-template-columns: 17vw 1fr 1fr;
-      grid-template-rows: 100% 5vh;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      /* grid-template-rows: 100% 5vh; */
 
       grid-gap: 23px;
     }
 
     .proj {
-      width: 100%;
+      grid-column: 3 / 5;
+      /* width: 100%; */
       height: 30vh;
       background-color: #555555;
+
     }
 
     .desc {
+
 
     }
 /* 
@@ -216,6 +241,11 @@
       font-size: 16px;
       color: black;
       padding: 5px 15px;
+    }
+
+    .plate, body, html, #pattern_footer {
+      background-color: black;
+      color: #FFFFFF;
     }
   
     

@@ -6,7 +6,7 @@ newLink.type = 'image/x-icon';
 newLink.href = 'data:image/png;base64,'+favIcon;
 docHead.appendChild(newLink);
 
-var background = '#FFFFFF'
+var background = '#000000'
 
 var theme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', background ];
 /**
@@ -83,16 +83,22 @@ var projects = [
 ];
 
 function listProjects() {
-  var div = document.getElementById("projects");
+  var div = document.getElementById("grid");
   if (div == null)
     return;
   var colors = _.shuffle(theme);
-  var template = function (p, i) { return '<table>' +
-    '<tr><td><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
-    '<tr><td></td><td style="font-size:16px;"><p>' + p.text + '</p></td></tr>' +
-    '<tr><td></td><td style="font-size:16px;"><b>PI(s):</b> ' + p.investigators + '</td></tr>' +
-    //'<tr><td></td><td style="font-size:16px;"><b>Interns:</b> ' + p.interns + '</td></tr>'
-    '</table>'; };
+  // goodbye table :'( you will be missed
+  // var template = function (p, i) { return '<table>' +
+  //   '<tr><td><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
+  //   '<tr><td></td><td style="font-size:16px;"><p>' + p.text + '</p></td></tr>' +
+  //   '<tr><td></td><td style="font-size:16px;"><b>PI(s):</b> ' + p.investigators + '</td></tr>' +
+  //   //'<tr><td></td><td style="font-size:16px;"><b>Interns:</b> ' + p.interns + '</td></tr>'
+  //   '</table>'; };
+  var template = function (p, i) { return '<div>' +
+    '<i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i><span>' + p.title + '</span>' +
+    '<p>' + p.text + '</p>' +
+    '<b>PI(s):</b> ' + p.investigators + 
+    '</div>'; };
   for (var i = 0; i < projects.length; i++)
     div.innerHTML += template(projects[i], i);
 }

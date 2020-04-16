@@ -1,4 +1,6 @@
+//just change everything 
 $(function () {
+  var fillOrStroke = 'stroke'
   //wgtFn = 
   function patternCreate(id, tileSize, numRows, numCols, wgtFn, colors, modes) {
     var svg = d3.select('#' + id)
@@ -32,8 +34,8 @@ $(function () {
         rotateTriangle(target);
       } else {
         var opacity = d3.select(target).attr('opacity'), opacity_ = Math.max(Math.random(), opacity);
-        d3.select(target).attr('fill', randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
-        console.log(d3.select(target).attr('fill'));
+        d3.select(target).attr(fillOrStroke, randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
+        console.log(d3.select(target).attr(fillOrStroke));
       }
       
     });
@@ -90,7 +92,8 @@ $(function () {
     if (color == null)
       polygon.attr('opacity', 0);
     else
-      polygon.attr('fill', color);
+      //
+      polygon.attr(fillOrStroke, color);
   }
 
   function getSVGPoints(x, y, width, flipped, rotated) {
