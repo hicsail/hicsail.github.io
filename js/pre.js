@@ -9,6 +9,7 @@ docHead.appendChild(newLink);
 var background = '#000000'
 
 var theme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC', background ];
+var texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
 /**
   * Get random color from colors array based on a point in a given integer range.
   * The probability of white being selected is parameterized by the point.
@@ -86,7 +87,7 @@ function listProjects() {
   var div = document.getElementById("pjct");
   if (div == null)
     return;
-  var colors = _.shuffle(theme);
+  var colors = _.shuffle(texttheme);
   // goodbye table :'( you will be missed
   // var template = function (p, i) { return '<table>' +
   //   '<tr><td><i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i></td><td><span>' + p.title + '</span></td></tr>' +
@@ -96,7 +97,7 @@ function listProjects() {
   //   '</table>'; };
   var template = function (p, i) { return '<div>' +
     // '<i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i>' + 
-    '<span>' + p.title + '</span>' +
+    '<span style="color:' + colors[i%4] + '">' + p.title + '</span>' +
     '<p>' + p.text + '</p>' +
     '<b>PI(s):</b> ' + p.investigators + 
     '</div>'; };
