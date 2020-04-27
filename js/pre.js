@@ -83,7 +83,7 @@ var projects = [
 ];
 
 function listProjects() {
-  var div = document.getElementById("grid");
+  var div = document.getElementById("pjct");
   if (div == null)
     return;
   var colors = _.shuffle(theme);
@@ -95,7 +95,8 @@ function listProjects() {
   //   //'<tr><td></td><td style="font-size:16px;"><b>Interns:</b> ' + p.interns + '</td></tr>'
   //   '</table>'; };
   var template = function (p, i) { return '<div>' +
-    '<i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i><span>' + p.title + '</span>' +
+    // '<i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i>' + 
+    '<span>' + p.title + '</span>' +
     '<p>' + p.text + '</p>' +
     '<b>PI(s):</b> ' + p.investigators + 
     '</div>'; };

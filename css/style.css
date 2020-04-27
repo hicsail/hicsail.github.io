@@ -1,17 +1,18 @@
     @font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Regular.eot'); src:url('../fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Regular.woff2') format('woff2'),url('../fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
     @font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Medium.eot'); src:url('../fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Medium.woff2') format('woff2'),url('../fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
 
+
+
     html { 
       width:100%; 
       min-height:100%; 
       margin:0; 
       font-size:100%; 
       -webkit-font-smoothing:antialiased; 
-      background-color:#FFFFFF; 
     }
     
     body { 
-      background-color: #161616;
+      background-color: #ffffff;
       height:100%; 
       width:100%; 
       margin:0 auto; 
@@ -107,6 +108,124 @@
     footer > div > table .link > i:hover { opacity:0.8; }
     footer > div > table img { max-width:100%; margin-top:2px; margin-bottom:-2px; cursor:pointer; }
 
+
+    /* .landing, .landing .plate{
+
+      background-color: black;
+      color: white;
+    } */
+
+    .landing::before {
+      content: "";
+      background: linear-gradient(to bottom, transparent 0%, transparent 57%, black 100%);
+      /* background: linear-gradient(to bottom, transparent, black); */
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 17vw;
+      left: 10vh;
+      z-index: 50;
+      width: 50%;
+      /* mix-blend-mode: exclusion; */
+      
+    }
+
+    .hero-text h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 100px;
+    }
+
+    #white-info {
+      position: absolute;
+    }
+
+    .grid-contain {
+      max-width: 80vw;
+      margin: 0 auto;
+      padding: 0 30px 0 30px;
+    }
+    .grid {
+      display: grid;
+      /* width: 100vh; */
+      /* height: 40vh; */
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      /* grid-template-rows: 100% 5vh; */
+
+      grid-gap: 23px;
+    }
+
+    /* .proj {
+      width: 100%;
+      height: 30vh;
+      background-color: #555555;
+
+    } */
+
+    .desc {
+
+
+    }
+/* 
+    #svg_top {
+      background-color: #000000;
+    } */
+
+    .info {
+      background-color: orange;
+      position: absolute;
+      top: 80vh;
+      right: 5vh;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      color: black;
+      padding: 5px 15px;
+    }
+
+    .circle {
+      border-radius: 100%;
+      right: 75vh;
+    }
+
+    .plate, body, html, #pattern_footer {
+      background-color: black;
+      color: #FFFFFF;
+    }
+
+    /* for small screens if you do {grid-column: 1 / -1;} it will always go to the end :D despite changing col num */
+  
+    /* About Section */
+    .about { grid-column: 1 / 6; font-size: 1.5rem; margin-bottom: 2vw;}
+    .about-img {grid-column-end: -1;}
+    .project {grid-column: 1 / 3;}
+    
+    /* Nested Grid Project Grid */
+    .project-grid {
+      padding: 72px;
+      grid-column: 3 / -1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      /* grid-template-columns: 1fr; */
+      grid-gap: 43px;
+      
+    }
+
+    #pjct > * {justify-self: center; max-width: 550px;}
+    /* title of project */
+    #pjct span { font-size: 2.7rem; font-weight: 700;}
+    #pjct > div {border-bottom: 2px solid #FFFFFF; padding-bottom: 2em;}
+    .full {grid-column: 1 / -1; margin-bottom: -7px;}
+    .people {grid-column: span 2;} .potho {grid-column: 1 / span 4;} .oppr{grid-column: 5 / -1;}
+    .people > span { display:block; font-size:16px; color:#555555; }
+
+
+
     @media all and (max-width:1300px) {
       .plate { padding:0px 55px 0px 55px; }
       .tile { float:center; width:100vw; padding:60px 0px 60px 0px; }
@@ -122,9 +241,11 @@
     }
 
     @media all and (max-width:500px) {
-      body { font-size:18px; }
+      body, .about { font-size:18px; }
       header h1{color: #000000;}
       nav { background-color:#FFFFFF; height:50px; }
+      .grid > * {grid-column-end: -1;}
+      .project-grid { grid-column-start:1; padding: 0;}
       #mobilenav::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:-8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
@@ -163,88 +284,6 @@
       footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; }
     }
 
-    .landing, .landing .plate{
-
-      background-color: black;
-      color: white;
-    }
-
-    .landing::before {
-      content: "";
-      background: linear-gradient(to bottom, transparent 0%, transparent 55%, black 100%);
-      /* background: linear-gradient(to bottom, transparent, black); */
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 17vw;
-      left: 10vh;
-      z-index: 50;
-      width: 50%;
-      /* mix-blend-mode: exclusion; */
-      
-    }
-
-    .hero-text h1 {
-      font-size: 5rem;
-      font-weight: 700;
-      line-height: 100px;
-    }
-
-    #white-info {
-      position: absolute;
-    }
-
-    .grid-contain {
-      max-width: 80vw;
-      margin: 0 auto;
-      padding: 0 30px 0 30px;
-    }
-    .grid {
-      display: grid;
-      /* width: 100vh; */
-      /* height: 40vh; */
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      /* grid-template-rows: 100% 5vh; */
-
-      grid-gap: 23px;
-    }
-
-    .proj {
-      /* width: 100%; */
-      height: 30vh;
-      background-color: #555555;
-
-    }
-
-    .desc {
 
 
-    }
-/* 
-    #svg_top {
-      background-color: #000000;
-    } */
 
-    .info {
-      background-color: orange;
-      position: absolute;
-      top: 80vh;
-      right: 5vh;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      color: black;
-      padding: 5px 15px;
-    }
-
-    .plate, body, html, #pattern_footer {
-      background-color: black;
-      color: #FFFFFF;
-    }
-  
-    

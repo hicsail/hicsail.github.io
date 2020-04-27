@@ -32,7 +32,7 @@ var ctx = cnvs.getContext("2d");
 var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC']
 
 function draw () {
-    cnvs.width = window.innerWidth;
+    cnvs.width = $(window).width();
     cnvs.height = window.innerHeight;
 }
 
@@ -441,9 +441,7 @@ function update(){
     var ax, ay, ar, lx, ly;
     for (var i = asteroids.length - 1; i >= 0; i--) {
         //asteroids prop
-        ax = asteroids[i].x;
-        ay = asteroids[i].y;
-        ar = asteroids[i].r;
+        ax = asteroids[i].x; ay = asteroids[i].y;ar = asteroids[i].r;
 
         for (var j = ship.lasers.length - 1; j >= 0; j--) {
             console.log("second foor loop")
@@ -458,36 +456,10 @@ function update(){
 
                 //destroy asteroid
                 asteroids.splice(i, 1);
-
                 break;
             }
         } 
     }
-
-    // var ax, ay, ar, lx, ly;
-    // for (var i = asteroids.length - 1; i >= 0; i--) {
-
-    //     // grab the asteroid properties
-    //     ax = asteroids[i].x;
-    //     ay = asteroids[i].y;
-    //     ar = asteroids[i].r;
-
-    //     // loop over the lasers
-    //     for (var j = ship.lasers.length - 1; j >= 0; j--) {
-
-    //         // grab the laser properties
-    //         lx = ship.lasers[j].x;
-    //         ly = ship.lasers[j].y;
-
-    //         // detect hits
-    //         if (distanceBetweenPoints(ax, ay, lx, ly) < ar) {
-
-    //             // destroy the asteroid and activate the laser explosion
-    //             console.log("why")
-    //             break;
-    //         }
-    //     }
-    // }
 
     
 
