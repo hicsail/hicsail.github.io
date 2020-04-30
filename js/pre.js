@@ -97,7 +97,8 @@ function listProjects() {
   //   '</table>'; };
   var template = function (p, i) { return '<div>' +
     // '<i style="color:' + colors[i%4] + ';" class="fa fa-' + p.icons[Math.floor(Math.random()*p.icons.length)] + '"></i>' + 
-    '<span style="color:' + colors[i%4] + '">' + p.title + '</span>' +
+    // '<span style="color:' + colors[i%4] + '">' + p.title + '</span>' +
+    '<span>' + p.title + '</span>' +
     '<p>' + p.text + '</p>' +
     '<b>PI(s):</b> ' + p.investigators + 
     '</div>'; };

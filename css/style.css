@@ -128,8 +128,8 @@
 
     .hero-text {
       position: absolute;
-      top: 17vw;
-      left: 10vh;
+      top: 50vh;
+      left: 3vh;
       z-index: 50;
       width: 50%;
       /* mix-blend-mode: exclusion; */
@@ -193,7 +193,7 @@
       right: 75vh;
     }
 
-    .plate, body, html, #pattern_footer {
+    body, html, #pattern_footer {
       background-color: black;
       color: #FFFFFF;
     }
@@ -223,6 +223,7 @@
     .full {grid-column: 1 / -1; margin-bottom: -7px;}
     .people {grid-column: span 2;} .potho {grid-column: 1 / span 4;} .oppr{grid-column: 5 / -1;}
     .people > span { display:block; font-size:16px; color:#555555; }
+    .oppr ol {font-weight: 700;}
 
 
 
@@ -240,12 +241,20 @@
       .landing .hero-text h1 {font-size: 7vw; line-height: 7vw;}
     }
 
+    @media all and (max-width:900px) {
+      .grid > * {grid-column-end: -1;}
+      .project-grid { grid-column-start:1; padding: 0;}
+      .oppr{grid-column-start: 1;}
+      .people { grid-column: span 1;}
+    }
+    
+
     @media all and (max-width:500px) {
       body, .about { font-size:18px; }
       header h1{color: #000000;}
       nav { background-color:#FFFFFF; height:50px; }
-      .grid > * {grid-column-end: -1;}
-      .project-grid { grid-column-start:1; padding: 0;}
+      
+      .hero-text { line-height: 4vh; width: 90%;}
       #mobilenav::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:-8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }

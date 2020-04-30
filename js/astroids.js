@@ -17,8 +17,8 @@ const LASER_SPD = 700; //speed n pixels per sec
 
 
 const ASTR_COUNT = Math.ceil(window.innerWidth / 40); //render asteroids as a ratio to window size
-const ASTR_SPEED = 12
-const ASTR_SIZE = Math.ceil(window.innerWidth / 15);
+const ASTR_SPEED = 17
+const ASTR_SIZE = Math.ceil(window.innerWidth / 13);
 // const ASTR_VERT = 4
 // const ASTR_ZIG = 0.5 //the random jaggedness of an asteroid
 
@@ -80,7 +80,7 @@ function shoot() {
 
         })
     }
-    // ship.canShoot = false;
+    
 }
 
 function explodeShip() {
@@ -88,13 +88,13 @@ function explodeShip() {
 }
 
 //SAIL asteroid
-function newAsteroid(x, y) {
+function newAsteroid(x, y, r) {
     var asteroid = {
         x: x,
         y: y, 
         velx: Math.random() > 0 ? Math.random() * ASTR_SPEED / FPS * (Math.random() < 0.5 ? 1 : -1) : 0.5 * ASTR_SPEED / FPS * (Math.random() < 0.5 ? 1 : -1), //asteroid velocity
         vely: Math.random() > 0 ? Math.random() * ASTR_SPEED / FPS * (Math.random() < 0.5 ? 1 : -1) : 0.5 * ASTR_SPEED / FPS * (Math.random() < 0.5 ? 1 : -1),  //asteroid velocity
-        r: ASTR_SIZE / 2, 
+        r: r, 
         a: Math.random() * Math.PI * 2,
         offset: [], //change how far each vertex is from the center
 
@@ -120,8 +120,24 @@ function createAsteroids () {
         } while ( 
             distanceBetweenPoints(ship.x,ship.y,x,y) < ASTR_SIZE * 1.5 + ship.r
         ); //makes sure that astroids dont render near ship
-        asteroids.push(newAsteroid(x,y))
+        asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 2)))
     }
+}
+
+function dieAsteroid (index) {
+    var x = asteroids[index].x;
+    var y = asteroids[index].y;
+    var r = asteroids[index].r;
+
+    //split asteroids in two
+    if (r ==  Math.ceil(ASTR_SIZE / 2)) {
+        asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 3)))
+        asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 3)))
+    } else if (r ==  Math.ceil(ASTR_SIZE / 3)) {
+        asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 4)))
+        asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 4)))
+    }
+    asteroids.splice(index,1);
 }
 
 
@@ -264,10 +280,10 @@ function update(){
     } else {
         //explosion
         
-        console.log("BOOM— draw explosion")
     }
 
     //draw laser
+    if (!expl) {
     for (var i = 0; i < ship.lasers.length; i++) {
         ctx.fillStyle = "salmon";
         ctx.beginPath()
@@ -276,21 +292,25 @@ function update(){
 
 
     }
+}
 
     
 
     //move laser
-    for (var i = ship.lasers.length - 1; i >= 0; i--) {
-        if (ship.lasers[i].dist > LASER_DIST * cnvs.width) {
-            ship.lasers.splice(i,1);
-            continue;
+    if (!expl) {
+        for (var i = ship.lasers.length - 1; i >= 0; i--) {
+            if (ship.lasers[i].dist > LASER_DIST * cnvs.width) {
+                ship.lasers.splice(i,1);
+                continue;
+            }
+    
+            ship.lasers[i].x += ship.lasers[i].xv
+            ship.lasers[i].y -= ship.lasers[i].yv
+    
+            ship.lasers[i].dist += Math.sqrt(Math.pow(ship.lasers[i].xv, 2),Math.pow(ship.lasers[i].yv, 2))
         }
-
-        ship.lasers[i].x += ship.lasers[i].xv
-        ship.lasers[i].y -= ship.lasers[i].yv
-
-        ship.lasers[i].dist += Math.sqrt(Math.pow(ship.lasers[i].xv, 2),Math.pow(ship.lasers[i].yv, 2))
     }
+    
 
         // ctx.fillStyle ="salmon";
         // ctx.fillRect(ship.x - 2,ship.y - 2,4,4);
@@ -324,13 +344,14 @@ function update(){
             if (ship.blinkNum == 0) { //check for collisions when not invincible
                 for (var i = 0; i < asteroids.length; i++) {
                     if (distanceBetweenPoints(ship.x, ship.y, asteroids[i].x, asteroids[i].y) < ship.r + (asteroids[i].r * 0.707)) {
+                        dieAsteroid(i);
                         explodeShip();
                     } 
                 }
             }
         
         } else {
-         
+            ship.canShoot = false;
             
             //start moving particles from ship 
             for (var i = 0;  i < particles.length; i++) {
@@ -377,7 +398,7 @@ function update(){
     
 
     //draw asteroids
-    ctx.lineWidth = SHIP_SIZE / 30;
+    ctx.lineWidth = SHIP_SIZE / 25;
     var x, y, r, a, vet, offsets;
     for (var i = 0; i < asteroids.length; i++) {
         
@@ -389,6 +410,10 @@ function update(){
         offsets = asteroids[i].offset //vertices
         colour = asteroids[i].color
         ctx.strokeStyle = colour
+
+        if (asteroids[i].velx == 0 || asteroids[i].vely == 0) {
+            console.log(i)
+        }
 
         //draw random path asteroid
         ctx.beginPath();
@@ -439,27 +464,30 @@ function update(){
 
     //laser asteriod collision
     var ax, ay, ar, lx, ly;
-    for (var i = asteroids.length - 1; i >= 0; i--) {
-        //asteroids prop
-        ax = asteroids[i].x; ay = asteroids[i].y;ar = asteroids[i].r;
-
-        for (var j = ship.lasers.length - 1; j >= 0; j--) {
-            console.log("second foor loop")
-            //laser props
-            lx = ship.lasers[j].x
-            ly = ship.lasers[j].y
-
-            if (distanceBetweenPoints(ax, ay, lx, ly) < ar) {
-                console.log("tii wa")
-                //remove laser
-                ship.lasers.splice(j, 1);
-
-                //destroy asteroid
-                asteroids.splice(i, 1);
-                break;
-            }
-        } 
+    if (!expl) {
+        for (var i = asteroids.length - 1; i >= 0; i--) {
+            //asteroids prop
+            ax = asteroids[i].x; ay = asteroids[i].y;ar = asteroids[i].r;
+    
+            for (var j = ship.lasers.length - 1; j >= 0; j--) {
+                console.log("second foor loop")
+                //laser props
+                lx = ship.lasers[j].x
+                ly = ship.lasers[j].y
+    
+                if (distanceBetweenPoints(ax, ay, lx, ly) < ar) {
+                    console.log("tii wa")
+                    //remove laser
+                    ship.lasers.splice(j, 1);
+    
+                    //destroy asteroid
+                    dieAsteroid(i);
+                    break;
+                }
+            } 
+        }
     }
+    
 
     
 
@@ -503,7 +531,7 @@ console.log(window.innerWidth)
 
 $(window).on("resize", function() {
     draw();
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth <= 900) {
         ship.show = false;
         console.log(window.innerWidth)
     }
