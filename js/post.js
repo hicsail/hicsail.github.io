@@ -35,6 +35,10 @@ $(function () {
       } else {
         var opacity = d3.select(target).attr('opacity'), opacity_ = Math.max(Math.random(), opacity);
         d3.select(target).attr(fillOrStroke, randomColor(1, colors)).attr('opacity', opacity).attr('data', curTime);
+        if (fillOrStroke == 'stroke') {
+          d3.select(target).attr("stroke-width", 1.7);
+        }
+
         console.log(d3.select(target).attr(fillOrStroke));
       }
       

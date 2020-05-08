@@ -1,4 +1,5 @@
-//mobile asteroids usually horizontal heads up 
+//this doesn't work with mobile
+//read comments pl0x
 $(function () {
 
 const FPS = 30; //frames per second
@@ -16,16 +17,23 @@ const LASER_MAX = 5; //laser on screen
 const LASER_SPD = 700; //speed n pixels per sec
 
 
-const ASTR_COUNT = Math.ceil(window.innerWidth / 40); //render asteroids as a ratio to window size
 const ASTR_SPEED = 17
-const ASTR_SIZE = Math.ceil(window.innerWidth / 13);
+var ASTR_COUNT =  ASTR_COUNT = Math.ceil(window.innerWidth / 40);//render asteroids as a ratio to window size
+var ASTR_SIZE = Math.ceil(window.innerWidth / 13);
 // const ASTR_VERT = 4
 // const ASTR_ZIG = 0.5 //the random jaggedness of an asteroid
 
 const SHOW_BOUND = false; //show bounds for 
 const PRTCLE_COUNT = 8;
 
+if ( $(window).width() < 700 ) {
+    ASTR_COUNT = Math.ceil(window.innerWidth / 20);
+    ASTR_SIZE = Math.ceil(window.innerWidth / 7);
+}
+
 console.log(ASTR_COUNT);
+
+
 
 var cnvs = $('#game-canvas').get(0);
 var ctx = cnvs.getContext("2d");
@@ -98,8 +106,6 @@ function newAsteroid(x, y, r) {
         a: Math.random() * Math.PI * 2,
         offset: [], //change how far each vertex is from the center
 
-        //TODO chnage for SAIL shapes
-        // edges: Math.floor(Math.random() * (ASTR_VERT + 1) + ASTR_VERT - 1),
         edges: Math.random() > 0.5 ? 4 : 3,
         color: colors[Math.floor(Math.random() * colors.length)]
 
@@ -153,13 +159,15 @@ function newParticle(l,h) {
         vel: {
             x: Math.sin(Math.atan2(h,l)) * (Math.random() ),
             y: Math.cos(Math.atan2(h,l)) * (Math.random() )
-        }
+        },
+        reset: true
     }
     return particle
 }
 
 
 function createParticles (x,y) {
+    //this function is so cancer and unecessary but it's alrady been made so oh well
     particles = []; 
     for (var i = 0; i < PRTCLE_COUNT; i++) {
         particles.push(newParticle(x,y))
@@ -312,10 +320,6 @@ function update(){
     }
     
 
-        // ctx.fillStyle ="salmon";
-        // ctx.fillRect(ship.x - 2,ship.y - 2,4,4);
-
-        
         //thrusting 
         if (ship.thrusting) {
             ship.thrust.x += SHIP_VELOCITY * Math.cos(ship.a) / FPS
@@ -352,15 +356,29 @@ function update(){
         
         } else {
             ship.canShoot = false;
+
+
+            for (var i = 0;  i < particles.length; i++) {
+                if (particles[i].reset == true) {
+                    particles[i].x = ship.x;
+                    particles[i].y = ship.y;
+                }
+                
+            }
+
+
+
             
             //start moving particles from ship 
             for (var i = 0;  i < particles.length; i++) {
+
+                //don't want to set particles x,y back to ship lest it don't move here anymore
+                particles[i].reset = false;
+
                 
 
                 //move particle
-                
                 // length=this.getLength(); this._y =Math.cos(angle)*length; this._x= Math.sin(angle)*length;
-                
                 // angle=this.getAngle(); this._y=Math.cos(angle)*length; this._x=Math.sin(angle)*length;
                 
                 //draw particle
@@ -369,8 +387,9 @@ function update(){
                 ctx.arc(particles[i].x, particles[i].y, particles[i].r, 0, Math.PI *2, false);
                 ctx.stroke();
 
-                particles[i].x += particles[i].vel.x;
-                particles[i].y += particles[i].vel.y;
+                //TODO: right now the explosions explode gradually but they need to accerlerate for coolness, look at ship thurstig code
+                particles[i].x += (particles[i].vel.x) * 3;
+                particles[i].y += (particles[i].vel.y) * 3;
 
             }            
 
@@ -379,6 +398,11 @@ function update(){
             
 
             if (ship.explosion == 0) {
+                for (var i = 0;  i < particles.length; i++) {  //able to set the particles x,y position back to ship position
+
+                    particles[i].reset = true;
+                }
+
                 ship = newShip();
             }
         }
@@ -470,13 +494,11 @@ function update(){
             ax = asteroids[i].x; ay = asteroids[i].y;ar = asteroids[i].r;
     
             for (var j = ship.lasers.length - 1; j >= 0; j--) {
-                console.log("second foor loop")
                 //laser props
                 lx = ship.lasers[j].x
                 ly = ship.lasers[j].y
     
                 if (distanceBetweenPoints(ax, ay, lx, ly) < ar) {
-                    console.log("tii wa")
                     //remove laser
                     ship.lasers.splice(j, 1);
     
@@ -512,6 +534,7 @@ function update(){
     } else {
         // createAsteroids();
     }
+
 
  
 

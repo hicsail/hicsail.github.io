@@ -238,7 +238,7 @@
       .tile > ol { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
       .tile > ul { float:center; max-width:900px; margin:0 auto; margin-top:15px; margin-bottom:15px; }
       .team { padding:0px; }
-      .landing .hero-text h1 {font-size: 7vw; line-height: 7vw;}
+      .landing .hero-text h1 {font-size: 7vw; line-height: 7vw;} /* SAIL tagline tablet */
     }
 
     @media all and (max-width:900px) {
@@ -253,8 +253,9 @@
       body, .about { font-size:18px; }
       header h1{color: #000000;}
       nav { background-color:#FFFFFF; height:50px; }
-      
-      .hero-text { line-height: 4vh; width: 90%;}
+
+      .hero-text {width: 80%;}
+      .landing .hero-text h1{ line-height: 100%; font-size: 12vw;} /* SAIL tagline mobile */
       #mobilenav::before { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:-8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav { display:block; position:absolute; pointer-events:none; top:15px; right:0px; margin:8px 15px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
       #mobilenav::after { content:""; display:block; position:absolute; pointer-events:none; top:0px; right:0px; margin:8px 0px 0 0; height:3px; width:21px; z-index:99; background-color:#000000; }
@@ -282,11 +283,11 @@
       .team { padding:0px; }
       footer > div > table .link > i { margin:0px 4px 0px 4px; font-size:22px; }
       .info { display: none; }
-      .landing .hero-text h1{ 
+/*      .landing .hero-text h1{ 
         font-size: 12vw;
         line-height: 5vh;
 
-       }
+       }*/
     }
 
     @media all and (max-width:340px) {
