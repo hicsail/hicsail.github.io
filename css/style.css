@@ -31,11 +31,11 @@
     .tile > #projects > table p { margin:2px 0px 2px 0px; }
     .tile > .people {
       margin-top:75px;
-      text-align:justify; -ms-text-justify:distribute-all-lines; text-justify:distribute-all-lines;
+      text-align:left; -ms-text-justify:distribute-all-lines; text-justify:distribute-all-lines;
       line-height:1.45; letter-spacing:0.01em; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1";
       cursor:default;
     }
-    .tile > .people > div { display:inline-block; *display:inline; zoom:1; margin:0px 0px 20px 0px; padding:0px 5px 0px 5px; }
+    .tile > .people > div { display:inline-block; *display:inline; zoom:1; margin:0px 0px 20px 0px; padding:0px 5px 0px 5px; width: 150px; max-width: 200px; word-wrap: break-word;;}
     .tile > .people > div > span { display:block; margin-top:-6px; font-size:16px; color:#555555; }
     .tile > .people > span { width:100%; display:inline-block; font-size:0; line-height:0; }
     .extra { text-align:center; }
