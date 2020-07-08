@@ -241,6 +241,69 @@ $(document).keyup(function(event){
     // event.preventDefault();
 });
 
+$(document).keyup(function(event){
+    switch(event.which) {
+        case 32: 
+            ship.canShoot = false;
+            break; 
+
+        case 37: //stop 
+            ship.rot = 0;
+            break;
+            
+        case 38:
+            ship.thrusting = false;
+            break;
+        
+        case 39: //rotate right
+            ship.rot = 0
+            break;
+        case 40:
+            event.preventDefault();
+
+    }
+    // event.preventDefault();
+});
+
+
+// handles rotation when user presses down on the screen
+$(document).hammer().bind("press", (e) => {
+    var xPos = e.gesture.center.x;
+    // var yPos = e.gesture.c[0].pageY; 
+
+    if (xPos < ship.x) {
+        ship.rot = TURN_SPEED / 180 * Math.PI / FPS
+    }
+    else if (xPos > ship.x) {
+        ship.rot = -1 * TURN_SPEED / 180 * Math.PI / FPS
+    }
+    
+    });
+
+
+    // moves ship when user double taps
+$(document).hammer().bind("doubletap", (e) => {
+        ship.thrusting = true
+    
+    let tapped=setTimeout(function(){
+        ship.thrusting = false
+      },750); 
+
+
+});
+
+// starts shooting on tap 
+$(document).hammer().bind("tap", (e) => {
+    ship.canShoot = true
+    shoot()
+    e.preventDefault()
+});
+
+$(document).hammer().bind("pressup", (e) => {
+    ship.rot = 0
+    ship.thrusting = false
+});
+
 
 setInterval(update, FRAMES); //predefined canvas method for game loop
 
