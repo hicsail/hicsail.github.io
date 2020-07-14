@@ -96,7 +96,7 @@
     .lgreen, .lgreen:hover, .lgreen:visited { color:#94ed6b; }
     .lblue, .lblue:hover, .lblue:visited { color:#73a6fc; }
     
-
+/* 
     footer { height:68px; width:100%; margin:0 auto; background-color:#000000; }
     footer > div { height:65px; max-width:1400px; margin:0 auto; }
     footer > div > table { height:65px; width:100%; border-spacing:0px; }
@@ -106,7 +106,28 @@
     footer > div > table .link { display:table-cell; float:right; }
     footer > div > table .link > i { margin:0px 6px 0px 6px; font-size:28px; color:#FFFFFF; opacity:0.5; }
     footer > div > table .link > i:hover { opacity:0.8; }
-    footer > div > table img { max-width:100%; margin-top:2px; margin-bottom:-2px; cursor:pointer; }
+    footer > div > table img { max-width:100%; margin-top:2px; margin-bottom:-2px; cursor:pointer; } */
+
+    .link > i {margin:0px 6px 0px 6px; font-size:28px; color:#FFFFFF; opacity:0.5;} 
+    .link > i:hover {opacity:0.8;}
+
+    .footer-container { background-color:black; padding:45px 0 20px; font-size:15px; line-height:24px; }
+    .footer-container .social-icons { text-align:right }
+    .footer-container .social-icons a { width:44px; height:44px; line-height:40px; margin-left:6px; margin-right:6px; }
+
+    @media (max-width:991px)
+    { 
+      .footer-container [class^=col-] { margin-bottom:30px }
+    }
+    @media (max-width:767px)
+    {
+      .footer-container { padding-bottom:0 }
+      .footer-container,.footer-container .social-icons { text-align:center }
+    }
+    .social-icons { padding-left:0; margin-bottom:0; list-style:none }
+    .social-icons li { display:inline-block; margin-bottom:4px; margin-right: 0px; }
+
+    .social-icons a { font-size:16px; display:inline-block; line-height:44px; width:44px; height:44px; text-align:center; margin-right:8px; }
 
 
     /* .landing, .landing .plate{
@@ -281,7 +302,7 @@
       .tile > #projects > table span { font-size:16px; font-weight:bold; }
       .tile > #projects > table p { font-size:14px; }
       .team { padding:0px; }
-      footer > div > table .link > i { margin:0px 4px 0px 4px; font-size:22px; }
+      /* footer > div > table .link > i { margin:0px 4px 0px 4px; font-size:22px; } */
       .info { display: none; }
 /*      .landing .hero-text h1{ 
         font-size: 12vw;
@@ -291,7 +312,7 @@
     }
 
     @media all and (max-width:340px) {
-      footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; }
+      /* footer > div > table .link > i { margin:0px 2px 0px 2px; font-size:16px; } */
     }
 
 
