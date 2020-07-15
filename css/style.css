@@ -112,23 +112,28 @@
     .link > i:hover {opacity:0.8;}
 
     .footer-container { background-color:black; padding:45px 0 20px; font-size:15px; line-height:24px; }
-    .footer-container .social-icons { text-align:right }
+    .footer-container .social-icons { text-align:right; }
     .footer-container .social-icons a { width:44px; height:44px; line-height:40px; margin-left:6px; margin-right:6px; }
 
     @media (max-width:991px)
     { 
-      .footer-container [class^=col-] { margin-bottom:30px }
+      .footer-container [class^=col-] { margin-bottom:30px; }
+      #footer-img {margin-left: 15px; }
     }
     @media (max-width:767px)
     {
-      .footer-container { padding-bottom:0 }
-      .footer-container,.footer-container .social-icons { text-align:center }
+      .footer-container { padding-bottom:0; }
+      .footer-container,.footer-container .social-icons { text-align:center; }
+
     }
-    .social-icons { padding-left:0; margin-bottom:0; list-style:none }
+    .social-icons { padding-left:0; margin-bottom:0; list-style:none; margin-top: 15px; margin-right: 75px; float: right; }
     .social-icons li { display:inline-block; margin-bottom:4px; margin-right: 0px; }
 
     .social-icons a { font-size:16px; display:inline-block; line-height:44px; width:44px; height:44px; text-align:center; margin-right:8px; }
-
+    @media (min-width:991px)
+    {
+      #footer-img {margin-left: 55px; }
+    }
 
     /* .landing, .landing .plate{
 
