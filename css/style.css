@@ -247,7 +247,7 @@
     #pjct span { font-size: 2.7rem; font-weight: 700;}
     #pjct > div {border-bottom: 2px solid #FFFFFF; padding-bottom: 2em;}
     .full {grid-column: 1 / -1; margin-bottom: -7px;}
-    .people {grid-column: span 2;} .potho {grid-column: 1 / span 4;} .oppr{grid-column: 5 / -1;}
+    .people {grid-column: span 2;} .potho {grid-column: 1 / span 4; overflow: hidden;} .oppr{grid-column: 5 / -1;}
     .people > span { display:block; font-size:16px; color:#555555; }
     .oppr ol {font-weight: 700;}
 
