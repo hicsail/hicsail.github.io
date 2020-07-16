@@ -107,7 +107,9 @@ function newAsteroid(x, y, r) {
         offset: [], //change how far each vertex is from the center
 
         edges: Math.random() > 0.5 ? 4 : 3,
-        color: colors[Math.floor(Math.random() * colors.length)]
+        color: colors[Math.floor(Math.random() * colors.length)], 
+        randDirection: Math.random() > 0.5 // will determine which way the triangle is turned 
+
 
     }
 
@@ -497,6 +499,7 @@ function update(){
         offsets = asteroids[i].offset //vertices
         colour = asteroids[i].color
         ctx.strokeStyle = colour
+        rand = asteroids[i].randDirection
 
         if (asteroids[i].velx == 0 || asteroids[i].vely == 0) {
             console.log(i)
@@ -510,31 +513,35 @@ function update(){
             x + r * Math.cos(a),
             y + r * Math.sin(a)
         );
-        
-        
+            
         for (var j = 1; j < vet; j++) {
-            ctx.lineTo(
-                // x + r * offsets[j] * Math.cos(a + j * Math.PI * 2 / vet), //randomness
-                // y + r * offsets[j] * Math.sin(a + j * Math.PI * 2 / vet), //rando
-                x + r * Math.cos(a + j * Math.PI * 2 / vet),
-                y + r * Math.sin(a + j * Math.PI * 2 / vet),
-            );
+            // handles triangle case 
+            if (vet === 3) {
+                // handles which way right triangle is turned
+                if (j === 1) {
+                    ctx.lineTo(
+                        x + r * Math.cos(a) + (rand ? r : 0),
+                        y + r * Math.sin(a) + (!rand ? r : 0),
+                    );
+                }
+                else {
+                    ctx.lineTo(
+                        x + r * Math.cos(a) + r,
+                        y + r * Math.sin(a) + r,
+                    );
+                }
+            }
+            // generating rectangle
+            else {
+                ctx.lineTo(
+                    x + r * Math.cos(a + j * Math.PI * 2 / vet),
+                    y + r * Math.sin(a + j * Math.PI * 2 / vet),
+                );
+      
+            }
 
-
-            //makes funny shape :D
-            // ctx.lineTo(
-            //     x + r * Math.cos(a + Math.floor(j / 2) * Math.PI * 2 / vet),
-            //     y + r * Math.sin(a + Math.floor(j / 2) * Math.PI * 2 / vet),
-            // )
-            // ctx.lineTo(
-            //     x + r * Math.cos(a + 0 * Math.PI * 2 / vet),
-            //     y + r * Math.sin(a + 0 * Math.PI * 2 / vet),
-            // )
-            // ctx.lineTo(
-            //     x + r * Math.cos(a + j * Math.PI * 2 / vet),
-            //     y + r * Math.sin(a + j * Math.PI * 2 / vet),
-            // )
         }
+
         ctx.closePath();
         ctx.stroke();
 
