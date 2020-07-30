@@ -34,7 +34,7 @@ if ( $(window).width() < 700 ) {
 console.log(ASTR_COUNT);
 
 
-
+// initialize the canvas area by selecting the canvas element and populating it 
 var cnvs = $('#game-canvas').get(0);
 var ctx = cnvs.getContext("2d");
 var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC']
@@ -54,7 +54,6 @@ draw();
 
 //ship object
 var ship = newShip();
-
 function newShip() {
     return {
         show: true,
@@ -75,7 +74,6 @@ function newShip() {
         }
     }
 }
-
 function shoot() {
     // (ship.canShoot && ship.lasers.length < LASER_MAX)
     if (ship.canShoot && ship.lasers.length < LASER_MAX) {
@@ -95,7 +93,7 @@ function explodeShip() {
     ship.explosion = Math.ceil(SHIP_EXPLODE_DUR * FPS);
 }
 
-//SAIL asteroid
+//Builds a new asteroid object based on the SAIL Rectangles and triangles shape 
 function newAsteroid(x, y, r) {
     var asteroid = {
         x: x,
@@ -188,7 +186,7 @@ function distanceBetweenPoints (x1,y1,x2,y2) {
 }
 
 
-
+// The following keyup and keydown event handlers involve what happens when you press the arrow keys and when you shoot using the spacebar
 //event handlers
 $(document).keydown(function(event){
     switch(event.which) {
@@ -203,7 +201,7 @@ $(document).keydown(function(event){
             event.preventDefault();
             break;
             
-        case 38: 
+        case 38: // forward 
             ship.thrusting = true;
             event.preventDefault();
             break;
@@ -243,30 +241,7 @@ $(document).keyup(function(event){
     // event.preventDefault();
 });
 
-$(document).keyup(function(event){
-    switch(event.which) {
-        case 32: 
-            ship.canShoot = false;
-            break; 
-
-        case 37: //stop 
-            ship.rot = 0;
-            break;
-            
-        case 38:
-            ship.thrusting = false;
-            break;
-        
-        case 39: //rotate right
-            ship.rot = 0
-            break;
-        case 40:
-            event.preventDefault();
-
-    }
-    // event.preventDefault();
-});
-
+// The Following four $(document).hammer functions are event handlers for mobile touches. So when use presses on screen, double taps, and single taps will render different events
 
 // handles rotation when user presses down on the screen
 $(document).hammer().bind("press", (e) => {
