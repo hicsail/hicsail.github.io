@@ -15,7 +15,10 @@ const BLINK_TIME = 0.1; //blinking duration
 const LASER_DIST = 0.3 //how far laser will travel, proportion to screen size
 const LASER_MAX = 5; //laser on screen
 const LASER_SPD = 700; //speed n pixels per sec
-
+const PTS_LARGE=5
+const PTS_MED=10
+const PTS_SMALL=20
+var score=0;
 
 const ASTR_SPEED = 17
 var ASTR_COUNT =  ASTR_COUNT = Math.ceil(window.innerWidth / 40);//render asteroids as a ratio to window size
@@ -91,6 +94,8 @@ function shoot() {
 
 function explodeShip() {
     ship.explosion = Math.ceil(SHIP_EXPLODE_DUR * FPS);
+
+    score=0;
 }
 
 //Builds a new asteroid object based on the SAIL Rectangles and triangles shape 
@@ -139,11 +144,16 @@ function dieAsteroid (index) {
     if (r ==  Math.ceil(ASTR_SIZE / 2)) {
         asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 3)))
         asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 3)))
+        score+=PTS_LARGE;
     } else if (r ==  Math.ceil(ASTR_SIZE / 3)) {
         asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 4)))
         asteroids.push(newAsteroid(x,y, Math.ceil(ASTR_SIZE / 4)))
+        score+=PTS_MED;
+    }else{
+        score+=PTS_SMALL;
     }
     asteroids.splice(index,1);
+
 }
 
 
@@ -329,6 +339,9 @@ function update(){
         //explosion
         
     }
+    // draw score
+
+
 
     //draw laser
     if (!expl) {
@@ -530,6 +543,15 @@ function update(){
         //0.707 (or sqrt(2) / 2) = proprtion to multiply r by so the circle is inscribed in square
         //otherwise the square is inscribed in circle and less realistic collision
     }
+
+    // draw score
+    // ctx.textAlign="right";
+    // ctx.textBaseline="middle";
+    ctx.fillStyle="white";
+    ctx.font="30px Georgia";
+    ctx.fillText("Score:"+score,cnvs.width-5*SHIP_SIZE,100);
+
+  //  ctx.fillText(score,cnvs.width,cnvs.width-SHIP_SIZE/2,SHIP_SIZE);
 
     //laser asteriod collision
     var ax, ay, ar, lx, ly;
