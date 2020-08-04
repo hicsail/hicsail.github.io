@@ -19,6 +19,8 @@ const PTS_LARGE=5
 const PTS_MED=10
 const PTS_SMALL=20
 var score=0;
+var best=0;
+const KEY_SCORE="best";
 
 const ASTR_SPEED = 17
 var ASTR_COUNT =  ASTR_COUNT = Math.ceil(window.innerWidth / 40);//render asteroids as a ratio to window size
@@ -92,10 +94,26 @@ function shoot() {
     
 }
 
-function explodeShip() {
-    ship.explosion = Math.ceil(SHIP_EXPLODE_DUR * FPS);
+function blinkTheCount() {
+    var count = 0;
+    var blinkIt = setInterval(function () {
+        if (count++ === 6) {
+            clearInterval(blinkIt);
+            score=0;
+        }
+        ctx.strokeRect(cnvs.width-8*SHIP_SIZE,50,7*SHIP_SIZE,2*SHIP_SIZE);
+    }, 250);
 
-    score=0;
+}
+function explodeShip() {
+    ship.explosion = Math.ceil(SHIP_EXPLODE_DUR * FPS);   
+    blinkTheCount(); // blink the scoreboard
+    var beststr=localStorage.getItem(KEY_SCORE);
+    if(beststr==null){
+        best=0;
+    }else{
+        best=parseInt(beststr);
+    }
 }
 
 //Builds a new asteroid object based on the SAIL Rectangles and triangles shape 
@@ -151,6 +169,10 @@ function dieAsteroid (index) {
         score+=PTS_MED;
     }else{
         score+=PTS_SMALL;
+    }
+    if(score>best){
+        best=score;
+        localStorage.setItem(KEY_SCORE,best);
     }
     asteroids.splice(index,1);
 
@@ -339,7 +361,6 @@ function update(){
         //explosion
         
     }
-    // draw score
 
 
 
@@ -545,11 +566,20 @@ function update(){
     }
 
     // draw score
-    // ctx.textAlign="right";
-    // ctx.textBaseline="middle";
+    ctx.textAlign="right";
+    ctx.textBaseline="top";
+    ctx.strokeRect(cnvs.width-8*SHIP_SIZE,50,7*SHIP_SIZE,2*SHIP_SIZE);
+    ctx.strokeStyle="white";
+
+    ctx.font="30px Bangers";
     ctx.fillStyle="white";
-    ctx.font="30px Georgia";
-    ctx.fillText("Score:"+score,cnvs.width-5*SHIP_SIZE,100);
+    ctx.fillText("Score: "+score,cnvs.width-3*SHIP_SIZE,2.5*SHIP_SIZE);
+
+    // draw the high score
+    ctx.textAlign="right";
+    ctx.fillStyle="yellow";
+    ctx.font="35px Bangers";
+    ctx.fillText("BEST: "+best,cnvs.width/2,2.5*SHIP_SIZE);
 
   //  ctx.fillText(score,cnvs.width,cnvs.width-SHIP_SIZE/2,SHIP_SIZE);
 
