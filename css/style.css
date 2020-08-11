@@ -84,7 +84,7 @@
     }
     .about { grid-column: 1 / 6; font-size: 1.5rem; margin-bottom: 2vw;margin-top: 3vw}
     .about-img {grid-column-end: -1;}
-    .project {grid-column: 1 / -1;}
+    .project {grid-column: 1 / 3;}
     
     /* Nested Grid Project Grid */
     .project-grid {
