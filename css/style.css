@@ -1,7 +1,97 @@
   @font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Regular.eot'); src:url('../fonts/KarbonWeb-Regular.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Regular.woff2') format('woff2'),url('../fonts/KarbonWeb-Regular.woff') format('woff'); font-weight:normal; font-style:normal; }
     @font-face { font-family:'Karbon'; src:url('../fonts/KarbonWeb-Medium.eot'); src:url('../fonts/KarbonWeb-Medium.eot') format('embedded-opentype'),url('../fonts/KarbonWeb-Medium.woff2') format('woff2'),url('../fonts/KarbonWeb-Medium.woff') format('woff'); font-weight:bold; font-style:normal; }
 
+@media only screen and (max-width: 767px)  {
+   /* PUT CSS HERE TO ALTER WEBSITE TO SINGLE COLUMN */
+      .grid {
+      /* width: 100vh; */
+      /* height: 40vh; */
+      grid-column: 1/7;
 
+    }
+    .about {  padding:10px;grid-column: auto;font-size: 1.5rem; margin-bottom: 2vw;margin-top: 3vw}
+    .about-img {grid-column: auto;}
+    .project {    padding: 20px;grid-column: 1/ -1;
+     }
+    .project-grid {
+         grid-gap: 43px;
+         padding: 25px;
+     
+      
+    }
+    .full {padding: 25px;grid-column:auto; margin-bottom: -7px;}
+    .people {} .potho {padding:10px;overflow: hidden;} 
+    .oppr{padding:25px;grid-column:auto;}
+      .info{
+      background-color: black;
+      position: absolute;
+      top: 80vh;
+      right: 5vh;
+      display: none;
+
+    }
+    .hero-text {
+      position: absolute;
+      top: 40vh;
+      left: 3vh;
+      z-index: 50;
+      width: 30%;
+      /* mix-blend-mode: exclusion; */
+      
+    }
+
+}
+
+@media only screen and (min-width: 767px){
+      .grid-contain {
+      max-width: 80vw;
+      margin: 0 auto;
+      padding: 0 30px 0 30px;
+    }
+      .grid {
+      display: grid;
+      /* width: 100vh; */
+      /* height: 40vh; */
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    .about { grid-column: 1 / 6; font-size: 1.5rem; margin-bottom: 2vw;margin-top: 3vw}
+    .about-img {grid-column-end: -1;}
+    .project {grid-column: 1 / -1;}
+    
+    /* Nested Grid Project Grid */
+    .project-grid {
+      padding: 72px;
+      grid-column: 3/ -1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      /* grid-template-columns: 1fr; */
+      grid-gap: 43px;
+      
+    }
+    .full {grid-column: 1 / -1; margin-bottom: -7px;}
+    .people {grid-column: span 2;} .potho {grid-column: 1 / span 4; overflow: hidden;} .oppr{grid-column: 5/-1;}/*5/-1*/
+      .info{
+      background-color: orange;
+      position: absolute;
+      top: 80vh;
+      right: 5vh;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      color: black;
+      padding: 5px 15px;
+
+    }
+        .hero-text {
+      position: absolute;
+      top: 50vh;
+      left: 3vh;
+      z-index: 50;
+      width: 50%;
+      /* mix-blend-mode: exclusion; */
+      
+    }
+
+}
 
     html { 
       width:100%; 
@@ -18,10 +108,10 @@
       margin:0 auto; 
       position:relative; 
       font-family:'Karbon'; 
-      font-size:20px; 
+      font-size:1.25em; 
     }
 
-    header { width:100%; position:fixed; height:50px; background-color:#000000; z-index:100; }
+    header { width:100%; position:fixed; height:5%; background-color:#000000; z-index:100; }
     header > div { max-width:1400px; margin:0 auto; }
     
     h1 { 
@@ -29,7 +119,7 @@
       font-feature-settings:"kern";
       display:inline-block; 
       float:left; 
-      line-height:50px; 
+      line-height:8.2vh; 
       margin:-1px 0 0px 15px; 
       color:#FFFFFF; 
     }
@@ -39,15 +129,15 @@
       margin-top: 50px;
     }
 
-    #logolink { height:50px; position:relative; display:block; float:left; z-index:999; }
+    #logolink { height:8.2vh; position:relative; display:block; float:left; z-index:999; }
     #logo { width:50px; position:relative; top:50%; transform:translateY(-50%); float:left; }
     
     .menu { 
       position:relative; 
       list-style:none; 
       margin:0; 
-      height:50px; 
-      margin-right:25px; 
+      height:8.2vh; 
+      margin-right:4vh; 
       display:-webkit-box; 
       display:-moz-box; 
       display:-ms-flexbox; 
@@ -67,7 +157,7 @@
     .pattern { position: relative; width:100%; max-width:1400px; margin:0 auto; margin-bottom:-5px; background-color:#FFFFFF; }
     /* .break { height:200px; } */
     .tile > p { line-height:1.45; letter-spacing:0.01em; text-rendering:optimizeLegibility; font-feature-settings:"kern"; -webkit-font-feature-settings:"kern"; -moz-font-feature-settings:"kern"; -moz-font-feature-settings:"kern=1"; }
-    .tile > p > span { display:block; font-size:16px; line-height:1.1; color:#777777; }
+    .tile > p > span { display:block; font-size:1em; line-height:1.1; color:#777777; }
     .tile > ol > li { list-style-type:none; margin-top:5px; }
     .tile > #projects { margin-top:30px; margin-bottom:30px; }
     .tile > #projects > table { margin-left:2%; margin-right:3%; margin-top:25px; margin-bottom:25px; display:inline-block; width:45%; font-size:26px; }
@@ -82,7 +172,7 @@
       cursor:default;
     }
     .tile > .people > div { display:inline-block; *display:inline; zoom:1; margin:0px 0px 20px 0px; padding:0px 5px 0px 5px; }
-    .tile > .people > div > span { display:block; margin-top:-6px; font-size:16px; color:#555555; }
+    .tile > .people > div > span { display:block; margin-top:-6px; font-size:1em; color:#555555; }
     .tile > .people > span { width:100%; display:inline-block; font-size:0; line-height:0; }
     .extra { text-align:center; }
     .extra > div { float:center; height:400px; }
@@ -108,10 +198,10 @@
     footer > div > table .link > i:hover { opacity:0.8; }
     footer > div > table img { max-width:100%; margin-top:2px; margin-bottom:-2px; cursor:pointer; } */
 
-    .link > i {margin:0px 6px 0px 6px; font-size:28px; color:#FFFFFF; opacity:0.5;} 
+    .link > i {margin:0px 6px 0px 6px; font-size:1.6em; color:#FFFFFF; opacity:0.5;} 
     .link > i:hover {opacity:0.8;}
 
-    .footer-container { background-color:black; padding:45px 0 20px; font-size:15px; line-height:24px; }
+    .footer-container { background-color:black; padding:45px 0 20px; font-size:0.938em; line-height:24px; }
     .footer-container .social-icons { text-align:right; }
     .footer-container .social-icons a { width:44px; height:44px; line-height:40px; margin-left:6px; margin-right:6px; }
 
@@ -129,7 +219,7 @@
     .social-icons { padding-left:0; margin-bottom:0; list-style:none; margin-top: 15px; margin-right: 75px; float: right; }
     .social-icons li { display:inline-block; margin-bottom:4px; margin-right: 0px; }
 
-    .social-icons a { font-size:16px; display:inline-block; line-height:44px; width:44px; height:44px; text-align:center; margin-right:8px; }
+    .social-icons a { font-size:1em; display:inline-block; line-height:44px; width:44px; height:44px; text-align:center; margin-right:8px; }
     @media (min-width:991px)
     {
       #footer-img {margin-left: 55px; }
@@ -140,26 +230,19 @@
       color: white;
     } */
 
+
     .landing::before {
       content: "";
       background: linear-gradient(to bottom, transparent 0%, transparent 57%, black 100%);
-      /* background: linear-gradient(to bottom, transparent, black); */
+      /* background: linear-gradient(to bottom, transparent, black); 100vh*/
       display: block;
       position: absolute;
       width: 100%;
-      height: 100vh;
+      height: 5vh;
 
     }
 
-    .hero-text {
-      position: absolute;
-      top: 50vh;
-      left: 3vh;
-      z-index: 50;
-      width: 50%;
-      /* mix-blend-mode: exclusion; */
-      
-    }
+
 
     .hero-text h1 {
       font-size: 5rem;
@@ -171,20 +254,8 @@
       position: absolute;
     }
 
-    .grid-contain {
-      max-width: 80vw;
-      margin: 0 auto;
-      padding: 0 30px 0 30px;
-    }
-    .grid {
-      display: grid;
-      /* width: 100vh; */
-      /* height: 40vh; */
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      /* grid-template-rows: 100% 5vh; */
 
-      grid-gap: 23px;
-    }
+
 
     /* .proj {
       width: 100%;
@@ -201,16 +272,10 @@
       background-color: #000000;
     } */
 
-    .info {
-      background-color: orange;
-      position: absolute;
-      top: 80vh;
-      right: 5vh;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      color: black;
-      padding: 5px 15px;
-    }
+
+
+
+
 
     .circle {
       border-radius: 100%;
@@ -225,28 +290,16 @@
     /* for small screens if you do {grid-column: 1 / -1;} it will always go to the end :D despite changing col num */
   
     /* About Section */
-    .about { grid-column: 1 / 6; font-size: 1.5rem; margin-bottom: 2vw;margin-top: 3vw}
-    .about-img {grid-column-end: -1;}
-    .project {grid-column: 1 / 3;}
-    
-    /* Nested Grid Project Grid */
-    .project-grid {
-      padding: 72px;
-      grid-column: 3 / -1;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      /* grid-template-columns: 1fr; */
-      grid-gap: 43px;
-      
-    }
+
 
     #pjct > * {justify-self: center; max-width: 550px;}
     /* title of project */
+
+
     #pjct span { font-size: 2rem; font-weight: 700;}
     #pjct > div {border-bottom: 2px solid #FFFFFF; padding-bottom: 2em;}
-    .full {grid-column: 1 / -1; margin-bottom: -7px;}
-    .people {grid-column: span 2;} .potho {grid-column: 1 / span 4; overflow: hidden;} .oppr{grid-column: 5 / -1;}
-    .people > span { display:block; font-size:16px; color:#555555; }
+
+    .people > span { display:block; font-size:1em; color:#555555; }
     .oppr ol {font-weight: 700;}
 
 
@@ -264,17 +317,17 @@
       .team { padding:0px; }
       .landing .hero-text h1 {font-size: 5.5vw; line-height: 7vw;} /* SAIL tagline tablet */
     }
-
-    @media all and (max-width:900px) {
-      .grid > * {grid-column-end: -1;
+/*
+    @media all and (max-width:500px) {
+      .grid > * {
       .project-grid { grid-column-start:1; padding: 0;}
       .oppr{grid-column-start: 1;}
       .people { grid-column: span 1;}
     }
-    
+    */
 
     @media all and (max-width:500px) {
-      body, .about { font-size:18px; }
+      body, .about { font-size:1.125em; }
       header h1{color: #000000;}
       nav { background-color:#FFFFFF; height:50px; }
 
@@ -301,9 +354,9 @@
       .tile > ol { margin-left:-15px; }
       .tile > #projects > table { width:97%; margin-left:0%; margin-right:3%; padding:0px; }
       .tile > #projects > table td:first-of-type { width:30px; }
-      .tile > #projects > table i { width:14px; font-size:16px; }
-      .tile > #projects > table span { font-size:16px; font-weight:bold; }
-      .tile > #projects > table p { font-size:14px; }
+      .tile > #projects > table i { width:14px; font-size:1em; }
+      .tile > #projects > table span { font-size:1em; font-weight:bold; }
+      .tile > #projects > table p { font-size:0.875em; }
       .team { padding:0px; }
       /* footer > div > table .link > i { margin:0px 4px 0px 4px; font-size:22px; } */
       .info { display: none; }
