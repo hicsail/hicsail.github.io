@@ -4,7 +4,7 @@ $(function () {
 
 const FPS = 30; //frames per second
 const FRAMES = 1000 / FPS;
-const SHIP_SIZE = 30 //ship height (rn in pixel, how will this work on mobile?)
+const SHIP_SIZE = 30//ship height (rn in pixel, how will this work on mobile?)
 const TURN_SPEED = 360 //turn speed - degree speed / second
 const SHIP_VELOCITY = 12 //acclerates by X pixels / s^2
 const FRICTION = 0.1
@@ -40,8 +40,10 @@ console.log(ASTR_COUNT);
 
 
 // initialize the canvas area by selecting the canvas element and populating it 
-var cnvs = $('#game-canvas').get(0);
-var ctx = cnvs.getContext("2d");
+
+    var cnvs = $('#game-canvas').get(0);
+    var ctx = cnvs.getContext("2d");
+
 var colors = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC']
 
 function draw () {
@@ -94,15 +96,24 @@ function shoot() {
     
 }
 
+
+
+
+
 function blinkTheCount() {
     var count = 0;
-    var blinkIt = setInterval(function () {
-        if (count++ === 6) {
+
+   var blinkIt= setInterval(function () {
+       if (count++ === 5) {
             clearInterval(blinkIt);
             score=0;
-        }
-        ctx.strokeRect(cnvs.width-8*SHIP_SIZE,50,7*SHIP_SIZE,2*SHIP_SIZE);
-    }, 250);
+            document.getElementById("score").innerHTML="Score: "+score;
+      }
+   var vis = $("#score").css("visibility");
+   vis = (!vis || vis == "visible") ? "hidden" : "visible";
+   $("#score").css("visibility", vis);
+}, 200);
+
 
 }
 function explodeShip() {
@@ -113,7 +124,9 @@ function explodeShip() {
         best=0;
     }else{
         best=parseInt(beststr);
+
     }
+    document.getElementById("best").innerHTML="BEST: "+best;
 }
 
 //Builds a new asteroid object based on the SAIL Rectangles and triangles shape 
@@ -421,7 +434,7 @@ function update(){
             //collision check
             if (ship.blinkNum == 0) { //check for collisions when not invincible
                 for (var i = 0; i < asteroids.length; i++) {
-                    if (distanceBetweenPoints(ship.x, ship.y, asteroids[i].x, asteroids[i].y) < ship.r + (asteroids[i].r * 0.707)) {
+                    if (distanceBetweenPoints(ship.x, ship.y, asteroids[i].x, asteroids[i].y) < ship.r + (asteroids[i].r )) {//*0.707
                         dieAsteroid(i);
                         explodeShip();
                     } 
@@ -566,22 +579,14 @@ function update(){
     }
 
     // draw score
-    ctx.textAlign="right";
-    ctx.textBaseline="top";
-    ctx.strokeRect(cnvs.width-8*SHIP_SIZE,50,7*SHIP_SIZE,2*SHIP_SIZE);
-    ctx.strokeStyle="white";
 
-    ctx.font="30px Bangers";
-    ctx.fillStyle="white";
-    ctx.fillText("Score: "+score,cnvs.width-3*SHIP_SIZE,2.5*SHIP_SIZE);
+
+
+    document.getElementById("score").innerHTML="Score: "+score;
 
     // draw the high score
-    ctx.textAlign="right";
-    ctx.fillStyle="yellow";
-    ctx.font="35px Bangers";
-    ctx.fillText("BEST: "+best,cnvs.width/2,2.5*SHIP_SIZE);
 
-  //  ctx.fillText(score,cnvs.width,cnvs.width-SHIP_SIZE/2,SHIP_SIZE);
+  document.getElementById("best").innerHTML="BEST: "+best;
 
     //laser asteriod collision
     var ax, ay, ar, lx, ly;

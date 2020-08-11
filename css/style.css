@@ -23,11 +23,12 @@
     .people {} .potho {padding:10px;overflow: hidden;} 
     .oppr{padding:25px;grid-column:auto;}
       .info{
-      background-color: black;
+
       position: absolute;
       top: 80vh;
       right: 5vh;
-      display: none;
+      display:none;
+
 
     }
     .hero-text {
@@ -38,6 +39,33 @@
       width: 30%;
       /* mix-blend-mode: exclusion; */
       
+    }
+        .score{
+      background-color: orange;
+      position: absolute;
+      top: 15vh;
+      right: 15vh;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      color: black;
+      padding: 5px 15px;
+      display: none;
+
+    }
+        .best{
+      background-color: green;
+      position: absolute;
+      top: 10vh;
+      right: 50%;
+      margin:auto;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      color: white;
+      padding: 5px 15px;
+      display: none;
+
+
     }
 
 }
@@ -89,6 +117,31 @@
       width: 50%;
       /* mix-blend-mode: exclusion; */
       
+    }
+        .score{
+      background-color: orange;
+      position: absolute;
+      top: 15vh;
+      right: 5vh;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      color: black;
+      padding: 5px 15px;
+
+    }
+    .best{
+      background-color: green;
+      position: absolute;
+      top: 10vh;
+      right: 50%;
+      margin:auto;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      color: white;
+      padding: 5px 15px;
+
+
     }
 
 }
@@ -241,6 +294,7 @@
       height: 5vh;
 
     }
+
 
 
 
