@@ -121,6 +121,7 @@
       color: black;
       padding: 5px 15px;
 
+
     }
     .best{
       background-color: green;
@@ -133,6 +134,7 @@
       font-size: 1em;
       color: white;
       padding: 5px 15px;
+
     }
 
     .social-icons { padding-left:0; margin-bottom:0; list-style:none; margin-top: 15px; margin-right: 75px; float: right; }
