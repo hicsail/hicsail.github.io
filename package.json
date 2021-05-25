@@ -1,0 +1,23 @@
+{
+    "name": "hicsail.github.io",
+    "version": "1.0.0",
+    "description": "Official web presence of the Software & Application Innovation Lab, operated within the Hariri Institute for Computing and Computational Science and Engineering at Boston University.",
+    "main": "hello.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "live-server --ignore=node_modules/,.idea,.git ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hicsail/hicsail.github.io.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hicsail/hicsail.github.io/issues"
+    },
+    "homepage": "https://github.com/hicsail/hicsail.github.io#readme",
+    "dependencies": {
+        "live-server": "^1.2.1"
+    }
+}
