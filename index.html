@@ -1,228 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset=utf-8 />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="all" name="robots" />
-  <title>SAIL</title>
-  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,iVBORw0KGgo="><!-- Suppress browser favicon.ico request. -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-89848325-1', 'auto');ga('send', 'pageview');
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="js/pre.js"></script>
-</head>
-<body>
-  <div id="container" style="display:none;">
-    <header>
-      <div>
-        <a id='logolink' href='/'>
-          <!--img id="logo" src="//sail.codes/img/s_logo.png"-->
-          <h1>SAIL</h1>
-        </a>
-        <nav>
-          <div id="mobilenav"></div>
-          <input type="checkbox" id="ham">
-          <div id="menu_container">
-            <ul class="menu menuunder">
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#collaborate">COLLABORATE</a></li>
-              <li><a href="#join">JOIN</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div>
-  
-      <div>
-        <div class="landing">
-          <a id="about"></a>
-          
-          <!-- <div class="pattern" id="svg_top"></div> -->
-          <div class="hero-text"><h1> SAIL the software innovation lab tagline.</h1></div>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAIL</title>
 
-            <!-- The Game  -->
-            <canvas id="game-canvas"></canvas>
-            <!-- <h2 style="position: absolute; top: 50vh; right:45vw;">&darr; see our projects</h2> -->
-            <div class="info">
-              <b>INSTRUCTIONS</b>
-              <p>Use [&larr;][&uarr;][&rarr;] to MOVE <br> Use SPACEBAR to shoot </p>
-            </div>
+    <!-- <style>
+      html {
+        background-color: white;
+      }
+    </style> -->
 
-            <!-- <div class="info circle">
-              ok
-            </div> -->
-            
-        </div>
+    <!-- favicon -->
+    <link rel="icon" type=”image/png href="/favicon/s_logo.png">
 
-        <div class="container"> </div>
+    <!-- alternative favicon -->
+    <!-- <link
+      rel="alternate icon"
+      type="image/png"
+      href="/favicon/**.png"
+    /> -->
 
-        
+    <link rel="apple-touch-icon" href="/favicon/s_logo.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#000000" />
 
-        <!-- <div class="plate">
-          <div class="tile">
-            <h2>About</h2>
-            <p>The <b>Software &amp; Application Innovation Lab</b> (SAIL) at the <a href="https://www.bu.edu/hic/">Hariri Institute for Computing</a> is a professional research, software engineering, and consulting lab that acts as both a driver and a collaborative partner for computational and data-oriented research efforts across <a href="https://www.bu.edu">Boston University</a>.</p>
-          </div> -->
-          <!--div class="tile extra"><div><div id="pattern_main"></div></div></div-->
-        </div>
-
-        <div class="grid-contain">
-          
-          <div id="grid" class="grid">
-            <div class="about">
-              <h2>About</h2>
-              <p>The <b>Software &amp; Application Innovation Lab</b> (SAIL) at the <a href="https://www.bu.edu/hic/">Hariri Institute for Computing</a> is a professional research, software engineering, and consulting lab that acts as both a driver and a collaborative partner for computational and data-oriented research efforts across <a href="https://www.bu.edu">Boston University</a>.</p>
-            </div>
-
-            <div class="about-img"></div>
-            
-            <div class="project">
-              <h2>Projects</h2>
-              <p>Ongoing projects focus on a wide range of topics and technologies, from developing and deploying novel cybersecurity applications, to prototyping and deploying smart-city services and platforms.</p>
-              <p>SAIL is committed to promoting innovation, best practices, and open source models within the research community. SAIL will learn and help teach new technologies and techniques as determined by the needs of any given project.</p>
-            </div> 
-
-            <!-- Nested Project Grid  -->
-            <div id= "pjct" class="project-grid">
-
-            <!-- <div class="proj"></div> -->
-            <!-- <div class="proj"><div class="desc">Desc <a> Link</a></div></div>
-            <div class="proj"><div class="desc">Desc<a> Link</a></div></div>
-            <div class="proj"><div class="desc">Desc<a> Link</a></div></div>
-            <div class="proj"></div> -->
-            </div>
-
-            <div class="full">
-              <p>Across Boston University, the quality and the potential impact of research activities (as well as the success of both students and researchers) are increasingly dependent on the ability to work with data and computational approaches, the development of quality software applications and services, and familiarity with software development practices.</p>
-              <p>SAIL activities include basic and applied research, prototype and production-quality software application development, consultations, project and budget planning guidance, and other forms of support for projects and research efforts funded by the Hariri Research Awards, the National Science Foundation, the National Institutes of Health, and other agencies. SAIL has worked with over 60 collaborators across 12 schools at Boston University; several examples are described briefly below.</p>
-              <!-- <div id="projects"></div> -->
-              <p>If you would like to explore how SAIL can help you achieve your research objectives or would like to discuss what resources are available, please fill out a <a href='https://www.bu.edu/hic/forms/sail-request-form/'>request form</a> or <a href="mailto:hicsail@bu.edu">contact us</a> directly.</p>
-              <p>If you are seeking other forms of support (including seed funding) for a research effort that requires computational science expertise or software engineering resources, you may also want to consider the <a href='https://www.bu.edu/hic/programs/hariri-research-awards/'>Hariri Research Award program</a>.</p>
-          </div>
-
-          <h2 class="full">Opportunities</h2>
-
-          <div class="potho">
-            <img src="//sail.codes/img/offices.png" style="display:none;" alt="Hariri Institute for Computing"/>
-          </div>
-
-          <div class="oppr">
-            <p>SAIL is seeking full-time professional software engineers. See <a href="//sail.bu.edu/join">current opportunities</a> to apply for a full-time position.</p>
-            <ol>
-              <li><a href="https://sail.bu.edu/join/#full-stack">Software Engineer, Full-Stack</a></li>
-              <li><a href="https://sail.bu.edu/join/#cybersecurity">Software Engineer, Cybersecurity</a></li>
-            </ol>
-            <p>SAIL offers paid internship opportunities for undergraduate and graduate students interested in gaining experience working in a professional software development environment situated in a research university context. To apply for the Summer 2020 Internship Program, please submit a resume and cover letter to <a href="mailto:hicsail@bu.edu">hicsail@bu.edu</a>.</p>
-            <p>For all other opportunities, events, and updates, please join our <a href="https://tinyurl.com/SAIL-mailing-list">mailing list</a> to be notified.</p>
-          </div>
-
-          <h2 class="full">Team</h2>
-
-          
-          <!--div>Usama Ahsan<span>Software Engineer Intern</span></div-->
-          <div class="people">Vidya Akavoor<br><span>Software Engineer</span></div>
-          <div class="people">Motun Bolumole<span>Program Manager</span></div>
-          <div class="people">Shirene Cao<span>Software Engineer</span></div>
-          <!--div>Kinan Dak Albab<span>Software Engineer Fellow</span></div>
-          <div>Megan Fantes<span>Software Engineer Intern</span></div-->
-          <div class="people">Peter Flockhart<span>Software Engineer</span></div>
-          <div class="people">Dany Fu<span>Software Engineer</span></div>
-          <div class="people">Ira Globus-Harris<span>Software Engineer</span></div>
-          <!--div>Wyatt Howe<span>Research Assistant</span></div-->
-          <!--div>Rawane Issa<span>Software Engineer Fellow</span></div-->
-          <div class="people">Frederick Jansen<span>Associate Director, Engineering</span></div>
-          <div class="people">Shreya Pandit<span>Software Engineer</span></div>
-          <div class="people">Arezoo Sadeghi<span>Software Engineer</span></div>
-          <div class="people">Jeff Simeon<span>Assistant Director, Operations</span></div>
-          <!--div>Ashni Shah<span>Software Engineer Intern</span></div-->
-          <!--div>Christopher Trinh<span>Software Engineer Intern</span></div-->
-          <span></span>
-            
-           
-  
-          <h2 class="full">Contact Us</h2>
-          <p class="potho">Feel free to contact us at <a class="link" href="mailto:hicsail@bu.edu">hicsail@bu.edu</a>.</p>
-        
-        
-        </div>
-      </div>
-
-<!-- 
-      <div class="plate">
-        <div class="tile">
-          
-        </div> 
-      </div> -->
-
-        
-        
-        <!-- <div class="pattern" id="svg_two_a"></div> -->
-        <a id="collaborate"></a>
-        <!-- <div class="pattern" id="svg_two_b"></div> -->
-        <!-- <div class="plate"> -->
-        
-        <!-- Going to hard code in projects for now, but would like to know easier ways to do this. -->
-        
-
-        <!-- </div> -->
-
-        
-        <!--div class="break"></div-->
-        <!-- <div class="plate">
-          
-        </div> -->
-        <!-- <div class="pattern" id="svg_three_a"></div> -->
-        <a id="join"></a>
-        <!-- <div class="pattern" id="svg_three_b"></div> -->
-
-
-
-        
-        <div class="pattern" id="pattern_footer"></div>
-        <!-- <footer> -->
-          <!-- <div>
-            <table>
-              <tr>
-                <td><img onclick="location.href='https://www.bu.edu/hic';" src="//sail.codes/img/hic.png" alt="Hariri Institute for Computing"/></td>
-                <td>
-                  <a class="link" href="https://github.com/hicsail"><i class="fa fa-github"></i></a>
-                  <a class="link" href="https://www.linkedin.com/company/boston-university-software-&-application-innovation-lab"><i class="fa fa-linkedin-square"></i></a>
-                  <a class="link" href="https://twitter.com/hicsail"><i class="fa fa-twitter-square"></i></a>
-                  <a class="link" href="mailto:hicsail@bu.edu"><i class="fa fa-envelope-o"></i></a>
-                  <a class="link" href="https://maps.bu.edu/?id=647#!m/330601"><i class="fa fa-map-marker"></i></a>
-                </td>
-              </tr>
-            </table>
-          </div> -->
-          <footer class="footer-container">
-            <img id = "footer-img" onclick="location.href='https://www.bu.edu/hic';" src="//sail.codes/img/hic.png" alt="Hariri Institute for Computing"/>
-            <ul class="social-icons">
-              <li><a class="link" href="https://github.com/hicsail"><i class="fa fa-github"></i></a></li>
-              <li><a class="link" href="https://www.linkedin.com/company/boston-university-software-&-application-innovation-lab"><i class="fa fa-linkedin-square"></i></a></li>
-              <li><a class="link" href="https://twitter.com/hicsail"><i class="fa fa-twitter-square"></i></a></li>
-              <li><a class="link" href="mailto:hicsail@bu.edu"><i class="fa fa-envelope-o"></i></a></li>
-              <li><a class="link" href="https://maps.bu.edu/?id=647#!m/330601"><i class="fa fa-map-marker"></i></a></li>
-            </ul>
-            <!-- </div> -->
-        </footer>  
-        <!-- </footer> -->
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
-  <script src="js/hammerPlugin.js"></script>
-  <script src="js/post.js"></script>
-  <script src="js/astroids.js"></script>
-</body>
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script src="js/astroids.js"></script>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
+          );
+        }
+      })(window.location);
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- single page app in bundle.js -->
+    <script src="/build/bundle.js"></script>
+  </body>
 </html>
