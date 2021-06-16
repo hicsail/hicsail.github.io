@@ -11,13 +11,15 @@ export function asteroidVertices(count, rad) {
   for (let i = 0; i < count; i++) {
     p[i] = {
       x:
-        (-Math.sin(((360 / count) * i * Math.PI) / 180) +
-          (Math.round(Math.random() * 2 - 1) * Math.random()) / 3) *
-        rad,
+        -(
+          Math.sin(((360 / count) * i * Math.PI) / 180) +
+          (Math.round(Math.random() * 2 - 1) * Math.random()) / 3
+        ) * rad,
       y:
-        (-Math.cos(((360 / count) * i * Math.PI) / 180) +
-          (Math.round(Math.random() * 2 - 1) * Math.random()) / 3) *
-        rad,
+        -(
+          Math.cos(((360 / count) * i * Math.PI) / 180) +
+          (Math.round(Math.random() * 2 - 1) * Math.random()) / 3
+        ) * rad,
     };
   }
   return p;
@@ -58,4 +60,12 @@ export function randomNumBetweenExcluding(min, max, exMin, exMax) {
     random = Math.random() * (max - min + 1) + min;
   }
   return random;
+}
+
+export function randomColor() {
+  let texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
+  let color = texttheme[Math.floor(Math.random() * texttheme.length)];
+  console.log(color);
+
+  return color;
 }

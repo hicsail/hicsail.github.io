@@ -31,10 +31,11 @@ export class Reacteroids extends Component {
         down: 0,
         space: 0,
       },
-      asteroidCount: 3,
+      asteroidCount: 20,
       currentScore: 0,
       topScore: localStorage['topscore'] || 0,
       inGame: false,
+      // colorMode:
       // bgColor = this.props.bgColor,
       // itemColor = this.props.itemColor,
     };

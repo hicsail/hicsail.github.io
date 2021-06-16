@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { PRESENTATIONS_LIST } from '../utils/data';
+import { PRESENTATIONS_LIST } from '../utils/researchInformation';
 
 export const Presentations: React.VFC = () => (
   <Box>

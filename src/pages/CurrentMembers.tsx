@@ -1,9 +1,9 @@
 import { Box, Flex, Heading, Stack, Image, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { CURRENTMEMBERS_LIST } from '../utils/data';
+import { CURRENTMEMBERS_LIST } from '../utils/peopleInformation';
 
 export const CurrentMembers: React.VFC = () => (
-  <Flex display="column" justifyContent="center" width="80%">
+  <Flex display="column" justifyContent="center">
     <Box marginBottom="30px">
       <Heading>Current Members</Heading>
     </Box>

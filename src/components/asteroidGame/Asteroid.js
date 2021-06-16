@@ -1,22 +1,37 @@
 import Particle from './Particle';
 import { asteroidVertices, randomNumBetween } from './helpers';
 
+function randomColor() {
+  let texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
+  let color = texttheme[Math.floor(Math.random() * texttheme.length)];
+  // console.log(color);
+
+  return color;
+}
+
 export default class Asteroid {
   constructor(args) {
     this.position = args.position;
     this.velocity = {
-      x: 0.2,
-      y: 0.2,
+      x: 0.1,
+      y: 0.1,
       // x: randomNumBetween(-1.5, 1.5),
       // y: randomNumBetween(-1.5, 1.5),
     };
     this.rotation = 0;
-    this.rotationSpeed = randomNumBetween(-1, 1);
+    this.rotationSpeed = randomNumBetween(-0.001, 0.001);
+    // this.rotationSpeed = randomNumBetween(-1, 1);
+    // this.rotationSpeed = 0;
+
     this.radius = args.size;
     this.score = (80 / this.radius) * 5;
     this.create = args.create;
     this.addScore = args.addScore;
-    this.vertices = asteroidVertices(4, args.size);
+    this.vertices = asteroidVertices(
+      Math.floor(randomNumBetween(3, 4)),
+      args.size,
+    );
+    this.color = randomColor();
   }
 
   destroy() {
@@ -90,7 +105,11 @@ export default class Asteroid {
     context.save();
     context.translate(this.position.x, this.position.y);
     context.rotate((this.rotation * Math.PI) / 180);
-    context.strokeStyle = '#FFF';
+
+    //Color Style
+    console.log('color:', this.color);
+    context.strokeStyle = this.color;
+    // context.strokeStyle = 'blue';
     context.lineWidth = 2;
     context.beginPath();
     context.moveTo(0, -this.radius);
