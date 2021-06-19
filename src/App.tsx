@@ -54,9 +54,9 @@ export const App: React.VFC = () => {
             <Route path="/join">
               <Join />
             </Route>
-            <Route path="#contact">
+            {/* <Route exact path="#contact">
               <Contact />
-            </Route>
+            </Route> */}
           </Switch>
         </Box>
 
