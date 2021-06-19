@@ -24,6 +24,7 @@ import {
 import * as React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import ToggleColorButton from '../ui/ToggleColorButton';
+import { HashLink } from 'react-router-hash-link';
 
 const texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
 
@@ -115,8 +116,26 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
+              {/* {navItem.hash ? (
+                <HashLink
+                  to={navItem.href}
+                  // p={2}
+                  // href={navItem.href ?? '#'}
+                  fontSize={'1.5rem'}
+                  fontFamily="Karbon"
+                  fontWeight={500}
+                  color={useColorModeValue('gray.600', 'gray.200')}
+                  _hover={{
+                    color:
+                      texttheme[Math.floor(Math.random() * texttheme.length)],
+                    textDecoration: 'none',
+                  }}
+                >
+                  {navItem.label}
+                </HashLink>
+              ) : ( */}
               <Link
-                as={ReactRouterLink}
+                as={navItem.hash ? HashLink : ReactRouterLink}
                 to={navItem.href}
                 p={2}
                 href={navItem.href ?? '#'}
@@ -133,6 +152,7 @@ const DesktopNav = () => {
               >
                 {navItem.label}
               </Link>
+              {/* )} */}
             </PopoverTrigger>
 
             {navItem.children && (
@@ -271,30 +291,36 @@ interface NavItem {
   subLabel?: string;
   children?: Array<NavItem>;
   href: string;
+  hash?: boolean;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'HOME',
     href: '/',
+    hash: false,
   },
   {
     label: 'PEOPLE',
     href: '#',
+    hash: false,
     children: [
       {
         label: 'Current Members',
         href: '/currentMembers',
+        hash: false,
       },
       {
         label: 'Alumni',
         href: 'alumni',
+        hash: false,
       },
     ],
   },
   {
     label: 'RESEARCH',
     href: '#',
+    hash: false,
     children: [
       {
         label: 'Ongoing',
@@ -309,6 +335,7 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'PUBLICATIONS',
     href: '#',
+    hash: false,
     children: [
       {
         label: 'Presentations',
@@ -323,10 +350,12 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'JOIN',
     href: '/join',
+    hash: false,
   },
   {
     label: 'CONTACT',
-    href: '#contact',
+    href: '/#contact',
+    hash: true,
   },
 ];
 function random(arg0: number, arg1: number): number {
