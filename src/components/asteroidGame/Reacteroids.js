@@ -3,6 +3,29 @@ import Ship from './Ship';
 import Asteroid from './Asteroid';
 import { randomNumBetweenExcluding } from './helpers';
 import { useColorMode, useColorModeValue } from '@chakra-ui/react';
+import styled from 'styled-components';
+// import './style.css';
+
+const EndgameWraper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  z-index: 1;
+  text-align: center;
+`;
+
+const EndgameButton = styled.div`
+  border: 4px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-family: 'PT Mono', serif;
+  cursor: pointer;
+`;
 
 const KEY = {
   LEFT: 37,
@@ -92,15 +115,6 @@ export class Reacteroids extends Component {
       this.update();
     });
   }
-
-  // componentDidUpdate() {
-  //   this.setState({
-  //     bgColor: this.props,
-  //     bgColor,
-  //     itemColor: this.props.itemColor,
-  //   });
-  //   // this.ship.updateColor(this.bgColor, this.itemColor);
-  // }
 
   componentWillUnmount() {
     window.removeEventListener('keyup', this.handleKeys);
@@ -280,21 +294,65 @@ export class Reacteroids extends Component {
 
     if (!this.state.inGame) {
       endgame = (
-        <div className="endgame">
-          <p>Game over, man!</p>
-          <p>{message}</p>
-          <button onClick={this.startGame.bind(this)}>try again?</button>
+        // // <div>
+        // //   <EndgameWraper>
+        // //     <EndgameButton onClick={this.startGame.bind(this)}>
+        // //       Try Again?
+        // //     </EndgameButton>
+        // //   </EndgameWraper>
+        // // </div>
+        // // <EndgameWraper>
+        // //   <EndgameButton onClick={this.startGame.bind(this)}>
+        // //     Try Again?
+        // //   </EndgameButton>
+        // // </EndgameWraper>
+
+        // <Endgame />
+
+        <div
+        // style={{
+        //   position: 'absolute',
+        //   top: '50%',
+        //   left: '50%',
+        //   transform: 'translate(-50%, -50%)',
+        //   padding: '16px',
+        //   zIndex: '1',
+        //   textAlign: 'center',
+        // }}
+        >
+          {/* <p>Game over, man!</p>
+          <p>{message}</p> */}
+          <button
+            style={{
+              // border: '4px solid #ffffff',
+              backgroundColor: 'transparent',
+              color: this.state.colorMode == 'white' ? '#000000' : '#FFFFFF',
+              fontSize: '20px',
+              padding: '10px 20px',
+              margin: '10px',
+              fontFamily: 'PT Mono, serif',
+              cursor: 'pointer',
+            }}
+            onClick={this.startGame.bind(this)}
+          >
+            Try Again?
+          </button>
         </div>
       );
     }
 
     return (
       <div>
-        {/* {endgame} */}
-        {/* <span className="score current-score" >Score: {this.state.currentScore}</span>
-        <span className="score top-score" >Top Score: {this.state.topScore}</span>
-        <span className="controls" >
-          Use [A][S][W][D] or [←][↑][↓][→] to MOVE<br/>
+        <span className="score current-score">
+          Score: {this.state.currentScore}
+        </span>
+        {endgame}
+        {/* <span className="score top-score">
+          Top Score: {this.state.topScore}
+        </span> */}
+        {/* <span className="controls">
+          Use [A][S][W][D] or [←][↑][↓][→] to MOVE
+          <br />
           Use [SPACE] to SHOOT
         </span> */}
         <canvas

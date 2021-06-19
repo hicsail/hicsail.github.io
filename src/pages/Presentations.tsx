@@ -1,14 +1,11 @@
 import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { PRESENTATIONS_LIST } from '../utils/researchInformation';
+import { Layout } from '../components/Layout';
 
 export const Presentations: React.VFC = () => (
-  <Box maxWidth="80%">
-    <Box>
-      <Heading>Presentations</Heading>
-    </Box>
-    <Box>
-      <Stack direction={'row'} spacing={4}></Stack>
+  <Layout title="Presentations">
+    <Stack direction={'row'} spacing={4}>
       {PRESENTATIONS_LIST.map((presentation) => (
         <Flex direction="column">
           <Box>{presentation.title}</Box>
@@ -18,6 +15,6 @@ export const Presentations: React.VFC = () => (
           </Box>
         </Flex>
       ))}
-    </Box>
-  </Box>
+    </Stack>
+  </Layout>
 );

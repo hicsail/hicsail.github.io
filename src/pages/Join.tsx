@@ -1,23 +1,18 @@
 import { Box, Divider, Flex, Heading, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { ContactForm } from '../components/ContactForm';
+import { Layout } from '../components/Layout';
 
 export const Join: React.VFC = () => (
-  <Flex display="flex" flexDirection="column" maxWidth="80%">
-    <Box marginBottom="20px">
-      <Heading>Join Our Team</Heading>
-      <Text>
-        Software engineers at the Software & Application Innovation Lab (SAIL)
-        contribute to a variety of cutting-edge computational and data-driven
-        research efforts while developing their skills in the latest
-        technologies within a professional software engineering environment. The
-        projects undertaken by SAIL software engineers have tangible and direct
-        impacts on academic research, public service, and industry partners in
-        healthcare, finance, and technology.
-      </Text>
-    </Box>
-    <Divider />
-
+  <Layout title="Join Our Team">
+    <Text>
+      Software engineers at the Software & Application Innovation Lab (SAIL)
+      contribute to a variety of cutting-edge computational and data-driven
+      research efforts while developing their skills in the latest technologies
+      within a professional software engineering environment. The projects
+      undertaken by SAIL software engineers have tangible and direct impacts on
+      academic research, public service, and industry partners in healthcare,
+      finance, and technology.
+    </Text>
     <Box marginTop="20px" marginBottom="20px">
       <Heading>Active Opportunities</Heading>
       <Text as="u">
@@ -44,5 +39,5 @@ export const Join: React.VFC = () => (
     <Box marginTop="20px">
       <Heading>Past Intern Testimonials</Heading>
     </Box>
-  </Flex>
+  </Layout>
 );
