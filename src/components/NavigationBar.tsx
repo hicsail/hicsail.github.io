@@ -65,18 +65,14 @@ export default function NavigationBar() {
           width="100%"
           marginLeft="0px"
         >
-          {/* <Box boxSize="30px" objectFit="cover" marginRight="10px">
-            <Image src="../../img/s_logo.png" />
-          </Box> */}
           <Flex
-            // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
             display="flex"
             alignItems="center"
             fontWeight="normal"
             lineHeight="50px"
-            fontSize="2em"
+            // fontSize="2em"
           >
             <Box
               boxSize="30px"
@@ -86,8 +82,9 @@ export default function NavigationBar() {
             >
               <Image src="../../img/s_logo.png" />
             </Box>
-            <Text>SAIL</Text>
-            {/* SAIL */}
+            <Text fontSize={'2rem'} fontFamily="Karbon" fontWeight={500}>
+              SAIL
+            </Text>
           </Flex>
 
           <Flex
@@ -123,7 +120,7 @@ const DesktopNav = () => {
                 to={navItem.href}
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'20px'}
+                fontSize={'1.5rem'}
                 fontFamily="Karbon"
                 fontWeight={500}
                 color={useColorModeValue('gray.600', 'gray.200')}
@@ -183,7 +180,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           >
             {label}
           </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
+          <Text fontSize={'1rem'}>{subLabel}</Text>
         </Box>
         <Flex
           transition={'all .3s ease'}
