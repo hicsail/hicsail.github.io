@@ -309,7 +309,6 @@ export class Reacteroids extends Component {
           ref="canvas"
           width={this.state.screen.width * this.state.screen.ratio}
           height={this.state.screen.height * this.state.screen.ratio}
-          background-color="red"
           style={{
             width: '100%',
             height: '100%',

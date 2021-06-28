@@ -5,6 +5,7 @@ interface PersonInformation {
   research?: string;
   outsideLinks: Array<OutsideLink>;
   projects?: Array<Project> | null;
+  bio?: string;
 }
 
 interface OutsideLink {
@@ -35,6 +36,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
       },
     ],
     projects: null,
+    bio: '',
   },
   {
     name: 'Shirene Cao',
@@ -44,6 +46,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/xinyun-cao' },
     ],
     projects: [{ name: 'ASL-LEX', href: 'https://github.com/ASL-LEX/asl-lex' }],
+    bio: '',
   },
   {
     name: 'Dany Fu',
@@ -60,6 +63,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
         href: 'https://github.com/DAMPLAB/OT2-SARS-CoV2',
       },
     ],
+    bio: 'Passionate about molecular biology and genetics research, Dany applies her full stack software expertise to domains such as synthetic biology, neuroscience, bioinformatics, and infectious disease. Dany is concurrently pursing a MS in Biology at Boston University',
   },
   {
     name: 'Arezoo Sadeghi',
@@ -73,6 +77,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
       },
     ],
     projects: [{ name: 'samsha', href: 'https://github.com/hicsail/samsha' }],
+    bio: '',
   },
   {
     name: 'Vidya Akavoor',
@@ -86,6 +91,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
       },
     ],
     projects: [{ name: 'ABLE', href: 'https://github.com/hicsail/im-well2' }],
+    bio: '',
   },
 ];
 export const ALUMNI_LIST: Array<Alumni> = [

@@ -9,7 +9,7 @@ export const PastResearch: React.VFC = () => {
       {PASTRESEARCH_LIST.map((research) => (
         <Flex direction="column" padding="20px 20px 20px 0px">
           <Heading>
-            <Link href={research.link} isExternal>
+            <Link href={research.href} isExternal>
               {research.title}
             </Link>
           </Heading>
