@@ -113,10 +113,11 @@ export const Home: React.VFC = () => {
         <Grid
           templateColumns="repeat(auto-fill, minmax(100px, 1fr))"
           gridGap="23px"
+          gridColumnEnd="-1"
         >
-          <Box gridColumn="1 / 6" mb="2vw" fontSize="1.5rem">
+          <Box gridColumn="1 / 6" mb="2vw">
             <Heading textStyle="h2">About</Heading>
-            <Text>
+            <Text textStyle="paragraph">
               The Software & Application Innovation Lab (SAIL) at the{' '}
               <Link href="https://www.bu.edu/hic/">
                 <Text as="span" textStyle="link">
@@ -199,7 +200,11 @@ export const Home: React.VFC = () => {
           <Box gridColumn="1 / span 4">
             <Image src="../../img/offices.png" />
           </Box>
-          <Box gridColumn="5 / -1" fontSize="20px">
+          <Box
+            gridColumn="5 / -1"
+            fontSize="20px"
+            // gridColumnStart={['1', '1', 'auto']}
+          >
             <Text textStyle="paragraph">
               SAIL is seeking full-time professional software engineers. See{' '}
               <StyledLink href="//sail.bu.edu/join">
@@ -243,23 +248,23 @@ export const Home: React.VFC = () => {
             Team
           </Heading>
 
-          <People>
+          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Vidya Akavoor<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
+          </Box>
 
-          <People>
+          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Shirene Cao<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
+          </Box>
 
-          <People>
+          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Dany Fu<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
-          <People>
+          </Box>
+          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Arezoo Sadeghi<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
-          <People>
+          </Box>
+          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Jeff Simeon<PeopleSpan>Assistant Director, Operations</PeopleSpan>
-          </People>
+          </Box>
 
           <Heading gridColumn="1 / -1" mb="7px">
             Contact Us
