@@ -74,42 +74,41 @@ export default function Footer() {
         align="center"
         width="100%"
       >
-        <Stack direction={'row'} spacing={6} align="center" wrap="wrap">
-          <Flex justifyContent="center" boxSize="30px" width="100%">
+        <Stack direction={'row'} spacing={6} align="center">
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            boxSize="30px"
+          >
             <Image src="../../../img/bu-logo.png" />
-          </Flex>
-
-          <Text fontSize={['0.5rem', '0.75rem']}>
+          </Box>
+          <Text fontSize="20px">
             Boston University Rafik B. Hariri Institute for Computing and
             Computational Science & Engineering
           </Text>
 
-          <Box>
-            <SocialButton
-              label={'location'}
-              href={'https://maps.bu.edu/?id=647#!ct/'}
-            >
-              <FaMapMarkedAlt />
-            </SocialButton>
-            <SocialButton label={'Mail'} href={'mailto:hicsail@bu.edu'}>
-              <GrMail />
-            </SocialButton>
-            <SocialButton
-              label={'Twitter'}
-              href={'https://twitter.com/hicsail'}
-            >
-              <FaTwitter />
-            </SocialButton>
-            <SocialButton
-              label={'LinkedIn'}
-              href={'https://www.linkedin.com/company/bu-sail/mycompany/'}
-            >
-              <FaLinkedin />
-            </SocialButton>
-            <SocialButton label={'Github'} href={'https://github.com/hicsail'}>
-              <FaGithub />
-            </SocialButton>
-          </Box>
+          <SocialButton
+            label={'location'}
+            href={'https://maps.bu.edu/?id=647#!ct/'}
+          >
+            <FaMapMarkedAlt />
+          </SocialButton>
+          <SocialButton label={'Mail'} href={'mailto:hicsail@bu.edu'}>
+            <GrMail />
+          </SocialButton>
+          <SocialButton label={'Twitter'} href={'https://twitter.com/hicsail'}>
+            <FaTwitter />
+          </SocialButton>
+          <SocialButton
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/company/bu-sail/mycompany/'}
+          >
+            <FaLinkedin />
+          </SocialButton>
+          <SocialButton label={'Github'} href={'https://github.com/hicsail'}>
+            <FaGithub />
+          </SocialButton>
         </Stack>
       </Box>
     </Box>

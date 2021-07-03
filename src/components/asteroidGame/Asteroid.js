@@ -2,7 +2,7 @@ import Particle from './Particle';
 import { asteroidVertices, randomNumBetween } from './helpers';
 
 function randomColor() {
-  let texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
+  let texttheme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC'];
   let color = texttheme[Math.floor(Math.random() * texttheme.length)];
 
   return color;

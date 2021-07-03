@@ -29,8 +29,6 @@ export default function NavigationBar() {
     <Flex width="100%" marginTop="30px" marginBottom="30px" maxWidth="80%">
       <Flex
         width="100%"
-        bg={useColorModeValue('white', 'black')}
-        color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -62,7 +60,7 @@ export default function NavigationBar() {
         >
           <Flex
             fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}
+            // color={useColorModeValue('gray.800', 'white')}
             display="flex"
             alignItems="center"
             fontWeight="normal"
@@ -136,7 +134,7 @@ const DesktopNav = () => {
                 fontSize={'1.25rem'}
                 fontFamily="Karbon"
                 fontWeight={500}
-                color={useColorModeValue('gray.600', 'gray.200')}
+                // color={useColorModeValue('gray.600', 'gray.200')}
                 _hover={{
                   color:
                     texttheme[Math.floor(Math.random() * texttheme.length)],
@@ -153,7 +151,7 @@ const DesktopNav = () => {
               <PopoverContent
                 border="5px solid white"
                 // boxShadow={'xl'}
-                bg={useColorModeValue('white', 'black')}
+                // bg={useColorModeValue('white', 'black')}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
@@ -215,7 +213,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'black')}
+      // bg={useColorModeValue('white', 'black')}
       p={4}
       display={{ md: 'none' }}
     >

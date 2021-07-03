@@ -13,20 +13,23 @@ import { OngoingResearch } from './pages/OngoingResearch';
 import { PastResearch } from './pages/PastResearch';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
+import { OpportunitiesBanner } from './components/OpportunitiesBanner';
 
 export const App: React.VFC = () => {
   return (
-    <Box bg={useColorModeValue('white', 'black')} width="100%" height="100%">
+    <Box bg={useColorModeValue('white', '#121212')} width="100%" height="100%">
       <Flex
         direction="column"
         align="center"
-        // margin="0 auto"
+        margin="0 auto"
         width="100%"
         height="100%"
         minHeight="100vh"
         justifyContent="flex-start"
       >
         <NavigationBar />
+
+        <OpportunitiesBanner opportunityAvailable={true} />
 
         <Box flexGrow={1} width="100%" marginLeft="20px">
           <Switch>
