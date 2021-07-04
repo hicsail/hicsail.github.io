@@ -25,7 +25,7 @@ export const PublicationsGrid: React.FC<Props> = ({ title, list }: Props) => {
       {list.map((publication: PublicationInformation) =>
         publication.firstOfYear ? (
           <Box>
-            <Heading textStyle="h2">
+            <Heading textStyle="h2" mt="10px">
               {new Date(publication.date).getFullYear()}
             </Heading>
             <PublicationCard

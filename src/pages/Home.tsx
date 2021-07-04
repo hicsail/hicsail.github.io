@@ -74,6 +74,10 @@ const StyledLink = styled.a`
   color: #567dbd;
 `;
 
+const MobileHeading = styled.div`
+  width: 80%;
+`;
+
 export const Home: React.VFC = () => {
   const { toggleColorMode } = useColorMode();
 
@@ -88,39 +92,53 @@ export const Home: React.VFC = () => {
       // bg={useColorModeValue('white', 'black')}
       width="100%"
     >
-      <HeroText>
-        <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
-          {' '}
-          Software & Application Innovation Lab
-        </Heading>
-        <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
-          {' '}
-          Where Academia Meets Application
-        </Heading>
-      </HeroText>
-      <Box>
+      <Box display={['none', 'auto']}>
+        <HeroText>
+          <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
+            {' '}
+            Software & Application Innovation Lab
+          </Heading>
+          <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
+            {' '}
+            Where Academia Meets Application
+          </Heading>
+        </HeroText>
+      </Box>
+      <Box display={['none', 'auto']}>
         <Reacteroids
           bgColor={canvasBG}
           itemColor={itemColor}
           colorMode={color}
         ></Reacteroids>
       </Box>
+      <Box width="80%" margin="0 auto" display={['auto', 'none']}>
+        <MobileHeading>
+          <Heading fontSize="3rem">
+            {' '}
+            Software & Application Innovation Lab
+          </Heading>
+          <Heading fontSize="1.5rem"> Where Academia Meets Application</Heading>
+        </MobileHeading>
+      </Box>
 
-      <Info>
-        <b>INSTRUCTIONS</b>
-        <p>
-          Use [&larr;][&uarr;][&rarr;] to MOVE <br /> Use SPACEBAR to shoot{' '}
-        </p>
-      </Info>
+      <Box display={['none', 'auto']}>
+        <Info>
+          <b>INSTRUCTIONS</b>
+          <p>
+            Use [&larr;][&uarr;][&rarr;] to MOVE <br /> Use SPACEBAR to shoot{' '}
+          </p>
+        </Info>
+      </Box>
       <Box margin="0 auto" marginTop="70px" maxWidth="80%">
         <Grid
-          templateColumns="repeat(auto-fill, minmax(100px, 1fr))"
+          templateColumns={['1fr', '1fr 1fr']}
+          // templateColumns={[1, "repeat(auto-fill, minmax(100px, 1fr))"]}
           gridGap="23px"
           gridColumnEnd="-1"
         >
-          <Box gridColumn="1 / 6" mb="2vw">
+          <Box gridColumn="1 / -1" mb="2vw">
             <Heading textStyle="h2">About</Heading>
-            <Text textStyle="paragraph">
+            <Text textStyle="parapthemgraph">
               The Software & Application Innovation Lab (SAIL) at the{' '}
               <Link href="https://www.bu.edu/hic/">
                 <Text as="span" textStyle="link">
@@ -140,7 +158,7 @@ export const Home: React.VFC = () => {
             </Text>
           </Box>
 
-          <Box gridColumn="1 / 3">
+          <Box gridColumn="1 / 1">
             <Heading textStyle="h2" mt="50px">
               Projects
             </Heading>
@@ -281,11 +299,11 @@ export const Home: React.VFC = () => {
               .
             </Text>
           </Box>
+          <Box id="contact" gridColumn="1 / -1">
+            <Contact />
+          </Box>
           {/* {/* <div id="pattern_footer"></div> */}
         </Grid>
-        <Box id="contact">
-          <Contact />
-        </Box>
       </Box>
     </Box>
   );
