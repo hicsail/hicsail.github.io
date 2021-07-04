@@ -13,7 +13,7 @@ export const HighlightedProjectGrid = () => {
   return (
     <Grid
       padding={['0px', '0px', '72px']}
-      gridColumn="3 / -1"
+      gridColumn="1 / -1"
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
       // mobile
