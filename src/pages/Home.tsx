@@ -75,7 +75,7 @@ const StyledLink = styled.a`
 `;
 
 const MobileHeading = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 
 export const Home: React.VFC = () => {
@@ -91,8 +91,9 @@ export const Home: React.VFC = () => {
     <Box
       // bg={useColorModeValue('white', 'black')}
       width="100%"
+      boxSizing="border-box"
     >
-      <Box display={['none', 'auto']}>
+      <Box display={['none', 'initial']}>
         <HeroText>
           <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
             {' '}
@@ -104,24 +105,22 @@ export const Home: React.VFC = () => {
           </Heading>
         </HeroText>
       </Box>
-      <Box display={['none', 'auto']}>
+      <Box display={['none', 'initial']}>
         <Reacteroids
           bgColor={canvasBG}
           itemColor={itemColor}
           colorMode={color}
         ></Reacteroids>
       </Box>
-      <Box width="80%" margin="0 auto" display={['auto', 'none']}>
-        <MobileHeading>
-          <Heading fontSize="3rem">
-            {' '}
-            Software & Application Innovation Lab
-          </Heading>
-          <Heading fontSize="1.5rem"> Where Academia Meets Application</Heading>
-        </MobileHeading>
-      </Box>
+      {/* <Box margin="0 auto" maxWidth="80%" display={['initial', 'none']}>
+        <Heading fontSize="2rem">
+          {' '}
+          Software & Application Innovation Lab
+        </Heading>
+        <Heading fontSize="1.25rem"> Where Academia Meets Application</Heading>
+      </Box> */}
 
-      <Box display={['none', 'auto']}>
+      <Box display={['none', 'initial']}>
         <Info>
           <b>INSTRUCTIONS</b>
           <p>
@@ -129,16 +128,36 @@ export const Home: React.VFC = () => {
           </p>
         </Info>
       </Box>
-      <Box margin="0 auto" marginTop="70px" maxWidth="80%">
+      <Box
+        margin="0 auto"
+        // marginTop="70px"
+        maxWidth="80%"
+      >
         <Grid
-          templateColumns={['1fr', '1fr 1fr']}
-          // templateColumns={[1, "repeat(auto-fill, minmax(100px, 1fr))"]}
+          gridTemplateColumns={{
+            base: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+          }}
+          gridTemplateAreas={{
+            base: `'heading heading' 'about about' 'projects projects' 'projectgrid projectgrid' 'info info' 'contact contact'`,
+            md: `'about about about' 'projects projectgrid projectgrid' 'info info info' 'contact contact contact'`,
+          }}
           gridGap="23px"
-          gridColumnEnd="-1"
+          width="100%"
         >
-          <Box gridColumn="1 / -1" mb="2vw">
+          <Box gridArea="heading" display={['initial', 'none']}>
+            <Heading fontSize="2rem">
+              {' '}
+              Software & Application Innovation Lab
+            </Heading>
+            <Heading fontSize="1.25rem">
+              {' '}
+              Where Academia Meets Application
+            </Heading>
+          </Box>
+          <Box gridArea="about" mb="2vw">
             <Heading textStyle="h2">About</Heading>
-            <Text textStyle="parapthemgraph">
+            <Text textStyle="paragraph">
               The Software & Application Innovation Lab (SAIL) at the{' '}
               <Link href="https://www.bu.edu/hic/">
                 <Text as="span" textStyle="link">
@@ -158,7 +177,7 @@ export const Home: React.VFC = () => {
             </Text>
           </Box>
 
-          <Box gridColumn="1 / 1">
+          <Box gridArea="projects">
             <Heading textStyle="h2" mt="50px">
               Projects
             </Heading>
@@ -175,8 +194,10 @@ export const Home: React.VFC = () => {
             </Text>
           </Box>
 
-          <HighlightedProjectGrid />
-          <Box gridColumn="1 / -1" marginBottom="2em" fontSize="20px">
+          <Box gridArea="projectgrid">
+            <HighlightedProjectGrid />
+          </Box>
+          <Box gridArea="info" marginBottom="2em" fontSize="20px">
             <Text textStyle="paragraph">
               Across Boston University, the quality and the potential impact of
               research activities (as well as the success of both students and
@@ -287,10 +308,11 @@ export const Home: React.VFC = () => {
             Jeff Simeon<PeopleSpan>Assistant Director, Operations</PeopleSpan>
           </Box> */}
 
-          <Heading gridColumn="1 / -1" mb="7px">
+          {/* <Heading gridColumn="1 / -1" mb="7px">
             Contact Us
-          </Heading>
-          <Box width="100%" gridColumn="1 / -1">
+          </Heading> */}
+          <Box width="100%" gridArea="contact">
+            <Heading mb="7px">Contact Us</Heading>
             <Text textStyle="paragraph">
               Feel free to contact us at{' '}
               <StyledLink href="mailto:hicsail@bu.edu">
@@ -298,9 +320,9 @@ export const Home: React.VFC = () => {
               </StyledLink>
               .
             </Text>
-          </Box>
-          <Box id="contact" gridColumn="1 / -1">
-            <Contact />
+            <Box id="contact">
+              <Contact />
+            </Box>
           </Box>
           {/* {/* <div id="pattern_footer"></div> */}
         </Grid>
