@@ -41,6 +41,7 @@ const theme = extendTheme({
       marginBlockEnd: '1em',
       marginInlineStart: '0px',
       marginInlineEnd: '0px',
+      overflow: 'hidden',
     },
     link: {
       color: '#567dbd',
