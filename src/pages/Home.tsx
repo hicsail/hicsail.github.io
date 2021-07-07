@@ -286,16 +286,20 @@ export const Home: React.VFC = () => {
           <Heading gridColumn="1 / -1" mb="7px">
             Contact Us
           </Heading>
-          <Paragraph>
-            Feel free to contact us at{' '}
-            <StyledLink href="mailto:hicsail@bu.edu">hicsail@bu.edu</StyledLink>
-            .
-          </Paragraph>
+          <Box width="100%" gridColumn="1 / -1">
+            <Paragraph>
+              Feel free to contact us at{' '}
+              <StyledLink href="mailto:hicsail@bu.edu">
+                hicsail@bu.edu
+              </StyledLink>
+              .
+            </Paragraph>
+          </Box>
           {/* {/* <div id="pattern_footer"></div> */}
         </Grid>
-        <div id="contact">
+        <Box id="contact">
           <Contact />
-        </div>
+        </Box>
       </Box>
     </Box>
   );
