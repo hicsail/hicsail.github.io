@@ -252,30 +252,30 @@ export const Home: React.VFC = () => {
           <People>
             Vidya Akavoor<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
-          <People>
+          {/* <People>
             Motun Bolumole<PeopleSpan>Program Manager</PeopleSpan>
-          </People>
+          </People> */}
           <People>
             Shirene Cao<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
 
-          <People>
+          {/* <People>
             Peter Flockhart<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
+          </People> */}
           <People>
             Dany Fu<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
-          <People>
+          {/* <People>
             Ira Globus-Harris<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
+          </People> */}
 
-          <People>
+          {/* <People>
             Frederick Jansen
             <PeopleSpan>Associate Director, Engineering</PeopleSpan>
-          </People>
-          <People>
+          </People> */}
+          {/* <People>
             Shreya Pandit<PeopleSpan>Software Engineer</PeopleSpan>
-          </People>
+          </People> */}
           <People>
             Arezoo Sadeghi<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
