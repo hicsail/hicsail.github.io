@@ -35,6 +35,8 @@ export class Reacteroids extends Component {
       currentScore: 0,
       topScore: localStorage['topscore'] || 0,
       inGame: false,
+      colorMode: this.props.colorMode,
+
       // colorMode:
       // bgColor = this.props.bgColor,
       // itemColor = this.props.itemColor,
@@ -62,13 +64,28 @@ export class Reacteroids extends Component {
     if (e.keyCode === KEY.LEFT || e.keyCode === KEY.A) keys.left = value;
     if (e.keyCode === KEY.RIGHT || e.keyCode === KEY.D) keys.right = value;
     if (e.keyCode === KEY.UP || e.keyCode === KEY.W) keys.up = value;
-    if (e.keyCode === KEY.SPACE) keys.space = value;
+    if (e.keyCode === KEY.SPACE && e.target == document.body)
+      keys.space = value;
     this.setState({
       keys: keys,
     });
   }
 
   componentDidMount() {
+    window.addEventListener(
+      'keydown',
+      function (e) {
+        if (
+          ['Space', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].indexOf(
+            e.code,
+          ) > -1
+        ) {
+          e.preventDefault();
+        }
+      },
+      false,
+    );
+
     window.addEventListener('keyup', this.handleKeys.bind(this, false));
     window.addEventListener('keydown', this.handleKeys.bind(this, true));
     window.addEventListener('resize', this.handleResize.bind(this, false));
@@ -104,7 +121,7 @@ export class Reacteroids extends Component {
     context.save();
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
-    context.fillStyle = this.props.bgColor;
+    context.fillStyle = this.state.colorMode;
     // ship.updateColor(this.bgColor, this.itemColor);
     context.globalAlpha = 0.4;
     context.fillRect(0, 0, this.state.screen.width, this.state.screen.height);
@@ -159,6 +176,7 @@ export class Reacteroids extends Component {
       onDie: this.gameOver.bind(this),
       itemColor: this.props.itemColor,
       bgColor: this.props.bgColor,
+      color: this.state.colorMode,
     });
     this.createObject(ship, 'ship');
 

@@ -19,6 +19,7 @@ export default class Ship {
     this.onDie = args.onDie;
     this.itemColor = args.itemColor;
     this.bgColor = args.bgColor;
+    this.color = args.color;
   }
 
   destroy() {
@@ -134,8 +135,8 @@ export default class Ship {
     // context.fillStyle = this.itemColor;
     // light mode
 
-    context.strokeStyle = this.itemColor;
-    context.fillStyle = this.bgColor;
+    context.strokeStyle = this.color;
+    context.fillStyle = this.color;
     context.lineWidth = 2;
     context.beginPath();
     context.moveTo(0, -15);
