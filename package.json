@@ -16,12 +16,14 @@
         "@emotion/react": "^11.4.0",
         "@emotion/styled": "^11.3.0",
         "framer-motion": "^4.1.17",
+        "papaparse": "^5.3.1",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-hook-form": "^7.8.1",
         "react-icons": "^4.2.0",
         "react-interactive": "^1.1.0",
+        "react-papaparse": "^3.16.1",
         "react-router-dom": "^5.2.0",
         "react-router-hash-link": "^2.4.3",
         "react-script-tag": "^1.1.2",
@@ -30,6 +32,7 @@
         "use-dark-mode": "^2.3.1"
     },
     "devDependencies": {
+        "@types/papaparse": "^5.2.5",
         "@types/react": "^17.0.4",
         "@types/react-dom": "^17.0.3",
         "@types/react-router-dom": "^5.1.7",

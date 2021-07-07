@@ -1,58 +1,100 @@
 interface PersonInformation {
   name: string;
-  picture: string;
-  role: string;
+  picture?: string;
+  role?: string;
   research?: string;
-  currentPosition: string;
-  outsideLinks: Array<string>;
-  projects: Array<string>;
+  outsideLinks: Array<OutsideLink>;
+  projects?: Array<Project> | null;
+}
+
+interface OutsideLink {
+  name: string;
+  href: string;
+}
+
+interface Project {
+  name: string;
+  href: string;
 }
 
 interface Alumni extends PersonInformation {
   priorPosition: string;
+  currentPosition: string;
 }
 
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
-    name: 'Jade Smith',
-    picture: '../../img/person.jpg',
-    role: 'Software Engineer',
-    research:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    currentPosition: '...',
-    outsideLinks: ['', ''],
-    projects: ['https://github.com/hicsail/samsha'],
+    name: 'Jeff Simeon',
+    picture: '../../img/jeff-simeon.jpg',
+    role: 'Assistant Director, Operations',
+    outsideLinks: [
+      { name: 'Linked In', href: 'https://www.linkedin.com/in/jeffsimeon' },
+      {
+        name: 'BU Profile',
+        href: 'https://www.bu.edu/hic/profile/jeff-simeon/',
+      },
+    ],
+    projects: null,
   },
   {
-    name: 'Jade Smith',
-    picture: '../../img/person.jpg',
+    name: 'Shirene Cao',
+    picture: '../../img/shirene-cao.jpg',
     role: 'Software Engineer',
-    research:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-
-    currentPosition: '...',
-    outsideLinks: ['', ''],
-    projects: ['https://github.com/hicsail/samsha'],
+    outsideLinks: [
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/xinyun-cao' },
+    ],
+    projects: [{ name: 'ASL-LEX', href: 'https://github.com/ASL-LEX/asl-lex' }],
+  },
+  {
+    name: 'Dany Fu',
+    picture: '../../img/dany-fu.jpg',
+    role: 'Senior Software Engineer',
+    research: '',
+    outsideLinks: [
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/danyfu' },
+    ],
+    projects: [
+      { name: 'ORACLES', href: 'https://github.com/hicsail/ORACLES/tree/main' },
+      {
+        name: 'OT2-SARS-CoV2',
+        href: 'https://github.com/DAMPLAB/OT2-SARS-CoV2',
+      },
+    ],
+  },
+  {
+    name: 'Arezoo Sadeghi',
+    picture: '../../img/arezoo-sadeghi.jpg',
+    role: 'Software Engineer',
+    research: '',
+    outsideLinks: [
+      {
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/arezoo-sadeghi-41b24a139',
+      },
+    ],
+    projects: [{ name: 'samsha', href: 'https://github.com/hicsail/samsha' }],
+  },
+  {
+    name: 'Vidya Akavoor',
+    picture: '../../img/vidya-akavoor.jpg',
+    role: 'Software Engineer',
+    research: '',
+    outsideLinks: [
+      {
+        name: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/vidya-akavoor',
+      },
+    ],
+    projects: [{ name: 'ABLE', href: 'https://github.com/hicsail/im-well2' }],
   },
 ];
-
 export const ALUMNI_LIST: Array<Alumni> = [
   {
-    name: 'John Smith',
-    picture: '../../img/fjansen.jpg',
-    role: 'Software Engineer',
-    priorPosition: 'Software Engineer',
-    currentPosition: 'Software Engineer',
-    outsideLinks: ['https://www.linkedin.com/in/williamhgates/', ''],
-    projects: ['https://github.com/hicsail/samsha'],
-  },
-  {
-    name: 'John Smith',
-    picture: '../../img/fjansen.jpg',
-    role: 'Graduate Student',
-    currentPosition: 'Graduate Student',
-    priorPosition: 'Graduate Student',
-    outsideLinks: ['https://www.linkedin.com/in/williamhgates/', ''],
-    projects: ['https://github.com/hicsail/samsha'],
+    name: 'Frederick Jansen',
+    priorPosition: 'Interim Director',
+    currentPosition: 'Chief Technology Officer & Co-Founder at Nth Party, Ltd',
+    outsideLinks: [
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jansenfrederick' },
+    ],
   },
 ];
