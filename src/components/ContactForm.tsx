@@ -49,7 +49,7 @@ export const ContactForm = () => {
         <Input type="text" {...register('Message', { required: true })} />
       </FormControl>
 
-      <Button mt={4} colorScheme="teal" type="submit">
+      <Button mt={4} colorScheme="blackAlpha" type="submit">
         Submit
       </Button>
     </form>

@@ -82,6 +82,8 @@ export const Home: React.VFC = () => {
   const itemColor = useColorModeValue('#000000', '#ffffff');
   const color = useColorModeValue('white', 'black');
 
+  console.log('colorMode:,' + color);
+
   return (
     <Box bg={useColorModeValue('white', 'black')} width="100%">
       <HeroText>

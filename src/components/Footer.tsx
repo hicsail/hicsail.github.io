@@ -82,7 +82,6 @@ export default function Footer() {
     >
       <Box
         as={Stack}
-        // maxW={'6xl'}
         py={4}
         direction="row"
         spacing={4}
