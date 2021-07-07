@@ -36,18 +36,13 @@ export class Reacteroids extends Component {
       currentScore: 0,
       topScore: localStorage['topscore'] || 0,
       inGame: false,
-      colorMode: this.props.colorMode,
-
-      // colorMode:
-      // bgColor = this.props.bgColor,
-      // itemColor = this.props.itemColor,
+      colorMode: 'white',
+      // this.props.colorMode,
     };
     this.ship = [];
     this.asteroids = [];
     this.bullets = [];
     this.particles = [];
-    // this.bgColor = args.bgColor;
-    // this.itemColor = args.bgColor;
   }
 
   handleResize(value, e) {
@@ -124,8 +119,14 @@ export class Reacteroids extends Component {
     context.save();
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
-    context.fillStyle = this.state.colorMode;
-    // ship.updateColor(this.bgColor, this.itemColor);
+    this.state.colorMode = this.props.colorMode;
+
+    if (this.state.colorMode == 'white') {
+      context.fillStyle = '#FFFFFF';
+    } else {
+      context.fillStyle = '#000000';
+    }
+
     context.globalAlpha = 0.4;
     context.fillRect(0, 0, this.state.screen.width, this.state.screen.height);
     context.globalAlpha = 1;
@@ -177,9 +178,6 @@ export class Reacteroids extends Component {
       },
       create: this.createObject.bind(this),
       onDie: this.gameOver.bind(this),
-      itemColor: this.props.itemColor,
-      bgColor: this.props.bgColor,
-      color: this.state.colorMode,
     });
     this.createObject(ship, 'ship');
 
