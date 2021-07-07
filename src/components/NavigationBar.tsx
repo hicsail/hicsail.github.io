@@ -125,7 +125,6 @@ const DesktopNav = () => {
                 href={navItem.href ?? '#'}
                 fontSize={'20px'}
                 fontFamily="Karbon"
-                // fontHeight="20px"
                 fontWeight={500}
                 color={useColorModeValue('gray.600', 'gray.200')}
                 _hover={{
