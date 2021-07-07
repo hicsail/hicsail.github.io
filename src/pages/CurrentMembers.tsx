@@ -8,6 +8,7 @@ import {
   Link,
   SimpleGrid,
   Divider,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Layout } from '../components/Layout';
@@ -15,7 +16,12 @@ import { CURRENTMEMBERS_LIST } from '../utils/peopleInformation';
 
 export const CurrentMembers: React.VFC = () => (
   <Layout title="Current Members">
-    <SimpleGrid columns={[1, 1, 2]} spacing="40px" pt="3">
+    <SimpleGrid
+      columns={[1, 1, 2]}
+      spacing="40px"
+      pt="3"
+      borderTop={useColorModeValue('2px solid black', '2px solid white')}
+    >
       {CURRENTMEMBERS_LIST.map(
         ({ picture, name, role, outsideLinks, projects, bio }) => (
           <Flex direction="row" marginBottom="30px">
