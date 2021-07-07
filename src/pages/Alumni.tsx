@@ -17,6 +17,7 @@ export const Alumni: React.VFC = () => (
     width="100%"
     justifyContent="flex-start"
     alignItems="flex-start"
+    maxWidth="80%"
   >
     <Box marginBottom="30px" width="100%">
       <Heading>Alumni</Heading>

@@ -31,7 +31,7 @@ export default function NavigationBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex width="100%" marginTop="30px" marginBottom="30px">
+    <Flex width="100%" marginTop="30px" marginBottom="30px" maxWidth="80%">
       <Flex
         width="100%"
         bg={useColorModeValue('white', 'black')}
@@ -330,7 +330,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'CONTACT',
-    href: '/contact',
+    href: '#contact',
   },
 ];
 function random(arg0: number, arg1: number): number {

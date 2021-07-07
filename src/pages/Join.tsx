@@ -3,7 +3,7 @@ import * as React from 'react';
 import { ContactForm } from '../components/ContactForm';
 
 export const Join: React.VFC = () => (
-  <Flex display="flex" flexDirection="column">
+  <Flex display="flex" flexDirection="column" maxWidth="80%">
     <Box marginBottom="20px">
       <Heading>Join Our Team</Heading>
       <Text>
