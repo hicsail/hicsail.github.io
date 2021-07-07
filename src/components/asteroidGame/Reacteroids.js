@@ -2,30 +2,6 @@ import React, { Component } from 'react';
 import Ship from './Ship';
 import Asteroid from './Asteroid';
 import { randomNumBetweenExcluding } from './helpers';
-import { useColorMode, useColorModeValue } from '@chakra-ui/react';
-import styled from 'styled-components';
-// import './style.css';
-
-const EndgameWraper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 16px;
-  z-index: 1;
-  text-align: center;
-`;
-
-const EndgameButton = styled.div`
-  border: 4px solid #ffffff;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 10px;
-  font-family: 'PT Mono', serif;
-  cursor: pointer;
-`;
 
 const KEY = {
   LEFT: 37,
@@ -54,12 +30,11 @@ export class Reacteroids extends Component {
         down: 0,
         space: 0,
       },
-      asteroidCount: 20,
-      currentScore: 0,
+      asteroidCount: 10,
+      currentSore: 0,
       topScore: localStorage['topscore'] || 0,
       inGame: false,
       colorMode: 'white',
-      // this.props.colorMode,
     };
     this.ship = [];
     this.asteroids = [];
@@ -209,6 +184,8 @@ export class Reacteroids extends Component {
       });
       localStorage['topscore'] = this.state.currentScore;
     }
+
+    // this.startGame();
   }
 
   generateAsteroids(howMany) {
@@ -294,44 +271,19 @@ export class Reacteroids extends Component {
 
     if (!this.state.inGame) {
       endgame = (
-        // // <div>
-        // //   <EndgameWraper>
-        // //     <EndgameButton onClick={this.startGame.bind(this)}>
-        // //       Try Again?
-        // //     </EndgameButton>
-        // //   </EndgameWraper>
-        // // </div>
-        // // <EndgameWraper>
-        // //   <EndgameButton onClick={this.startGame.bind(this)}>
-        // //     Try Again?
-        // //   </EndgameButton>
-        // // </EndgameWraper>
-
-        // <Endgame />
-
-        <div
-        // style={{
-        //   position: 'absolute',
-        //   top: '50%',
-        //   left: '50%',
-        //   transform: 'translate(-50%, -50%)',
-        //   padding: '16px',
-        //   zIndex: '1',
-        //   textAlign: 'center',
-        // }}
-        >
-          {/* <p>Game over, man!</p>
-          <p>{message}</p> */}
+        <div>
           <button
             style={{
-              // border: '4px solid #ffffff',
-              backgroundColor: 'transparent',
+              // backgroundColor: 'transparent',
               color: this.state.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              fontSize: '20px',
+              fontSize: '1.5rem',
               padding: '10px 20px',
               margin: '10px',
               fontFamily: 'PT Mono, serif',
               cursor: 'pointer',
+              width: '100%',
+              textAlign: 'center',
+              // border: '5px solid black',
             }}
             onClick={this.startGame.bind(this)}
           >
@@ -343,23 +295,25 @@ export class Reacteroids extends Component {
 
     return (
       <div>
-        <span className="score current-score">
+        <div
+          style={{
+            fontSize: '1.5rem',
+            width: '100%',
+            textAlign: 'center',
+          }}
+        >
           Score: {this.state.currentScore}
-        </span>
+        </div>
         {endgame}
-        {/* <span className="score top-score">
-          Top Score: {this.state.topScore}
-        </span> */}
-        {/* <span className="controls">
-          Use [A][S][W][D] or [←][↑][↓][→] to MOVE
-          <br />
-          Use [SPACE] to SHOOT
-        </span> */}
         <canvas
           ref="canvas"
           width={this.state.screen.width * this.state.screen.ratio}
           height={this.state.screen.height * this.state.screen.ratio}
           background-color="red"
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
         />
       </div>
     );
