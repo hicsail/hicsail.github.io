@@ -6,3 +6,5 @@ generated
 
 # Files marked with gitigx
 *gitigx*
+
+package-lock.json
