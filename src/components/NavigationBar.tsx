@@ -83,7 +83,7 @@ export default function NavigationBar() {
             >
               <Image src="../../img/s_logo.png" />
             </Box>
-            <Text fontSize={'2rem'} fontFamily="Karbon" fontWeight={500}>
+            <Text fontSize={'1.5rem'} fontFamily="Karbon" fontWeight={500}>
               SAIL
             </Text>
           </Flex>
@@ -139,7 +139,7 @@ const DesktopNav = () => {
                 to={navItem.href}
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'1.5rem'}
+                fontSize={'1.25rem'}
                 fontFamily="Karbon"
                 fontWeight={500}
                 color={useColorModeValue('gray.600', 'gray.200')}
