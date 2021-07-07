@@ -4,7 +4,6 @@ import { asteroidVertices, randomNumBetween } from './helpers';
 function randomColor() {
   let texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
   let color = texttheme[Math.floor(Math.random() * texttheme.length)];
-  // console.log(color);
 
   return color;
 }
@@ -60,7 +59,8 @@ export default class Asteroid {
     }
 
     // Break into smaller asteroids
-    if (this.radius > 10) {
+    // if (this.radius > 10) {
+    if (this.radius > 30) {
       for (let i = 0; i < 2; i++) {
         let asteroid = new Asteroid({
           size: this.radius / 2,
@@ -107,9 +107,7 @@ export default class Asteroid {
     context.rotate((this.rotation * Math.PI) / 180);
 
     //Color Style
-    console.log('color:', this.color);
     context.strokeStyle = this.color;
-    // context.strokeStyle = 'blue';
     context.lineWidth = 2;
     context.beginPath();
     context.moveTo(0, -this.radius);

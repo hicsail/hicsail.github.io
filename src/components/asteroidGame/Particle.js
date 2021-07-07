@@ -31,7 +31,14 @@ export default class Particle {
     const context = state.context;
     context.save();
     context.translate(this.position.x, this.position.y);
-    context.fillStyle = '#ffffff';
+
+    if (state.colorMode == 'white') {
+      context.fillStyle = '#000000';
+    } else {
+      context.fillStyle = '#FFFFFF';
+    }
+
+    // context.fillStyle = '#ffffff';
     context.lineWidth = 2;
     context.beginPath();
     context.moveTo(0, -this.radius);
