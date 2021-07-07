@@ -4,7 +4,7 @@ import { ONGOINGRESEARCH_LIST } from '../utils/researchInformation';
 
 export const OngoingResearch: React.VFC = () => {
   return (
-    <Flex width="80%" display="column" justifyContent="center">
+    <Flex width="80%" display="column" justifyContent="center" maxWidth="80%">
       <Box marginBottom="30px">
         <Heading>Ongoing Research</Heading>
       </Box>
