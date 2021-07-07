@@ -132,11 +132,21 @@ export default class Ship {
 
     context.lineWidth = 2;
     context.beginPath();
-    context.moveTo(0, -15);
-    context.lineTo(10, 10);
-    context.lineTo(5, 7);
-    context.lineTo(-5, 7);
-    context.lineTo(-10, 10);
+
+    // large ship
+    context.moveTo(0, -30);
+    context.lineTo(20, 20);
+    context.lineTo(10, 14);
+    context.lineTo(-10, 14);
+    context.lineTo(-20, 20);
+
+    // small ship
+    // context.moveTo(0, -15);
+    // context.lineTo(10, 10);
+    // context.lineTo(5, 7);
+    // context.lineTo(-5, 7);
+    // context.lineTo(-10, 10);
+
     context.closePath();
     context.fill();
     context.stroke();
