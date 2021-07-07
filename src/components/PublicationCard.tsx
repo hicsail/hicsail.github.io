@@ -32,22 +32,22 @@ export const PublicationCard: React.FC<Props> = ({
 }) => {
   return (
     <Flex
-      borderBottom={useColorModeValue('2px solid black', '2px solid white')}
+      // borderBottom={useColorModeValue('2px solid black', '2px solid white')}
       mt="1rem"
       direction={['column', 'row']}
     >
       <Link href={publicationLink}>
-        <Box mr="1rem">
+        <Box mr="1rem" width="150px">
           <Image
-            boxSize="150px"
             src={publicationHref}
+            width="100%"
             objectFit="cover"
-            fallbackSrc="https://via.placeholder.com/md"
+            fallbackSrc="../../img/sail-image-placeholder.png"
           ></Image>
         </Box>
       </Link>
       <Box>
-        <Text>
+        <Text as="u">
           <Link
             textStyle="paragraph"
             mt="0px"
@@ -60,7 +60,7 @@ export const PublicationCard: React.FC<Props> = ({
         </Text>
         <Text color="#EBB54A">{new Date(publicationDate).toDateString()}</Text>
         <Text textStyle="paragraph">
-          {publicationAuthors} Proccedings at {publicationProceeding}
+          {publicationAuthors}. Proccedings at {publicationProceeding}
           {publicationLocation}
         </Text>
       </Box>

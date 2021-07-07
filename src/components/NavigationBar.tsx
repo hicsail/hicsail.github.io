@@ -58,27 +58,29 @@ export default function NavigationBar() {
           width="100%"
           marginLeft="0px"
         >
-          <Flex
-            fontFamily={'heading'}
-            // color={useColorModeValue('gray.800', 'white')}
-            display="flex"
-            alignItems="center"
-            fontWeight="normal"
-            lineHeight="50px"
-            // fontSize="2em"
-          >
-            <Box
-              boxSize="30px"
-              objectFit="cover"
-              marginRight="10px"
-              marginBottom="5px"
+          <Link as={ReactRouterLink} to="/">
+            <Flex
+              fontFamily={'heading'}
+              // color={useColorModeValue('gray.800', 'white')}
+              display="flex"
+              alignItems="center"
+              fontWeight="normal"
+              lineHeight="50px"
+              // fontSize="2em"
             >
-              <Image src="../../img/s_logo.png" />
-            </Box>
-            <Text fontSize={'1.5rem'} fontFamily="Karbon" fontWeight={500}>
-              SAIL
-            </Text>
-          </Flex>
+              <Box
+                boxSize="45px"
+                objectFit="cover"
+                marginRight="10px"
+                marginBottom="5px"
+              >
+                <Image src="../../img/s_logo.png" />
+              </Box>
+              <Text fontSize={'1.5rem'} fontFamily="Karbon" fontWeight={500}>
+                SAIL
+              </Text>
+            </Flex>
+          </Link>
 
           <Flex
             display={{ base: 'none', md: 'flex' }}
@@ -311,18 +313,18 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'RESEARCH',
-    href: '#',
+    href: '/research',
     hash: false,
-    children: [
-      {
-        label: 'Ongoing',
-        href: 'ongoingresearch',
-      },
-      {
-        label: 'Past',
-        href: 'pastresearch',
-      },
-    ],
+    // children: [
+    //   {
+    //     label: 'Ongoing',
+    //     href: 'ongoingresearch',
+    //   },
+    //   {
+    //     label: 'Past',
+    //     href: 'pastresearch',
+    //   },
+    // ],
   },
   {
     label: 'PUBLICATIONS',

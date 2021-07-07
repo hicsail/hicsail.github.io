@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { PublicationInformation } from '../utils/researchInformation';
 import { Layout } from './Layout';
@@ -24,7 +24,9 @@ export const PublicationsGrid: React.FC<Props> = ({ title, list }: Props) => {
     <Layout title={title}>
       {list.map((publication: PublicationInformation) =>
         publication.firstOfYear ? (
-          <Box>
+          <Box
+            borderTop={useColorModeValue('2px solid black', '2px solid white')}
+          >
             <Heading textStyle="h2" mt="10px">
               {new Date(publication.date).getFullYear()}
             </Heading>
