@@ -4,7 +4,7 @@ import { PASTRESEARCH_LIST } from '../utils/researchInformation';
 
 export const PastResearch: React.VFC = () => {
   return (
-    <Flex width="80%" display="column" justifyContent="center">
+    <Flex width="80%" display="column" justifyContent="center" maxWidth="80%">
       <Box marginBottom="30px">
         <Heading>Past Research</Heading>
       </Box>

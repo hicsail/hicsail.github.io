@@ -3,7 +3,7 @@ import * as React from 'react';
 import { PRESENTATIONS_LIST } from '../utils/researchInformation';
 
 export const Presentations: React.VFC = () => (
-  <Box>
+  <Box maxWidth="80%">
     <Box>
       <Heading>Presentations</Heading>
     </Box>
