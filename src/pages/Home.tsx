@@ -20,7 +20,7 @@ const HeroText = styled.div`
   top: 50vh;
   left: 10vh;
   z-index: 50;
-  width: 50%;
+  width: 65%;
   /* text-align: left; */
   display: block;
 `;
@@ -88,11 +88,7 @@ export const Home: React.VFC = () => {
   console.log('colorMode:,' + color);
 
   return (
-    <Box
-      // bg={useColorModeValue('white', 'black')}
-      width="100%"
-      boxSizing="border-box"
-    >
+    <Box width="100%" boxSizing="border-box">
       <Box display={['none', 'initial']}>
         <HeroText>
           <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
@@ -112,13 +108,6 @@ export const Home: React.VFC = () => {
           colorMode={color}
         ></Reacteroids>
       </Box>
-      {/* <Box margin="0 auto" maxWidth="80%" display={['initial', 'none']}>
-        <Heading fontSize="2rem">
-          {' '}
-          Software & Application Innovation Lab
-        </Heading>
-        <Heading fontSize="1.25rem"> Where Academia Meets Application</Heading>
-      </Box> */}
 
       <Box display={['none', 'initial']}>
         <Info>
@@ -139,8 +128,18 @@ export const Home: React.VFC = () => {
             md: 'repeat(3, 1fr)',
           }}
           gridTemplateAreas={{
-            base: `'heading heading' 'about about' 'projects projects' 'projectgrid projectgrid' 'info info' 'contact contact'`,
-            md: `'about about about' 'projects projectgrid projectgrid' 'info info info' 'contact contact contact'`,
+            base: `
+            'heading heading' 
+            'about about'
+            'info info' 
+            'projects projects' 
+            'projectgrid projectgrid' 
+            'contact contact'`,
+            md: `
+            'about about ...' 
+            'info info info' 
+            'projects projectgrid projectgrid' 
+            'contact contact contact'`,
           }}
           gridGap="23px"
           width="100%"
@@ -155,7 +154,7 @@ export const Home: React.VFC = () => {
               Where Academia Meets Application
             </Heading>
           </Box>
-          <Box gridArea="about" mb="2vw">
+          <Box gridArea="about">
             <Heading textStyle="h2">About</Heading>
             <Text textStyle="paragraph">
               The Software & Application Innovation Lab (SAIL) at the{' '}
@@ -177,26 +176,6 @@ export const Home: React.VFC = () => {
             </Text>
           </Box>
 
-          <Box gridArea="projects">
-            <Heading textStyle="h2" mt="50px">
-              Projects
-            </Heading>
-            <Text textStyle="paragraph">
-              Ongoing projects focus on a wide range of topics and technologies,
-              from developing and deploying novel cybersecurity applications, to
-              prototyping and deploying smart-city services and platforms.
-            </Text>
-            <Text textStyle="paragraph">
-              SAIL is committed to promoting innovation, best practices, and
-              open source models within the research community. SAIL will learn
-              and help teach new technologies and techniques as determined by
-              the needs of any given project.
-            </Text>
-          </Box>
-
-          <Box gridArea="projectgrid">
-            <HighlightedProjectGrid />
-          </Box>
           <Box gridArea="info" marginBottom="2em" fontSize="20px">
             <Text textStyle="paragraph">
               Across Boston University, the quality and the potential impact of
@@ -236,81 +215,28 @@ export const Home: React.VFC = () => {
               .
             </Text>
           </Box>
-          {/* <Heading gridColumn="1 / -1" mb="2em">
-            Opportunities
-          </Heading>
-          <Box gridColumn="1 / span 4">
-            <Image src="../../img/offices.png" />
-          </Box>
-          <Box
-            gridColumn="5 / -1"
-            fontSize="20px"
-            // gridColumnStart={['1', '1', 'auto']}
-          >
+
+          <Box gridArea="projects">
+            <Heading textStyle="h2" mt="50px">
+              Projects
+            </Heading>
             <Text textStyle="paragraph">
-              SAIL is seeking full-time professional software engineers. See{' '}
-              <StyledLink href="//sail.bu.edu/join">
-                current opportunities
-              </StyledLink>{' '}
-              to apply for a full-time position.
-            </Text>
-            <ol>
-              <li>
-                <StyledLink href="https://sail.bu.edu/join/#full-stack">
-                  Software Engineer, Full-Stack
-                </StyledLink>
-              </li>
-              <li>
-                <StyledLink href="https://sail.bu.edu/join/#cybersecurity">
-                  Software Engineer, Cybersecurity
-                </StyledLink>
-              </li>
-            </ol>
-            <Text textStyle="paragraph">
-              SAIL offers paid internship opportunities for undergraduate and
-              graduate students interested in gaining experience working in a
-              professional software development environment situated in a
-              research university context. To apply for the Summer 2020
-              Internship Program, please submit a resume and cover letter to{' '}
-              <StyledLink href="mailto:hicsail@bu.edu">
-                hicsail@bu.edu
-              </StyledLink>
-              .
+              Ongoing projects focus on a wide range of topics and technologies,
+              from developing and deploying novel cybersecurity applications, to
+              prototyping and deploying smart-city services and platforms.
             </Text>
             <Text textStyle="paragraph">
-              For all other opportunities, events, and updates, please join our{' '}
-              <StyledLink href="https://tinyurl.com/SAIL-mailing-list">
-                mailing list
-              </StyledLink>{' '}
-              to be notified.
+              SAIL is committed to promoting innovation, best practices, and
+              open source models within the research community. SAIL will learn
+              and help teach new technologies and techniques as determined by
+              the needs of any given project.
             </Text>
-          </Box> */}
-
-          {/* <Heading gridColumn="1 / -1" mb="7px">
-            Team
-          </Heading> */}
-
-          {/* <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
-            Vidya Akavoor<PeopleSpan>Software Engineer</PeopleSpan>
           </Box>
 
-          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
-            Shirene Cao<PeopleSpan>Software Engineer</PeopleSpan>
+          <Box gridArea="projectgrid">
+            <HighlightedProjectGrid />
           </Box>
 
-          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
-            Dany Fu<PeopleSpan>Software Engineer</PeopleSpan>
-          </Box>
-          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
-            Arezoo Sadeghi<PeopleSpan>Software Engineer</PeopleSpan>
-          </Box>
-          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
-            Jeff Simeon<PeopleSpan>Assistant Director, Operations</PeopleSpan>
-          </Box> */}
-
-          {/* <Heading gridColumn="1 / -1" mb="7px">
-            Contact Us
-          </Heading> */}
           <Box width="100%" gridArea="contact">
             <Heading mb="7px">Contact Us</Heading>
             <Text textStyle="paragraph">
