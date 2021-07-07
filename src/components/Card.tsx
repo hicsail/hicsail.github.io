@@ -11,6 +11,7 @@ import {
   useDisclosure,
   Image,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
 
@@ -31,9 +32,26 @@ export const Card: React.FC<Props> = ({
   return (
     <>
       <Box width="100%" onClick={onOpen}>
-        <Image maxWidth="100%" height="auto" src={imageHref} />
+        <Box
+          borderBottom="2px solid black"
+          // {useColorModeValue('2px solid black', '2px solid white')}
+        >
+          <Image
+            maxWidth="100%"
+            height="30rem"
+            src={imageHref}
+            width="100%"
+            objectFit="cover"
+          />
+        </Box>
         <Box p="1em" display="block">
-          <Text textStyle="h2" fontWeight="800" fontStyle="normal">
+          <Text
+            textStyle="h2"
+            fontWeight="800"
+            fontStyle="normal"
+            color="black"
+            // {useColorModeValue('white', '#121212')}
+          >
             {modalButtonText}
           </Text>
         </Box>

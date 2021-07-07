@@ -1,4 +1,4 @@
-import { Box, Grid } from '@chakra-ui/react';
+import { Box, Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { ResearchInformation } from '../utils/researchInformation';
 import { Card } from './Card';
@@ -16,6 +16,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
         gridTemplateColumns="repeat(auto-fit, minmax(250px, 500px))"
         gap="1.25rem"
         justifyContent="space-evenly"
+        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
         {list.map((research: ResearchInformation) => (
           <Box
@@ -35,6 +36,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               transform: 'translateY(-3px)',
               transition: 'transform 300ms',
             }}
+            bg="white"
           >
             <Card
               modalButtonText={research.popTitle}

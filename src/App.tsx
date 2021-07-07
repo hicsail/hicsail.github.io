@@ -34,12 +34,7 @@ export const App: React.VFC = () => {
 
         <OpportunitiesBanner opportunityAvailable={false} />
 
-        <Box
-          flexGrow={1}
-
-          // width="100%"
-          // marginLeft="20px"
-        >
+        <Box flexGrow={1} width="100%">
           <Switch>
             <Route exact path="/">
               <Home />
@@ -50,12 +45,12 @@ export const App: React.VFC = () => {
             <Route path="/alumni">
               <Alumni />
             </Route>
-            <Route path="/ongoingresearch">
+            {/* <Route path="/ongoingresearch">
               <OngoingResearch />
             </Route>
             <Route path="/pastresearch">
               <PastResearch />
-            </Route>
+            </Route> */}
             <Route path="/research">
               <Research />
             </Route>
