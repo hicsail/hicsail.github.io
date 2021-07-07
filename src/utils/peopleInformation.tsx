@@ -1,7 +1,7 @@
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
     name: 'Jeff Simeon',
-    picture: '../../img/jeff-simeon.jpg',
+    picture: '../../img/team/jeff-simeon.jpg',
     role: 'Assistant Director, Operations',
     outsideLinks: [
       { name: 'Linked In', href: 'https://www.linkedin.com/in/jeffsimeon' },
@@ -15,7 +15,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Shirene Cao',
-    picture: '../../img/shirene-cao.jpg',
+    picture: '../../img/team/shirene-cao.jpg',
     role: 'Software Engineer',
     outsideLinks: [
       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/xinyun-cao' },
@@ -25,7 +25,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Dany Fu',
-    picture: '../../img/dany-fu.jpg',
+    picture: '../../img/team/dany-fu.jpg',
     role: 'Senior Software Engineer',
     research: '',
     outsideLinks: [
@@ -42,7 +42,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Arezoo Sadeghi',
-    picture: '../../img/arezoo-sadeghi.jpg',
+    picture: '../../img/team/arezoo-sadeghi.jpg',
     role: 'Software Engineer',
     research: '',
     outsideLinks: [
@@ -56,7 +56,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Vidya Akavoor',
-    picture: '../../img/vidya-akavoor.jpg',
+    picture: '../../img/team/vidya-akavoor.jpg',
     role: 'Software Engineer',
     research: '',
     outsideLinks: [
