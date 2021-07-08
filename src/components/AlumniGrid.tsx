@@ -1,4 +1,4 @@
-import { Grid, Flex, Text, Link, useColorModeValue } from '@chakra-ui/react';
+import { Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import styled from 'styled-components';
 import { INTERN_ALUMNI } from '../utils/internInformation';
@@ -22,7 +22,6 @@ export const AlumniGrid: React.FC = () => {
         <GridColumn>Name</GridColumn>
         <GridColumn>Prior Position</GridColumn>
         <GridColumn>Current Position</GridColumn>
-        {/* <GridColumn>URL</GridColumn> */}
       </Grid>
       {INTERN_ALUMNI.map(({ Intern_ID, Name, Cohort, Post_Internship }) => (
         <Grid
@@ -33,15 +32,6 @@ export const AlumniGrid: React.FC = () => {
           <GridColumn>{Name}</GridColumn>
           <GridColumn>{Cohort}</GridColumn>
           <GridColumn>{Post_Internship}</GridColumn>
-          {/* <Link flexGrow={1}>
-              {outsideLinks.map((outsideLink) => (
-                <Flex mr="10px">
-                  <Link href={outsideLink.href}>
-                    <Text as="u"> {outsideLink.name}</Text>
-                  </Link>{' '}
-                </Flex>
-              ))}
-            </Link> */}
         </Grid>
       ))}
     </Grid>

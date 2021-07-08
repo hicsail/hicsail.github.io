@@ -20,8 +20,4 @@ export const OpportunitiesBanner: React.FC<Props> = ({
   ) : (
     <Box></Box>
   );
-
-  // <Box width="100%" height={opportunityAvailable ? '100%' : '0%'}>
-  //   <Text>SAIL is Currently Hiring</Text>
-  // </Box>
 };

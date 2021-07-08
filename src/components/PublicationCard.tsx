@@ -31,11 +31,7 @@ export const PublicationCard: React.FC<Props> = ({
   publicationLink,
 }) => {
   return (
-    <Flex
-      // borderBottom={useColorModeValue('2px solid black', '2px solid white')}
-      mt="1rem"
-      direction={['column', 'row']}
-    >
+    <Flex mt="1rem" direction={['column', 'row']}>
       <Link href={publicationLink}>
         <Box mr="1rem" width="150px">
           <Image

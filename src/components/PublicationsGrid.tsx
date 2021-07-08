@@ -10,16 +10,6 @@ interface Props {
 }
 
 export const PublicationsGrid: React.FC<Props> = ({ title, list }: Props) => {
-  const [year, setYear] = React.useState(0);
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  //   const currentYear =
-
-  const getyear = (publication: PublicationInformation): number => {
-    const date = new Date(publication.date);
-    return date.getFullYear();
-  };
-
   return (
     <Layout title={title}>
       {list.map((publication: PublicationInformation) =>
