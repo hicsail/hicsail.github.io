@@ -1,6 +1,6 @@
 import { Box, Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
-import { ResearchInformation } from '../utils/researchInformation';
+import { ResearchInformation } from '../types/types';
 import { Card } from './Card';
 import { Layout } from './Layout';
 

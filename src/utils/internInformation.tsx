@@ -1,9 +1,4 @@
-interface InternInformation {
-  Intern_ID: number;
-  Name: string;
-  Cohort: string;
-  Post_Internship: string;
-}
+import { InternInformation } from '../types/types';
 
 export const INTERN_ALUMNI: Array<InternInformation> = [
   {

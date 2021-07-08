@@ -1,14 +1,4 @@
-import { string } from 'prop-types';
-
-interface ProjectInformation {
-  icons: Array<string>;
-  title: string;
-  text: string;
-  investigatorName: string;
-  investigatorTitle: string;
-  investigatorLink: string;
-  interns: string;
-}
+import { ProjectInformation } from '../types/types';
 
 export const PROJECT_LIST: Array<ProjectInformation> = [
   {
