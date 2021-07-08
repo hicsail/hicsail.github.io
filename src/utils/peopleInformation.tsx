@@ -1,28 +1,3 @@
-interface PersonInformation {
-  name: string;
-  picture?: string;
-  role?: string;
-  research?: string;
-  outsideLinks: Array<OutsideLink>;
-  projects?: Array<Project> | null;
-  bio?: string;
-}
-
-interface OutsideLink {
-  name: string;
-  href: string;
-}
-
-interface Project {
-  name: string;
-  href: string;
-}
-
-interface Alumni extends PersonInformation {
-  priorPosition: string;
-  currentPosition: string;
-}
-
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
     name: 'Jeff Simeon',
@@ -93,14 +68,94 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     projects: [{ name: 'ABLE', href: 'https://github.com/hicsail/im-well2' }],
     bio: '',
   },
-];
-export const ALUMNI_LIST: Array<Alumni> = [
   {
-    name: 'Frederick Jansen',
-    priorPosition: 'Interim Director',
-    currentPosition: 'Chief Technology Officer & Co-Founder at Nth Party, Ltd',
-    outsideLinks: [
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jansenfrederick' },
-    ],
+    name: 'Ammar Ahmad',
+    picture: '',
+    role: 'Software Engineer Intern',
+    research: '',
+    outsideLinks: [],
+    projects: [],
+    bio: '',
+  },
+  {
+    name: 'Christopher Cho',
+    picture: '',
+    role: 'Software Engineer Intern',
+    research: '',
+    outsideLinks: [],
+    projects: [],
+    bio: '',
+  },
+  {
+    name: 'Glenn Liem',
+    picture: '',
+    role: 'Software Engineer Intern',
+    research: '',
+    outsideLinks: [],
+    projects: [],
+    bio: '',
+  },
+  {
+    name: 'Nicholas Goutermout',
+    picture: '',
+    role: 'Software Engineer Intern',
+    research: '',
+    outsideLinks: [],
+    projects: [],
+    bio: '',
+  },
+  {
+    name: 'Nicholas Hall',
+    picture: '',
+    role: 'Software Engineer Intern',
+    research: '',
+    outsideLinks: [],
+    projects: [],
+    bio: '',
+  },
+  {
+    name: 'Taesung Yoon',
+    picture: '',
+    role: 'Software Engineer Intern',
+    research: '',
+    outsideLinks: [],
+    projects: [],
+    bio: '',
   },
 ];
+
+interface PersonInformation {
+  name?: string;
+  picture?: string;
+  role?: string;
+  research?: string;
+  outsideLinks: Array<OutsideLink>;
+  projects?: Array<Project> | null;
+  bio?: string;
+}
+
+interface OutsideLink {
+  name: string;
+  href: string;
+}
+
+interface Project {
+  name: string;
+  href: string;
+}
+
+// interface Alumni extends PersonInformation {
+//   priorPosition: string;
+//   currentPosition: string;
+// }
+
+// export const ALUMNI_LIST: Array<Alumni> = [
+//   {
+//     name: 'Frederick Jansen',
+//     priorPosition: 'Interim Director',
+//     currentPosition: 'Chief Technology Officer & Co-Founder at Nth Party, Ltd',
+//     outsideLinks: [
+//       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jansenfrederick' },
+//     ],
+//   },
+// ];
