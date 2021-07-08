@@ -23,7 +23,7 @@ const theme = extendTheme({
   },
   textStyles: {
     h1: {
-      fontWeight: 'bold',
+      fontWeight: 'black',
       lineHeight: '100px',
     },
     h2: {
@@ -33,7 +33,8 @@ const theme = extendTheme({
     },
     paragraph: {
       display: 'block',
-      fontSize: '0.75rem, 1.25rem',
+      fontSize: ['1.125rem', '1.25rem'],
+      lineHeight: '1.75',
       marginBlockStart: '1em',
       marginBlockEnd: '1em',
       marginInlineStart: '0px',
