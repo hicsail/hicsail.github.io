@@ -1,6 +1,6 @@
 import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
-import { PublicationInformation } from '../utils/researchInformation';
+import { PublicationInformation } from '../types/types';
 import { Layout } from './Layout';
 import { PublicationCard } from './PublicationCard';
 

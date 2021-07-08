@@ -1,3 +1,5 @@
+import { PersonInformation } from '../types/types';
+
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
     name: 'Jeff Simeon',
@@ -123,39 +125,3 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     bio: '',
   },
 ];
-
-interface PersonInformation {
-  name?: string;
-  picture?: string;
-  role?: string;
-  research?: string;
-  outsideLinks: Array<OutsideLink>;
-  projects?: Array<Project> | null;
-  bio?: string;
-}
-
-interface OutsideLink {
-  name: string;
-  href: string;
-}
-
-interface Project {
-  name: string;
-  href: string;
-}
-
-// interface Alumni extends PersonInformation {
-//   priorPosition: string;
-//   currentPosition: string;
-// }
-
-// export const ALUMNI_LIST: Array<Alumni> = [
-//   {
-//     name: 'Frederick Jansen',
-//     priorPosition: 'Interim Director',
-//     currentPosition: 'Chief Technology Officer & Co-Founder at Nth Party, Ltd',
-//     outsideLinks: [
-//       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jansenfrederick' },
-//     ],
-//   },
-// ];
