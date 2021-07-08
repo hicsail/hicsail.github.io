@@ -5,7 +5,7 @@ import { Layout } from '../components/Layout';
 
 export const Presentations: React.VFC = () => (
   <Layout title="Presentations">
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={'column'} spacing={4}>
       {PRESENTATIONS_LIST.map((presentation) => (
         <Flex direction="column">
           <Box>{presentation.title}</Box>

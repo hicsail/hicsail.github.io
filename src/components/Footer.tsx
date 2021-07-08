@@ -53,8 +53,8 @@ const SocialButton = ({
     <chakra.button
       bg={useColorModeValue('white', 'black')}
       rounded={'full'}
-      w={8}
-      h={8}
+      w={[4, 8]}
+      h={[4, 8]}
       cursor={'pointer'}
       as={'a'}
       href={href}
@@ -98,7 +98,7 @@ export default function Footer() {
           >
             <Image src="../../../img/bu-logo.png" />
           </Box>
-          <Text fontSize="20px">
+          <Text fontSize={['10px', '20px']}>
             Boston University Rafik B. Hariri Institute for Computing and
             Computational Science & Engineering
           </Text>

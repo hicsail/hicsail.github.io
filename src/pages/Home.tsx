@@ -7,14 +7,13 @@ import {
   Heading,
   Image,
   Flex,
+  Link,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
 import { Contact } from './Contact';
-
-// import { OldHomePage } from '../components/OldHomePage';
 
 const HeroText = styled.div`
   position: absolute;
@@ -87,19 +86,11 @@ export const Home: React.VFC = () => {
   return (
     <Box bg={useColorModeValue('white', 'black')} width="100%">
       <HeroText>
-        <Heading
-          fontSize={['30px', '60px', '80px', '100px']}
-          fontWeight="700"
-          lineHeight="100px"
-        >
+        <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
           {' '}
           Software & Application Innovation Lab
         </Heading>
-        <Heading
-          fontSize={['10px', '30px', '50px', '50px']}
-          fontWeight="700"
-          lineHeight="100px"
-        >
+        <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
           {' '}
           Where Academia Meets Application
         </Heading>
@@ -124,52 +115,55 @@ export const Home: React.VFC = () => {
           gridGap="23px"
         >
           <Box gridColumn="1 / 6" mb="2vw" fontSize="1.5rem">
-            <Text fontSize="1.5em" fontWeight={700} mt={['100px', '100px']}>
-              About
-            </Text>
+            <Heading textStyle="h2">About</Heading>
             <Text>
-              The <b>Software &amp; Application Innovation Lab</b> (SAIL) at the{' '}
-              <StyledLink href="https://www.bu.edu/hic/">
-                Hariri Institute for Computing
-              </StyledLink>{' '}
+              The Software & Application Innovation Lab (SAIL) at the{' '}
+              <Link href="https://www.bu.edu/hic/">
+                <Text as="span" textStyle="link">
+                  {' '}
+                  Hariri Institute for Computing
+                </Text>
+              </Link>{' '}
               is a professional research, software engineering, and consulting
               lab that acts as both a driver and a collaborative partner for
               computational and data-oriented research efforts across{' '}
-              <StyledLink href="https://www.bu.edu">
-                Boston University
-              </StyledLink>
+              <Link href="https://www.bu.edu">
+                <Text as="span" textStyle="link">
+                  Boston University
+                </Text>
+              </Link>
               .
             </Text>
           </Box>
 
           <Box gridColumn="1 / 3">
-            <Heading fontWeight="700" marginTop="50px">
+            <Heading textStyle="h2" mt="50px">
               Projects
             </Heading>
-            <Paragraph>
+            <Text textStyle="paragraph">
               Ongoing projects focus on a wide range of topics and technologies,
               from developing and deploying novel cybersecurity applications, to
               prototyping and deploying smart-city services and platforms.
-            </Paragraph>
-            <Paragraph>
+            </Text>
+            <Text textStyle="paragraph">
               SAIL is committed to promoting innovation, best practices, and
               open source models within the research community. SAIL will learn
               and help teach new technologies and techniques as determined by
               the needs of any given project.
-            </Paragraph>
+            </Text>
           </Box>
 
           <HighlightedProjectGrid />
           <Box gridColumn="1 / -1" marginBottom="2em" fontSize="20px">
-            <Paragraph>
+            <Text textStyle="paragraph">
               Across Boston University, the quality and the potential impact of
               research activities (as well as the success of both students and
               researchers) are increasingly dependent on the ability to work
               with data and computational approaches, the development of quality
               software applications and services, and familiarity with software
               development practices.
-            </Paragraph>
-            <Paragraph>
+            </Text>
+            <Text textStyle="paragraph">
               SAIL activities include basic and applied research, prototype and
               production-quality software application development,
               consultations, project and budget planning guidance, and other
@@ -178,8 +172,8 @@ export const Home: React.VFC = () => {
               National Institutes of Health, and other agencies. SAIL has worked
               with over 60 collaborators across 12 schools at Boston University;
               several examples are described briefly below.
-            </Paragraph>
-            <Paragraph>
+            </Text>
+            <Text textStyle="paragraph">
               If you would like to explore how SAIL can help you achieve your
               research objectives or would like to discuss what resources are
               available, please fill out a{' '}
@@ -187,8 +181,8 @@ export const Home: React.VFC = () => {
                 request form
               </StyledLink>{' '}
               or <a href="mailto:hicsail@bu.edu">contact us</a> directly.
-            </Paragraph>
-            <Paragraph>
+            </Text>
+            <Text textStyle="paragraph">
               If you are seeking other forms of support (including seed funding)
               for a research effort that requires computational science
               expertise or software engineering resources, you may also want to
@@ -197,7 +191,7 @@ export const Home: React.VFC = () => {
                 Hariri Research Award program
               </a>
               .
-            </Paragraph>
+            </Text>
           </Box>
           <Heading gridColumn="1 / -1" mb="2em">
             Opportunities
@@ -206,13 +200,13 @@ export const Home: React.VFC = () => {
             <Image src="../../img/offices.png" />
           </Box>
           <Box gridColumn="5 / -1" fontSize="20px">
-            <Paragraph>
+            <Text textStyle="paragraph">
               SAIL is seeking full-time professional software engineers. See{' '}
               <StyledLink href="//sail.bu.edu/join">
                 current opportunities
               </StyledLink>{' '}
               to apply for a full-time position.
-            </Paragraph>
+            </Text>
             <ol>
               <li>
                 <StyledLink href="https://sail.bu.edu/join/#full-stack">
@@ -225,7 +219,7 @@ export const Home: React.VFC = () => {
                 </StyledLink>
               </li>
             </ol>
-            <Paragraph>
+            <Text textStyle="paragraph">
               SAIL offers paid internship opportunities for undergraduate and
               graduate students interested in gaining experience working in a
               professional software development environment situated in a
@@ -235,14 +229,14 @@ export const Home: React.VFC = () => {
                 hicsail@bu.edu
               </StyledLink>
               .
-            </Paragraph>
-            <Paragraph>
+            </Text>
+            <Text textStyle="paragraph">
               For all other opportunities, events, and updates, please join our{' '}
               <StyledLink href="https://tinyurl.com/SAIL-mailing-list">
                 mailing list
               </StyledLink>{' '}
               to be notified.
-            </Paragraph>
+            </Text>
           </Box>
 
           <Heading gridColumn="1 / -1" mb="7px">
@@ -252,30 +246,14 @@ export const Home: React.VFC = () => {
           <People>
             Vidya Akavoor<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
-          {/* <People>
-            Motun Bolumole<PeopleSpan>Program Manager</PeopleSpan>
-          </People> */}
+
           <People>
             Shirene Cao<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
 
-          {/* <People>
-            Peter Flockhart<PeopleSpan>Software Engineer</PeopleSpan>
-          </People> */}
           <People>
             Dany Fu<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
-          {/* <People>
-            Ira Globus-Harris<PeopleSpan>Software Engineer</PeopleSpan>
-          </People> */}
-
-          {/* <People>
-            Frederick Jansen
-            <PeopleSpan>Associate Director, Engineering</PeopleSpan>
-          </People> */}
-          {/* <People>
-            Shreya Pandit<PeopleSpan>Software Engineer</PeopleSpan>
-          </People> */}
           <People>
             Arezoo Sadeghi<PeopleSpan>Software Engineer</PeopleSpan>
           </People>
@@ -287,13 +265,13 @@ export const Home: React.VFC = () => {
             Contact Us
           </Heading>
           <Box width="100%" gridColumn="1 / -1">
-            <Paragraph>
+            <Text textStyle="paragraph">
               Feel free to contact us at{' '}
               <StyledLink href="mailto:hicsail@bu.edu">
                 hicsail@bu.edu
               </StyledLink>
               .
-            </Paragraph>
+            </Text>
           </Box>
           {/* {/* <div id="pattern_footer"></div> */}
         </Grid>
