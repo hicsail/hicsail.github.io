@@ -1,11 +1,4 @@
-import {
-  Box,
-  Text,
-  Grid,
-  Link,
-  Divider,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Text, Grid, Link, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { PROJECT_LIST } from '../utils/projectInformation';
 
@@ -13,13 +6,8 @@ export const HighlightedProjectGrid = () => {
   return (
     <Grid
       padding={['0px', '0px', '72px']}
-      // gridColumn={['1 / -1', '2 / -1']}
-      // gridArea="projectgrid"
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
-      // mobile
-      // gridColumnStart={['1', '1', 'auto']}
-      // padding="0"
     >
       {PROJECT_LIST.map((project) => (
         <Box

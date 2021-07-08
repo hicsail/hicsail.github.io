@@ -7,7 +7,6 @@ import {
   Text,
   Link,
   SimpleGrid,
-  Divider,
   useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
