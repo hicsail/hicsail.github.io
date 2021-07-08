@@ -9,8 +9,6 @@
 export function asteroidVertices(count, rad) {
   let p = [];
 
-  console.log(rad);
-
   if (count == 3) {
     p[0] = {
       x: -rad,
@@ -56,8 +54,6 @@ export function asteroidVertices(count, rad) {
   //         (Math.round(0.5 * 2 - 1) * 0.5) / 3
   //       ) * rad,
   //   };
-
-  console.log(p);
 
   return p;
 }
