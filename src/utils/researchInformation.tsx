@@ -1,24 +1,4 @@
-export type ResearchInformation = {
-  title: string;
-  popTitle: string;
-  description: string;
-  href: string;
-};
-
-export type PublicationInformation = {
-  title: string;
-  authors: string;
-  date: string;
-  proceeding?: string;
-  href: string;
-  location?: string;
-  firstOfYear: boolean;
-  link?: string;
-};
-
-// interface PublicationInformation extends PresentationInformation {
-//   location?: string;
-// }
+import { ResearchInformation, PublicationInformation } from '../types/types';
 
 export const ONGOINGRESEARCH_LIST: Array<ResearchInformation> = [
   {
