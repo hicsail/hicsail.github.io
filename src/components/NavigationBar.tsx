@@ -50,10 +50,7 @@ export default function NavigationBar() {
           />
         </Flex>
         <Flex
-          // flex={{ base: 1 }}
-          // justify={{ base: 'center', md: 'start' }}
           justifyContent="space-between"
-          // justifyContent="center"
           align="center"
           width="100%"
           marginLeft="0px"
@@ -61,12 +58,10 @@ export default function NavigationBar() {
           <Link as={ReactRouterLink} to="/">
             <Flex
               fontFamily={'heading'}
-              // color={useColorModeValue('gray.800', 'white')}
               display="flex"
               alignItems="center"
               fontWeight="normal"
               lineHeight="50px"
-              // fontSize="2em"
             >
               <Box
                 boxSize="45px"

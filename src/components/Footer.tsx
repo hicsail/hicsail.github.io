@@ -1,18 +1,14 @@
 import {
   Box,
   chakra,
-  Container,
-  Link,
   Stack,
   Text,
   useColorModeValue,
   VisuallyHidden,
   Image,
-  Flex,
 } from '@chakra-ui/react';
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedin,
   FaMapMarkedAlt,
   FaTwitter,

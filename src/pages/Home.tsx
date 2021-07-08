@@ -1,12 +1,9 @@
 import {
   Box,
   Grid,
-  useColorMode,
   useColorModeValue,
   Text,
   Heading,
-  Image,
-  Flex,
   Link,
 } from '@chakra-ui/react';
 import * as React from 'react';
@@ -25,19 +22,6 @@ const HeroText = styled.div`
   display: block;
 `;
 
-// const Heading = styled.h1`
-//   font-size: 5rem;
-//   font-weight: 700;
-//   line-height: 100px;
-// `;
-
-const StyledSpan = styled.span`
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 100px;
-  margin-left: 25px;
-`;
-
 const Info = styled.div`
   background-color: orange;
   position: absolute;
@@ -50,42 +34,14 @@ const Info = styled.div`
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
 `;
 
-const People = styled.div`
-  grid-column: span 2;
-  font-size: 20px;
-`;
-
-const PeopleSpan = styled.span`
-  display: block;
-  font-size: 16px;
-  color: #555555;
-`;
-
-const Paragraph = styled.p`
-  display: block;
-  font-size: 20px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-`;
-
 const StyledLink = styled.a`
   color: #567dbd;
 `;
 
-const MobileHeading = styled.div`
-  width: 100%;
-`;
-
 export const Home: React.VFC = () => {
-  const { toggleColorMode } = useColorMode();
-
   const canvasBG = useColorModeValue('white', 'black');
   const itemColor = useColorModeValue('#000000', '#FFFFFF');
   const color = useColorModeValue('white', 'black');
-
-  console.log('colorMode:,' + color);
 
   return (
     <Box width="100%" boxSizing="border-box">
@@ -117,11 +73,7 @@ export const Home: React.VFC = () => {
           </p>
         </Info>
       </Box>
-      <Box
-        margin="0 auto"
-        // marginTop="70px"
-        maxWidth="80%"
-      >
+      <Box margin="0 auto" maxWidth="80%">
         <Grid
           gridTemplateColumns={{
             base: 'repeat(2, 1fr)',
@@ -250,7 +202,6 @@ export const Home: React.VFC = () => {
               <Contact />
             </Box>
           </Box>
-          {/* {/* <div id="pattern_footer"></div> */}
         </Grid>
       </Box>
     </Box>
