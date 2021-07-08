@@ -12,10 +12,13 @@ import { PROJECT_LIST } from '../utils/projectInformation';
 export const HighlightedProjectGrid = () => {
   return (
     <Grid
-      padding="72px"
+      padding={['0px', '0px', '72px']}
       gridColumn="3 / -1"
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
+      // mobile
+      // gridColumnStart={['1', '1', 'auto']}
+      // padding="0"
     >
       {PROJECT_LIST.map((project) => (
         <Box
@@ -23,8 +26,8 @@ export const HighlightedProjectGrid = () => {
           paddingBottom="2em"
         >
           <Text fontSize="2.7rem">{project.title}</Text>
-          <Text fontSize="20px">{project.text}</Text>
-          <Text>
+          <Text textStyle="paragraph">{project.text}</Text>
+          <Text textStyle="paragraph">
             <b>PI(s): </b>
             <Link href={project.investigatorLink} color="#567dbd">
               {project.investigatorName},{' '}
