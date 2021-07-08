@@ -23,7 +23,7 @@ import { HashLink } from 'react-router-hash-link';
 const texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
 
 export default function NavigationBar() {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle } = ./ToggleColorButton
 
   return (
     <Flex width="100%" marginTop="30px" marginBottom="30px" maxWidth="80%">
