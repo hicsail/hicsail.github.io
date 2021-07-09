@@ -11,6 +11,7 @@ import { CurrentMembers } from './pages/CurrentMembers';
 import { OngoingResearch } from './pages/OngoingResearch';
 import { PastResearch } from './pages/PastResearch';
 import { Presentations } from './pages/Presentations';
+import Footer from './components/Footer';
 
 export const App: React.VFC = () => {
   return (
@@ -54,6 +55,8 @@ export const App: React.VFC = () => {
             <Contact />
           </Route>
         </Switch>
+
+        <Footer />
       </Flex>
     </Box>
   );
