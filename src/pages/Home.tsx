@@ -78,13 +78,16 @@ export const Home: React.VFC = () => {
   const { toggleColorMode } = useColorMode();
 
   const canvasBG = useColorModeValue('white', 'black');
-  const itemColor = useColorModeValue('#000000', '#ffffff');
+  const itemColor = useColorModeValue('#000000', '#FFFFFF');
   const color = useColorModeValue('white', 'black');
 
   console.log('colorMode:,' + color);
 
   return (
-    <Box bg={useColorModeValue('white', 'black')} width="100%">
+    <Box
+      // bg={useColorModeValue('white', 'black')}
+      width="100%"
+    >
       <HeroText>
         <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
           {' '}
@@ -194,7 +197,7 @@ export const Home: React.VFC = () => {
               .
             </Text>
           </Box>
-          <Heading gridColumn="1 / -1" mb="2em">
+          {/* <Heading gridColumn="1 / -1" mb="2em">
             Opportunities
           </Heading>
           <Box gridColumn="1 / span 4">
@@ -242,13 +245,13 @@ export const Home: React.VFC = () => {
               </StyledLink>{' '}
               to be notified.
             </Text>
-          </Box>
+          </Box> */}
 
-          <Heading gridColumn="1 / -1" mb="7px">
+          {/* <Heading gridColumn="1 / -1" mb="7px">
             Team
-          </Heading>
+          </Heading> */}
 
-          <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
+          {/* <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Vidya Akavoor<PeopleSpan>Software Engineer</PeopleSpan>
           </Box>
 
@@ -264,7 +267,7 @@ export const Home: React.VFC = () => {
           </Box>
           <Box gridColumn={['span 1', 'span 1', 'span 2']} fontSize="20px">
             Jeff Simeon<PeopleSpan>Assistant Director, Operations</PeopleSpan>
-          </Box>
+          </Box> */}
 
           <Heading gridColumn="1 / -1" mb="7px">
             Contact Us
