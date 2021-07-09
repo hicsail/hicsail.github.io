@@ -190,14 +190,6 @@ export const Home: React.VFC = () => {
           </Box>
 
           <Box width="100%" gridArea="contact">
-            <Heading mb="7px">Contact Us</Heading>
-            <Text textStyle="paragraph">
-              Feel free to contact us at{' '}
-              <StyledLink href="mailto:hicsail@bu.edu">
-                hicsail@bu.edu
-              </StyledLink>
-              .
-            </Text>
             <Box id="contact">
               <Contact />
             </Box>
