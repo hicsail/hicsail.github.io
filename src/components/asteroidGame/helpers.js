@@ -10,18 +10,72 @@ export function asteroidVertices(count, rad) {
   let p = [];
 
   if (count == 3) {
-    p[0] = {
-      x: -rad,
-      y: -rad,
-    };
-    p[1] = {
-      x: -rad,
-      y: rad,
-    };
-    p[2] = {
-      x: rad,
-      y: rad,
-    };
+    let triangleVariant = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
+    let variant =
+      triangleVariant[Math.floor(Math.random() * triangleVariant.length)];
+
+    switch (variant) {
+      case 'topLeft':
+        p[0] = {
+          x: rad,
+          y: rad,
+        };
+        p[1] = {
+          x: rad,
+          y: -rad,
+        };
+        p[2] = {
+          x: -rad,
+          y: rad,
+        };
+        break;
+
+      case 'topRight':
+        p[0] = {
+          x: rad,
+          y: -rad,
+        };
+        p[1] = {
+          x: rad,
+          y: rad,
+        };
+        p[2] = {
+          x: rad,
+          y: -rad,
+        };
+        break;
+
+      case 'bottomLeft':
+        p[0] = {
+          x: -rad,
+          y: -rad,
+        };
+        p[1] = {
+          x: -rad,
+          y: rad,
+        };
+        p[2] = {
+          x: rad,
+          y: rad,
+        };
+        break;
+
+      case 'bottomRight':
+        p[0] = {
+          x: -rad,
+          y: -rad,
+        };
+        p[1] = {
+          x: -rad,
+          y: rad,
+        };
+        p[2] = {
+          x: rad,
+          y: rad,
+        };
+
+        break;
+    }
   } else if (count == 4) {
     p[0] = {
       x: -rad,

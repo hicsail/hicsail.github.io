@@ -104,7 +104,7 @@ export class Reacteroids extends Component {
     const context = this.state.context;
     const keys = this.state.keys;
     const ship = this.ship[0];
-
+    121212;
     context.save();
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
@@ -113,7 +113,7 @@ export class Reacteroids extends Component {
     if (this.state.colorMode == 'white') {
       context.fillStyle = '#FFFFFF';
     } else {
-      context.fillStyle = '#000000';
+      context.fillStyle = '#121212';
     }
 
     context.globalAlpha = 0.4;
