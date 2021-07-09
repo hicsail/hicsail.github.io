@@ -13,7 +13,7 @@ export const Contact: React.VFC = () => {
             width="200"
             height="200"
           ></iframe>
-          <Box width="50%">
+          <Box width={{ base: '100%', md: '50%', xl: '50%' }}>
             <ContactForm />
           </Box>
         </Flex>
