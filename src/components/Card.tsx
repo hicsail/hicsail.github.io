@@ -47,7 +47,7 @@ export const Card: React.FC<Props> = ({
             fontStyle="normal"
             color="black"
           >
-            {modalButtonText}
+            {modalHeader}
           </Text>
         </Box>
       </Box>
@@ -57,7 +57,7 @@ export const Card: React.FC<Props> = ({
         <ModalContent>
           <ModalHeader>
             <Text textStyle="h2" m="0">
-              {modalHeader}
+              {modalButtonText}
             </Text>
           </ModalHeader>
           <ModalCloseButton />

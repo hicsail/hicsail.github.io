@@ -34,9 +34,9 @@ const theme = extendTheme({
       mt: ['100px'],
     },
     paragraph: {
-      // display: 'block',
+      display: 'block',
       fontSize: ['1.125rem', '1.25rem'],
-      // lineHeight: '1.75',
+      // lineHeight:
       marginBlockStart: '1em',
       marginBlockEnd: '1em',
       marginInlineStart: '0px',
