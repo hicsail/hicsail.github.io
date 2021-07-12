@@ -13,6 +13,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -30,7 +31,7 @@ export default function NavigationBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex width="100%" margin="30px">
+    <Flex width="100%" marginTop="30px" marginBottom="30px">
       <Flex
         width="100%"
         bg={useColorModeValue('white', 'black')}
@@ -44,6 +45,7 @@ export default function NavigationBar() {
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}
+          width="100%"
         >
           <IconButton
             onClick={onToggle}
@@ -55,23 +57,38 @@ export default function NavigationBar() {
           />
         </Flex>
         <Flex
-          flex={{ base: 1 }}
+          // flex={{ base: 1 }}
           // justify={{ base: 'center', md: 'start' }}
           justifyContent="space-between"
           // justifyContent="center"
           align="center"
+          width="100%"
+          marginLeft="0px"
         >
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+          {/* <Box boxSize="30px" objectFit="cover" marginRight="10px">
+            <Image src="../../img/s_logo.png" />
+          </Box> */}
+          <Flex
+            // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}
-            display={'inline-block'}
+            display="flex"
+            alignItems="center"
             fontWeight="normal"
             lineHeight="50px"
             fontSize="2em"
           >
-            SAIL
-          </Text>
+            <Box
+              boxSize="30px"
+              objectFit="cover"
+              marginRight="10px"
+              marginBottom="5px"
+            >
+              <Image src="../../img/s_logo.png" />
+            </Box>
+            <Text>SAIL</Text>
+            {/* SAIL */}
+          </Flex>
 
           <Flex
             display={{ base: 'none', md: 'flex' }}

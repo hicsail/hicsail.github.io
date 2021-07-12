@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { ONGOINGRESEARCH_LIST } from '../utils/data';
+import { ONGOINGRESEARCH_LIST } from '../utils/researchInformation';
 
 export const OngoingResearch: React.VFC = () => {
   return (

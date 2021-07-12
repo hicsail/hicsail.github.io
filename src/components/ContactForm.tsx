@@ -17,6 +17,7 @@ export const ContactForm = () => {
   } = useForm();
   const onSubmit = (data: any) => console.log(data);
   console.log(errors);
+  // add mailing
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

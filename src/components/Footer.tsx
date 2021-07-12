@@ -12,6 +12,7 @@ import {
 import {
   FaGithub,
   FaInstagram,
+  FaLinkedin,
   FaMapMarkedAlt,
   FaTwitter,
 } from 'react-icons/fa';
@@ -50,7 +51,7 @@ const SocialButton = ({
 }) => {
   return (
     <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+      bg={useColorModeValue('white', 'black')}
       rounded={'full'}
       w={8}
       h={8}
@@ -73,7 +74,12 @@ const SocialButton = ({
 
 export default function Footer() {
   return (
-    <Box color={useColorModeValue('black', 'white')} width="100%">
+    <Box
+      color={useColorModeValue('black', 'white')}
+      width="100%"
+      height="80px"
+      marginTop="60px"
+    >
       <Box
         as={Stack}
         // maxW={'6xl'}
@@ -84,20 +90,39 @@ export default function Footer() {
         align="center"
         width="100%"
       >
-        <Stack direction={'row'} spacing={6}>
-          <Box boxSize="sm">
-            <Image src="../../../img/bu-hic.png" />
+        <Stack direction={'row'} spacing={6} align="center">
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            boxSize="30px"
+          >
+            <Image src="../../../img/bu-logo.png" />
           </Box>
-          <SocialButton label={'location'} href={'#'}>
+          <Text fontSize="20px">
+            Boston University Rafik B. Hariri Institute for Computing and
+            Computational Science & Engineering
+          </Text>
+
+          <SocialButton
+            label={'location'}
+            href={'https://maps.bu.edu/?id=647#!ct/'}
+          >
             <FaMapMarkedAlt />
           </SocialButton>
-          <SocialButton label={'Mail'} href={'#'}>
+          <SocialButton label={'Mail'} href={'mailto:hicsail@bu.edu'}>
             <GrMail />
           </SocialButton>
-          <SocialButton label={'LinkedIn'} href={'#'}>
+          <SocialButton label={'Twitter'} href={'https://twitter.com/hicsail'}>
             <FaTwitter />
           </SocialButton>
-          <SocialButton label={'Github'} href={'#'}>
+          <SocialButton
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/company/bu-sail/mycompany/'}
+          >
+            <FaLinkedin />
+          </SocialButton>
+          <SocialButton label={'Github'} href={'https://github.com/hicsail'}>
             <FaGithub />
           </SocialButton>
         </Stack>
