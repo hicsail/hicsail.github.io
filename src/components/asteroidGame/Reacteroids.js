@@ -17,6 +17,7 @@ const KEY = {
 export class Reacteroids extends Component {
   constructor(args) {
     super();
+    this.canvasRef = React.createRef(null);
     this.state = {
       screen: {
         width: window.innerWidth,
@@ -72,7 +73,9 @@ export class Reacteroids extends Component {
     window.addEventListener('keydown', this.handleKeys.bind(this, true));
     window.addEventListener('resize', this.handleResize.bind(this, false));
 
-    const context = this.refs.canvas.getContext('2d');
+    // const context = this.refs.canvas.getContext('2d');
+    const canvas = this.canvasRef;
+    const context = canvas.current.getContext('2d');
     this.setState({ context: context });
     this.startGame();
     requestAnimationFrame(() => {
@@ -281,7 +284,7 @@ export class Reacteroids extends Component {
           Use [SPACE] to SHOOT
         </span> */}
         <canvas
-          ref="canvas"
+          ref={this.canvasRef}
           width={this.state.screen.width * this.state.screen.ratio}
           height={this.state.screen.height * this.state.screen.ratio}
           background-color="red"
