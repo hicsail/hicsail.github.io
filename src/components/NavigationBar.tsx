@@ -343,8 +343,8 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'CONTACT',
-    href: '/#contact',
-    hash: true,
+    href: '/contact',
+    hash: false,
   },
 ];
 function random(arg0: number, arg1: number): number {

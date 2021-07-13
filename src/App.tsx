@@ -11,6 +11,7 @@ import { Alumni } from './pages/Alumni';
 import { CurrentMembers } from './pages/CurrentMembers';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
+import { Contact } from './pages/Contact';
 
 export const App: React.VFC = () => {
   return (
@@ -50,6 +51,9 @@ export const App: React.VFC = () => {
             </Route>
             <Route path="/join">
               <Join />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </Box>
