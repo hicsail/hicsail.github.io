@@ -89,7 +89,7 @@ export const Home: React.VFC = () => {
             'contact contact'`,
             md: `
             'about about ...' 
-            'info info info' 
+            'info info info 
             'projects projectgrid projectgrid' 
             'contact contact contact'`,
           }}

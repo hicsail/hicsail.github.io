@@ -52,3 +52,10 @@ export type PublicationInformation = {
   firstOfYear: boolean;
   link?: string;
 };
+
+export interface InternTestimonial {
+  name: string;
+  href?: string;
+  quote: string;
+  season: string;
+}

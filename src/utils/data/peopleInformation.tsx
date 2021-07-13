@@ -1,4 +1,4 @@
-import { PersonInformation } from '../../types/types';
+import { InternTestimonial, PersonInformation } from '../../types/types';
 
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
@@ -123,5 +123,20 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     outsideLinks: [],
     projects: [],
     bio: 'Taesung is passionate in exploring the various opportunities that web development can offer. He has worked on mobile game development and web applications. Currently pursuing a BA in Computer Science, he hopes to find ways to bring a more accessible and inclusive user experience for everyone.',
+  },
+];
+
+export const INTERNTESTIMONIALS_LIST: Array<InternTestimonial> = [
+  {
+    name: 'Christopher Cho',
+    href: '../../img/team/chris.jpg',
+    quote: 'Interning at SAIL was a great experience',
+    season: 'Summer 2021',
+  },
+  {
+    name: 'Taesung Yoon',
+    href: '../../img/team/Taesung.jpg',
+    quote: 'Interning at SAIL was a great experience',
+    season: 'Summer 2021',
   },
 ];
