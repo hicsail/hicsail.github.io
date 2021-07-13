@@ -1,7 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import NavigationBar from './components/NavBar';
+import NavigationBar from './components/NavigationBar';
 import { OpportunitiesBanner } from './components/OpportunitiesBanner';
 import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
