@@ -17,8 +17,6 @@ export default class Ship {
     this.lastShot = 0;
     this.create = args.create;
     this.onDie = args.onDie;
-    this.itemColor = args.itemColor;
-    this.bgColor = args.bgColor;
   }
 
   destroy() {
@@ -81,13 +79,6 @@ export default class Ship {
     this.create(particle, 'particles');
   }
 
-  updateColor(bgColor, itemColor) {
-    if (bgColor != undefined) {
-      this.bgColor = bgColor;
-      this.itemColor = itemColor;
-    }
-  }
-
   render(state) {
     // Controls
     if (state.keys.up) {
@@ -130,19 +121,32 @@ export default class Ship {
     context.save();
     context.translate(this.position.x, this.position.y);
     context.rotate((this.rotation * Math.PI) / 180);
-    // context.strokeStyle = this.bgColor;
-    // context.fillStyle = this.itemColor;
-    // light mode
 
-    context.strokeStyle = this.itemColor;
-    context.fillStyle = this.bgColor;
+    if (state.colorMode == 'white') {
+      context.strokeStyle = '#000000';
+      context.fillStyle = '#FFFFFF';
+    } else {
+      context.strokeStyle = '#FFFFFF';
+      context.fillStyle = '#000000';
+    }
+
     context.lineWidth = 2;
     context.beginPath();
-    context.moveTo(0, -15);
-    context.lineTo(10, 10);
-    context.lineTo(5, 7);
-    context.lineTo(-5, 7);
-    context.lineTo(-10, 10);
+
+    // large ship
+    context.moveTo(0, -30);
+    context.lineTo(20, 20);
+    context.lineTo(10, 14);
+    context.lineTo(-10, 14);
+    context.lineTo(-20, 20);
+
+    // small ship
+    // context.moveTo(0, -15);
+    // context.lineTo(10, 10);
+    // context.lineTo(5, 7);
+    // context.lineTo(-5, 7);
+    // context.lineTo(-10, 10);
+
     context.closePath();
     context.fill();
     context.stroke();
