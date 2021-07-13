@@ -11,18 +11,14 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
+  Image,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import * as React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import ToggleColorButton from '../ui/ToggleColorButton';
+import ToggleColorButton from './ToggleColorButton';
+import { HashLink } from 'react-router-hash-link';
 
 const texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
 
@@ -30,11 +26,9 @@ export default function NavigationBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex width="100%" margin="30px">
+    <Flex width="100%" marginTop="30px" marginBottom="30px" maxWidth="80%">
       <Flex
         width="100%"
-        bg={useColorModeValue('white', 'black')}
-        color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -44,6 +38,7 @@ export default function NavigationBar() {
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}
+          width="100%"
         >
           <IconButton
             onClick={onToggle}
@@ -55,23 +50,32 @@ export default function NavigationBar() {
           />
         </Flex>
         <Flex
-          flex={{ base: 1 }}
-          // justify={{ base: 'center', md: 'start' }}
           justifyContent="space-between"
-          // justifyContent="center"
           align="center"
+          width="100%"
+          marginLeft="0px"
         >
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}
-            display={'inline-block'}
-            fontWeight="normal"
-            lineHeight="50px"
-            fontSize="2em"
-          >
-            SAIL
-          </Text>
+          <Link as={ReactRouterLink} to="/">
+            <Flex
+              fontFamily={'heading'}
+              display="flex"
+              alignItems="center"
+              fontWeight="normal"
+              lineHeight="50px"
+            >
+              <Box
+                boxSize="45px"
+                objectFit="cover"
+                marginRight="10px"
+                marginBottom="5px"
+              >
+                <Image src="../../img/s_logo.png" />
+              </Box>
+              <Text fontSize={'1.5rem'} fontFamily="Karbon" fontWeight={500}>
+                SAIL
+              </Text>
+            </Flex>
+          </Link>
 
           <Flex
             display={{ base: 'none', md: 'flex' }}
@@ -101,16 +105,33 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
+              {/* {navItem.hash ? (
+                <HashLink
+                  to={navItem.href}
+                  // p={2}
+                  // href={navItem.href ?? '#'}
+                  fontSize={'1.5rem'}
+                  fontFamily="Karbon"
+                  fontWeight={500}
+                  color={useColorModeValue('gray.600', 'gray.200')}
+                  _hover={{
+                    color:
+                      texttheme[Math.floor(Math.random() * texttheme.length)],
+                    textDecoration: 'none',
+                  }}
+                >
+                  {navItem.label}
+                </HashLink>
+              ) : ( */}
               <Link
-                as={ReactRouterLink}
+                as={navItem.hash ? HashLink : ReactRouterLink}
                 to={navItem.href}
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'20px'}
+                fontSize={'1.25rem'}
                 fontFamily="Karbon"
-                // fontHeight="20px"
                 fontWeight={500}
-                color={useColorModeValue('gray.600', 'gray.200')}
+                // color={useColorModeValue('gray.600', 'gray.200')}
                 _hover={{
                   color:
                     texttheme[Math.floor(Math.random() * texttheme.length)],
@@ -120,13 +141,14 @@ const DesktopNav = () => {
               >
                 {navItem.label}
               </Link>
+              {/* )} */}
             </PopoverTrigger>
 
             {navItem.children && (
               <PopoverContent
                 border="5px solid white"
                 // boxShadow={'xl'}
-                bg={useColorModeValue('white', 'black')}
+                // bg={useColorModeValue('white', 'black')}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
@@ -167,7 +189,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           >
             {label}
           </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
+          <Text fontSize={'1rem'}>{subLabel}</Text>
         </Box>
         <Flex
           transition={'all .3s ease'}
@@ -188,7 +210,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'black')}
+      // bg={useColorModeValue('white', 'black')}
       p={4}
       display={{ md: 'none' }}
     >
@@ -258,44 +280,51 @@ interface NavItem {
   subLabel?: string;
   children?: Array<NavItem>;
   href: string;
+  hash?: boolean;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'HOME',
     href: '/',
+    hash: false,
   },
   {
     label: 'PEOPLE',
     href: '#',
+    hash: false,
     children: [
       {
         label: 'Current Members',
         href: '/currentMembers',
+        hash: false,
       },
       {
         label: 'Alumni',
         href: 'alumni',
+        hash: false,
       },
     ],
   },
   {
     label: 'RESEARCH',
-    href: '#',
-    children: [
-      {
-        label: 'Ongoing',
-        href: 'ongoingresearch',
-      },
-      {
-        label: 'Past',
-        href: 'pastresearch',
-      },
-    ],
+    href: '/research',
+    hash: false,
+    // children: [
+    //   {
+    //     label: 'Ongoing',
+    //     href: 'ongoingresearch',
+    //   },
+    //   {
+    //     label: 'Past',
+    //     href: 'pastresearch',
+    //   },
+    // ],
   },
   {
     label: 'PUBLICATIONS',
     href: '#',
+    hash: false,
     children: [
       {
         label: 'Presentations',
@@ -310,10 +339,12 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'JOIN',
     href: '/join',
+    hash: false,
   },
   {
     label: 'CONTACT',
-    href: '/contact',
+    href: '/#contact',
+    hash: true,
   },
 ];
 function random(arg0: number, arg1: number): number {

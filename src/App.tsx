@@ -1,7 +1,6 @@
-import { Box, useColorModeValue, Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
 import NavigationBar from './components/NavBar';
 import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
@@ -13,26 +12,20 @@ import { OngoingResearch } from './pages/OngoingResearch';
 import { PastResearch } from './pages/PastResearch';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
-import { NewNavigationBar } from './components/NewNavBar';
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
 
 export const App: React.VFC = () => {
   return (
-    <Box bg={useColorModeValue('white', 'black')} width="100%">
+    <Box width="100%" height="100%">
       <Flex
         direction="column"
         align="center"
         margin="0 auto"
         width="100%"
-        maxWidth="80%"
+        height="100%"
+        minHeight="100vh"
+        justifyContent="flex-start"
       >
-        <NavigationBar></NavigationBar>
-        {/* <NewNavigationBar></NewNavigationBar> */}
+        <NavigationBar />
 
         <Switch>
           <Route exact path="/">
