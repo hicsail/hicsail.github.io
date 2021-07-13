@@ -6,11 +6,9 @@ import { OpportunitiesBanner } from './components/OpportunitiesBanner';
 import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
 import { Join } from './pages/Join';
-import { Contact } from './pages/Contact';
+import { Research } from './pages/Research';
 import { Alumni } from './pages/Alumni';
 import { CurrentMembers } from './pages/CurrentMembers';
-import { OngoingResearch } from './pages/OngoingResearch';
-import { PastResearch } from './pages/PastResearch';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
 
@@ -30,35 +28,31 @@ export const App: React.VFC = () => {
 
         <OpportunitiesBanner opportunityAvailable={false} />
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/currentmembers">
-            <CurrentMembers />
-          </Route>
-          <Route path="/alumni">
-            <Alumni />
-          </Route>
-          <Route path="/ongoingresearch">
-            <OngoingResearch />
-          </Route>
-          <Route path="/pastresearch">
-            <PastResearch />
-          </Route>
-          <Route path="/presentations">
-            <Presentations />
-          </Route>
-          <Route path="/publications">
-            <Publications />
-          </Route>
-          <Route path="/join">
-            <Join />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
+        <Box flexGrow={1} width="100%">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/currentmembers">
+              <CurrentMembers />
+            </Route>
+            <Route path="/alumni">
+              <Alumni />
+            </Route>
+            <Route path="/research">
+              <Research />
+            </Route>
+            <Route path="/presentations">
+              <Presentations />
+            </Route>
+            <Route path="/publications">
+              <Publications />
+            </Route>
+            <Route path="/join">
+              <Join />
+            </Route>
+          </Switch>
+        </Box>
 
         <Footer />
       </Flex>
