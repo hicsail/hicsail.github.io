@@ -36,6 +36,7 @@ export const Card: React.FC<Props> = ({
             maxWidth="100%"
             height="30rem"
             src={imageHref}
+            fallbackSrc="../../img/research/placeholder-research.jpg"
             width="100%"
             objectFit="cover"
           />
