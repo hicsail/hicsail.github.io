@@ -114,7 +114,7 @@ export default class Asteroid {
     context.strokeStyle = this.color;
     context.lineWidth = 2;
     context.beginPath();
-    context.moveTo(-this.radius, -this.radius);
+    context.moveTo(this.vertices[0].x, this.vertices[0].y);
     for (let i = 1; i < this.vertices.length; i++) {
       context.lineTo(this.vertices[i].x, this.vertices[i].y);
     }
