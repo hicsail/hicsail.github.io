@@ -1,6 +1,6 @@
 import Bullet from './Bullet';
 import Particle from './Particle';
-import { rotatePoint, randomNumBetween } from './helpers';
+import { rotatePoint, randomNumBetween, shipVertices } from './helpers';
 
 export default class Ship {
   constructor(args) {
@@ -9,6 +9,7 @@ export default class Ship {
       x: 0,
       y: 0,
     };
+    this.vertices = shipVertices(30);
     this.rotation = 0;
     this.rotationSpeed = 6;
     this.speed = 0.05;

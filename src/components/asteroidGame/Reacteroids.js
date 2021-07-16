@@ -126,8 +126,8 @@ export class Reacteroids extends Component {
     }
 
     // Check for colisions
-    this.checkCollisionsWith(this.bullets, this.asteroids);
-    this.checkCollisionsWith(this.ship, this.asteroids);
+    this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
+    this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
 
     // Remove or render
     this.updateObjects(this.particles, 'particles');
@@ -185,8 +185,6 @@ export class Reacteroids extends Component {
       });
       localStorage['topscore'] = this.state.currentScore;
     }
-
-    // this.startGame();
   }
 
   generateAsteroids(howMany) {
@@ -232,7 +230,7 @@ export class Reacteroids extends Component {
     }
   }
 
-  checkCollisionsWith(items1, items2) {
+  checkCollisionsWith(items1, items2, item1Type) {
     var a = items1.length - 1;
     var b;
     for (a; a > -1; --a) {
@@ -240,7 +238,7 @@ export class Reacteroids extends Component {
       for (b; b > -1; --b) {
         var item1 = items1[a];
         var item2 = items2[b];
-        if (this.checkCollision(item1, item2)) {
+        if (this.checkCollision(item1, item2, item1Type)) {
           item1.destroy();
           item2.destroy();
         }
@@ -248,14 +246,184 @@ export class Reacteroids extends Component {
     }
   }
 
-  checkCollision(obj1, obj2) {
-    var vx = obj1.position.x - obj2.position.x;
-    var vy = obj1.position.y - obj2.position.y;
-    var length = Math.sqrt(vx * vx + vy * vy);
-    if (length < obj1.radius + obj2.radius) {
+  checkCollision(obj1, obj2, item1Type) {
+    if (item1Type === 'bullet') {
+      return (
+        this.checkBulletTriangleCollision(obj1, obj2) ||
+        this.checkBulletSquareCollision(obj1, obj2)
+      );
+    } else if (obj2.vertices.length == 3 && item1Type === 'ship') {
+      return this.checkShipTriangleCollision(obj1, obj2);
+    } else if (obj2.vertices.length == 4 && item1Type === 'ship') {
+      return this.checkShipSquareCollision(obj1, obj2);
+    }
+  }
+
+  checkBulletTriangleCollision(obj1, obj2) {
+    var x = obj1.position.x;
+    var y = obj1.position.y;
+
+    var x1 = obj2.vertices[0].x + obj2.position.x;
+    var x2 = obj2.vertices[1].x + obj2.position.x;
+    var x3 = obj2.vertices[2].x + obj2.position.x;
+    var y1 = obj2.vertices[0].y + obj2.position.y;
+    var y2 = obj2.vertices[1].y + obj2.position.y;
+    var y3 = obj2.vertices[2].y + obj2.position.y;
+
+    var a =
+      ((y2 - y3) * (x - x3) + (x3 - x2) * (y - y3)) /
+      ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
+    var b =
+      ((y3 - y1) * (x - x3) + (x1 - x3) * (y - y3)) /
+      ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
+    var c = 1 - a - b;
+
+    return 0 <= a && a <= 1 && 0 <= b && b <= 1 && 0 <= c && c <= 1;
+  }
+
+  checkBulletSquareCollision(obj1, obj2) {
+    var bottomLeftX = obj2.vertices[0].x;
+    var bottomLeftY = obj2.vertices[0].y;
+    var topRightX = obj2.vertices[2].x;
+    var topRightY = obj2.vertices[2].y;
+    var bulletX = obj1.position.x;
+    var bulletY = obj1.position.y;
+
+    if (
+      bulletX > bottomLeftX &&
+      bulletX < topRightX &&
+      bulletY > bottomLeftY &&
+      bulletY < topRightY
+    ) {
       return true;
     }
+
     return false;
+  }
+
+  checkShipTriangleCollision(object1, object2) {
+    var t0 = this.convertObjectToTriangle(object1);
+    var t1 = this.convertObjectToTriangle(object2);
+
+    return (
+      this.doLinesIntersect(t0.a, t0.b, t1.a, t1.b) ||
+      this.doLinesIntersect(t0.a, t0.b, t1.b, t1.c) ||
+      this.doLinesIntersect(t0.a, t0.b, t1.c, t1.a) ||
+      this.doLinesIntersect(t0.b, t0.c, t1.a, t1.b) ||
+      this.doLinesIntersect(t0.b, t0.c, t1.b, t1.c) ||
+      this.doLinesIntersect(t0.b, t0.c, t1.c, t1.a) ||
+      this.doLinesIntersect(t0.c, t0.a, t1.a, t1.b) ||
+      this.doLinesIntersect(t0.c, t0.a, t1.b, t1.c) ||
+      this.isPointInTriangle(t0.a, t1) ||
+      this.isPointInTriangle(t1.a, t0)
+    );
+  }
+
+  checkShipSquareCollision(obj1, obj2) {
+    var t0 = this.convertObjectToTriangle(obj1);
+    var r1 = this.convertObjectToRectangle(obj2);
+
+    return (
+      this.doLinesIntersect(t0.a, t0.b, r1.a, r1.b) ||
+      this.doLinesIntersect(t0.a, t0.b, r1.b, r1.c) ||
+      this.doLinesIntersect(t0.a, t0.b, r1.c, r1.d) ||
+      this.doLinesIntersect(t0.a, t0.b, r1.d, r1.a) ||
+      this.doLinesIntersect(t0.b, t0.c, r1.a, r1.b) ||
+      this.doLinesIntersect(t0.b, t0.c, r1.b, r1.c) ||
+      this.doLinesIntersect(t0.b, t0.c, r1.c, r1.d) ||
+      this.doLinesIntersect(t0.b, t0.c, r1.d, r1.a) ||
+      this.doLinesIntersect(t0.c, t0.a, r1.a, r1.b) ||
+      this.doLinesIntersect(t0.c, t0.a, r1.b, r1.c) ||
+      this.doLinesIntersect(t0.c, t0.a, r1.c, r1.d) ||
+      this.doLinesIntersect(t0.c, t0.a, r1.d, r1.a) ||
+      this.isPointInTriangle(r1.a, t0) ||
+      this.isPointInTriangle(r1.b, t0) ||
+      this.isPointInTriangle(r1.c, t0) ||
+      this.isPointInTriangle(r1.d, t0)
+    );
+  }
+
+  doLinesIntersect(a1, a2, a3, a4) {
+    var x12 = a1.x - a2.x;
+    var x34 = a3.x - a4.x;
+    var y12 = a1.y - a2.y;
+    var y34 = a3.y - a4.y;
+    var c = x12 * y34 - y12 * x34;
+    if (c == 0) {
+      return false;
+    }
+    var a = a1.x * a2.y - a1.y * a2.x;
+    var b = a3.x * a4.y - a3.y * a4.x;
+    var x = (a * x34 - b * x12) / c;
+    var y = (a * y34 - b * y12) / c;
+    return (
+      (Math.min(a1.x, a2.x) < x &&
+        x < Math.max(a1.x, a2.x) &&
+        Math.min(a3.x, a4.x) < x &&
+        x < Math.max(a3.x, a4.x)) ||
+      (Math.min(a1.y, a2.y) < y &&
+        y < Math.max(a1.y, a2.y) &&
+        Math.min(a3.y, a4.y) < y &&
+        y < Math.max(a3.y, a4.y))
+    );
+  }
+
+  isPointInTriangle(point, triangle) {
+    var p = point;
+    var p0 = triangle.a;
+    var p1 = triangle.b;
+    var p2 = triangle.c;
+    var dX = p.x - p2.x;
+    var dY = p.y - p2.y;
+    var dX21 = p2.x - p1.x;
+    var dY12 = p1.y - p2.y;
+    var D = dY12 * (p0.x - p2.x) + dX21 * (p0.y - p2.y);
+    var s = dY12 * dX + dX21 * dY;
+    var t = (p2.y - p0.y) * dX + (p0.x - p2.x) * dY;
+    if (D < 0) return s <= 0 && t <= 0 && s + t >= D;
+    return s >= 0 && t >= 0 && s + t <= D;
+  }
+
+  convertObjectToTriangle(object) {
+    var vertices = {
+      a: {
+        x: object.vertices[0].x + object.position.x,
+        y: object.vertices[0].y + object.position.y,
+      },
+      b: {
+        x: object.vertices[1].x + object.position.x,
+        y: object.vertices[1].y + object.position.y,
+      },
+      c: {
+        x: object.vertices[2].x + object.position.x,
+        y: object.vertices[2].y + object.position.y,
+      },
+    };
+
+    return vertices;
+  }
+
+  convertObjectToRectangle(object) {
+    var vertices = {
+      a: {
+        x: object.vertices[0].x + object.position.x,
+        y: object.vertices[0].y + object.position.y,
+      },
+      b: {
+        x: object.vertices[1].x + object.position.x,
+        y: object.vertices[1].y + object.position.y,
+      },
+      c: {
+        x: object.vertices[2].x + object.position.x,
+        y: object.vertices[2].y + object.position.y,
+      },
+      d: {
+        x: object.vertices[3].x + object.position.x,
+        y: object.vertices[3].y + object.position.y,
+      },
+    };
+
+    return vertices;
   }
 
   render() {
