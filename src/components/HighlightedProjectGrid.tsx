@@ -9,10 +9,11 @@ export const HighlightedProjectGrid = () => {
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
     >
-      {PROJECT_LIST.map((project) => (
+      {PROJECT_LIST.map((project, i) => (
         <Box
           borderBottom={useColorModeValue('2px solid black', '2px solid white')}
           paddingBottom="2em"
+          key={i}
         >
           <Text fontSize="2.7rem">{project.title}</Text>
           <Text textStyle="paragraph">{project.text}</Text>
