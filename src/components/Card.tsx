@@ -34,7 +34,7 @@ export const Card: React.FC<Props> = ({
         <Box borderBottom="2px solid black">
           <Image
             maxWidth="100%"
-            height="30rem"
+            height="10rem"
             src={imageHref}
             fallbackSrc="../../img/research/placeholder-research.jpg"
             width="100%"
@@ -43,10 +43,12 @@ export const Card: React.FC<Props> = ({
         </Box>
         <Box p="1em" display="block">
           <Text
-            textStyle="h2"
+            fontSize="1.5rem"
             fontWeight="800"
             fontStyle="normal"
             color="black"
+            height="8rem"
+            textAlign="center"
           >
             {modalButtonText}
           </Text>
@@ -55,12 +57,7 @@ export const Card: React.FC<Props> = ({
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
-            <Text textStyle="h2" m="0">
-              {modalHeader}
-            </Text>
-          </ModalHeader>
+        <ModalContent padding="1rem">
           <ModalCloseButton />
           <ModalBody>
             <Text textStyle="paragraph" m="0">
@@ -76,7 +73,7 @@ export const Card: React.FC<Props> = ({
               textAlign="center"
               width="100%"
             >
-              Cancel
+              Okay
             </Button>
           </ModalFooter>
         </ModalContent>

@@ -54,12 +54,6 @@ export const Join: React.VFC = () => (
             skills in almost every project, tackle diverse challenges in a
             flexible work environment, and mentor software engineer interns.
           </Text>
-          <Text textStyle="paragraph">
-            SAIL is housed within the Hariri Institute for Computing, which
-            catalyzes, enables, and supports interdisciplinary research efforts
-            across Boston University. Our team consists of ten full-time staff
-            members and 10-15 interns each semester.
-          </Text>
         </Box>
       </Box>
       <Box gridArea="testimonials" mt="20px">

@@ -169,7 +169,7 @@ export const Home: React.VFC = () => {
 
           <Box gridArea="projects">
             <Heading textStyle="h2" mt="50px">
-              Projects
+              Featured Projects
             </Heading>
             <Text textStyle="paragraph">
               Ongoing projects focus on a wide range of topics and technologies,
