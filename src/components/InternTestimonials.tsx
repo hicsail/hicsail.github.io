@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Image, Text, Grid } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Grid } from '@chakra-ui/react';
 import * as React from 'react';
 import { InternTestimonial } from '../types/types';
 import { INTERNTESTIMONIALS_LIST } from '../utils/data/peopleInformation';

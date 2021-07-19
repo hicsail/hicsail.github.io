@@ -10,7 +10,6 @@ import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
-import { Contact } from './Contact';
 
 const HeroText = styled.div`
   position: absolute;

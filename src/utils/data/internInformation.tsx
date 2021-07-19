@@ -142,25 +142,6 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
     Cohort: '2017-FAL-SE',
     Post_Internship: 'Athenahealth',
   },
-  // {
-  //   Intern_ID: 24,
-  //   Name: 'EXCLUDE - Arezoo Sadeghi',
-  //   Cohort:
-  //     '2017-FAL-SE,2018-SPR-SE,2018-SUM-SE,2018-FAL-SE,2019-SUM-SE,2019-FAL-SE',
-  //   Post_Internship: 'M.S. Program in Computer Science, SAIL',
-  // },
-  // {
-  //   Intern_ID: 25,
-  //   Name: 'EXLCUDE - Vidya Akavoor',
-  //   Cohort: '2018-SUM-SE,2018-FAL-SE',
-  //   Post_Internship: 'Software & Application Innovation Lab',
-  // },
-  // {
-  //   Intern_ID: 26,
-  //   Name: 'EXCLUDE - Xinyn (Shiruene)  Cao',
-  //   Cohort: '2018-SUM-SE,2018-FAL-SE',
-  //   Post_Internship: 'Software & Application Innovation Lab',
-  // },
   {
     Intern_ID: 27,
     Name: 'Stephanie Gomez',

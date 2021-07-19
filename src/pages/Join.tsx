@@ -1,4 +1,4 @@
-import { Box, Divider, Heading, Text, Grid, Image } from '@chakra-ui/react';
+import { Box, Heading, Text, Grid, Image } from '@chakra-ui/react';
 import * as React from 'react';
 import { Layout } from '../components/Layout';
 import { InternTestimonials } from '../components/InternTestimonials';

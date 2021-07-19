@@ -105,24 +105,6 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              {/* {navItem.hash ? (
-                <HashLink
-                  to={navItem.href}
-                  // p={2}
-                  // href={navItem.href ?? '#'}
-                  fontSize={'1.5rem'}
-                  fontFamily="Karbon"
-                  fontWeight={500}
-                  color={useColorModeValue('gray.600', 'gray.200')}
-                  _hover={{
-                    color:
-                      texttheme[Math.floor(Math.random() * texttheme.length)],
-                    textDecoration: 'none',
-                  }}
-                >
-                  {navItem.label}
-                </HashLink>
-              ) : ( */}
               <Link
                 as={navItem.hash ? HashLink : ReactRouterLink}
                 to={navItem.href}
@@ -131,24 +113,19 @@ const DesktopNav = () => {
                 fontSize={'1.25rem'}
                 fontFamily="Karbon"
                 fontWeight={500}
-                // color={useColorModeValue('gray.600', 'gray.200')}
                 _hover={{
                   color:
                     texttheme[Math.floor(Math.random() * texttheme.length)],
                   textDecoration: 'none',
                 }}
-                // color: useColorModeValue('gray.800', 'white'),
               >
                 {navItem.label}
               </Link>
-              {/* )} */}
             </PopoverTrigger>
 
             {navItem.children && (
               <PopoverContent
                 border="5px solid white"
-                // boxShadow={'xl'}
-                // bg={useColorModeValue('white', 'black')}
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
@@ -169,21 +146,13 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      // _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-    >
+    <Link href={href} role={'group'} display={'block'} p={2} rounded={'md'}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
             _groupHover={{
               color: texttheme[Math.floor(Math.random() * texttheme.length)],
-              // 'pink.400'
             }}
             fontWeight={500}
           >
@@ -199,9 +168,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}
-        >
-          {/* <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} /> */}
-        </Flex>
+        ></Flex>
       </Stack>
     </Link>
   );
@@ -209,11 +176,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 
 const MobileNav = () => {
   return (
-    <Stack
-      // bg={useColorModeValue('white', 'black')}
-      p={4}
-      display={{ md: 'none' }}
-    >
+    <Stack p={4} display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -310,16 +273,6 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'RESEARCH',
     href: '/research',
     hash: false,
-    // children: [
-    //   {
-    //     label: 'Ongoing',
-    //     href: 'ongoingresearch',
-    //   },
-    //   {
-    //     label: 'Past',
-    //     href: 'pastresearch',
-    //   },
-    // ],
   },
   {
     label: 'PUBLICATIONS',
@@ -347,6 +300,3 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
   },
 ];
-function random(arg0: number, arg1: number): number {
-  throw new Error('Function not implemented.');
-}
