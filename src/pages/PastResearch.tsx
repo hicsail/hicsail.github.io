@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Stack, Text, Link } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Link } from '@chakra-ui/react';
 import * as React from 'react';
 import { PASTRESEARCH_LIST } from '../utils/data';
 

@@ -1,23 +1,7 @@
-import { Box, Flex, Heading, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { PRESENTATIONS_LIST } from '../utils/data';
+import { PRESENTATIONS_LIST } from '../utils/data/researchInformation';
+import { PublicationsGrid } from '../components/PublicationsGrid';
 
 export const Presentations: React.VFC = () => (
-  <Box>
-    <Box>
-      <Heading>Presentations</Heading>
-    </Box>
-    <Box>
-      <Stack direction={'row'} spacing={4}></Stack>
-      {PRESENTATIONS_LIST.map((presentation) => (
-        <Flex direction="column">
-          <Box>{presentation.title}</Box>
-          <Box>
-            {presentation.authors}
-            {presentation.date}
-          </Box>
-        </Flex>
-      ))}
-    </Box>
-  </Box>
+  <PublicationsGrid title="Presentations" list={PRESENTATIONS_LIST} />
 );
