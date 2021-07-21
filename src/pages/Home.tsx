@@ -87,9 +87,8 @@ export const Home: React.VFC = () => {
             'projectgrid projectgrid' 
             'contact contact'`,
             md: `
-            'heading heading heading'
             'about about ...' 
-            'info info ... 
+            'info info ...' 
             'projects projectgrid projectgrid' 
             'contact contact contact'`,
           }}
