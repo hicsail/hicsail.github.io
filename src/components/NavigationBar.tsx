@@ -129,6 +129,7 @@ const DesktopNav = () => {
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
+                bg={useColorModeValue('white', '#121212')}
               >
                 <Stack>
                   {navItem.children.map((child) => (
@@ -146,7 +147,14 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link href={href} role={'group'} display={'block'} p={2} rounded={'md'}>
+    <Link
+      href={href}
+      role={'group'}
+      display={'block'}
+      p={2}
+      rounded={'md'}
+      style={{ textDecoration: 'none' }}
+    >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
