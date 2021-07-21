@@ -1,7 +1,7 @@
 export interface InternInformation {
   Intern_ID: number;
   Name: string;
-  Cohort: string;
+  Prior_Position: string;
   Post_Internship: string;
 }
 
