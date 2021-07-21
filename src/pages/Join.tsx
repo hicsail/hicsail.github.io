@@ -71,8 +71,12 @@ export const Join: React.VFC = () => (
           </Box>
         </Box>
         <Box gridArea="testimonials" mt="20px">
-          <Heading>Past Intern Testimonials</Heading>
-          <InternTestimonials />
+          <Heading pb="1rem">Past Intern Testimonials</Heading>
+          <Box
+            borderTop={useColorModeValue('2px solid black', '2px solid white')}
+          >
+            <InternTestimonials />
+          </Box>
         </Box>
       </Grid>
     </Box>
