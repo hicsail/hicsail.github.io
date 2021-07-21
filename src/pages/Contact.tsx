@@ -1,4 +1,4 @@
-import { Box, Heading, Link, Text } from '@chakra-ui/react';
+import { Box, Heading, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { ContactForm } from '../components/ContactForm';
 import { Layout } from '../components/Layout';
@@ -6,7 +6,10 @@ import { Layout } from '../components/Layout';
 export const Contact: React.VFC = () => {
   return (
     <Layout title="Contact Us">
-      <Box display={{ md: 'flex' }}>
+      <Box
+        display={{ md: 'flex' }}
+        borderTop={useColorModeValue('2px solid black', '2px solid white')}
+      >
         <Box pr={{ md: '4' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
           <Text textStyle="paragraph">
             Feel free to contact us at{' '}
