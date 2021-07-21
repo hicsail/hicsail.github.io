@@ -26,7 +26,12 @@ export default function NavigationBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex width="100%" marginTop="30px" marginBottom="30px" maxWidth="80%">
+    <Box
+      width="100%"
+      marginTop={{ lg: '30px', md: '15px' }}
+      marginBottom={{ lg: '30px', md: '15px' }}
+      maxWidth={{ lg: '80%', md: '90%' }}
+    >
       <Flex
         width="100%"
         minH={'60px'}
@@ -93,7 +98,7 @@ export default function NavigationBar() {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </Flex>
+    </Box>
   );
 }
 
