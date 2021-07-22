@@ -18,10 +18,12 @@ export const HighlightedProjectGrid = () => {
           <Text textStyle="paragraph">{project.text}</Text>
           <Text textStyle="paragraph">
             <b>PI(s): </b>
-            <Link href={project.investigatorLink} color="#567dbd">
+            {project.pi}
+
+            {/* <Link href={project.investigatorLink} color="#567dbd">
               {project.investigatorName},{' '}
-            </Link>
-            <Text as="span">{project.investigatorTitle}</Text>
+            </Link> */}
+            {/* <Text as="span">{project.investigatorTitle}</Text> */}
           </Text>
         </Box>
       ))}

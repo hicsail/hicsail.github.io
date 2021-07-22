@@ -1,3 +1,6 @@
+import { ChakraComponent } from '@chakra-ui/react';
+import { ReactElement } from 'react';
+
 export interface InternInformation {
   Intern_ID: number;
   Name: string;
@@ -29,10 +32,7 @@ export interface ProjectInformation {
   icons: Array<string>;
   title: string;
   text: string;
-  investigatorName: string;
-  investigatorTitle: string;
-  investigatorLink: string;
-  interns: string;
+  pi: ReactElement;
 }
 
 export type ResearchInformation = {
@@ -40,6 +40,7 @@ export type ResearchInformation = {
   titleDescription: string;
   description: string;
   href: string;
+  pi: ReactElement | null;
 };
 
 export type PublicationInformation = {

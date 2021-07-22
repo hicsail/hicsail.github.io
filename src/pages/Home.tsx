@@ -173,7 +173,7 @@ export const Home: React.VFC = () => {
               top="20px"
               mb={{ lg: '30%' }}
             >
-              <Heading textStyle="h2" mt="50px">
+              <Heading textStyle="h2" mt="5'0px">
                 Featured Projects
               </Heading>
               <Text textStyle="paragraph">

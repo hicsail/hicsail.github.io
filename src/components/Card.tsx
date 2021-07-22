@@ -21,6 +21,7 @@ interface Props {
   modalBody: string | undefined;
   imageHref: string | undefined;
   modalButtonSubText: string | undefined;
+  pi: React.ReactElement | null;
 }
 
 export const Card: React.FC<Props> = ({
@@ -29,6 +30,7 @@ export const Card: React.FC<Props> = ({
   modalBody,
   imageHref,
   modalButtonSubText,
+  pi,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -71,6 +73,12 @@ export const Card: React.FC<Props> = ({
             <Text textStyle="paragraph" m="0">
               {modalBody}
             </Text>
+
+            {pi == null ? (
+              <Text textStyle="paragraph">{pi}</Text>
+            ) : (
+              <Text textStyle="paragraph">PI: {pi}</Text>
+            )}
           </ModalBody>
 
           <ModalFooter>

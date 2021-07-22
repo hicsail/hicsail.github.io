@@ -52,6 +52,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
                 modalHeader={research.title}
                 modalBody={research.description}
                 imageHref={research.href}
+                pi={research.pi}
               />
             </Box>
           ))}
