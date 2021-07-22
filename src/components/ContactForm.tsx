@@ -14,34 +14,45 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormControl id="name" isRequired>
-        <FormLabel>Your Name</FormLabel>
+        <FormLabel fontSize="1.5rem">Your Name</FormLabel>
         <Input
+          width={{ base: '100%', md: '85%' }}
+          borderRadius="0"
           type="text"
           {...register('Name', { required: true, maxLength: 80 })}
         />
       </FormControl>
       <FormControl id="email" isRequired>
-        <FormLabel>Your Email</FormLabel>
+        <FormLabel fontSize="1.5rem">Your Email</FormLabel>
         <Input
+          borderRadius="0"
           type="email"
+          width={{ base: '100%', md: '85%' }}
           {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
         />
       </FormControl>
 
       <FormControl id="subject" isRequired>
-        <FormLabel>Subject</FormLabel>
+        <FormLabel fontSize="1.5rem">Subject</FormLabel>
         <Input
+          borderRadius="0"
           type="text"
+          width={{ base: '100%', md: '85%' }}
           {...register('Subject', { required: true, maxLength: 80 })}
         />
       </FormControl>
 
       <FormControl id="message" isRequired>
-        <FormLabel>Your message</FormLabel>
-        <Input type="text" {...register('Message', { required: true })} />
+        <FormLabel fontSize="1.5rem">Your message</FormLabel>
+        <Input
+          width={{ base: '100%', md: '85%' }}
+          borderRadius="0"
+          type="text"
+          {...register('Message', { required: true })}
+        />
       </FormControl>
 
-      <Button mt={4} colorScheme="teal" type="submit">
+      <Button mt={4} colorScheme="orange" type="submit" size="lg">
         Submit
       </Button>
     </form>

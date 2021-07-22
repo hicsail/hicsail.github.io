@@ -10,7 +10,7 @@ export const Contact: React.VFC = () => {
         display={{ md: 'flex' }}
         borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
-        <Box pr={{ md: '4' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
+        <Box pr={{ md: '8' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
           <Text textStyle="paragraph">
             Feel free to contact us at{' '}
             <Link color="#567dbd" href="mailto:hicsail@bu.edu">
@@ -20,7 +20,7 @@ export const Contact: React.VFC = () => {
           </Text>
           <ContactForm />
         </Box>
-        <Box pl={{ md: '4' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
+        <Box pl={{ md: '8' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
           <Heading mt={{ base: '10px' }} mb={{ base: '10px', md: '20px' }}>
             Find Us
           </Heading>
