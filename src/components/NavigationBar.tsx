@@ -271,12 +271,12 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
     children: [
       {
-        label: 'Current Members',
+        label: 'CURRENT MEMBERS',
         href: '/currentMembers',
         hash: false,
       },
       {
-        label: 'Alumni',
+        label: 'ALUMNI',
         href: 'alumni',
         hash: false,
       },
@@ -293,12 +293,12 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
     children: [
       {
-        label: 'Presentations',
+        label: 'PRESENTATIONS',
         href: 'presentations',
       },
       {
-        label: 'Publications',
-        href: 'publications',
+        label: 'PUBLICATIONS',
+        href: 'Publications',
       },
     ],
   },
