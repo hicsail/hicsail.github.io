@@ -37,7 +37,7 @@ export interface ProjectInformation {
 
 export type ResearchInformation = {
   title: string;
-  popTitle: string;
+  titleDescription: string;
   description: string;
   href: string;
 };

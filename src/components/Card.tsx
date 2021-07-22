@@ -20,6 +20,7 @@ interface Props {
   modalHeader: string | undefined;
   modalBody: string | undefined;
   imageHref: string | undefined;
+  modalButtonSubText: string | undefined;
 }
 
 export const Card: React.FC<Props> = ({
@@ -27,6 +28,7 @@ export const Card: React.FC<Props> = ({
   modalHeader,
   modalBody,
   imageHref,
+  modalButtonSubText,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -42,23 +44,28 @@ export const Card: React.FC<Props> = ({
             objectFit="cover"
           />
         </Box>
-        <Box p="1em" display="block">
+        <Box p="1.5em" display="block" height="10rem">
           <Text
-            fontSize="1.5rem"
+            fontSize="1.75rem"
             fontWeight="800"
             fontStyle="normal"
             color={useColorModeValue('black', 'white')}
-            height="8rem"
-            textAlign="center"
+            pb="1rem"
           >
             {modalButtonText}
+          </Text>
+          <Text
+            fontSize="1.125rem"
+            color={useColorModeValue('black', '#b2becd')}
+          >
+            {modalButtonSubText}
           </Text>
         </Box>
       </Box>
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
-        <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2a2a')}>
+        <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>
           <ModalCloseButton />
           <ModalBody>
             <Text textStyle="paragraph" m="0">

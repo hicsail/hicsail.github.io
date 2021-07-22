@@ -32,20 +32,23 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               flexDirection="column"
               margin="0 0 1em"
               width="100%"
-              boxShadow="0 4px 8px rgba(0,30,84,0.12)"
+              boxShadow={useColorModeValue(
+                '0 4px 8px rgba(0,30,84,0.12)',
+                '0 4px 8px rgba(0,0,0,0.38)',
+              )}
               transform="translateY(0)"
               transition="transform 300ms"
-              borderRadius="25px"
               _hover={{
                 transform: 'translateY(-3px)',
                 transition: 'transform 300ms',
               }}
-              bg={useColorModeValue('white', '#2a2a2a')}
+              bg={useColorModeValue('white', '#2a2e35')}
               mt="1rem"
               key={i}
             >
               <Card
-                modalButtonText={research.popTitle}
+                modalButtonText={research.title}
+                modalButtonSubText={research.titleDescription}
                 modalHeader={research.title}
                 modalBody={research.description}
                 imageHref={research.href}
