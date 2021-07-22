@@ -6,7 +6,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     picture: '../../img/team/jeff-simeon.jpg',
     role: 'Assistant Director, Operations',
     outsideLinks: [
-      { name: 'Linked In', href: 'https://www.linkedin.com/in/jeffsimeon' },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jeffsimeon' },
       {
         name: 'BU Profile',
         href: 'https://www.bu.edu/hic/profile/jeff-simeon/',
