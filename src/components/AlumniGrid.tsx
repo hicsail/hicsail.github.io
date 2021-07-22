@@ -24,11 +24,12 @@ export const AlumniGrid: React.FC = () => {
         <GridColumn>Current Position</GridColumn>
       </Grid>
       {INTERN_ALUMNI.map(
-        ({ Intern_ID, Name, Prior_Position, Post_Internship }) => (
+        ({ Intern_ID, Name, Prior_Position, Post_Internship }, i) => (
           <Grid
             templateColumns="1fr 1fr 1fr"
             padding="20px 20px 20px 0px"
             autoFlow="column"
+            key={i}
           >
             <GridColumn>{Name}</GridColumn>
             <GridColumn>{Prior_Position}</GridColumn>

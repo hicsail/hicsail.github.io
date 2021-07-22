@@ -25,14 +25,15 @@ export const InternTestimonials: React.FC<Props> = ({}) => {
       }}
       gap="5rem"
     >
-      {INTERNTESTIMONIALS_LIST.map((intern: InternTestimonial) => (
-        <Flex mt="1rem" direction={['column', 'row']}>
+      {INTERNTESTIMONIALS_LIST.map((intern: InternTestimonial, i) => (
+        <Flex mt="1rem" direction={['column', 'row']} key={i}>
           <Box mr="1rem" width="150px">
             <Avatar
               src={intern.href}
               // width="100%"
               size={avatarSize}
-              fallbackSrc="../../img/sail-image-placeholder.png"
+              name={intern.name}
+              // fallbacksrc="../../img/sail-image-placeholder.png"
             />
           </Box>
           <Box>

@@ -149,7 +149,7 @@ export const INTERNTESTIMONIALS_LIST: Array<InternTestimonial> = [
     season: '',
   },
   {
-    name: 'Louis (Xuan Hy Nguyen)',
+    name: 'Xuan Hy Nguyen',
     href: '../../img/team/Louis.jpg',
     quote:
       'The first and foremost thing I enjoyed about SAIL was the communication. Being able to talk and explain high concept ideas with not just your mentor and peers working alongside your project, but also presenting that idea to others people in different project areas.',

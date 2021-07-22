@@ -12,10 +12,11 @@ interface Props {
 export const PublicationsGrid: React.FC<Props> = ({ title, list }: Props) => {
   return (
     <Layout title={title}>
-      {list.map((publication: PublicationInformation) =>
+      {list.map((publication: PublicationInformation, i) =>
         publication.firstOfYear ? (
           <Box
             borderTop={useColorModeValue('2px solid black', '2px solid white')}
+            key={i}
           >
             <Heading textStyle="h2" mt="10px">
               {new Date(publication.date).getFullYear()}
@@ -23,7 +24,7 @@ export const PublicationsGrid: React.FC<Props> = ({ title, list }: Props) => {
             <PublicationCard publication={publication} />
           </Box>
         ) : (
-          <Box>
+          <Box key={i}>
             <PublicationCard publication={publication} />
           </Box>
         ),

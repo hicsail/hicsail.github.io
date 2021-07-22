@@ -22,7 +22,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
           justifyContent="space-between"
           mt="1rem"
         >
-          {list.map((research: ResearchInformation) => (
+          {list.map((research: ResearchInformation, i) => (
             <Box
               maxWidth="300px"
               overflow="hidden"
@@ -42,6 +42,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               }}
               bg="white"
               mt="1rem"
+              key={i}
             >
               <Card
                 modalButtonText={research.popTitle}
