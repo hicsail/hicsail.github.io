@@ -5,7 +5,6 @@ import { PROJECT_LIST } from '../utils/data/projectInformation';
 export const HighlightedProjectGrid = () => {
   return (
     <Grid
-      padding={['0px', '0px', '72px']}
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
     >
