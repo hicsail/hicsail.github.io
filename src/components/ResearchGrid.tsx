@@ -40,7 +40,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
                 transform: 'translateY(-3px)',
                 transition: 'transform 300ms',
               }}
-              bg="white"
+              bg={useColorModeValue('white', '#2a2a2a')}
               mt="1rem"
               key={i}
             >

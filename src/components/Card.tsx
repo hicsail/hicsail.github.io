@@ -11,6 +11,7 @@ import {
   useDisclosure,
   Image,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
 
@@ -46,7 +47,7 @@ export const Card: React.FC<Props> = ({
             fontSize="1.5rem"
             fontWeight="800"
             fontStyle="normal"
-            color="black"
+            color={useColorModeValue('black', 'white')}
             height="8rem"
             textAlign="center"
           >
@@ -57,7 +58,7 @@ export const Card: React.FC<Props> = ({
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
-        <ModalContent padding="1rem">
+        <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2a2a')}>
           <ModalCloseButton />
           <ModalBody>
             <Text textStyle="paragraph" m="0">
