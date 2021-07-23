@@ -26,13 +26,9 @@ export const CurrentMembers: React.VFC = () => {
         borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
         {CURRENTMEMBERS_LIST.map(
-          ({ picture, name, role, outsideLinks, projects, bio }) => (
-            <Flex direction="row" marginBottom="30px">
-              <Avatar
-                src={picture}
-                size={avatarSize}
-                fallbackSrc="https://via.placeholder.com/150"
-              />
+          ({ picture, name, role, outsideLinks, projects, bio }, i) => (
+            <Flex direction="row" marginBottom="30px" key={i}>
+              <Avatar src={picture} size={avatarSize} name={name} />
 
               <Box paddingLeft="40px">
                 <Flex direction="column">
@@ -55,8 +51,8 @@ export const CurrentMembers: React.VFC = () => {
                     ) : (
                       <Flex direction="row">
                         <Text mr="5px">Projects: </Text>
-                        {projects.map((project) => (
-                          <Flex mr="10px">
+                        {projects.map((project, j) => (
+                          <Flex mr="10px" key={j}>
                             <Link href={project.href}>
                               <Text as="u">{project.name}</Text>
                             </Link>{' '}
@@ -67,8 +63,8 @@ export const CurrentMembers: React.VFC = () => {
 
                     <Flex direction="row">
                       <Text mr="5px">Links: </Text>{' '}
-                      {outsideLinks.map((outsideLink) => (
-                        <Flex mr="10px">
+                      {outsideLinks.map((outsideLink, k) => (
+                        <Flex mr="10px" key={k}>
                           <Link href={outsideLink.href}>
                             <Text as="u"> {outsideLink.name}</Text>
                           </Link>{' '}

@@ -1,7 +1,7 @@
 import { Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import styled from 'styled-components';
-import { INTERN_ALUMNI } from '../utils/data/internInformation';
+import { INTERN_ALUMNI } from '../utils/data/alumni';
 
 const GridColumn = styled.div`
   flex-grow: 1;
@@ -23,17 +23,20 @@ export const AlumniGrid: React.FC = () => {
         <GridColumn>Prior Position</GridColumn>
         <GridColumn>Current Position</GridColumn>
       </Grid>
-      {INTERN_ALUMNI.map(({ Intern_ID, Name, Cohort, Post_Internship }) => (
-        <Grid
-          templateColumns="1fr 1fr 1fr"
-          padding="20px 20px 20px 0px"
-          autoFlow="column"
-        >
-          <GridColumn>{Name}</GridColumn>
-          <GridColumn>{Cohort}</GridColumn>
-          <GridColumn>{Post_Internship}</GridColumn>
-        </Grid>
-      ))}
+      {INTERN_ALUMNI.map(
+        ({ Intern_ID, Name, Prior_Position, Post_Internship }, i) => (
+          <Grid
+            templateColumns="1fr 1fr 1fr"
+            padding="20px 20px 20px 0px"
+            autoFlow="column"
+            key={i}
+          >
+            <GridColumn>{Name}</GridColumn>
+            <GridColumn>{Prior_Position}</GridColumn>
+            <GridColumn>{Post_Internship}</GridColumn>
+          </Grid>
+        ),
+      )}
     </Grid>
   );
 };

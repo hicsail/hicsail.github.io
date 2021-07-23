@@ -11,6 +11,7 @@ import {
   useDisclosure,
   Image,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
 
@@ -19,6 +20,8 @@ interface Props {
   modalHeader: string | undefined;
   modalBody: string | undefined;
   imageHref: string | undefined;
+  modalButtonSubText: string | undefined;
+  pi: React.ReactElement | null;
 }
 
 export const Card: React.FC<Props> = ({
@@ -26,6 +29,8 @@ export const Card: React.FC<Props> = ({
   modalHeader,
   modalBody,
   imageHref,
+  modalButtonSubText,
+  pi,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -34,38 +39,46 @@ export const Card: React.FC<Props> = ({
         <Box borderBottom="2px solid black">
           <Image
             maxWidth="100%"
-            height="30rem"
+            height="10rem"
             src={imageHref}
             fallbackSrc="../../img/research/placeholder-research.jpg"
             width="100%"
             objectFit="cover"
           />
         </Box>
-        <Box p="1em" display="block">
+        <Box p="1.5em" display="block" height="10rem">
           <Text
-            textStyle="h2"
+            fontSize="1.75rem"
             fontWeight="800"
             fontStyle="normal"
-            color="black"
+            color={useColorModeValue('black', 'white')}
+            pb="1rem"
           >
             {modalButtonText}
+          </Text>
+          <Text
+            fontSize="1.125rem"
+            color={useColorModeValue('black', '#b2becd')}
+          >
+            {modalButtonSubText}
           </Text>
         </Box>
       </Box>
 
       <Modal isOpen={isOpen} onClose={onClose} size="xl">
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
-            <Text textStyle="h2" m="0">
-              {modalHeader}
-            </Text>
-          </ModalHeader>
+        <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>
           <ModalCloseButton />
           <ModalBody>
             <Text textStyle="paragraph" m="0">
               {modalBody}
             </Text>
+
+            {pi == null ? (
+              <Text textStyle="paragraph">{pi}</Text>
+            ) : (
+              <Text textStyle="paragraph">PI: {pi}</Text>
+            )}
           </ModalBody>
 
           <ModalFooter>
@@ -76,7 +89,7 @@ export const Card: React.FC<Props> = ({
               textAlign="center"
               width="100%"
             >
-              Cancel
+              Okay
             </Button>
           </ModalFooter>
         </ModalContent>

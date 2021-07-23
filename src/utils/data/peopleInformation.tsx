@@ -6,7 +6,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     picture: '../../img/team/jeff-simeon.jpg',
     role: 'Assistant Director, Operations',
     outsideLinks: [
-      { name: 'Linked In', href: 'https://www.linkedin.com/in/jeffsimeon' },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jeffsimeon' },
       {
         name: 'BU Profile',
         href: 'https://www.bu.edu/hic/profile/jeff-simeon/',
@@ -128,15 +128,31 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
 
 export const INTERNTESTIMONIALS_LIST: Array<InternTestimonial> = [
   {
-    name: 'Christopher Cho',
-    href: '../../img/team/chris.jpg',
-    quote: 'Interning at SAIL was a great experience',
+    name: 'Raj Vipani',
+    href: '../../img/team/Raj.jpg',
+    quote:
+      'Working at SAIL exposed me to a wide range of modern technologies. While working on asl-lex 3.1 and a bit on 3.0, I was required to learn AngularJS, brush up knowledge on TypeScript, HTML/CSS, work on python scripts and work on cloud technologies such as Firebase. Being exposed and seeing them implemented as a real-world project was great for me. Interns also closely work with the PIs of the projects. Lastly, the team at SAIL is open, approachable, and helpful.',
     season: 'Summer 2021',
   },
   {
-    name: 'Taesung Yoon',
-    href: '../../img/team/Taesung.jpg',
-    quote: 'Interning at SAIL was a great experience',
-    season: 'Summer 2021',
+    name: 'Tanner Braun',
+    href: '../../img/team/Tanner.jpg',
+    quote:
+      'Working here at SAIL has provided me with a great space to grow as a developer and get more experience with the different technologies I wanted to work with',
+    season: '',
+  },
+  {
+    name: 'Gagandeep Kang',
+    href: '../../img/team/Gagandeep.jpg',
+    quote:
+      "One of the greatest parts of being an intern at SAIL is the environment. I didn’t feel any barriers in reaching out to other members of the team. The culture isn’t hierarchical like a normal tech company. This makes you feel like a valuable, contributing member. I also felt that I was making a difference in the world. At the end of the day, SAIL's building software projects that have a purpose in the real world outside of financial incentives",
+    season: '',
+  },
+  {
+    name: 'Xuan Hy Nguyen',
+    href: '../../img/team/Louis.jpg',
+    quote:
+      'The first and foremost thing I enjoyed about SAIL was the communication. Being able to talk and explain high concept ideas with not just your mentor and peers working alongside your project, but also presenting that idea to others people in different project areas.',
+    season: '',
   },
 ];

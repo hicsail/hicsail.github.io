@@ -5,7 +5,6 @@ import { PROJECT_LIST } from '../utils/data/projectInformation';
 export const HighlightedProjectGrid = () => {
   return (
     <Grid
-      padding={['0px', '0px', '72px']}
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
     >
@@ -19,10 +18,12 @@ export const HighlightedProjectGrid = () => {
           <Text textStyle="paragraph">{project.text}</Text>
           <Text textStyle="paragraph">
             <b>PI(s): </b>
-            <Link href={project.investigatorLink} color="#567dbd">
+            {project.pi}
+
+            {/* <Link href={project.investigatorLink} color="#567dbd">
               {project.investigatorName},{' '}
-            </Link>
-            <Text as="span">{project.investigatorTitle}</Text>
+            </Link> */}
+            {/* <Text as="span">{project.investigatorTitle}</Text> */}
           </Text>
         </Box>
       ))}

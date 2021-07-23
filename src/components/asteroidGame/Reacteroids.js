@@ -103,7 +103,6 @@ export class Reacteroids extends Component {
     const context = this.state.context;
     const keys = this.state.keys;
     const ship = this.ship[0];
-    121212;
     context.save();
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
@@ -281,7 +280,7 @@ export class Reacteroids extends Component {
               fontSize: '1.5rem',
               padding: '10px 20px',
               margin: '10px',
-              fontFamily: 'PT Mono, serif',
+              fontFamily: 'Karbon',
               cursor: 'pointer',
               width: '100%',
               textAlign: 'center',

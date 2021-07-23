@@ -26,7 +26,12 @@ export default function NavigationBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex width="100%" marginTop="30px" marginBottom="30px" maxWidth="80%">
+    <Box
+      width="100%"
+      marginTop={{ lg: '30px', md: '15px' }}
+      marginBottom={{ lg: '30px', md: '15px' }}
+      maxWidth={{ lg: '80%', md: '90%' }}
+    >
       <Flex
         width="100%"
         minH={'60px'}
@@ -93,7 +98,7 @@ export default function NavigationBar() {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </Flex>
+    </Box>
   );
 }
 
@@ -129,6 +134,7 @@ const DesktopNav = () => {
                 p={4}
                 rounded={'xl'}
                 minW={'sm'}
+                bg={useColorModeValue('white', '#121212')}
               >
                 <Stack>
                   {navItem.children.map((child) => (
@@ -146,7 +152,14 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link href={href} role={'group'} display={'block'} p={2} rounded={'md'}>
+    <Link
+      href={href}
+      role={'group'}
+      display={'block'}
+      p={2}
+      rounded={'md'}
+      style={{ textDecoration: 'none' }}
+    >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
@@ -258,12 +271,12 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
     children: [
       {
-        label: 'Current Members',
+        label: 'CURRENT MEMBERS',
         href: '/currentMembers',
         hash: false,
       },
       {
-        label: 'Alumni',
+        label: 'ALUMNI',
         href: 'alumni',
         hash: false,
       },
@@ -280,12 +293,12 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
     children: [
       {
-        label: 'Presentations',
+        label: 'PRESENTATIONS',
         href: 'presentations',
       },
       {
-        label: 'Publications',
-        href: 'publications',
+        label: 'PUBLICATIONS',
+        href: 'Publications',
       },
     ],
   },

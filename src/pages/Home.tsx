@@ -88,7 +88,7 @@ export const Home: React.VFC = () => {
             'contact contact'`,
             md: `
             'about about ...' 
-            'info info info 
+            'info info ...' 
             'projects projectgrid projectgrid' 
             'contact contact contact'`,
           }}
@@ -168,20 +168,27 @@ export const Home: React.VFC = () => {
           </Box>
 
           <Box gridArea="projects">
-            <Heading textStyle="h2" mt="50px">
-              Projects
-            </Heading>
-            <Text textStyle="paragraph">
-              Ongoing projects focus on a wide range of topics and technologies,
-              from developing and deploying novel cybersecurity applications, to
-              prototyping and deploying smart-city services and platforms.
-            </Text>
-            <Text textStyle="paragraph">
-              SAIL is committed to promoting innovation, best practices, and
-              open source models within the research community. SAIL will learn
-              and help teach new technologies and techniques as determined by
-              the needs of any given project.
-            </Text>
+            <Box
+              position={{ sm: 'static', lg: 'sticky' }}
+              top="20px"
+              mb={{ lg: '30%' }}
+            >
+              <Heading textStyle="h2" mt="5'0px">
+                Featured Projects
+              </Heading>
+              <Text textStyle="paragraph">
+                Ongoing projects focus on a wide range of topics and
+                technologies, from developing and deploying novel cybersecurity
+                applications, to prototyping and deploying smart-city services
+                and platforms.
+              </Text>
+              <Text textStyle="paragraph">
+                SAIL is committed to promoting innovation, best practices, and
+                open source models within the research community. SAIL will
+                learn and help teach new technologies and techniques as
+                determined by the needs of any given project.
+              </Text>
+            </Box>
           </Box>
 
           <Box gridArea="projectgrid">
