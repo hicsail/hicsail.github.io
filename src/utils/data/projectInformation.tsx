@@ -99,7 +99,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
         <Link href="http://www.bu.edu/pcms/caramanis/" color="#567dbd">
           Michael Caramanis,{' '}
         </Link>
-        <Text as="span">Prof.&</Text>
+        <Text as="span">Prof. &</Text>
         <Link
           href="http://www.bu.edu/eng/profile/pablo-a-ruiz-phd/"
           color="#567dbd"

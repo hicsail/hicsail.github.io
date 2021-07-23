@@ -92,7 +92,7 @@ export const ONGOINGRESEARCH_LIST: Array<ResearchInformation> = [
 
 export const PASTRESEARCH_LIST: Array<ResearchInformation> = [
   {
-    title: 'Hey Charlie;',
+    title: 'Hey Charlie',
     titleDescription: 'Combating opioid addiction',
     description:
       'Hey,Charlie is a non-invasive mobile behavioral modification platform designed to help individuals in recovery rebuild their social environments as well as enrich relationships with healthcare providers in order to build more targeted recovery strategies. This is realized through a series of automatic behavioral nudges on a mobile device that urge the patient to avoid communication with people and places who are unhealthy and negative to their recovery and to pursue and enrich relationships with people and places that are positive to their recovery. This information is then aggregated and conveyed to the primary recovery healthcare provider (therapist, social worker, clinician, etc.) in a secure and protected manner. Using data-driven predictive algorithms, patient notifications are tailored to individual behavior patterns.',
