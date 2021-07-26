@@ -249,179 +249,143 @@ export class Reacteroids extends Component {
   checkCollision(obj1, obj2, item1Type) {
     if (item1Type === 'bullet') {
       return (
-        this.checkBulletTriangleCollision(obj1, obj2) ||
-        this.checkBulletSquareCollision(obj1, obj2)
+        this.checkPointInPolygon(obj1, obj2) ||
+        this.checkPointInPolygon(obj1, obj2)
       );
     } else if (obj2.vertices.length == 3 && item1Type === 'ship') {
-      return this.checkShipTriangleCollision(obj1, obj2);
+      return this.checkPolygonInPolygon(obj1, obj2);
     } else if (obj2.vertices.length == 4 && item1Type === 'ship') {
-      return this.checkShipSquareCollision(obj1, obj2);
+      return this.checkPolygonInPolygon(obj1, obj2);
     }
   }
 
-  checkBulletTriangleCollision(obj1, obj2) {
-    var x = obj1.position.x;
-    var y = obj1.position.y;
+  checkPointInPolygon(object1, object2) {
+    var t2 = this.convertObjectToPolygon(object2);
+    var collision = false;
+    var next = 0;
 
-    var x1 = obj2.vertices[0].x + obj2.position.x;
-    var x2 = obj2.vertices[1].x + obj2.position.x;
-    var x3 = obj2.vertices[2].x + obj2.position.x;
-    var y1 = obj2.vertices[0].y + obj2.position.y;
-    var y2 = obj2.vertices[1].y + obj2.position.y;
-    var y3 = obj2.vertices[2].y + obj2.position.y;
+    for (var current = 0; current < t2.length; current++) {
+      next = current + 1;
+      if (next == t2.length) {
+        next = 0;
+      }
 
-    var a =
-      ((y2 - y3) * (x - x3) + (x3 - x2) * (y - y3)) /
-      ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
-    var b =
-      ((y3 - y1) * (x - x3) + (x1 - x3) * (y - y3)) /
-      ((y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3));
-    var c = 1 - a - b;
+      var vc = t2[current];
+      var vn = t2[next];
 
-    return 0 <= a && a <= 1 && 0 <= b && b <= 1 && 0 <= c && c <= 1;
+      var px = object1.position.x;
+      var py = object1.position.y;
+
+      if (
+        ((vc.y >= py && vn.y < py) || (vc.y < py && vn.y >= py)) &&
+        px < ((vn.x - vc.x) * (py - vc.y)) / (vn.y - vc.y) + vc.x
+      ) {
+        collision = !collision;
+      }
+    }
+
+    return collision;
   }
 
-  checkBulletSquareCollision(obj1, obj2) {
-    var bottomLeftX = obj2.vertices[0].x;
-    var bottomLeftY = obj2.vertices[0].y;
-    var topRightX = obj2.vertices[2].x;
-    var topRightY = obj2.vertices[2].y;
-    var bulletX = obj1.position.x;
-    var bulletY = obj1.position.y;
+  checkPolygonInPolygon(object1, object2) {
+    var t1 = this.convertObjectToPolygon(object1);
+    var t2 = this.convertObjectToPolygon(object2);
 
-    if (
-      bulletX > bottomLeftX &&
-      bulletX < topRightX &&
-      bulletY > bottomLeftY &&
-      bulletY < topRightY
-    ) {
-      return true;
+    var next = 0;
+    for (var current = 0; current < t1.length; current++) {
+      next = current + 1;
+      if (next == t1.length) {
+        next = 0;
+      }
+
+      var vc = t1[current];
+      var vn = t1[next];
+
+      var collision = this.polyLine(t2, vc.x, vc.y, vn.x, vn.y);
+      if (collision) {
+        return true;
+      }
+
+      var collision = this.polyPoint(t1, t2[0].x, t2[0].y);
+
+      if (collision) {
+        return true;
+      }
     }
 
     return false;
   }
 
-  checkShipTriangleCollision(object1, object2) {
-    var t0 = this.convertObjectToTriangle(object1);
-    var t1 = this.convertObjectToTriangle(object2);
+  polyLine(vertices, x1, y1, x2, y2) {
+    var next = 0;
+    for (var current = 0; current < vertices.length; current++) {
+      next = current + 1;
+      if (next == vertices.length) {
+        next = 0;
+      }
 
-    return (
-      this.doLinesIntersect(t0.a, t0.b, t1.a, t1.b) ||
-      this.doLinesIntersect(t0.a, t0.b, t1.b, t1.c) ||
-      this.doLinesIntersect(t0.a, t0.b, t1.c, t1.a) ||
-      this.doLinesIntersect(t0.b, t0.c, t1.a, t1.b) ||
-      this.doLinesIntersect(t0.b, t0.c, t1.b, t1.c) ||
-      this.doLinesIntersect(t0.b, t0.c, t1.c, t1.a) ||
-      this.doLinesIntersect(t0.c, t0.a, t1.a, t1.b) ||
-      this.doLinesIntersect(t0.c, t0.a, t1.b, t1.c) ||
-      this.isPointInTriangle(t0.a, t1) ||
-      this.isPointInTriangle(t1.a, t0)
-    );
-  }
+      var x3 = vertices[current].x;
+      var y3 = vertices[current].y;
+      var x4 = vertices[next].x;
+      var y4 = vertices[next].y;
 
-  checkShipSquareCollision(obj1, obj2) {
-    var t0 = this.convertObjectToTriangle(obj1);
-    var r1 = this.convertObjectToRectangle(obj2);
-
-    return (
-      this.doLinesIntersect(t0.a, t0.b, r1.a, r1.b) ||
-      this.doLinesIntersect(t0.a, t0.b, r1.b, r1.c) ||
-      this.doLinesIntersect(t0.a, t0.b, r1.c, r1.d) ||
-      this.doLinesIntersect(t0.a, t0.b, r1.d, r1.a) ||
-      this.doLinesIntersect(t0.b, t0.c, r1.a, r1.b) ||
-      this.doLinesIntersect(t0.b, t0.c, r1.b, r1.c) ||
-      this.doLinesIntersect(t0.b, t0.c, r1.c, r1.d) ||
-      this.doLinesIntersect(t0.b, t0.c, r1.d, r1.a) ||
-      this.doLinesIntersect(t0.c, t0.a, r1.a, r1.b) ||
-      this.doLinesIntersect(t0.c, t0.a, r1.b, r1.c) ||
-      this.doLinesIntersect(t0.c, t0.a, r1.c, r1.d) ||
-      this.doLinesIntersect(t0.c, t0.a, r1.d, r1.a) ||
-      this.isPointInTriangle(r1.a, t0) ||
-      this.isPointInTriangle(r1.b, t0) ||
-      this.isPointInTriangle(r1.c, t0) ||
-      this.isPointInTriangle(r1.d, t0)
-    );
-  }
-
-  doLinesIntersect(a1, a2, a3, a4) {
-    var x12 = a1.x - a2.x;
-    var x34 = a3.x - a4.x;
-    var y12 = a1.y - a2.y;
-    var y34 = a3.y - a4.y;
-    var c = x12 * y34 - y12 * x34;
-    if (c == 0) {
-      return false;
+      var hit = this.lineLine(x1, y1, x2, y2, x3, y3, x4, y4);
+      if (hit) {
+        return true;
+      }
     }
-    var a = a1.x * a2.y - a1.y * a2.x;
-    var b = a3.x * a4.y - a3.y * a4.x;
-    var x = (a * x34 - b * x12) / c;
-    var y = (a * y34 - b * y12) / c;
-    return (
-      (Math.min(a1.x, a2.x) < x &&
-        x < Math.max(a1.x, a2.x) &&
-        Math.min(a3.x, a4.x) < x &&
-        x < Math.max(a3.x, a4.x)) ||
-      (Math.min(a1.y, a2.y) < y &&
-        y < Math.max(a1.y, a2.y) &&
-        Math.min(a3.y, a4.y) < y &&
-        y < Math.max(a3.y, a4.y))
-    );
+
+    return false;
   }
 
-  isPointInTriangle(point, triangle) {
-    var p = point;
-    var p0 = triangle.a;
-    var p1 = triangle.b;
-    var p2 = triangle.c;
-    var dX = p.x - p2.x;
-    var dY = p.y - p2.y;
-    var dX21 = p2.x - p1.x;
-    var dY12 = p1.y - p2.y;
-    var D = dY12 * (p0.x - p2.x) + dX21 * (p0.y - p2.y);
-    var s = dY12 * dX + dX21 * dY;
-    var t = (p2.y - p0.y) * dX + (p0.x - p2.x) * dY;
-    if (D < 0) return s <= 0 && t <= 0 && s + t >= D;
-    return s >= 0 && t >= 0 && s + t <= D;
+  polyPoint(vertices, px, py) {
+    var collision = false;
+
+    var next = 0;
+    for (var current = 0; current < vertices.length; current++) {
+      next = current + 1;
+      if (next == vertices.length) {
+        next = 0;
+      }
+
+      var vc = vertices[current];
+      var vn = vertices[next];
+
+      if (
+        ((vc.y > py && vn.y < py) || (vc.y < py && vn.y > py)) &&
+        px < ((vn.x - vc.x) * (py - vc.y)) / (vn.y - vc.y) + vc.x
+      ) {
+        collision = !collision;
+      }
+    }
+    return collision;
   }
 
-  convertObjectToTriangle(object) {
-    var vertices = {
-      a: {
-        x: object.vertices[0].x + object.position.x,
-        y: object.vertices[0].y + object.position.y,
-      },
-      b: {
-        x: object.vertices[1].x + object.position.x,
-        y: object.vertices[1].y + object.position.y,
-      },
-      c: {
-        x: object.vertices[2].x + object.position.x,
-        y: object.vertices[2].y + object.position.y,
-      },
-    };
+  lineLine(x1, y1, x2, y2, x3, y3, x4, y4) {
+    var uA =
+      ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) /
+      ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
+    var uB =
+      ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) /
+      ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
 
-    return vertices;
+    if (uA >= 0 && uA <= 1 && uB >= 0 && uB <= 1) {
+      return true;
+    }
+    return false;
   }
 
-  convertObjectToRectangle(object) {
-    var vertices = {
-      a: {
-        x: object.vertices[0].x + object.position.x,
-        y: object.vertices[0].y + object.position.y,
-      },
-      b: {
-        x: object.vertices[1].x + object.position.x,
-        y: object.vertices[1].y + object.position.y,
-      },
-      c: {
-        x: object.vertices[2].x + object.position.x,
-        y: object.vertices[2].y + object.position.y,
-      },
-      d: {
-        x: object.vertices[3].x + object.position.x,
-        y: object.vertices[3].y + object.position.y,
-      },
-    };
+  convertObjectToPolygon(object) {
+    var vertices = [];
+
+    for (var i = 0; i < object.vertices.length; i++) {
+      vertices[i] = {
+        x: object.vertices[i].x + object.position.x,
+        y: object.vertices[i].y + object.position.y,
+      };
+    }
+
+    // console.log(vertices);
 
     return vertices;
   }

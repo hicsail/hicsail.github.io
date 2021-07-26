@@ -9,7 +9,7 @@ export default class Ship {
       x: 0,
       y: 0,
     };
-    this.vertices = shipVertices(30);
+    this.vertices = shipVertices(30, this.rotation, this.position);
     this.rotation = 0;
     this.rotationSpeed = 6;
     this.speed = 0.05;
@@ -53,6 +53,11 @@ export default class Ship {
     if (dir == 'RIGHT') {
       this.rotation += this.rotationSpeed;
     }
+
+    this.vertices = shipVertices(30, this.rotation, this.position);
+
+    console.log('rotation:', this.rotation);
+    console.log('rotationSpeed', this.rotationSpeed);
   }
 
   accelerate(val) {

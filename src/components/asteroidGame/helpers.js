@@ -143,27 +143,14 @@ export function randomColor() {
   return color;
 }
 
-export function shipVertices(rad) {
+export function shipVertices(rad, rotation, position) {
   let p = [];
 
-  p[0] = {
-    x: 0,
-    y: -rad,
-  };
+  p[0] = rotatePoint({ x: 0, y: -rad }, { x: 0, y: 0 }, rotation);
 
-  p[1] = {
-    // x: Math.sqrt(rad ** 2 / 2),
-    // y: Math.sqrt(rad ** 2 / 2),
-    x: 20,
-    y: -20,
-  };
+  p[1] = rotatePoint({ x: 20, y: 20 }, { x: 0, y: 0 }, rotation);
 
-  p[2] = {
-    x: -20,
-    y: 20,
-  };
-
-  console.log(Math.sqrt(rad ** 2 / 2));
+  p[2] = rotatePoint({ x: -20, y: 20 }, { x: 0, y: 0 }, rotation);
 
   return p;
 }
