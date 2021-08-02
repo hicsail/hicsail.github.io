@@ -9,7 +9,6 @@ export default class Ship {
       x: 0,
       y: 0,
     };
-    this.vertices = shipVertices(30, this.rotation, this.position);
     this.rotation = 0;
     this.rotationSpeed = 6;
     this.speed = 0.05;
@@ -18,6 +17,7 @@ export default class Ship {
     this.lastShot = 0;
     this.create = args.create;
     this.onDie = args.onDie;
+    this.vertices = shipVertices(30, this.rotation, this.position);
   }
 
   destroy() {
@@ -54,10 +54,7 @@ export default class Ship {
       this.rotation += this.rotationSpeed;
     }
 
-    this.vertices = shipVertices(30, this.rotation, this.position);
-
-    console.log('rotation:', this.rotation);
-    console.log('rotationSpeed', this.rotationSpeed);
+    // this.vertices = shipVertices(30, this.rotation, this.position);
   }
 
   accelerate(val) {
@@ -139,19 +136,11 @@ export default class Ship {
     context.lineWidth = 2;
     context.beginPath();
 
-    // large ship
     context.moveTo(0, -30);
     context.lineTo(20, 20);
     context.lineTo(10, 14);
     context.lineTo(-10, 14);
     context.lineTo(-20, 20);
-
-    // small ship
-    // context.moveTo(0, -15);
-    // context.lineTo(10, 10);
-    // context.lineTo(5, 7);
-    // context.lineTo(-5, 7);
-    // context.lineTo(-10, 10);
 
     context.closePath();
     context.fill();

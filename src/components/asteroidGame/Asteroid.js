@@ -12,18 +12,10 @@ export default class Asteroid {
   constructor(args) {
     this.position = args.position;
     this.velocity = {
-      // x: 0,
-      // y: 0,
       x: 0.1,
       y: 0.1,
-      // x: randomNumBetween(-0.001, 0.001),
-      // y: randomNumBetween(-0.001, 0.001),
     };
     this.rotation = 0;
-    // this.rotation = randomNumBetween(-1, 1);
-    // this.rotation = 0;
-    // this.rotationSpeed = randomNumBetween(-0.001, 0.001);
-    // this.rotationSpeed = randomNumBetween(-1, 1);
     this.rotationSpeed = 0;
 
     this.radius = args.size;
@@ -34,6 +26,7 @@ export default class Asteroid {
       Math.floor(randomNumBetween(3, 4)),
       args.size,
     );
+
     this.color = randomColor();
   }
 
@@ -115,7 +108,9 @@ export default class Asteroid {
     //Color Style
     context.strokeStyle = this.color;
     context.lineWidth = 2;
+
     context.beginPath();
+
     context.moveTo(this.vertices[0].x, this.vertices[0].y);
     for (let i = 1; i < this.vertices.length; i++) {
       context.lineTo(this.vertices[i].x, this.vertices[i].y);

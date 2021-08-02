@@ -192,7 +192,7 @@ export class Reacteroids extends Component {
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
       let asteroid = new Asteroid({
-        size: randomNumBetween(40, 80),
+        size: Math.round(randomNumBetween(40, 80)),
         position: {
           x: randomNumBetweenExcluding(
             0,
@@ -288,25 +288,26 @@ export class Reacteroids extends Component {
   }
 
   checkPolygonInPolygon(object1, object2) {
-    var t1 = this.convertObjectToPolygon(object1);
+    var t1 = this.convertObjectToPolygonShip(object1);
     var t2 = this.convertObjectToPolygon(object2);
 
     var next = 0;
-    for (var current = 0; current < t1.length; current++) {
+    for (var current = 0; current < t2.length; current++) {
       next = current + 1;
-      if (next == t1.length) {
+      if (next == t2.length) {
         next = 0;
       }
 
-      var vc = t1[current];
-      var vn = t1[next];
+      var vc = t2[current];
+      var vn = t2[next];
 
-      var collision = this.polyLine(t2, vc.x, vc.y, vn.x, vn.y);
+      var collision = this.polyLine(t1, vc.x, vc.y, vn.x, vn.y);
+
       if (collision) {
         return true;
       }
 
-      var collision = this.polyPoint(t1, t2[0].x, t2[0].y);
+      var collision = this.polyPoint(t2, t1[0].x, t1[0].y);
 
       if (collision) {
         return true;
@@ -375,19 +376,51 @@ export class Reacteroids extends Component {
     return false;
   }
 
+  convertObjectToPolygonShip(object) {
+    var vertices = [];
+
+    for (var i = 0; i < object.vertices.length; i++) {
+      vertices[i] = this.rotatePoint(
+        0,
+        0,
+        object.vertices[i].x,
+        object.vertices[i].y,
+        object.rotation,
+      );
+    }
+
+    for (var i = 0; i < object.vertices.length; i++) {
+      vertices[i] = {
+        x: object.position.x + vertices[i].x,
+        y: object.position.y + vertices[i].y,
+      };
+    }
+
+    return vertices;
+  }
+
   convertObjectToPolygon(object) {
     var vertices = [];
 
     for (var i = 0; i < object.vertices.length; i++) {
       vertices[i] = {
-        x: object.vertices[i].x + object.position.x,
-        y: object.vertices[i].y + object.position.y,
+        x: object.position.x + object.vertices[i].x,
+        y: object.position.y + object.vertices[i].y,
       };
     }
 
-    // console.log(vertices);
-
     return vertices;
+  }
+
+  rotatePoint(cx, cy, x, y, angle) {
+    var radians = (Math.PI / 180) * angle;
+    var cosAngle = Math.cos(radians);
+    var sinAngle = Math.sin(radians);
+
+    var nx = cosAngle * (x - cx) + sinAngle * (y - cy) + cx;
+    var ny = cosAngle * (y - cy) - sinAngle * (x - cx) + cy;
+
+    return { x: nx, y: -1 * ny };
   }
 
   render() {
