@@ -1,6 +1,6 @@
 import Bullet from './Bullet';
 import Particle from './Particle';
-import { rotatePoint, randomNumBetween } from './helpers';
+import { rotatePoint, randomNumBetween, shipVertices } from './helpers';
 
 export default class Ship {
   constructor(args) {
@@ -17,6 +17,7 @@ export default class Ship {
     this.lastShot = 0;
     this.create = args.create;
     this.onDie = args.onDie;
+    this.vertices = shipVertices(30, this.rotation, this.position);
   }
 
   destroy() {
@@ -52,6 +53,8 @@ export default class Ship {
     if (dir == 'RIGHT') {
       this.rotation += this.rotationSpeed;
     }
+
+    // this.vertices = shipVertices(30, this.rotation, this.position);
   }
 
   accelerate(val) {
@@ -133,19 +136,11 @@ export default class Ship {
     context.lineWidth = 2;
     context.beginPath();
 
-    // large ship
     context.moveTo(0, -30);
     context.lineTo(20, 20);
     context.lineTo(10, 14);
     context.lineTo(-10, 14);
     context.lineTo(-20, 20);
-
-    // small ship
-    // context.moveTo(0, -15);
-    // context.lineTo(10, 10);
-    // context.lineTo(5, 7);
-    // context.lineTo(-5, 7);
-    // context.lineTo(-10, 10);
 
     context.closePath();
     context.fill();

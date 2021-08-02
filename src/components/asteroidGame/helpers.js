@@ -17,16 +17,16 @@ export function asteroidVertices(count, rad) {
     switch (variant) {
       case 'topLeft':
         p[0] = {
-          x: rad,
+          x: -rad,
           y: rad,
         };
         p[1] = {
-          x: rad,
+          x: -rad,
           y: -rad,
         };
         p[2] = {
-          x: -rad,
-          y: rad,
+          x: rad,
+          y: -rad,
         };
         break;
 
@@ -36,42 +36,44 @@ export function asteroidVertices(count, rad) {
           y: -rad,
         };
         p[1] = {
-          x: rad,
-          y: rad,
+          x: -rad,
+          y: -rad,
         };
         p[2] = {
           x: rad,
-          y: -rad,
+          y: rad,
         };
+
         break;
 
       case 'bottomLeft':
         p[0] = {
           x: -rad,
-          y: -rad,
+          y: rad,
         };
         p[1] = {
           x: -rad,
-          y: rad,
+          y: -rad,
         };
         p[2] = {
           x: rad,
           y: rad,
         };
+
         break;
 
       case 'bottomRight':
         p[0] = {
           x: -rad,
-          y: -rad,
+          y: rad,
         };
         p[1] = {
-          x: -rad,
+          x: rad,
           y: rad,
         };
         p[2] = {
           x: rad,
-          y: rad,
+          y: -rad,
         };
 
         break;
@@ -79,35 +81,21 @@ export function asteroidVertices(count, rad) {
   } else if (count == 4) {
     p[0] = {
       x: -rad,
-      y: -rad,
+      y: rad,
     };
     p[1] = {
       x: -rad,
-      y: rad,
+      y: -rad,
     };
     p[2] = {
       x: rad,
-      y: rad,
+      y: -rad,
     };
     p[3] = {
       x: rad,
-      y: -rad,
+      y: rad,
     };
   }
-
-  // for (let i = 0; i < count; i++) {
-  //   p[i] = {
-  //     x:
-  //       -(
-  //         Math.sin(((360 / count) * i * Math.PI) / 180) +
-  //         (Math.round(0.5 * 2 - 1) * 0.5) / 3
-  //       ) * rad,
-  //     y:
-  //       -(
-  //         Math.cos(((360 / count) * i * Math.PI) / 180) +
-  //         (Math.round(0.5 * 2 - 1) * 0.5) / 3
-  //       ) * rad,
-  //   };
 
   return p;
 }
@@ -152,7 +140,18 @@ export function randomNumBetweenExcluding(min, max, exMin, exMax) {
 export function randomColor() {
   let texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
   let color = texttheme[Math.floor(Math.random() * texttheme.length)];
-  console.log(color);
 
   return color;
+}
+
+export function shipVertices(rad, rotation, position) {
+  let p = [];
+
+  p[0] = { x: 0, y: rad };
+
+  p[1] = { x: 20, y: -20 };
+
+  p[2] = { x: -20, y: -20 };
+
+  return p;
 }

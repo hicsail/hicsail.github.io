@@ -11,20 +11,15 @@ function randomColor() {
 export default class Asteroid {
   constructor(args) {
     this.position = args.position;
-    this.velocity = {
-      // x: 0.1,
-      // y: 0.1,
-      x: randomNumBetween(-0.001, 0.001),
-      y: randomNumBetween(-0.001, 0.001),
-    };
-    // this.rotation = 1;
-    // this.rotation = randomNumBetween(-1, 1);
-    this.rotation = 0;
-    // this.rotationSpeed = randomNumBetween(-0.001, 0.001);
-    // this.rotationSpeed = randomNumBetween(-1, 1);
-    this.rotationSpeed = 0;
-
     this.radius = args.size;
+    this.velocity = {
+      // x: randomNumBetween(-10 / this.radius, 10 / this.radius),
+      // y: randomNumBetween(-10 / this.radius, 10 / this.radius),
+      x: Math.random() < 0.5 ? -10 / this.radius : 10 / this.radius,
+      y: Math.random() < 0.5 ? -10 / this.radius : 10 / this.radius,
+    };
+    this.rotation = 0;
+    this.rotationSpeed = 0;
     this.score = Math.round((80 / this.radius) * 5);
     this.create = args.create;
     this.addScore = args.addScore;
@@ -32,6 +27,7 @@ export default class Asteroid {
       Math.floor(randomNumBetween(3, 4)),
       args.size,
     );
+
     this.color = randomColor();
   }
 
@@ -113,8 +109,10 @@ export default class Asteroid {
     //Color Style
     context.strokeStyle = this.color;
     context.lineWidth = 2;
+
     context.beginPath();
-    context.moveTo(-this.radius, -this.radius);
+
+    context.moveTo(this.vertices[0].x, this.vertices[0].y);
     for (let i = 1; i < this.vertices.length; i++) {
       context.lineTo(this.vertices[i].x, this.vertices[i].y);
     }

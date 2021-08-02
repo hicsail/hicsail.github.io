@@ -126,8 +126,8 @@ export class Reacteroids extends Component {
     }
 
     // Check for colisions
-    this.checkCollisionsWith(this.bullets, this.asteroids);
-    this.checkCollisionsWith(this.ship, this.asteroids);
+    this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
+    this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
 
     // Remove or render
     this.updateObjects(this.particles, 'particles');
@@ -185,8 +185,6 @@ export class Reacteroids extends Component {
       });
       localStorage['topscore'] = this.state.currentScore;
     }
-
-    // this.startGame();
   }
 
   generateAsteroids(howMany) {
@@ -194,7 +192,7 @@ export class Reacteroids extends Component {
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
       let asteroid = new Asteroid({
-        size: randomNumBetween(40, 80),
+        size: Math.round(randomNumBetween(40, 80)),
         position: {
           x: randomNumBetweenExcluding(
             0,
@@ -232,7 +230,7 @@ export class Reacteroids extends Component {
     }
   }
 
-  checkCollisionsWith(items1, items2) {
+  checkCollisionsWith(items1, items2, item1Type) {
     var a = items1.length - 1;
     var b;
     for (a; a > -1; --a) {
@@ -240,7 +238,7 @@ export class Reacteroids extends Component {
       for (b; b > -1; --b) {
         var item1 = items1[a];
         var item2 = items2[b];
-        if (this.checkCollision(item1, item2)) {
+        if (this.checkCollision(item1, item2, item1Type)) {
           item1.destroy();
           item2.destroy();
         }
@@ -248,14 +246,181 @@ export class Reacteroids extends Component {
     }
   }
 
-  checkCollision(obj1, obj2) {
-    var vx = obj1.position.x - obj2.position.x;
-    var vy = obj1.position.y - obj2.position.y;
-    var length = Math.sqrt(vx * vx + vy * vy);
-    if (length < obj1.radius + obj2.radius) {
+  checkCollision(obj1, obj2, item1Type) {
+    if (item1Type === 'bullet') {
+      return (
+        this.checkPointInPolygon(obj1, obj2) ||
+        this.checkPointInPolygon(obj1, obj2)
+      );
+    } else if (obj2.vertices.length == 3 && item1Type === 'ship') {
+      return this.checkPolygonInPolygon(obj1, obj2);
+    } else if (obj2.vertices.length == 4 && item1Type === 'ship') {
+      return this.checkPolygonInPolygon(obj1, obj2);
+    }
+  }
+
+  checkPointInPolygon(object1, object2) {
+    var t2 = this.convertObjectToPolygon(object2);
+    var collision = false;
+    var next = 0;
+
+    for (var current = 0; current < t2.length; current++) {
+      next = current + 1;
+      if (next == t2.length) {
+        next = 0;
+      }
+
+      var vc = t2[current];
+      var vn = t2[next];
+
+      var px = object1.position.x;
+      var py = object1.position.y;
+
+      if (
+        ((vc.y >= py && vn.y < py) || (vc.y < py && vn.y >= py)) &&
+        px < ((vn.x - vc.x) * (py - vc.y)) / (vn.y - vc.y) + vc.x
+      ) {
+        collision = !collision;
+      }
+    }
+
+    return collision;
+  }
+
+  checkPolygonInPolygon(object1, object2) {
+    var t1 = this.convertObjectToPolygonShip(object1);
+    var t2 = this.convertObjectToPolygon(object2);
+
+    var next = 0;
+    for (var current = 0; current < t2.length; current++) {
+      next = current + 1;
+      if (next == t2.length) {
+        next = 0;
+      }
+
+      var vc = t2[current];
+      var vn = t2[next];
+
+      var collision = this.polyLine(t1, vc.x, vc.y, vn.x, vn.y);
+
+      if (collision) {
+        return true;
+      }
+
+      var collision = this.polyPoint(t2, t1[0].x, t1[0].y);
+
+      if (collision) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  polyLine(vertices, x1, y1, x2, y2) {
+    var next = 0;
+    for (var current = 0; current < vertices.length; current++) {
+      next = current + 1;
+      if (next == vertices.length) {
+        next = 0;
+      }
+
+      var x3 = vertices[current].x;
+      var y3 = vertices[current].y;
+      var x4 = vertices[next].x;
+      var y4 = vertices[next].y;
+
+      var hit = this.lineLine(x1, y1, x2, y2, x3, y3, x4, y4);
+      if (hit) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  polyPoint(vertices, px, py) {
+    var collision = false;
+
+    var next = 0;
+    for (var current = 0; current < vertices.length; current++) {
+      next = current + 1;
+      if (next == vertices.length) {
+        next = 0;
+      }
+
+      var vc = vertices[current];
+      var vn = vertices[next];
+
+      if (
+        ((vc.y > py && vn.y < py) || (vc.y < py && vn.y > py)) &&
+        px < ((vn.x - vc.x) * (py - vc.y)) / (vn.y - vc.y) + vc.x
+      ) {
+        collision = !collision;
+      }
+    }
+    return collision;
+  }
+
+  lineLine(x1, y1, x2, y2, x3, y3, x4, y4) {
+    var uA =
+      ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) /
+      ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
+    var uB =
+      ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) /
+      ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1));
+
+    if (uA >= 0 && uA <= 1 && uB >= 0 && uB <= 1) {
       return true;
     }
     return false;
+  }
+
+  convertObjectToPolygonShip(object) {
+    var vertices = [];
+
+    for (var i = 0; i < object.vertices.length; i++) {
+      vertices[i] = this.rotatePoint(
+        0,
+        0,
+        object.vertices[i].x,
+        object.vertices[i].y,
+        object.rotation,
+      );
+    }
+
+    for (var i = 0; i < object.vertices.length; i++) {
+      vertices[i] = {
+        x: object.position.x + vertices[i].x,
+        y: object.position.y + vertices[i].y,
+      };
+    }
+
+    return vertices;
+  }
+
+  convertObjectToPolygon(object) {
+    var vertices = [];
+
+    for (var i = 0; i < object.vertices.length; i++) {
+      vertices[i] = {
+        x: object.position.x + object.vertices[i].x,
+        y: object.position.y + object.vertices[i].y,
+      };
+    }
+
+    return vertices;
+  }
+
+  rotatePoint(cx, cy, x, y, angle) {
+    var radians = (Math.PI / 180) * angle;
+    var cosAngle = Math.cos(radians);
+    var sinAngle = Math.sin(radians);
+
+    var nx = cosAngle * (x - cx) + sinAngle * (y - cy) + cx;
+    var ny = cosAngle * (y - cy) - sinAngle * (x - cx) + cy;
+
+    return { x: nx, y: -1 * ny };
   }
 
   render() {
