@@ -3,7 +3,7 @@ import { InternTestimonial, PersonInformation } from '../../types/types';
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
     name: 'Jeff Simeon',
-    picture: '../../img/team/jeff-simeon.jpg',
+    picture: '../../img/team/Jeff.jpg',
     role: 'Assistant Director, Operations',
     outsideLinks: [
       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jeffsimeon' },
@@ -13,7 +13,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
       },
     ],
     projects: null,
-    bio: '',
+    bio: 'Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ',
   },
   {
     name: 'Shirene Cao',
