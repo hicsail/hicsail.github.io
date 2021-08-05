@@ -44,7 +44,7 @@ export const Home: React.VFC = () => {
           </Heading>
         </HeroText>
       </Box>
-      <Box display={['none', 'initial']}>
+      <Box>
         <Reacteroids
           bgColor={canvasBG}
           itemColor={itemColor}
