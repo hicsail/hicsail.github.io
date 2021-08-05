@@ -61,13 +61,12 @@ export const Home: React.VFC = () => {
             base: `
             'heading heading' 
             'about about'
-            'info info' 
             'projects projects' 
             'projectgrid projectgrid' 
             'contact contact'`,
             md: `
-            'about about ...' 
-            'info info ...' 
+            'heading heading heading' 
+            'about about ... '
             'projects projectgrid projectgrid' 
             'contact contact contact'`,
           }}
@@ -84,7 +83,7 @@ export const Home: React.VFC = () => {
               Where Academia Meets Application
             </Heading>
           </Box>
-          <Box gridArea="about">
+          <Box gridArea="about" marginBottom="2em">
             <Heading textStyle="h2">About</Heading>
             <Text textStyle="paragraph">
               The Software & Application Innovation Lab (SAIL) at the{' '}
@@ -104,9 +103,6 @@ export const Home: React.VFC = () => {
               </Link>
               .
             </Text>
-          </Box>
-
-          <Box gridArea="info" marginBottom="2em" fontSize="20px">
             <Text textStyle="paragraph">
               Across Boston University, the quality and the potential impact of
               research activities (as well as the success of both students and
