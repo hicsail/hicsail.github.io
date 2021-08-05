@@ -36,6 +36,7 @@ export class Reacteroids extends Component {
       inGame: false,
       shipLoaded: false,
       colorMode: 'white',
+      mobile: false,
     };
     this.canvasRef = React.createRef(null);
     this.ship = [];
@@ -108,6 +109,7 @@ export class Reacteroids extends Component {
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
     this.state.colorMode = this.props.colorMode;
+    this.state.mobile = this.props.mobile;
 
     if (this.state.colorMode == 'white') {
       context.fillStyle = '#FFFFFF';
@@ -495,7 +497,7 @@ export class Reacteroids extends Component {
       );
     }
 
-    if (this.state.shipLoaded) {
+    if (this.state.shipLoaded & !this.state.mobile) {
       instructions = (
         <div
           style={{

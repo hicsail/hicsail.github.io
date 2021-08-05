@@ -1,15 +1,25 @@
 import {
   Box,
   Grid,
+  useDisclosure,
   useColorModeValue,
   Text,
   Heading,
   Link,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
+import { useEffect } from 'react';
 
 const HeroText = styled.div`
   position: absolute;
@@ -26,6 +36,7 @@ const StyledLink = styled.a`
 `;
 
 export const Home: React.VFC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const canvasBG = useColorModeValue('white', 'black');
   const itemColor = useColorModeValue('#000000', '#FFFFFF');
   const color = useColorModeValue('white', 'black');
@@ -44,12 +55,12 @@ export const Home: React.VFC = () => {
           </Heading>
         </HeroText>
       </Box>
-      <Box>
+      <Box display={['none', 'initial']}>
         <Reacteroids
           bgColor={canvasBG}
           itemColor={itemColor}
           colorMode={color}
-        ></Reacteroids>
+        />
       </Box>
       <Box margin="0 auto" maxWidth="80%">
         <Grid
@@ -82,6 +93,21 @@ export const Home: React.VFC = () => {
               {' '}
               Where Academia Meets Application
             </Heading>
+            <Box justifyContent="center">
+              <Button onClick={onOpen}>Ready to launch? 🚀</Button>
+              <Modal isOpen={isOpen} onClose={onClose} isCentered size="lg">
+                <ModalOverlay />
+                <ModalContent>
+                  <ModalHeader>Asteroids!</ModalHeader>
+                  <Reacteroids
+                    bgColor={canvasBG}
+                    itemColor={itemColor}
+                    colorMode={color}
+                    mobile={true}
+                  />
+                </ModalContent>
+              </Modal>
+            </Box>
           </Box>
           <Box gridArea="about" marginBottom="2em">
             <Heading textStyle="h2">About</Heading>
