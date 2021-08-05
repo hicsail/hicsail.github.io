@@ -21,18 +21,6 @@ const HeroText = styled.div`
   display: block;
 `;
 
-const Info = styled.div`
-  background-color: orange;
-  position: absolute;
-  top: 80vh;
-  right: 5vh;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  color: black;
-  padding: 5px 15px;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.25);
-`;
-
 const StyledLink = styled.a`
   color: #567dbd;
 `;
@@ -62,15 +50,6 @@ export const Home: React.VFC = () => {
           itemColor={itemColor}
           colorMode={color}
         ></Reacteroids>
-      </Box>
-
-      <Box display={['none', 'initial']}>
-        <Info>
-          <b>INSTRUCTIONS</b>
-          <p>
-            Use [&larr;][&uarr;][&rarr;] to MOVE <br /> Use SPACEBAR to shoot{' '}
-          </p>
-        </Info>
       </Box>
       <Box margin="0 auto" maxWidth="80%">
         <Grid

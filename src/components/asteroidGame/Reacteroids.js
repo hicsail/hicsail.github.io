@@ -34,6 +34,7 @@ export class Reacteroids extends Component {
       currentSore: 0,
       top: localStorage['topscore'] || 0,
       inGame: false,
+      shipLoaded: false,
       colorMode: 'white',
     };
     this.canvasRef = React.createRef(null);
@@ -126,8 +127,13 @@ export class Reacteroids extends Component {
     }
 
     // Check for colisions
-    this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
-    this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
+    if (this.state.shipLoaded) {
+      this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
+      this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
+    }
+
+    // this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
+    // this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
 
     // Remove or render
     this.updateObjects(this.particles, 'particles');
@@ -171,6 +177,12 @@ export class Reacteroids extends Component {
     // Make asteroids
     this.asteroids = [];
     this.generateAsteroids(this.state.asteroidCount);
+  }
+
+  launchShip() {
+    this.setState({
+      shipLoaded: true,
+    });
   }
 
   gameOver() {
@@ -425,6 +437,8 @@ export class Reacteroids extends Component {
 
   render() {
     let endgame;
+    let startgame;
+    let instructions;
     let message;
 
     if (this.state.currentScore <= 0) {
@@ -440,7 +454,7 @@ export class Reacteroids extends Component {
         <div>
           <button
             style={{
-              // backgroundColor: 'transparent',
+              position: 'absolute',
               color: this.state.colorMode == 'white' ? '#000000' : '#FFFFFF',
               fontSize: '1.5rem',
               padding: '10px 20px',
@@ -449,12 +463,59 @@ export class Reacteroids extends Component {
               cursor: 'pointer',
               width: '100%',
               textAlign: 'center',
-              // border: '5px solid black',
             }}
             onClick={this.startGame.bind(this)}
           >
             Try Again?
           </button>
+        </div>
+      );
+    }
+
+    if (!this.state.shipLoaded) {
+      startgame = (
+        <div>
+          <button
+            style={{
+              position: 'absolute',
+              color: this.state.colorMode == 'white' ? '#000000' : '#FFFFFF',
+              fontSize: '1.5rem',
+              padding: '10px 20px',
+              margin: '10px',
+              fontFamily: 'Karbon',
+              cursor: 'pointer',
+              width: '100%',
+              textAlign: 'center',
+            }}
+            onClick={this.launchShip.bind(this)}
+          >
+            Ready to Launch? 🚀
+          </button>
+        </div>
+      );
+    }
+
+    if (this.state.shipLoaded) {
+      instructions = (
+        <div
+          style={{
+            backgroundColor: 'orange',
+            position: 'absolute',
+            top: '80vh',
+            right: '5vh',
+            fontFamily: 'Courier New, Courier, monospace',
+            fontSize: '16px',
+            color: 'black',
+            padding: '5px 15px',
+            boxShadow: '0 5px 25px 0 rgba(0, 0, 0, 0.25)',
+          }}
+        >
+          <div>
+            <b>INSTRUCTIONS</b>
+            <p>
+              Use [&larr;][&uarr;][&rarr;] to MOVE <br /> Use SPACEBAR to shoot{' '}
+            </p>
+          </div>
         </div>
       );
     }
@@ -471,6 +532,7 @@ export class Reacteroids extends Component {
           Score: {this.state.currentScore}
         </div>
         {endgame}
+        {startgame}
         <canvas
           ref={this.canvasRef}
           width={this.state.screen.width * this.state.screen.ratio}
@@ -480,6 +542,7 @@ export class Reacteroids extends Component {
             height: '100%',
           }}
         />
+        {instructions}
       </div>
     );
   }
