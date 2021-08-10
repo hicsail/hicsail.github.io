@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import Ship from './Ship';
 import Asteroid from './Asteroid';
 import { randomNumBetween, randomNumBetweenExcluding } from './helpers';
+import { size } from 'lodash';
+
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
+  MoonIcon,
+} from '@chakra-ui/icons';
+import { Flex, Spacer, IconButton } from '@chakra-ui/react';
 
 const KEY = {
   LEFT: 37,
@@ -31,7 +40,7 @@ export class Reacteroids extends Component {
         space: 0,
       },
       asteroidCount: 10,
-      currentSore: 0,
+      currentScore: 0,
       top: localStorage['topscore'] || 0,
       inGame: false,
       shipLoaded: false,
@@ -55,13 +64,36 @@ export class Reacteroids extends Component {
     });
   }
 
-  handleKeys(value, e) {
+  handleKeys(value) {
     let keys = this.state.keys;
     if (e.keyCode === KEY.LEFT || e.keyCode === KEY.A) keys.left = value;
     if (e.keyCode === KEY.RIGHT || e.keyCode === KEY.D) keys.right = value;
     if (e.keyCode === KEY.UP || e.keyCode === KEY.W) keys.up = value;
     if (e.keyCode === KEY.SPACE && e.target == document.body)
       keys.space = value;
+    this.setState({
+      keys: keys,
+    });
+  }
+
+  handleTouches(value, e) {
+    let keys = this.state.keys;
+    switch (e.target.id) {
+      case 'left':
+        keys.left = value;
+        break;
+      case 'right':
+        keys.right = value;
+        break;
+      case 'up':
+        keys.up = value;
+        break;
+      case 'fire':
+        keys.space = value;
+        break;
+      default:
+        break;
+    }
     this.setState({
       keys: keys,
     });
@@ -133,9 +165,6 @@ export class Reacteroids extends Component {
       this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
       this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
     }
-
-    // this.checkCollisionsWith(this.bullets, this.asteroids, 'bullet');
-    // this.checkCollisionsWith(this.ship, this.asteroids, 'ship');
 
     // Remove or render
     this.updateObjects(this.particles, 'particles');
@@ -227,6 +256,26 @@ export class Reacteroids extends Component {
       this.createObject(asteroid, 'asteroids');
     }
   }
+
+  // createMobileControls(boxWidth, boxHeight) {
+  //   const keys = ['left', 'right', 'up', ''];
+  //   const yPos = this.state.screen.height / 1.5;
+
+  //   for (let i = 0; i < keys.length; i++) {
+  //     let control = new Control({
+  //       boxSize: {
+  //         width: boxWidth * 16,
+  //         height: boxHeight * 16
+  //       },
+  //       boxPosition: {
+  //         x: 0,
+  //         y: 0,
+  //       },
+  //       key: keys[i]
+  //     });
+  //     this.createObject(control, 'controls');
+  //   }
+  // }
 
   createObject(item, group) {
     this[group].push(item);
@@ -441,6 +490,7 @@ export class Reacteroids extends Component {
     let endgame;
     let startgame;
     let instructions;
+    let touchcontrols;
     let message;
 
     if (this.state.currentScore <= 0) {
@@ -497,6 +547,48 @@ export class Reacteroids extends Component {
       );
     }
 
+    if (this.state.mobile) {
+      touchcontrols = (
+        <Flex>
+          <IconButton
+            id="left"
+            size="lg"
+            isRound
+            icon={<ArrowLeftIcon w={6} />}
+            onTouchStart={(e) => this.handleTouches(true, e)}
+            onTouchEnd={(e) => this.handleTouches(false, e)}
+          />
+          <Spacer />
+          <IconButton
+            id="right"
+            size="lg"
+            isRound
+            icon={<ArrowRightIcon />}
+            onTouchStart={(e) => this.handleTouches(true, e)}
+            onTouchEnd={(e) => this.handleTouches(false, e)}
+          />
+          <Spacer />
+          <IconButton
+            id="up"
+            size="lg"
+            isRound
+            icon={<ArrowUpIcon />}
+            onTouchStart={(e) => this.handleTouches(true, e)}
+            onTouchEnd={(e) => this.handleTouches(false, e)}
+          />
+          <Spacer />
+          <IconButton
+            id="fire"
+            size="lg"
+            isRound
+            icon={<MoonIcon />}
+            onTouchStart={(e) => this.handleTouches(true, e)}
+            onTouchEnd={(e) => this.handleTouches(false, e)}
+          />
+        </Flex>
+      );
+    }
+
     if (this.state.shipLoaded & !this.state.mobile) {
       instructions = (
         <div
@@ -544,6 +636,7 @@ export class Reacteroids extends Component {
             height: '100%',
           }}
         />
+        {touchcontrols}
         {instructions}
       </div>
     );

@@ -98,13 +98,16 @@ export const Home: React.VFC = () => {
               <Modal isOpen={isOpen} onClose={onClose} isCentered size="lg">
                 <ModalOverlay />
                 <ModalContent>
-                  <ModalHeader>Asteroids!</ModalHeader>
-                  <Reacteroids
-                    bgColor={canvasBG}
-                    itemColor={itemColor}
-                    colorMode={color}
-                    mobile={true}
-                  />
+                  <ModalHeader>Reacteroids!</ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <Reacteroids
+                      bgColor={canvasBG}
+                      itemColor={itemColor}
+                      colorMode={color}
+                      mobile={true}
+                    />
+                  </ModalBody>
                 </ModalContent>
               </Modal>
             </Box>
