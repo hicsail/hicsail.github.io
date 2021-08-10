@@ -4,11 +4,11 @@ import Asteroid from './Asteroid';
 import { randomNumBetween, randomNumBetweenExcluding } from './helpers';
 
 import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  ArrowUpIcon,
-  MoonIcon,
-} from '@chakra-ui/icons';
+  IoArrowBackOutline,
+  IoArrowForwardOutline,
+  IoArrowUpOutline,
+  IoNuclear,
+} from 'react-icons/io5';
 import { Flex, Spacer, IconButton } from '@chakra-ui/react';
 
 const KEY = {
@@ -535,7 +535,7 @@ export class Reacteroids extends Component {
             id="left"
             size="lg"
             isRound
-            icon={<ArrowLeftIcon w={6} />}
+            icon={<IoArrowBackOutline w={6} />}
             onTouchStart={() => this.handleTouches(true, 'left')}
             onTouchMove={() => this.handleTouches(true, 'left')}
             onTouchCancel={() => this.handleTouches(false, 'left')}
@@ -546,7 +546,7 @@ export class Reacteroids extends Component {
             id="right"
             size="lg"
             isRound
-            icon={<ArrowRightIcon />}
+            icon={<IoArrowForwardOutline />}
             onTouchStart={() => this.handleTouches(true, 'right')}
             onTouchMove={() => this.handleTouches(true, 'right')}
             onTouchCancel={() => this.handleTouches(false, 'right')}
@@ -557,7 +557,7 @@ export class Reacteroids extends Component {
             id="up"
             size="lg"
             isRound
-            icon={<ArrowUpIcon />}
+            icon={<IoArrowUpOutline />}
             onTouchStart={() => this.handleTouches(true, 'up')}
             onTouchMove={() => this.handleTouches(true, 'up')}
             onTouchCancel={() => this.handleTouches(false, 'up')}
@@ -568,7 +568,7 @@ export class Reacteroids extends Component {
             id="fire"
             size="lg"
             isRound
-            icon={<MoonIcon />}
+            icon={<IoNuclear />}
             onTouchStart={() => this.handleTouches(true, 'fire')}
             onTouchMove={() => this.handleTouches(true, 'fire')}
             onTouchCancel={() => this.handleTouches(false, 'fire')}
