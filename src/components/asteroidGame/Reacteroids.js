@@ -233,7 +233,7 @@ export class Reacteroids extends Component {
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
       let asteroid = new Asteroid({
-        size: Math.round(randomNumBetween(40, 80) / window.devicePixelRatio),
+        size: Math.round(randomNumBetween(40, 80 / this.state.screen.ratio)),
         position: {
           x: randomNumBetweenExcluding(
             0,
