@@ -76,9 +76,10 @@ export class Reacteroids extends Component {
     });
   }
 
-  handleTouches(value, e) {
+  handleTouches(value, id) {
     let keys = this.state.keys;
-    switch (e.target.id) {
+
+    switch (id) {
       case 'left':
         keys.left = value;
         break;
@@ -549,14 +550,16 @@ export class Reacteroids extends Component {
 
     if (this.state.mobile) {
       touchcontrols = (
-        <Flex position="sticky" top="0">
+        <Flex position="sticky">
           <IconButton
             id="left"
             size="lg"
             isRound
             icon={<ArrowLeftIcon w={6} />}
-            onTouchStart={(e) => this.handleTouches(true, e)}
-            onTouchEnd={(e) => this.handleTouches(false, e)}
+            onTouchStart={() => this.handleTouches(true, 'left')}
+            onTouchMove={() => this.handleTouches(true, 'left')}
+            onTouchCancel={() => this.handleTouches(false, 'left')}
+            onTouchEnd={() => this.handleTouches(false, 'left')}
           />
           <Spacer />
           <IconButton
@@ -564,8 +567,10 @@ export class Reacteroids extends Component {
             size="lg"
             isRound
             icon={<ArrowRightIcon />}
-            onTouchStart={(e) => this.handleTouches(true, e)}
-            onTouchEnd={(e) => this.handleTouches(false, e)}
+            onTouchStart={() => this.handleTouches(true, 'right')}
+            onTouchMove={() => this.handleTouches(true, 'right')}
+            onTouchCancel={() => this.handleTouches(false, 'right')}
+            onTouchEnd={() => this.handleTouches(false, 'right')}
           />
           <Spacer />
           <IconButton
@@ -573,8 +578,10 @@ export class Reacteroids extends Component {
             size="lg"
             isRound
             icon={<ArrowUpIcon />}
-            onTouchStart={(e) => this.handleTouches(true, e)}
-            onTouchEnd={(e) => this.handleTouches(false, e)}
+            onTouchStart={() => this.handleTouches(true, 'up')}
+            onTouchMove={() => this.handleTouches(true, 'up')}
+            onTouchCancel={() => this.handleTouches(false, 'up')}
+            onTouchEnd={() => this.handleTouches(false, 'up')}
           />
           <Spacer />
           <IconButton
@@ -582,8 +589,10 @@ export class Reacteroids extends Component {
             size="lg"
             isRound
             icon={<MoonIcon />}
-            onTouchStart={(e) => this.handleTouches(true, e)}
-            onTouchEnd={(e) => this.handleTouches(false, e)}
+            onTouchStart={() => this.handleTouches(true, 'fire')}
+            onTouchMove={() => this.handleTouches(true, 'fire')}
+            onTouchCancel={() => this.handleTouches(false, 'fire')}
+            onTouchEnd={() => this.handleTouches(false, 'fire')}
           />
         </Flex>
       );
