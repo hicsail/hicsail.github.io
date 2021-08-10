@@ -64,7 +64,7 @@ export class Reacteroids extends Component {
     });
   }
 
-  handleKeys(value) {
+  handleKeys(value, e) {
     let keys = this.state.keys;
     if (e.keyCode === KEY.LEFT || e.keyCode === KEY.A) keys.left = value;
     if (e.keyCode === KEY.RIGHT || e.keyCode === KEY.D) keys.right = value;
@@ -549,7 +549,7 @@ export class Reacteroids extends Component {
 
     if (this.state.mobile) {
       touchcontrols = (
-        <Flex>
+        <Flex position="sticky" top="0">
           <IconButton
             id="left"
             size="lg"

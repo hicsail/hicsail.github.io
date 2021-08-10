@@ -93,9 +93,9 @@ export const Home: React.VFC = () => {
               {' '}
               Where Academia Meets Application
             </Heading>
-            <Box justifyContent="center">
+            <Box justifyContent="center" overflow="hidden">
               <Button onClick={onOpen}>Ready to launch? 🚀</Button>
-              <Modal isOpen={isOpen} onClose={onClose} isCentered size="lg">
+              <Modal isOpen={isOpen} onClose={onClose} autoFocus size="sm">
                 <ModalOverlay />
                 <ModalContent>
                   <ModalHeader>Reacteroids!</ModalHeader>
