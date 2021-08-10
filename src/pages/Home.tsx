@@ -11,7 +11,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
+  IconButton,
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
@@ -19,6 +19,7 @@ import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
+import { IoRocketSharp } from 'react-icons/io5';
 
 const HeroText = styled.div`
   position: absolute;
@@ -31,9 +32,9 @@ const HeroText = styled.div`
 `;
 
 const PlayButton = styled.div`
-  position: -webkit-sticky;
-  bottom: 50px;
-  right: 50px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
 `;
 
 const StyledLink = styled.a`
@@ -55,9 +56,23 @@ export const Home: React.VFC = () => {
 
   return (
     <Box width="100%" boxSizing="border-box">
-      {/* <PlayButton>
-        <Button display={['initial', 'none']} onClick={onOpen}>🚀</Button>
-      </PlayButton> */}
+      <PlayButton>
+        <IconButton
+          size="lg"
+          isRound
+          style={{
+            backgroundColor: 'orange',
+            justifyContent: 'center',
+            alignContent: 'center',
+            display: 'flex',
+          }}
+          fontSize="20px"
+          aria-label="Launch Game"
+          icon={<IoRocketSharp />}
+          display={['initial', 'none']}
+          onClick={onOpen}
+        />
+      </PlayButton>
       <Box display={['none', 'initial']}>
         <HeroText>
           <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
@@ -109,17 +124,17 @@ export const Home: React.VFC = () => {
               Where Academia Meets Application
             </Heading>
             <Box justifyContent="center" overflow="hidden">
-              <Button onClick={onOpen}>Ready to launch? 🚀</Button>
               <Modal
                 colorScheme="blackAlpha"
                 isOpen={isOpen}
                 onClose={onClose}
+                isCentered
                 autoFocus
-                size="sm"
+                size="full"
               >
                 <ModalOverlay />
                 <ModalContent>
-                  <ModalHeader>Reacteroids!</ModalHeader>
+                  <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
                     <Reacteroids

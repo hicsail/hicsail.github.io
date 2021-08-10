@@ -187,6 +187,7 @@ export class Reacteroids extends Component {
   }
 
   startGame() {
+    console.log('Ratio', this.state.screen.ratio);
     this.setState({
       inGame: true,
       currentScore: 0,
@@ -233,7 +234,9 @@ export class Reacteroids extends Component {
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
       let asteroid = new Asteroid({
-        size: Math.round(randomNumBetween(40, 80 / this.state.screen.ratio)),
+        size: Math.round(
+          randomNumBetween(40, 80 / (this.state.screen.ratio - 1)),
+        ),
         position: {
           x: randomNumBetweenExcluding(
             0,
