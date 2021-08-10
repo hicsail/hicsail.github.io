@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Ship from './Ship';
 import Asteroid from './Asteroid';
 import { randomNumBetween, randomNumBetweenExcluding } from './helpers';
-import { size } from 'lodash';
 
 import {
   ArrowLeftIcon,
@@ -45,7 +44,6 @@ export class Reacteroids extends Component {
       inGame: false,
       shipLoaded: false,
       colorMode: 'white',
-      mobile: false,
     };
     this.canvasRef = React.createRef(null);
     this.ship = [];
@@ -142,7 +140,6 @@ export class Reacteroids extends Component {
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
     this.state.colorMode = this.props.colorMode;
-    this.state.mobile = this.props.mobile;
 
     if (this.state.colorMode == 'white') {
       context.fillStyle = '#FFFFFF';
@@ -236,7 +233,7 @@ export class Reacteroids extends Component {
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
       let asteroid = new Asteroid({
-        size: Math.round(randomNumBetween(40, 80)),
+        size: Math.round(randomNumBetween(40, 80) / window.devicePixelRatio),
         position: {
           x: randomNumBetweenExcluding(
             0,
@@ -257,26 +254,6 @@ export class Reacteroids extends Component {
       this.createObject(asteroid, 'asteroids');
     }
   }
-
-  // createMobileControls(boxWidth, boxHeight) {
-  //   const keys = ['left', 'right', 'up', ''];
-  //   const yPos = this.state.screen.height / 1.5;
-
-  //   for (let i = 0; i < keys.length; i++) {
-  //     let control = new Control({
-  //       boxSize: {
-  //         width: boxWidth * 16,
-  //         height: boxHeight * 16
-  //       },
-  //       boxPosition: {
-  //         x: 0,
-  //         y: 0,
-  //       },
-  //       key: keys[i]
-  //     });
-  //     this.createObject(control, 'controls');
-  //   }
-  // }
 
   createObject(item, group) {
     this[group].push(item);
@@ -508,7 +485,7 @@ export class Reacteroids extends Component {
           <button
             style={{
               position: 'absolute',
-              color: this.state.colorMode == 'white' ? '#000000' : '#FFFFFF',
+              color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
               fontSize: '1.5rem',
               padding: '10px 20px',
               margin: '10px',
@@ -531,7 +508,7 @@ export class Reacteroids extends Component {
           <button
             style={{
               position: 'absolute',
-              color: this.state.colorMode == 'white' ? '#000000' : '#FFFFFF',
+              color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
               fontSize: '1.5rem',
               padding: '10px 20px',
               margin: '10px',
@@ -548,7 +525,7 @@ export class Reacteroids extends Component {
       );
     }
 
-    if (this.state.mobile) {
+    if (this.props.mobile) {
       touchcontrols = (
         <Flex position="sticky">
           <IconButton
@@ -598,7 +575,7 @@ export class Reacteroids extends Component {
       );
     }
 
-    if (this.state.shipLoaded & !this.state.mobile) {
+    if (this.state.shipLoaded & !this.props.mobile) {
       instructions = (
         <div
           style={{
