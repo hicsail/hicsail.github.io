@@ -621,6 +621,7 @@ export class Reacteroids extends Component {
             fontSize: '1.5rem',
             width: '100%',
             textAlign: 'center',
+            margin: '10px',
           }}
         >
           Score: {this.state.currentScore}
