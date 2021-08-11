@@ -477,6 +477,7 @@ export class Reacteroids extends Component {
     let instructions;
     let touchcontrols;
     let message;
+    let score;
 
     if (this.state.currentScore <= 0) {
       message = '0 points... So sad.';
@@ -488,18 +489,21 @@ export class Reacteroids extends Component {
 
     if (!this.state.inGame) {
       endgame = (
-        <div>
+        <div
+          style={{
+            textAlign: 'center',
+            width: '100%',
+            fontSize: '1.5rem',
+          }}
+        >
           <button
             style={{
-              position: 'absolute',
+              // position: 'absolute',
+              // padding: '10px 20px',
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              fontSize: '1.5rem',
-              padding: '10px 20px',
               margin: '10px',
               fontFamily: 'Karbon',
               cursor: 'pointer',
-              width: '100%',
-              textAlign: 'center',
             }}
             onClick={this.startGame.bind(this)}
           >
@@ -511,18 +515,21 @@ export class Reacteroids extends Component {
 
     if (!this.state.shipLoaded) {
       startgame = (
-        <div>
+        <div
+          style={{
+            textAlign: 'center',
+            width: '100%',
+            fontSize: '1.5rem',
+          }}
+        >
           <button
             style={{
-              position: 'absolute',
+              // position: 'absolute',
+              // padding: '10px 20px',
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              fontSize: '1.5rem',
-              padding: '10px 20px',
               margin: '10px',
               fontFamily: 'Karbon',
               cursor: 'pointer',
-              width: '100%',
-              textAlign: 'center',
             }}
             onClick={this.launchShip.bind(this)}
           >
@@ -607,8 +614,8 @@ export class Reacteroids extends Component {
       );
     }
 
-    return (
-      <div>
+    if (this.state.shipLoaded) {
+      score = (
         <div
           style={{
             fontSize: '1.5rem',
@@ -618,6 +625,21 @@ export class Reacteroids extends Component {
         >
           Score: {this.state.currentScore}
         </div>
+      );
+    }
+
+    return (
+      <div>
+        {/* <div
+          style={{
+            fontSize: '1.5rem',
+            width: '100%',
+            textAlign: 'center',
+          }}
+        >
+          Score: {this.state.currentScore}
+        </div> */}
+        {score}
         {endgame}
         {startgame}
         <canvas
