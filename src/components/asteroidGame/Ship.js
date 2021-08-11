@@ -121,7 +121,7 @@ export default class Ship {
 
     // Draw
     const context = state.context;
-    const screenRatio = state.screen.ratio - 1;
+    const screenRatio = state.screen.ratio === 1 ? 1 : state.screen.ratio - 1;
     const sizeMultiplier = 1;
     context.save();
     context.translate(this.position.x, this.position.y);
