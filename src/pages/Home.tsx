@@ -15,6 +15,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
+import { isBrowser, isMobile } from 'react-device-detect';
 import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
@@ -35,6 +36,7 @@ const PlayButton = styled.div`
   position: fixed;
   bottom: 25px;
   right: 25px;
+  z-index: 1;
 `;
 
 const StyledLink = styled.a`
@@ -56,42 +58,51 @@ export const Home: React.VFC = () => {
 
   return (
     <Box width="100%" boxSizing="border-box">
-      <PlayButton>
-        <IconButton
-          size="lg"
-          isRound
-          style={{
-            backgroundColor: 'orange',
-            justifyContent: 'center',
-            alignContent: 'center',
-            display: 'flex',
-          }}
-          fontSize="20px"
-          aria-label="Launch Game"
-          icon={<IoRocketSharp />}
-          display={['initial', 'none']}
-          onClick={onOpen}
-        />
-      </PlayButton>
-      <Box display={['none', 'initial']}>
-        <HeroText>
-          <Heading fontSize={['30px', '60px', '80px', '100px']} textStyle="h1">
-            {' '}
-            Software & Application Innovation Lab
-          </Heading>
-          <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
-            {' '}
-            Where Academia Meets Application
-          </Heading>
-        </HeroText>
-      </Box>
-      <Box display={['none', 'initial']}>
-        <Reacteroids
-          bgColor={canvasBG}
-          itemColor={itemColor}
-          colorMode={color}
-        />
-      </Box>
+      {isMobile && (
+        <PlayButton>
+          <IconButton
+            size="lg"
+            isRound
+            style={{
+              backgroundColor: 'orange',
+              justifyContent: 'center',
+              alignContent: 'center',
+              display: 'flex',
+            }}
+            fontSize="20px"
+            aria-label="Launch Game"
+            icon={<IoRocketSharp />}
+            display={['initial', 'none']}
+            onClick={onOpen}
+          />
+        </PlayButton>
+      )}
+      {isBrowser && (
+        <Box display={['none', 'initial']}>
+          <HeroText>
+            <Heading
+              fontSize={['30px', '60px', '80px', '100px']}
+              textStyle="h1"
+            >
+              {' '}
+              Software & Application Innovation Lab
+            </Heading>
+            <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
+              {' '}
+              Where Academia Meets Application
+            </Heading>
+          </HeroText>
+        </Box>
+      )}
+      {isBrowser && (
+        <Box display={['none', 'initial']}>
+          <Reacteroids
+            bgColor={canvasBG}
+            itemColor={itemColor}
+            colorMode={color}
+          />
+        </Box>
+      )}
       <Box margin="0 auto" maxWidth="80%">
         <Grid
           gridTemplateColumns={{
@@ -107,47 +118,49 @@ export const Home: React.VFC = () => {
             'contact contact'`,
             md: `
             'heading heading heading' 
-            'about about ... '
+            'about about about '
             'projects projectgrid projectgrid' 
             'contact contact contact'`,
           }}
           gridGap="23px"
           width="100%"
         >
-          <Box gridArea="heading" display={['initial', 'none']}>
-            <Heading fontSize="2rem">
-              {' '}
-              Software & Application Innovation Lab
-            </Heading>
-            <Heading fontSize="1.25rem">
-              {' '}
-              Where Academia Meets Application
-            </Heading>
-            <Box justifyContent="center" overflow="hidden">
-              <Modal
-                colorScheme="blackAlpha"
-                isOpen={isOpen}
-                onClose={onClose}
-                isCentered
-                autoFocus
-                size="full"
-              >
-                <ModalOverlay />
-                <ModalContent>
-                  <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
-                  <ModalCloseButton />
-                  <ModalBody>
-                    <Reacteroids
-                      bgColor={canvasBG}
-                      itemColor={itemColor}
-                      colorMode={color}
-                      mobile={true}
-                    />
-                  </ModalBody>
-                </ModalContent>
-              </Modal>
+          {isMobile && (
+            <Box gridArea="heading">
+              <Heading fontSize="2rem">
+                {' '}
+                Software & Application Innovation Lab
+              </Heading>
+              <Heading fontSize="1.25rem">
+                {' '}
+                Where Academia Meets Application
+              </Heading>
+              <Box justifyContent="center" overflow="hidden">
+                <Modal
+                  colorScheme="blackAlpha"
+                  isOpen={isOpen}
+                  onClose={onClose}
+                  isCentered
+                  autoFocus
+                  size="full"
+                >
+                  <ModalOverlay />
+                  <ModalContent>
+                    <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                      <Reacteroids
+                        bgColor={canvasBG}
+                        itemColor={itemColor}
+                        colorMode={color}
+                        mobile={true}
+                      />
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
+              </Box>
             </Box>
-          </Box>
+          )}
           <Box gridArea="about" marginBottom="2em">
             <Heading textStyle="h2">About</Heading>
             <Text textStyle="paragraph">
