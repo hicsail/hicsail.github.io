@@ -103,7 +103,7 @@ export default function NavigationBar() {
 }
 
 const DesktopNav = () => {
-  const texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
+  const texttheme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC'];
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (

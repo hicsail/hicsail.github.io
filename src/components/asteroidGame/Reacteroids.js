@@ -494,14 +494,12 @@ export class Reacteroids extends Component {
             textAlign: 'center',
             width: '100%',
             fontSize: '1.5rem',
+            margin: '10px',
           }}
         >
           <button
             style={{
-              // position: 'absolute',
-              // padding: '10px 20px',
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              margin: '10px',
               fontFamily: 'Karbon',
               cursor: 'pointer',
             }}
@@ -631,15 +629,6 @@ export class Reacteroids extends Component {
 
     return (
       <div>
-        {/* <div
-          style={{
-            fontSize: '1.5rem',
-            width: '100%',
-            textAlign: 'center',
-          }}
-        >
-          Score: {this.state.currentScore}
-        </div> */}
         {score}
         {endgame}
         {startgame}
