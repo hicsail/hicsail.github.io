@@ -127,11 +127,11 @@ export const Home: React.VFC = () => {
         >
           {isMobile && (
             <Box gridArea="heading">
-              <Heading fontSize="2rem">
+              <Heading fontSize="3rem" mt={8}>
                 {' '}
                 Software & Application Innovation Lab
               </Heading>
-              <Heading fontSize="1.25rem">
+              <Heading fontSize="1.5rem">
                 {' '}
                 Where Academia Meets Application
               </Heading>
@@ -162,7 +162,9 @@ export const Home: React.VFC = () => {
             </Box>
           )}
           <Box gridArea="about" marginBottom="2em">
-            <Heading textStyle="h2">About</Heading>
+            <Heading textStyle="h2" mt="2rem">
+              About
+            </Heading>
             <Text textStyle="paragraph">
               The Software & Application Innovation Lab (SAIL) at the{' '}
               <Link href="https://www.bu.edu/hic/">
