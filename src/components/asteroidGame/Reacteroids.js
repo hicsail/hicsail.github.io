@@ -635,7 +635,7 @@ export class Reacteroids extends Component {
         <canvas
           ref={this.canvasRef}
           width={this.state.screen.width * this.state.screen.ratio}
-          height={this.state.screen.height * this.state.screen.ratio}
+          height={this.state.screen.height * 0.9 * this.state.screen.ratio}
           style={{
             width: '100%',
             height: '100%',
