@@ -30,7 +30,7 @@ const theme = extendTheme({
     h2: {
       fontSize: ['1rem', '2rem'],
       fontWeight: 'bold',
-      mt: ['100px'],
+      // mt: ['100px'],
     },
     paragraph: {
       fontSize: ['1.125rem', '1.25rem'],
