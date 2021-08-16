@@ -14,7 +14,9 @@ export const HighlightedProjectGrid = () => {
           paddingBottom="2em"
           key={i}
         >
-          <Text fontSize="2.7rem">{project.title}</Text>
+          <Text fontSize={{ base: '1.75rem', md: '2rem' }}>
+            {project.title}
+          </Text>
           <Text textStyle="paragraph">{project.text}</Text>
           <Text textStyle="paragraph">
             <b>PI(s): </b>

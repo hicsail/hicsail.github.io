@@ -145,7 +145,7 @@ export const Home: React.VFC = () => {
                   size="full"
                 >
                   <ModalOverlay />
-                  <ModalContent>
+                  <ModalContent bg={useColorModeValue('#FFFFFF', '#121212')}>
                     <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
