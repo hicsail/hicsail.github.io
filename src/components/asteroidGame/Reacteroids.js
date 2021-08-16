@@ -439,8 +439,8 @@ export class Reacteroids extends Component {
 
     for (var i = 0; i < object.vertices.length; i++) {
       vertices[i] = {
-        x: object.position.x + vertices[i].x,
-        y: object.position.y + vertices[i].y,
+        x: (object.position.x + vertices[i].x) / this.state.screen.ratio,
+        y: (object.position.y + vertices[i].y) / this.state.screen.ratio,
       };
     }
 
@@ -452,8 +452,8 @@ export class Reacteroids extends Component {
 
     for (var i = 0; i < object.vertices.length; i++) {
       vertices[i] = {
-        x: object.position.x + object.vertices[i].x,
-        y: object.position.y + object.vertices[i].y,
+        x: (object.position.x + object.vertices[i].x) / this.state.screen.ratio,
+        y: (object.position.y + object.vertices[i].y) / this.state.screen.ratio,
       };
     }
 
