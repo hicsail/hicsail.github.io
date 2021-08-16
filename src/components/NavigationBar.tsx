@@ -39,6 +39,8 @@ export default function NavigationBar() {
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
+        paddingLeft='0'
+        paddingRight='0'
         borderBottom={1}
         justifyContent="center"
       >
