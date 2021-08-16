@@ -494,7 +494,7 @@ export class Reacteroids extends Component {
             textAlign: 'center',
             width: '100%',
             fontSize: '1.5rem',
-            margin: '10px',
+            // margin: '10px',
           }}
         >
           <button
@@ -525,7 +525,7 @@ export class Reacteroids extends Component {
               // position: 'absolute',
               // padding: '10px 20px',
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              margin: '10px',
+              // margin: '10px',
               fontFamily: 'Karbon',
               cursor: 'pointer',
             }}
@@ -619,7 +619,7 @@ export class Reacteroids extends Component {
             fontSize: '1.5rem',
             width: '100%',
             textAlign: 'center',
-            margin: '10px',
+            // margin: '10px',
           }}
         >
           Score: {this.state.currentScore}
