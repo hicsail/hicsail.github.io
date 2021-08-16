@@ -148,7 +148,7 @@ export const Home: React.VFC = () => {
                   <ModalContent bg={useColorModeValue('#FFFFFF', '#121212')}>
                     <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody>
+                    <ModalBody ml={0} mr={0}>
                       <Reacteroids
                         bgColor={canvasBG}
                         itemColor={itemColor}
