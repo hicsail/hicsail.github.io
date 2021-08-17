@@ -80,7 +80,7 @@ export default function NavigationBar() {
             width="100%"
           >
             <DesktopNav />
-            <ToggleColorButton></ToggleColorButton>
+            <ToggleColorButton borderWidth={'0'}></ToggleColorButton>
           </Flex>
         </Flex>
 
@@ -200,7 +200,7 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-      <ToggleColorButton></ToggleColorButton>
+      <ToggleColorButton borderWidth={'1px'}></ToggleColorButton>
     </Stack>
   );
 };
