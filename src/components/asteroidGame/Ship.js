@@ -138,23 +138,29 @@ export default class Ship {
     context.lineWidth = 2;
     context.beginPath();
 
-    context.moveTo(0, (sizeMultiplier * -30) / screenRatio);
-    context.lineTo(
-      (sizeMultiplier * 20) / screenRatio,
-      (sizeMultiplier * 20) / screenRatio,
-    );
-    context.lineTo(
-      (sizeMultiplier * 10) / screenRatio,
-      (sizeMultiplier * 14) / screenRatio,
-    );
-    context.lineTo(
-      (sizeMultiplier * -10) / screenRatio,
-      (sizeMultiplier * 14) / screenRatio,
-    );
-    context.lineTo(
-      (sizeMultiplier * -20) / screenRatio,
-      (sizeMultiplier * 20) / screenRatio,
-    );
+    context.moveTo(0, -30);
+    context.lineTo(20, 20);
+    context.lineTo(10, 14);
+    context.lineTo(-10, 14);
+    context.lineTo(-20, 20);
+
+    // context.moveTo(0, (sizeMultiplier * -30) / screenRatio);
+    // context.lineTo(
+    //   (sizeMultiplier * 20) / screenRatio,
+    //   (sizeMultiplier * 20) / screenRatio,
+    // );
+    // context.lineTo(
+    //   (sizeMultiplier * 10) / screenRatio,
+    //   (sizeMultiplier * 14) / screenRatio,
+    // );
+    // context.lineTo(
+    //   (sizeMultiplier * -10) / screenRatio,
+    //   (sizeMultiplier * 14) / screenRatio,
+    // );
+    // context.lineTo(
+    //   (sizeMultiplier * -20) / screenRatio,
+    //   (sizeMultiplier * 20) / screenRatio,
+    // );
 
     context.closePath();
     context.fill();

@@ -233,14 +233,14 @@ export class Reacteroids extends Component {
     let asteroids = [];
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
+      if (this.props.mobile) {
+        let asteroidSize = randomNumBetween(20, 40);
+      } else {
+        let asteroidSize = randomNumBetween(40, 80);
+      }
+
       let asteroid = new Asteroid({
-        size: Math.round(
-          randomNumBetween(
-            40,
-            80 /
-              (this.state.screen.ratio === 1 ? 1 : this.state.screen.ratio - 1),
-          ),
-        ),
+        size: Math.round(asteroidSize),
         position: {
           x: randomNumBetweenExcluding(
             0,
@@ -439,8 +439,8 @@ export class Reacteroids extends Component {
 
     for (var i = 0; i < object.vertices.length; i++) {
       vertices[i] = {
-        x: (object.position.x + vertices[i].x) / this.state.screen.ratio,
-        y: (object.position.y + vertices[i].y) / this.state.screen.ratio,
+        x: object.position.x + vertices[i].x,
+        y: object.position.y + vertices[i].y,
       };
     }
 
@@ -452,8 +452,8 @@ export class Reacteroids extends Component {
 
     for (var i = 0; i < object.vertices.length; i++) {
       vertices[i] = {
-        x: (object.position.x + object.vertices[i].x) / this.state.screen.ratio,
-        y: (object.position.y + object.vertices[i].y) / this.state.screen.ratio,
+        x: object.position.x + object.vertices[i].x,
+        y: object.position.y + object.vertices[i].y,
       };
     }
 
