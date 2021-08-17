@@ -30,8 +30,8 @@ export default function NavigationBar() {
       width="100%"
       marginTop={{ base: '15px', md: '30px' }}
       marginBottom={{ base: '15px', md: '15px' }}
-      paddingLeft={{ base: '30px', md: '30px' }}
-      paddingRight={{ base: '30px', md: '30px' }}
+      paddingLeft={{ base: '30px', md: '0' }}
+      paddingRight={{ base: '30px', md: '0' }}
       maxWidth={{ lg: '80%', md: '90%' }}
     >
       <Flex
