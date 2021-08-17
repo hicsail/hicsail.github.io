@@ -130,7 +130,7 @@ export default class Ship {
       context.fillStyle = '#FFFFFF';
     } else {
       context.strokeStyle = '#FFFFFF';
-      context.fillStyle = '#000000';
+      context.fillStyle = '#121212';
     }
 
     context.lineWidth = 2;
