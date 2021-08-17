@@ -136,6 +136,9 @@ export class Reacteroids extends Component {
     const context = this.state.context;
     const keys = this.state.keys;
     const ship = this.ship[0];
+
+    this.state.screen.ratio = window.devicePixelRatio || 1;
+
     context.save();
     context.scale(this.state.screen.ratio, this.state.screen.ratio);
 
@@ -187,7 +190,6 @@ export class Reacteroids extends Component {
   }
 
   startGame() {
-    console.log('Ratio', this.state.screen.ratio);
     this.setState({
       inGame: true,
       currentScore: 0,
@@ -233,10 +235,11 @@ export class Reacteroids extends Component {
     let asteroids = [];
     let ship = this.ship[0];
     for (let i = 0; i < howMany; i++) {
+      let asteroidSize;
       if (this.props.mobile) {
-        let asteroidSize = randomNumBetween(20, 40);
+        asteroidSize = randomNumBetween(20, 40);
       } else {
-        let asteroidSize = randomNumBetween(40, 80);
+        asteroidSize = randomNumBetween(40, 80);
       }
 
       let asteroid = new Asteroid({
