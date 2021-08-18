@@ -6,16 +6,20 @@ interface Props {
   borderWidth: string;
 }
 
-export const ToggleColorButton: React.FC<Props> = ({
-  borderWidth
-}) => {
+export const ToggleColorButton: React.FC<Props> = ({ borderWidth }) => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <header>
       <IconButton
         size="lg"
         aria-label="Toggle NightMode"
-        icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        icon={
+          colorMode === 'light' ? (
+            <MoonIcon color="#73A6FC" />
+          ) : (
+            <SunIcon color="#EBB54A" />
+          )
+        }
         borderColor={colorMode === 'light' ? 'black' : 'white'}
         borderWidth={borderWidth}
         variant="ghost"
