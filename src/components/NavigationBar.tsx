@@ -284,7 +284,7 @@ const NAV_ITEMS: Array<NavItem> = [
       },
       {
         label: 'ALUMNI',
-        href: 'alumni',
+        href: '/alumni',
         hash: false,
       },
     ],
@@ -301,11 +301,11 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'PRESENTATIONS',
-        href: 'presentations',
+        href: '/presentations',
       },
       {
         label: 'PUBLICATIONS',
-        href: 'Publications',
+        href: '/publications',
       },
     ],
   },
