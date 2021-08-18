@@ -17,7 +17,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Shirene Cao',
-    picture: '../../img/team/shirene.jpg',
+    picture: '../../img/team/Shirene.jpg',
     role: 'Software Engineer',
     outsideLinks: [
       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/xinyun-cao' },
@@ -27,7 +27,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Dany Fu',
-    picture: '../../img/team/dany.jpg',
+    picture: '../../img/team/Dany.jpg',
     role: 'Senior Software Engineer',
     research: '',
     outsideLinks: [
@@ -44,7 +44,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Arezoo Sadeghi',
-    picture: '../../img/team/arezoo.jpg',
+    picture: '../../img/team/Arezoo.jpg',
     role: 'Software Engineer',
     research: '',
     outsideLinks: [
@@ -58,7 +58,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Vidya Akavoor',
-    picture: '../../img/team/vidya.png',
+    picture: '../../img/team/Vidya.png',
     role: 'Software Engineer',
     research: '',
     outsideLinks: [
