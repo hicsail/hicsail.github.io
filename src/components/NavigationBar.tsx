@@ -30,8 +30,8 @@ export default function NavigationBar() {
       width="100%"
       marginTop={{ base: '15px', md: '30px' }}
       marginBottom={{ base: '15px', md: '15px' }}
-      paddingLeft={{ base: '30px', md: '30px' }}
-      paddingRight={{ base: '30px', md: '30px' }}
+      paddingLeft={{ base: '30px', md: '0' }}
+      paddingRight={{ base: '30px', md: '0' }}
       maxWidth={{ lg: '80%', md: '90%' }}
     >
       <Flex
@@ -80,7 +80,7 @@ export default function NavigationBar() {
             width="100%"
           >
             <DesktopNav />
-            <ToggleColorButton></ToggleColorButton>
+            <ToggleColorButton borderWidth={'0'}></ToggleColorButton>
           </Flex>
         </Flex>
 
@@ -200,7 +200,7 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-      <ToggleColorButton></ToggleColorButton>
+      <ToggleColorButton borderWidth={'1px'}></ToggleColorButton>
     </Stack>
   );
 };
@@ -284,7 +284,7 @@ const NAV_ITEMS: Array<NavItem> = [
       },
       {
         label: 'ALUMNI',
-        href: 'alumni',
+        href: '/alumni',
         hash: false,
       },
     ],
@@ -301,11 +301,11 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'PRESENTATIONS',
-        href: 'presentations',
+        href: '/presentations',
       },
       {
         label: 'PUBLICATIONS',
-        href: 'Publications',
+        href: '/publications',
       },
     ],
   },

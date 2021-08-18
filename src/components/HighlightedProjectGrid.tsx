@@ -5,6 +5,8 @@ import { PROJECT_LIST } from '../utils/data/projectInformation';
 export const HighlightedProjectGrid = () => {
   return (
     <Grid
+      borderTop={useColorModeValue('2px solid black', '2px solid white')}
+      paddingTop="2em"
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
     >
@@ -14,7 +16,7 @@ export const HighlightedProjectGrid = () => {
           paddingBottom="2em"
           key={i}
         >
-          <Text fontSize={{ base: '1.75rem', md: '2rem' }}>
+          <Text fontSize={{ base: '1.5rem', md: '2rem' }}>
             {project.title}
           </Text>
           <Text textStyle="paragraph">{project.text}</Text>
