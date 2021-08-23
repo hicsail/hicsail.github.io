@@ -14,7 +14,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 3,
     Name: "Ben Getchell",
-    Post_Internship: "Software & Application Innovation Lab",
+    Post_Internship: "Software & Application Innovation Lab, Nth Party, Ltd.",
     Prior_Position: "Software Engineer Intern, Software Engineer"
   }, {
     Intern_ID: 4,
@@ -69,7 +69,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 14,
     Name: "Rudhra Raveendran",
-    Post_Internship: "Current BU Student",
+    Post_Internship: "Microsoft",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 15,
@@ -84,7 +84,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 17,
     Name: "Kinan Dak Albab",
-    Post_Internship: "Current BU Ph.D. Student",
+    Post_Internship: "Ph.D. Student at Brown University",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 18,
@@ -99,7 +99,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 20,
     Name: "Rawane Issa",
-    Post_Internship: "",
+    Post_Internship: "Ph.D. Student at Boston University",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 21,
@@ -114,7 +114,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 23,
     Name: "Anya Gilad",
-    Post_Internship: "Athenahealth",
+    Post_Internship: "AthenaHealth",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 27,
@@ -124,7 +124,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 28,
     Name: "Peter Flockhart",
-    Post_Internship: "Software & Application Innovation Lab",
+    Post_Internship: "Software & Application Innovation Lab, Starry Internet",
     Prior_Position: "Software Engineer Intern, Software Engineer"
   }, {
     Intern_ID: 29,
@@ -134,7 +134,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 30,
     Name: "Rachel Manzelli",
-    Post_Internship: "",
+    Post_Internship: "Modulate.ai",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 31,
@@ -144,12 +144,12 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 32,
     Name: "Nicolas Alhaddad",
-    Post_Internship: "",
+    Post_Internship: "Ph.D. Student at Boston University",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 33,
     Name: "Yiwen Gu",
-    Post_Internship: "Ph.D. Program in Computer Science",
+    Post_Internship: "Ph.D. Student",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 34,
@@ -179,7 +179,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 39,
     Name: "FanonX Rogers",
-    Post_Internship: "",
+    Post_Internship: "Oracle",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 40,
@@ -204,7 +204,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 44,
     Name: "Tanner Braun",
-    Post_Internship: "",
+    Post_Internship: "Nth Party, Ltd.",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 45,
@@ -244,7 +244,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 52,
     Name: "Nicholas Goutermout",
-    Post_Internship: "",
+    Post_Internship: "Keystone Strategy",
     Prior_Position: "Software Engineer Intern"
   }, {
     Intern_ID: 53,
@@ -259,7 +259,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 55,
     Name: "Lucy Qin",
-    Post_Internship: "",
+    Post_Internship: "Ph.D. Student at Brown University",
     Prior_Position: "Software Engineer"
   }, {
     Intern_ID: 56,
@@ -274,7 +274,7 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
   }, {
     Intern_ID: 58,
     Name: "Sarah Leinicke",
-    Post_Internship: "",
+    Post_Internship: "Harvard University",
     Prior_Position: "Software Engineer"
   }, {
     Intern_ID: 59,
@@ -283,8 +283,13 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
     Prior_Position: "Software Engineer"
   }, {
     Intern_ID: 60,
+    Name: "Frederick Jansen",
+    Post_Internship: "Nth Party, Ltd.",
+    Prior_Position: "Associate Director of Engineering"
+  }, {
+    Intern_ID: 61,
     Name: "Dany Fu",
-    Post_Internship: "",
+    Post_Internship: "Editas Medicine",
     Prior_Position: "Senior Software Engineer"
   }
 ]
