@@ -2,10 +2,22 @@ import { Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import styled from 'styled-components';
 import { INTERN_ALUMNI } from '../utils/data/alumni';
+import { InternInformation } from '../types/types';
 
 const GridColumn = styled.div`
   flex-grow: 1;
 `;
+
+function sortByName() {  
+  return function(a : InternInformation, b: InternInformation) : number {
+    if (a["Name"] > b["Name"]) {
+      return 1;  
+    } else if (a["Name"] < b["Name"]) {
+      return -1;  
+    }
+    return 0;  
+  }  
+}
 
 export const AlumniGrid: React.FC = () => {
   return (
@@ -23,7 +35,7 @@ export const AlumniGrid: React.FC = () => {
         <GridColumn>Prior Position</GridColumn>
         <GridColumn>Current Position</GridColumn>
       </Grid>
-      {INTERN_ALUMNI.map(
+      {INTERN_ALUMNI.sort(sortByName()).map(
         ({ Intern_ID, Name, Prior_Position, Post_Internship }, i) => (
           <Grid
             templateColumns="1fr 1fr 1fr"
