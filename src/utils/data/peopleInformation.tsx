@@ -26,23 +26,6 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     bio: 'Shirene enjoys building web apps to support research efforts in digital health and data science and is currently the project lead for a series of applications used to understand sign language acquisition. She is currently pursuing a Master’s Degree in Computer Science.',
   },
   {
-    name: 'Dany Fu',
-    picture: '../../img/team/Dany.jpg',
-    role: 'Senior Software Engineer',
-    research: '',
-    outsideLinks: [
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/danyfu' },
-    ],
-    projects: [
-      { name: 'ORACLES', href: 'https://github.com/hicsail/ORACLES/tree/main' },
-      {
-        name: 'OT2-SARS-CoV2',
-        href: 'https://github.com/DAMPLAB/OT2-SARS-CoV2',
-      },
-    ],
-    bio: 'Passionate about molecular biology and genetics research, Dany applies her full stack software expertise to domains such as synthetic biology, neuroscience, bioinformatics, and infectious disease. Dany is concurrently pursing a MS in Biology at Boston University',
-  },
-  {
     name: 'Arezoo Sadeghi',
     picture: '../../img/team/Arezoo.jpg',
     role: 'Software Engineer',

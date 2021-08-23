@@ -68,6 +68,12 @@ export const INTERN_ALUMNI: Array<InternInformation> = [
     Post_Internship: '',
   },
   {
+    Intern_ID: 60,
+    Name: 'Dany Fu',
+    Prior_Position: 'Senior Software Engineer',
+    Post_Internship: ''
+  },
+  {
     Intern_ID: 35,
     Name: 'David Shen',
     Prior_Position: 'Software Engineer Intern',
