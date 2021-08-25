@@ -1,295 +1,295 @@
-import { InternInformation } from '../../types/types';
+import { AlumniInformation } from '../../types/types';
 
-export const INTERN_ALUMNI: Array<InternInformation> = [
+export const ALUMNI: Array<AlumniInformation> = [
   {
-    Intern_ID: 1,
+    Alumni_ID: 1,
     Name: "Chang Gao",
-    Post_Internship: "University of Virginia & Microsoft",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "University of Virginia & Microsoft",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 2,
+    Alumni_ID: 2,
     Name: "Aditi Dass",
-    Post_Internship: "State Street",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "State Street",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 3,
+    Alumni_ID: 3,
     Name: "Ben Getchell",
-    Post_Internship: "Software & Application Innovation Lab, Nth Party, Ltd.",
-    Prior_Position: "Software Engineer Intern, Software Engineer"
+    Post_SAIL: "Software & Application Innovation Lab, Nth Party, Ltd.",
+    SAIL_Position: "Software Engineer Intern, Software Engineer"
   }, {
-    Intern_ID: 4,
+    Alumni_ID: 4,
     Name: "Ekaterina Propokeva",
-    Post_Internship: "Amazon Web Services",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Amazon Web Services",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 5,
+    Alumni_ID: 5,
     Name: "David Wang",
-    Post_Internship: "Amazon",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Amazon",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 6,
+    Alumni_ID: 6,
     Name: "Jacqueline You",
-    Post_Internship: "Boston University School of Medicine",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Boston University School of Medicine",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 7,
+    Alumni_ID: 7,
     Name: "Raphael Baysa",
-    Post_Internship: "Pixel Machinery",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Pixel Machinery",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 8,
+    Alumni_ID: 8,
     Name: "Anna Goncharova",
-    Post_Internship: "Twitter",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Twitter",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 9,
+    Alumni_ID: 9,
     Name: "Tim Lim",
-    Post_Internship: "Google",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Google",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 10,
+    Alumni_ID: 10,
     Name: "Johnson Lam",
-    Post_Internship: "Soroco",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Soroco",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 11,
+    Alumni_ID: 11,
     Name: "Ibrahim Shaikh",
-    Post_Internship: "ITG",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "ITG",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 12,
+    Alumni_ID: 12,
     Name: "Linlan Chen",
-    Post_Internship: "Facebook",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Facebook",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 13,
+    Alumni_ID: 13,
     Name: "Sreeja Keesara",
-    Post_Internship: "Goldman Sachs",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Goldman Sachs",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 14,
+    Alumni_ID: 14,
     Name: "Rudhra Raveendran",
-    Post_Internship: "Microsoft",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Microsoft",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 15,
+    Alumni_ID: 15,
     Name: "Ryan Walsh",
-    Post_Internship: "HubSpot",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "HubSpot",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 16,
+    Alumni_ID: 16,
     Name: "Justin Chen",
-    Post_Internship: "Systems & Technology Research",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Systems & Technology Research",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 17,
+    Alumni_ID: 17,
     Name: "Kinan Dak Albab",
-    Post_Internship: "Ph.D. Student at Brown University",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Ph.D. Student at Brown University",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 18,
+    Alumni_ID: 18,
     Name: "Chen Garber",
-    Post_Internship: "Facebook",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Facebook",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 19,
+    Alumni_ID: 19,
     Name: "Qian Mei",
-    Post_Internship: "Growald Family Fund",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Growald Family Fund",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 20,
+    Alumni_ID: 20,
     Name: "Rawane Issa",
-    Post_Internship: "Ph.D. Student at Boston University",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Ph.D. Student at Boston University",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 21,
+    Alumni_ID: 21,
     Name: "Daniel Valentine",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 22,
+    Alumni_ID: 22,
     Name: "Esen Harris",
-    Post_Internship: "Accenture",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Accenture",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 23,
+    Alumni_ID: 23,
     Name: "Anya Gilad",
-    Post_Internship: "AthenaHealth",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "AthenaHealth",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 27,
+    Alumni_ID: 27,
     Name: "Stephanie Gomez",
-    Post_Internship: "Luminopia",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Luminopia",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 28,
+    Alumni_ID: 28,
     Name: "Peter Flockhart",
-    Post_Internship: "Software & Application Innovation Lab, Starry Internet",
-    Prior_Position: "Software Engineer Intern, Software Engineer"
+    Post_SAIL: "Software & Application Innovation Lab, Starry Internet",
+    SAIL_Position: "Software Engineer Intern, Software Engineer"
   }, {
-    Intern_ID: 29,
+    Alumni_ID: 29,
     Name: "Glenn Liem",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 30,
+    Alumni_ID: 30,
     Name: "Rachel Manzelli",
-    Post_Internship: "Modulate.ai",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Modulate.ai",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 31,
+    Alumni_ID: 31,
     Name: "Francis Zamora",
-    Post_Internship: "Twilio",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Twilio",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 32,
+    Alumni_ID: 32,
     Name: "Nicolas Alhaddad",
-    Post_Internship: "Ph.D. Student at Boston University",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Ph.D. Student at Boston University",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 33,
+    Alumni_ID: 33,
     Name: "Yiwen Gu",
-    Post_Internship: "Ph.D. Student",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Ph.D. Student",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 34,
+    Alumni_ID: 34,
     Name: "Sidhartha Premkumar",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 35,
+    Alumni_ID: 35,
     Name: "David Shen",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 36,
+    Alumni_ID: 36,
     Name: "Megan Fantes",
-    Post_Internship: "iRobot",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "iRobot",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 37,
+    Alumni_ID: 37,
     Name: "Usama Ahsan",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 38,
+    Alumni_ID: 38,
     Name: "Efstathios Karatsiolis",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 39,
+    Alumni_ID: 39,
     Name: "FanonX Rogers",
-    Post_Internship: "Oracle",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Oracle",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 40,
+    Alumni_ID: 40,
     Name: "Ashni Shah",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 41,
+    Alumni_ID: 41,
     Name: "Christopher Trinh",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 42,
+    Alumni_ID: 42,
     Name: "Yi (Zack) Zhang",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 43,
+    Alumni_ID: 43,
     Name: "Marcella Hastings",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 44,
+    Alumni_ID: 44,
     Name: "Tanner Braun",
-    Post_Internship: "Nth Party, Ltd.",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Nth Party, Ltd.",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 45,
+    Alumni_ID: 45,
     Name: "Gagandeep Kang",
-    Post_Internship: "Amazon",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Amazon",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 46,
+    Alumni_ID: 46,
     Name: "Ruizhi Jiang",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 47,
+    Alumni_ID: 47,
     Name: "Yuwan Xiao",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 48,
+    Alumni_ID: 48,
     Name: "Xuan Hy Nguyen",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 49,
+    Alumni_ID: 49,
     Name: "Raj Vipani",
-    Post_Internship: "Galatea Associates",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Galatea Associates",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 50,
+    Alumni_ID: 50,
     Name: "Taesung Yoon",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 51,
+    Alumni_ID: 51,
     Name: "Christopher Cho",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 52,
+    Alumni_ID: 52,
     Name: "Nicholas Goutermout",
-    Post_Internship: "Keystone Strategy",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "Keystone Strategy",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 53,
+    Alumni_ID: 53,
     Name: "Nicholas Hall",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 54,
+    Alumni_ID: 54,
     Name: "Ammar Ahmad",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer Intern"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer Intern"
   }, {
-    Intern_ID: 55,
+    Alumni_ID: 55,
     Name: "Lucy Qin",
-    Post_Internship: "Ph.D. Student at Brown University",
-    Prior_Position: "Software Engineer"
+    Post_SAIL: "Ph.D. Student at Brown University",
+    SAIL_Position: "Software Engineer"
   }, {
-    Intern_ID: 56,
+    Alumni_ID: 56,
     Name: "Ira Globus-Harris",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer"
   }, {
-    Intern_ID: 57,
+    Alumni_ID: 57,
     Name: "Shreya Pandit",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer"
   }, {
-    Intern_ID: 58,
+    Alumni_ID: 58,
     Name: "Sarah Leinicke",
-    Post_Internship: "Harvard University",
-    Prior_Position: "Software Engineer"
+    Post_SAIL: "Harvard University",
+    SAIL_Position: "Software Engineer"
   }, {
-    Intern_ID: 59,
+    Alumni_ID: 59,
     Name: "Greg Frasco",
-    Post_Internship: "",
-    Prior_Position: "Software Engineer"
+    Post_SAIL: "",
+    SAIL_Position: "Software Engineer"
   }, {
-    Intern_ID: 60,
+    Alumni_ID: 60,
     Name: "Frederick Jansen",
-    Post_Internship: "Nth Party, Ltd.",
-    Prior_Position: "Associate Director of Engineering"
+    Post_SAIL: "Nth Party, Ltd.",
+    SAIL_Position: "Associate Director of Engineering"
   }, {
-    Intern_ID: 61,
+    Alumni_ID: 61,
     Name: "Dany Fu",
-    Post_Internship: "Editas Medicine",
-    Prior_Position: "Senior Software Engineer"
+    Post_SAIL: "Editas Medicine",
+    SAIL_Position: "Senior Software Engineer"
   }
 ]

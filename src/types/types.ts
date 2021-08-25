@@ -1,11 +1,11 @@
 import { ChakraComponent } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
-export interface InternInformation {
-  Intern_ID: number;
+export interface AlumniInformation {
+  Alumni_ID: number;
   Name: string;
-  Prior_Position: string;
-  Post_Internship: string;
+  SAIL_Position: string;
+  Post_SAIL: string;
 }
 
 export interface PersonInformation {
