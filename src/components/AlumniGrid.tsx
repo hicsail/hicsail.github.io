@@ -1,15 +1,15 @@
 import { Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import styled from 'styled-components';
-import { INTERN_ALUMNI } from '../utils/data/alumni';
-import { InternInformation } from '../types/types';
+import { ALUMNI } from '../utils/data/alumni';
+import { AlumniInformation } from '../types/types';
 
 const GridColumn = styled.div`
   flex-grow: 1;
 `;
 
 function sortByName() {  
-  return function(a : InternInformation, b: InternInformation) : number {
+  return function(a : AlumniInformation, b: AlumniInformation) : number {
     if (a["Name"] > b["Name"]) {
       return 1;  
     } else if (a["Name"] < b["Name"]) {
@@ -32,11 +32,11 @@ export const AlumniGrid: React.FC = () => {
         fontSize="20px"
       >
         <GridColumn>Name</GridColumn>
-        <GridColumn>Prior Position</GridColumn>
-        <GridColumn>Current Position</GridColumn>
+        <GridColumn>Prior Position(s)</GridColumn>
+        <GridColumn>Post-SAIL Position(s)</GridColumn>
       </Grid>
-      {INTERN_ALUMNI.sort(sortByName()).map(
-        ({ Intern_ID, Name, Prior_Position, Post_Internship }, i) => (
+      {ALUMNI.sort(sortByName()).map(
+        ({ Alumni_ID, Name, SAIL_Position, Post_SAIL }, i) => (
           <Grid
             templateColumns="1fr 1fr 1fr"
             padding="20px 20px 20px 0px"
@@ -44,8 +44,8 @@ export const AlumniGrid: React.FC = () => {
             key={i}
           >
             <GridColumn>{Name}</GridColumn>
-            <GridColumn>{Prior_Position}</GridColumn>
-            <GridColumn>{Post_Internship}</GridColumn>
+            <GridColumn>{SAIL_Position}</GridColumn>
+            <GridColumn>{Post_SAIL}</GridColumn>
           </Grid>
         ),
       )}
