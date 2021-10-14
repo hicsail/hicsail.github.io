@@ -23,7 +23,7 @@ export const InternTestimonials: React.FC<Props> = ({}) => {
         base: '1fr',
         md: '1fr 1fr',
       }}
-      columnGap="15rem"
+      columnGap="10rem"
     >
       {INTERNTESTIMONIALS_LIST.map((intern: InternTestimonial, i) => (
         <Flex mt="1rem" direction={['column', 'row']} key={i}>
