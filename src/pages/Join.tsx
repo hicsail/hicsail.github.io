@@ -54,15 +54,15 @@ export const Join: React.VFC = () => (
         <Box gridArea="opportunities">
           <Box marginTop="20px" marginBottom="20px">
             <Heading>Active Opportunities</Heading>
-            <br/>
-            {/* <Text as="u" textStyle="paragraph">
+            <br />
+            <Text as="u" textStyle="paragraph">
               There are no current positions open at SAIL. Check back later!{' '}
-            </Text> */}
-            <Text as="u" textStyle="paragraph" fontSize="1.5rem">
-              <a href="https://jobs.silkroad.com/BUCareers/External/jobs/307903" rel="noreferrer">
-                Associate Director, Engineering
-              </a>
             </Text>
+            {/* <Text as="u" textStyle="paragraph" fontSize="1.5rem">
+              <a href="link" rel="noreferrer">
+                Title, Title
+              </a>
+            </Text> */}
             <Text textStyle="paragraph">
               All team members at SAIL are engaged in identifying efforts and
               shaping the long-term vision of our research agenda. In addition
