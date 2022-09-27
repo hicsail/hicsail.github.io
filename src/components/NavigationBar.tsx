@@ -39,8 +39,8 @@ export default function NavigationBar() {
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        paddingLeft='0'
-        paddingRight='0'
+        paddingLeft="0"
+        paddingRight="0"
         borderBottom={1}
         justifyContent="center"
       >
@@ -290,28 +290,53 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'RESEARCH',
-    href: '/research',
+    label: 'PROJECTS',
+    href: '/projects',
     hash: false,
   },
-  {
-    label: 'PUBLICATIONS',
-    href: '#',
-    hash: false,
-    children: [
-      {
-        label: 'PRESENTATIONS',
-        href: '/presentations',
-      },
-      {
-        label: 'PUBLICATIONS',
-        href: '/publications',
-      },
-    ],
-  },
+  // {
+  //   label: 'PUBLICATIONS',
+  //   href: '#',
+  //   hash: false,
+  //   children: [
+  //     {
+  //       label: 'PRESENTATIONS',
+  //       href: '/presentations',
+  //     },
+  //     {
+  //       label: 'PUBLICATIONS',
+  //       href: '/publications',
+  //     },
+  //   ],
+  // },
   {
     label: 'JOIN',
     href: '/join',
+    hash: false,
+  },
+  {
+    label: 'RESEARCHERS',
+    href: '/researchers',
+    hash: false,
+  },
+  {
+    label: 'SUPPORT',
+    href: '/support',
+    hash: false,
+  },
+  {
+    label: 'MEDIA',
+    href: '/media',
+    hash: false,
+  },
+  {
+    label: 'IMPACT',
+    href: '/impact',
+    hash: false,
+  },
+  {
+    label: 'OUTREACH',
+    href: '/outreach',
     hash: false,
   },
   {

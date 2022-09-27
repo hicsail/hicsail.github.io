@@ -40,10 +40,10 @@ export const Card: React.FC<Props> = ({
           <Image
             maxWidth="100%"
             height="10rem"
-            src={imageHref}
-            fallbackSrc="../../img/research/placeholder-research.jpg"
             width="100%"
             objectFit="cover"
+            src={imageHref}
+            fallbackSrc="../../img/research/placeholder-research.jpg"
           />
         </Box>
         <Box p="1.5em" display="block" height="10rem">
