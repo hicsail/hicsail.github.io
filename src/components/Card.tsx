@@ -12,8 +12,10 @@ import {
   Image,
   Text,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react';
 import * as React from 'react';
+import { OutsideLink } from '../types/types';
 
 interface Props {
   modalButtonText: string | undefined;
@@ -22,6 +24,7 @@ interface Props {
   imageHref: string | undefined;
   modalButtonSubText: string | undefined;
   pi: React.ReactElement | null;
+  metaData: Array<OutsideLink>;
 }
 
 export const Card: React.FC<Props> = ({
@@ -31,6 +34,7 @@ export const Card: React.FC<Props> = ({
   imageHref,
   modalButtonSubText,
   pi,
+  metaData,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -70,10 +74,24 @@ export const Card: React.FC<Props> = ({
         <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>
           <ModalCloseButton />
           <ModalBody>
+            <Image
+              // maxWidth="100%"
+              // height="10rem"
+              // width="100%"
+              objectFit="cover"
+              src={imageHref}
+              fallbackSrc="../../img/research/placeholder-research.jpg"
+            />{' '}
             <Text textStyle="paragraph" m="0">
               {modalBody}
             </Text>
-
+            {metaData.map(({ name, href }) => (
+              <Text textStyle="paragraph" m="0" color="teal">
+                <Link as="a" href={href}>
+                  {name}
+                </Link>
+              </Text>
+            ))}
             {pi == null ? (
               <Text textStyle="paragraph">{pi}</Text>
             ) : (

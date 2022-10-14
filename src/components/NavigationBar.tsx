@@ -274,20 +274,21 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'PEOPLE',
-    href: '#',
+    // href: '/#',
+    href: '/people',
     hash: false,
-    children: [
-      {
-        label: 'CURRENT MEMBERS',
-        href: '/currentMembers',
-        hash: false,
-      },
-      {
-        label: 'ALUMNI',
-        href: '/alumni',
-        hash: false,
-      },
-    ],
+    // children: [
+    //   {
+    //     label: 'CURRENT MEMBERS',
+    //     href: '/currentMembers',
+    //     hash: false,
+    //   },
+    //   {
+    //     label: 'ALUMNI',
+    //     href: '/alumni',
+    //     hash: false,
+    //   },
+    // ],
   },
   {
     label: 'PROJECTS',

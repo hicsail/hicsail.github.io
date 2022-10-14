@@ -5,6 +5,7 @@ import NavigationBar from './components/NavigationBar';
 import { OpportunitiesBanner } from './components/OpportunitiesBanner';
 import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
+import { Projects } from './pages/Projects';
 import { Join } from './pages/Join';
 import { Research } from './pages/Research';
 import { Alumni } from './pages/Alumni';
@@ -42,6 +43,9 @@ export const App: React.VFC = () => {
             </Route>
             <Route path="/research">
               <Research />
+            </Route>
+            <Route path="/projects">
+              <Projects />
             </Route>
             <Route path="/presentations">
               <Presentations />

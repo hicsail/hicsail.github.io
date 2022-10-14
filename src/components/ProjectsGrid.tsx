@@ -1,15 +1,15 @@
 import { Box, Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
-import { ResearchInformation } from '../types/types';
+import { ProjectInfo } from '../types/types';
 import { Card } from './Card';
 import { Layout } from './Layout';
 
 interface Props {
   title: string;
-  list: Array<ResearchInformation>;
+  list: Array<ProjectInfo>;
 }
 
-export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
+export const ProjectsGrid: React.FC<Props> = ({ title, list }) => {
   return (
     <Layout title={title}>
       <Box
@@ -22,7 +22,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
           justifyContent="space-between"
           mt="1rem"
         >
-          {list.map((research: ResearchInformation, i) => (
+          {list.map((project: ProjectInfo, i) => (
             <Box
               maxWidth="300px"
               overflow="hidden"
@@ -47,13 +47,13 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               key={i}
             >
               <Card
-                modalButtonText={research.title}
-                modalButtonSubText={research.titleDescription}
-                modalHeader={research.title}
-                modalBody={research.description}
-                imageHref={research.href}
-                pi={research.pi}
-                metaData={[]}
+                modalButtonText={project.title}
+                modalButtonSubText={project.titleDescription}
+                modalHeader={project.title}
+                modalBody={project.description}
+                imageHref={project.href}
+                pi={project.pi}
+                metaData={project.metaData}
               />
             </Box>
           ))}
