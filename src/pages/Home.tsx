@@ -231,18 +231,18 @@ export const Home: React.VFC = () => {
               <Heading textStyle="h2" mt="5'0px">
                 Featured Projects
               </Heading>
-              <Text textStyle="paragraph">
+              {/* <Text textStyle="paragraph">
                 Ongoing projects focus on a wide range of topics and
                 technologies, from developing and deploying novel cybersecurity
                 applications, to prototyping and deploying smart-city services
                 and platforms.
-              </Text>
-              <Text textStyle="paragraph">
+              </Text> */}
+              {/* <Text textStyle="paragraph">
                 SAIL is committed to promoting innovation, best practices, and
                 open source models within the research community. SAIL will
                 learn and help teach new technologies and techniques as
                 determined by the needs of any given project.
-              </Text>
+              </Text> */}
             </Box>
           </Box>
 

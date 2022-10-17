@@ -3,6 +3,7 @@ import {
   ONGOINGRESEARCH_LIST,
   PASTRESEARCH_LIST,
 } from '../utils/data/researchInformation';
+import { Text } from '@chakra-ui/react';
 import { PROJECTS_LIST } from '../utils/data/projectInformation';
 import { ProjectsGrid } from '../components/ProjectsGrid';
 export const Projects: React.VFC = () => {

@@ -9,13 +9,13 @@ export interface AlumniInformation {
 }
 
 export interface PersonInformation {
-  name?: string;
-  picture?: string;
-  role?: string;
-  research?: string;
-  outsideLinks: Array<OutsideLink>;
-  projects?: Array<Project> | null;
-  bio?: string;
+  name: string;
+  picture: string;
+  role: string;
+  bio: string;
+  // research?: string;
+  // outsideLinks?: Array<OutsideLink>;
+  // projects?: Array<Project> | null;
 }
 
 export interface OutsideLink {

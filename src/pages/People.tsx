@@ -9,6 +9,14 @@ import {
   useColorModeValue,
   Avatar,
   useBreakpointValue,
+  Button,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Layout } from '../components/Layout';
@@ -28,13 +36,36 @@ export const People: React.VFC = () => {
         {CURRENTMEMBERS_LIST.map(
           ({ picture, name, role, outsideLinks, projects, bio }, i) => (
             <Flex direction="row" marginBottom="30px" key={i}>
-              <Avatar src={picture} size={avatarSize} name={name} />
+              <Popover trigger="hover">
+                <PopoverTrigger>
+                  {/* <Button> */}
+                  <Avatar src={picture} size={avatarSize} name={name} />
+                  {/* </Button> */}
+                </PopoverTrigger>
+                <PopoverContent>
+                  <PopoverArrow />
+                  <PopoverCloseButton />
+                  {/* <PopoverHeader>Confirmation!</PopoverHeader> */}
+                  <PopoverBody>
+                    <Text>
+                      <Text as="span" fontWeight="900">
+                        Role: {role}
+                      </Text>
+                    </Text>
+                    <Text>
+                      <Text as="span" fontWeight="900">
+                        Bio: {bio}
+                      </Text>
+                    </Text>{' '}
+                  </PopoverBody>
+                </PopoverContent>
+              </Popover>
 
               <Box paddingLeft="40px">
                 <Flex direction="column">
                   <Heading marginBottom="15px">{name}</Heading>
                   <Stack gap={3} fontSize="1rem">
-                    <Text>
+                    {/* <Text>
                       <Text as="span" fontWeight="900">
                         Role: {role}
                       </Text>
@@ -70,7 +101,7 @@ export const People: React.VFC = () => {
                           </Link>{' '}
                         </Flex>
                       ))}
-                    </Flex>
+                    </Flex> */}
                   </Stack>
                 </Flex>
               </Box>

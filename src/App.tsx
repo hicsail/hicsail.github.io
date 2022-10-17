@@ -10,6 +10,7 @@ import { Join } from './pages/Join';
 import { Research } from './pages/Research';
 import { Alumni } from './pages/Alumni';
 import { CurrentMembers } from './pages/CurrentMembers';
+import { People } from './pages/People';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
 import { Contact } from './pages/Contact';
@@ -34,6 +35,9 @@ export const App: React.VFC = () => {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/people">
+              <People />
             </Route>
             <Route path="/currentmembers">
               <CurrentMembers />

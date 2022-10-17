@@ -1,4 +1,4 @@
-import { Box, Grid, useColorModeValue } from '@chakra-ui/react';
+import { Box, Grid, useColorModeValue, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { ProjectInfo } from '../types/types';
 import { Card } from './Card';
@@ -16,6 +16,18 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list }) => {
         borderTop={useColorModeValue('2px solid black', '2px solid white')}
         mb="1rem"
       >
+        <Text textStyle="paragraph">
+          Ongoing projects focus on a wide range of topics and technologies,
+          from developing and deploying novel cybersecurity applications, to
+          prototyping and deploying smart-city services and platforms.
+        </Text>
+        <Text textStyle="paragraph">
+          SAIL is committed to promoting innovation, best practices, and open
+          source models within the research community. SAIL will learn and help
+          teach new technologies and techniques as determined by the needs of
+          any given project.
+        </Text>
+
         <Grid
           gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
           gap="1.25rem"
