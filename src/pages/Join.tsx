@@ -10,8 +10,26 @@ import * as React from 'react';
 import { Layout } from '../components/Layout';
 import { InternTestimonials } from '../components/InternTestimonials';
 
+const form = `
+<iframe
+class="clickup-embed clickup-dynamic-height"
+src="https://forms.clickup.com/14225407/f/dj3zz-4800/IHJZ83PECPURVQH6H2"
+onwheel=""
+width="100%"
+height="1000px"
+style="background: transparent; border: 1px solid #ccc;"
+></iframe>
+<script
+async
+src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"
+></script>
+`;
+
 export const Join: React.VFC = () => (
   <Layout title="Join Our Team">
+    {/* <Box height="100%">
+      <div dangerouslySetInnerHTML={{ __html: form }}></div>
+    </Box> */}
     <Box
       borderTop={useColorModeValue('2px solid black', '2px solid white')}
       mb="1rem"
@@ -54,16 +72,22 @@ export const Join: React.VFC = () => (
         <Box gridArea="opportunities">
           <Box marginTop="20px" marginBottom="20px">
             <Heading>Active Opportunities</Heading>
-            <br/>
+            <br />
             {/* <Text as="u" textStyle="paragraph">
               There are no current positions open at SAIL. Check back later!{' '}
             </Text> */}
-            <Text as="u" textStyle="paragraph" fontSize="1.5rem">
-              <a href="https://jobs.silkroad.com/BUCareers/External/jobs/307903" rel="noreferrer">
+            <Box height="100%">
+              <div dangerouslySetInnerHTML={{ __html: form }}></div>
+            </Box>
+            {/* <Text as="u" textStyle="paragraph" fontSize="1.5rem">
+              <a
+                href="https://jobs.silkroad.com/BUCareers/External/jobs/307903"
+                rel="noreferrer"
+              >
                 Associate Director, Engineering
               </a>
-            </Text>
-            <Text textStyle="paragraph">
+            </Text> */}
+            {/* <Text textStyle="paragraph">
               All team members at SAIL are engaged in identifying efforts and
               shaping the long-term vision of our research agenda. In addition
               to working with other professional software engineers, you have
@@ -73,7 +97,7 @@ export const Join: React.VFC = () => (
               develop new skills in almost every project, tackle diverse
               challenges in a flexible work environment, and mentor software
               engineer interns.
-            </Text>
+            </Text> */}
           </Box>
         </Box>
         <Box gridArea="testimonials" mt="20px">

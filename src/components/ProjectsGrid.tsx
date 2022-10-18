@@ -65,7 +65,8 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list }) => {
                 modalBody={project.description}
                 imageHref={project.href}
                 pi={project.pi}
-                metaData={project.metaData}
+                metaDataPublication={project.metaDataPublication}
+                metaDataPresentation={project.metaDataPresentation}
               />
             </Box>
           ))}

@@ -46,15 +46,15 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               mt="1rem"
               key={i}
             >
-              <Card
+              {/* <Card
                 modalButtonText={research.title}
                 modalButtonSubText={research.titleDescription}
                 modalHeader={research.title}
                 modalBody={research.description}
                 imageHref={research.href}
                 pi={research.pi}
-                metaData={[]}
-              />
+                // metaData={[]}
+              /> */}
             </Box>
           ))}
         </Grid>

@@ -20,6 +20,12 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     bio: '',
   },
   {
+    name: 'Arezoo Sadeghi',
+    picture: '../../img/team/Arezoo.jpg',
+    role: 'Senior Software Engineer',
+    bio: "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
+  },
+  {
     name: 'Asad Malik',
     picture: '../../img/team/Asad.jpg',
     role: 'Software Engineer',
@@ -54,12 +60,6 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     picture: '../../img/team/Hazim.jpg',
     role: 'Software Engineer',
     bio: '',
-  },
-  {
-    name: 'Arezoo Sadeghi',
-    picture: '../../img/team/Arezoo.jpg',
-    role: 'Software Engineer',
-    bio: "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
   },
 ];
 

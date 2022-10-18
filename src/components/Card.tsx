@@ -24,7 +24,8 @@ interface Props {
   imageHref: string | undefined;
   modalButtonSubText: string | undefined;
   pi: React.ReactElement | null;
-  metaData: Array<OutsideLink>;
+  metaDataPresentation: Array<OutsideLink>;
+  metaDataPublication: Array<OutsideLink>;
 }
 
 export const Card: React.FC<Props> = ({
@@ -34,7 +35,8 @@ export const Card: React.FC<Props> = ({
   imageHref,
   modalButtonSubText,
   pi,
-  metaData,
+  metaDataPresentation,
+  metaDataPublication,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -85,8 +87,21 @@ export const Card: React.FC<Props> = ({
             <Text textStyle="paragraph" m="0">
               {modalBody}
             </Text>
-            {metaData.map(({ name, href }) => (
+            <Text textStyle="paragraph" m="0">
+              Presentations
+            </Text>
+            {metaDataPresentation.map(({ name, href }) => (
               <Text textStyle="paragraph" m="0" color="teal">
+                <Link as="a" href={href}>
+                  {name}
+                </Link>
+              </Text>
+            ))}
+            <Text textStyle="paragraph" m="0">
+              Publications
+            </Text>
+            {metaDataPublication.map(({ name, href }) => (
+              <Text textStyle="paragraph" m="0" color="green">
                 <Link as="a" href={href}>
                   {name}
                 </Link>

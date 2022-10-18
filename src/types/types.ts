@@ -41,7 +41,8 @@ export interface ProjectInfo {
   description: string;
   href: string;
   pi: ReactElement | null;
-  metaData: Array<OutsideLink>;
+  metaDataPresentation: Array<OutsideLink>;
+  metaDataPublication: Array<OutsideLink>;
 }
 
 export type ResearchInformation = {

@@ -33,39 +33,38 @@ export const People: React.VFC = () => {
         pt="3"
         borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
-        {CURRENTMEMBERS_LIST.map(
-          ({ picture, name, role, outsideLinks, projects, bio }, i) => (
-            <Flex direction="row" marginBottom="30px" key={i}>
-              <Popover trigger="hover">
-                <PopoverTrigger>
-                  {/* <Button> */}
-                  <Avatar src={picture} size={avatarSize} name={name} />
-                  {/* </Button> */}
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverArrow />
-                  <PopoverCloseButton />
-                  {/* <PopoverHeader>Confirmation!</PopoverHeader> */}
-                  <PopoverBody>
-                    <Text>
-                      <Text as="span" fontWeight="900">
-                        Role: {role}
-                      </Text>
+        {CURRENTMEMBERS_LIST.map(({ picture, name, role, bio }, i) => (
+          <Flex direction="row" marginBottom="30px" key={i}>
+            <Popover trigger="hover">
+              <PopoverTrigger>
+                {/* <Button> */}
+                <Avatar src={picture} size={avatarSize} name={name} />
+                {/* </Button> */}
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverCloseButton />
+                {/* <PopoverHeader>Confirmation!</PopoverHeader> */}
+                <PopoverBody>
+                  <Text>
+                    <Text as="span" fontWeight="900">
+                      Role: {role}
                     </Text>
-                    <Text>
-                      <Text as="span" fontWeight="900">
-                        Bio: {bio}
-                      </Text>
-                    </Text>{' '}
-                  </PopoverBody>
-                </PopoverContent>
-              </Popover>
+                  </Text>
+                  <Text>
+                    <Text as="span" fontWeight="900">
+                      Bio: {bio}
+                    </Text>
+                  </Text>{' '}
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
 
-              <Box paddingLeft="40px">
-                <Flex direction="column">
-                  <Heading marginBottom="15px">{name}</Heading>
-                  <Stack gap={3} fontSize="1rem">
-                    {/* <Text>
+            <Box paddingLeft="40px">
+              <Flex direction="column">
+                <Heading marginBottom="15px">{name}</Heading>
+                <Stack gap={3} fontSize="1rem">
+                  {/* <Text>
                       <Text as="span" fontWeight="900">
                         Role: {role}
                       </Text>
@@ -102,12 +101,11 @@ export const People: React.VFC = () => {
                         </Flex>
                       ))}
                     </Flex> */}
-                  </Stack>
-                </Flex>
-              </Box>
-            </Flex>
-          ),
-        )}
+                </Stack>
+              </Flex>
+            </Box>
+          </Flex>
+        ))}
       </SimpleGrid>
     </Layout>
   );

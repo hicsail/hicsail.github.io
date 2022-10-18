@@ -10,7 +10,13 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
       'To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.',
     href: '../../../img/research/covid.png',
     pi: null,
-    metaData: [
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
       {
         name: '',
         href: '',
@@ -24,14 +30,16 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
       'In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.',
     href: '../../../img/research/webmpc.png',
     pi: null,
-    metaData: [
-      {
-        name: 'Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications',
-        href: 'https://ieeexplore.ieee.org/document/8901614',
-      },
+    metaDataPresentation: [
       {
         name: 'From Usability to Secure Computing and Back Again',
         href: 'https://www.usenix.org/conference/soups2019/presentation/qin',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: 'Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications',
+        href: 'https://ieeexplore.ieee.org/document/8901614',
       },
     ],
   },

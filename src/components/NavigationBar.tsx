@@ -268,81 +268,55 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'HOME',
-    href: '/',
-    hash: false,
-  },
-  {
     label: 'PEOPLE',
-    // href: '/#',
     href: '/people',
     hash: false,
-    // children: [
-    //   {
-    //     label: 'CURRENT MEMBERS',
-    //     href: '/currentMembers',
-    //     hash: false,
-    //   },
-    //   {
-    //     label: 'ALUMNI',
-    //     href: '/alumni',
-    //     hash: false,
-    //   },
-    // ],
   },
   {
     label: 'PROJECTS',
     href: '/projects',
     hash: false,
   },
-  // {
-  //   label: 'PUBLICATIONS',
-  //   href: '#',
-  //   hash: false,
-  //   children: [
-  //     {
-  //       label: 'PRESENTATIONS',
-  //       href: '/presentations',
-  //     },
-  //     {
-  //       label: 'PUBLICATIONS',
-  //       href: '/publications',
-  //     },
-  //   ],
-  // },
   {
     label: 'JOIN',
     href: '/join',
     hash: false,
   },
   {
-    label: 'RESEARCHERS',
-    href: '/researchers',
+    label: 'OTHER',
+    href: '#',
     hash: false,
-  },
-  {
-    label: 'SUPPORT',
-    href: '/support',
-    hash: false,
-  },
-  {
-    label: 'MEDIA',
-    href: '/media',
-    hash: false,
-  },
-  {
-    label: 'IMPACT',
-    href: '/impact',
-    hash: false,
-  },
-  {
-    label: 'OUTREACH',
-    href: '/outreach',
-    hash: false,
-  },
-  {
-    label: 'CONTACT',
-    href: '/contact',
-    hash: false,
+    children: [
+      {
+        label: 'RESEARCHERS',
+        href: '/researchers',
+        hash: false,
+      },
+      {
+        label: 'SUPPORT',
+        href: '/support',
+        hash: false,
+      },
+      {
+        label: 'MEDIA',
+        href: '/media',
+        hash: false,
+      },
+      {
+        label: 'IMPACT',
+        href: '/impact',
+        hash: false,
+      },
+      {
+        label: 'OUTREACH',
+        href: '/outreach',
+        hash: false,
+      },
+      {
+        label: 'CONTACT',
+        href: '/contact',
+        hash: false,
+      },
+    ],
   },
 ];
