@@ -15,7 +15,7 @@ export const PublicationsGrid: React.FC<Props> = ({ title, list }: Props) => {
       {list.map((publication: PublicationInformation, i) =>
         publication.firstOfYear ? (
           <Box
-            borderTop={useColorModeValue('2px solid black', '2px solid white')}
+            // borderTop={useColorModeValue('2px solid black', '2px solid white')}
             key={i}
           >
             <Heading textStyle="h2" mt="10px">

@@ -13,7 +13,7 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list }) => {
   return (
     <Layout title={title}>
       <Box
-        borderTop={useColorModeValue('2px solid black', '2px solid white')}
+        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
         mb="1rem"
       >
         <Text textStyle="paragraph">

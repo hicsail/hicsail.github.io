@@ -27,13 +27,10 @@ src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"
 
 export const Join: React.VFC = () => (
   <Layout title="Join Our Team">
-    {/* <Box height="100%">
-      <div dangerouslySetInnerHTML={{ __html: form }}></div>
-    </Box> */}
-    <Box
-      borderTop={useColorModeValue('2px solid black', '2px solid white')}
-      mb="1rem"
-    >
+    <Box>Software Engineer</Box>
+    <Box>Interns</Box>
+
+    {/* <Box mb="1rem">
       <Grid
         mt="1rem"
         templateColumns={'repeat(12, 1fr)'}
@@ -73,42 +70,18 @@ export const Join: React.VFC = () => (
           <Box marginTop="20px" marginBottom="20px">
             <Heading>Active Opportunities</Heading>
             <br />
-            {/* <Text as="u" textStyle="paragraph">
-              There are no current positions open at SAIL. Check back later!{' '}
-            </Text> */}
             <Box height="100%">
               <div dangerouslySetInnerHTML={{ __html: form }}></div>
             </Box>
-            {/* <Text as="u" textStyle="paragraph" fontSize="1.5rem">
-              <a
-                href="https://jobs.silkroad.com/BUCareers/External/jobs/307903"
-                rel="noreferrer"
-              >
-                Associate Director, Engineering
-              </a>
-            </Text> */}
-            {/* <Text textStyle="paragraph">
-              All team members at SAIL are engaged in identifying efforts and
-              shaping the long-term vision of our research agenda. In addition
-              to working with other professional software engineers, you have
-              the opportunity to collaborate with researchers at Boston
-              University and beyond who are nationally respected as leaders in
-              their corresponding areas of research. Additionally, you can
-              develop new skills in almost every project, tackle diverse
-              challenges in a flexible work environment, and mentor software
-              engineer interns.
-            </Text> */}
           </Box>
         </Box>
         <Box gridArea="testimonials" mt="20px">
           <Heading pb="1rem">Past Intern Testimonials</Heading>
-          <Box
-            borderTop={useColorModeValue('2px solid black', '2px solid white')}
-          >
+          <Box>
             <InternTestimonials />
           </Box>
         </Box>
       </Grid>
-    </Box>
+    </Box> */}
   </Layout>
 );

@@ -3,7 +3,7 @@ import { InternTestimonial, PersonInformation } from '../../types/types';
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
     name: 'William Tomlinson',
-    picture: '../../img/team/Will.jpg',
+    picture: '../../img/team/Will.jpeg',
     role: 'Director',
     bio: '',
   },
@@ -27,7 +27,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Asad Malik',
-    picture: '../../img/team/Asad.jpg',
+    picture: '../../img/team/Asad.png',
     role: 'Software Engineer',
     bio: '',
   },
@@ -51,7 +51,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Karina Hickman',
-    picture: '../../img/team/Karina.jpg',
+    picture: '../../img/team/Karina.png',
     role: 'Software Engineer',
     bio: '',
   },

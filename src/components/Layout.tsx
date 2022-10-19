@@ -16,7 +16,9 @@ export const Layout: React.FC<LayoutProps> = ({ title, children }) => {
       margin="0 auto"
     >
       <Box marginBottom="30px" width="100%">
-        <Heading marginBottom="15px">{title}</Heading>
+        <Heading marginBottom="10px" fontWeight="bold">
+          {title}
+        </Heading>
       </Box>
       <Box width="100%">{children}</Box>
     </Flex>

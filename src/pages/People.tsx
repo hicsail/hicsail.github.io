@@ -17,6 +17,7 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTrigger,
+  Image,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Layout } from '../components/Layout';
@@ -28,17 +29,28 @@ export const People: React.VFC = () => {
   return (
     <Layout title="Current Members">
       <SimpleGrid
-        columns={[1, 1, 2]}
-        spacing="40px"
+        columns={[2, 2, 2, 4]}
+        // spacing="40px"
         pt="3"
-        borderTop={useColorModeValue('2px solid black', '2px solid white')}
+        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
         {CURRENTMEMBERS_LIST.map(({ picture, name, role, bio }, i) => (
-          <Flex direction="row" marginBottom="30px" key={i}>
+          <Flex direction="column" marginBottom="30px" key={i}>
             <Popover trigger="hover">
               <PopoverTrigger>
                 {/* <Button> */}
-                <Avatar src={picture} size={avatarSize} name={name} />
+                {/* <Avatar src={picture} size={avatarSize} name={name} /> */}
+                <Box>
+                  <Image src={picture} boxSize="200px" borderRadius="6px" />
+                  <Text
+                    fontWeight="900"
+                    fontSize="1.25rem"
+                    mt="8px"
+                    color="#0070c9"
+                  >
+                    {name}
+                  </Text>
+                </Box>
                 {/* </Button> */}
               </PopoverTrigger>
               <PopoverContent>
@@ -60,50 +72,14 @@ export const People: React.VFC = () => {
               </PopoverContent>
             </Popover>
 
-            <Box paddingLeft="40px">
+            {/* <Box paddingLeft="40px">
               <Flex direction="column">
-                <Heading marginBottom="15px">{name}</Heading>
-                <Stack gap={3} fontSize="1rem">
-                  {/* <Text>
-                      <Text as="span" fontWeight="900">
-                        Role: {role}
-                      </Text>
-                    </Text>
-
-                    <Text>
-                      <Text as="span" fontWeight="900">
-                        Bio: {bio}
-                      </Text>
-                    </Text>
-
-                    {projects == null ? (
-                      <Text></Text>
-                    ) : (
-                      <Flex direction="row">
-                        <Text mr="5px">Projects: </Text>
-                        {projects.map((project, j) => (
-                          <Flex mr="10px" key={j}>
-                            <Link href={project.href}>
-                              <Text as="u">{project.name}</Text>
-                            </Link>{' '}
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-
-                    <Flex direction="row">
-                      <Text mr="5px">Links: </Text>{' '}
-                      {outsideLinks.map((outsideLink, k) => (
-                        <Flex mr="10px" key={k}>
-                          <Link href={outsideLink.href}>
-                            <Text as="u"> {outsideLink.name}</Text>
-                          </Link>{' '}
-                        </Flex>
-                      ))}
-                    </Flex> */}
-                </Stack>
+                <Heading marginBottom="15px" fontSize="2rem">
+                  {name}
+                </Heading>
+                <Stack gap={3} fontSize="1rem"></Stack>
               </Flex>
-            </Box>
+            </Box> */}
           </Flex>
         ))}
       </SimpleGrid>

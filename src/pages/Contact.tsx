@@ -8,7 +8,7 @@ export const Contact: React.VFC = () => {
     <Layout title="Contact Us">
       <Box
         display={{ md: 'flex' }}
-        borderTop={useColorModeValue('2px solid black', '2px solid white')}
+        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
         <Box pr={{ md: '8' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
           <Text textStyle="paragraph">
