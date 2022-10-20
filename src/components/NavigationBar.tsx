@@ -33,37 +33,7 @@ export default function NavigationBar() {
       paddingLeft={{ base: '30px', md: '0' }}
       paddingRight={{ base: '30px', md: '0' }}
       maxWidth={{ lg: '80%', md: '90%' }}
-      // bgColor="orange"
     >
-      <Flex direction="row" alignItems="center">
-        <Box
-          boxSize="45px"
-          objectFit="cover"
-          marginRight="10px"
-          marginBottom="5px"
-        >
-          <Link href="https://www.bu.edu/hic/">
-            <Image src="../../img/bu-logo.png" />
-          </Link>
-        </Box>
-        <Box>
-          {' '}
-          <Link
-            href="https://www.bu.edu/hic/"
-            _hover={{ textDecoration: 'none' }}
-          >
-            <Text
-              fontSize={'1.25rem'}
-              fontFamily="Karbon"
-              fontWeight={500}
-              maxWidth="500px"
-            >
-              Rafik B. Hariri Institute for Computing and Computational Science
-              & Engineering
-            </Text>
-          </Link>
-        </Box>
-      </Flex>
       <Flex
         width="100%"
         minH={'60px'}

@@ -29,35 +29,6 @@ export const App: React.VFC = () => {
         justifyContent="flex-start"
       >
         <Banner />
-        {/* <Flex direction="row" alignItems="center" bg="red" width="100%">
-          <Box
-            boxSize="45px"
-            objectFit="cover"
-            marginRight="10px"
-            marginBottom="5px"
-          >
-            <Link href="https://www.bu.edu/hic/">
-              <Image src="../../img/bu-logo.png" />
-            </Link>
-          </Box>
-          <Box>
-            {' '}
-            <Link
-              href="https://www.bu.edu/hic/"
-              _hover={{ textDecoration: 'none' }}
-            >
-              <Text
-                fontSize={'1.25rem'}
-                fontFamily="Karbon"
-                fontWeight={500}
-                maxWidth="500px"
-              >
-                Rafik B. Hariri Institute for Computing and Computational
-                Science & Engineering
-              </Text>
-            </Link>
-          </Box>
-        </Flex> */}
         <NavigationBar />
 
         <OpportunitiesBanner opportunityAvailable={false} />
