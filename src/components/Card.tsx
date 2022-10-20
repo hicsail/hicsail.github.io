@@ -13,6 +13,7 @@ import {
   Text,
   useColorModeValue,
   Link,
+  List,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { OutsideLink } from '../types/types';
@@ -100,13 +101,15 @@ export const Card: React.FC<Props> = ({
             <Text textStyle="paragraph" m="0">
               Publications
             </Text>
-            {metaDataPublication.map(({ name, href }) => (
-              <Text textStyle="paragraph" m="0" color="green">
-                <Link as="a" href={href}>
-                  {name}
-                </Link>
-              </Text>
-            ))}
+            <List>
+              {metaDataPublication.map(({ name, href }) => (
+                <Text textStyle="paragraph" m="0" color="green">
+                  <Link as="a" href={href}>
+                    {name}
+                  </Link>
+                </Text>
+              ))}
+            </List>
             {pi == null ? (
               <Text textStyle="paragraph">{pi}</Text>
             ) : (

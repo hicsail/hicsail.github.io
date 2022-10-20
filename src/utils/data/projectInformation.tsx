@@ -43,6 +43,93 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
       },
     ],
   },
+  {
+    title: 'Noise Score',
+    titleDescription: 'Describe and Visualize Your Daily Soundscape',
+    description:
+      'Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.',
+    href: '../../../img/research/noisescore.png',
+    pi: (
+      <>
+        <Link href="https://vivo.brown.edu/display/edwalker" color="#567dbd">
+          Dr. Erica Walker,{' '}
+        </Link>
+        <Text as="span">
+          Assistant Professor of Epidemiology, Brown University
+        </Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'ASL-LEX',
+    titleDescription: '',
+    description: '',
+    href: '../../../img/research/asl.jpg',
+    pi: (
+      <>
+        <Link
+          href="https://www.bu.edu/wheelock/profile/naomi-caselli/"
+          color="#567dbd"
+        >
+          Dr.Naomi Caselli,{' '}
+        </Link>
+        <Text as="span">Assistant Professor, Wheelock</Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'ORACLES',
+    titleDescription: 'ORACLES',
+    description: '',
+    href: '../../../img/research/oracles.png',
+    pi: (
+      <>
+        <Link
+          href="https://www.bu.edu/hic/profile/mayank-varia/"
+          color="#567dbd"
+        >
+          Dr.Mayank Varia,{' '}
+        </Link>
+        <Text as="span">Research Associate Professor, Computer Science</Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
 ];
 
 export const PROJECT_LIST: Array<ProjectInformation> = [

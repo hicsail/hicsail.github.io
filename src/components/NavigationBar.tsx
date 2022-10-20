@@ -35,7 +35,7 @@ export default function NavigationBar() {
       maxWidth={{ lg: '80%', md: '90%' }}
       // bgColor="orange"
     >
-      {/* <Flex direction="row" alignItems="center">
+      <Flex direction="row" alignItems="center">
         <Box
           boxSize="45px"
           objectFit="cover"
@@ -63,7 +63,7 @@ export default function NavigationBar() {
             </Text>
           </Link>
         </Box>
-      </Flex> */}
+      </Flex>
       <Flex
         width="100%"
         minH={'60px'}
