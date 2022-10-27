@@ -32,7 +32,7 @@ export const AlumniGrid: React.FC = () => {
         fontSize="20px"
       >
         <GridColumn>Name</GridColumn>
-        <GridColumn>Prior Position(s)</GridColumn>
+        {/* <GridColumn>Prior Position(s)</GridColumn> */}
         <GridColumn>Post-SAIL Position(s)</GridColumn>
       </Grid>
       {ALUMNI.sort(sortByName()).map(
@@ -44,7 +44,7 @@ export const AlumniGrid: React.FC = () => {
             key={i}
           >
             <GridColumn>{Name}</GridColumn>
-            <GridColumn>{SAIL_Position}</GridColumn>
+            {/* <GridColumn>{SAIL_Position}</GridColumn> */}
             <GridColumn>{Post_SAIL}</GridColumn>
           </Grid>
         ),

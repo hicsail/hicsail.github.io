@@ -7,6 +7,7 @@ export const HighlightedProjectGrid = () => {
     <Grid
       // borderTop={useColorModeValue('2px solid black', '2px solid white')}
       paddingTop="2em"
+      // gridTemplateColumns="repeat(3, minmax(300px, 1fr))"
       gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       gridGap="43px"
     >

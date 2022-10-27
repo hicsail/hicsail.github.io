@@ -132,6 +132,38 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
   },
 ];
 
+export const OLD_PROJECTS_LIST: Array<ProjectInfo> = [
+  {
+    title: 'ORACLES',
+    titleDescription: 'ORACLES',
+    description: '',
+    href: '../../../img/research/oracles.png',
+    pi: (
+      <>
+        <Link
+          href="https://www.bu.edu/hic/profile/mayank-varia/"
+          color="#567dbd"
+        >
+          Dr.Mayank Varia,{' '}
+        </Link>
+        <Text as="span">Research Associate Professor, Computer Science</Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+];
+
 export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['institution', 'gavel', 'balance-scale'],

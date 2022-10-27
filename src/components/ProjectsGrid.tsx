@@ -7,26 +7,33 @@ import { Layout } from './Layout';
 interface Props {
   title: string;
   list: Array<ProjectInfo>;
+  showText: boolean;
 }
 
-export const ProjectsGrid: React.FC<Props> = ({ title, list }) => {
+export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
   return (
     <Layout title={title}>
       <Box
         // borderTop={useColorModeValue('2px solid black', '2px solid white')}
         mb="1rem"
       >
-        <Text textStyle="paragraph">
-          Ongoing projects focus on a wide range of topics and technologies,
-          from developing and deploying novel cybersecurity applications, to
-          prototyping and deploying smart-city services and platforms.
-        </Text>
-        <Text textStyle="paragraph">
-          SAIL is committed to promoting innovation, best practices, and open
-          source models within the research community. SAIL will learn and help
-          teach new technologies and techniques as determined by the needs of
-          any given project.
-        </Text>
+        {showText ? (
+          <Box>
+            <Text textStyle="paragraph">
+              Ongoing projects focus on a wide range of topics and technologies,
+              from developing and deploying novel cybersecurity applications, to
+              prototyping and deploying smart-city services and platforms.
+            </Text>
+            <Text textStyle="paragraph">
+              SAIL is committed to promoting innovation, best practices, and
+              open source models within the research community. SAIL will learn
+              and help teach new technologies and techniques as determined by
+              the needs of any given project.
+            </Text>
+          </Box>
+        ) : (
+          <Box></Box>
+        )}
 
         <Grid
           gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"

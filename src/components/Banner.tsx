@@ -16,7 +16,9 @@ export const Banner: React.VFC = () => {
       alignItems="center"
       //   justifyContent="center"
       bg={useColorModeValue('#121212', 'white')}
+      // bg={useColorModeValue('white', '#121212')}
       width="100%"
+      p="8px"
     >
       <Box
         boxSize="45px"
@@ -40,6 +42,8 @@ export const Banner: React.VFC = () => {
             fontFamily="Karbon"
             fontWeight={500}
             maxWidth="500px"
+            // bg={useColorModeValue('#121212', 'white')}
+
             color={useColorModeValue('white', '#121212')}
           >
             Rafik B. Hariri Institute for Computing and Computational Science &

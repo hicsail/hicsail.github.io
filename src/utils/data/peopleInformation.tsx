@@ -2,7 +2,7 @@ import { InternTestimonial, PersonInformation } from '../../types/types';
 
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
-    name: 'William Tomlinson',
+    name: 'William Tomlinson, Ph.D',
     picture: '../../img/team/Will.jpeg',
     role: 'Director',
     bio: '',

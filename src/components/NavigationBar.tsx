@@ -285,8 +285,20 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'JOIN',
-    href: '/join',
+    href: '#',
     hash: false,
+    children: [
+      {
+        label: 'SOFTWARE ENGINEERS',
+        href: '/engineers',
+        hash: false,
+      },
+      {
+        label: 'INTERNS',
+        href: '/interns',
+        hash: false,
+      },
+    ],
   },
   {
     label: 'OTHER',

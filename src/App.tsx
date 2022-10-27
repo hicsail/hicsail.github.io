@@ -15,6 +15,8 @@ import { People } from './pages/People';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
 import { Contact } from './pages/Contact';
+import { Engineer } from './pages/Engineer';
+import { Intern } from './pages/Intern';
 
 export const App: React.VFC = () => {
   return (
@@ -59,8 +61,14 @@ export const App: React.VFC = () => {
             <Route path="/publications">
               <Publications />
             </Route>
-            <Route path="/join">
+            {/* <Route path="/join">
               <Join />
+            </Route> */}
+            <Route path="/engineers">
+              <Engineer />
+            </Route>
+            <Route path="/interns">
+              <Intern />
             </Route>
             <Route path="/contact">
               <Contact />
