@@ -9,6 +9,7 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     description:
       'To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.',
     href: '../../../img/research/covid.png',
+    projectType: 'Digital Health',
     pi: null,
     metaDataPresentation: [
       {
@@ -29,6 +30,7 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     description:
       'In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.',
     href: '../../../img/research/webmpc.png',
+    projectType: 'Privacy and Security',
     pi: null,
     metaDataPresentation: [
       {
@@ -49,6 +51,7 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     description:
       'Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.',
     href: '../../../img/research/noisescore.png',
+    projectType: 'Digital Health',
     pi: (
       <>
         <Link href="https://vivo.brown.edu/display/edwalker" color="#567dbd">
@@ -77,6 +80,7 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     titleDescription: '',
     description: '',
     href: '../../../img/research/asl.jpg',
+    projectType: 'Data Science',
     pi: (
       <>
         <Link
@@ -106,6 +110,7 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     titleDescription: 'ORACLES',
     description: '',
     href: '../../../img/research/oracles.png',
+    projectType: 'Data Science',
     pi: (
       <>
         <Link
@@ -138,6 +143,7 @@ export const OLD_PROJECTS_LIST: Array<ProjectInfo> = [
     titleDescription: 'ORACLES',
     description: '',
     href: '../../../img/research/oracles.png',
+    projectType: 'Data Science',
     pi: (
       <>
         <Link

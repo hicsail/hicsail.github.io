@@ -15,7 +15,8 @@ import { INTERNTESTIMONIALS_LIST } from '../utils/data/peopleInformation';
 interface Props {}
 
 export const InternTestimonials: React.FC<Props> = ({}) => {
-  const avatarSize = useBreakpointValue({ base: 'xl', md: '2xl' });
+  // const avatarSize = useBreakpointValue({ base: 'xl', md: '2xl' });
+  const avatarSize = useBreakpointValue({ base: 'md', md: 'lg' });
 
   return (
     <Grid
@@ -32,10 +33,10 @@ export const InternTestimonials: React.FC<Props> = ({}) => {
           </Box>
           <Box>
             <Box>
-              <Text as="i" textStyle="paragraph" fontSize="1.25rem">
+              <Text as="i" textStyle="paragraph" fontSize="1.1rem">
                 {intern.quote}{' '}
               </Text>
-              <Text textStyle="paragraph">
+              <Text textStyle="paragraph" fontSize="1.25rem">
                 - {intern.name}, {intern.season}
               </Text>
             </Box>

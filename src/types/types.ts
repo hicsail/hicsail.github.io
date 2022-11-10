@@ -39,6 +39,7 @@ export interface ProjectInfo {
   title: string;
   titleDescription: string;
   description: string;
+  projectType: string;
   href: string;
   pi: ReactElement | null;
   metaDataPresentation: Array<OutsideLink>;

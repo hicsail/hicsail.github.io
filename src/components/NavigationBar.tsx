@@ -284,12 +284,17 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
   },
   {
+    label: 'CONTACT',
+    href: '/contact',
+    hash: false,
+  },
+  {
     label: 'JOIN',
     href: '#',
     hash: false,
     children: [
       {
-        label: 'SOFTWARE ENGINEERS',
+        label: 'ENGINEERS',
         href: '/engineers',
         hash: false,
       },
@@ -300,41 +305,41 @@ const NAV_ITEMS: Array<NavItem> = [
       },
     ],
   },
-  {
-    label: 'OTHER',
-    href: '#',
-    hash: false,
-    children: [
-      {
-        label: 'RESEARCHERS',
-        href: '/researchers',
-        hash: false,
-      },
-      {
-        label: 'SUPPORT',
-        href: '/support',
-        hash: false,
-      },
-      {
-        label: 'MEDIA',
-        href: '/media',
-        hash: false,
-      },
-      {
-        label: 'IMPACT',
-        href: '/impact',
-        hash: false,
-      },
-      {
-        label: 'OUTREACH',
-        href: '/outreach',
-        hash: false,
-      },
-      {
-        label: 'CONTACT',
-        href: '/contact',
-        hash: false,
-      },
-    ],
-  },
+  // {
+  //   label: 'OTHER',
+  //   href: '#',
+  //   hash: false,
+  //   children: [
+  //     {
+  //       label: 'RESEARCHERS',
+  //       href: '/researchers',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'SUPPORT',
+  //       href: '/support',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'MEDIA',
+  //       href: '/media',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'IMPACT',
+  //       href: '/impact',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'OUTREACH',
+  //       href: '/outreach',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'CONTACT',
+  //       href: '/contact',
+  //       hash: false,
+  //     },
+  //   ],
+  // },
 ];

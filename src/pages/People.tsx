@@ -41,7 +41,12 @@ export const People: React.VFC = () => {
                 {/* <Button> */}
                 {/* <Avatar src={picture} size={avatarSize} name={name} /> */}
                 <Box>
-                  <Image src={picture} boxSize="200px" borderRadius="6px" />
+                  <Image
+                    src={picture}
+                    boxSize="200px"
+                    borderRadius="6px"
+                    objectFit="cover"
+                  />
                   <Text
                     fontWeight="900"
                     fontSize="1.25rem"
@@ -64,9 +69,9 @@ export const People: React.VFC = () => {
                     </Text>
                   </Text>
                   <Text>
-                    <Text as="span" fontWeight="900">
+                    {/* <Text as="span" fontWeight="900">
                       Bio: {bio}
-                    </Text>
+                    </Text> */}
                   </Text>{' '}
                 </PopoverBody>
               </PopoverContent>

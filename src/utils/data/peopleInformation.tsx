@@ -15,7 +15,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   },
   {
     name: 'Greg Frasco',
-    picture: '../../img/team/Greg.jpg',
+    picture: '../../img/team/Greg.jpeg',
     role: 'Associate Director of Engineering',
     bio: '',
   },
@@ -24,6 +24,24 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     picture: '../../img/team/Arezoo.jpg',
     role: 'Senior Software Engineer',
     bio: "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
+  },
+  {
+    name: 'Justin Chen',
+    picture: '../../img/team/Justin.jpeg',
+    role: 'Senior Software Engineer',
+    bio: '',
+  },
+  {
+    name: 'Wenhan Wang',
+    picture: '../../img/team/Manny.jpg',
+    role: 'Software Engineer',
+    bio: '',
+  },
+  {
+    name: 'Karina Hickman',
+    picture: '../../img/team/Karina.png',
+    role: 'Software Engineer',
+    bio: '',
   },
   {
     name: 'Asad Malik',
@@ -46,12 +64,6 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
     name: 'Manny Akosah',
     picture: '../../img/team/Manny.jpg',
-    role: 'Software Engineer',
-    bio: '',
-  },
-  {
-    name: 'Karina Hickman',
-    picture: '../../img/team/Karina.png',
     role: 'Software Engineer',
     bio: '',
   },

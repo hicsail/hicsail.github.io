@@ -1,5 +1,6 @@
-import { Box, Grid, useColorModeValue, Text } from '@chakra-ui/react';
+import { Box, Grid, useColorModeValue, Text, Select } from '@chakra-ui/react';
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { ProjectInfo } from '../types/types';
 import { Card } from './Card';
 import { Layout } from './Layout';
@@ -10,9 +11,34 @@ interface Props {
   showText: boolean;
 }
 
+const options = [
+  'All',
+  'Data Science',
+  'Ed Tech',
+  'Privacy and Security',
+  'Digital Health',
+  'Natural Sciences',
+];
+
 export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
+  const [selected, setSelected] = useState(options[0]);
+  // useEffect(() => {
+  //   console.log(selected);
+  // }, [selected]);
+
   return (
     <Layout title={title}>
+      <Select
+        placeholder="Select Project Type"
+        value={selected}
+        onChange={(e) => setSelected(e.target.value)}
+      >
+        {options.map((value) => (
+          <option value={value} key={value}>
+            {value}
+          </option>
+        ))}
+      </Select>
       <Box
         // borderTop={useColorModeValue('2px solid black', '2px solid white')}
         mb="1rem"
@@ -41,42 +67,92 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
           justifyContent="space-between"
           mt="1rem"
         >
-          {list.map((project: ProjectInfo, i) => (
-            <Box
-              maxWidth="300px"
-              overflow="hidden"
-              fontWeight="300"
-              padding="0"
-              display="inline-flex"
-              flexDirection="column"
-              margin="0 0 1em"
-              width="100%"
-              boxShadow={useColorModeValue(
-                '0 4px 8px rgba(0,30,84,0.12)',
-                '0 4px 8px rgba(0,0,0,0.38)',
-              )}
-              transform="translateY(0)"
-              transition="transform 300ms"
-              _hover={{
-                transform: 'translateY(-3px)',
-                transition: 'transform 300ms',
-              }}
-              bg={useColorModeValue('white', '#2a2e35')}
-              mt="1rem"
-              key={i}
-            >
-              <Card
-                modalButtonText={project.title}
-                modalButtonSubText={project.titleDescription}
-                modalHeader={project.title}
-                modalBody={project.description}
-                imageHref={project.href}
-                pi={project.pi}
-                metaDataPublication={project.metaDataPublication}
-                metaDataPresentation={project.metaDataPresentation}
-              />
-            </Box>
-          ))}
+          {selected == 'All' ? (
+            <>
+              {list.map((project: ProjectInfo, i) => (
+                <Box>
+                  <Box
+                    maxWidth="300px"
+                    overflow="hidden"
+                    fontWeight="300"
+                    padding="0"
+                    display="inline-flex"
+                    flexDirection="column"
+                    margin="0 0 1em"
+                    width="100%"
+                    boxShadow={useColorModeValue(
+                      '0 4px 8px rgba(0,30,84,0.12)',
+                      '0 4px 8px rgba(0,0,0,0.38)',
+                    )}
+                    transform="translateY(0)"
+                    transition="transform 300ms"
+                    _hover={{
+                      transform: 'translateY(-3px)',
+                      transition: 'transform 300ms',
+                    }}
+                    bg={useColorModeValue('white', '#2a2e35')}
+                    mt="1rem"
+                    key={i}
+                  >
+                    <Card
+                      modalButtonText={project.title}
+                      modalButtonSubText={project.titleDescription}
+                      modalHeader={project.title}
+                      modalBody={project.description}
+                      imageHref={project.href}
+                      pi={project.pi}
+                      metaDataPublication={project.metaDataPublication}
+                      metaDataPresentation={project.metaDataPresentation}
+                    />
+                  </Box>
+                  )
+                </Box>
+              ))}
+            </>
+          ) : (
+            <>
+              {list.map((project: ProjectInfo, i) => (
+                <Box>
+                  {project.projectType == selected && (
+                    <Box
+                      maxWidth="300px"
+                      overflow="hidden"
+                      fontWeight="300"
+                      padding="0"
+                      display="inline-flex"
+                      flexDirection="column"
+                      margin="0 0 1em"
+                      width="100%"
+                      boxShadow={useColorModeValue(
+                        '0 4px 8px rgba(0,30,84,0.12)',
+                        '0 4px 8px rgba(0,0,0,0.38)',
+                      )}
+                      transform="translateY(0)"
+                      transition="transform 300ms"
+                      _hover={{
+                        transform: 'translateY(-3px)',
+                        transition: 'transform 300ms',
+                      }}
+                      bg={useColorModeValue('white', '#2a2e35')}
+                      mt="1rem"
+                      key={i}
+                    >
+                      <Card
+                        modalButtonText={project.title}
+                        modalButtonSubText={project.titleDescription}
+                        modalHeader={project.title}
+                        modalBody={project.description}
+                        imageHref={project.href}
+                        pi={project.pi}
+                        metaDataPublication={project.metaDataPublication}
+                        metaDataPresentation={project.metaDataPresentation}
+                      />
+                    </Box>
+                  )}
+                </Box>
+              ))}
+            </>
+          )}
         </Grid>
       </Box>
     </Layout>

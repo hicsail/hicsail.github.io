@@ -36,6 +36,7 @@ export const Banner: React.VFC = () => {
         <Link
           href="https://www.bu.edu/hic/"
           _hover={{ textDecoration: 'none' }}
+          isExternal
         >
           <Text
             fontSize={'1.25rem'}
