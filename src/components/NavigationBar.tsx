@@ -51,7 +51,7 @@ export default function NavigationBar() {
           width="100%"
           marginLeft="0px"
         >
-          <Link as={ReactRouterLink} to="/">
+          <Link as={ReactRouterLink} to="/" _hover={{ textDecoration: 'none' }}>
             <Flex
               fontFamily={'heading'}
               display="flex"
@@ -68,7 +68,7 @@ export default function NavigationBar() {
                 <Image src="../../img/s_logo.png" />
               </Box>
               <Text
-                fontSize={'2rem'}
+                fontSize={'3rem'}
                 fontFamily="Karbon"
                 fontWeight={500}
                 _hover={{ textDecoration: 'none' }}
@@ -294,8 +294,8 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
     children: [
       {
-        label: 'ENGINEERS',
-        href: '/engineers',
+        label: 'TECHNICAL STAFF',
+        href: '/technicalstaff',
         hash: false,
       },
       {

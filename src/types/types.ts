@@ -13,6 +13,7 @@ export interface PersonInformation {
   picture: string;
   role: string;
   bio: string;
+  email: string;
   // research?: string;
   // outsideLinks?: Array<OutsideLink>;
   // projects?: Array<Project> | null;
@@ -40,6 +41,7 @@ export interface ProjectInfo {
   titleDescription: string;
   description: string;
   projectType: string;
+  featured: boolean;
   href: string;
   pi: ReactElement | null;
   metaDataPresentation: Array<OutsideLink>;

@@ -25,7 +25,7 @@ export const CurrentMembers: React.VFC = () => {
         pt="3"
         borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
-        {CURRENTMEMBERS_LIST.map(({ picture, name, role, bio }, i) => (
+        {CURRENTMEMBERS_LIST.map(({ picture, name, role, bio, email }, i) => (
           <Flex direction="row" marginBottom="30px" key={i}>
             <Avatar src={picture} size={avatarSize} name={name} />
 

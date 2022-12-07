@@ -64,7 +64,7 @@ export const App: React.VFC = () => {
             {/* <Route path="/join">
               <Join />
             </Route> */}
-            <Route path="/engineers">
+            <Route path="/technicalstaff">
               <Engineer />
             </Route>
             <Route path="/interns">

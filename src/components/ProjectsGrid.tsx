@@ -1,4 +1,11 @@
-import { Box, Grid, useColorModeValue, Text, Select } from '@chakra-ui/react';
+import {
+  Box,
+  Grid,
+  useColorModeValue,
+  Text,
+  Select,
+  Heading,
+} from '@chakra-ui/react';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { ProjectInfo } from '../types/types';
@@ -6,12 +13,18 @@ import { Card } from './Card';
 import { Layout } from './Layout';
 
 interface Props {
-  title: string;
+  title: string | null;
   list: Array<ProjectInfo>;
   showText: boolean;
 }
 
+interface ProjectSelectProps {
+  selected: string;
+  list: Array<ProjectInfo>;
+}
+
 const options = [
+  'Featured',
   'All',
   'Data Science',
   'Ed Tech',
@@ -20,6 +33,143 @@ const options = [
   'Natural Sciences',
 ];
 
+const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
+  if (selected == 'Featured') {
+    return (
+      <>
+        {list.map((project: ProjectInfo, i) => (
+          <Box>
+            {project.featured == true && (
+              <Box
+                maxWidth="300px"
+                overflow="hidden"
+                fontWeight="300"
+                padding="0"
+                display="inline-flex"
+                flexDirection="column"
+                margin="0 0 1em"
+                width="100%"
+                boxShadow={useColorModeValue(
+                  '0 4px 8px rgba(0,30,84,0.12)',
+                  '0 4px 8px rgba(0,0,0,0.38)',
+                )}
+                transform="translateY(0)"
+                transition="transform 300ms"
+                _hover={{
+                  transform: 'translateY(-3px)',
+                  transition: 'transform 300ms',
+                }}
+                bg={useColorModeValue('white', '#2a2e35')}
+                mt="1rem"
+                key={i}
+              >
+                <Card
+                  modalButtonText={project.title}
+                  modalButtonSubText={project.titleDescription}
+                  modalHeader={project.title}
+                  modalBody={project.description}
+                  imageHref={project.href}
+                  pi={project.pi}
+                  metaDataPublication={project.metaDataPublication}
+                  metaDataPresentation={project.metaDataPresentation}
+                />
+              </Box>
+            )}
+          </Box>
+        ))}
+      </>
+    );
+  } else if (selected == 'All') {
+    return (
+      <>
+        {list.map((project: ProjectInfo, i) => (
+          <Box>
+            <Box
+              maxWidth="300px"
+              overflow="hidden"
+              fontWeight="300"
+              padding="0"
+              display="inline-flex"
+              flexDirection="column"
+              margin="0 0 1em"
+              width="100%"
+              boxShadow={useColorModeValue(
+                '0 4px 8px rgba(0,30,84,0.12)',
+                '0 4px 8px rgba(0,0,0,0.38)',
+              )}
+              transform="translateY(0)"
+              transition="transform 300ms"
+              _hover={{
+                transform: 'translateY(-3px)',
+                transition: 'transform 300ms',
+              }}
+              bg={useColorModeValue('white', '#2a2e35')}
+              mt="1rem"
+              key={i}
+            >
+              <Card
+                modalButtonText={project.title}
+                modalButtonSubText={project.titleDescription}
+                modalHeader={project.title}
+                modalBody={project.description}
+                imageHref={project.href}
+                pi={project.pi}
+                metaDataPublication={project.metaDataPublication}
+                metaDataPresentation={project.metaDataPresentation}
+              />
+            </Box>
+          </Box>
+        ))}
+      </>
+    );
+  } else {
+    return (
+      <>
+        {list.map((project: ProjectInfo, i) => (
+          <Box>
+            {project.projectType == selected && (
+              <Box
+                maxWidth="300px"
+                overflow="hidden"
+                fontWeight="300"
+                padding="0"
+                display="inline-flex"
+                flexDirection="column"
+                margin="0 0 1em"
+                width="100%"
+                boxShadow={useColorModeValue(
+                  '0 4px 8px rgba(0,30,84,0.12)',
+                  '0 4px 8px rgba(0,0,0,0.38)',
+                )}
+                transform="translateY(0)"
+                transition="transform 300ms"
+                _hover={{
+                  transform: 'translateY(-3px)',
+                  transition: 'transform 300ms',
+                }}
+                bg={useColorModeValue('white', '#2a2e35')}
+                mt="1rem"
+                key={i}
+              >
+                <Card
+                  modalButtonText={project.title}
+                  modalButtonSubText={project.titleDescription}
+                  modalHeader={project.title}
+                  modalBody={project.description}
+                  imageHref={project.href}
+                  pi={project.pi}
+                  metaDataPublication={project.metaDataPublication}
+                  metaDataPresentation={project.metaDataPresentation}
+                />
+              </Box>
+            )}
+          </Box>
+        ))}
+      </>
+    );
+  }
+};
+
 export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
   const [selected, setSelected] = useState(options[0]);
   // useEffect(() => {
@@ -27,7 +177,9 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
   // }, [selected]);
 
   return (
-    <Layout title={title}>
+    // <Layout title={title}>
+    <Box>
+      <Heading>{title}</Heading>
       <Select
         placeholder="Select Project Type"
         value={selected}
@@ -67,6 +219,9 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
           justifyContent="space-between"
           mt="1rem"
         >
+          <ProjectSelect selected={selected} list={list} />
+          {selected == 'Featured'}
+
           {selected == 'All' ? (
             <>
               {list.map((project: ProjectInfo, i) => (
@@ -155,6 +310,6 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
           )}
         </Grid>
       </Box>
-    </Layout>
+    </Box>
   );
 };

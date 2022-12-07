@@ -42,6 +42,7 @@ const theme = extendTheme({
     },
     link: {
       color: '#567dbd',
+      textDecoration: 'underline',
     },
   },
   initialColorMode: 'light',

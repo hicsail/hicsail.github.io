@@ -21,6 +21,8 @@ import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
 import { IoRocketSharp } from 'react-icons/io5';
+import { ProjectsGrid } from '../components/ProjectsGrid';
+import { PROJECTS_LIST } from '../utils/data/projectInformation';
 
 const HeroText = styled.div`
   position: absolute;
@@ -238,7 +240,9 @@ export const Home: React.VFC = () => {
             <Heading textStyle="h2" mt="5'0px">
               Featured Projects
             </Heading>
-            <HighlightedProjectGrid />
+
+            {/* <HighlightedProjectGrid /> */}
+            <ProjectsGrid title={null} list={PROJECTS_LIST} showText={false} />
           </Box>
 
           <Box width="100%" gridArea="contact"></Box>

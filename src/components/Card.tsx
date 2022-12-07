@@ -72,7 +72,7 @@ export const Card: React.FC<Props> = ({
         </Box>
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
         <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>
           <ModalCloseButton />

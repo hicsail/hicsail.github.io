@@ -10,11 +10,12 @@ import {
 } from '../utils/data/projectInformation';
 import { ProjectsGrid } from '../components/ProjectsGrid';
 import { Select } from '@chakra-ui/react';
+import { Layout } from '../components/Layout';
 export const Projects: React.VFC = () => {
   return (
-    <React.Fragment>
+    <Layout title={null}>
       <ProjectsGrid
-        title="Working Projects"
+        title="Active Projects"
         list={PROJECTS_LIST}
         showText={true}
       />
@@ -23,6 +24,6 @@ export const Projects: React.VFC = () => {
         list={OLD_PROJECTS_LIST}
         showText={false}
       />
-    </React.Fragment>
+    </Layout>
   );
 };

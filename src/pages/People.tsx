@@ -34,7 +34,7 @@ export const People: React.VFC = () => {
         pt="3"
         // borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
-        {CURRENTMEMBERS_LIST.map(({ picture, name, role, bio }, i) => (
+        {CURRENTMEMBERS_LIST.map(({ picture, name, role, bio, email }, i) => (
           <Flex direction="column" marginBottom="30px" key={i}>
             <Popover trigger="hover">
               <PopoverTrigger>
@@ -63,11 +63,14 @@ export const People: React.VFC = () => {
                 <PopoverCloseButton />
                 {/* <PopoverHeader>Confirmation!</PopoverHeader> */}
                 <PopoverBody>
-                  <Text>
+                  <Flex direction="column">
                     <Text as="span" fontWeight="900">
                       Role: {role}
                     </Text>
-                  </Text>
+                    <Text as="span" fontWeight="900">
+                      Email: {email}
+                    </Text>
+                  </Flex>
                   <Text>
                     {/* <Text as="span" fontWeight="900">
                       Bio: {bio}
