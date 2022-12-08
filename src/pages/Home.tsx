@@ -14,6 +14,7 @@ import {
   IconButton,
   ModalBody,
   ModalCloseButton,
+  Flex,
 } from '@chakra-ui/react';
 import { isBrowser, isMobile } from 'react-device-detect';
 import * as React from 'react';
@@ -223,7 +224,7 @@ export const Home: React.VFC = () => {
                 </Text>
               </Link>
               {' or '}
-              <Link href="mailto:hicsail@bu.edu">
+              <Link href="mailto:sail@bu.edu">
                 <Text as="span" textStyle="link">
                   contact us
                 </Text>
@@ -262,12 +263,14 @@ export const Home: React.VFC = () => {
             </Heading>
 
             {/* <HighlightedProjectGrid /> */}
+            {/* <Flex> */}
             <ProjectsGrid
               title={null}
               list={PROJECTS_LIST}
               showText={false}
               showSelect={false}
             />
+            {/* </Flex> */}
           </Box>
 
           <Box width="100%" gridArea="contact"></Box>

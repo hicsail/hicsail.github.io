@@ -106,7 +106,7 @@ export const Intern: React.VFC = () => (
             part-time internship, please email your resume and indication of
             your interests to{' '}
             <Text as="span" textStyle="link">
-              <Link href="mailto:hicsail@bu.edu">sail@bu.edu</Link>
+              <Link href="mailto:sail@bu.edu">sail@bu.edu</Link>
             </Text>
           </Text>
           <Text textStyle="paragraph">
