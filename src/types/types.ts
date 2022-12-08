@@ -9,13 +9,14 @@ export interface AlumniInformation {
 }
 
 export interface PersonInformation {
-  name?: string;
-  picture?: string;
-  role?: string;
-  research?: string;
-  outsideLinks: Array<OutsideLink>;
-  projects?: Array<Project> | null;
-  bio?: string;
+  name: string;
+  picture: string;
+  role: string;
+  bio: string;
+  email: string;
+  // research?: string;
+  // outsideLinks?: Array<OutsideLink>;
+  // projects?: Array<Project> | null;
 }
 
 export interface OutsideLink {
@@ -33,6 +34,18 @@ export interface ProjectInformation {
   title: string;
   text: string;
   pi: ReactElement;
+}
+
+export interface ProjectInfo {
+  title: string;
+  titleDescription: string;
+  description: string;
+  projectType: string;
+  featured: boolean;
+  href: string;
+  pi: ReactElement | null;
+  metaDataPresentation: Array<OutsideLink>;
+  metaDataPublication: Array<OutsideLink>;
 }
 
 export type ResearchInformation = {

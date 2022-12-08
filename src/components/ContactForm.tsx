@@ -1,6 +1,9 @@
 import { Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
 import * as React from 'react';
+// import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 export const ContactForm = () => {
   const {
@@ -8,11 +11,33 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data: any) => console.log(data);
-  console.log(errors);
+  // const onSubmit = (data: any) => console.log(data);
+  // console.log(errors);
+  const form = useRef<any>();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    console.log(e);
+
+    // emailjs
+    //   .sendForm(
+    //     'YOUR_SERVICE_ID',
+    //     'YOUR_TEMPLATE_ID',
+    //     form.current,
+    //     'YOUR_PUBLIC_KEY',
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     },
+    //   );
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form ref={form} onSubmit={sendEmail}>
       <FormControl id="name" isRequired>
         <FormLabel fontSize="1.5rem">Your Name</FormLabel>
         <Input

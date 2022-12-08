@@ -13,7 +13,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
   return (
     <Layout title={title}>
       <Box
-        borderTop={useColorModeValue('2px solid black', '2px solid white')}
+        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
         mb="1rem"
       >
         <Grid
@@ -46,14 +46,15 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               mt="1rem"
               key={i}
             >
-              <Card
+              {/* <Card
                 modalButtonText={research.title}
                 modalButtonSubText={research.titleDescription}
                 modalHeader={research.title}
                 modalBody={research.description}
                 imageHref={research.href}
                 pi={research.pi}
-              />
+                // metaData={[]}
+              /> */}
             </Box>
           ))}
         </Grid>

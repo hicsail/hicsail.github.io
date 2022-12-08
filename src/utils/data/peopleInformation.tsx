@@ -2,66 +2,89 @@ import { InternTestimonial, PersonInformation } from '../../types/types';
 
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {
+    name: 'William Tomlinson, Ph.D',
+    picture: '../../img/team/Will.jpeg',
+    role: 'Director',
+    bio: '',
+    email: 'willjt@bu.edu',
+  },
+  {
     name: 'Jeff Simeon',
     picture: '../../img/team/Jeff.jpg',
     role: 'Assistant Director, Operations',
-    outsideLinks: [
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jeffsimeon' },
-      {
-        name: 'BU Profile',
-        href: 'https://www.bu.edu/hic/profile/jeff-simeon/',
-      },
-    ],
-    projects: null,
     bio: 'Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ',
+    email: 'simeon@bu.edu',
   },
   {
-    name: 'Shirene Cao',
-    picture: '../../img/team/Shirene.jpg',
-    role: 'Software Engineer',
-    outsideLinks: [
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/xinyun-cao' },
-    ],
-    projects: [{ name: 'ASL-LEX', href: 'https://github.com/ASL-LEX/asl-lex' }],
-    bio: 'Shirene enjoys building web apps to support research efforts in digital health and data science and is currently the project lead for a series of applications used to understand sign language acquisition. She is currently pursuing a Master’s Degree in Computer Science.',
+    name: 'Greg Frasco',
+    picture: '../../img/team/Greg.jpeg',
+    role: 'Associate Director of Engineering',
+    bio: '',
+    email: 'frascog@bu.edu',
   },
   {
     name: 'Arezoo Sadeghi',
     picture: '../../img/team/Arezoo.jpg',
-    role: 'Software Engineer',
-    research: '',
-    outsideLinks: [
-      {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/arezoo-sadeghi-41b24a139',
-      },
-    ],
-    projects: [{ name: 'samsha', href: 'https://github.com/hicsail/samsha' }],
+    role: 'Senior Software Engineer',
     bio: "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
+    email: 'asadeg02@bu.edu',
   },
   {
-    name: 'Vidya Akavoor',
-    picture: '../../img/team/Vidya.png',
+    name: 'Justin Chen',
+    picture: '../../img/team/Justin.jpeg',
+    role: 'Senior Software Engineer',
+    bio: '',
+    email: 'chenjus@bu.edu',
+  },
+  {
+    name: 'Hazim Ab Halim',
+    picture: '../../img/team/Hazim.jpg',
     role: 'Software Engineer',
-    research: '',
-    outsideLinks: [
-      {
-        name: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/vidya-akavoor',
-      },
-    ],
-    projects: [{ name: 'ABLE', href: 'https://github.com/hicsail/im-well2' }],
-    bio: 'Vidya is enthusiastic about being able to bring software engineering skills to various research areas including synthetic biology, digital/mobile health, cybersecurity, and cloud computing.  She would like to bring linguistic and music cognition research into this umbrella, and is pursuing a master’s degree in Artificial Intelligence at Boston University in an effort to do so.',
+    bio: '',
+    email: 'zimlim@bu.edu',
   },
   {
-    name: 'Glenn Liem',
-    picture: '../../img/team/Glenn.jpg',
-    role: 'Software Engineer Intern',
-    research: '',
-    outsideLinks: [],
-    projects: [],
-    bio: "Glenn enjoys writing complex software for novel situations with real-life implications. To this end, Glenn is currently building web applications using secure multi-party computation and zero-knowledge proofs to solve real-world problems using cryptographic techniques, including secure auditing and privacy-preserving data analytics. Glenn is currently pursuing a joint Bachelor's and Master's degree in Computer Science.",
-  }
+    name: 'Collin Bolles',
+    picture: '../../img/team/Collin.jpg',
+    role: 'Software Engineer',
+    bio: '',
+    email: 'cbolles@bu.edu',
+  },
+  {
+    name: 'Manny Akosah',
+    picture: '../../img/team/Manny.jpeg',
+    role: 'Software Engineer',
+    bio: '',
+    email: 'mannysa@bu.edu',
+  },
+  {
+    name: 'Harunobu Ishii',
+    picture: '../../img/team/Harunobu.jpg',
+    role: 'Software Engineer',
+    bio: '',
+    email: 'hishii@bu.edu',
+  },
+  {
+    name: 'Asad Malik',
+    picture: '../../img/team/Asad.png',
+    role: 'Software Engineer',
+    bio: '',
+    email: 'am5815@bu.edu',
+  },
+  {
+    name: 'Karina Hickman',
+    picture: '../../img/team/Karina.png',
+    role: 'Technical Project Associate',
+    bio: '',
+    email: 'khickman@bu.edu',
+  },
+  {
+    name: 'Wenhan Wang',
+    picture: '../../img/team/Wenhan.jpg',
+    role: 'Software Engineer',
+    bio: '',
+    email: 'wenhwang@bu.edu',
+  },
 ];
 
 export const INTERNTESTIMONIALS_LIST: Array<InternTestimonial> = [

@@ -39,10 +39,11 @@ export default function NavigationBar() {
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        paddingLeft='0'
-        paddingRight='0'
-        borderBottom={1}
+        paddingLeft="0"
+        paddingRight="0"
+        // borderBottom={1}
         justifyContent="center"
+        // bgColors="red"
       >
         <Flex
           justifyContent="space-between"
@@ -50,7 +51,7 @@ export default function NavigationBar() {
           width="100%"
           marginLeft="0px"
         >
-          <Link as={ReactRouterLink} to="/">
+          <Link as={ReactRouterLink} to="/" _hover={{ textDecoration: 'none' }}>
             <Flex
               fontFamily={'heading'}
               display="flex"
@@ -63,10 +64,16 @@ export default function NavigationBar() {
                 objectFit="cover"
                 marginRight="10px"
                 marginBottom="5px"
+                pb="5px"
               >
                 <Image src="../../img/s_logo.png" />
               </Box>
-              <Text fontSize={'2rem'} fontFamily="Karbon" fontWeight={500}>
+              <Text
+                fontSize={'3rem'}
+                fontFamily="Karbon"
+                fontWeight={500}
+                _hover={{ textDecoration: 'none' }}
+              >
                 SAIL
               </Text>
             </Flex>
@@ -268,50 +275,13 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'HOME',
-    href: '/',
-    hash: false,
-  },
-  {
     label: 'PEOPLE',
-    href: '#',
-    hash: false,
-    children: [
-      {
-        label: 'CURRENT MEMBERS',
-        href: '/currentMembers',
-        hash: false,
-      },
-      {
-        label: 'ALUMNI',
-        href: '/alumni',
-        hash: false,
-      },
-    ],
-  },
-  {
-    label: 'RESEARCH',
-    href: '/research',
+    href: '/people',
     hash: false,
   },
   {
-    label: 'PUBLICATIONS',
-    href: '#',
-    hash: false,
-    children: [
-      {
-        label: 'PRESENTATIONS',
-        href: '/presentations',
-      },
-      {
-        label: 'PUBLICATIONS',
-        href: '/publications',
-      },
-    ],
-  },
-  {
-    label: 'JOIN',
-    href: '/join',
+    label: 'PROJECTS',
+    href: '/projects',
     hash: false,
   },
   {
@@ -319,4 +289,58 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/contact',
     hash: false,
   },
+  {
+    label: 'JOIN',
+    href: '#',
+    hash: false,
+    children: [
+      {
+        label: 'TECHNICAL STAFF',
+        href: '/technicalstaff',
+        hash: false,
+      },
+      {
+        label: 'INTERNS',
+        href: '/interns',
+        hash: false,
+      },
+    ],
+  },
+  // {
+  //   label: 'OTHER',
+  //   href: '#',
+  //   hash: false,
+  //   children: [
+  //     {
+  //       label: 'RESEARCHERS',
+  //       href: '/researchers',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'SUPPORT',
+  //       href: '/support',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'MEDIA',
+  //       href: '/media',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'IMPACT',
+  //       href: '/impact',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'OUTREACH',
+  //       href: '/outreach',
+  //       hash: false,
+  //     },
+  //     {
+  //       label: 'CONTACT',
+  //       href: '/contact',
+  //       hash: false,
+  //     },
+  //   ],
+  // },
 ];

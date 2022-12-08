@@ -1,6 +1,180 @@
 import { Box, Link, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { ProjectInformation } from '../../types/types';
+import { ProjectInfo, ProjectInformation } from '../../types/types';
+
+export const PROJECTS_LIST: Array<ProjectInfo> = [
+  {
+    title: 'COVID',
+    titleDescription: 'Clinical Testing Lab',
+    description:
+      'To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.',
+    href: '../../../img/research/covid.png',
+    projectType: 'Digital Health',
+    featured: true,
+    pi: null,
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'Web MPC',
+    titleDescription: 'Secure Compensation Analytics for the City of Boston',
+    description:
+      'In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.',
+    href: '../../../img/research/webmpc.png',
+    projectType: 'Privacy and Security',
+    featured: true,
+    pi: null,
+    metaDataPresentation: [
+      {
+        name: 'From Usability to Secure Computing and Back Again',
+        href: 'https://www.usenix.org/conference/soups2019/presentation/qin',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: 'Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications',
+        href: 'https://ieeexplore.ieee.org/document/8901614',
+      },
+    ],
+  },
+  {
+    title: 'Noise Score',
+    titleDescription: 'Describe and Visualize Your Daily Soundscape',
+    description:
+      'Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.',
+    href: '../../../img/research/noisescore.png',
+    projectType: 'Digital Health',
+    featured: true,
+    pi: (
+      <>
+        <Link href="https://vivo.brown.edu/display/edwalker" color="#567dbd">
+          Dr. Erica Walker,{' '}
+        </Link>
+        <Text as="span">
+          Assistant Professor of Epidemiology, Brown University
+        </Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'ASL-LEX',
+    titleDescription: '',
+    description: '',
+    href: '../../../img/research/asl.jpg',
+    projectType: 'Data Science',
+    featured: false,
+    pi: (
+      <>
+        <Link
+          href="https://www.bu.edu/wheelock/profile/naomi-caselli/"
+          color="#567dbd"
+        >
+          Dr.Naomi Caselli,{' '}
+        </Link>
+        <Text as="span">Assistant Professor, Wheelock</Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+  {
+    title: 'ORACLES',
+    titleDescription: 'ORACLES',
+    description: '',
+    href: '../../../img/research/oracles.png',
+    projectType: 'Data Science',
+    featured: false,
+    pi: (
+      <>
+        <Link
+          href="https://www.bu.edu/hic/profile/mayank-varia/"
+          color="#567dbd"
+        >
+          Dr.Mayank Varia,{' '}
+        </Link>
+        <Text as="span">Research Associate Professor, Computer Science</Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+];
+
+export const OLD_PROJECTS_LIST: Array<ProjectInfo> = [
+  {
+    title: 'ORACLES',
+    titleDescription: 'ORACLES',
+    description: '',
+    href: '../../../img/research/oracles.png',
+    projectType: 'Data Science',
+    featured: true,
+    pi: (
+      <>
+        <Link
+          href="https://www.bu.edu/hic/profile/mayank-varia/"
+          color="#567dbd"
+        >
+          Dr.Mayank Varia,{' '}
+        </Link>
+        <Text as="span">Research Associate Professor, Computer Science</Text>
+      </>
+    ),
+    metaDataPresentation: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+    metaDataPublication: [
+      {
+        name: '',
+        href: '',
+      },
+    ],
+  },
+];
 
 export const PROJECT_LIST: Array<ProjectInformation> = [
   {

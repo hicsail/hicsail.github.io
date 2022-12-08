@@ -38,7 +38,7 @@ export class Reacteroids extends Component {
         down: 0,
         space: 0,
       },
-      asteroidCount: 10,
+      asteroidCount: 20,
       currentScore: 0,
       top: localStorage['topscore'] || 0,
       inGame: false,
@@ -497,6 +497,9 @@ export class Reacteroids extends Component {
             textAlign: 'center',
             width: '100%',
             fontSize: '1.5rem',
+            // position: 'absolute',
+            // top: '80vh',
+            // right: '5vh',
             // margin: '10px',
           }}
         >
@@ -505,6 +508,9 @@ export class Reacteroids extends Component {
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
               fontFamily: 'Karbon',
               cursor: 'pointer',
+              // position: 'absolute',
+              // top: '80vh',
+              // right: '5vh',
             }}
             onClick={this.startGame.bind(this)}
           >
@@ -518,9 +524,16 @@ export class Reacteroids extends Component {
       startgame = (
         <div
           style={{
-            textAlign: 'center',
-            width: '100%',
+            // textAlign: 'center',
+            // width: '100%',
             fontSize: '1.5rem',
+            position: 'absolute',
+            top: '80vh',
+            right: '5vh',
+            backgroundColor: 'orange',
+            color: 'black',
+            padding: '15px 15px',
+            boxShadow: '0 5px 25px 0 rgba(0, 0, 0, 0.25)',
           }}
         >
           <button
@@ -620,8 +633,17 @@ export class Reacteroids extends Component {
         <div
           style={{
             fontSize: '1.5rem',
-            width: '100%',
-            textAlign: 'center',
+            // width: '100%',
+            // textAlign: 'center',
+            backgroundColor: 'orange',
+            position: 'absolute',
+            top: '75vh',
+            right: '5vh',
+            fontFamily: 'Courier New, Courier, monospace',
+            fontSize: '16px',
+            color: 'black',
+            padding: '5px 15px',
+            boxShadow: '0 5px 25px 0 rgba(0, 0, 0, 0.25)',
             // margin: '10px',
           }}
         >

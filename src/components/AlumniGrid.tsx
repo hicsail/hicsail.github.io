@@ -8,15 +8,15 @@ const GridColumn = styled.div`
   flex-grow: 1;
 `;
 
-function sortByName() {  
-  return function(a : AlumniInformation, b: AlumniInformation) : number {
-    if (a["Name"] > b["Name"]) {
-      return 1;  
-    } else if (a["Name"] < b["Name"]) {
-      return -1;  
+function sortByName() {
+  return function (a: AlumniInformation, b: AlumniInformation): number {
+    if (a['Name'] > b['Name']) {
+      return 1;
+    } else if (a['Name'] < b['Name']) {
+      return -1;
     }
-    return 0;  
-  }  
+    return 0;
+  };
 }
 
 export const AlumniGrid: React.FC = () => {
@@ -24,7 +24,7 @@ export const AlumniGrid: React.FC = () => {
     <Grid
       gap={4}
       alignItems="space-around"
-      borderTop={useColorModeValue('2px solid black', '2px solid white')}
+      // borderTop={useColorModeValue('2px solid black', '2px solid white')}
     >
       <Grid
         templateColumns="1fr 1fr 1fr"
@@ -32,7 +32,7 @@ export const AlumniGrid: React.FC = () => {
         fontSize="20px"
       >
         <GridColumn>Name</GridColumn>
-        <GridColumn>Prior Position(s)</GridColumn>
+        {/* <GridColumn>Prior Position(s)</GridColumn> */}
         <GridColumn>Post-SAIL Position(s)</GridColumn>
       </Grid>
       {ALUMNI.sort(sortByName()).map(
@@ -44,7 +44,7 @@ export const AlumniGrid: React.FC = () => {
             key={i}
           >
             <GridColumn>{Name}</GridColumn>
-            <GridColumn>{SAIL_Position}</GridColumn>
+            {/* <GridColumn>{SAIL_Position}</GridColumn> */}
             <GridColumn>{Post_SAIL}</GridColumn>
           </Grid>
         ),

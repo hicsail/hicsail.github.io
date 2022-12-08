@@ -1,17 +1,22 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Link, Image, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
+import { Banner } from './components/Banner';
 import { OpportunitiesBanner } from './components/OpportunitiesBanner';
 import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
+import { Projects } from './pages/Projects';
 import { Join } from './pages/Join';
 import { Research } from './pages/Research';
 import { Alumni } from './pages/Alumni';
 import { CurrentMembers } from './pages/CurrentMembers';
+import { People } from './pages/People';
 import { Presentations } from './pages/Presentations';
 import Footer from './components/Footer';
 import { Contact } from './pages/Contact';
+import { Engineer } from './pages/Engineer';
+import { Intern } from './pages/Intern';
 
 export const App: React.VFC = () => {
   return (
@@ -25,6 +30,7 @@ export const App: React.VFC = () => {
         minHeight="100vh"
         justifyContent="flex-start"
       >
+        <Banner />
         <NavigationBar />
 
         <OpportunitiesBanner opportunityAvailable={false} />
@@ -33,6 +39,9 @@ export const App: React.VFC = () => {
           <Switch>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/people">
+              <People />
             </Route>
             <Route path="/currentmembers">
               <CurrentMembers />
@@ -43,14 +52,23 @@ export const App: React.VFC = () => {
             <Route path="/research">
               <Research />
             </Route>
+            <Route path="/projects">
+              <Projects />
+            </Route>
             <Route path="/presentations">
               <Presentations />
             </Route>
             <Route path="/publications">
               <Publications />
             </Route>
-            <Route path="/join">
+            {/* <Route path="/join">
               <Join />
+            </Route> */}
+            <Route path="/technicalstaff">
+              <Engineer />
+            </Route>
+            <Route path="/interns">
+              <Intern />
             </Route>
             <Route path="/contact">
               <Contact />

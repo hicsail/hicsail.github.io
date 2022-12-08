@@ -2,7 +2,7 @@ import { Box, Flex, Heading } from '@chakra-ui/react';
 import * as React from 'react';
 
 interface LayoutProps {
-  title: string;
+  title: string | null;
 }
 
 export const Layout: React.FC<LayoutProps> = ({ title, children }) => {
@@ -16,7 +16,13 @@ export const Layout: React.FC<LayoutProps> = ({ title, children }) => {
       margin="0 auto"
     >
       <Box marginBottom="30px" width="100%">
-        <Heading marginBottom="15px">{title}</Heading>
+        {title == null ? (
+          <></>
+        ) : (
+          <Heading marginBottom="10px" fontWeight="bold">
+            {title}
+          </Heading>
+        )}
       </Box>
       <Box width="100%">{children}</Box>
     </Flex>

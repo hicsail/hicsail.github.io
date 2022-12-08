@@ -12,8 +12,11 @@ import {
   Image,
   Text,
   useColorModeValue,
+  Link,
+  List,
 } from '@chakra-ui/react';
 import * as React from 'react';
+import { OutsideLink } from '../types/types';
 
 interface Props {
   modalButtonText: string | undefined;
@@ -22,6 +25,8 @@ interface Props {
   imageHref: string | undefined;
   modalButtonSubText: string | undefined;
   pi: React.ReactElement | null;
+  metaDataPresentation: Array<OutsideLink>;
+  metaDataPublication: Array<OutsideLink>;
 }
 
 export const Card: React.FC<Props> = ({
@@ -31,6 +36,8 @@ export const Card: React.FC<Props> = ({
   imageHref,
   modalButtonSubText,
   pi,
+  metaDataPresentation,
+  metaDataPublication,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -40,10 +47,10 @@ export const Card: React.FC<Props> = ({
           <Image
             maxWidth="100%"
             height="10rem"
-            src={imageHref}
-            fallbackSrc="../../img/research/placeholder-research.jpg"
             width="100%"
             objectFit="cover"
+            src={imageHref}
+            fallbackSrc="../../img/research/placeholder-research.jpg"
           />
         </Box>
         <Box p="1.5em" display="block" height="10rem">
@@ -65,15 +72,44 @@ export const Card: React.FC<Props> = ({
         </Box>
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
         <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>
           <ModalCloseButton />
           <ModalBody>
+            <Image
+              // maxWidth="100%"
+              // height="10rem"
+              // width="100%"
+              objectFit="cover"
+              src={imageHref}
+              fallbackSrc="../../img/research/placeholder-research.jpg"
+            />{' '}
             <Text textStyle="paragraph" m="0">
               {modalBody}
             </Text>
-
+            <Text textStyle="paragraph" m="0">
+              Presentations
+            </Text>
+            {metaDataPresentation.map(({ name, href }) => (
+              <Text textStyle="paragraph" m="0" color="teal">
+                <Link as="a" href={href}>
+                  {name}
+                </Link>
+              </Text>
+            ))}
+            <Text textStyle="paragraph" m="0">
+              Publications
+            </Text>
+            <List>
+              {metaDataPublication.map(({ name, href }) => (
+                <Text textStyle="paragraph" m="0" color="green">
+                  <Link as="a" href={href}>
+                    {name}
+                  </Link>
+                </Text>
+              ))}
+            </List>
             {pi == null ? (
               <Text textStyle="paragraph">{pi}</Text>
             ) : (
