@@ -64,6 +64,7 @@ export default function NavigationBar() {
                 objectFit="cover"
                 marginRight="10px"
                 marginBottom="5px"
+                pb="5px"
               >
                 <Image src="../../img/s_logo.png" />
               </Box>
