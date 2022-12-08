@@ -168,7 +168,20 @@ export const Home: React.VFC = () => {
               About
             </Heading>
             <Text textStyle="paragraph">
-              The Software & Application Innovation Lab (SAIL) at the{' '}
+              The Software & Application Innovation Lab (SAIL) is the premier
+              professional research, software engineering, and consulting lab
+              within the
+              <Link href="https://www.bu.edu/hic/">
+                <Text as="span" textStyle="link">
+                  {' '}
+                  Hariri Institute for Computing
+                </Text>
+              </Link>{' '}
+              at Boston University. SAIL acts as both a driver and a
+              collaborative partner in the creation of cutting-edge solutions
+              for the data-driven, computational, and software engineering
+              aspects of research across the university and beyond.
+              {/* The Software & Application Innovation Lab (SAIL) at the{' '}
               <Link href="https://www.bu.edu/hic/">
                 <Text as="span" textStyle="link">
                   {' '}
@@ -177,42 +190,49 @@ export const Home: React.VFC = () => {
               </Link>{' '}
               is a professional research, software engineering, and consulting
               lab that acts as both a driver and a collaborative partner for
-              computational and data-oriented research efforts across{' '}
-              <Link href="https://www.bu.edu">
+              computational and data-oriented research efforts across{' '} */}
+              {/* <Link href="https://www.bu.edu">
                 <Text as="span" textStyle="link">
                   Boston University
                 </Text>
-              </Link>
+              </Link> */}
               .
             </Text>
             <Text textStyle="paragraph">
-              Across Boston University, the quality and the potential impact of
-              research activities (as well as the success of both students and
-              researchers) are increasingly dependent on the ability to work
-              with data and computational approaches, the development of quality
-              software applications and services, and familiarity with software
-              development practices.
+              As the desire for professional quality software applications and
+              services continues to rise within the realm of academia, SAIL
+              exists to develop production quality applications and services by
+              leveraging industry-leading software development practices.
             </Text>
             <Text textStyle="paragraph">
-              SAIL activities include basic and applied research, prototype and
-              production-quality software application development,
-              consultations, project and budget planning guidance, and other
-              forms of support for projects and research efforts funded by the
-              Hariri Research Awards, the National Science Foundation, the
-              National Institutes of Health, and other agencies. SAIL has worked
-              with over 60 collaborators across 12 schools at Boston University;
-              several examples are described briefly below.
+              Specifically, SAIL offers to its clients and collaborators
+              services in the form of full stack web and mobile application
+              development, code base refactoring and maintenance, software
+              best-practice consulting, project and product management guidance
+              and proposal and grant writing in the pursuit of extramural
+              funding for research projects.
             </Text>
             <Text textStyle="paragraph">
               If you would like to explore how SAIL can help you achieve your
               research objectives or would like to discuss what resources are
               available, please fill out a{' '}
-              <StyledLink href="https://www.bu.edu/hic/forms/sail-request-form/">
-                request form
-              </StyledLink>{' '}
-              or <a href="mailto:hicsail@bu.edu">contact us</a> directly.
+              {/* <StyledLink href="https://www.bu.edu/hic/forms/sail-request-form/"> */}
+              <Link href="https://www.bu.edu/hic/forms/sail-request-form/">
+                <Text as="span" textStyle="link">
+                  request form
+                </Text>
+              </Link>
+              {' or '}
+              <Link href="mailto:hicsail@bu.edu">
+                <Text as="span" textStyle="link">
+                  contact us
+                </Text>
+              </Link>
+              {' directly'}
+              {/* </StyledLink>{' '} */}
+              {/* or <a href="mailto:hicsail@bu.edu">contact us</a> directly. */}
             </Text>
-            <Text textStyle="paragraph">
+            {/* <Text textStyle="paragraph">
               If you are seeking other forms of support (including seed funding)
               for a research effort that requires computational science
               expertise or software engineering resources, you may also want to
@@ -221,7 +241,7 @@ export const Home: React.VFC = () => {
                 Hariri Research Award program
               </a>
               .
-            </Text>
+            </Text> */}
           </Box>
 
           {/* <Box gridArea="projects">
@@ -242,7 +262,12 @@ export const Home: React.VFC = () => {
             </Heading>
 
             {/* <HighlightedProjectGrid /> */}
-            <ProjectsGrid title={null} list={PROJECTS_LIST} showText={false} />
+            <ProjectsGrid
+              title={null}
+              list={PROJECTS_LIST}
+              showText={false}
+              showSelect={false}
+            />
           </Box>
 
           <Box width="100%" gridArea="contact"></Box>

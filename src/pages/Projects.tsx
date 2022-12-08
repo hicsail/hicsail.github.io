@@ -18,11 +18,13 @@ export const Projects: React.VFC = () => {
         title="Active Projects"
         list={PROJECTS_LIST}
         showText={true}
+        showSelect={true}
       />
       <ProjectsGrid
         title="Legacy Projects"
         list={OLD_PROJECTS_LIST}
         showText={false}
+        showSelect={true}
       />
     </Layout>
   );

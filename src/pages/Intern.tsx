@@ -69,6 +69,7 @@ export const Intern: React.VFC = () => (
       pb="16px"
       pt="16px"
       gap="24px"
+      // direction="column"
       // justifyContent="space-between"
     >
       <Box>
@@ -79,9 +80,42 @@ export const Intern: React.VFC = () => (
           <Button color="#73A6FC">Apply Here</Button>
         </Link>
       </Box>
-      <Box width="60%">
+      <Box
+      // width="60%"
+      >
         <Text>
-          The Software & Application Innovation Lab (SAIL) at the Hariri
+          <Text textStyle="paragraph" marginBlockStart="0">
+            Interns at the Software & Application Innovation Lab (SAIL) have the
+            opportunity to gain experience working with a team of research
+            software engineers, applying modern software development techniques
+            while following industry best practices. They are not deterred by
+            ambiguity and have a strong desire to explore alternatives and
+            identify solutions.{' '}
+          </Text>
+          <Text textStyle="paragraph">
+            Interns gain expertise in critical and analytical work, design
+            thinking, and cutting-edge technologies--all while collaborating
+            with faculty, graduate students, and industry partners on research
+            efforts in domains such as digital health, security and privacy,
+            data science, synthetic biology and more.{' '}
+          </Text>
+          <Text textStyle="paragraph">
+            SAIL offers the opportunity for students at Boston University to
+            partake in part-time internships throughout the fall and spring
+            semesters. If you are a Boston University student interested in a
+            part-time internship, please email your resume and indication of
+            your interests to{' '}
+            <Text as="span" textStyle="link">
+              <Link href="mailto:hicsail@bu.edu">sail@bu.edu</Link>
+            </Text>
+          </Text>
+          <Text textStyle="paragraph">
+            Internships provided over the summer, open to all levels of
+            students, lasts approximately 12 weeks, spanning from May to August.
+            The application for the Summer ’23 internship program has not yet
+            been posted.
+          </Text>
+          {/* The Software & Application Innovation Lab (SAIL) at the Hariri
           Institute for Computing is a professional research, software
           engineering, and consulting lab that acts as both a driver and a
           collaborative partner for computational and data-oriented research
@@ -94,7 +128,7 @@ export const Intern: React.VFC = () => (
           work, design thinking, and cutting-edge technologies--all while
           collaborating with faculty, graduate students, and industry partners
           on research efforts in domains such as digital health, security and
-          privacy, data science, and synthetic biology.
+          privacy, data science, and synthetic biology. */}
         </Text>
       </Box>
 

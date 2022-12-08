@@ -16,6 +16,7 @@ interface Props {
   title: string | null;
   list: Array<ProjectInfo>;
   showText: boolean;
+  showSelect: boolean;
 }
 
 interface ProjectSelectProps {
@@ -38,7 +39,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
     return (
       <>
         {list.map((project: ProjectInfo, i) => (
-          <Box>
+          <>
             {project.featured == true && (
               <Box
                 maxWidth="300px"
@@ -75,7 +76,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
                 />
               </Box>
             )}
-          </Box>
+          </>
         ))}
       </>
     );
@@ -83,7 +84,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
     return (
       <>
         {list.map((project: ProjectInfo, i) => (
-          <Box>
+          <>
             <Box
               maxWidth="300px"
               overflow="hidden"
@@ -118,7 +119,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
                 metaDataPresentation={project.metaDataPresentation}
               />
             </Box>
-          </Box>
+          </>
         ))}
       </>
     );
@@ -126,7 +127,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
     return (
       <>
         {list.map((project: ProjectInfo, i) => (
-          <Box>
+          <>
             {project.projectType == selected && (
               <Box
                 maxWidth="300px"
@@ -163,14 +164,19 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
                 />
               </Box>
             )}
-          </Box>
+          </>
         ))}
       </>
     );
   }
 };
 
-export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
+export const ProjectsGrid: React.FC<Props> = ({
+  title,
+  list,
+  showText,
+  showSelect,
+}) => {
   const [selected, setSelected] = useState(options[0]);
   // useEffect(() => {
   //   console.log(selected);
@@ -180,17 +186,21 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
     // <Layout title={title}>
     <Box>
       <Heading>{title}</Heading>
-      <Select
-        placeholder="Select Project Type"
-        value={selected}
-        onChange={(e) => setSelected(e.target.value)}
-      >
-        {options.map((value) => (
-          <option value={value} key={value}>
-            {value}
-          </option>
-        ))}
-      </Select>
+      {showSelect ? (
+        <Select
+          placeholder="Select Project Type"
+          value={selected}
+          onChange={(e) => setSelected(e.target.value)}
+        >
+          {options.map((value) => (
+            <option value={value} key={value}>
+              {value}
+            </option>
+          ))}
+        </Select>
+      ) : (
+        <></>
+      )}
       <Box
         // borderTop={useColorModeValue('2px solid black', '2px solid white')}
         mb="1rem"
@@ -198,15 +208,15 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
         {showText ? (
           <Box>
             <Text textStyle="paragraph">
-              Ongoing projects focus on a wide range of topics and technologies,
-              from developing and deploying novel cybersecurity applications, to
-              prototyping and deploying smart-city services and platforms.
+              Having worked with over 70 collaborators across 20 schools at
+              Boston University, SAIL is committed to developing open-source
+              software products that have direct impacts on academic research,
+              public service, and industry.
             </Text>
             <Text textStyle="paragraph">
-              SAIL is committed to promoting innovation, best practices, and
-              open source models within the research community. SAIL will learn
-              and help teach new technologies and techniques as determined by
-              the needs of any given project.
+              SAIL projects are grouped into program areas, ranging from Digital
+              Health to Data Science to Privacy & Security and Natural Sciences.
+              Several example projects from these areas are featured below.
             </Text>
           </Box>
         ) : (
@@ -220,7 +230,7 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
           mt="1rem"
         >
           <ProjectSelect selected={selected} list={list} />
-          {selected == 'Featured'}
+          {/* {selected == 'Featured'}
 
           {selected == 'All' ? (
             <>
@@ -266,7 +276,7 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
             </>
           ) : (
             <>
-              {list.map((project: ProjectInfo, i) => (
+              {/* {list.map((project: ProjectInfo, i) => (
                 <Box>
                   {project.projectType == selected && (
                     <Box
@@ -292,6 +302,7 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
                       mt="1rem"
                       key={i}
                     >
+                      {'selected'}
                       <Card
                         modalButtonText={project.title}
                         modalButtonSubText={project.titleDescription}
@@ -305,9 +316,9 @@ export const ProjectsGrid: React.FC<Props> = ({ title, list, showText }) => {
                     </Box>
                   )}
                 </Box>
-              ))}
-            </>
-          )}
+              ))} */}
+          {/* </>
+          )} */}
         </Grid>
       </Box>
     </Box>
