@@ -46,7 +46,7 @@ const links = [
   {
     icon: GrMail,
     label: 'Mail',
-    href: 'mailto:hicsail@bu.edu',
+    href: 'mailto:sail@bu.edu',
   },
   {
     icon: FaTwitter,
