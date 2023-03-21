@@ -110,10 +110,16 @@ export const Intern: React.VFC = () => (
             </Text>
           </Text>
           <Text textStyle="paragraph">
-            Internships provided over the summer, open to all levels of
-            students, lasts approximately 12 weeks, spanning from May to August.
-            The application for the Summer ’23 internship program has not yet
-            been posted.
+            SAIL 2023 Summer Internship Applications are now OPEN until April
+            2nd at midnight.{' '}
+            <Text as="span" textStyle="link">
+              <Link href="https://forms.clickup.com/14225407/f/dj3zz-4800/IHJZ83PECPURVQH6H2">
+                Apply using this link
+              </Link>
+            </Text>{' '}
+            or the button on this page. SAIL internships are paid full-time
+            (30-40 hours per week) software engineering positions. The
+            internship is 13 weeks, starting May 22nd and ending August 18th.
           </Text>
           {/* The Software & Application Innovation Lab (SAIL) at the Hariri
           Institute for Computing is a professional research, software
