@@ -18,6 +18,7 @@ import { Contact } from './pages/Contact';
 import { Engineer } from './pages/Engineer';
 import { Intern } from './pages/Intern';
 
+import { Impact } from './pages/Impact';
 export const App: React.VFC = () => {
   return (
     <Box width="100%" height="100%">
@@ -51,6 +52,9 @@ export const App: React.VFC = () => {
             </Route>
             <Route path="/research">
               <Research />
+            </Route>
+            <Route path="/impact">
+              <Impact />
             </Route>
             <Route path="/projects">
               <Projects />

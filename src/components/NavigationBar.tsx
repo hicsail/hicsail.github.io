@@ -285,6 +285,11 @@ const NAV_ITEMS: Array<NavItem> = [
     hash: false,
   },
   {
+    label: 'IMPACT',
+    href: '/impact',
+    hash: false,
+  },
+  {
     label: 'CONTACT',
     href: '/contact',
     hash: false,
