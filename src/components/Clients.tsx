@@ -2,11 +2,8 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { Layout } from './Layout';
 import Counter from '../utils/scripts/counter.js';
-import {
-  renderCarousel,
-  renderOrganizations,
-  drawFrequencyGraph,
-} from '../utils/scripts/collaborators.js';
+import renderVisualizations from '../utils/scripts/businessDev.js';
+import * as d3 from 'd3';
 
 export const Clients: React.FC = () => {
   const [clients, setClients] = React.useState([]);
@@ -39,6 +36,8 @@ export const Clients: React.FC = () => {
     const numProposals = proposals.length;
     document.getElementsByClassName('proposals')[0].innerHTML =
       numProposals.toString();
+
+    renderVisualizations(data);
   };
   useEffect(() => {
     getClients();
@@ -46,7 +45,7 @@ export const Clients: React.FC = () => {
     if (sessionStorage.getItem('clients')) {
       renderVisualization();
     }
-  }, []);
+  });
 
   return (
     <Layout title="Clients">
