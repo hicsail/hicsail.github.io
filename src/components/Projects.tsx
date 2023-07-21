@@ -5,7 +5,7 @@ import Counter from '../utils/scripts/counter.js';
 import renderVisualizations from '../utils/scripts/businessDev.js';
 import * as d3 from 'd3';
 
-export const Clients: React.FC = () => {
+export const Projects: React.FC = () => {
   const [clients, setClients] = React.useState([]);
   const style = {
     fontSize: '1.5rem',
@@ -37,7 +37,7 @@ export const Clients: React.FC = () => {
     document.getElementsByClassName('proposals')[0].innerHTML =
       numProposals.toString();
 
-    renderVisualizations(data);
+    renderVisualizations(active);
   };
   useEffect(() => {
     getClients();
@@ -48,7 +48,7 @@ export const Clients: React.FC = () => {
   });
 
   return (
-    <Layout title="Clients">
+    <Layout title="Projects">
       <div
         className="container"
         style={{
@@ -64,6 +64,10 @@ export const Clients: React.FC = () => {
         <div>
           <h1 style={style}>Proposals</h1>
           <p className="proposals"></p>
+        </div>
+        <div>
+          <h1 style={style}>Top 5 Department Funding</h1>
+          <div id="departmentFunding"></div>
         </div>
       </div>
     </Layout>

@@ -6,6 +6,7 @@ import {
   renderCarousel,
   renderOrganizations,
   drawFrequencyGraph,
+  collaboratorsByDepartment,
 } from '../utils/scripts/collaborators.js';
 import Carousel from 'react-bootstrap/Carousel';
 // ts-ignore
@@ -28,43 +29,44 @@ export const Collaborators: React.FC = () => {
       sessionStorage.setItem('collaborators', JSON.stringify(data));
     } else {
       console.log('already have collaborators');
-      renderVisualization();
     }
   };
 
   useEffect(() => {
     getCollaborators();
 
-    /* if (sessionStorage.getItem('collaborators')) {
+    if (sessionStorage.getItem('collaborators')) {
       renderVisualization();
-    } */
+    }
   });
 
   const renderVisualization = () => {
     const data = JSON.parse(sessionStorage.getItem('collaborators') || '[]');
     const numberOfCollaborators = data.length;
+
     document.getElementById('numEngaged')!.innerHTML =
       numberOfCollaborators.toString();
+
     const deptList = data.map((d: any) => d['Department']);
     const departments = deptList.filter(
       (dept: string, index: number) =>
         dept != '' && dept != null && deptList.indexOf(dept) === index,
     );
 
-    const roles = Counter(
+    /* const roles = Counter(
       data
         .map((d: any) => d['Role'])
         .filter((role: string) => role != '' && role != null),
-    );
+    ); */
 
-    drawFrequencyGraph(roles);
-    renderOrganizations(departments);
-    // renderCarousel(departments);
+    // drawFrequencyGraph(roles);
+    // renderOrganizations(departments);
+    collaboratorsByDepartment(data);
   };
 
   return (
     <Layout title="Collaborators">
-      {collaborators.length > 0 ? (
+      {collaborators.length > 0 || sessionStorage.getItem('collaborators') ? (
         <div
           className="collaborators"
           style={{
@@ -85,16 +87,20 @@ export const Collaborators: React.FC = () => {
             ></p>
           </div>
 
-          <div className="data">
+          {/* <div className="data">
             <h2>Roles</h2>
             <div className="barChart"></div>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <h2 className="center-heading">Organizations</h2>
             <div>
               <ul id="orgList" className="list-group"></ul>
             </div>
+          </div> */}
+          <div>
+            <h2 className="center-heading">Departments</h2>
+            <div id="collabByDepartment"></div>
           </div>
         </div>
       ) : (
