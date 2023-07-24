@@ -1,9 +1,15 @@
 import Counter from './counter.js';
-import { frequencyGraph, frequencyGraphHorizontal } from './graphs.js';
+import {
+  frequencyGraph,
+  frequencyGraphHorizontal,
+  pieChart,
+  groupedFrequencyGraph,
+} from './graphs.js';
 import * as d3 from 'd3';
+import { pie } from 'd3';
 
 const renderVisualizations = (data) => {
-  const result = d3
+  const deptFunding = d3
     .rollups(
       data,
       (xs) => d3.sum(xs, (x) => x['Award Amount']),
@@ -11,13 +17,48 @@ const renderVisualizations = (data) => {
     )
     .map(([k, v]) => ({ X: k, Y: v }));
 
-  const resultFiltered = result.filter((d) => (d.Y > 0) & (d.X != null));
+  const deptFundingFiltered = deptFunding.filter(
+    (d) => (d.Y > 0) & (d.X != null),
+  );
   // get the top 5 objects with highest Y value
-  resultFiltered.sort((a, b) => b.Y - a.Y);
-  resultFiltered.splice(5, resultFiltered.length - 5);
+  deptFundingFiltered.sort((a, b) => b.Y - a.Y);
+  deptFundingFiltered.splice(5, deptFundingFiltered.length - 5);
 
-  //console.log("result", result);
-  frequencyGraphHorizontal('departmentFunding', resultFiltered, 'Y', false);
+  const referred = d3.rollups(
+    data,
+    (xs) => xs.length,
+    (d) => d['REFERRED BY'],
+  );
+
+  const referredFinal = {};
+  referred.forEach((element) => {
+    if (element[0] === null) {
+      referredFinal['Hariri Director'] = element[1];
+    } else {
+      referredFinal[element[0]] = element[1];
+    }
+  });
+  const awardAmounts = data.map((d) => d['Award Amount']);
+  const estimatedValue = data.map((d) => d['Estimated Value']);
+
+  const awardAmountxEstimatedValue = [];
+
+  awardAmounts.forEach((value, index) => {
+    awardAmountxEstimatedValue.push({
+      group: index,
+      'Award Amount': value,
+      'Estimated Value': estimatedValue[index],
+    });
+  });
+  console.log('Award Amounts', awardAmountxEstimatedValue);
+  frequencyGraphHorizontal(
+    'departmentFunding',
+    deptFundingFiltered,
+    'Y',
+    false,
+  );
+  pieChart('referred', referredFinal, 'Y');
+  groupedFrequencyGraph('award-estimated', awardAmountxEstimatedValue);
 };
 
 export default renderVisualizations;

@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
     // get data from sessionStorage
     const data = JSON.parse(sessionStorage.getItem('clients') || '[]');
 
-    const active = data.filter((d: any) => d['Stage'] === 'Active');
+    const active = data.filter((d: any) => d['status'] === 'funded');
     const numActive = active.length;
     document.getElementsByClassName('active')[0].innerHTML =
       numActive.toString();
@@ -55,6 +55,7 @@ export const Projects: React.FC = () => {
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-around',
+          flexWrap: 'wrap',
         }}
       >
         <div>
@@ -68,6 +69,14 @@ export const Projects: React.FC = () => {
         <div>
           <h1 style={style}>Top 5 Department Funding</h1>
           <div id="departmentFunding"></div>
+        </div>
+        <div>
+          <h1 style={style}>Referred By</h1>
+          <div id="referred"></div>
+        </div>
+        <div>
+          <h1 style={style}>Award Amount vs Estimated Value</h1>
+          <div id="award-estimated"></div>
         </div>
       </div>
     </Layout>

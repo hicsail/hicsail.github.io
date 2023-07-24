@@ -42,7 +42,9 @@ export const Collaborators: React.FC = () => {
 
   const renderVisualization = () => {
     const data = JSON.parse(sessionStorage.getItem('collaborators') || '[]');
-    const numberOfCollaborators = data.length;
+    const numberOfCollaborators = data.filter(
+      (d: any) => d['status'] == 'onboarding',
+    ).length;
 
     document.getElementById('numEngaged')!.innerHTML =
       numberOfCollaborators.toString();

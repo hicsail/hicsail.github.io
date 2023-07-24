@@ -20,7 +20,7 @@ const collaboratorsByDepartment = (data) => {
   resultFiltered.sort((a, b) => b.Y - a.Y);
   resultFiltered.splice(5, resultFiltered.length - 5);
 
-  console.log('result', result);
+  //console.log('result', result);
   frequencyGraph('collabByDepartment', resultFiltered, 'Y', false, 'blue');
 };
 
