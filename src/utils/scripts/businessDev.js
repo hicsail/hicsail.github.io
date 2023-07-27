@@ -50,7 +50,22 @@ const renderVisualizations = (data) => {
       'Estimated Value': estimatedValue[index],
     });
   });
-  console.log('Award Amounts', awardAmountxEstimatedValue);
+
+  const names = data.map((d) => d['name']);
+  //combine awardAmounts and names
+  const awardsNames = [];
+  names.forEach((value, index) => {
+    awardsNames.push({
+      Y: awardAmounts[index] / 153000,
+      X: value,
+    });
+  });
+
+  const awardsNamesFiltered = awardsNames.filter(
+    (d) => (d.Y > 0) & (d.X != null),
+  );
+
+  frequencyGraph('awards', awardsNames, 'Y', false, 'green', 800, 400);
   frequencyGraphHorizontal(
     'departmentFunding',
     deptFundingFiltered,
@@ -58,7 +73,10 @@ const renderVisualizations = (data) => {
     false,
   );
   pieChart('referred', referredFinal, 'Y');
-  groupedFrequencyGraph('award-estimated', awardAmountxEstimatedValue);
+  groupedFrequencyGraph('award-estimated', awardAmountxEstimatedValue, [
+    'Award Amount',
+    'Estimated Value',
+  ]);
 };
 
 export default renderVisualizations;

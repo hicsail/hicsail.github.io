@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { Layout } from './Layout';
+import { Layout } from '../components/Layout';
 import Counter from '../utils/scripts/counter.js';
 import {
   renderCarousel,

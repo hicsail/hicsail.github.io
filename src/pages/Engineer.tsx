@@ -10,6 +10,7 @@ import {
 import * as React from 'react';
 import { InternTestimonials } from '../components/InternTestimonials';
 import { Layout } from '../components/Layout';
+import { Hiring } from './Hiring';
 
 export const Engineer: React.VFC = () => (
   <Layout title="Join Our Team">
@@ -103,5 +104,6 @@ export const Engineer: React.VFC = () => (
         </Box>
       </Grid>
     </Box>
+    <Hiring />
   </Layout>
 );

@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { Layout } from './Layout';
+import { Layout } from '../components/Layout';
 import Counter from '../utils/scripts/counter.js';
 import renderVisualizations from '../utils/scripts/businessDev.js';
-import * as d3 from 'd3';
 
-export const Projects: React.FC = () => {
+export const ProjectsImpact: React.FC = () => {
   const [clients, setClients] = React.useState([]);
   const style = {
     fontSize: '1.5rem',
@@ -77,6 +76,10 @@ export const Projects: React.FC = () => {
         <div>
           <h1 style={style}>Award Amount vs Estimated Value</h1>
           <div id="award-estimated"></div>
+        </div>
+        <div>
+          <h1 style={style}>Projects' Intended Timeline with Award Amount</h1>
+          <div id="awards"></div>
         </div>
       </div>
     </Layout>
