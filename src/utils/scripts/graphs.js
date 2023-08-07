@@ -21,7 +21,6 @@ function frequencyGraph(
 
   if (process) {
     const fieldCount = Counter(data);
-    console.log('fieldCount', fieldCount);
     for (const [key, value] of Object.entries(fieldCount)) {
       finalData.push({ X: key, Y: value });
     }
@@ -77,29 +76,42 @@ function frequencyGraph(
     .data(finalData)
     .join('rect')
     .attr('x', (d) => x(d.X))
-    .attr('y', (d) => y(d.Y))
+    .attr('y', (d) => y(0))
     .attr('width', x.bandwidth())
+
+    .attr('fill', color);
+
+  svg
+    .selectAll('rect')
+    .transition()
+    .duration(2000)
+    .attr('y', (d) => y(d.Y))
     .attr('height', (d) => {
       return height - y(d.Y);
-    })
-    .attr('fill', color);
+    });
 }
 
-function frequencyGraphHorizontal(div, data, field, process) {
+function frequencyGraphHorizontal(
+  div,
+  data,
+  field,
+  process,
+  color = '#69b3a2',
+  width = 460,
+  height = 400,
+) {
   const finalData = [];
 
   width = 800;
   if (process) {
-    const fieldArray = data.map((d) => d[field]);
-    const fieldCount = Counter(fieldArray);
-
+    const fieldCount = Counter(data);
     for (const [key, value] of Object.entries(fieldCount)) {
       finalData.push({ X: key, Y: value });
     }
   } else {
     finalData = data;
   }
-
+  console.log('finalData', finalData);
   const svg = d3
     .select('#' + div)
     .append('svg')
@@ -119,7 +131,7 @@ function frequencyGraphHorizontal(div, data, field, process) {
     .attr('transform', `translate(0, ${height})`)
     .call(d3.axisBottom(x))
     .selectAll('text')
-    .attr('transform', 'translate(20,0)rotate(-45)')
+    .attr('transform', 'translate(0,0)rotate(-45)')
     .style('text-anchor', 'end');
 
   // Y axis
@@ -137,9 +149,15 @@ function frequencyGraphHorizontal(div, data, field, process) {
     .join('rect')
     .attr('x', x(0))
     .attr('y', (d) => y(d.X))
-    .attr('width', (d) => x(d.Y))
     .attr('height', y.bandwidth())
-    .attr('fill', '#69b3a2');
+    .attr('fill', color);
+  // no bar at the beginning
+
+  svg
+    .selectAll('rect')
+    .transition()
+    .duration(2000)
+    .attr('width', (d) => x(d.Y));
 }
 
 const pieChart = (divName, data) => {
@@ -372,7 +390,7 @@ const drawMap = (markers) => {
       .style('stroke', 'none');
 
     const Tooltip = d3
-      .select('#my_dataviz')
+      .select('#locations')
       .append('div')
       .attr('class', 'tooltip')
       .style('opacity', 1)

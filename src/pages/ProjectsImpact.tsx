@@ -48,40 +48,44 @@ export const ProjectsImpact: React.FC = () => {
 
   return (
     <Layout title="Projects">
-      <div
-        className="container"
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-          flexWrap: 'wrap',
-        }}
-      >
-        <div>
-          <h1 style={style}>Active Projects</h1>
-          <p className="active"></p>
+      {clients.length > 0 || sessionStorage.getItem('clients') ? (
+        <div
+          className="container"
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            flexWrap: 'wrap',
+          }}
+        >
+          <div>
+            <h1 style={style}>Active Projects</h1>
+            <p className="active"></p>
+          </div>
+          <div>
+            <h1 style={style}>Proposals</h1>
+            <p className="proposals"></p>
+          </div>
+          <div>
+            <h1 style={style}>Top 5 Department Funding</h1>
+            <div id="departmentFunding"></div>
+          </div>
+          <div>
+            <h1 style={style}>Referred By</h1>
+            <div id="referred"></div>
+          </div>
+          <div>
+            <h1 style={style}>Award Amount vs Estimated Value</h1>
+            <div id="award-estimated"></div>
+          </div>
+          <div>
+            <h1 style={style}>Projects' Intended Timeline with Award Amount</h1>
+            <div id="awards"></div>
+          </div>
         </div>
-        <div>
-          <h1 style={style}>Proposals</h1>
-          <p className="proposals"></p>
-        </div>
-        <div>
-          <h1 style={style}>Top 5 Department Funding</h1>
-          <div id="departmentFunding"></div>
-        </div>
-        <div>
-          <h1 style={style}>Referred By</h1>
-          <div id="referred"></div>
-        </div>
-        <div>
-          <h1 style={style}>Award Amount vs Estimated Value</h1>
-          <div id="award-estimated"></div>
-        </div>
-        <div>
-          <h1 style={style}>Projects' Intended Timeline with Award Amount</h1>
-          <div id="awards"></div>
-        </div>
-      </div>
+      ) : (
+        <h2>Loading...</h2>
+      )}
     </Layout>
   );
 };

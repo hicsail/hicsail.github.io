@@ -8,7 +8,6 @@ import {
   drawFrequencyGraph,
   collaboratorsByDepartment,
 } from '../utils/scripts/collaborators.js';
-import Carousel from 'react-bootstrap/Carousel';
 // ts-ignore
 import * as d3 from 'd3';
 

@@ -14,6 +14,8 @@ import { Layout } from '../components/Layout';
 import { InternTestimonials } from '../components/InternTestimonials';
 import { AlumniVisualization } from '../components/AlumniVisualization';
 import { AlumniGrid } from '../components/AlumniGrid';
+//@ts-ignore
+import { InternsHiring } from '../pages/InternsHiring';
 const form = `
 <iframe
 class="clickup-embed clickup-dynamic-height"
@@ -144,11 +146,13 @@ export const Intern: React.VFC = () => (
       <Heading>SAIL Intern Testimonials</Heading>
       <InternTestimonials />
     </Box>
-    <Box borderBottom="2px solid black" pb="16px">
+    {/* <Box borderBottom="2px solid black" pb="16px">
       <Heading>SAIL Intern Alumni</Heading>
-      {/* <AlumniVisualization data={data} /> */}
-      {/* <Image src="../../img/wordcloud.jpg" width="60%" /> */}
-      {/* <AlumniGrid /> */}
-    </Box>
+      <AlumniVisualization data={data} /> 
+      <Image src="../../img/wordcloud.jpg" width="60%" /> 
+      <AlumniGrid /> 
+    </Box> */}
+    <Heading>Applicant Data</Heading>
+    <InternsHiring />
   </Layout>
 );
