@@ -21,34 +21,26 @@ function sortByName() {
 
 export const AlumniGrid: React.FC = () => {
   return (
-    <Grid
-      gap={4}
-      alignItems="space-around"
-      // borderTop={useColorModeValue('2px solid black', '2px solid white')}
-    >
+    <Grid gap={4} alignItems="space-around">
       <Grid
         templateColumns="1fr 1fr 1fr"
         padding="20px 20px 20px 0px"
         fontSize="20px"
       >
         <GridColumn>Name</GridColumn>
-        {/* <GridColumn>Prior Position(s)</GridColumn> */}
         <GridColumn>Post-SAIL Position(s)</GridColumn>
       </Grid>
-      {ALUMNI.sort(sortByName()).map(
-        ({ Alumni_ID, Name, SAIL_Position, Post_SAIL }, i) => (
-          <Grid
-            templateColumns="1fr 1fr 1fr"
-            padding="20px 20px 20px 0px"
-            autoFlow="column"
-            key={i}
-          >
-            <GridColumn>{Name}</GridColumn>
-            {/* <GridColumn>{SAIL_Position}</GridColumn> */}
-            <GridColumn>{Post_SAIL}</GridColumn>
-          </Grid>
-        ),
-      )}
+      {ALUMNI.sort(sortByName()).map(({ Name, Post_SAIL }, i) => (
+        <Grid
+          templateColumns="1fr 1fr 1fr"
+          padding="20px 20px 20px 0px"
+          autoFlow="column"
+          key={i}
+        >
+          <GridColumn>{Name}</GridColumn>
+          <GridColumn>{Post_SAIL}</GridColumn>
+        </Grid>
+      ))}
     </Grid>
   );
 };

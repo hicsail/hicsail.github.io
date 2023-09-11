@@ -41,9 +41,7 @@ export default function NavigationBar() {
         px={{ base: 4 }}
         paddingLeft="0"
         paddingRight="0"
-        // borderBottom={1}
         justifyContent="center"
-        // bgColors="red"
       >
         <Flex
           justifyContent="space-between"
@@ -108,7 +106,6 @@ export default function NavigationBar() {
           />
         </Flex>
       </Flex>
-
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
@@ -141,7 +138,6 @@ const DesktopNav = () => {
                 {navItem.label}
               </Link>
             </PopoverTrigger>
-
             {navItem.children && (
               <PopoverContent
                 border="5px solid white"
@@ -243,7 +239,6 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           />
         )}
       </Flex>
-
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
         <Stack
           mt={2}
@@ -306,41 +301,4 @@ const NAV_ITEMS: Array<NavItem> = [
       },
     ],
   },
-  // {
-  //   label: 'OTHER',
-  //   href: '#',
-  //   hash: false,
-  //   children: [
-  //     {
-  //       label: 'RESEARCHERS',
-  //       href: '/researchers',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'SUPPORT',
-  //       href: '/support',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'MEDIA',
-  //       href: '/media',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'IMPACT',
-  //       href: '/impact',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'OUTREACH',
-  //       href: '/outreach',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'CONTACT',
-  //       href: '/contact',
-  //       hash: false,
-  //     },
-  //   ],
-  // },
 ];

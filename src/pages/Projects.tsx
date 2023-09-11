@@ -1,9 +1,5 @@
 import * as React from 'react';
 import {
-  ONGOINGRESEARCH_LIST,
-  PASTRESEARCH_LIST,
-} from '../utils/data/researchInformation';
-import {
   OLD_PROJECTS_LIST,
   PROJECTS_LIST,
 } from '../utils/data/projectInformation';
