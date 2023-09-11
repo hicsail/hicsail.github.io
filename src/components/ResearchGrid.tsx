@@ -45,17 +45,7 @@ export const ResearchGrid: React.FC<Props> = ({ title, list }) => {
               bg={useColorModeValue('white', '#2a2e35')}
               mt="1rem"
               key={i}
-            >
-              {/* <Card
-                modalButtonText={research.title}
-                modalButtonSubText={research.titleDescription}
-                modalHeader={research.title}
-                modalBody={research.description}
-                imageHref={research.href}
-                pi={research.pi}
-                // metaData={[]}
-              /> */}
-            </Box>
+            ></Box>
           ))}
         </Grid>
       </Box>

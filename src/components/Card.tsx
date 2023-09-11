@@ -25,8 +25,8 @@ interface Props {
   imageHref: string | undefined;
   modalButtonSubText: string | undefined;
   pi: React.ReactElement | null;
-  metaDataPresentation: Array<OutsideLink>;
-  metaDataPublication: Array<OutsideLink>;
+  metaDataPresentation?: Array<OutsideLink>;
+  metaDataPublication?: Array<OutsideLink>;
 }
 
 export const Card: React.FC<Props> = ({
@@ -88,21 +88,25 @@ export const Card: React.FC<Props> = ({
             <Text textStyle="paragraph" m="0">
               {modalBody}
             </Text>
-            <Text textStyle="paragraph" m="0">
-              Presentations
-            </Text>
-            {metaDataPresentation.map(({ name, href }) => (
+            {metaDataPresentation ?? (
+              <Text textStyle="paragraph" m="0">
+                Presentations
+              </Text>
+            )}
+            {metaDataPresentation?.map(({ name, href }) => (
               <Text textStyle="paragraph" m="0" color="teal">
                 <Link as="a" href={href}>
                   {name}
                 </Link>
               </Text>
             ))}
-            <Text textStyle="paragraph" m="0">
-              Publications
-            </Text>
+            {metaDataPublication ?? (
+              <Text textStyle="paragraph" m="0">
+                Publications
+              </Text>
+            )}
             <List>
-              {metaDataPublication.map(({ name, href }) => (
+              {metaDataPublication?.map(({ name, href }) => (
                 <Text textStyle="paragraph" m="0" color="green">
                   <Link as="a" href={href}>
                     {name}

@@ -10,7 +10,6 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { ProjectInfo } from '../types/types';
 import { Card } from './Card';
-import { Layout } from './Layout';
 
 interface Props {
   title: string | null;
@@ -178,14 +177,27 @@ export const ProjectsGrid: React.FC<Props> = ({
   showSelect,
 }) => {
   const [selected, setSelected] = useState(options[0]);
-  // useEffect(() => {
-  //   console.log(selected);
-  // }, [selected]);
 
   return (
-    // <Layout title={title}>
     <Box>
       <Heading>{title}</Heading>
+      {showText ? (
+        <Box>
+          <Text textStyle="paragraph">
+            Having worked with over 70 collaborators across 20 schools at Boston
+            University, SAIL is committed to developing open-source software
+            products that have direct impacts on academic research, public
+            service, and industry.
+          </Text>
+          <Text textStyle="paragraph">
+            SAIL projects are grouped into program areas, ranging from Digital
+            Health to Data Science to Privacy & Security and Natural Sciences.
+            Several example projects from these areas are featured below.
+          </Text>
+        </Box>
+      ) : (
+        <Box></Box>
+      )}
       {showSelect ? (
         <Select
           placeholder="Select Project Type"
@@ -201,28 +213,7 @@ export const ProjectsGrid: React.FC<Props> = ({
       ) : (
         <></>
       )}
-      <Box
-        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
-        mb="1rem"
-      >
-        {showText ? (
-          <Box>
-            <Text textStyle="paragraph">
-              Having worked with over 70 collaborators across 20 schools at
-              Boston University, SAIL is committed to developing open-source
-              software products that have direct impacts on academic research,
-              public service, and industry.
-            </Text>
-            <Text textStyle="paragraph">
-              SAIL projects are grouped into program areas, ranging from Digital
-              Health to Data Science to Privacy & Security and Natural Sciences.
-              Several example projects from these areas are featured below.
-            </Text>
-          </Box>
-        ) : (
-          <Box></Box>
-        )}
-
+      <Box mb="1rem">
         <Grid
           gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
           gap="1.25rem"
@@ -230,95 +221,6 @@ export const ProjectsGrid: React.FC<Props> = ({
           mt="1rem"
         >
           <ProjectSelect selected={selected} list={list} />
-          {/* {selected == 'Featured'}
-
-          {selected == 'All' ? (
-            <>
-              {list.map((project: ProjectInfo, i) => (
-                <Box>
-                  <Box
-                    maxWidth="300px"
-                    overflow="hidden"
-                    fontWeight="300"
-                    padding="0"
-                    display="inline-flex"
-                    flexDirection="column"
-                    margin="0 0 1em"
-                    width="100%"
-                    boxShadow={useColorModeValue(
-                      '0 4px 8px rgba(0,30,84,0.12)',
-                      '0 4px 8px rgba(0,0,0,0.38)',
-                    )}
-                    transform="translateY(0)"
-                    transition="transform 300ms"
-                    _hover={{
-                      transform: 'translateY(-3px)',
-                      transition: 'transform 300ms',
-                    }}
-                    bg={useColorModeValue('white', '#2a2e35')}
-                    mt="1rem"
-                    key={i}
-                  >
-                    <Card
-                      modalButtonText={project.title}
-                      modalButtonSubText={project.titleDescription}
-                      modalHeader={project.title}
-                      modalBody={project.description}
-                      imageHref={project.href}
-                      pi={project.pi}
-                      metaDataPublication={project.metaDataPublication}
-                      metaDataPresentation={project.metaDataPresentation}
-                    />
-                  </Box>
-                  )
-                </Box>
-              ))}
-            </>
-          ) : (
-            <>
-              {/* {list.map((project: ProjectInfo, i) => (
-                <Box>
-                  {project.projectType == selected && (
-                    <Box
-                      maxWidth="300px"
-                      overflow="hidden"
-                      fontWeight="300"
-                      padding="0"
-                      display="inline-flex"
-                      flexDirection="column"
-                      margin="0 0 1em"
-                      width="100%"
-                      boxShadow={useColorModeValue(
-                        '0 4px 8px rgba(0,30,84,0.12)',
-                        '0 4px 8px rgba(0,0,0,0.38)',
-                      )}
-                      transform="translateY(0)"
-                      transition="transform 300ms"
-                      _hover={{
-                        transform: 'translateY(-3px)',
-                        transition: 'transform 300ms',
-                      }}
-                      bg={useColorModeValue('white', '#2a2e35')}
-                      mt="1rem"
-                      key={i}
-                    >
-                      {'selected'}
-                      <Card
-                        modalButtonText={project.title}
-                        modalButtonSubText={project.titleDescription}
-                        modalHeader={project.title}
-                        modalBody={project.description}
-                        imageHref={project.href}
-                        pi={project.pi}
-                        metaDataPublication={project.metaDataPublication}
-                        metaDataPresentation={project.metaDataPresentation}
-                      />
-                    </Box>
-                  )}
-                </Box>
-              ))} */}
-          {/* </>
-          )} */}
         </Grid>
       </Box>
     </Box>
