@@ -3,6 +3,7 @@ import * as React from 'react';
 
 interface LayoutProps {
   title: string | null;
+  children: any;
 }
 
 export const Layout: React.FC<LayoutProps> = ({ title, children }) => {

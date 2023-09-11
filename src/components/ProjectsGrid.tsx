@@ -7,7 +7,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ProjectInfo } from '../types/types';
 import { Card } from './Card';
 

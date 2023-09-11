@@ -1,7 +1,7 @@
 import { Box, Grid, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { ResearchInformation } from '../types/types';
-import { Layout } from './Layout';
+import { Layout } from '../components/Layout';
 
 interface Props {
   title: string;
