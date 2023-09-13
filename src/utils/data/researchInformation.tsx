@@ -174,7 +174,8 @@ export const PRESENTATIONS_LIST: Array<PublicationInformation> = [
     proceeding: 'The 39th Annual Meeting Society of Behavioral Medicine (SBM)',
     href: '../../../img/publications/reaching-smokers.png',
     firstOfYear: false,
-    link: 'https://www.bu.edu/pdc/2018/06/11/reaching-smokers-who-are-not-motivated-to-quit-a-mobile-app-to-enhance-well-being-and-encourage-cessation/',
+    link:
+      'https://www.bu.edu/pdc/2018/06/11/reaching-smokers-who-are-not-motivated-to-quit-a-mobile-app-to-enhance-well-being-and-encourage-cessation/',
   },
   {
     title: 'Brief Announcement: Federated Code Auditing and Delivery for MPC',
@@ -227,8 +228,10 @@ export const PUBLICATIONS_LIST: Array<PublicationInformation> = [
     authors: 'Shreya Pandit, Frederick Jansen, Andrei Lapets, Mary Slavin',
     date: 'Feb 1, 2019 00:00:00',
     location: 'Value in Health, Volume 21, S54',
-    href: '../../../img/publications/web-based-computerized-adaptive-testing.png',
+    href:
+      '../../../img/publications/web-based-computerized-adaptive-testing.png',
     firstOfYear: false,
-    link: 'https://www.valueinhealthjournal.com/article/S1098-3015(18)30749-6/fulltext',
+    link:
+      'https://www.valueinhealthjournal.com/article/S1098-3015(18)30749-6/fulltext',
   },
 ];
