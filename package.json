@@ -51,8 +51,8 @@
     "terser-webpack-plugin": "4.2.3",
     "ts-loader": "8.2.0",
     "typescript": "5.2.2",
-    "webpack": "^5.88.2",
-    "webpack-cli": "3.3.12",
+    "webpack": "5.88.2",
+    "webpack-cli": "5.1.4",
     "webpack-dev-server": "3.11.2"
   },
   "prettier": {
