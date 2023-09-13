@@ -12,8 +12,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     name: 'Jeff Simeon',
     picture: '../../img/team/Jeff.jpg',
     role: 'Associate Director, Programs & Product Management',
-    bio:
-      'Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ',
+    bio: 'Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ',
     email: 'simeon@bu.edu',
   },
   {
@@ -27,8 +26,7 @@ export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
     name: 'Arezoo Sadeghi',
     picture: '../../img/team/Arezoo.jpg',
     role: 'Senior Software Engineer',
-    bio:
-      "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
+    bio: "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
     email: 'asadeg02@bu.edu',
   },
   {

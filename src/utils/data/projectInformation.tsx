@@ -42,8 +42,7 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     ],
     metaDataPublication: [
       {
-        name:
-          'Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications',
+        name: 'Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications',
         href: 'https://ieeexplore.ieee.org/document/8901614',
       },
     ],
@@ -181,8 +180,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['institution', 'gavel', 'balance-scale'],
     title: 'Amicus Curiae Briefs',
-    text:
-      'A web-based query interface for a data set describing the network of amicus curiae briefs (and signing organizations) filed in support of or against a side in Supreme Court cases over the past century.',
+    text: 'A web-based query interface for a data set describing the network of amicus curiae briefs (and signing organizations) filed in support of or against a side in Supreme Court cases over the past century.',
     pi: (
       <>
         <Link
@@ -198,8 +196,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['mobile', 'commenting-o'],
     title: 'Smoking Cessation Mobile App',
-    text:
-      'Development and deployment (within the context of a study) of a behavioral intervention mobile app to help individuals interested in quitting smoking.',
+    text: 'Development and deployment (within the context of a study) of a behavioral intervention mobile app to help individuals interested in quitting smoking.',
     pi: (
       <>
         <Link
@@ -215,8 +212,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['check-square-o', 'bar-chart'],
     title: 'Spinal Cord Injury - Functional Index',
-    text:
-      'Construction of an adaptive web survey platform (including an accessible front-end web application, back-end database and API, and algorithm translations) to help spinal cord injury patients assess their progress.',
+    text: 'Construction of an adaptive web survey platform (including an accessible front-end web application, back-end database and API, and algorithm translations) to help spinal cord injury patients assess their progress.',
     pi: (
       <>
         <Link href="https://www.bu.edu/sph/profile/mary-slavin" color="#567dbd">
@@ -229,8 +225,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['flask'],
     title: 'Clotho Synthetic Biology Framework',
-    text:
-      'Development of the latest production-ready version of a framework for engineering synthetic biological systems and managing the data used to create them.',
+    text: 'Development of the latest production-ready version of a framework for engineering synthetic biological systems and managing the data used to create them.',
     pi: (
       <>
         <Link href="http://cidarlab.org/doug-densmore" color="#567dbd">
@@ -243,8 +238,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['eye'],
     title: 'Eye Tracking',
-    text:
-      'Unifying, converting, and enhancing a mix of scripts for parsing eye tracking data, with a particular focus on automatically interpolating data produced by eye tracking hardware used for experiments in cognitive science and linguistics.',
+    text: 'Unifying, converting, and enhancing a mix of scripts for parsing eye tracking data, with a particular focus on automatically interpolating data produced by eye tracking hardware used for experiments in cognitive science and linguistics.',
     pi: (
       <>
         <Link href="http://blogs.bu.edu/sarunach" color="#567dbd">
@@ -257,8 +251,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['book', 'graduation-cap'],
     title: 'Views of Education across Nations',
-    text:
-      'Application of natural language processing techniques (NLP) such as frequency analysis, sentiment analysis, and topic modeling to a data set of British and Danish novels to explore how views of education influence historical trends.',
+    text: 'Application of natural language processing techniques (NLP) such as frequency analysis, sentiment analysis, and topic modeling to a data set of British and Danish novels to explore how views of education influence historical trends.',
     pi: (
       <>
         <Link
@@ -274,8 +267,7 @@ export const PROJECT_LIST: Array<ProjectInformation> = [
   {
     icons: ['bolt', 'plug'],
     title: 'Power Grid Topology Control Optimization',
-    text:
-      'Porting, profiling, parallelizing, and optimizing algorithms that control power grid transmission topologies (in preparation for incorporation of the algorithms into production-quality applications).',
+    text: 'Porting, profiling, parallelizing, and optimizing algorithms that control power grid transmission topologies (in preparation for incorporation of the algorithms into production-quality applications).',
     pi: (
       <>
         <Link href="http://www.bu.edu/pcms/caramanis/" color="#567dbd">
