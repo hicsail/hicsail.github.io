@@ -1,4 +1,5 @@
 
+
 # Dependency directory
 node_modules
 
@@ -7,7 +8,4 @@ generated
 
 # Files marked with gitigx
 *gitigx*
-
-package-lock.json
-
 .DS_Store
