@@ -1,4 +1,4 @@
-import { Box, Link, Text } from '@chakra-ui/react';
+import { Link, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { ProjectInfo, ProjectInformation } from '../../types/types';
 
