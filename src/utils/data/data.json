@@ -1,197 +1,199 @@
 {
-    "people": [
+  "people": [
+    {
+      "name": "William Tomlinson, Ph.D",
+      "picture": "../../img/team/WillTomlinson.jpg",
+      "role": "Director",
+      "email": "willjt@bu.edu"
+    },
+    {
+      "name": "Jeff Simeon",
+      "picture": "../../img/team/JeffSimeon.jpg",
+      "role": "Associate Director, Programs & Product Management",
+      "bio": "Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ",
+      "email": "simeon@bu.edu"
+    },
+    {
+      "name": "Greg Frasco",
+      "picture": "../../img/team/GregFrasco.jpg",
+      "role": "Associate Director of Engineering",
+      "email": "frascog@bu.edu"
+    },
+    {
+      "name": "Arezoo Sadeghi",
+      "picture": "../../img/team/ArezooSadeghi.jpg",
+      "role": "Senior Software Engineer",
+      "bio": "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
+      "email": "asadeg02@bu.edu"
+    },
+    {
+      "name": "Justin Chen",
+      "picture": "../../img/team/JustinChen.jpg",
+      "role": "Senior Software Engineer",
+      "email": "chenjus@bu.edu"
+    },
+    {
+      "name": "Hazim Ab Halim",
+      "picture": "../../img/team/HazimAbHalim.jpg",
+      "role": "Software Engineer",
+      "email": "zimlim@bu.edu"
+    },
+    {
+      "name": "Collin Bolles",
+      "picture": "../../img/team/CollinBolles.jpg",
+      "role": "Software Engineer",
+      "email": "cbolles@bu.edu"
+    },
+    {
+      "name": "Manny Akosah",
+      "picture": "../../img/team/MannyAkosah.jpg",
+      "role": "Software Engineer",
+      "email": "mannysa@bu.edu"
+    },
+    {
+      "name": "Harunobu Ishii",
+      "picture": "../../img/team/HarunobuIshii.jpg",
+      "role": "Software Engineer",
+      "email": "hishii@bu.edu"
+    },
+    {
+      "name": "Asad Malik",
+      "picture": "../../img/team/AsadMalik.jpg",
+      "role": "Software Engineer",
+      "email": "am5815@bu.edu"
+    },
+    {
+      "name": "Karina Hickman",
+      "picture": "../../img/team/KarinaHickman.jpg",
+      "role": "Technical Project Associate",
+      "email": "khickman@bu.edu"
+    },
+    {
+      "name": "Wenhan Wang",
+      "picture": "../../img/team/WenhanWang.jpg",
+      "role": "Software Engineer",
+      "email": "wenhwang@bu.edu"
+    },
+    {
+      "name": "Zoe Chitty",
+      "picture": "../../img/team/ZoeChitty.jpg",
+      "role": "Software Engineer",
+      "email": "?????"
+    },
+    {
+      "name": "Shashank Karthikeyan",
+      "picture": "../../img/team/ShashankKarthikeyan.jpg",
+      "role": "Software Engineer",
+      "email": "??????"
+    }
+  ],
+  "oldProjects": [
+    {
+      "title": "ORACLES",
+      "titleDescription": "ORACLES",
+      "description": "",
+      "href": "../../../img/research/oracles.png",
+      "projectType": "Data Science",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/hic/profile/mayank-varia/\" color=\"#567dbd\">Dr.Mayank Varia,</Link><Text as=\"span\">Research Associate Professor, Computer Science</Text></div>",
+      "metaDataPresentation": [
         {
-            "name": "William Tomlinson, Ph.D",
-            "picture": "../../img/team/WillTomlinson.jpg",
-            "role": "Director",
-            "bio": "",
-            "email": "willjt@bu.edu"
-        },
-        {
-            "name": "Jeff Simeon",
-            "picture": "../../img/team/JeffSimeon.jpg",
-            "role": "Associate Director, Programs & Product Management",
-            "bio": "Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ",
-            "email": "simeon@bu.edu"
-        },
-        {
-            "name": "Greg Frasco",
-            "picture": "../../img/team/GregFrasco.jpg",
-            "role": "Associate Director of Engineering",
-            "bio": "",
-            "email": "frascog@bu.edu"
-        },
-        {
-            "name": "Arezoo Sadeghi",
-            "picture": "../../img/team/ArezooSadeghi.jpg",
-            "role": "Senior Software Engineer",
-            "bio": "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
-            "email": "asadeg02@bu.edu"
-        },
-        {
-            "name": "Justin Chen",
-            "picture": "../../img/team/JustinChen.jpg",
-            "role": "Senior Software Engineer",
-            "bio": "",
-            "email": "chenjus@bu.edu"
-        },
-        {
-            "name": "Hazim Ab Halim",
-            "picture": "../../img/team/HazimAbHalim.jpg",
-            "role": "Software Engineer",
-            "bio": "",
-            "email": "zimlim@bu.edu"
-        },
-        {
-            "name": "Collin Bolles",
-            "picture": "../../img/team/CollinBolles.jpg",
-            "role": "Software Engineer",
-            "bio": "",
-            "email": "cbolles@bu.edu"
-        },
-        {
-            "name": "Manny Akosah",
-            "picture": "../../img/team/MannyAkosah.jpg",
-            "role": "Software Engineer",
-            "bio": "",
-            "email": "mannysa@bu.edu"
-        },
-        {
-            "name": "Harunobu Ishii",
-            "picture": "../../img/team/HarunobuIshii.jpg",
-            "role": "Software Engineer",
-            "bio": "",
-            "email": "hishii@bu.edu"
-        },
-        {
-            "name": "Asad Malik",
-            "picture": "../../img/team/AsadMalik.jpg",
-            "role": "Software Engineer",
-            "bio": "",
-            "email": "am5815@bu.edu"
-        },
-        {
-            "name": "Karina Hickman",
-            "picture": "../../img/team/KarinaHickman.jpg",
-            "role": "Technical Project Associate",
-            "bio": "",
-            "email": "khickman@bu.edu"
-        },
-        {
-            "name": "Wenhan Wang",
-            "picture": "../../img/team/WenhanWang.jpg",
-            "role": "Software Engineer",
-            "bio": "",
-            "email": "wenhwang@bu.edu"
+          "name": "",
+          "href": ""
         }
-    ],
-    "oldProjects": [
+      ],
+      "metaDataPublication": [
         {
-            "title": "ORACLES",
-            "titleDescription": "ORACLES",
-            "description": "",
-            "href": "../../../img/research/oracles.png",
-            "projectType": "Data Science",
-            "featured": true,
-            "pi": "<div><Link href=\"https://www.bu.edu/hic/profile/mayank-varia/\" color=\"#567dbd\">Dr.Mayank Varia,</Link><Text as=\"span\">Research Associate Professor, Computer Science</Text></div>",
-            "metaDataPresentation": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ],
-            "metaDataPublication": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ]
+          "name": "",
+          "href": ""
         }
-    ],
-    "projects": [
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "COVID",
+      "titleDescription": "Clinical Testing Lab",
+      "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
+      "href": "../../../img/research/covid.png",
+      "projectType": "Digital Health",
+      "featured": true,
+      "pi": null,
+      "metaDataPresentation": [
         {
-            "title": "COVID",
-            "titleDescription": "Clinical Testing Lab",
-            "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
-            "href": "../../../img/research/covid.png",
-            "projectType": "Digital Health",
-            "featured": true,
-            "pi": null,
-            "metaDataPresentation": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ],
-            "metaDataPublication": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ]
-        },
-        {
-            "title": "Web MPC",
-            "titleDescription": "Secure Compensation Analytics for the City of Boston",
-            "description": "In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.",
-            "href": "../../../img/research/webmpc.png",
-            "projectType": "Privacy and Security",
-            "featured": true,
-            "pi": null,
-            "metaDataPresentation": [
-                {
-                    "name": "From Usability to Secure Computing and Back Again",
-                    "href": "https://www.usenix.org/conference/soups2019/presentation/qin"
-                }
-            ],
-            "metaDataPublication": [
-                {
-                    "name": "Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications",
-                    "href": "https://ieeexplore.ieee.org/document/8901614"
-                }
-            ]
-        },
-        {
-            "title": "Noise Score",
-            "titleDescription": "Describe and Visualize Your Daily Soundscape",
-            "description": "Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.",
-            "href": "../../../img/research/noisescore.png",
-            "projectType": "Digital Health",
-            "featured": true,
-            "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker,{\" \"}</Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
-            "metaDataPresentation": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ],
-            "metaDataPublication": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ]
-        },
-        {
-            "title": "ASL-LEX",
-            "titleDescription": "",
-            "description": "",
-            "href": "../../../img/research/asl.jpg",
-            "projectType": "Data Science",
-            "featured": false,
-            "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli,{\" \"}</Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
-            "metaDataPresentation": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ],
-            "metaDataPublication": [
-                {
-                    "name": "",
-                    "href": ""
-                }
-            ]
+          "name": "",
+          "href": ""
         }
-    ]
+      ],
+      "metaDataPublication": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "title": "Web MPC",
+      "titleDescription": "Secure Compensation Analytics for the City of Boston",
+      "description": "In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.",
+      "href": "../../../img/research/webmpc.png",
+      "projectType": "Privacy and Security",
+      "featured": true,
+      "pi": null,
+      "metaDataPresentation": [
+        {
+          "name": "From Usability to Secure Computing and Back Again",
+          "href": "https://www.usenix.org/conference/soups2019/presentation/qin"
+        }
+      ],
+      "metaDataPublication": [
+        {
+          "name": "Role-Based Ecosystem for the Design, Development, and Deployment of Secure Multi-Party Data Analytics Applications",
+          "href": "https://ieeexplore.ieee.org/document/8901614"
+        }
+      ]
+    },
+    {
+      "title": "Noise Score",
+      "titleDescription": "Describe and Visualize Your Daily Soundscape",
+      "description": "Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.",
+      "href": "../../../img/research/noisescore.png",
+      "projectType": "Digital Health",
+      "featured": true,
+      "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker,{\" \"}</Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
+      "metaDataPresentation": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ],
+      "metaDataPublication": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "title": "ASL-LEX",
+      "titleDescription": "",
+      "description": "",
+      "href": "../../../img/research/asl.jpg",
+      "projectType": "Data Science",
+      "featured": false,
+      "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli,{\" \"}</Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
+      "metaDataPresentation": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ],
+      "metaDataPublication": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ]
+    }
+  ]
 }

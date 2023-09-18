@@ -19,7 +19,7 @@ The site will be served at https://localhost:8080.
 
 This site is built as a single-page application using React and [Chakra UI](https://chakra-ui.com/).
 
-This site is deployed to Github Pages. However, Github Pages does not support single-page applications. As a workaround, in this site routes are handled using Javascript redirects in the `404.html` page as described in [this template](https://github.com/rafgraph/spa-github-pages). 
+This site is deployed to Github Pages. However, Github Pages does not support single-page applications. As a workaround, in this site routes are handled using Javascript redirects in the `404.html` page as described in [this template](https://github.com/rafgraph/spa-github-pages).
 
 ## Deployment
 

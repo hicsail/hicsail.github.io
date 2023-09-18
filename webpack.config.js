@@ -50,9 +50,4 @@ module.exports = {
       rewrites: [{ from: /.*/, to: '/404.html' }],
     },
   },
-  project: {
-    ios: {},
-    android: {},
-  },
-  assets: ['./src/utils/fonts/Montserrat'],
 };

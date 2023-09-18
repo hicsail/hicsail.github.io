@@ -15,6 +15,17 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 import data from '../../utils/data/data.json';
+import { Person } from '../../components/Person';
+import {
+  Fade,
+  Flip,
+  Hinge,
+  JackInTheBox,
+  Roll,
+  Rotate,
+  Zoom,
+} from 'react-awesome-reveal';
+import { useEffect, useState } from 'react';
 
 interface Person {
   picture: string;
@@ -31,7 +42,7 @@ export const People: React.FC = () => {
       <Box fontFamily="Graphik,Helvetica,Arial,sans-serif !important">
         <Text
           fontSize="14px"
-          fontWeight="400"
+          fontWeight="500"
           sx={{ WebkitFontSmoothing: 'antialiased' }}
         >
           OUR TEAM
@@ -39,7 +50,7 @@ export const People: React.FC = () => {
         <Heading
           fontSize="3xl"
           fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-          fontWeight="500"
+          fontWeight="900"
         >
           Who we are
         </Heading>
@@ -48,52 +59,20 @@ export const People: React.FC = () => {
         </Text>
         <Text marginBottom="60px"></Text>
       </Box>
-      <Grid templateColumns="repeat(2,1fr)" gap="16px">
-        {people.map(({ picture, name, role, email }, i) => (
-          <Container key={i}>
-            <Popover trigger="hover">
-              <Box>
-                <PopoverTrigger>
-                  <Box>
-                    <Image
-                      src={picture}
-                      objectFit="cover"
-                      transition="all .25s ease"
-                    />
-                    <Box marginBottom="0.5rem">
-                      <Text
-                        fontSize=".9375rem"
-                        fontWeight="600"
-                        lineHeight="1.45rem"
-                        _hover={{ color: '#dcae34' }}
-                        fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-                      >
-                        {name}
-                      </Text>
-                      <Text
-                        fontSize=".9375rem"
-                        fontWeight="400"
-                        lineHeight="1rem"
-                        fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-                      >
-                        {role}
-                      </Text>
-                    </Box>
-                  </Box>
-                </PopoverTrigger>
-              </Box>
-              <PopoverContent left="50%">
-                <PopoverArrow />
-                <PopoverCloseButton />
-                <PopoverBody>
-                  <Text as="span" fontWeight="900">
-                    Email: {email}
-                  </Text>
-                </PopoverBody>
-              </PopoverContent>
-            </Popover>
-          </Container>
-        ))}
+      <Grid
+        templateColumns={{
+          md: 'repeat(1,1fr)',
+          lg: 'repeat(2,1fr)',
+          xl: 'repeat(3,1fr)',
+        }}
+        columnGap="16px"
+        rowGap="50px"
+      >
+        <Fade delay={100} duration={500} cascade damping={0.2} fraction={0.15}>
+          {people.map((person, i) => (
+            <Person person={person} />
+          ))}
+        </Fade>
       </Grid>
     </Container>
   );
