@@ -5,7 +5,7 @@ import { Publications } from './pages/Publications';
 import { Projects } from './pages/Projects';
 import { Research } from './pages/Research';
 import { Alumni } from './pages/Alumni';
-import { People } from './pages/People';
+import { People } from './pages/People/People';
 import { Presentations } from './pages/Presentations';
 import { Contact } from './pages/Contact';
 import { Engineer } from './pages/Engineer';

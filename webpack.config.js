@@ -23,6 +23,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   optimization: {
@@ -46,4 +50,9 @@ module.exports = {
       rewrites: [{ from: /.*/, to: '/404.html' }],
     },
   },
+  project: {
+    ios: {},
+    android: {},
+  },
+  assets: ['./src/utils/fonts/Montserrat'],
 };
