@@ -34,7 +34,6 @@ export const Person: React.FC<PersonProps> = ({ person }: PersonProps) => {
               src={person.picture}
               loading="lazy"
             />
-
             <Text
               fontSize=".9375rem"
               fontWeight="600"
