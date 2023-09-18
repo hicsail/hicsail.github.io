@@ -1,31 +1,9 @@
 import './People.css';
-import {
-  Box,
-  Text,
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverTrigger,
-  Container,
-  Heading,
-  Grid,
-  Image,
-} from '@chakra-ui/react';
+import { Box, Text, Container, Heading, Grid } from '@chakra-ui/react';
 import * as React from 'react';
 import data from '../../utils/data/data.json';
 import { Person } from '../../components/Person';
-import {
-  Fade,
-  Flip,
-  Hinge,
-  JackInTheBox,
-  Roll,
-  Rotate,
-  Zoom,
-} from 'react-awesome-reveal';
-import { useEffect, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 
 interface Person {
   picture: string;

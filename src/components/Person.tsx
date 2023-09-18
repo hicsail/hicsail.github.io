@@ -5,7 +5,6 @@ import {
   Box,
   PopoverTrigger,
   PopoverContent,
-  PopoverArrow,
   PopoverCloseButton,
   PopoverBody,
 } from '@chakra-ui/react';
