@@ -119,18 +119,8 @@
       "projectType": "Digital Health",
       "featured": true,
       "pi": null,
-      "metaDataPresentation": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ],
-      "metaDataPublication": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ]
+      "metaDataPresentation": [],
+      "metaDataPublication": []
     },
     {
       "title": "Web MPC",
@@ -160,7 +150,7 @@
       "href": "../../../img/research/noisescore.png",
       "projectType": "Digital Health",
       "featured": true,
-      "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker,{\" \"}</Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
+      "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker, </Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
       "metaDataPresentation": [
         {
           "name": "",
@@ -181,7 +171,7 @@
       "href": "../../../img/research/asl.jpg",
       "projectType": "Data Science",
       "featured": false,
-      "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli,{\" \"}</Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
+      "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli, </Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
       "metaDataPresentation": [
         {
           "name": "",
@@ -194,6 +184,94 @@
           "href": ""
         }
       ]
+    },
+    {
+      "title": "Camera Mouse",
+      "titleDescription": "Enhancing Accessibility through Eye Movements Tracking",
+      "description": "Introducing 'Camera Mouse', a collaborative achievement between our team and Professor Margrit Betke, a distinguished Computer Science professor and co-leader of the Image and Video Computing Research Group at Boston University. This innovative software harnesses camera-based eye tracking, enabling effortless computer navigation without the need to lift a finger. The project's core mission is to enhance accessibility, seamlessly merging technological sophistication with user inclusivity. Camera Mouse is a significant step forward in redefining how we interact with computers, offering a more accessible and user-friendly digital experience.",
+      "href": "",
+      "projectType": "Data Science",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/cs/profiles/betke/\"color=\"#567dbd\">Dr.Margrit Betke, </Link><Text as=\"span\">Professor of Computer Science, Boston University</Text><p>Email: betke@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "PACT",
+      "titleDescription": "Elevate Thermal Simulations with PACT",
+      "description": "Introducing PACT, a Parallel Compact Thermal simulator developed in collaboration with Professor Ayse Coskun. PACT is a versatile tool designed to simplify and accelerate thermal simulations, bridging the gap between standard-cell-level and architecture-level analysis with unprecedented speed and accuracy. PACT harnesses the power of multi-core processing through OpenMPI, offering a range of solvers that expedite both steady-state and transient simulations. This tool is not only fast and accurate but also highly adaptable, easily customizable to incorporate emerging integration and cooling technologies like 3D stacking and microchannel-based liquid cooling. By modifying the thermal netlist, users can tailor PACT to their specific needs.",
+      "href": "",
+      "projectType": "Data Science",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "TPAT",
+      "titleDescription": "Teacher Performance and Assessment Training",
+      "description": "TPAT, the Teacher Performance and Assessment Training web application, is a testament to SAIL's commitment to precision and user-centric design. From crafting design directions based on client inspiration to seamlessly integrating webcam recording and future-enhancement possibilities, SAIL's meticulous approach ensures a comprehensive and adaptable platform. Our efforts extend beyond development, as we install and maintain TPAT on robust infrastructure and implement feedback-driven adjustments to provide a seamless user experience.",
+      "href": "",
+      "projectType": "Ed Tech",
+      "featured": true,
+      "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Tokenomics",
+      "titleDescription": "",
+      "description": "Hello Tractor, headquartered in Nairobi, Kenya, and spanning its operations across 13 African nations, is an agri-tech pioneer with a profound impact. The company offers an affordable IoT fleet management software solution and a location-based booking application, enabling farm equipment owners to efficiently oversee their fleet while connecting seamlessly with farmers in need of tractor services.",
+      "href": "",
+      "projectType": "",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "SIEVE",
+      "titleDescription": "Redefining Zero-Knowledge Proof Tech",
+      "description": "SIEVE, led by our TA1 team, is a dynamic project marked by innovation and collaboration. We specialize in Python and utilize the versatile 'picozk' module, authored by Joe Near (a key member of TA1 and TA2). Our mission: to craft zk-friendly intermediate representations (IRs) – relations, witnesses, and instances. These meticulously generated IRs serve as the foundation for TA2's powerful backends, including 'mac-and-cheese'. Prior to backend implementation, we rigorously test IR formats using 'fire-alarm'.",
+      "href": "",
+      "projectType": "Privacy and Security",
+      "featured": true,
+      "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Wage Gap Calculator",
+      "titleDescription": "Empowering Employers to Bridge Wage Gaps",
+      "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
+      "href": "",
+      "projectType": "",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "",
+      "titleDescription": "",
+      "description": "",
+      "href": "",
+      "projectType": "",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "",
+      "titleDescription": "",
+      "description": "",
+      "href": "",
+      "projectType": "",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
     }
   ]
 }

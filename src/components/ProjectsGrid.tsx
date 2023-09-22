@@ -1,170 +1,86 @@
-import {
-  Box,
-  Grid,
-  useColorModeValue,
-  Text,
-  Select,
-  Heading,
-} from '@chakra-ui/react';
+import { Box, Grid, Text, Select, Heading } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
-import { ProjectInfo } from '../types/types';
-import { Card } from './Card';
+import { CardWrapper } from './CardWrapper';
+import { Icon } from '@chakra-ui/react';
+import {
+  FcDatabase,
+  FcGrid,
+  FcGraduationCap,
+  FcLike,
+  FcMindMap,
+  FcKey,
+  FcPieChart,
+} from 'react-icons/Fc';
+import { IconType } from 'react-icons';
 
 interface Props {
   title: string | null;
-  list: Array<ProjectInfo>;
+  list: ProjectInfo[];
   showText: boolean;
   showSelect: boolean;
 }
 
+interface ProjectInfo {
+  title: string;
+  titleDescription: string;
+  description: string;
+  href: string;
+  projectType: string;
+  featured: boolean;
+  pi: any;
+  metaDataPresentation: any;
+  metaDataPublication: any;
+}
+
 interface ProjectSelectProps {
   selected: string;
-  list: Array<ProjectInfo>;
+  list: ProjectInfo[];
 }
 
 const options = [
-  'Featured',
-  'All',
-  'Data Science',
-  'Ed Tech',
-  'Privacy and Security',
-  'Digital Health',
-  'Natural Sciences',
+  { name: 'Featured', icon: FcLike },
+  { name: 'All', icon: FcGrid },
+  { name: 'Data Science', icon: FcDatabase },
+  { name: 'Ed Tech', icon: FcGraduationCap },
+  { name: 'Privacy and Security', icon: FcKey },
+  { name: 'Digital Health', icon: FcPieChart },
+  { name: 'Natural Sciences', icon: FcMindMap },
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
   if (selected == 'Featured') {
     return (
       <>
-        {list.map((project: ProjectInfo, i) => (
-          <>
-            {project.featured == true && (
-              <Box
-                maxWidth="300px"
-                overflow="hidden"
-                fontWeight="300"
-                padding="0"
-                display="inline-flex"
-                flexDirection="column"
-                margin="0 0 1em"
-                width="100%"
-                boxShadow={useColorModeValue(
-                  '0 4px 8px rgba(0,30,84,0.12)',
-                  '0 4px 8px rgba(0,0,0,0.38)',
-                )}
-                transform="translateY(0)"
-                transition="transform 300ms"
-                _hover={{
-                  transform: 'translateY(-3px)',
-                  transition: 'transform 300ms',
-                }}
-                bg={useColorModeValue('white', '#2a2e35')}
-                mt="1rem"
-                key={i}
-              >
-                <Card
-                  modalButtonText={project.title}
-                  modalButtonSubText={project.titleDescription}
-                  modalHeader={project.title}
-                  modalBody={project.description}
-                  imageHref={project.href}
-                  pi={project.pi}
-                  metaDataPublication={project.metaDataPublication}
-                  metaDataPresentation={project.metaDataPresentation}
-                />
-              </Box>
-            )}
-          </>
-        ))}
+        {list
+          .filter((project) => project.featured == true)
+          .map((project: any, i: number) => (
+            <Box key={i}>
+              <CardWrapper project={project} />
+            </Box>
+          ))}
       </>
     );
   } else if (selected == 'All') {
     return (
       <>
-        {list.map((project: ProjectInfo, i) => (
-          <>
-            <Box
-              maxWidth="300px"
-              overflow="hidden"
-              fontWeight="300"
-              padding="0"
-              display="inline-flex"
-              flexDirection="column"
-              margin="0 0 1em"
-              width="100%"
-              boxShadow={useColorModeValue(
-                '0 4px 8px rgba(0,30,84,0.12)',
-                '0 4px 8px rgba(0,0,0,0.38)',
-              )}
-              transform="translateY(0)"
-              transition="transform 300ms"
-              _hover={{
-                transform: 'translateY(-3px)',
-                transition: 'transform 300ms',
-              }}
-              bg={useColorModeValue('white', '#2a2e35')}
-              mt="1rem"
-              key={i}
-            >
-              <Card
-                modalButtonText={project.title}
-                modalButtonSubText={project.titleDescription}
-                modalHeader={project.title}
-                modalBody={project.description}
-                imageHref={project.href}
-                pi={project.pi}
-                metaDataPublication={project.metaDataPublication}
-                metaDataPresentation={project.metaDataPresentation}
-              />
-            </Box>
-          </>
+        {list.map((project: any, i: number) => (
+          <Box key={i}>
+            <CardWrapper project={project} />
+          </Box>
         ))}
       </>
     );
   } else {
     return (
       <>
-        {list.map((project: ProjectInfo, i) => (
-          <>
-            {project.projectType == selected && (
-              <Box
-                maxWidth="300px"
-                overflow="hidden"
-                fontWeight="300"
-                padding="0"
-                display="inline-flex"
-                flexDirection="column"
-                margin="0 0 1em"
-                width="100%"
-                boxShadow={useColorModeValue(
-                  '0 4px 8px rgba(0,30,84,0.12)',
-                  '0 4px 8px rgba(0,0,0,0.38)',
-                )}
-                transform="translateY(0)"
-                transition="transform 300ms"
-                _hover={{
-                  transform: 'translateY(-3px)',
-                  transition: 'transform 300ms',
-                }}
-                bg={useColorModeValue('white', '#2a2e35')}
-                mt="1rem"
-                key={i}
-              >
-                <Card
-                  modalButtonText={project.title}
-                  modalButtonSubText={project.titleDescription}
-                  modalHeader={project.title}
-                  modalBody={project.description}
-                  imageHref={project.href}
-                  pi={project.pi}
-                  metaDataPublication={project.metaDataPublication}
-                  metaDataPresentation={project.metaDataPresentation}
-                />
-              </Box>
-            )}
-          </>
-        ))}
+        {list
+          .filter((project) => project.projectType == selected)
+          .map((project: any, i: number) => (
+            <Box key={i}>
+              <CardWrapper project={project} />
+            </Box>
+          ))}
       </>
     );
   }
@@ -176,7 +92,7 @@ export const ProjectsGrid: React.FC<Props> = ({
   showText,
   showSelect,
 }) => {
-  const [selected, setSelected] = useState(options[0]);
+  const [selected, setSelected] = useState(options[0].name);
 
   return (
     <Box>
@@ -204,9 +120,10 @@ export const ProjectsGrid: React.FC<Props> = ({
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
         >
-          {options.map((value) => (
-            <option value={value} key={value}>
-              {value}
+          {options.map((option: { name: string; icon: IconType }) => (
+            <option value={option.name} key={option.name}>
+              {option.name}
+              <Icon as={option.icon} />
             </option>
           ))}
         </Select>

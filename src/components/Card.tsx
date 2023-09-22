@@ -114,7 +114,7 @@ export const Card: React.FC<Props> = ({
               {pi == null ? (
                 <Text textStyle="paragraph">{pi}</Text>
               ) : (
-                <Text textStyle="paragraph">PI: {pi}</Text>
+                <div dangerouslySetInnerHTML={{ __html: pi }} />
               )}
             </>
           </ModalBody>
