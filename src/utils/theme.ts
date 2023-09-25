@@ -44,7 +44,7 @@ const theme = extendTheme({
       textDecoration: 'underline',
     },
   },
-  initialColorMode: 'light',
+  initialColorMode: 'dark',
   useSystemColorMode: false,
 });
 

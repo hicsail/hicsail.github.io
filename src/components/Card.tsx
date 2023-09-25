@@ -16,6 +16,7 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { OutsideLink } from '../types/types';
+import { useEffect } from 'react';
 
 interface Props {
   modalButtonText: string | undefined;
@@ -26,6 +27,9 @@ interface Props {
   pi: React.ReactElement | null;
   metaDataPresentation?: Array<OutsideLink>;
   metaDataPublication?: Array<OutsideLink>;
+  isOpen: any;
+  onOpen: any;
+  onClose: any;
 }
 
 export const Card: React.FC<Props> = ({
@@ -36,8 +40,14 @@ export const Card: React.FC<Props> = ({
   pi,
   metaDataPresentation,
   metaDataPublication,
+  isOpen,
+  onOpen,
+  onClose
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(()=> {
+    console.log('the modal is changed, it is now: ', isOpen)
+  }, [isOpen])
+
   return (
     <>
       <Box width="100%" onClick={onOpen}>
@@ -126,7 +136,7 @@ export const Card: React.FC<Props> = ({
               textAlign="center"
               width="100%"
             >
-              Okay
+              Close
             </Button>
           </ModalFooter>
         </ModalContent>

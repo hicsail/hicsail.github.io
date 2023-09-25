@@ -1,4 +1,4 @@
-import { Box, useColorModeValue } from '@chakra-ui/react';
+import { Box, useColorModeValue, useDisclosure } from '@chakra-ui/react';
 import { Card } from './Card';
 import * as React from 'react';
 
@@ -17,6 +17,7 @@ interface WrapperProps {
 }
 
 export const CardWrapper: React.FC<WrapperProps> = ({ project }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
       maxWidth="300px"
@@ -48,6 +49,9 @@ export const CardWrapper: React.FC<WrapperProps> = ({ project }) => {
         modalBody={project.description}
         imageHref={project.href}
         pi={project.pi}
+        isOpen={isOpen}
+        onOpen={onOpen}
+        onClose={onClose}
       />
     </Box>
   );

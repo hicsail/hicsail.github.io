@@ -2,7 +2,7 @@ import { Box, Grid, Text, Select, Heading } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
 import { CardWrapper } from './CardWrapper';
-import { Icon } from '@chakra-ui/react';
+
 import {
   FcDatabase,
   FcGrid,
@@ -54,8 +54,8 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
       <>
         {list
           .filter((project) => project.featured == true)
-          .map((project: any, i: number) => (
-            <Box key={i}>
+          .map((project: ProjectInfo, index: number) => (
+            <Box key={`${project.title}${index}`}>
               <CardWrapper project={project} />
             </Box>
           ))}
@@ -64,8 +64,8 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
   } else if (selected == 'All') {
     return (
       <>
-        {list.map((project: any, i: number) => (
-          <Box key={i}>
+        {list.map((project: ProjectInfo, index: number) => (
+          <Box key={`${project.title}${index}`}>
             <CardWrapper project={project} />
           </Box>
         ))}
@@ -76,8 +76,8 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
       <>
         {list
           .filter((project) => project.projectType == selected)
-          .map((project: any, i: number) => (
-            <Box key={i}>
+          .map((project: ProjectInfo, index: number) => (
+            <Box key={`${project.title}${index}`}>
               <CardWrapper project={project} />
             </Box>
           ))}
@@ -123,7 +123,6 @@ export const ProjectsGrid: React.FC<Props> = ({
           {options.map((option: { name: string; icon: IconType }) => (
             <option value={option.name} key={option.name}>
               {option.name}
-              <Icon as={option.icon} />
             </option>
           ))}
         </Select>
