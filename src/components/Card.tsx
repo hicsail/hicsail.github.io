@@ -42,11 +42,11 @@ export const Card: React.FC<Props> = ({
   metaDataPublication,
   isOpen,
   onOpen,
-  onClose
+  onClose,
 }) => {
-  useEffect(()=> {
-    console.log('the modal is changed, it is now: ', isOpen)
-  }, [isOpen])
+  useEffect(() => {
+    console.log('the modal is changed, it is now: ', isOpen);
+  }, [isOpen]);
 
   return (
     <>
@@ -79,7 +79,6 @@ export const Card: React.FC<Props> = ({
           </Text>
         </Box>
       </Box>
-
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
         <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>

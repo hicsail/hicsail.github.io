@@ -27,9 +27,9 @@ export const Person: React.FC<PersonProps> = ({ person }: PersonProps) => {
     <Container>
       <Popover trigger="hover">
         <PopoverTrigger>
-          <Box minHeight="470px">
+          <Box>
             <img
-              style={{ minWidth: '310px' }}
+              style={{ minWidth: 'inherit' }}
               src={person.picture}
               loading="lazy"
             />

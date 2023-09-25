@@ -16,8 +16,11 @@ interface Person {
 export const People: React.FC = () => {
   let people: Person[] = data['people'];
   return (
-    <Container display="block" placeItems="left" boxSizing="unset">
-      <Box fontFamily="Graphik,Helvetica,Arial,sans-serif !important">
+    <Container placeItems="left" boxSizing="unset">
+      <Box
+        fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+        width="100%"
+      >
         <Text
           fontSize="14px"
           fontWeight="500"
@@ -48,7 +51,9 @@ export const People: React.FC = () => {
       >
         <Fade delay={100} duration={500} cascade damping={0.2} fraction={0.15}>
           {people.map((person, i) => (
-            <Person person={person} />
+            <Box minWidth="300px" resize="horizontal">
+              <Person person={person} />
+            </Box>
           ))}
         </Fade>
       </Grid>
