@@ -13,6 +13,9 @@ import {
   useColorModeValue,
   Link,
   List,
+  Stack,
+  Flex,
+  Spacer,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { OutsideLink } from '../types/types';
@@ -27,9 +30,6 @@ interface Props {
   pi: React.ReactElement | null;
   metaDataPresentation?: Array<OutsideLink>;
   metaDataPublication?: Array<OutsideLink>;
-  isOpen: any;
-  onOpen: any;
-  onClose: any;
 }
 
 export const Card: React.FC<Props> = ({
@@ -40,43 +40,50 @@ export const Card: React.FC<Props> = ({
   pi,
   metaDataPresentation,
   metaDataPublication,
-  isOpen,
-  onOpen,
-  onClose,
 }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   useEffect(() => {
     console.log('the modal is changed, it is now: ', isOpen);
   }, [isOpen]);
 
   return (
     <>
-      <Box width="100%" onClick={onOpen}>
-        <Box borderBottom="2px solid black">
-          <Image
-            maxWidth="100%"
-            height="10rem"
-            width="100%"
-            objectFit="cover"
-            src={imageHref}
-            fallbackSrc="../../img/research/placeholder-research.jpg"
-          />
-        </Box>
-        <Box p="1.5em" display="block" height="10rem">
-          <Text
-            fontSize="1.75rem"
-            fontWeight="800"
-            fontStyle="normal"
-            color={useColorModeValue('black', 'white')}
-            pb="1rem"
-          >
-            {modalButtonText}
-          </Text>
-          <Text
-            fontSize="1.125rem"
-            color={useColorModeValue('black', '#b2becd')}
-          >
-            {modalButtonSubText}
-          </Text>
+      <Box
+        w="255px"
+        h="440px"
+        rounded="20px"
+        borderWidth="1px"
+        borderRadius="lg"
+        overflow="hidden"
+        mt={10}
+        textAlign="center"
+        position="relative"
+        margin="auto auto 20px auto"
+        onClick={onOpen}
+      >
+        <Image
+          src={imageHref}
+          fallbackSrc="../../img/research/placeholder-research.jpg"
+          alt="Card Image"
+          boxSize="300px"
+          objectFit="cover"
+        />
+        <Box p={5}>
+          <Stack align="center">
+            <Text
+              fontSize="20px"
+              fontWeight="600"
+              fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+            >
+              {modalButtonText}
+            </Text>
+            <Text
+              fontSize="14px"
+              fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+            >
+              {modalButtonSubText}
+            </Text>
+          </Stack>
         </Box>
       </Box>
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
@@ -85,12 +92,11 @@ export const Card: React.FC<Props> = ({
           <ModalCloseButton />
           <ModalBody>
             <>
-              {' '}
               <Image
                 objectFit="cover"
                 src={imageHref}
                 fallbackSrc="../../img/research/placeholder-research.jpg"
-              />{' '}
+              />
               <Text textStyle="paragraph" m="0">
                 {modalBody}
               </Text>

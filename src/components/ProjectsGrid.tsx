@@ -1,7 +1,15 @@
-import { Box, Grid, Text, Select, Heading } from '@chakra-ui/react';
+import {
+  Box,
+  Grid,
+  Text,
+  Select,
+  Heading,
+  useDisclosure,
+} from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
 import { CardWrapper } from './CardWrapper';
+import { Card } from './Card';
 
 import {
   FcDatabase,
@@ -56,7 +64,14 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
           .filter((project) => project.featured == true)
           .map((project: ProjectInfo, index: number) => (
             <Box key={`${project.title}${index}`}>
-              <CardWrapper project={project} />
+              <Card
+                modalButtonText={project.title}
+                modalButtonSubText={project.titleDescription}
+                modalHeader={project.title}
+                modalBody={project.description}
+                imageHref={project.href}
+                pi={project.pi}
+              />
             </Box>
           ))}
       </>
@@ -66,7 +81,14 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
       <>
         {list.map((project: ProjectInfo, index: number) => (
           <Box key={`${project.title}${index}`}>
-            <CardWrapper project={project} />
+            <Card
+              modalButtonText={project.title}
+              modalButtonSubText={project.titleDescription}
+              modalHeader={project.title}
+              modalBody={project.description}
+              imageHref={project.href}
+              pi={project.pi}
+            />
           </Box>
         ))}
       </>
@@ -78,7 +100,14 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
           .filter((project) => project.projectType == selected)
           .map((project: ProjectInfo, index: number) => (
             <Box key={`${project.title}${index}`}>
-              <CardWrapper project={project} />
+              <Card
+                modalButtonText={project.title}
+                modalButtonSubText={project.titleDescription}
+                modalHeader={project.title}
+                modalBody={project.description}
+                imageHref={project.href}
+                pi={project.pi}
+              />
             </Box>
           ))}
       </>
@@ -96,24 +125,6 @@ export const ProjectsGrid: React.FC<Props> = ({
 
   return (
     <Box>
-      <Heading>{title}</Heading>
-      {showText ? (
-        <Box>
-          <Text textStyle="paragraph">
-            Having worked with over 70 collaborators across 20 schools at Boston
-            University, SAIL is committed to developing open-source software
-            products that have direct impacts on academic research, public
-            service, and industry.
-          </Text>
-          <Text textStyle="paragraph">
-            SAIL projects are grouped into program areas, ranging from Digital
-            Health to Data Science to Privacy & Security and Natural Sciences.
-            Several example projects from these areas are featured below.
-          </Text>
-        </Box>
-      ) : (
-        <Box></Box>
-      )}
       {showSelect ? (
         <Select
           placeholder="Select Project Type"
@@ -131,10 +142,10 @@ export const ProjectsGrid: React.FC<Props> = ({
       )}
       <Box mb="1rem">
         <Grid
-          gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
-          gap="1.25rem"
-          justifyContent="space-between"
+          gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))"
+          gap="8px"
           mt="1rem"
+          boxSizing="border-box"
         >
           <ProjectSelect selected={selected} list={list} />
         </Grid>
@@ -142,3 +153,19 @@ export const ProjectsGrid: React.FC<Props> = ({
     </Box>
   );
 };
+
+{
+  /*
+{showText ? (
+				<Box>
+					<Text textStyle="paragraph">
+						SAIL projects are grouped into program areas, ranging from Digital Health to Data
+						Science to Privacy & Security and Natural Sciences. Several example projects from these
+						areas are featured below.
+					</Text>
+				</Box>
+			) : (
+				<Box></Box>
+			)}}
+      */
+}

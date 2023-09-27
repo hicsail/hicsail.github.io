@@ -1,92 +1,108 @@
 import * as React from 'react';
 import data from '../utils/data/data.json';
 import { ProjectsGrid } from '../components/ProjectsGrid';
-import { Cardv2 } from '../components/Cardv2';
-import { Layout } from '../components/Layout';
-import { ReactElement } from 'react';
-import { OutsideLink } from '../types/types';
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Text } from '@chakra-ui/react';
 import { Fade } from 'react-awesome-reveal';
 
 export const Projects: React.FC = () => {
   const projects = data['projects'];
   const old_projects = data['oldProjects'];
   return (
-    <Box
-      sx={{
-        backgroundImage: `url($../../img/cds.webp)`,
-        backgroundRepeat: 'no-repeat',
-        height: 'auto',
-        backgroundSize: 'cover',
-        position: 'relative',
-      }}
-    >
+    <Box>
       <Box
-        id="header"
         sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          flexDirection: 'column',
-          padding: '4rem 3rem 0rem 0rem',
-        }}
-      >
-        <Text
-          sx={{
-            fontWeight: 900,
-            fontSize: '2.5rem',
-            fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
-            marginBottom: '1.3rem',
-            flex: '50%',
-            marginLeft: 'auto',
-            textAlign: 'right',
-          }}
-        >
-          Explore Our Current and Past Work
-        </Text>
-        <Button
-          sx={{
-            backgroundColor: '#7186FB',
-            color: '#fcd12f',
-            fontSize: '16px',
-            fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
-            fontWeight: 'bolder',
-            flex: '50%',
-            marginLeft: 'auto',
-            lineHeight: '40px',
-            width: '200px',
-          }}
-        >
-          Jump to Projects
-        </Button>
-      </Box>
-      <Box
-        id="projects-blobs"
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          flexDirection: 'column',
-          padding: '3.2rem 0rem 2rem 7rem',
-          gap: '30px',
-          overflowY: 'auto',
+          backgroundImage: `url($../../img/cds.webp)`,
+          backgroundRepeat: 'no-repeat',
+          height: '950px',
+          backgroundSize: 'cover',
+          position: 'relative',
+          width: '100%',
         }}
       >
         <Fade delay={300} duration={1500} cascade damping={0.3} fraction={0.15}>
-          <Box sx={{ flex: '33%', marginRight: 'auto' }}>
-            <Cardv2></Cardv2>
-          </Box>
           <Box
+            id="header"
             sx={{
-              flex: '33%',
-              marginRight: 'auto',
-              marginLeft: '70px !important',
+              display: 'flex',
+              flexWrap: 'wrap',
+              flexDirection: 'column',
+              padding: '4.5rem 3rem 0rem 0rem',
             }}
           >
-            <Cardv2></Cardv2>
-          </Box>
-          <Box sx={{ flex: '33%', marginRight: 'auto' }}>
-            <Cardv2></Cardv2>
+            <Text
+              sx={{
+                fontWeight: 900,
+                fontSize: '2.5rem',
+                fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
+                marginBottom: '1.3rem',
+                flex: '50%',
+                marginLeft: 'auto',
+                textAlign: 'right',
+                color: '#ADDBEF',
+              }}
+            >
+              Explore Our Current and Past Work
+            </Text>
+            <Button
+              sx={{
+                color: '#B7E0F1',
+                fontSize: '16px',
+                fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
+                fontWeight: 'bolder',
+                flex: '50%',
+                marginLeft: 'auto',
+                lineHeight: '40px',
+                width: '150px',
+                borderColor: '#ADBAEF !important',
+              }}
+              variant="outline"
+            >
+              <a href="#middle">Jump to Projects</a>
+            </Button>
           </Box>
         </Fade>
+      </Box>
+      <Box sx={{ height: 'auto', textAlign: 'center' }}>
+        <Text
+          fontSize="22px"
+          margin="55px"
+          fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+          fontStyle="italic"
+        >
+          Having worked with over 70 collaborators across 20 schools at Boston
+          University, SAIL is committed to developing open-source software
+          products that have direct impacts on academic research, public
+          service, and industry.
+        </Text>
+      </Box>
+      <Box
+        id="middle"
+        sx={{
+          height: 'auto',
+          padding: '20px',
+          textAlign: 'center',
+        }}
+      >
+        <ProjectsGrid
+          title="Active Projects"
+          list={projects}
+          showText={true}
+          showSelect={false}
+        />
+        <Text
+          fontSize="18px"
+          marginBottom="30px"
+          fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+          lineHeight="120px"
+        >
+          Dive into different areas we work in
+        </Text>
+        <ProjectsGrid
+          title="Projects"
+          list={projects}
+          showText={false}
+          showSelect={true}
+        />
       </Box>
     </Box>
   );
@@ -161,3 +177,49 @@ export const Projects: React.FC = () => {
 //        list={old_projects}
 //        showText={false}
 //       showSelect={true}    />
+
+{
+  /*
+				<Box
+					id="projects-blobs"
+					sx={{
+						display: 'flex',
+						flexWrap: 'wrap',
+						flexDirection: 'column',
+						padding: '3.2rem 0rem 2rem 7rem',
+						gap: '30px',
+						overflowY: 'auto',
+					}}
+				>
+					<Fade delay={300} duration={1500} cascade damping={0.3} fraction={0.15}>
+						<Box sx={{ flex: '33%', marginRight: 'auto' }}>
+							<Cardv2></Cardv2>
+						</Box>
+						<Box
+							sx={{
+								flex: '33%',
+								marginRight: 'auto',
+								marginLeft: '70px !important',
+							}}
+						>
+							<Cardv2></Cardv2>
+						</Box>
+						<Box sx={{ flex: '33%', marginRight: 'auto' }}>
+							<Cardv2></Cardv2>
+						</Box>
+					</Fade>
+				</Box>
+            */
+}
+
+{
+  /*WebkitTransition: 'all 1.5s ease-out',
+					MozTransition: 'all 1.5s ease-out',
+					transition: 'all 1.5s ease-out',
+					'&:hover': {
+						backgroundColor: '#F5FBFD',
+						WebkitTransition: 'backgroundColor 3000ms linear',
+						msTransition: 'backgroundColor 3000ms linear',
+						transition: 'background-color 3000ms linear',
+					}, */
+}

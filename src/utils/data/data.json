@@ -115,7 +115,7 @@
       "title": "COVID",
       "titleDescription": "Clinical Testing Lab",
       "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
-      "href": "../../../img/research/covid.png",
+      "href": "../../../img/projects/covid.png",
       "projectType": "Digital Health",
       "featured": true,
       "pi": null,
@@ -126,9 +126,9 @@
       "title": "Web MPC",
       "titleDescription": "Secure Compensation Analytics for the City of Boston",
       "description": "In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.",
-      "href": "../../../img/research/webmpc.png",
+      "href": "../../../img/projects/cityplan.avif",
       "projectType": "Privacy and Security",
-      "featured": true,
+      "featured": false,
       "pi": null,
       "metaDataPresentation": [
         {
@@ -144,33 +144,12 @@
       ]
     },
     {
-      "title": "Noise Score",
-      "titleDescription": "Describe and Visualize Your Daily Soundscape",
-      "description": "Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.",
-      "href": "../../../img/research/noisescore.png",
-      "projectType": "Digital Health",
-      "featured": true,
-      "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker, </Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
-      "metaDataPresentation": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ],
-      "metaDataPublication": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ]
-    },
-    {
       "title": "ASL-LEX",
       "titleDescription": "",
       "description": "",
-      "href": "../../../img/research/asl.jpg",
+      "href": "../../../img/projects/signlang.jpeg",
       "projectType": "Data Science",
-      "featured": false,
+      "featured": true,
       "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli, </Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
       "metaDataPresentation": [
         {
@@ -189,7 +168,7 @@
       "title": "Camera Mouse",
       "titleDescription": "Enhancing Accessibility through Eye Movements Tracking",
       "description": "Introducing 'Camera Mouse', a collaborative achievement between our team and Professor Margrit Betke, a distinguished Computer Science professor and co-leader of the Image and Video Computing Research Group at Boston University. This innovative software harnesses camera-based eye tracking, enabling effortless computer navigation without the need to lift a finger. The project's core mission is to enhance accessibility, seamlessly merging technological sophistication with user inclusivity. Camera Mouse is a significant step forward in redefining how we interact with computers, offering a more accessible and user-friendly digital experience.",
-      "href": "",
+      "href": "../../../img/projects/cameramouse.png",
       "projectType": "Data Science",
       "featured": true,
       "pi": "<div><Link href=\"https://www.bu.edu/cs/profiles/betke/\"color=\"#567dbd\">Dr.Margrit Betke, </Link><Text as=\"span\">Professor of Computer Science, Boston University</Text><p>Email: betke@bu.edu</p></div>",
@@ -200,7 +179,7 @@
       "title": "PACT",
       "titleDescription": "Elevate Thermal Simulations with PACT",
       "description": "Introducing PACT, a Parallel Compact Thermal simulator developed in collaboration with Professor Ayse Coskun. PACT is a versatile tool designed to simplify and accelerate thermal simulations, bridging the gap between standard-cell-level and architecture-level analysis with unprecedented speed and accuracy. PACT harnesses the power of multi-core processing through OpenMPI, offering a range of solvers that expedite both steady-state and transient simulations. This tool is not only fast and accurate but also highly adaptable, easily customizable to incorporate emerging integration and cooling technologies like 3D stacking and microchannel-based liquid cooling. By modifying the thermal netlist, users can tailor PACT to their specific needs.",
-      "href": "",
+      "href": "../../../img/projects/pact.jpeg",
       "projectType": "Data Science",
       "featured": true,
       "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
@@ -211,21 +190,10 @@
       "title": "TPAT",
       "titleDescription": "Teacher Performance and Assessment Training",
       "description": "TPAT, the Teacher Performance and Assessment Training web application, is a testament to SAIL's commitment to precision and user-centric design. From crafting design directions based on client inspiration to seamlessly integrating webcam recording and future-enhancement possibilities, SAIL's meticulous approach ensures a comprehensive and adaptable platform. Our efforts extend beyond development, as we install and maintain TPAT on robust infrastructure and implement feedback-driven adjustments to provide a seamless user experience.",
-      "href": "",
+      "href": "../../../img/projects/tpat.jpeg",
       "projectType": "Ed Tech",
-      "featured": true,
+      "featured": false,
       "pi": null,
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "Tokenomics",
-      "titleDescription": "",
-      "description": "Hello Tractor, headquartered in Nairobi, Kenya, and spanning its operations across 13 African nations, is an agri-tech pioneer with a profound impact. The company offers an affordable IoT fleet management software solution and a location-based booking application, enabling farm equipment owners to efficiently oversee their fleet while connecting seamlessly with farmers in need of tractor services.",
-      "href": "",
-      "projectType": "",
-      "featured": true,
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
@@ -233,7 +201,7 @@
       "title": "SIEVE",
       "titleDescription": "Redefining Zero-Knowledge Proof Tech",
       "description": "SIEVE, led by our TA1 team, is a dynamic project marked by innovation and collaboration. We specialize in Python and utilize the versatile 'picozk' module, authored by Joe Near (a key member of TA1 and TA2). Our mission: to craft zk-friendly intermediate representations (IRs) – relations, witnesses, and instances. These meticulously generated IRs serve as the foundation for TA2's powerful backends, including 'mac-and-cheese'. Prior to backend implementation, we rigorously test IR formats using 'fire-alarm'.",
-      "href": "",
+      "href": "../../../img/projects/zeroknowledge.png",
       "projectType": "Privacy and Security",
       "featured": true,
       "pi": null,
@@ -244,9 +212,41 @@
       "title": "Wage Gap Calculator",
       "titleDescription": "Empowering Employers to Bridge Wage Gaps",
       "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
-      "href": "",
+      "href": "../../../img/projects/wagegap.jpeg",
       "projectType": "",
       "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Noise Score",
+      "titleDescription": "Describe and Visualize Your Daily Soundscape",
+      "description": "Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.",
+      "href": "../../../img/projects/noise.avif",
+      "projectType": "Digital Health",
+      "featured": false,
+      "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker, </Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
+      "metaDataPresentation": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ],
+      "metaDataPublication": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "title": "Tokenomics",
+      "titleDescription": "",
+      "description": "Hello Tractor, headquartered in Nairobi, Kenya, and spanning its operations across 13 African nations, is an agri-tech pioneer with a profound impact. The company offers an affordable IoT fleet management software solution and a location-based booking application, enabling farm equipment owners to efficiently oversee their fleet while connecting seamlessly with farmers in need of tractor services.",
+      "href": "",
+      "projectType": "",
+      "featured": false,
       "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -257,7 +257,7 @@
       "description": "",
       "href": "",
       "projectType": "",
-      "featured": true,
+      "featured": false,
       "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -268,7 +268,7 @@
       "description": "",
       "href": "",
       "projectType": "",
-      "featured": true,
+      "featured": false,
       "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
       "metaDataPresentation": [],
       "metaDataPublication": []
