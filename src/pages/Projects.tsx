@@ -1,10 +1,11 @@
 import * as React from 'react';
 import data from '../utils/data/data.json';
 import { ProjectsGrid } from '../components/ProjectsGrid';
-import { Box, Button, Container, Text } from '@chakra-ui/react';
+import { Box, Button, Spacer, Text } from '@chakra-ui/react';
 import { Fade } from 'react-awesome-reveal';
 
 export const Projects: React.FC = () => {
+  const featured = data['featuredProjects'];
   const projects = data['projects'];
   const old_projects = data['oldProjects'];
   return (
@@ -62,19 +63,31 @@ export const Projects: React.FC = () => {
           </Box>
         </Fade>
       </Box>
-      <Box sx={{ height: 'auto', textAlign: 'center' }}>
-        <Text
-          fontSize="22px"
-          margin="55px"
-          fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-          fontStyle="italic"
-        >
+      <Box
+        fontSize="22px"
+        margin="55px"
+        fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+        fontStyle="italic"
+        sx={{ height: 'auto', textAlign: 'center' }}
+      >
+        <Text marginBottom="20px" _hover={{ color: '#dcae34' }}>
           Having worked with over 70 collaborators across 20 schools at Boston
           University, SAIL is committed to developing open-source software
           products that have direct impacts on academic research, public
           service, and industry.
         </Text>
+        {/**<Text _hover={{ color: '#dcae34' }}>Here you can find our featured projects.</Text> */}
       </Box>
+      <Spacer />
+      <Text
+        _hover={{ color: '#dcae34' }}
+        fontSize="30px"
+        fontWeight="700"
+        marginLeft="40px"
+        fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+      >
+        Featured Projects
+      </Text>
       <Box
         id="middle"
         sx={{
@@ -85,15 +98,17 @@ export const Projects: React.FC = () => {
       >
         <ProjectsGrid
           title="Active Projects"
-          list={projects}
+          list={featured}
           showText={true}
           showSelect={false}
         />
         <Text
-          fontSize="18px"
-          marginBottom="30px"
+          _hover={{ color: '#dcae34' }}
+          fontSize="30px"
+          fontWeight="700"
           fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-          lineHeight="120px"
+          textAlign="left"
+          marginBottom="30px"
         >
           Dive into different areas we work in
         </Text>

@@ -14,8 +14,7 @@ import {
   Link,
   List,
   Stack,
-  Flex,
-  Spacer,
+  ChakraProvider,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { OutsideLink } from '../types/types';
@@ -86,66 +85,74 @@ export const Card: React.FC<Props> = ({
           </Stack>
         </Box>
       </Box>
-      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
-        <ModalOverlay />
-        <ModalContent padding="1rem" bg={useColorModeValue('white', '#2a2e35')}>
-          <ModalCloseButton />
-          <ModalBody>
-            <>
-              <Image
-                objectFit="cover"
-                src={imageHref}
-                fallbackSrc="../../img/research/placeholder-research.jpg"
-              />
-              <Text textStyle="paragraph" m="0">
-                {modalBody}
-              </Text>
-              {metaDataPresentation ?? (
-                <Text textStyle="paragraph" m="0">
-                  Presentations
-                </Text>
-              )}
-              {metaDataPresentation?.map(({ name, href }) => (
-                <Text textStyle="paragraph" m="0" color="teal">
-                  <Link as="a" href={href}>
-                    {name}
-                  </Link>
-                </Text>
-              ))}
-              {metaDataPublication ?? (
-                <Text textStyle="paragraph" m="0">
-                  Publications
-                </Text>
-              )}
-              <List>
-                {metaDataPublication?.map(({ name, href }) => (
-                  <Text textStyle="paragraph" m="0" color="green">
-                    <Link as="a" href={href}>
-                      {name}
-                    </Link>
-                  </Text>
-                ))}
-              </List>
-              {pi == null ? (
-                <Text textStyle="paragraph">{pi}</Text>
-              ) : (
-                <div dangerouslySetInnerHTML={{ __html: pi }} />
-              )}
-            </>
-          </ModalBody>
-          <ModalFooter>
-            <Button
-              variant="ghost"
-              mr={3}
-              onClick={onClose}
-              textAlign="center"
-              width="100%"
+      <ChakraProvider>
+        {isOpen && (
+          <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+            <ModalOverlay />
+            <ModalContent
+              padding="1rem"
+              bg={useColorModeValue('#F6EBCC', '#C1982E')}
             >
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+              <ModalCloseButton />
+              <ModalBody textAlign="center">
+                <>
+                  <Image
+                    margin="20px 28px 7px 0px "
+                    width="300px"
+                    src={imageHref}
+                    fallbackSrc="../../img/research/placeholder-research.jpg"
+                    float="left"
+                  />
+                  <Box marginTop="20px" textAlign="justify" fontSize="15px">
+                    <Text>{modalBody}</Text>
+                    {metaDataPresentation && (
+                      <Text textStyle="paragraph" m="0">
+                        Presentations
+                      </Text>
+                    )}
+                    {metaDataPresentation?.map(({ name, href }) => (
+                      <Text textStyle="paragraph" m="0" color="teal">
+                        <Link as="a" href={href}>
+                          {name}
+                        </Link>
+                      </Text>
+                    ))}
+                    {metaDataPublication && (
+                      <Text textStyle="paragraph" m="0">
+                        Publications
+                      </Text>
+                    )}
+                    <List>
+                      {metaDataPublication?.map(({ name, href }) => (
+                        <Text textStyle="paragraph" m="0" color="green">
+                          <Link as="a" href={href}>
+                            {name}
+                          </Link>
+                        </Text>
+                      ))}
+                    </List>
+                    {pi == null ? (
+                      <></>
+                    ) : (
+                      <div dangerouslySetInnerHTML={{ __html: pi }} />
+                    )}
+                  </Box>
+                </>
+              </ModalBody>
+              <ModalFooter>
+                <Button
+                  mr={3}
+                  onClick={onClose}
+                  textAlign="center"
+                  width="100%"
+                >
+                  Close
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+        )}
+      </ChakraProvider>
     </>
   );
 };

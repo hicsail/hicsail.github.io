@@ -35,7 +35,6 @@ interface ProjectInfo {
   description: string;
   href: string;
   projectType: string;
-  featured: boolean;
   pi: any;
   metaDataPresentation: any;
   metaDataPublication: any;
@@ -47,7 +46,6 @@ interface ProjectSelectProps {
 }
 
 const options = [
-  { name: 'Featured', icon: FcLike },
   { name: 'All', icon: FcGrid },
   { name: 'Data Science', icon: FcDatabase },
   { name: 'Ed Tech', icon: FcGraduationCap },
@@ -57,30 +55,18 @@ const options = [
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
-  if (selected == 'Featured') {
-    return (
-      <>
-        {list
-          .filter((project) => project.featured == true)
-          .map((project: ProjectInfo, index: number) => (
-            <Box key={`${project.title}${index}`}>
-              <Card
-                modalButtonText={project.title}
-                modalButtonSubText={project.titleDescription}
-                modalHeader={project.title}
-                modalBody={project.description}
-                imageHref={project.href}
-                pi={project.pi}
-              />
-            </Box>
-          ))}
-      </>
-    );
-  } else if (selected == 'All') {
+  if (selected == 'All') {
     return (
       <>
         {list.map((project: ProjectInfo, index: number) => (
-          <Box key={`${project.title}${index}`}>
+          <Box
+            key={`${project.title}${index}`}
+            transition="transform 350ms ease-in-out"
+            _hover={{
+              transform: 'scale(1.05)',
+              transition: 'transform 300ms',
+            }}
+          >
             <Card
               modalButtonText={project.title}
               modalButtonSubText={project.titleDescription}
@@ -127,7 +113,7 @@ export const ProjectsGrid: React.FC<Props> = ({
     <Box>
       {showSelect ? (
         <Select
-          placeholder="Select Project Type"
+          width="inherit"
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
         >
