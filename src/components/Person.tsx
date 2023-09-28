@@ -29,7 +29,7 @@ export const Person: React.FC<PersonProps> = ({ person }: PersonProps) => {
         <PopoverTrigger>
           <Box>
             <img
-              style={{ minWidth: 'inherit' }}
+              style={{ width: 'auto' }}
               src={person.picture}
               loading="lazy"
             />

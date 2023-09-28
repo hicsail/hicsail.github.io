@@ -16,10 +16,10 @@ interface Person {
 export const People: React.FC = () => {
   let people: Person[] = data['people'];
   return (
-    <Container placeItems="left" boxSizing="unset">
+    <Box padding="20px">
       <Box
         fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-        width="100%"
+        margin="1em 1em 1em 1.5em"
       >
         <Text
           fontSize="14px"
@@ -41,15 +41,10 @@ export const People: React.FC = () => {
         <Text marginBottom="60px"></Text>
       </Box>
       <Grid
-        templateColumns={{
-          md: 'repeat(1,1fr)',
-          lg: 'repeat(2,1fr)',
-          xl: 'repeat(3,1fr)',
-        }}
-        columnGap="16px"
-        rowGap="50px"
+        gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))"
+        gap="25px"
       >
-        <Fade delay={100} duration={500} cascade damping={0.2} fraction={0.15}>
+        <Fade delay={65} duration={450} cascade damping={0.4} fraction={0.15}>
           {people.map((person, i) => (
             <Box minWidth="300px" resize="horizontal">
               <Person person={person} />
@@ -57,6 +52,6 @@ export const People: React.FC = () => {
           ))}
         </Fade>
       </Grid>
-    </Container>
+    </Box>
   );
 };
