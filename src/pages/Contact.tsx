@@ -1,15 +1,15 @@
 import { Box, Heading, Link, Text } from '@chakra-ui/react';
-import * as React from 'react';
 import { ContactForm } from '../components/ContactForm/ContactForm';
-import { Layout } from '../components/Layout';
+import * as React from 'react';
 
-export const Contact: React.VFC = () => {
+export const Contact: React.FC = () => {
   return (
-    <Box margin="40px">
-      <Box pr={{ md: '8' }} width={{ base: '100%', md: '50%', xl: '50%' }}>
+    <Box margin="30px">
+      <Box pr={{ md: '8' }} width={{ base: '100%', md: '90%', xl: '80%' }}>
         <Text textStyle="paragraph">
           Feel free to contact us at
           <Link color="#567dbd" href="mailto:sail@bu.edu">
+            {' '}
             sail@bu.edu
           </Link>
         </Text>
