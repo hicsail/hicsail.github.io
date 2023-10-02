@@ -1,6 +1,11 @@
-import { Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
+import {
+  Button,
+  FormControl,
+  FormHelperText,
+  FormLabel,
+  Input,
+} from '@chakra-ui/react';
 import * as React from 'react';
-// import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
@@ -11,40 +16,45 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  // const onSubmit = (data: any) => console.log(data);
-  // console.log(errors);
   const form = useRef<any>();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
     console.log(e);
-
-    // emailjs
-    //   .sendForm(
-    //     'YOUR_SERVICE_ID',
-    //     'YOUR_TEMPLATE_ID',
-    //     form.current,
-    //     'YOUR_PUBLIC_KEY',
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     },
-    //   );
   };
 
   return (
     <form ref={form} onSubmit={sendEmail}>
       <FormControl id="name" isRequired>
-        <FormLabel fontSize="1.5rem">Your Name</FormLabel>
+        <FormLabel fontSize="1.2rem" fontWeight="700">
+          Name
+        </FormLabel>
         <Input
-          width={{ base: '100%', md: '85%' }}
-          borderRadius="0"
           type="text"
           {...register('Name', { required: true, maxLength: 80 })}
+          marginBottom="4px"
+        />
+        <FormHelperText>First Name</FormHelperText>
+        <Input
+          type="text"
+          {...register('Name', { required: true, maxLength: 80 })}
+        />
+        <FormHelperText>Last Name</FormHelperText>
+      </FormControl>
+      <FormControl id="email" isRequired>
+        <FormLabel fontSize="1.2rem" fontWeight="700">
+          Title
+        </FormLabel>
+        <Input
+          {...register('Title', { required: true, pattern: /^\S+@\S+$/i })}
+        />
+      </FormControl>
+      <FormControl id="email" isRequired>
+        <FormLabel fontSize="1.2rem" fontWeight="700">
+          Department
+        </FormLabel>
+        <Input
+          {...register('Department', { required: true, pattern: /^\S+@\S+$/i })}
         />
       </FormControl>
       <FormControl id="email" isRequired>

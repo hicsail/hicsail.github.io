@@ -108,7 +108,7 @@ export const Projects: React.FC = () => {
           fontWeight="700"
           fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
           textAlign="left"
-          marginBottom="30px"
+          margin="20px"
         >
           Dive into different areas we work in
         </Text>
