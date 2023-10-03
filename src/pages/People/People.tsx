@@ -19,7 +19,7 @@ export const People: React.FC = () => {
     <Box padding="20px">
       <Box
         fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-        margin="1em 1em 1em 1.5em"
+        margin="1em 3em 1em 3.5em"
       >
         <Text
           fontSize="14px"
@@ -41,6 +41,7 @@ export const People: React.FC = () => {
         <Text marginBottom="60px"></Text>
       </Box>
       <Grid
+        margin="1em 3em 1em 3.5em"
         gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))"
         gap="25px"
       >

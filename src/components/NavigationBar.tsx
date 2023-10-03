@@ -28,11 +28,10 @@ export default function NavigationBar() {
   return (
     <Box
       width="100%"
-      marginTop={{ base: '15px', md: '30px' }}
-      marginBottom={{ base: '15px', md: '15px' }}
-      paddingLeft={{ base: '30px', md: '0' }}
-      paddingRight={{ base: '30px', md: '0' }}
-      maxWidth={{ lg: '80%', md: '90%' }}
+      marginTop="15px"
+      marginBottom="15px"
+      paddingLeft="40px"
+      paddingRight="40px"
     >
       <Flex
         width="100%"

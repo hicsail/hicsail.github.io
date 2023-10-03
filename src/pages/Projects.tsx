@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
               display: 'flex',
               flexWrap: 'wrap',
               flexDirection: 'column',
-              padding: '4.5rem 3rem 0rem 0rem',
+              padding: '5.5rem 0rem 0rem 4rem',
             }}
           >
             <Text
@@ -37,7 +37,7 @@ export const Projects: React.FC = () => {
                 fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
                 marginBottom: '1.3rem',
                 flex: '50%',
-                marginLeft: 'auto',
+                marginRight: 'auto',
                 textAlign: 'right',
                 color: '#ADDBEF',
               }}
@@ -51,7 +51,7 @@ export const Projects: React.FC = () => {
                 fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
                 fontWeight: 'bolder',
                 flex: '50%',
-                marginLeft: 'auto',
+                marginRight: 'auto',
                 lineHeight: '40px',
                 width: '150px',
                 borderColor: '#ADBAEF !important',
@@ -64,13 +64,17 @@ export const Projects: React.FC = () => {
         </Fade>
       </Box>
       <Box
-        fontSize="22px"
+        fontSize="22px !important"
         margin="55px"
         fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
         fontStyle="italic"
         sx={{ height: 'auto', textAlign: 'center' }}
       >
-        <Text marginBottom="20px" _hover={{ color: '#dcae34' }}>
+        <Text
+          fontSize="22px !important"
+          marginBottom="20px"
+          _hover={{ color: '#dcae34' }}
+        >
           Having worked with over 70 collaborators across 20 schools at Boston
           University, SAIL is committed to developing open-source software
           products that have direct impacts on academic research, public

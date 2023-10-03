@@ -60,13 +60,16 @@ export const Card: React.FC<Props> = ({
         margin="auto auto 20px auto"
         onClick={onOpen}
       >
-        <Image
-          src={imageHref}
-          fallbackSrc="../../img/research/placeholder-research.jpg"
-          alt="Card Image"
-          boxSize="300px"
-          objectFit="cover"
-        />
+        <Box backgroundColor="white">
+          <Image
+            src={imageHref}
+            fallbackSrc="../../img/research/placeholder-research.jpg"
+            alt="Card Image"
+            boxSize="300px"
+            objectFit="cover"
+          />
+        </Box>
+
         <Box p={5}>
           <Stack align="center">
             <Text
