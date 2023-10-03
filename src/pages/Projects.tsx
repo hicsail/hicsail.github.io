@@ -76,7 +76,6 @@ export const Projects: React.FC = () => {
           products that have direct impacts on academic research, public
           service, and industry.
         </Text>
-        {/**<Text _hover={{ color: '#dcae34' }}>Here you can find our featured projects.</Text> */}
       </Box>
       <Spacer />
       <Text

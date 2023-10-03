@@ -55,7 +55,7 @@ export const Card: React.FC<Props> = ({
         borderRadius="lg"
         overflow="hidden"
         mt={10}
-        textAlign="center"
+        sx={{ textAlign: 'center !important' }}
         position="relative"
         margin="auto auto 20px auto"
         onClick={onOpen}
@@ -73,6 +73,7 @@ export const Card: React.FC<Props> = ({
               fontSize="20px"
               fontWeight="600"
               fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+              sx={{ textAlign: 'center !important' }}
             >
               {modalButtonText}
             </Text>

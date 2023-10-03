@@ -4,11 +4,9 @@ import {
   FormControl,
   FormHelperText,
   FormLabel,
-  HStack,
   Input,
   Checkbox,
   RadioGroup,
-  Text,
   VStack,
   Select,
 } from '@chakra-ui/react';
@@ -55,9 +53,7 @@ export const ContactForm = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
         <Input
-          borderRadius="0"
           type="email"
-          width={{ base: '100%', md: '85%' }}
           {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
         />
       </FormControl>
@@ -143,10 +139,6 @@ export const ContactForm = () => {
           analyses on that data.
         </blockquote>
         Mobile Application
-        <blockquote>
-          You would like to assemble data and perform scalable queries or
-          analyses on that data.
-        </blockquote>
       </Box>
       <FormControl id="platforms" isRequired>
         <FormLabel>Preferred Platforms or Tools</FormLabel>

@@ -60,7 +60,7 @@ const data = [
   { year: 2017, efficiency: 39.4, sales: 6081000 },
 ];
 
-export const Intern: React.VFC = () => (
+export const Intern: React.FC = () => (
   <Layout title="Software Engineer Internships">
     <Flex borderBottom="2px solid black" pb="16px" pt="16px" gap="24px">
       <Box>
@@ -116,9 +116,6 @@ export const Intern: React.VFC = () => (
     <Box borderBottom="2px solid black" pb="16px" pt="16px">
       <Heading>SAIL Intern Testimonials</Heading>
       <InternTestimonials />
-    </Box>
-    <Box borderBottom="2px solid black" pb="16px">
-      <Heading>SAIL Intern Alumni</Heading>
     </Box>
   </Layout>
 );
