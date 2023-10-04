@@ -52,7 +52,7 @@ export const Person: React.FC<PersonProps> = ({ person }: PersonProps) => {
             </Text>
           </Box>
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent marginTop="5px">
           <PopoverCloseButton />
           <PopoverBody>
             <Text

@@ -31,13 +31,11 @@ export default function NavigationBar() {
       marginTop="15px"
       marginBottom="15px"
       paddingLeft="40px"
-      paddingRight="40px"
+      paddingRight="20px"
     >
       <Flex
         width="100%"
         minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
         paddingLeft="0"
         paddingRight="0"
         justifyContent="center"
@@ -59,7 +57,7 @@ export default function NavigationBar() {
               <Box
                 boxSize="45px"
                 objectFit="cover"
-                marginRight="10px"
+                marginRight="30px"
                 marginBottom="5px"
                 pb="5px"
               >

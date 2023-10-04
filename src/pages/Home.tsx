@@ -6,7 +6,6 @@ import {
   Text,
   Heading,
   Link,
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -14,13 +13,11 @@ import {
   IconButton,
   ModalBody,
   ModalCloseButton,
-  Flex,
 } from '@chakra-ui/react';
 import { isBrowser, isMobile } from 'react-device-detect';
 import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
-import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
 import { IoRocketSharp } from 'react-icons/io5';
 import { ProjectsGrid } from '../components/ProjectsGrid';
 import { PROJECTS_LIST } from '../utils/data/projectInformation';

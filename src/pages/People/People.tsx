@@ -41,9 +41,9 @@ export const People: React.FC = () => {
         <Text marginBottom="60px"></Text>
       </Box>
       <Grid
-        margin="1em 3em 1em 3.5em"
         gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))"
         gap="25px"
+        rowGap="60px"
       >
         <Fade delay={65} duration={450} cascade damping={0.4} fraction={0.15}>
           {people.map((person, i) => (

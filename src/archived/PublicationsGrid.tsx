@@ -1,7 +1,7 @@
 import { Box, Heading, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { PublicationInformation } from '../types/types';
-import { Layout } from './Layout';
+import { Layout } from '../components/Layout';
 import { PublicationCard } from './PublicationCard';
 
 interface Props {

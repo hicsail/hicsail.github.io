@@ -1,22 +1,24 @@
 import { Flex, Box, Link, Image } from '@chakra-ui/react';
 import * as React from 'react';
 
-export const Banner: React.VFC = () => {
+export const Banner: React.FC = () => {
   return (
-    <Flex direction="row" alignItems="center" bg="#121212" width="100%" p="8px">
+    <Flex
+      direction="row"
+      bg="#121212"
+      width="100%"
+      padding="10px 20px 10px 40px"
+    >
       <Link href="https://www.bu.edu/hic/">
-        <Flex
-          objectFit="cover"
-          marginRight="10px"
-          marginBottom="5px"
-          ml="32px"
-          height="45px"
-        >
-          <Flex height="48px" mr="12px" justifyContent="center">
-            <Image src="../../img/bu-logo.png" />
+        <Flex objectFit="-moz-initial" marginBottom="5px" height="50px">
+          <Flex height="48px" paddingRight="2em" justifyContent="start">
+            <Image width="4.5rem" src="../../img/bu-logo.png" />
           </Flex>
-          <Box boxSize="xs">
-            <Image src="../../img/Hariri_Institute_SAIL_Logotype_White_Web.png" />
+          <Box boxSize={['14em', '16em', '18em', '20em']} paddingTop="0.2em">
+            <Image
+              width="100%"
+              src="../../img/Hariri_Institute_SAIL_Logotype_White_Web.png"
+            />
           </Box>
         </Flex>
       </Link>

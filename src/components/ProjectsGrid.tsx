@@ -1,21 +1,12 @@
-import {
-  Box,
-  Grid,
-  Text,
-  Select,
-  Heading,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Box, Grid, Select } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
-import { CardWrapper } from './CardWrapper';
 import { Card } from './Card';
 
 import {
   FcDatabase,
   FcGrid,
   FcGraduationCap,
-  FcLike,
   FcMindMap,
   FcKey,
   FcPieChart,
@@ -139,19 +130,3 @@ export const ProjectsGrid: React.FC<Props> = ({
     </Box>
   );
 };
-
-{
-  /*
-{showText ? (
-				<Box>
-					<Text textStyle="paragraph">
-						SAIL projects are grouped into program areas, ranging from Digital Health to Data
-						Science to Privacy & Security and Natural Sciences. Several example projects from these
-						areas are featured below.
-					</Text>
-				</Box>
-			) : (
-				<Box></Box>
-			)}}
-      */
-}

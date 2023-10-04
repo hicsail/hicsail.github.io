@@ -4,7 +4,6 @@ import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
 import { Projects } from './pages/Projects';
 import { Research } from './pages/Research';
-import { Alumni } from './pages/Alumni';
 import { People } from './pages/People/People';
 import { Presentations } from './pages/Presentations';
 import { Contact } from './pages/Contact';
@@ -19,7 +18,6 @@ export const App: React.FC = () => {
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/people" element={<People />} />
-          <Route path="/alumni" element={<Alumni />} />
           <Route path="/research" element={<Research />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/presentations" element={<Presentations />} />

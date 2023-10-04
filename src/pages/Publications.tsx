@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PublicationsGrid } from '../components/PublicationsGrid';
+import { PublicationsGrid } from '../archived/PublicationsGrid';
 import { PUBLICATIONS_LIST } from '../utils/data/researchInformation';
 
 export const Publications: React.VFC = () => (

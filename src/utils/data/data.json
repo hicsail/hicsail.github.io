@@ -198,7 +198,7 @@
       "title": "Web MPC",
       "titleDescription": "Secure Compensation Analytics for the City of Boston",
       "description": "In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.",
-      "href": "../../../img/projects/illustrations/graphs.png",
+      "href": "../../../img/projects/illustrations/graph.png",
       "projectType": "Privacy and Security",
       "pi": null,
       "metaDataPresentation": [
@@ -216,8 +216,8 @@
     },
     {
       "title": "ASL-LEX",
-      "titleDescription": "",
-      "description": "",
+      "titleDescription": "Illuminating the Language of Signs, Sign by Sign",
+      "description": "Introducing ASL-LEX, a dynamic database capturing the intricate lexical and phonological facets of American Sign Language signs. Originally unveiled in 2016 with a robust collection of nearly 1,000 signs, ASL-LEX embarked on an ambitious journey in Fall 2020. This update witnessed a substantial expansion, enriching its repository to a staggering 2,723 signs. As we continue to enhance ASL-LEX, it serves as a remarkable resource, illuminating the depth and diversity of American Sign Language, making it accessible to a broader audience and fostering a deeper understanding of this expressive language.",
       "href": "../../../img/projects/illustrations/sorting.png",
       "projectType": "Data Science",
       "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli, </Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
@@ -288,7 +288,7 @@
       "title": "Noise Score",
       "titleDescription": "Describe and Visualize Your Daily Soundscape",
       "description": "Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.",
-      "href": "../../../img/projects/noise.avif",
+      "href": "../../../img/projects/illustrations/notification.png",
       "projectType": "Digital Health",
       "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker, </Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
       "metaDataPresentation": [
