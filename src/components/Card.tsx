@@ -26,7 +26,7 @@ interface Props {
   modalBody: string | undefined;
   imageHref: string | undefined;
   modalButtonSubText: string | undefined;
-  pi: React.ReactElement | null;
+  pi: string[] | null;
   metaDataPresentation?: Array<OutsideLink>;
   metaDataPublication?: Array<OutsideLink>;
 }
@@ -76,12 +76,13 @@ export const Card: React.FC<Props> = ({
               fontSize="20px"
               fontWeight="600"
               fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-              sx={{ textAlign: 'center !important' }}
+              margin="auto"
             >
               {modalButtonText}
             </Text>
             <Text
               fontSize="14px"
+              margin="auto"
               fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
             >
               {modalButtonSubText}
@@ -107,28 +108,24 @@ export const Card: React.FC<Props> = ({
                     fallbackSrc="../../img/research/placeholder-research.jpg"
                     float="left"
                   />
-                  <Box marginTop="20px" textAlign="justify" fontSize="15px">
-                    <Text>{modalBody}</Text>
-                    {metaDataPresentation && (
-                      <Text textStyle="paragraph" m="0">
-                        Presentations
-                      </Text>
-                    )}
+                  <Box
+                    marginTop="20px"
+                    textAlign="justify"
+                    fontSize="19px !important"
+                  >
+                    <Text fontSize="16px !important">{modalBody}</Text>
+                    {metaDataPresentation && <Text m="0">Presentations</Text>}
                     {metaDataPresentation?.map(({ name, href }) => (
-                      <Text textStyle="paragraph" m="0" color="teal">
+                      <Text m="0" color="teal">
                         <Link as="a" href={href}>
                           {name}
                         </Link>
                       </Text>
                     ))}
-                    {metaDataPublication && (
-                      <Text textStyle="paragraph" m="0">
-                        Publications
-                      </Text>
-                    )}
+                    {metaDataPublication && <Text m="0">Publications</Text>}
                     <List>
                       {metaDataPublication?.map(({ name, href }) => (
-                        <Text textStyle="paragraph" m="0" color="green">
+                        <Text m="0" color="green">
                           <Link as="a" href={href}>
                             {name}
                           </Link>
@@ -138,7 +135,11 @@ export const Card: React.FC<Props> = ({
                     {pi == null ? (
                       <></>
                     ) : (
-                      <div dangerouslySetInnerHTML={{ __html: pi }} />
+                      pi.map((person: string) => (
+                        <Text m="0" key={person} fontWeight="700">
+                          {person}
+                        </Text>
+                      ))
                     )}
                   </Box>
                 </>

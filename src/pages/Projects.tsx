@@ -5,9 +5,7 @@ import { Box, Button, Spacer, Text } from '@chakra-ui/react';
 import { Fade } from 'react-awesome-reveal';
 
 export const Projects: React.FC = () => {
-  const featured = data['featuredProjects'];
   const projects = data['projects'];
-  const old_projects = data['oldProjects'];
   return (
     <Box>
       <Box
@@ -27,7 +25,7 @@ export const Projects: React.FC = () => {
               display: 'flex',
               flexWrap: 'wrap',
               flexDirection: 'column',
-              padding: '5.5rem 0rem 0rem 4rem',
+              padding: '5.5rem 0rem 0rem 2.2rem',
             }}
           >
             <Text
@@ -38,7 +36,7 @@ export const Projects: React.FC = () => {
                 marginBottom: '1.3rem',
                 flex: '50%',
                 marginRight: 'auto',
-                textAlign: 'right',
+                textAlign: 'left',
                 color: '#ADDBEF',
               }}
             >
@@ -75,10 +73,9 @@ export const Projects: React.FC = () => {
           marginBottom="20px"
           _hover={{ color: '#dcae34' }}
         >
-          Having worked with over 70 collaborators across 20 schools at Boston
-          University, SAIL is committed to developing open-source software
-          products that have direct impacts on academic research, public
-          service, and industry.
+          SAIL is committed to developing open-source software products that
+          have direct impacts on academic research, public service, and
+          industry.
         </Text>
       </Box>
       <Spacer />
@@ -89,7 +86,7 @@ export const Projects: React.FC = () => {
         marginLeft="40px"
         fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
       >
-        Featured Projects
+        Dive into different areas we work in
       </Text>
       <Box
         id="middle"
@@ -99,22 +96,6 @@ export const Projects: React.FC = () => {
           textAlign: 'center',
         }}
       >
-        <ProjectsGrid
-          title="Active Projects"
-          list={featured}
-          showText={true}
-          showSelect={false}
-        />
-        <Text
-          _hover={{ color: '#dcae34' }}
-          fontSize="30px"
-          fontWeight="700"
-          fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-          textAlign="left"
-          margin="20px"
-        >
-          Dive into different areas we work in
-        </Text>
         <ProjectsGrid
           title="Projects"
           list={projects}

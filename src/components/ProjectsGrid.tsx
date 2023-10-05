@@ -3,16 +3,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import { Card } from './Card';
 
-import {
-  FcDatabase,
-  FcGrid,
-  FcGraduationCap,
-  FcMindMap,
-  FcKey,
-  FcPieChart,
-} from 'react-icons/Fc';
-import { IconType } from 'react-icons';
-
 interface Props {
   title: string | null;
   list: ProjectInfo[];
@@ -21,6 +11,7 @@ interface Props {
 }
 
 interface ProjectInfo {
+  featured?: boolean;
   title: string;
   titleDescription: string;
   description: string;
@@ -37,12 +28,13 @@ interface ProjectSelectProps {
 }
 
 const options = [
-  { name: 'All', icon: FcGrid },
-  { name: 'Data Science', icon: FcDatabase },
-  { name: 'Ed Tech', icon: FcGraduationCap },
-  { name: 'Privacy and Security', icon: FcKey },
-  { name: 'Digital Health', icon: FcPieChart },
-  { name: 'Natural Sciences', icon: FcMindMap },
+  'Featured',
+  'All',
+  'Data Science',
+  'Ed Tech',
+  'Privacy and Security',
+  'Digital Health',
+  'Natural Sciences',
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
@@ -70,13 +62,48 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
         ))}
       </>
     );
+  } else if (selected == 'Featured') {
+    return (
+      <>
+        {list.map((project: ProjectInfo, index: number) => (
+          <>
+            {project.featured == true && (
+              <Box
+                key={`${project.title}${index}`}
+                transition="transform 350ms ease-in-out"
+                _hover={{
+                  transform: 'scale(1.05)',
+                  transition: 'transform 300ms',
+                }}
+              >
+                <Card
+                  modalButtonText={project.title}
+                  modalButtonSubText={project.titleDescription}
+                  modalHeader={project.title}
+                  modalBody={project.description}
+                  imageHref={project.href}
+                  pi={project.pi}
+                />
+              </Box>
+            )}
+          </>
+        ))}
+      </>
+    );
   } else {
     return (
       <>
         {list
           .filter((project) => project.projectType == selected)
           .map((project: ProjectInfo, index: number) => (
-            <Box key={`${project.title}${index}`}>
+            <Box
+              key={`${project.title}${index}`}
+              transition="transform 350ms ease-in-out"
+              _hover={{
+                transform: 'scale(1.05)',
+                transition: 'transform 300ms',
+              }}
+            >
               <Card
                 modalButtonText={project.title}
                 modalButtonSubText={project.titleDescription}
@@ -92,13 +119,8 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
   }
 };
 
-export const ProjectsGrid: React.FC<Props> = ({
-  title,
-  list,
-  showText,
-  showSelect,
-}) => {
-  const [selected, setSelected] = useState(options[0].name);
+export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
+  const [selected, setSelected] = useState(options[0]);
 
   return (
     <Box>
@@ -108,9 +130,9 @@ export const ProjectsGrid: React.FC<Props> = ({
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
         >
-          {options.map((option: { name: string; icon: IconType }) => (
-            <option value={option.name} key={option.name}>
-              {option.name}
+          {options.map((name: string) => (
+            <option value={name} key={name}>
+              {name}
             </option>
           ))}
         </Select>

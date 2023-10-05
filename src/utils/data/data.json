@@ -110,81 +110,9 @@
       ]
     }
   ],
-  "featuredProjects": [
-    {
-      "title": "ASL-LEX",
-      "titleDescription": "Illuminating the Language of Signs, Sign by Sign",
-      "description": "Introducing ASL-LEX, a dynamic database capturing the intricate lexical and phonological facets of American Sign Language signs. Originally unveiled in 2016 with a robust collection of nearly 1,000 signs, ASL-LEX embarked on an ambitious journey in Fall 2020. This update witnessed a substantial expansion, enriching its repository to a staggering 2,723 signs. As we continue to enhance ASL-LEX, it serves as a remarkable resource, illuminating the depth and diversity of American Sign Language, making it accessible to a broader audience and fostering a deeper understanding of this expressive language.",
-      "href": "../../../img/projects/illustrations/sorting.png",
-      "projectType": "Data Science",
-      "featured": true,
-      "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli, </Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
-      "metaDataPresentation": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ],
-      "metaDataPublication": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ]
-    },
-    {
-      "title": "PACT",
-      "titleDescription": "Elevate Thermal Simulations with PACT",
-      "description": "Introducing PACT, a Parallel Compact Thermal simulator developed in collaboration with Professor Ayse Coskun. PACT is a versatile tool designed to simplify and accelerate thermal simulations, bridging the gap between standard-cell-level and architecture-level analysis with unprecedented speed and accuracy. PACT harnesses the power of multi-core processing through OpenMPI, offering a range of solvers that expedite both steady-state and transient simulations. This tool is not only fast and accurate but also highly adaptable, easily customizable to incorporate emerging integration and cooling technologies like 3D stacking and microchannel-based liquid cooling. By modifying the thermal netlist, users can tailor PACT to their specific needs.",
-      "href": "../../../img/projects/illustrations/startup.png",
-      "projectType": "Data Science",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "Wage Gap Calculator",
-      "titleDescription": "Empowering Employers to Bridge Wage Gaps",
-      "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
-      "href": "../../../img/projects/illustrations/coins.png",
-      "projectType": "",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "SIEVE",
-      "titleDescription": "Redefining Zero-Knowledge Proof Tech",
-      "description": "SIEVE, led by our TA1 team, is a dynamic project marked by innovation and collaboration. We specialize in Python and utilize the versatile 'picozk' module, authored by Joe Near (a key member of TA1 and TA2). Our mission: to craft zk-friendly intermediate representations (IRs) – relations, witnesses, and instances. These meticulously generated IRs serve as the foundation for TA2's powerful backends, including 'mac-and-cheese'. Prior to backend implementation, we rigorously test IR formats using 'fire-alarm'.",
-      "href": "../../../img/projects/illustrations/search.png",
-      "projectType": "Privacy and Security",
-      "pi": null,
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "COVID",
-      "titleDescription": "Clinical Testing Lab",
-      "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
-      "href": "../../../img/projects/illustrations/formula.png",
-      "projectType": "Digital Health",
-      "pi": null,
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "Camera Mouse",
-      "titleDescription": "Enhancing Accessibility through Eye Movements Tracking",
-      "description": "Introducing 'Camera Mouse', a collaborative achievement between our team and Professor Margrit Betke, a distinguished Computer Science professor and co-leader of the Image and Video Computing Research Group at Boston University. This innovative software harnesses camera-based eye tracking, enabling effortless computer navigation without the need to lift a finger. The project's core mission is to enhance accessibility, seamlessly merging technological sophistication with user inclusivity. Camera Mouse is a significant step forward in redefining how we interact with computers, offering a more accessible and user-friendly digital experience.",
-      "href": "../../../img/projects/illustrations/cameraman.png",
-      "projectType": "Data Science",
-      "pi": "<div><Link href=\"https://www.bu.edu/cs/profiles/betke/\"color=\"#567dbd\">Dr.Margrit Betke, </Link><Text as=\"span\">Professor of Computer Science, Boston University</Text><p>Email: betke@bu.edu</p></div>",
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    }
-  ],
   "projects": [
     {
+      "featured": true,
       "title": "COVID",
       "titleDescription": "Clinical Testing Lab",
       "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
@@ -215,12 +143,13 @@
       ]
     },
     {
+      "featured": true,
       "title": "ASL-LEX",
       "titleDescription": "Illuminating the Language of Signs, Sign by Sign",
       "description": "Introducing ASL-LEX, a dynamic database capturing the intricate lexical and phonological facets of American Sign Language signs. Originally unveiled in 2016 with a robust collection of nearly 1,000 signs, ASL-LEX embarked on an ambitious journey in Fall 2020. This update witnessed a substantial expansion, enriching its repository to a staggering 2,723 signs. As we continue to enhance ASL-LEX, it serves as a remarkable resource, illuminating the depth and diversity of American Sign Language, making it accessible to a broader audience and fostering a deeper understanding of this expressive language.",
       "href": "../../../img/projects/illustrations/sorting.png",
       "projectType": "Data Science",
-      "pi": "<div><Link href=\"https://www.bu.edu/wheelock/profile/naomi-caselli/\"color=\"#567dbd\">Dr.Naomi Caselli, </Link><Text as=\"span\">Assistant Professor, Wheelock</Text></div>",
+      "pi": ["Dr.Naomi Caselli, Assistant Professor, Wheelock"],
       "metaDataPresentation": [
         {
           "name": "",
@@ -245,12 +174,15 @@
       "metaDataPublication": []
     },
     {
+      "featured": true,
       "title": "PACT",
       "titleDescription": "Elevate Thermal Simulations with PACT",
       "description": "Introducing PACT, a Parallel Compact Thermal simulator developed in collaboration with Professor Ayse Coskun. PACT is a versatile tool designed to simplify and accelerate thermal simulations, bridging the gap between standard-cell-level and architecture-level analysis with unprecedented speed and accuracy. PACT harnesses the power of multi-core processing through OpenMPI, offering a range of solvers that expedite both steady-state and transient simulations. This tool is not only fast and accurate but also highly adaptable, easily customizable to incorporate emerging integration and cooling technologies like 3D stacking and microchannel-based liquid cooling. By modifying the thermal netlist, users can tailor PACT to their specific needs.",
       "href": "../../../img/projects/illustrations/startup.png",
       "projectType": "Data Science",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "pi": [
+        "Ayse K. Coskun, Professor of Computer Engineering, Boston University"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
@@ -265,6 +197,7 @@
       "metaDataPublication": []
     },
     {
+      "featured": true,
       "title": "SIEVE",
       "titleDescription": "Redefining Zero-Knowledge Proof Tech",
       "description": "SIEVE, led by our TA1 team, is a dynamic project marked by innovation and collaboration. We specialize in Python and utilize the versatile 'picozk' module, authored by Joe Near (a key member of TA1 and TA2). Our mission: to craft zk-friendly intermediate representations (IRs) – relations, witnesses, and instances. These meticulously generated IRs serve as the foundation for TA2's powerful backends, including 'mac-and-cheese'. Prior to backend implementation, we rigorously test IR formats using 'fire-alarm'.",
@@ -275,22 +208,26 @@
       "metaDataPublication": []
     },
     {
+      "featured": true,
       "title": "Wage Gap Calculator",
       "titleDescription": "Empowering Employers to Bridge Wage Gaps",
       "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
       "href": "../../../img/projects/illustrations/coins.png",
       "projectType": "",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "pi": [],
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
     {
+      "featured": true,
       "title": "Noise Score",
       "titleDescription": "Describe and Visualize Your Daily Soundscape",
       "description": "Research has established that the environmental soundscape has a large impact on our stress levels, our sleep, and our cardiovascular and mental health. The NoiseScore application utilizes smart phone technology to capture both the objective and subjective nature of the sounds you encounter as you go about your daily routine. This information can be utilized to understand the spatial and temporal distribution of sound levels and noise perception in your community both overall and by specific sources such as loud parties, road traffic, or aircraft noise.",
       "href": "../../../img/projects/illustrations/notification.png",
       "projectType": "Digital Health",
-      "pi": "<div><Link href=\"https://vivo.brown.edu/display/edwalker\" color=\"#567dbd\">Dr. Erica Walker, </Link><Text as=\"span\">Assistant Professor of Epidemiology, Brown University</Text></div>",
+      "pi": [
+        "Dr. Erica Walker, Assistant Professor of Epidemiology, Brown University"
+      ],
       "metaDataPresentation": [
         {
           "name": "",
@@ -305,32 +242,36 @@
       ]
     },
     {
-      "title": "Tokenomics",
-      "titleDescription": "",
-      "description": "Hello Tractor, headquartered in Nairobi, Kenya, and spanning its operations across 13 African nations, is an agri-tech pioneer with a profound impact. The company offers an affordable IoT fleet management software solution and a location-based booking application, enabling farm equipment owners to efficiently oversee their fleet while connecting seamlessly with farmers in need of tractor services.",
-      "href": "",
-      "projectType": "",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "title": "Cookie Monster",
+      "titleDescription": "Unraveling the Digital Snack",
+      "description": "In a collaborative effort led by Andrey Fradkin, Assistant Professor of Economics at Boston University, along with Chiara Farronato, Associate Professor of Business Administration at Harvard Business School, and Tesary Lin, Assistant Professor of Marketing at BU, this project introduces a Chrome extension designed to investigate the impact of cookie tracking on user experiences and explore advertising mechanisms. This innovative tool discreetly collects data on ads and user interactions during web browsing sessions, ensuring user privacy. By examining the implications of cookie tracking and the data collection practices of search engines, this research promises valuable insights into the digital landscape and its future implications for users and industry practices.",
+      "href": "../../../img/projects/illustrations/shield.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Andrey Fradkin, Assistant Professor of Economics at Boston University",
+        "Chiara Farronato, Glenn and Mary Jane Creamer Associate Professor of Business Administration at Harvard Business School",
+        "Tesary Lin, Assistant Professor of Marketing at Boston University"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
     {
-      "title": "",
-      "titleDescription": "",
-      "description": "",
-      "href": "",
-      "projectType": "",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "title": "VA App",
+      "titleDescription": "Veterans Empowered, Homes Secured",
+      "description": "The VA App is a mobile application dedicated to ending veteran homelessness by allowing U.S. veterans to share their daily experiences and challenges through surveys. Through real-time data collection and analysis, this project seeks to uncover patterns that link survey responses with housing situations, thus informing targeted support and prevention strategies. With a focus on understanding precursors to homelessness, tailoring support, and implementing proactive measures, the VA App empowers veterans and plays a pivotal role in shaping policies and programs aimed at ensuring they receive the care and support they rightfully deserve.",
+      "href": "../../../img/projects/illustrations/house.png",
+      "projectType": "Digital Health",
+      "pi": null,
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
     {
-      "title": "",
-      "titleDescription": "",
-      "description": "",
-      "href": "",
-      "projectType": "",
-      "pi": "<div><Link href=\"https://www.bu.edu/eng/profile/ayse-coskun/\" color=\"#567dbd\">Ayse K. Coskun, </Link><Text as=\"span\">Professor of Computer Engineering, Boston University</Text><p>Email: acoskun@bu.edu</p></div>",
+      "title": "Microb-DB",
+      "titleDescription": "Simplifying Genomic Insights for Scientists",
+      "description": "Microb-DB is a practical project connecting genomics and metagenomics, utilizing data from well-known genome databases like GOLD and GTDB. We aim to simplify research by collecting and organizing valuable metagenomic insights into one database—Microb-DB. This resource is designed to assist researchers and scientists working with genomes and metagenomes. It allows users to perform custom queries on a user-friendly platform, promoting comparative genomics, aiding metagenomic studies, and supporting data-driven discoveries. Microb-DB is created to streamline research, inform decisions, and encourage collaboration among scientists from different fields, making it a valuable tool for advancing our knowledge of microorganisms and their roles in various environments.",
+      "href": "../../../img/projects/illustrations/funnel.png",
+      "projectType": "Data Science",
+      "pi": null,
       "metaDataPresentation": [],
       "metaDataPublication": []
     }

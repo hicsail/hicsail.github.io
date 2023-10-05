@@ -20,7 +20,7 @@ import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { IoRocketSharp } from 'react-icons/io5';
 import { ProjectsGrid } from '../components/ProjectsGrid';
-import { PROJECTS_LIST } from '../utils/data/projectInformation';
+import data from '../utils/data/data.json';
 
 const HeroText = styled.div`
   position: absolute;
@@ -39,11 +39,8 @@ const PlayButton = styled.div`
   z-index: 1;
 `;
 
-const StyledLink = styled.a`
-  color: #567dbd;
-`;
-
-export const Home: React.VFC = () => {
+export const Home: React.FC = () => {
+  const projects = data['projects'];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const canvasBG = useColorModeValue('white', 'black');
   const itemColor = useColorModeValue('#000000', '#FFFFFF');
@@ -217,10 +214,10 @@ export const Home: React.VFC = () => {
               Featured Projects
             </Heading>
             <ProjectsGrid
-              title={null}
-              list={PROJECTS_LIST}
-              showText={false}
+              title=""
+              list={projects}
               showSelect={false}
+              showText={false}
             />
           </Box>
           <Box width="100%" gridArea="contact"></Box>
