@@ -45,7 +45,7 @@ export const People: React.FC = () => {
         gap="25px"
         rowGap="60px"
       >
-        <Fade delay={100} duration={700} cascade damping={0.3} triggerOnce>
+        <Fade delay={800} duration={600} cascade damping={0.3} triggerOnce>
           {people.map((person, i) => (
             <Box minWidth="300px" resize="horizontal">
               <Person person={person} />

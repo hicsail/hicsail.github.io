@@ -149,7 +149,7 @@
       "description": "Introducing ASL-LEX, a dynamic database capturing the intricate lexical and phonological facets of American Sign Language signs. Originally unveiled in 2016 with a robust collection of nearly 1,000 signs, ASL-LEX embarked on an ambitious journey in Fall 2020. This update witnessed a substantial expansion, enriching its repository to a staggering 2,723 signs. As we continue to enhance ASL-LEX, it serves as a remarkable resource, illuminating the depth and diversity of American Sign Language, making it accessible to a broader audience and fostering a deeper understanding of this expressive language.",
       "href": "../../../img/projects/illustrations/sorting.png",
       "projectType": "Data Science",
-      "pi": ["Dr.Naomi Caselli, Assistant Professor, Wheelock"],
+      "pi": ["Dr. Naomi Caselli, Assistant Professor, Wheelock"],
       "metaDataPresentation": [
         {
           "name": "",
@@ -170,7 +170,7 @@
       "href": "../../../img/projects/illustrations/cameraman.png",
       "projectType": "Data Science",
       "pi": [
-        "Dr.Margrit Betke,Professor of Computer Science, Boston University Email: betke@bu.edu"
+        "Dr. Margrit Betke,Professor of Computer Science, Boston University Email: betke@bu.edu"
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -263,7 +263,7 @@
       "description": "The VA App is a mobile application dedicated to ending veteran homelessness by allowing U.S. veterans to share their daily experiences and challenges through surveys. Through real-time data collection and analysis, this project seeks to uncover patterns that link survey responses with housing situations, thus informing targeted support and prevention strategies. With a focus on understanding precursors to homelessness, tailoring support, and implementing proactive measures, the VA App empowers veterans and plays a pivotal role in shaping policies and programs aimed at ensuring they receive the care and support they rightfully deserve.",
       "href": "../../../img/projects/illustrations/house.png",
       "projectType": "Digital Health",
-      "pi": null,
+      "pi": ["Donald McInnes, Lecturer at Harvard Medical School"],
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
@@ -273,7 +273,72 @@
       "description": "Microb-DB is a practical project connecting genomics and metagenomics, utilizing data from well-known genome databases like GOLD and GTDB. We aim to simplify research by collecting and organizing valuable metagenomic insights into one database—Microb-DB. This resource is designed to assist researchers and scientists working with genomes and metagenomes. It allows users to perform custom queries on a user-friendly platform, promoting comparative genomics, aiding metagenomic studies, and supporting data-driven discoveries. Microb-DB is created to streamline research, inform decisions, and encourage collaboration among scientists from different fields, making it a valuable tool for advancing our knowledge of microorganisms and their roles in various environments.",
       "href": "../../../img/projects/illustrations/funnel.png",
       "projectType": "Data Science",
-      "pi": null,
+      "pi": [
+        "Dr. Marianna Felici, Research Scientist at the Center for Space Physics at Boston University"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Storm-Chaser",
+      "titleDescription": "Automating Microscopy",
+      "description": "In collaboration with Brian Cleary, a computing and data science faculty member, we designed and developed a desktop application for automating lab-based microscopy experiments, specifically for measuring gene expression in tissue sections. Our work led to the creation of an open-source software repository, focusing on complex, high-throughput experiments with low-latency requirements. The application, as a minimum viable product, supports predefined experiments across multiple rounds and allows for flexible measurement location adjustments in x, y, and z. We also performed a comprehensive review of the existing repository to assess updates versus new development needs, aligning with its original goal of supporting future software additions. Additionally, we produced a Windows application to enhance accessibility, updated drivers for hardware compatibility, and implemented a study notification feature for timely feedback to researchers upon study completion or failure.",
+      "href": "../../../img/projects/illustrations/laptop.png",
+      "projectType": "Natural Sciences",
+      "pi": [
+        "Brian Cleary, Assistant Professor in Department of Biomedical Engineering and Center for Computing and Data Science"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "NIST",
+      "titleDescription": "Uniting Data, Advancing Collaboration",
+      "description": "Under the leadership of Boston University's Douglas Densmore, our ongoing NIST project focuses on creating a computational infrastructure with two core objectives. The first involves establishing a collaborative 'data backbone', a web-based platform for all project contributors to share, manage, and standardize data exchange processes. This repository stores various crucial data, from production timelines to structural details. The second objective is to develop a 'software pipeline' that connects this backbone to techno-economic modeling frameworks, supporting both manual and automated analysis. This infrastructure, complete with process flowsheets, aims to eventually integrate with molecular biology experimental design software. Our project aims to facilitate seamless collaboration and provide advanced data management and analysis tools through a cloud-based web application with secure logins, robust file storage, and intuitive data viewing.",
+      "href": "../../../img/projects/illustrations/teamwork.png",
+      "projectType": "Natural Sciences",
+      "pi": [
+        "Douglas Densmore, Professor of Electrial and Computer Engineering at Boston University"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "COMETS",
+      "titleDescription": "Precision Microbial Growth Simulation",
+      "description": "COMETS represents an advanced simulation tool meticulously designed to replicate the growth patterns of microbes. This intricate simulation process demands substantial computational resources and time; however, the outcomes promise to significantly enhance users' research endeavors. Our primary deliverable is a user-friendly web application, purpose-built for conducting COMETS simulations with ease. This application provides a range of input mechanisms, including sliders, radio boxes, and checkboxes, empowering users to manipulate simulation variables effortlessly. Given the resource-intensive nature of these simulations, we prioritize efficiency by focusing on lightweight simulations, characterized by output sizes below 1GB and computation times less than 5 minutes. Further details and restrictions will be fine-tuned in collaboration with our project lead in later project stages.                                                Our project goals encompass the development of a web application for initiating COMETS simulations, displaying resulting simulations—comprising graphs, models, and other relevant outputs—and establishing a robust CI/CD pipeline that evolves alongside COMETS. Furthermore, we aim to deploy both the front-end and back-end components of this application on a remote server, ensuring accessibility and scalability for researchers.",
+      "href": "../../../img/projects/illustrations/archery.png",
+      "projectType": "Natural Sciences",
+      "pi": [
+        "Iljia Dukovski, Research Assistant Professor, Bioinformatics Program at Boston University"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Climate Lies",
+      "titleDescription": "Unmasking Misinformation",
+      "description": "This project utilizes dynamic and interactive visualization to expose climate disinformation sourced from Twitter posts spanning from February 2007 to December 2022. This data-driven tool was prominently featured at the May 16 Symposium on 'Misinformation in an Era of Climate Crisis', hosted at the BU Center for Computing and Data Science. The visualization provides a clear and factual representation of the prevalence of climate-related falsehoods, aiding in raising awareness and fostering informed discussions on the critical issue of climate change misinformation.",
+      "href": "../../../img/projects/illustrations/navigation-lost.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Irena Vodenska, Professor of Finance Director, Finance Programs Chair, Administrative Sciences",
+        "Hyunuk Kim, Assistant Professor, Department of Administrative Sciences, Metropolitan College"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Web OMM",
+      "titleDescription": "Money Management and Mind Wellness",
+      "description": "The Web OMM project is a pioneering initiative aimed at leveraging user activity data on a simulated financial website to achieve two vital goals. Firstly, it focuses on measuring and enhancing financial literacy, equipping users with the knowledge and tools to make informed financial decisions. Secondly, it plays a crucial role in early detection of cognitive decline, particularly in older adults, using data-driven insights. By migrating the existing mock financial platform to the web, and introducing new features while addressing existing issues, Web OMM is dedicated to providing a modern and efficient financial management tool. Explore the project's website at https://omm.sail.codes to experience the future of online money management and cognitive health monitoring.",
+      "href": "../../../img/projects/illustrations/task-management.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Preeti Sunderaraman, Assistant Professor of Neurology at Boston University",
+        "Kriti Goyal, Research Specialist at Boston University",
+        "Madison Bouchard-Liporto, Research Assistant at Boston University"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     }
