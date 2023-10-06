@@ -78,13 +78,13 @@
       "name": "Zoe Chitty",
       "picture": "../../img/team/ZoeChitty.jpg",
       "role": "Software Engineer",
-      "email": "?????"
+      "email": "zlch@bu.edu"
     },
     {
       "name": "Shashank Karthikeyan",
       "picture": "../../img/team/ShashankKarthikeyan.jpg",
       "role": "Software Engineer",
-      "email": "??????"
+      "email": "karthish@bu.edu"
     }
   ],
   "oldProjects": [
@@ -169,7 +169,9 @@
       "description": "Introducing 'Camera Mouse', a collaborative achievement between our team and Professor Margrit Betke, a distinguished Computer Science professor and co-leader of the Image and Video Computing Research Group at Boston University. This innovative software harnesses camera-based eye tracking, enabling effortless computer navigation without the need to lift a finger. The project's core mission is to enhance accessibility, seamlessly merging technological sophistication with user inclusivity. Camera Mouse is a significant step forward in redefining how we interact with computers, offering a more accessible and user-friendly digital experience.",
       "href": "../../../img/projects/illustrations/cameraman.png",
       "projectType": "Data Science",
-      "pi": "<div><Link href=\"https://www.bu.edu/cs/profiles/betke/\"color=\"#567dbd\">Dr.Margrit Betke, </Link><Text as=\"span\">Professor of Computer Science, Boston University</Text><p>Email: betke@bu.edu</p></div>",
+      "pi": [
+        "Dr.Margrit Betke,Professor of Computer Science, Boston University Email: betke@bu.edu"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
