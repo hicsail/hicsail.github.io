@@ -15,6 +15,7 @@ import {
   List,
   Stack,
   ChakraProvider,
+  Divider,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { OutsideLink } from '../types/types';
@@ -96,7 +97,7 @@ export const Card: React.FC<Props> = ({
             <ModalOverlay />
             <ModalContent
               padding="1rem"
-              bg={useColorModeValue('#F6EBCC', '#C1982E')}
+              bg={useColorModeValue('#FAEDC5', '#DAAD20')}
             >
               <ModalCloseButton />
               <ModalBody textAlign="center">
@@ -108,12 +109,8 @@ export const Card: React.FC<Props> = ({
                     fallbackSrc="../../img/research/placeholder-research.jpg"
                     float="left"
                   />
-                  <Box
-                    marginTop="20px"
-                    textAlign="justify"
-                    fontSize="19px !important"
-                  >
-                    <Text fontSize="16px !important">{modalBody}</Text>
+                  <Box marginTop="20px" textAlign="justify">
+                    <Text fontSize="16px">{modalBody}</Text>
                     {metaDataPresentation && <Text m="0">Presentations</Text>}
                     {metaDataPresentation?.map(({ name, href }) => (
                       <Text m="0" color="teal">
@@ -135,11 +132,27 @@ export const Card: React.FC<Props> = ({
                     {pi == null ? (
                       <></>
                     ) : (
-                      pi.map((person: string) => (
-                        <Text m="0" key={person} fontWeight="700">
-                          {person}
+                      <Box marginTop="20px" fontWeight="700">
+                        <Text fontStyle="italic" marginBottom="5px">
+                          Collaborators:{' '}
                         </Text>
-                      ))
+                        {pi.map((person: string) => (
+                          <>
+                            <Text m="0" key={person}>
+                              {person}
+                            </Text>
+                            <Divider
+                              key={person}
+                              sx={{
+                                height: '1px',
+                                width: 'auto',
+                                margin: '5px 15px 5px 5px',
+                                backgroundColor: '#b2910d',
+                              }}
+                            />
+                          </>
+                        ))}
+                      </Box>
                     )}
                   </Box>
                 </>

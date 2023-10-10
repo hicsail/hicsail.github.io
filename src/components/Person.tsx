@@ -7,6 +7,7 @@ import {
   PopoverContent,
   PopoverCloseButton,
   PopoverBody,
+  Image,
 } from '@chakra-ui/react';
 import React from 'react';
 
@@ -28,20 +29,22 @@ export const Person: React.FC<PersonProps> = ({ person }: PersonProps) => {
       <Popover trigger="hover">
         <PopoverTrigger>
           <Box>
-            <img
-              style={{ width: 'auto' }}
-              src={person.picture}
-              loading="lazy"
-            />
-            <Text
-              fontSize=".9375rem"
-              fontWeight="600"
-              lineHeight="1.45rem"
-              _hover={{ color: '#dcae34' }}
-              fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-            >
-              {person.name}
-            </Text>
+            <Box _hover={{ color: '#dcae34' }}>
+              <Image
+                sx={{ width: 'auto', ':hover': { color: '#dcae34' } }}
+                src={person.picture}
+                loading="lazy"
+              />
+              <Text
+                fontSize=".9375rem"
+                fontWeight="600"
+                lineHeight="1.45rem"
+                _hover={{ color: '#dcae34' }}
+                fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+              >
+                {person.name}
+              </Text>
+            </Box>
             <Text
               fontSize=".9375rem"
               fontWeight="400"

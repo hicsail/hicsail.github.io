@@ -87,29 +87,6 @@
       "email": "karthish@bu.edu"
     }
   ],
-  "oldProjects": [
-    {
-      "title": "ORACLES",
-      "titleDescription": "ORACLES",
-      "description": "",
-      "href": "../../../img/research/oracles.png",
-      "projectType": "Data Science",
-      "featured": true,
-      "pi": "<div><Link href=\"https://www.bu.edu/hic/profile/mayank-varia/\" color=\"#567dbd\">Dr.Mayank Varia,</Link><Text as=\"span\">Research Associate Professor, Computer Science</Text></div>",
-      "metaDataPresentation": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ],
-      "metaDataPublication": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ]
-    }
-  ],
   "projects": [
     {
       "featured": true,
@@ -128,7 +105,7 @@
       "description": "In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.",
       "href": "../../../img/projects/illustrations/graph.png",
       "projectType": "Privacy and Security",
-      "pi": null,
+      "pi": ["Boston Women's Workforce Council"],
       "metaDataPresentation": [
         {
           "name": "From Usability to Secure Computing and Back Again",
@@ -170,7 +147,7 @@
       "href": "../../../img/projects/illustrations/cameraman.png",
       "projectType": "Data Science",
       "pi": [
-        "Dr. Margrit Betke,Professor of Computer Science, Boston University Email: betke@bu.edu"
+        "Dr. Margrit Betke, Professor of Computer Science, Boston University"
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -216,7 +193,7 @@
       "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
       "href": "../../../img/projects/illustrations/coins.png",
       "projectType": "",
-      "pi": [],
+      "pi": null,
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
@@ -263,7 +240,9 @@
       "description": "The VA App is a mobile application dedicated to ending veteran homelessness by allowing U.S. veterans to share their daily experiences and challenges through surveys. Through real-time data collection and analysis, this project seeks to uncover patterns that link survey responses with housing situations, thus informing targeted support and prevention strategies. With a focus on understanding precursors to homelessness, tailoring support, and implementing proactive measures, the VA App empowers veterans and plays a pivotal role in shaping policies and programs aimed at ensuring they receive the care and support they rightfully deserve.",
       "href": "../../../img/projects/illustrations/house.png",
       "projectType": "Digital Health",
-      "pi": ["Donald McInnes, Lecturer at Harvard Medical School"],
+      "pi": [
+        "Donald Keith McInnes, Research Associate Professor, Boston University School of Public Health"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
@@ -298,7 +277,7 @@
       "href": "../../../img/projects/illustrations/teamwork.png",
       "projectType": "Natural Sciences",
       "pi": [
-        "Douglas Densmore, Professor of Electrial and Computer Engineering at Boston University"
+        "Douglas Densmore, Professor of Electrical and Computer Engineering at Boston University"
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -322,7 +301,7 @@
       "href": "../../../img/projects/illustrations/navigation-lost.png",
       "projectType": "Data Science",
       "pi": [
-        "Irena Vodenska, Professor of Finance Director, Finance Programs Chair, Administrative Sciences",
+        "Irena Vodenska, Professor of Finance at Boston University, Director of Finance Programs",
         "Hyunuk Kim, Assistant Professor, Department of Administrative Sciences, Metropolitan College"
       ],
       "metaDataPresentation": [],
@@ -341,6 +320,105 @@
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
+    },
+    {
+      "title": "Synthera Health",
+      "titleDescription": "Our Journey in Transforming Nutritional Anemia Care",
+      "description": "At Synthera Health, we've embarked on an extraordinary mission, dedicating our expertise to develop a mobile application that promises to redefine nutritional anemia care. Our visionary project is the culmination of relentless effort and innovation, meticulously designed to leverage clinical blood test results and end-user survey inputs within a proprietary algorithm. The result? A revolutionary mobile application that crafts personalized treatment plans for individuals diagnosed with nutritional anemia. This project represents a significant milestone in our commitment to transforming the patient and provider experience in delivering personalized care for nutritional deficiencies and associated conditions, including iron deficiency (ID), iron deficiency anemia (IDA), and thyroid disorders. Our collaborative journey has yielded a platform that empowers healthcare providers and patients alike, setting new standards for precision and effectiveness in anemia management.",
+      "href": "../../../img/projects/illustrations/award.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Dr. Catherine M. Klapperich, Professor in the College of Engineering, and the Director of the Laboratory for Diagnostics at Boston University",
+        "Heather Fraser, Co-Founder and CEO at Synthera Health"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "fNIRS",
+      "titleDescription": "Streamlining Brain Imaging Data",
+      "description": "The fNIRS project aims to simplify the management of fNIRS Datasets for the imaging community. Through a user-friendly web interface, our platform enables users to effortlessly create, manage, download, and share fNIRS Datasets, conforming to the hierarchical structure of Subjects, Sessions, Runs, SNIRF files, and BIDS text files. By encapsulating the BIDS format, the interface provides a streamlined view of the data and facilitates BIDS text file editing. Users can efficiently generate BIDS datasets by uploading SNIRF files, ensuring data accuracy through validation and the automatic generation of BIDS format files. The platform's flexibility allows users to customize dataset structures by adding, removing, or rearranging Subjects, Sessions, or Runs within a Dataset, fostering enhanced collaboration and research efficiency within the fNIRS community.",
+      "href": "../../../img/projects/illustrations/navigating.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "David Boas, Professor, Biomedical Engineering at Boston University, Director of Neurophotonics Center"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Center for Young Colorful Minds",
+      "titleDescription": "Youth Mental Wellness Hub",
+      "description": "The 'Center for Young Colorful Minds (CYCM)' addresses the mental health crisis among youth of color and LGBTQ youth in Greater Boston and beyond. Our mission revolves around advancing mental health literacy and awareness through a dynamic online presence, focusing on culturally relevant mental health information, community engagement, and research initiatives. Collaborating with a youth advisory board and community partners, we disseminate accurate mental health content on social media. In addition, we strengthen ties with existing community programs, like the Boys and Girls Club, schools, and churches, to provide vital support. CYCM is also committed to research partnerships with academic institutions to develop evidence-based interventions that cater to the unique mental health needs of diverse youth. Our holistic approach empowers these communities by fostering resilience and well-being through knowledge, community, and research-backed initiatives.",
+      "href": "../../../img/projects/illustrations/chat.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Dr. Christine M. Crawford, Director of Medical Student Education and Assistant Professor of Psychiatry at Boston University",
+        "Daisy Perez, Senior Research Manager at Department of Psychiatry, Assistant Professor at Boston University Chobanian & Avedisian School of Medicine",
+        "Hannah Tremont, Public Health Post Writing Fellow at Boston University School of Public Health"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "BROC Online Inquiry System",
+      "titleDescription": "Pioneering Enhanced Sample Discovery for FHS Research",
+      "description": "The 'BROC' project aims to revolutionize sample discovery within the Framingham Heart Study (FHS) by delivering an interactive website that empowers users to access comprehensive information about available samples. Unlike the current manual system, our Online Inquiry System streamlines the process, allowing researchers to independently navigate and filter datasets, ensuring no critical information is overlooked. The project encompasses goals such as creating an interactive website with robust data filtering, implementing data anonymization, enhancing the MetaBase prototype, and deploying the system on a HIPAA-compliant server, all with the objective of optimizing sample discovery and research within the FHS community.",
+      "href": "../../../img/projects/illustrations/location.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Alvin Ang, Research Assistant Professor of Anatomy and Neurobiology at Boston University"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "RESTORE",
+      "titleDescription": "Collaborating for Healing and Support with BMC",
+      "description": "The RESTORE Center specializes in providing evidence-based outpatient treatments for adults grappling with posttraumatic stress disorder (PTSD) and diverse adverse experiences, offering invaluable training to BMC clinicians. Our collaborative project, 'RESTORE', is dedicated to developing an intuitive web application and portal that serves as the digital gateway for the Center. This platform seamlessly integrates a headless content management system, enabling administrators to manage the website effortlessly. It features language translation capabilities and utilizes SAIL's authentication microservice for secure admin access. Additionally, our responsibility extends to guiding design decisions and branding to ensure alignment with the Center's mission and values.",
+      "href": "../../../img/projects/illustrations/message.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Dr. Sarah E. Valentine, Assistant Professor in Psychiatry at Boston University School of Medicine, Clinical Psychologist at BMC",
+        "Daisy Perez, Senior Research Manager at Department of Psychiatry, Assistant Professor at Boston University Chobanian & Avedisian School of Medicine",
+        "Karlie Marrs, Health Outreach and Evaluation Coordinator at RESTORE Center",
+        "Dr. Nuha Alshabani, Trauma in Context Postdoctoral Fellow in the Department of Psychiatry at BMC"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "",
+      "titleDescription": "",
+      "description": "",
+      "href": "",
+      "projectType": "",
+      "pi": [],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    }
+  ],
+  "oldProjects": [
+    {
+      "title": "ORACLES",
+      "titleDescription": "ORACLES",
+      "description": "",
+      "href": "../../../img/research/oracles.png",
+      "projectType": "Data Science",
+      "featured": true,
+      "pi": "<div><Link href=\"https://www.bu.edu/hic/profile/mayank-varia/\" color=\"#567dbd\">Dr.Mayank Varia,</Link><Text as=\"span\">Research Associate Professor, Computer Science</Text></div>",
+      "metaDataPresentation": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ],
+      "metaDataPublication": [
+        {
+          "name": "",
+          "href": ""
+        }
+      ]
     }
   ]
 }
