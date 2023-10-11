@@ -1,0 +1,11 @@
+# This file is used for testing the Dockerfile
+# It is not used in production
+# Before running docker compose up, remove the docker-build folder
+# Then run docker compose up
+# After running docker compose up, the docker-build folder should be created with the build files
+version: '3.8'
+services:
+  website:
+    build: .
+    volumes:
+      - ./docker-build:/output

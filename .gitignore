@@ -9,3 +9,4 @@ generated
 # Files marked with gitigx
 *gitigx*
 .DS_Store
+docker-build
