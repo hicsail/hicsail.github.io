@@ -8,3 +8,5 @@ generated
 *gitigx*
 .DS_Store
 docker-build
+
+.vscode
