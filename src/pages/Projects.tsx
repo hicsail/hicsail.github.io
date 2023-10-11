@@ -80,6 +80,7 @@ export const Projects: React.FC = () => {
       </Box>
       <Spacer />
       <Text
+        id="middle"
         _hover={{ color: '#dcae34' }}
         fontSize="30px"
         fontWeight="700"
@@ -89,7 +90,6 @@ export const Projects: React.FC = () => {
         Dive into different areas we work in
       </Text>
       <Box
-        id="middle"
         sx={{
           height: 'auto',
           padding: '20px',

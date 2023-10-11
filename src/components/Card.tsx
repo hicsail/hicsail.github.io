@@ -100,16 +100,15 @@ export const Card: React.FC<Props> = ({
               bg={useColorModeValue('#FAEDC5', '#DAAD20')}
             >
               <ModalCloseButton />
-              <ModalBody textAlign="center">
+              <ModalBody>
                 <>
                   <Image
-                    margin="20px 28px 7px 0px "
+                    margin="auto"
                     width="300px"
                     src={imageHref}
                     fallbackSrc="../../img/research/placeholder-research.jpg"
-                    float="left"
                   />
-                  <Box marginTop="20px" textAlign="justify">
+                  <Box marginTop="20px" textAlign="left">
                     <Text fontSize="16px">{modalBody}</Text>
                     {metaDataPresentation && <Text m="0">Presentations</Text>}
                     {metaDataPresentation?.map(({ name, href }) => (
@@ -141,15 +140,6 @@ export const Card: React.FC<Props> = ({
                             <Text m="0" key={person}>
                               {person}
                             </Text>
-                            <Divider
-                              key={person}
-                              sx={{
-                                height: '1px',
-                                width: 'auto',
-                                margin: '5px 15px 5px 5px',
-                                backgroundColor: '#b2910d',
-                              }}
-                            />
                           </>
                         ))}
                       </Box>

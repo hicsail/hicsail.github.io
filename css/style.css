@@ -314,7 +314,7 @@ a:hover {
 }
 
 .footer-container {
-	background-color: black;
+	background-color: #000000;
 	padding: 45px 0 20px;
 	font-size: 15px;
 	line-height: 24px;
@@ -378,7 +378,7 @@ a:hover {
 
 .landing::before {
 	content: '';
-	background: linear-gradient(to bottom, transparent 0%, transparent 57%, black 100%);
+	background: linear-gradient(to bottom, transparent 0%, transparent 57%, #000000 100%);
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -422,7 +422,7 @@ a:hover {
 	right: 5vh;
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 16px;
-	color: black;
+	color: #000000;
 	padding: 5px 15px;
 }
 
@@ -434,7 +434,7 @@ a:hover {
 body,
 html,
 #pattern_footer {
-	background-color: black;
+	background-color: #000000;
 	color: #ffffff;
 }
 
@@ -489,7 +489,7 @@ html,
 .people > span {
 	display: block;
 	font-size: 16px;
-	color: #555555;
+	color: #000000;
 }
 .oppr ol {
 	font-weight: 700;
@@ -549,7 +549,7 @@ html,
 	.landing .hero-text h1 {
 		font-size: 7vw;
 		line-height: 7vw;
-	} /* SAIL tagline tablet */
+	}
 }
 
 @media all and (max-width: 900px) {

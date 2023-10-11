@@ -9,14 +9,14 @@ const theme = extendTheme({
   colors: {
     sail: {
       100: '#f7fafc',
-      900: '#1a202c',
+      900: '#000000',
     },
   },
   styles: {
     global: (props: any) => ({
       body: {
         color: mode('black', 'white')(props),
-        bgColor: mode('white', '#121212')(props),
+        bgColor: mode('white', 'black')(props),
         margin: '0 auto',
       },
     }),
@@ -45,7 +45,7 @@ const theme = extendTheme({
     },
   },
   initialColorMode: 'dark',
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 });
 
 export default theme;

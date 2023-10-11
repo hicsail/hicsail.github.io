@@ -142,7 +142,7 @@ export const Home: React.FC = () => {
                   size="full"
                 >
                   <ModalOverlay />
-                  <ModalContent bg={useColorModeValue('#FFFFFF', '#121212')}>
+                  <ModalContent bg={useColorModeValue('#FFFFFF', 'black')}>
                     <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody ml={0} mr={0}>
