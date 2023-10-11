@@ -61,7 +61,7 @@ export default function NavigationBar() {
                 marginBottom="5px"
                 pb="5px"
               >
-                <Image src="../../img/s_logo.png" />
+                <Image marginTop="-2px" src="../../img/circle_sail.svg" />
               </Box>
               <Text
                 fontSize={'3rem'}
