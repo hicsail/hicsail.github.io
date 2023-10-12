@@ -388,6 +388,76 @@
       "metaDataPublication": []
     },
     {
+      "title": "Shape-Up",
+      "titleDescription": "Fostering Urban Planning for Safer Communities",
+      "description": "Shape-Up is a web-based analytical visualization tool developed in collaboration with Jonathan Jay, an Associate Professor at BU's School of Public Health in the Department of Community Health Problems. This project aims to uncover the intricate connection between a city's neighborhoods and the prevalence of gun violence. By scrutinizing physical properties such as park density and vacant building density, Shape-Up provides valuable insights into the factors influencing gun violence rates. Additionally, the tool identifies areas with high potential for targeted gun violence prevention efforts by enhancing their environmental physical attributes. Shape-Up is dedicated to fostering safer, more resilient communities.",
+      "href": "../../../img/projects/illustrations/watering.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Jonathan Jay, Associate Professor at Boston University School of Public Health, at the Department of Community Health Problems"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Anchor",
+      "titleDescription": "Sailing SAIL's Creative Seas",
+      "description": "Anchor serves as a robust and integral back-end development tool within SAIL, providing a versatile ecosystem of frameworks and libraries. This tool streamlines the creation of RESTful APIs, back-end data modeling, user authentication, authorization, email invitations, and automated database backups. Anchor further simplifies development with automatic, customizable admin UI views, enabling straightforward database CRUD operations through easy configurations. A cornerstone of numerous SAIL projects, Anchor plays a pivotal role in enhancing efficiency and innovation across the organization, it's an internally developed and used tool at SAIL.",
+      "href": "../../../img/projects/illustrations/vacation.png",
+      "projectType": "",
+      "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "SUDTraining",
+      "titleDescription": "Gateway to Substance Abuse Resources",
+      "description": "SUDTraining is a comprehensive web-based platform that offers in-depth training and assessment in the fields of substance abuse and mental health disorders. With three distinct modules, registered users can engage in interactive training sessions, quizzes, and, upon successful completion of the entire course, earn certificates of achievement. The platform includes an intuitive admin and analytics dashboard enriched with various visualizations for a more insightful overview. Originally led by Thomas Andrew at BU School of Medicine, SUDTraining is now steered by Stephen Brady, an Associate Professor of Psychiatry at BU School of Medicine. As a collaborative endeavor, it strives to empower learners in these crucial domains.",
+      "href": "../../../img/projects/illustrations/door.png",
+      "projectType": "Ed Tech",
+      "pi": [
+        "Stephen Brady, Associate Professor of Psychiatry at Boston University School of Medicine"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Black Women's Health Study",
+      "titleDescription": "Analytics and Advocacy",
+      "description": "SAIL's contribution to The Black Women's Health Study project encompasses a sophisticated web-based platform designed for request tracking and data sharing, serving as a repository of comprehensive data related to the health of black women. This invaluable resource includes an analytics dashboard that provides key insights into shareable data, traffic, data usage, and data visualization, enhancing the understanding of this critical dataset. The request tracking process is divided into three distinct phases, comprising brief query submissions, concept proposal submission, and formal data requests. This initiative plays a pivotal role in advancing research and knowledge in the domain of black women's health.",
+      "href": "../../../img/projects/illustrations/stars.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Dr. Julie Palmer, Karin Grunebaum Cancer Research Professor at Boston University School of Medicine, Director of Slone Epidemiology Center, Co-Director of BU-BMC Cancer Center"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "MTSS",
+      "titleDescription": "Unlocking Learning Insights",
+      "description": "The MTSS (Multi-Tiered System of Supports) project is a user-friendly web-based platform meticulously designed to gather and manage data pertaining to students with learning disabilities. This platform isn't just a data repository; it's a dynamic knowledge hub that streamlines the collection, organization, and redistribution of a wide range of educational, cognitive, neuroimaging, qualitative, and other data types. Going beyond data storage, it also actively analyzes the information, unveiling valuable insights. This educational intervention-focused repository is led by the project's Principal Investigator, Hank Fien, a distinguished Professor in Educational Innovation at Boston University's Wheelock College of Education & Human Development, and the Director of the Wheelock Institute for the Science of Education (WISE). The MTSS project holds the potential to significantly impact how we support students with learning disabilities, offering a comprehensive and user-friendly solution for data management and analysis.",
+      "href": "../../../img/projects/illustrations/security-key.png",
+      "projectType": "Ed Tech",
+      "pi": [
+        "Hank Fien, Professor of Educational Innovation in the Teaching & Learning Department at Boston University Wheelock College, DIrector of the Wheelock Institute for the science of Education"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Career Map",
+      "titleDescription": "State Career Readiness",
+      "description": "Career Map is a dynamic web-based interactive platform that provides valuable insights into the career readiness landscape of US states. This user-friendly map offers a comprehensive view of career readiness resources and policies for each state, allowing users to make informed comparisons and evaluate their performance in specific areas based on CCD center recommendations. Led by Dr. V. Scott Solberg, a respected professor in the Counseling Psychology and Applied Human Development Department at BU Wheelock College of Education & Human Development, Career Map is set to become an invaluable resource for understanding and enhancing career readiness across the nation.",
+      "href": "../../../img/projects/illustrations/design.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Dr. V. Scott Solberg, Professor in the Counseling Psychology and Applied Human Development Department at Boston University Wheelock College"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
       "title": "",
       "titleDescription": "",
       "description": "",
@@ -397,6 +467,34 @@
       "metaDataPresentation": [],
       "metaDataPublication": []
     }
+  ],
+  "projectsListed": [
+    "COVID",
+    "Web MPC",
+    "ASL-LEX",
+    "Camera Mouse",
+    "PACT",
+    "TPAT",
+    "SIEVE",
+    "Wage Gap Calculator",
+    "Noise Score",
+    "Cookie Monster",
+    "VA App",
+    "Microb-DB",
+    "Storm-Chaser",
+    "NIST",
+    "COMETS",
+    "Climate Lies",
+    "Web OMM",
+    "Synthera Health",
+    "fNIRS",
+    "Center for Young Colorful Minds",
+    "BROC Online Inquiry System",
+    "RESTORE",
+    "Shape-Up",
+    "Anchor",
+    "SUDTraining",
+    "Black Women's Health Study"
   ],
   "oldProjects": [
     {
