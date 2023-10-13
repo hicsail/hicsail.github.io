@@ -6,7 +6,6 @@ import {
   Text,
   Heading,
   Link,
-  Button,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -14,16 +13,14 @@ import {
   IconButton,
   ModalBody,
   ModalCloseButton,
-  Flex,
 } from '@chakra-ui/react';
 import { isBrowser, isMobile } from 'react-device-detect';
 import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
-import { HighlightedProjectGrid } from '../components/HighlightedProjectGrid';
 import { IoRocketSharp } from 'react-icons/io5';
 import { ProjectsGrid } from '../components/ProjectsGrid';
-import { PROJECTS_LIST } from '../utils/data/projectInformation';
+import data from '../utils/data/data.json';
 
 const HeroText = styled.div`
   position: absolute;
@@ -42,11 +39,8 @@ const PlayButton = styled.div`
   z-index: 1;
 `;
 
-const StyledLink = styled.a`
-  color: #567dbd;
-`;
-
-export const Home: React.VFC = () => {
+export const Home: React.FC = () => {
+  const projects = data['projects'];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const canvasBG = useColorModeValue('white', 'black');
   const itemColor = useColorModeValue('#000000', '#FFFFFF');
@@ -148,7 +142,7 @@ export const Home: React.VFC = () => {
                   size="full"
                 >
                   <ModalOverlay />
-                  <ModalContent bg={useColorModeValue('#FFFFFF', '#121212')}>
+                  <ModalContent bg={useColorModeValue('#FFFFFF', 'black')}>
                     <ModalHeader paddingBottom="0">Reacteroids!</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody ml={0} mr={0}>
@@ -182,22 +176,6 @@ export const Home: React.VFC = () => {
               collaborative partner in the creation of cutting-edge solutions
               for the data-driven, computational, and software engineering
               aspects of research across the university and beyond.
-              {/* The Software & Application Innovation Lab (SAIL) at the{' '}
-              <Link href="https://www.bu.edu/hic/">
-                <Text as="span" textStyle="link">
-                  {' '}
-                  Hariri Institute for Computing
-                </Text>
-              </Link>{' '}
-              is a professional research, software engineering, and consulting
-              lab that acts as both a driver and a collaborative partner for
-              computational and data-oriented research efforts across{' '} */}
-              {/* <Link href="https://www.bu.edu">
-                <Text as="span" textStyle="link">
-                  Boston University
-                </Text>
-              </Link> */}
-              .
             </Text>
             <Text textStyle="paragraph">
               As the desire for professional quality software applications and
@@ -217,7 +195,6 @@ export const Home: React.VFC = () => {
               If you would like to explore how SAIL can help you achieve your
               research objectives or would like to discuss what resources are
               available, please fill out a{' '}
-              {/* <StyledLink href="https://www.bu.edu/hic/forms/sail-request-form/"> */}
               <Link href="https://www.bu.edu/hic/forms/sail-request-form/">
                 <Text as="span" textStyle="link">
                   request form
@@ -230,49 +207,19 @@ export const Home: React.VFC = () => {
                 </Text>
               </Link>
               {' directly'}
-              {/* </StyledLink>{' '} */}
-              {/* or <a href="mailto:hicsail@bu.edu">contact us</a> directly. */}
             </Text>
-            {/* <Text textStyle="paragraph">
-              If you are seeking other forms of support (including seed funding)
-              for a research effort that requires computational science
-              expertise or software engineering resources, you may also want to
-              consider the{' '}
-              <a href="https://www.bu.edu/hic/programs/hariri-research-awards/">
-                Hariri Research Award program
-              </a>
-              .
-            </Text> */}
           </Box>
-
-          {/* <Box gridArea="projects">
-            <Box
-              position={{ sm: 'static', lg: 'sticky' }}
-              top="20px"
-              mb={{ lg: '30%' }}
-            >
-              <Heading textStyle="h2" mt="5'0px">
-                Featured Projects
-              </Heading>
-            </Box>
-          </Box> */}
-
           <Box gridArea="projectgrid">
             <Heading textStyle="h2" mt="5'0px">
               Featured Projects
             </Heading>
-
-            {/* <HighlightedProjectGrid /> */}
-            {/* <Flex> */}
             <ProjectsGrid
-              title={null}
-              list={PROJECTS_LIST}
-              showText={false}
+              title=""
+              list={projects}
               showSelect={false}
+              showText={false}
             />
-            {/* </Flex> */}
           </Box>
-
           <Box width="100%" gridArea="contact"></Box>
         </Grid>
       </Box>

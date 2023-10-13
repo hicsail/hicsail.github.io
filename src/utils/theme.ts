@@ -9,14 +9,14 @@ const theme = extendTheme({
   colors: {
     sail: {
       100: '#f7fafc',
-      900: '#1a202c',
+      900: '#000000',
     },
   },
   styles: {
     global: (props: any) => ({
       body: {
         color: mode('black', 'white')(props),
-        bgColor: mode('white', '#121212')(props),
+        bgColor: mode('white', 'black')(props),
         margin: '0 auto',
       },
     }),
@@ -30,7 +30,6 @@ const theme = extendTheme({
     h2: {
       fontSize: ['1rem', '2rem'],
       fontWeight: 'bold',
-      // mt: ['100px'],
     },
     paragraph: {
       fontSize: ['1.125rem', '1.25rem'],
@@ -45,8 +44,8 @@ const theme = extendTheme({
       textDecoration: 'underline',
     },
   },
-  initialColorMode: 'light',
-  useSystemColorMode: false,
+  initialColorMode: 'dark',
+  useSystemColorMode: true,
 });
 
 export default theme;

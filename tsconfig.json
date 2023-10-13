@@ -10,7 +10,9 @@
     "strict": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "./src/**.*",

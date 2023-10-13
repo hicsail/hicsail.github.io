@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import theme from './utils/theme';
 import Fonts from './utils/fonts';
 

@@ -12,18 +12,8 @@ export const PROJECTS_LIST: Array<ProjectInfo> = [
     projectType: 'Digital Health',
     featured: true,
     pi: null,
-    metaDataPresentation: [
-      {
-        name: '',
-        href: '',
-      },
-    ],
-    metaDataPublication: [
-      {
-        name: '',
-        href: '',
-      },
-    ],
+    metaDataPresentation: [],
+    metaDataPublication: [],
   },
   {
     title: 'Web MPC',

@@ -1,9 +1,7 @@
 import {
   Box,
   Flex,
-  Link,
   Avatar,
-  Image,
   Text,
   Grid,
   useBreakpointValue,
@@ -15,7 +13,6 @@ import { INTERNTESTIMONIALS_LIST } from '../utils/data/peopleInformation';
 interface Props {}
 
 export const InternTestimonials: React.FC<Props> = ({}) => {
-  // const avatarSize = useBreakpointValue({ base: 'xl', md: '2xl' });
   const avatarSize = useBreakpointValue({ base: 'md', md: 'lg' });
 
   return (
@@ -37,7 +34,8 @@ export const InternTestimonials: React.FC<Props> = ({}) => {
                 {intern.quote}{' '}
               </Text>
               <Text textStyle="paragraph" fontSize="1.25rem">
-                - {intern.name}, {intern.season}
+                - {intern.name}
+                {intern.season && ','} {intern.season}
               </Text>
             </Box>
           </Box>

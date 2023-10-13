@@ -8,7 +8,6 @@ import {
   Link,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { InternTestimonials } from '../components/InternTestimonials';
 import { Layout } from '../components/Layout';
 
 export const Engineer: React.VFC = () => (
