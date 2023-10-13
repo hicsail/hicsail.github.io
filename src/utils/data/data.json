@@ -326,7 +326,7 @@
       "titleDescription": "Our Journey in Transforming Nutritional Anemia Care",
       "description": "At Synthera Health, we've embarked on an extraordinary mission, dedicating our expertise to develop a mobile application that promises to redefine nutritional anemia care. Our visionary project is the culmination of relentless effort and innovation, meticulously designed to leverage clinical blood test results and end-user survey inputs within a proprietary algorithm. The result? A revolutionary mobile application that crafts personalized treatment plans for individuals diagnosed with nutritional anemia. This project represents a significant milestone in our commitment to transforming the patient and provider experience in delivering personalized care for nutritional deficiencies and associated conditions, including iron deficiency (ID), iron deficiency anemia (IDA), and thyroid disorders. Our collaborative journey has yielded a platform that empowers healthcare providers and patients alike, setting new standards for precision and effectiveness in anemia management.",
       "href": "../../../img/projects/illustrations/award.png",
-      "projectType": "Digital Health",
+      "projectType": "Ed Tech",
       "pi": [
         "Dr. Catherine M. Klapperich, Professor in the College of Engineering, and the Director of the Laboratory for Diagnostics at Boston University",
         "Heather Fraser, Co-Founder and CEO at Synthera Health"
@@ -458,12 +458,26 @@
       "metaDataPublication": []
     },
     {
-      "title": "",
-      "titleDescription": "",
-      "description": "",
-      "href": "",
-      "projectType": "",
-      "pi": [],
+      "title": "LakeSENSE",
+      "titleDescription": "Connecting You to Environmental Data",
+      "description": "LakeSENSE is a collaborative project between SAIL and Boston University's Department of Earth and Environment. This innovative initiative focuses on developing an interactive map-based data visualization platform. Its primary objective is to make remotely sensed lake water quality data accessible to the public for in-depth exploration and scientific scrutiny. By utilizing cutting-edge visualization frameworks, LakeSENSE aims to provide an intuitive and user-friendly interface for users to delve into extensive environmental datasets. This project places a strong emphasis on modularity, reusability, and open-source principles, ensuring its accessibility and adaptability for various stakeholders.",
+      "href": "../../../img/projects/illustrations/stats.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Christoph Nolte, Assistant Professor of Earth and Environment + Computing and Data Sciences"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "EcoForecast",
+      "titleDescription": "Nature's Predictive Trail",
+      "description": "EcoForecast is an innovative initiative aimed at transforming ecological forecasting. Its mission is to develop and deploy accessible, scalable, and reusable community cyberinfrastructure, designed to generate ecological forecasts consistently and efficiently. At its core, EcoForecast features a cloud-native workflow, functioning asynchronously and with distributed execution, all orchestrated by a state-of-the-art scheduler. The project has two primary objectives: to support a pending NSF Science and Technology Center (STC) proposal and to create an agile, cloud-based system. Through a combination of containerization and elastic load balancing, this innovation promises to make ecological forecasting more accessible, accurate, and practical, significantly enhancing our understanding of the natural world and bolstering informed environmental decision-making. Join us on this transformative journey to advance ecological predictions and contribute to a sustainable future.",
+      "href": "../../../img/projects/illustrations/tasks.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Michael Dietz, Associate Professor at Earth and Environment Department at Boston University"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     }

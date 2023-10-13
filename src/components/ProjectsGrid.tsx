@@ -28,8 +28,8 @@ interface ProjectSelectProps {
 }
 
 const options = [
-  'All',
   'Featured',
+  'All',
   'Data Science',
   'Ed Tech',
   'Privacy and Security',
