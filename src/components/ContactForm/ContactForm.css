@@ -1,0 +1,45 @@
+form {
+  text-align: left !important;
+}
+
+.chakra-form-control {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
+}
+
+.chakra-form__label {
+  font-size: 18px !important;
+}
+
+.chakra-form__helper-text {
+  font-size: 13px !important;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+}
+
+.chakra-checkbox__label {
+  font-size: 14px !important;
+  text-align: left;
+}
+
+.chakra-text {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+}
+
+.chakra-input::placeholder {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.chakra-stack {
+  align-items: start !important;
+}
+
+blockquote {
+  line-height: 1.3em;
+  font-style: italic;
+  font-size: 0.9em !important;
+  font-weight: 400;
+  margin-left: 15px;
+}

@@ -21,9 +21,7 @@ export const SiteLayout: React.FC = () => {
       >
         <Banner />
         <NavigationBar />
-
         <OpportunitiesBanner opportunityAvailable={false} />
-
         <Box flexGrow={1} width="100%">
           <Outlet />
         </Box>

@@ -1,6 +1,6 @@
 import { Box, Heading, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
-import { ContactForm } from '../components/ContactForm';
+import { ContactForm } from '../components/ContactForm/ContactForm';
 import { Layout } from '../components/Layout';
 
 export const Contact: React.VFC = () => {

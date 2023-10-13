@@ -28,22 +28,17 @@ export default function NavigationBar() {
   return (
     <Box
       width="100%"
-      marginTop={{ base: '15px', md: '30px' }}
-      marginBottom={{ base: '15px', md: '15px' }}
-      paddingLeft={{ base: '30px', md: '0' }}
-      paddingRight={{ base: '30px', md: '0' }}
-      maxWidth={{ lg: '80%', md: '90%' }}
+      marginTop="15px"
+      marginBottom="15px"
+      paddingLeft="40px"
+      paddingRight="20px"
     >
       <Flex
         width="100%"
         minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
         paddingLeft="0"
         paddingRight="0"
-        // borderBottom={1}
         justifyContent="center"
-        // bgColors="red"
       >
         <Flex
           justifyContent="space-between"
@@ -62,11 +57,11 @@ export default function NavigationBar() {
               <Box
                 boxSize="45px"
                 objectFit="cover"
-                marginRight="10px"
+                marginRight="30px"
                 marginBottom="5px"
                 pb="5px"
               >
-                <Image src="../../img/s_logo.png" />
+                <Image marginTop="-2px" src="../../img/circle_sail.svg" />
               </Box>
               <Text
                 fontSize={'3rem'}
@@ -108,7 +103,6 @@ export default function NavigationBar() {
           />
         </Flex>
       </Flex>
-
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
@@ -141,7 +135,6 @@ const DesktopNav = () => {
                 {navItem.label}
               </Link>
             </PopoverTrigger>
-
             {navItem.children && (
               <PopoverContent
                 border="5px solid white"
@@ -243,7 +236,6 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           />
         )}
       </Flex>
-
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
         <Stack
           mt={2}
@@ -306,41 +298,4 @@ const NAV_ITEMS: Array<NavItem> = [
       },
     ],
   },
-  // {
-  //   label: 'OTHER',
-  //   href: '#',
-  //   hash: false,
-  //   children: [
-  //     {
-  //       label: 'RESEARCHERS',
-  //       href: '/researchers',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'SUPPORT',
-  //       href: '/support',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'MEDIA',
-  //       href: '/media',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'IMPACT',
-  //       href: '/impact',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'OUTREACH',
-  //       href: '/outreach',
-  //       hash: false,
-  //     },
-  //     {
-  //       label: 'CONTACT',
-  //       href: '/contact',
-  //       hash: false,
-  //     },
-  //   ],
-  // },
 ];
