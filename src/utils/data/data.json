@@ -90,16 +90,6 @@
   "projects": [
     {
       "featured": true,
-      "title": "COVID",
-      "titleDescription": "Clinical Testing Lab",
-      "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
-      "href": "../../../img/projects/illustrations/formula.png",
-      "projectType": "Digital Health",
-      "pi": null,
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
       "title": "Web MPC",
       "titleDescription": "Secure Compensation Analytics for the City of Boston",
       "description": "In support of the Boston Women’s Workforce Council and its mission to advance salary equity among Boston employers as part of the 100% Talent Compact, SAIL staff and student developers built a secure multi-party computation web application that allows statistical data pertaining to compensation levels across genders and demographics to be collected from over 250 participating employer organizations, such as State Street Corporation and Putnam Investments, without requiring any organization to reveal its confidential data. This platform is unique in that it allows real-world organizations to use what is still largely studied as a theoretical technique, enabling analyses that would have been otherwise impossible to do while preserving the confidentiality of the participants.",
@@ -141,6 +131,7 @@
       ]
     },
     {
+      "featured": true,
       "title": "Camera Mouse",
       "titleDescription": "Enhancing Accessibility through Eye Movements Tracking",
       "description": "Introducing 'Camera Mouse', a collaborative achievement between our team and Professor Margrit Betke, a distinguished Computer Science professor and co-leader of the Image and Video Computing Research Group at Boston University. This innovative software harnesses camera-based eye tracking, enabling effortless computer navigation without the need to lift a finger. The project's core mission is to enhance accessibility, seamlessly merging technological sophistication with user inclusivity. Camera Mouse is a significant step forward in redefining how we interact with computers, offering a more accessible and user-friendly digital experience.",
@@ -153,7 +144,6 @@
       "metaDataPublication": []
     },
     {
-      "featured": true,
       "title": "PACT",
       "titleDescription": "Elevate Thermal Simulations with PACT",
       "description": "Introducing PACT, a Parallel Compact Thermal simulator developed in collaboration with Professor Ayse Coskun. PACT is a versatile tool designed to simplify and accelerate thermal simulations, bridging the gap between standard-cell-level and architecture-level analysis with unprecedented speed and accuracy. PACT harnesses the power of multi-core processing through OpenMPI, offering a range of solvers that expedite both steady-state and transient simulations. This tool is not only fast and accurate but also highly adaptable, easily customizable to incorporate emerging integration and cooling technologies like 3D stacking and microchannel-based liquid cooling. By modifying the thermal netlist, users can tailor PACT to their specific needs.",
@@ -176,7 +166,6 @@
       "metaDataPublication": []
     },
     {
-      "featured": true,
       "title": "SIEVE",
       "titleDescription": "Redefining Zero-Knowledge Proof Tech",
       "description": "SIEVE, led by our TA1 team, is a dynamic project marked by innovation and collaboration. We specialize in Python and utilize the versatile 'picozk' module, authored by Joe Near (a key member of TA1 and TA2). Our mission: to craft zk-friendly intermediate representations (IRs) – relations, witnesses, and instances. These meticulously generated IRs serve as the foundation for TA2's powerful backends, including 'mac-and-cheese'. Prior to backend implementation, we rigorously test IR formats using 'fire-alarm'.",
@@ -187,7 +176,6 @@
       "metaDataPublication": []
     },
     {
-      "featured": true,
       "title": "Wage Gap Calculator",
       "titleDescription": "Empowering Employers to Bridge Wage Gaps",
       "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
@@ -251,7 +239,7 @@
       "titleDescription": "Simplifying Genomic Insights for Scientists",
       "description": "Microb-DB is a practical project connecting genomics and metagenomics, utilizing data from well-known genome databases like GOLD and GTDB. We aim to simplify research by collecting and organizing valuable metagenomic insights into one database—Microb-DB. This resource is designed to assist researchers and scientists working with genomes and metagenomes. It allows users to perform custom queries on a user-friendly platform, promoting comparative genomics, aiding metagenomic studies, and supporting data-driven discoveries. Microb-DB is created to streamline research, inform decisions, and encourage collaboration among scientists from different fields, making it a valuable tool for advancing our knowledge of microorganisms and their roles in various environments.",
       "href": "../../../img/projects/illustrations/funnel.png",
-      "projectType": "Data Science",
+      "projectType": "Natural Sciences",
       "pi": [
         "Dr. Marianna Felici, Research Scientist at the Center for Space Physics at Boston University"
       ],
@@ -271,6 +259,7 @@
       "metaDataPublication": []
     },
     {
+      "featured": true,
       "title": "NIST",
       "titleDescription": "Uniting Data, Advancing Collaboration",
       "description": "Under the leadership of Boston University's Douglas Densmore, our ongoing NIST project focuses on creating a computational infrastructure with two core objectives. The first involves establishing a collaborative 'data backbone', a web-based platform for all project contributors to share, manage, and standardize data exchange processes. This repository stores various crucial data, from production timelines to structural details. The second objective is to develop a 'software pipeline' that connects this backbone to techno-economic modeling frameworks, supporting both manual and automated analysis. This infrastructure, complete with process flowsheets, aims to eventually integrate with molecular biology experimental design software. Our project aims to facilitate seamless collaboration and provide advanced data management and analysis tools through a cloud-based web application with secure logins, robust file storage, and intuitive data viewing.",
@@ -322,19 +311,7 @@
       "metaDataPublication": []
     },
     {
-      "title": "Synthera Health",
-      "titleDescription": "Our Journey in Transforming Nutritional Anemia Care",
-      "description": "At Synthera Health, we've embarked on an extraordinary mission, dedicating our expertise to develop a mobile application that promises to redefine nutritional anemia care. Our visionary project is the culmination of relentless effort and innovation, meticulously designed to leverage clinical blood test results and end-user survey inputs within a proprietary algorithm. The result? A revolutionary mobile application that crafts personalized treatment plans for individuals diagnosed with nutritional anemia. This project represents a significant milestone in our commitment to transforming the patient and provider experience in delivering personalized care for nutritional deficiencies and associated conditions, including iron deficiency (ID), iron deficiency anemia (IDA), and thyroid disorders. Our collaborative journey has yielded a platform that empowers healthcare providers and patients alike, setting new standards for precision and effectiveness in anemia management.",
-      "href": "../../../img/projects/illustrations/award.png",
-      "projectType": "Ed Tech",
-      "pi": [
-        "Dr. Catherine M. Klapperich, Professor in the College of Engineering, and the Director of the Laboratory for Diagnostics at Boston University",
-        "Heather Fraser, Co-Founder and CEO at Synthera Health"
-      ],
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
+      "featured": true,
       "title": "fNIRS",
       "titleDescription": "Streamlining Brain Imaging Data",
       "description": "The fNIRS project aims to simplify the management of fNIRS Datasets for the imaging community. Through a user-friendly web interface, our platform enables users to effortlessly create, manage, download, and share fNIRS Datasets, conforming to the hierarchical structure of Subjects, Sessions, Runs, SNIRF files, and BIDS text files. By encapsulating the BIDS format, the interface provides a streamlined view of the data and facilitates BIDS text file editing. Users can efficiently generate BIDS datasets by uploading SNIRF files, ensuring data accuracy through validation and the automatic generation of BIDS format files. The platform's flexibility allows users to customize dataset structures by adding, removing, or rearranging Subjects, Sessions, or Runs within a Dataset, fostering enhanced collaboration and research efficiency within the fNIRS community.",
@@ -347,6 +324,7 @@
       "metaDataPublication": []
     },
     {
+      "featured": true,
       "title": "Center for Young Colorful Minds",
       "titleDescription": "Youth Mental Wellness Hub",
       "description": "The 'Center for Young Colorful Minds (CYCM)' addresses the mental health crisis among youth of color and LGBTQ youth in Greater Boston and beyond. Our mission revolves around advancing mental health literacy and awareness through a dynamic online presence, focusing on culturally relevant mental health information, community engagement, and research initiatives. Collaborating with a youth advisory board and community partners, we disseminate accurate mental health content on social media. In addition, we strengthen ties with existing community programs, like the Boys and Girls Club, schools, and churches, to provide vital support. CYCM is also committed to research partnerships with academic institutions to develop evidence-based interventions that cater to the unique mental health needs of diverse youth. Our holistic approach empowers these communities by fostering resilience and well-being through knowledge, community, and research-backed initiatives.",
@@ -400,16 +378,6 @@
       "metaDataPublication": []
     },
     {
-      "title": "Anchor",
-      "titleDescription": "Sailing SAIL's Creative Seas",
-      "description": "Anchor serves as a robust and integral back-end development tool within SAIL, providing a versatile ecosystem of frameworks and libraries. This tool streamlines the creation of RESTful APIs, back-end data modeling, user authentication, authorization, email invitations, and automated database backups. Anchor further simplifies development with automatic, customizable admin UI views, enabling straightforward database CRUD operations through easy configurations. A cornerstone of numerous SAIL projects, Anchor plays a pivotal role in enhancing efficiency and innovation across the organization, it's an internally developed and used tool at SAIL.",
-      "href": "../../../img/projects/illustrations/vacation.png",
-      "projectType": "",
-      "pi": null,
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
       "title": "SUDTraining",
       "titleDescription": "Gateway to Substance Abuse Resources",
       "description": "SUDTraining is a comprehensive web-based platform that offers in-depth training and assessment in the fields of substance abuse and mental health disorders. With three distinct modules, registered users can engage in interactive training sessions, quizzes, and, upon successful completion of the entire course, earn certificates of achievement. The platform includes an intuitive admin and analytics dashboard enriched with various visualizations for a more insightful overview. Originally led by Thomas Andrew at BU School of Medicine, SUDTraining is now steered by Stephen Brady, an Associate Professor of Psychiatry at BU School of Medicine. As a collaborative endeavor, it strives to empower learners in these crucial domains.",
@@ -458,18 +426,6 @@
       "metaDataPublication": []
     },
     {
-      "title": "LakeSENSE",
-      "titleDescription": "Connecting You to Environmental Data",
-      "description": "LakeSENSE is a collaborative project between SAIL and Boston University's Department of Earth and Environment. This innovative initiative focuses on developing an interactive map-based data visualization platform. Its primary objective is to make remotely sensed lake water quality data accessible to the public for in-depth exploration and scientific scrutiny. By utilizing cutting-edge visualization frameworks, LakeSENSE aims to provide an intuitive and user-friendly interface for users to delve into extensive environmental datasets. This project places a strong emphasis on modularity, reusability, and open-source principles, ensuring its accessibility and adaptability for various stakeholders.",
-      "href": "../../../img/projects/illustrations/stats.png",
-      "projectType": "Data Science",
-      "pi": [
-        "Christoph Nolte, Assistant Professor of Earth and Environment + Computing and Data Sciences"
-      ],
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
       "title": "EcoForecast",
       "titleDescription": "Nature's Predictive Trail",
       "description": "EcoForecast is an innovative initiative aimed at transforming ecological forecasting. Its mission is to develop and deploy accessible, scalable, and reusable community cyberinfrastructure, designed to generate ecological forecasts consistently and efficiently. At its core, EcoForecast features a cloud-native workflow, functioning asynchronously and with distributed execution, all orchestrated by a state-of-the-art scheduler. The project has two primary objectives: to support a pending NSF Science and Technology Center (STC) proposal and to create an agile, cloud-based system. Through a combination of containerization and elastic load balancing, this innovation promises to make ecological forecasting more accessible, accurate, and practical, significantly enhancing our understanding of the natural world and bolstering informed environmental decision-making. Join us on this transformative journey to advance ecological predictions and contribute to a sustainable future.",
@@ -512,25 +468,24 @@
   ],
   "oldProjects": [
     {
-      "title": "ORACLES",
-      "titleDescription": "ORACLES",
-      "description": "",
-      "href": "../../../img/research/oracles.png",
-      "projectType": "Data Science",
-      "featured": true,
-      "pi": "<div><Link href=\"https://www.bu.edu/hic/profile/mayank-varia/\" color=\"#567dbd\">Dr.Mayank Varia,</Link><Text as=\"span\">Research Associate Professor, Computer Science</Text></div>",
-      "metaDataPresentation": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ],
-      "metaDataPublication": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ]
+      "title": "Anchor",
+      "titleDescription": "Sailing SAIL's Creative Seas",
+      "description": "Anchor serves as a robust and integral back-end development tool within SAIL, providing a versatile ecosystem of frameworks and libraries. This tool streamlines the creation of RESTful APIs, back-end data modeling, user authentication, authorization, email invitations, and automated database backups. Anchor further simplifies development with automatic, customizable admin UI views, enabling straightforward database CRUD operations through easy configurations. A cornerstone of numerous SAIL projects, Anchor plays a pivotal role in enhancing efficiency and innovation across the organization, it's an internally developed and used tool at SAIL.",
+      "href": "../../../img/projects/illustrations/vacation.png",
+      "projectType": "",
+      "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "COVID",
+      "titleDescription": "Clinical Testing Lab",
+      "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
+      "href": "../../../img/projects/illustrations/formula.png",
+      "projectType": "Digital Health",
+      "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
     }
   ]
 }

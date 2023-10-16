@@ -1,6 +1,7 @@
 import * as React from 'react';
 import data from '../utils/data/data.json';
 import { ProjectsGrid } from '../components/ProjectsGrid';
+import { DataVisual } from '../components/DataVisual';
 import { Box, Button, Spacer, Text } from '@chakra-ui/react';
 import { Fade } from 'react-awesome-reveal';
 
@@ -78,6 +79,9 @@ export const Projects: React.FC = () => {
           industry.
         </Text>
       </Box>
+      <Box padding="20px 30px 20px 30px">
+        <DataVisual />
+      </Box>
       <Spacer />
       <Text
         id="middle"
@@ -103,6 +107,7 @@ export const Projects: React.FC = () => {
           showSelect={true}
         />
       </Box>
+      <Spacer />
     </Box>
   );
 };
