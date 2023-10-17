@@ -92,7 +92,7 @@ export const Projects: React.FC = () => {
       <Box
         sx={{
           height: 'auto',
-          padding: '20px',
+          margin: '20px 1.5rem 20px 2rem',
           textAlign: 'center',
         }}
       >
