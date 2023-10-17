@@ -42,9 +42,6 @@ export const Card: React.FC<Props> = ({
   metaDataPublication,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  useEffect(() => {
-    console.log('the modal is changed, it is now: ', isOpen);
-  }, [isOpen]);
 
   return (
     <>
