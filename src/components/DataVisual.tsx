@@ -11,7 +11,7 @@ import {
 import { BiDollarCircle, BiFolderOpen } from 'react-icons/bi';
 import { Pie } from './CircularProgress';
 import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 import * as React from 'react';
 
 export const DataVisual: React.FC = () => {
@@ -20,10 +20,35 @@ export const DataVisual: React.FC = () => {
     labels: ['first', 'second', 'third'],
     datasets: [
       {
-        label: 'Dataset duh',
-        data: [3, 10, 2],
-        backgroundColor: ['#444111', '#ab0123', '#09b129'],
-        hoverOffset: 4,
+        data: [71, 123, 88, 101, 31, 115],
+        backgroundColor: [
+          '#d64439',
+          '#9339d6',
+          '#4439d6',
+          '#d639ef',
+          '#d6397d',
+          '#d69339',
+        ],
+        hoverBorderColor: [
+          '#d64439',
+          '#9339d6',
+          '#4439d6',
+          '#d639ef',
+          '#d6397d',
+          '#d69339',
+        ],
+        hoverBackgroundColor: [
+          '#d64439',
+          '#9339d6',
+          '#4439d6',
+          '#d639ef',
+          '#d6397d',
+          '#d69339',
+        ],
+        borderWidth: 1.5,
+        hoverBorderWidth: 1.9,
+        hoverOffset: 0,
+        radius: '65%',
       },
     ],
   };
@@ -41,15 +66,7 @@ export const DataVisual: React.FC = () => {
               This statistic can be shown through percentages.
             </Text>
           </Box>
-          <Box>
-            <Doughnut data={data} />
-            <Heading size="xs" textTransform="uppercase">
-              Wow!
-            </Heading>
-            <Text pt="2" fontSize="sm">
-              Numbers, numbers, numbers that are super impressive.
-            </Text>
-          </Box>
+
           <Box>
             <Icon
               as={BiFolderOpen}
@@ -65,6 +82,15 @@ export const DataVisual: React.FC = () => {
             <Text pt="2" fontSize="sm">
               Wow, what a great number of projects we have done in the past
               year!
+            </Text>
+          </Box>
+          <Box>
+            <Doughnut data={data} />
+            <Heading size="xs" textTransform="uppercase">
+              Wow!
+            </Heading>
+            <Text pt="2" fontSize="sm">
+              Numbers, numbers, numbers that are super impressive.
             </Text>
           </Box>
           <Box>
