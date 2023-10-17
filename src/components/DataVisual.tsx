@@ -10,9 +10,24 @@ import {
 } from '@chakra-ui/react';
 import { BiDollarCircle, BiFolderOpen } from 'react-icons/bi';
 import { Pie } from './CircularProgress';
+import { Doughnut } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import * as React from 'react';
 
 export const DataVisual: React.FC = () => {
+  ChartJS.register(ArcElement, Tooltip);
+  const data = {
+    labels: ['first', 'second', 'third'],
+    datasets: [
+      {
+        label: 'Dataset duh',
+        data: [3, 10, 2],
+        backgroundColor: ['#444111', '#ab0123', '#09b129'],
+        hoverOffset: 4,
+      },
+    ],
+  };
+
   return (
     <Card>
       <CardBody>
@@ -27,6 +42,7 @@ export const DataVisual: React.FC = () => {
             </Text>
           </Box>
           <Box>
+            <Doughnut data={data} />
             <Heading size="xs" textTransform="uppercase">
               Wow!
             </Heading>

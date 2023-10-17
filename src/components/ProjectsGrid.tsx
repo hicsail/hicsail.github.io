@@ -2,6 +2,7 @@ import { Box, Grid, Select } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
 import { Card } from './Card';
+import data from '../utils/data/data.json';
 
 interface Props {
   title: string | null;
@@ -35,9 +36,11 @@ const options = [
   'Privacy and Security',
   'Digital Health',
   'Natural Sciences',
+  'Legacy',
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
+  const oldProjects = data['oldProjects'];
   if (selected == 'All') {
     return (
       <>
@@ -69,7 +72,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
           <>
             {project.featured == true && (
               <Box
-                key={`${project.title}${index}`}
+                key={`${index}${project.title}`}
                 transition="transform 350ms ease-in-out"
                 _hover={{
                   transform: 'scale(1.05)',
@@ -90,6 +93,30 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
         ))}
       </>
     );
+  } else if (selected == 'Legacy') {
+    return (
+      <>
+        {oldProjects.map((project: ProjectInfo, index: number) => (
+          <Box
+            key={index}
+            transition="transform 350ms ease-in-out"
+            _hover={{
+              transform: 'scale(1.05)',
+              transition: 'transform 300ms',
+            }}
+          >
+            <Card
+              modalButtonText={project.title}
+              modalButtonSubText={project.titleDescription}
+              modalHeader={project.title}
+              modalBody={project.description}
+              imageHref={project.href}
+              pi={project.pi}
+            />
+          </Box>
+        ))}
+      </>
+    );
   } else {
     return (
       <>
@@ -97,7 +124,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
           .filter((project) => project.projectType == selected)
           .map((project: ProjectInfo, index: number) => (
             <Box
-              key={`${project.title}${index}`}
+              key={project.title}
               transition="transform 350ms ease-in-out"
               _hover={{
                 transform: 'scale(1.05)',

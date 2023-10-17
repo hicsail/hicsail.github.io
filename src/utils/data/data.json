@@ -365,42 +365,7 @@
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
-    {
-      "title": "Shape-Up",
-      "titleDescription": "Fostering Urban Planning for Safer Communities",
-      "description": "Shape-Up is a web-based analytical visualization tool developed in collaboration with Jonathan Jay, an Associate Professor at BU's School of Public Health in the Department of Community Health Problems. This project aims to uncover the intricate connection between a city's neighborhoods and the prevalence of gun violence. By scrutinizing physical properties such as park density and vacant building density, Shape-Up provides valuable insights into the factors influencing gun violence rates. Additionally, the tool identifies areas with high potential for targeted gun violence prevention efforts by enhancing their environmental physical attributes. Shape-Up is dedicated to fostering safer, more resilient communities.",
-      "href": "../../../img/projects/illustrations/watering.png",
-      "projectType": "Data Science",
-      "pi": [
-        "Jonathan Jay, Associate Professor at Boston University School of Public Health, at the Department of Community Health Problems"
-      ],
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "SUDTraining",
-      "titleDescription": "Gateway to Substance Abuse Resources",
-      "description": "SUDTraining is a comprehensive web-based platform that offers in-depth training and assessment in the fields of substance abuse and mental health disorders. With three distinct modules, registered users can engage in interactive training sessions, quizzes, and, upon successful completion of the entire course, earn certificates of achievement. The platform includes an intuitive admin and analytics dashboard enriched with various visualizations for a more insightful overview. Originally led by Thomas Andrew at BU School of Medicine, SUDTraining is now steered by Stephen Brady, an Associate Professor of Psychiatry at BU School of Medicine. As a collaborative endeavor, it strives to empower learners in these crucial domains.",
-      "href": "../../../img/projects/illustrations/door.png",
-      "projectType": "Ed Tech",
-      "pi": [
-        "Stephen Brady, Associate Professor of Psychiatry at Boston University School of Medicine"
-      ],
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
-    {
-      "title": "Black Women's Health Study",
-      "titleDescription": "Analytics and Advocacy",
-      "description": "SAIL's contribution to The Black Women's Health Study project encompasses a sophisticated web-based platform designed for request tracking and data sharing, serving as a repository of comprehensive data related to the health of black women. This invaluable resource includes an analytics dashboard that provides key insights into shareable data, traffic, data usage, and data visualization, enhancing the understanding of this critical dataset. The request tracking process is divided into three distinct phases, comprising brief query submissions, concept proposal submission, and formal data requests. This initiative plays a pivotal role in advancing research and knowledge in the domain of black women's health.",
-      "href": "../../../img/projects/illustrations/stars.png",
-      "projectType": "Digital Health",
-      "pi": [
-        "Dr. Julie Palmer, Karin Grunebaum Cancer Research Professor at Boston University School of Medicine, Director of Slone Epidemiology Center, Co-Director of BU-BMC Cancer Center"
-      ],
-      "metaDataPresentation": [],
-      "metaDataPublication": []
-    },
+
     {
       "title": "MTSS",
       "titleDescription": "Unlocking Learning Insights",
@@ -439,7 +404,6 @@
     }
   ],
   "projectsListed": [
-    "COVID",
     "Web MPC",
     "ASL-LEX",
     "Camera Mouse",
@@ -456,15 +420,18 @@
     "COMETS",
     "Climate Lies",
     "Web OMM",
-    "Synthera Health",
     "fNIRS",
     "Center for Young Colorful Minds",
     "BROC Online Inquiry System",
     "RESTORE",
     "Shape-Up",
-    "Anchor",
+    "MTSS",
+    "Career Map",
+    "EcoForecast",
     "SUDTraining",
-    "Black Women's Health Study"
+    "Black Women's Health Study",
+    "COVID",
+    "Anchor"
   ],
   "oldProjects": [
     {
@@ -484,6 +451,42 @@
       "href": "../../../img/projects/illustrations/formula.png",
       "projectType": "Digital Health",
       "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Shape-Up",
+      "titleDescription": "Fostering Urban Planning for Safer Communities",
+      "description": "Shape-Up is a web-based analytical visualization tool developed in collaboration with Jonathan Jay, an Associate Professor at BU's School of Public Health in the Department of Community Health Problems. This project aims to uncover the intricate connection between a city's neighborhoods and the prevalence of gun violence. By scrutinizing physical properties such as park density and vacant building density, Shape-Up provides valuable insights into the factors influencing gun violence rates. Additionally, the tool identifies areas with high potential for targeted gun violence prevention efforts by enhancing their environmental physical attributes. Shape-Up is dedicated to fostering safer, more resilient communities.",
+      "href": "../../../img/projects/illustrations/watering.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Jonathan Jay, Associate Professor at Boston University School of Public Health, at the Department of Community Health Problems"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "SUDTraining",
+      "titleDescription": "Gateway to Substance Abuse Resources",
+      "description": "SUDTraining is a comprehensive web-based platform that offers in-depth training and assessment in the fields of substance abuse and mental health disorders. With three distinct modules, registered users can engage in interactive training sessions, quizzes, and, upon successful completion of the entire course, earn certificates of achievement. The platform includes an intuitive admin and analytics dashboard enriched with various visualizations for a more insightful overview. Originally led by Thomas Andrew at BU School of Medicine, SUDTraining is now steered by Stephen Brady, an Associate Professor of Psychiatry at BU School of Medicine. As a collaborative endeavor, it strives to empower learners in these crucial domains.",
+      "href": "../../../img/projects/illustrations/door.png",
+      "projectType": "Ed Tech",
+      "pi": [
+        "Stephen Brady, Associate Professor of Psychiatry at Boston University School of Medicine"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Black Women's Health Study",
+      "titleDescription": "Analytics and Advocacy",
+      "description": "SAIL's contribution to The Black Women's Health Study project encompasses a sophisticated web-based platform designed for request tracking and data sharing, serving as a repository of comprehensive data related to the health of black women. This invaluable resource includes an analytics dashboard that provides key insights into shareable data, traffic, data usage, and data visualization, enhancing the understanding of this critical dataset. The request tracking process is divided into three distinct phases, comprising brief query submissions, concept proposal submission, and formal data requests. This initiative plays a pivotal role in advancing research and knowledge in the domain of black women's health.",
+      "href": "../../../img/projects/illustrations/stars.png",
+      "projectType": "Digital Health",
+      "pi": [
+        "Dr. Julie Palmer, Karin Grunebaum Cancer Research Professor at Boston University School of Medicine, Director of Slone Epidemiology Center, Co-Director of BU-BMC Cancer Center"
+      ],
       "metaDataPresentation": [],
       "metaDataPublication": []
     }
