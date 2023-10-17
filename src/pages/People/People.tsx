@@ -19,7 +19,7 @@ export const People: React.FC = () => {
     <Box padding="20px">
       <Box
         fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-        margin="1em 3em 1em 3.5em"
+        margin="1em 3em 1em 1.3em"
       >
         <Text
           fontSize="14px"

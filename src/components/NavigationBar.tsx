@@ -58,15 +58,15 @@ export default function NavigationBar() {
                 boxSize="45px"
                 objectFit="cover"
                 marginRight="30px"
-                marginBottom="5px"
+                marginBottom="10px"
                 pb="5px"
               >
-                <Image marginTop="-2px" src="../../img/circle_sail.svg" />
+                <Image marginTop="-2px" src="../../img/circle_sail.png" />
               </Box>
               <Text
-                fontSize={'3rem'}
-                fontFamily="Karbon"
-                fontWeight={500}
+                fontSize={'2.5rem'}
+                fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+                fontWeight={700}
                 _hover={{ textDecoration: 'none' }}
               >
                 SAIL
@@ -123,9 +123,9 @@ const DesktopNav = () => {
                 to={navItem.href}
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'1.25rem'}
-                fontFamily="Karbon"
-                fontWeight={500}
+                fontSize={'1rem'}
+                fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
+                fontWeight={550}
                 _hover={{
                   color:
                     texttheme[Math.floor(Math.random() * texttheme.length)],

@@ -3,7 +3,7 @@ import {
   ONGOINGRESEARCH_LIST,
   PASTRESEARCH_LIST,
 } from '../utils/data/researchInformation';
-import { ResearchGrid } from '../archived/ResearchGrid';
+import { ResearchGrid } from './ResearchGrid';
 
 export const Research = () => {
   return (
