@@ -1,0 +1,36 @@
+#innerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 15em;
+  min-width: 11em;
+  padding: 0 3px 0 3px;
+}
+
+#cardIcon {
+  width: 65px;
+  height: 65px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cardHeading {
+  text-align: center;
+  color: rgb(228, 26, 191);
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 45px;
+}
+
+#cardText {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 15px;
+}
+
+#stackityStack {
+  padding: 15px 5px 20px 5px;
+  justify-content: space-between;
+}

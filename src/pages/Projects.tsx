@@ -1,7 +1,7 @@
 import * as React from 'react';
 import data from '../utils/data/data.json';
 import { ProjectsGrid } from '../components/ProjectsGrid';
-import { DataVisual } from '../components/DataVisual';
+import { DataVisual } from '../components/DataVisual/DataVisual';
 import { Box, Button, Spacer, Text } from '@chakra-ui/react';
 import { Fade } from 'react-awesome-reveal';
 
