@@ -20,33 +20,25 @@ export const DataVisual: React.FC = () => {
         <HStack
           id="stackityStack"
           margin="5px 20px 5px 20px"
-          divider={<StackDivider />}
           justifyContent="space-between"
         >
           <Box id="innerCard">
             <Icon id="cardIcon" as={BiBuilding} color="blue.400" />
             <Heading id="cardHeading">30+</Heading>
             <Text id="cardText">
-              Over the years, we've proudly forged dynamic and enduring
-              partnerships with a diverse array of over 30 difference university
-              departments.
+              Since 2022 we've proudly forged dynamic and enduring partnerships
             </Text>
           </Box>
           <Box id="innerCard">
             <Icon id="cardIcon" as={BiDollarCircle} color="green.400" />
             <Heading id="cardHeading">$3M</Heading>
-            <Text id="cardText">
-              In the course of three years, we've garnered $3 million in
-              funding—a testament to our enduring journey and the resources that
-              fuel our impactful projects.
-            </Text>
+            <Text id="cardText">Since 2022 we've garnered $3 million in</Text>
           </Box>
           <Box id="innerCard">
             <Icon id="cardIcon" as={BiGroup} color="red.400" />
             <Heading id="cardHeading">100+</Heading>
             <Text id="cardText">
               Collaborated with over 100 visionary faculty members, nurturing
-              their quests and propelling profound research.
             </Text>
           </Box>
 
