@@ -9,13 +9,14 @@ import {
   RadioGroup,
   VStack,
   Select,
+  Textarea,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './ContactForm.css';
 
-export const ContactForm = () => {
+export const ContactForm: React.FC = () => {
   const {
     register,
     formState: { errors },
@@ -52,86 +53,6 @@ export const ContactForm = () => {
             {
               id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
               name: 'REFERRED BY',
-              type: 'drop_down',
-              type_config: {
-                default: 0,
-                placeholder: null,
-                new_drop_down: true,
-                options: [
-                  {
-                    type: 'text',
-                    value: 'Hariri Director',
-                    id: '1bcb2eb2-1ed3-4690-b2de-c31619186176',
-                    name: 'Hariri Director',
-                    color: '#3397dd',
-                    orderindex: 0,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'Hariri Staff',
-                    id: 'fb27b74f-ccdd-428d-bba3-24ba9526a25b',
-                    name: 'Hariri Staff',
-                    color: '#04A9F4',
-                    orderindex: 1,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'SAIL Collaborator',
-                    id: '41c83167-e51c-4852-97d0-78e3f3017f1e',
-                    name: 'SAIL Collaborator',
-                    color: '#0231E8',
-                    orderindex: 2,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'SAIL Website',
-                    id: '65947498-c700-4c29-92a6-fe52e55af229',
-                    name: 'SAIL Website',
-                    color: '#f9d900',
-                    orderindex: 3,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'SAIL/Hariri Presentation',
-                    id: '2bd82477-62ca-43b7-81b1-41b7615c5761',
-                    name: 'SAIL/Hariri Presentation',
-                    color: '#ff7800',
-                    orderindex: 4,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'SAIL Staff Network Connection',
-                    id: '770ebc6f-ae48-4500-b016-77b48dbd51c8',
-                    name: 'SAIL Staff Network Connection',
-                    color: '#1bbc9c',
-                    orderindex: 5,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'SAIL Direct Outreach',
-                    id: 'f64cf7bb-9962-4df3-aa84-0b44d9d5e573',
-                    name: 'SAIL Direct Outreach',
-                    color: '#800000',
-                    orderindex: 6,
-                    workspace_id: '14225407',
-                  },
-                  {
-                    type: 'text',
-                    value: 'IS&T',
-                    id: 'daf22744-5f28-4a1d-a9a6-df6bca6d743f',
-                    name: 'IS&T',
-                    color: null,
-                    orderindex: 7,
-                    workspace_id: '14225407',
-                  },
-                ],
-              },
             },
           ],
         }),
@@ -148,6 +69,20 @@ export const ContactForm = () => {
     return result;
   };
 
+  //title ? maybe a different name
+  //project description make it bigger
+  //please include why, goals, current tools
+  //Department/College maybe a dropdown with BU colleges
+  //application type maybe add more, fine for now
+  //remove preferred platforms or tools
+  //checklist for funding source
+  //internally funded, does it need assistance
+  //remobe budget
+  //potential funding amount checkbox
+  //questions or comments remove,add this to project description
+  //proposed staff remove
+  //preferred start date put a pin in it
+
   return (
     <form ref={form} onSubmit={handleClick}>
       <FormControl id="name" isRequired>
@@ -156,12 +91,6 @@ export const ContactForm = () => {
           type="text"
           {...register('Name', { required: true, maxLength: 80 })}
         />
-        <FormHelperText>First Name</FormHelperText>
-        <Input
-          type="text"
-          {...register('Name', { required: true, maxLength: 80 })}
-        />
-        <FormHelperText>Last Name</FormHelperText>
       </FormControl>
       <FormControl id="title" isRequired>
         <FormLabel>Title</FormLabel>
@@ -169,7 +98,39 @@ export const ContactForm = () => {
       </FormControl>
       <FormControl id="dept" isRequired>
         <FormLabel>Department</FormLabel>
-        <Input {...register('Department', { required: true })} />
+        <Select placeholder="Select option">
+          <option value="busm">Chobanian & Advesian School of Medicine</option>
+          <option value="khc">Kilachand Honors College</option>
+          <option value="cas">College of Arts & Sciences</option>
+          <option value="com">College of Communication</option>
+          <option value="eng">College of Engineering</option>
+          <option value="cfa">College of Fine Arts</option>
+          <option value="cgs">College of General Studies</option>
+          <option value="cds">Faculty of Computing & Data Sciences</option>
+          <option value="pardee">
+            Frederick S. Pardee School of Global Studies
+          </option>
+          <option value="gms">Graduate Medical Sciences</option>
+          <option value="grs">Graduate School of Arts & Sciences</option>
+          <option value="sdm">
+            Henry M. Goldman School of Dental Medicine
+          </option>
+          <option value="met">Metropolitan College & Extended Education</option>
+          <option value="qst">Questrom School of Business</option>
+          <option value="sar">
+            Sargent College of Health & Rehabilitation Sciences
+          </option>
+          <option value="sha">School of Hospitality Administration</option>
+          <option value="sph">School of Public Health</option>
+          <option value="ssw">School of Social Work</option>
+          <option value="sth">School of Theology</option>
+          <option value="law">School of Law</option>
+          <option value="sed">
+            Wheelock College of Education & Human Development
+          </option>
+          <option value="military">Division of Military Education</option>
+          <option value="other">Other</option>
+        </Select>
       </FormControl>
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
@@ -184,10 +145,9 @@ export const ContactForm = () => {
       </FormControl>
       <FormControl id="description" isRequired>
         <FormLabel>Project Description</FormLabel>
-        <Input
-          width="100%"
-          type="text"
-          {...register('Message', { required: true })}
+        <Textarea
+          size="sm"
+          placeholder="Include your goals, your current tech stack, your motivations"
         />
       </FormControl>
       <FormControl id="pdf">
@@ -205,17 +165,6 @@ export const ContactForm = () => {
             Max. file size: 100 MB.
           </FormHelperText>
         </Box>
-      </FormControl>
-      <FormControl id="motivation" isRequired>
-        <FormLabel>
-          How will this project advance your research, and what outcomes and
-          benefits do you expect from your project?
-        </FormLabel>
-        <Input
-          width="100%"
-          type="text"
-          {...register('Message', { required: true })}
-        />
       </FormControl>
       <FormControl id="type" isRequired>
         <FormLabel>Application Type (check all that apply):</FormLabel>
@@ -261,10 +210,6 @@ export const ContactForm = () => {
         </blockquote>
         Mobile Application
       </Box>
-      <FormControl id="platforms" isRequired>
-        <FormLabel>Preferred Platforms or Tools</FormLabel>
-        <Input width="100%" type="text" />
-      </FormControl>
       <FormControl id="fundingSource" isRequired>
         <FormLabel>Funding Source</FormLabel>
         <Input {...register('Funding Source', { required: true })} />
@@ -295,9 +240,7 @@ export const ContactForm = () => {
             <Checkbox>Graduate Student</Checkbox>
             <Checkbox>Software Developer</Checkbox>
             <Checkbox>I dont know</Checkbox>
-            <Checkbox>
-              <Input size="sm" placeholder="Other" type="text" />
-            </Checkbox>
+            <Input size="sm" placeholder="Other" type="text" />
           </VStack>
         </RadioGroup>
       </FormControl>

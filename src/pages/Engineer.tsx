@@ -10,7 +10,7 @@ import {
 import * as React from 'react';
 import { Layout } from '../components/Layout';
 
-export const Engineer: React.VFC = () => (
+export const Engineer: React.FC = () => (
   <Layout title="Join Our Team">
     <Box
       borderTop={useColorModeValue('2px solid black', '2px solid white')}
