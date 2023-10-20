@@ -10,17 +10,30 @@ import {
   VStack,
   Select,
   Textarea,
+  Radio,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { useEffect, useRef, useState } from 'react';
 import './ContactForm.css';
 
+type Input = {
+  name: string;
+  title: string;
+  college: string;
+  email: string;
+  projectTitle: string;
+  projectDescription: string;
+  applicationType: string;
+  fundingSource: string;
+  fundingAmount: string;
+  deliveryDate: Date;
+  referral: string;
+};
+
 export const ContactForm: React.FC = () => {
-  const {
-    register,
-    formState: { errors },
-  } = useForm();
+  const { control, register, handleSubmit } = useForm<Input>();
+  const onSubmit: SubmitHandler<Input> = (data) => console.log(data);
   const form = useRef<any>();
 
   const sendEmail = (e: any) => {
@@ -75,21 +88,21 @@ export const ContactForm: React.FC = () => {
   //preferred start date put a pin in it
 
   return (
-    <form ref={form} onSubmit={handleClick}>
+    <form ref={form} onSubmit={handleSubmit(onSubmit)}>
       <FormControl id="name" isRequired>
         <FormLabel>Name</FormLabel>
         <Input
           type="text"
-          {...register('Name', { required: true, maxLength: 80 })}
+          {...register('name', { required: true, maxLength: 80 })}
         />
       </FormControl>
       <FormControl id="title" isRequired>
         <FormLabel>Title</FormLabel>
-        <Input {...register('Title', { required: true })} />
+        <Input {...register('title', { required: true })} />
       </FormControl>
       <FormControl id="dept" isRequired>
         <FormLabel>College / Department</FormLabel>
-        <Select placeholder="Select option">
+        <Select {...register('college')} placeholder="Select option">
           <option value="busm">Chobanian & Advesian School of Medicine</option>
           <option value="khc">Kilachand Honors College</option>
           <option value="cas">College of Arts & Sciences</option>
@@ -127,16 +140,17 @@ export const ContactForm: React.FC = () => {
         <FormLabel>Email</FormLabel>
         <Input
           type="email"
-          {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
+          {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
         />
       </FormControl>
       <FormControl id="project" isRequired>
         <FormLabel>Project Title</FormLabel>
-        <Input {...register('Project Title', { required: true })} />
+        <Input {...register('projectTitle', { required: true })} />
       </FormControl>
       <FormControl id="description" isRequired>
         <FormLabel>Project Description</FormLabel>
         <Textarea
+          {...register('projectDescription')}
           size="sm"
           placeholder="Include your goals, your current tech stack, your motivations, as well as any questions or comments"
         />
@@ -157,19 +171,35 @@ export const ContactForm: React.FC = () => {
           </FormHelperText>
         </Box>
       </FormControl>
-      <FormControl id="type" isRequired>
-        <FormLabel>Application Type (check all that apply):</FormLabel>
-        <RadioGroup>
-          <VStack>
-            <Checkbox>Content Management System, Blog, or Forum</Checkbox>
-            <Checkbox>Web Interface or Front End</Checkbox>
-            <Checkbox>Database or Back End Service</Checkbox>
-            <Checkbox>Data Aggregation and Analysis</Checkbox>
-            <Checkbox>Mobile Application</Checkbox>
-            <Checkbox>Other Custom Software Application</Checkbox>
-            <Checkbox>I don't know</Checkbox>
-          </VStack>
-        </RadioGroup>
+      <FormControl id="applicationType">
+        <FormLabel>Application Type (check one):</FormLabel>
+        <Controller
+          control={control}
+          name="applicationType"
+          render={({ field }) => (
+            <RadioGroup onChange={field.onChange} value={field.value}>
+              <VStack>
+                <Radio value="Content Management System, Blog, or Forum">
+                  Content Management System, Blog, or Forum
+                </Radio>
+                <Radio value="Web Interface or Front End">
+                  Web Interface or Front End
+                </Radio>
+                <Radio value="Database or Back End Service">
+                  Database or Back End Service
+                </Radio>
+                <Radio value="Data Aggregation and Analysis">
+                  Data Aggregation and Analysis
+                </Radio>
+                <Radio value="Mobile Application">Mobile Application</Radio>
+                <Radio value="Other Custom Software Application">
+                  Other Custom Software Application
+                </Radio>
+                <Radio value="I don't know">I don't know</Radio>
+              </VStack>
+            </RadioGroup>
+          )}
+        />
       </FormControl>
       <Box
         fontSize="15px"
@@ -203,32 +233,40 @@ export const ContactForm: React.FC = () => {
       </Box>
       <FormControl id="fundingSource" isRequired>
         <FormLabel>Funding Source</FormLabel>
-        <RadioGroup>
-          <VStack>
-            <Checkbox>Internally funded</Checkbox>
-            <Checkbox>Partially funded, needs some assistance</Checkbox>
-            <Checkbox>Fully needs assistance for funding</Checkbox>
-            <Checkbox>Other</Checkbox>
-          </VStack>
-        </RadioGroup>
+        <Controller
+          control={control}
+          name="fundingSource"
+          render={({ field }) => (
+            <RadioGroup onChange={field.onChange} value={field.value}>
+              <VStack>
+                <Radio value="fully">Internally funded</Radio>
+                <Radio value="partially">
+                  Partially funded, needs some assistance
+                </Radio>
+                <Radio value="zero">Fully needs assistance for funding</Radio>
+                <Radio value="other">Other</Radio>
+              </VStack>
+            </RadioGroup>
+          )}
+        />
       </FormControl>
       <FormControl id="fundingAmount" isRequired>
         <FormLabel>Funding Amount</FormLabel>
-        <Input {...register('Funding Amount', { required: true })} />
+        <Input {...register('fundingAmount', { required: true })} />
       </FormControl>
       <FormControl id="startDate" isRequired>
         <FormLabel>Preferred Delivery Date</FormLabel>
-        <Input type="date" {...register('Delivery Date', { required: true })} />
+        <Input type="date" {...register('deliveryDate', { required: true })} />
       </FormControl>
       <FormControl id="referral">
         <FormLabel>How were you referred to this resource?</FormLabel>
-        <Select placeholder="Choose">
-          <option value="option1">Faculty Member</option>
-          <option value="option2">Student</option>
-          <option value="option3">Event and/or Talk</option>
-          <option value="option4">HIC Website</option>
-          <option value="option5">SAIL Website</option>
-          <option value="option6">Other</option>
+        <Select placeholder="Choose" {...register('referral')}>
+          <option value="Faculty Member">Faculty Member</option>
+          <option value="Student">Student</option>
+          <option value="Event and/or Talk">Event and/or Talk</option>
+          <option value="HIC Website">HIC Website</option>
+          <option value="SAIL Website">SAIL Website</option>
+          <option value="Other">Other</option>
         </Select>
       </FormControl>
       <Button mt={4} colorScheme="orange" type="submit" size="lg">
