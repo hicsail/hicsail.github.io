@@ -70,17 +70,8 @@ export const ContactForm: React.FC = () => {
   };
 
   //title ? maybe a different name
-  //project description make it bigger
-  //please include why, goals, current tools
-  //Department/College maybe a dropdown with BU colleges
   //application type maybe add more, fine for now
-  //remove preferred platforms or tools
-  //checklist for funding source
-  //internally funded, does it need assistance
-  //remobe budget
   //potential funding amount checkbox
-  //questions or comments remove,add this to project description
-  //proposed staff remove
   //preferred start date put a pin in it
 
   return (
@@ -97,7 +88,7 @@ export const ContactForm: React.FC = () => {
         <Input {...register('Title', { required: true })} />
       </FormControl>
       <FormControl id="dept" isRequired>
-        <FormLabel>Department</FormLabel>
+        <FormLabel>College / Department</FormLabel>
         <Select placeholder="Select option">
           <option value="busm">Chobanian & Advesian School of Medicine</option>
           <option value="khc">Kilachand Honors College</option>
@@ -147,7 +138,7 @@ export const ContactForm: React.FC = () => {
         <FormLabel>Project Description</FormLabel>
         <Textarea
           size="sm"
-          placeholder="Include your goals, your current tech stack, your motivations"
+          placeholder="Include your goals, your current tech stack, your motivations, as well as any questions or comments"
         />
       </FormControl>
       <FormControl id="pdf">
@@ -212,37 +203,22 @@ export const ContactForm: React.FC = () => {
       </Box>
       <FormControl id="fundingSource" isRequired>
         <FormLabel>Funding Source</FormLabel>
-        <Input {...register('Funding Source', { required: true })} />
+        <RadioGroup>
+          <VStack>
+            <Checkbox>Internally funded</Checkbox>
+            <Checkbox>Partially funded, needs some assistance</Checkbox>
+            <Checkbox>Fully needs assistance for funding</Checkbox>
+            <Checkbox>Other</Checkbox>
+          </VStack>
+        </RadioGroup>
       </FormControl>
       <FormControl id="fundingAmount" isRequired>
         <FormLabel>Funding Amount</FormLabel>
         <Input {...register('Funding Amount', { required: true })} />
       </FormControl>
-      <FormControl id="budget" isRequired>
-        <FormLabel>Budget:</FormLabel>
-        <FormHelperText>
-          Please use the following format: <br />* $____ per month for ____
-          months between ____ and ____
-          <br />* $____ per year for ____ years between ____ and ____ <br />* I
-          don't know
-        </FormHelperText>
-        <Input width="100%" type="text" />
-      </FormControl>
       <FormControl id="startDate" isRequired>
-        <FormLabel>Preferred Start Date</FormLabel>
-        <Input type="date" {...register('Start Date', { required: true })} />
-      </FormControl>
-      <FormControl id="staff" isRequired>
-        <FormLabel>Proposed staff for the work:</FormLabel>
-        <RadioGroup>
-          <VStack>
-            <Checkbox>Undergraduate Student</Checkbox>
-            <Checkbox>Graduate Student</Checkbox>
-            <Checkbox>Software Developer</Checkbox>
-            <Checkbox>I dont know</Checkbox>
-            <Input size="sm" placeholder="Other" type="text" />
-          </VStack>
-        </RadioGroup>
+        <FormLabel>Preferred Delivery Date</FormLabel>
+        <Input type="date" {...register('Delivery Date', { required: true })} />
       </FormControl>
       <FormControl id="referral">
         <FormLabel>How were you referred to this resource?</FormLabel>
@@ -254,10 +230,6 @@ export const ContactForm: React.FC = () => {
           <option value="option5">SAIL Website</option>
           <option value="option6">Other</option>
         </Select>
-      </FormControl>
-      <FormControl id="comments">
-        <FormLabel>Questions or Comments</FormLabel>
-        <Input type="text" />
       </FormControl>
       <Button mt={4} colorScheme="orange" type="submit" size="lg">
         Submit
