@@ -33,7 +33,7 @@ type Input = {
 
 export const ContactForm: React.FC = () => {
   const { control, register, handleSubmit } = useForm<Input>();
-  const onSubmit: SubmitHandler<Input> = (data) => console.log(data);
+  //const onSubmit: SubmitHandler<Input> = (data) => console.log(data.email)
   const form = useRef<any>();
 
   const sendEmail = (e: any) => {
@@ -48,11 +48,55 @@ export const ContactForm: React.FC = () => {
     createdAt: string;
   };
 
-  const handleClick = async () => {
-    const listId = 'YOUR_list_id';
+  const onSubmit: SubmitHandler<Input> = async (data) => {
+    console.log('we end up here, ', data.applicationType);
+    const collaboratorsId = 'dj3zz-11511';
+    const projectsId = 'dj3zz-640';
+    const collaborator = await fetch(
+      `https://api.clickup.com/api/v2/list/${collaboratorsId}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: process.env.REACT_APP_API_KEY,
+        },
+        body: JSON.stringify({
+          name: data.projectTitle,
+          description: data.projectDescription,
+          custom_fields: [
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99d',
+              name: 'projectTitle',
+              value: data.name,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
+              name: 'title',
+              value: data.title,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99b',
+              name: 'college',
+              value: data.college,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99c',
+              name: 'email',
+              type: 'email',
+              value: data.email,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a3',
+              name: 'referral',
+              value: data.referral,
+            },
+          ],
+        }),
+      },
+    );
 
     const response = await fetch(
-      `https://api.clickup.com/api/v2/list/${listId}`,
+      `https://api.clickup.com/api/v2/list/${projectsId}`,
       {
         method: 'POST',
         headers: {
@@ -60,12 +104,39 @@ export const ContactForm: React.FC = () => {
           Authorization: 'YOUR_API_KEY_HERE',
         },
         body: JSON.stringify({
-          name: 'name',
-          description: 'description',
+          name: data.projectTitle,
+          description: data.projectDescription,
           custom_fields: [
             {
-              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
-              name: 'REFERRED BY',
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99b',
+              name: 'college',
+              value: data.college,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99e',
+              name: 'applicationType',
+              value: data.applicationType,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99f',
+              name: 'fundingSource',
+              value: data.fundingSource,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a1',
+              name: 'fundingAmount',
+              value: data.fundingAmount,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a2',
+              type: 'date',
+              name: 'deliveryDate',
+              value: data.deliveryDate,
+            },
+            {
+              id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a3',
+              name: 'referral',
+              value: data.referral,
             },
           ],
         }),
@@ -75,17 +146,15 @@ export const ContactForm: React.FC = () => {
     if (!response.ok) {
       throw new Error(`Error! status: ${response.status}`);
     }
+    if (!collaborator.ok) {
+      throw new Error(`Error! status: ${collaborator.status}`);
+    }
 
     const result = (await response.json()) as CreateResponse;
     console.log('result is: ', JSON.stringify(result, null, 4));
 
     return result;
   };
-
-  //title ? maybe a different name
-  //application type maybe add more, fine for now
-  //potential funding amount checkbox
-  //preferred start date put a pin in it
 
   return (
     <form ref={form} onSubmit={handleSubmit(onSubmit)}>
@@ -177,7 +246,11 @@ export const ContactForm: React.FC = () => {
           control={control}
           name="applicationType"
           render={({ field }) => (
-            <RadioGroup onChange={field.onChange} value={field.value}>
+            <RadioGroup
+              onChange={field.onChange}
+              value={field.value}
+              colorScheme="yellow"
+            >
               <VStack>
                 <Radio value="Content Management System, Blog, or Forum">
                   Content Management System, Blog, or Forum
@@ -237,7 +310,11 @@ export const ContactForm: React.FC = () => {
           control={control}
           name="fundingSource"
           render={({ field }) => (
-            <RadioGroup onChange={field.onChange} value={field.value}>
+            <RadioGroup
+              onChange={field.onChange}
+              value={field.value}
+              colorScheme="green"
+            >
               <VStack>
                 <Radio value="fully">Internally funded</Radio>
                 <Radio value="partially">
