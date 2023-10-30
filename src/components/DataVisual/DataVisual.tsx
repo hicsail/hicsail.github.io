@@ -5,7 +5,6 @@ import {
   Heading,
   HStack,
   Icon,
-  StackDivider,
   Text,
 } from '@chakra-ui/react';
 import { BiDollarCircle, BiBuilding, BiGroup } from 'react-icons/bi';
@@ -15,8 +14,8 @@ import './DataVisual.css';
 
 export const DataVisual: React.FC = () => {
   return (
-    <Card>
-      <CardBody>
+    <Card boxShadow={0}>
+      <CardBody backgroundColor="gray.800">
         <HStack
           id="stackityStack"
           margin="5px 20px 5px 20px"
