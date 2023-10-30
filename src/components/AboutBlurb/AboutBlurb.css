@@ -18,10 +18,11 @@
 
 #boxForMovingText {
   width: 100%;
-  background-color: #3e3736;
-  color: white;
+  color: rgb(0, 170, 77);
   overflow: hidden;
   font-size: 2em;
+  font-weight: 700;
+  font-family: 'Graphik,Helvetica,Arial,sans-serif !important';
 }
 
 #movingText {
