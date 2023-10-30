@@ -20,6 +20,7 @@ import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { IoRocketSharp } from 'react-icons/io5';
 import { ProjectsGrid } from '../components/ProjectsGrid';
+import { AboutBlurb } from '../components/AboutBlurb/AboutBlurb';
 import data from '../utils/data/data.json';
 
 const HeroText = styled.div`
@@ -184,14 +185,6 @@ export const Home: React.FC = () => {
               leveraging industry-leading software development practices.
             </Text>
             <Text textStyle="paragraph">
-              Specifically, SAIL offers to its clients and collaborators
-              services in the form of full stack web and mobile application
-              development, code base refactoring and maintenance, software
-              best-practice consulting, project and product management guidance
-              and proposal and grant writing in the pursuit of extramural
-              funding for research projects.
-            </Text>
-            <Text textStyle="paragraph">
               If you would like to explore how SAIL can help you achieve your
               research objectives or would like to discuss what resources are
               available, please fill out a{' '}
@@ -208,6 +201,7 @@ export const Home: React.FC = () => {
               </Link>
               {' directly'}
             </Text>
+            <AboutBlurb />
           </Box>
           <Box gridArea="projectgrid">
             <Heading textStyle="h2" mt="5'0px">

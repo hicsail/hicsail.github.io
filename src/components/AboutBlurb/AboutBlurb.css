@@ -1,0 +1,43 @@
+#innerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 15em;
+  min-width: 8em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+#h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.9em;
+}
+
+#boxForMovingText {
+  width: 100%;
+  background-color: #3e3736;
+  color: white;
+  overflow: hidden;
+  font-size: 2em;
+}
+
+#movingText {
+  display: block; /* Important to give the content a width */
+
+  width: 100%;
+  transform: translateX(100%); /* Animation start out of the screen */
+
+  /* Add the animation */
+  animation: move 30s linear infinite
+    /* infinite make reapeat the animation indefinitely */;
+}
+
+/* Create the animation */
+@keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+}
