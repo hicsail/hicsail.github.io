@@ -19,7 +19,7 @@ import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { IoRocketSharp } from 'react-icons/io5';
-import { ProjectsGrid } from '../components/ProjectsGrid';
+import { ProjectsGrid } from '../components/ProjectsGrid/ProjectsGrid';
 import { AboutBlurb } from '../components/AboutBlurb/AboutBlurb';
 import data from '../utils/data/data.json';
 

@@ -1,9 +1,18 @@
-import { Box, Grid, Button, useDisclosure } from '@chakra-ui/react';
+import { Box, Grid, Button, Icon, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
-import { Card } from './Card';
-import data from '../utils/data/data.json';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { Card } from '../Card';
+import data from '../../utils/data/data.json';
+import './ProjectsGrid.css';
+import {
+  BiData,
+  BiHealth,
+  BiBookBookmark,
+  BiHourglass,
+  BiAtom,
+  BiShieldQuarter,
+  BiGridHorizontal,
+} from 'react-icons/bi';
 
 interface Props {
   title: string | null;
@@ -30,14 +39,14 @@ interface ProjectSelectProps {
 }
 
 const options = [
-  'Featured',
-  'All',
-  'Data Science',
-  'Ed Tech',
-  'Privacy and Security',
-  'Digital Health',
-  'Natural Sciences',
-  'Legacy',
+  { title: 'Featured', icon: BiData },
+  { title: 'All', icon: BiGridHorizontal },
+  { title: 'Data Science', icon: BiData },
+  { title: 'Digital Health', icon: BiHealth },
+  { title: 'Ed Tech', icon: BiBookBookmark },
+  { title: 'Legacy', icon: BiHourglass },
+  { title: 'Natural Sciences', icon: BiAtom },
+  { title: 'Privacy and Security', icon: BiShieldQuarter },
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
@@ -148,34 +157,43 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
 };
 
 export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
-  const [selected, setSelected] = useState(options[0]);
-  const { isOpen, onToggle } = useDisclosure();
+  const projectsOptions = showSelect ? options.slice(1) : options;
+  const [selected, setSelected] = useState(projectsOptions[0].title);
 
   const handleOptionSelect = (option: string) => {
     setSelected(option);
-    onToggle();
   };
 
   return (
     <Box>
       {showSelect ? (
         <Box>
-          <Button onClick={onToggle} variant="outline">
-            <ArrowForwardIcon />
-          </Button>
-          {isOpen && (
-            <Box borderWidth="1px" mt={2}>
-              {options.map((option) => (
-                <Button
-                  key={option}
-                  onClick={() => handleOptionSelect(option)}
-                  variant="ghost"
-                >
-                  {option}
-                </Button>
-              ))}
-            </Box>
-          )}
+          <Box
+            borderWidth="1px"
+            display="flex"
+            flexDirection="row"
+            padding="24px"
+            justifyContent="space-between"
+          >
+            {projectsOptions.map(({ title, icon }) => (
+              <Button
+                key={title}
+                onClick={() => handleOptionSelect(title)}
+                variant="ghost"
+                display="flex"
+                flexDirection="column"
+                maxWidth="6em"
+                transition="transform 350ms ease-in-out"
+                _hover={{
+                  transform: 'scale(1.05)',
+                  transition: 'transform 300ms',
+                }}
+              >
+                <Icon id="glyphicon" as={icon} color="blue.400" />
+                <Text whiteSpace="initial">{title}</Text>
+              </Button>
+            ))}
+          </Box>
         </Box>
       ) : (
         <></>
