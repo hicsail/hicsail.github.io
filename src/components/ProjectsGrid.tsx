@@ -1,8 +1,9 @@
-import { Box, Grid, Select } from '@chakra-ui/react';
+import { Box, Grid, Button, useDisclosure } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
 import { Card } from './Card';
 import data from '../utils/data/data.json';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 interface Props {
   title: string | null;
@@ -148,21 +149,34 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
 
 export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
   const [selected, setSelected] = useState(options[0]);
+  const { isOpen, onToggle } = useDisclosure();
+
+  const handleOptionSelect = (option: string) => {
+    setSelected(option);
+    onToggle();
+  };
 
   return (
     <Box>
       {showSelect ? (
-        <Select
-          width="inherit"
-          value={selected}
-          onChange={(e) => setSelected(e.target.value)}
-        >
-          {options.map((name: string) => (
-            <option value={name} key={name}>
-              {name}
-            </option>
-          ))}
-        </Select>
+        <Box>
+          <Button onClick={onToggle} variant="outline">
+            <ArrowForwardIcon />
+          </Button>
+          {isOpen && (
+            <Box borderWidth="1px" mt={2}>
+              {options.map((option) => (
+                <Button
+                  key={option}
+                  onClick={() => handleOptionSelect(option)}
+                  variant="ghost"
+                >
+                  {option}
+                </Button>
+              ))}
+            </Box>
+          )}
+        </Box>
       ) : (
         <></>
       )}

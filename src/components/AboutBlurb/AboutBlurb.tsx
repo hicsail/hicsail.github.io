@@ -20,6 +20,9 @@ import './AboutBlurb.css';
 export const AboutBlurb: React.FC = () => {
   return (
     <Box>
+      <Heading textStyle="h2" mt="5'0px">
+        Our Services
+      </Heading>
       <Card boxShadow={0}>
         <CardBody backgroundColor="gray.800">
           <HStack

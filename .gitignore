@@ -11,3 +11,4 @@ generated
 docker-build
 
 .vscode
+.env

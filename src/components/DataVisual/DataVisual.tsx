@@ -31,10 +31,8 @@ export const DataVisual: React.FC = () => {
             </Box>
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiDollarCircle} color="green.400" />
-              <Heading id="cardHeading">$3M</Heading>
-              <Text id="cardText">
-                The funding we have received since 2022.
-              </Text>
+              <Heading id="cardHeading">40+</Heading>
+              <Text id="cardText">Projects</Text>
             </Box>
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiGroup} color="red.400" />
