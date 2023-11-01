@@ -20,11 +20,6 @@ import './AboutBlurb.css';
 export const AboutBlurb: React.FC = () => {
   return (
     <Box>
-      <Box id="boxForMovingText">
-        <p id="movingText">
-          <span>In the past we have offered these services.</span>
-        </p>
-      </Box>
       <Card boxShadow={0}>
         <CardBody backgroundColor="gray.800">
           <HStack
