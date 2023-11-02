@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Publications } from './pages/Publications';
+import { Publications } from './archived/Publications';
 import { Projects } from './pages/Projects';
-import { Research } from './pages/Research';
+import { Research } from './archived/Research';
 import { People } from './pages/People/People';
-import { Presentations } from './pages/Presentations';
+import { Presentations } from './archived/Presentations';
 import { Contact } from './pages/Contact';
 import { Engineer } from './pages/Engineer';
 import { Intern } from './pages/Intern';

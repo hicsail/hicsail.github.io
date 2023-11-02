@@ -146,7 +146,7 @@
     {
       "title": "PACT",
       "titleDescription": "Elevate Thermal Simulations with PACT",
-      "description": "Introducing PACT, a Parallel Compact Thermal simulator developed in collaboration with Professor Ayse Coskun. PACT is a versatile tool designed to simplify and accelerate thermal simulations, bridging the gap between standard-cell-level and architecture-level analysis with unprecedented speed and accuracy. PACT harnesses the power of multi-core processing through OpenMPI, offering a range of solvers that expedite both steady-state and transient simulations. This tool is not only fast and accurate but also highly adaptable, easily customizable to incorporate emerging integration and cooling technologies like 3D stacking and microchannel-based liquid cooling. By modifying the thermal netlist, users can tailor PACT to their specific needs.",
+      "description": "PACT was previously difficult to run since it has a myriad of dependencies in addition to relying on a strict system configurations to run smoothly. SAIL engineering intern Joreen containerized PACT codebase to make it easier to run. The work done by SAIL simplified the running process to the bare minimum: now, a user only has to provides input files and run a single command. Moreover, the new containerized PACT is platform agnostic, running on any OS with no specialized configurations.",
       "href": "../../../img/projects/illustrations/startup.png",
       "projectType": "Data Science",
       "pi": [
@@ -180,7 +180,7 @@
       "titleDescription": "Empowering Employers to Bridge Wage Gaps",
       "description": "The Wage Gap Calculator project, undertaken in collaboration with the Boston Women’s Workforce Council (BWWC), addresses the pressing need to close gender and racial wage gaps in Boston and beyond. BWWC's Compact Signers commit to various actions, including internal wage gap analysis, yet many struggle with this crucial step. To simplify the process and encourage consistent analysis, the Wage Gap Calculator offers an interactive tool akin to the Fidelity retirement calculator. Its mission is to empower employers throughout Massachusetts and beyond to calculate their internal wage gaps effectively, ultimately advancing the cause of wage equality.",
       "href": "../../../img/projects/illustrations/coins.png",
-      "projectType": "",
+      "projectType": "Data Science",
       "pi": null,
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -218,6 +218,21 @@
         "Andrey Fradkin, Assistant Professor of Economics at Boston University",
         "Chiara Farronato, Glenn and Mary Jane Creamer Associate Professor of Business Administration at Harvard Business School",
         "Tesary Lin, Assistant Professor of Marketing at Boston University"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "featured": true,
+      "title": "Shipley",
+      "titleDescription": "Revealing Media Biases",
+      "description": "Shipley, a groundbreaking platform, confronts racial bias within news articles. Offering two user views, it empowers local newsrooms to internally evaluate and address racial bias while allowing organizations like the NAACP to analyze data across geographic regions. Led by a dedicated team of SAIL engineers, the project employs machine learning and data science to gain insights into demographic portrayals in media coverage. Goals include developing an analysis tool, highlighting disparities in Boston's media coverage, and identifying correlations between specific regions and media representation, emphasizing demographics. Shipley is a pivotal step towards promoting fairness in journalism and media reporting through innovative, data-driven methods.",
+      "href": "../../../img/projects/illustrations/binoculars.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Ziba Cranmer, Director of BU Spark!",
+        "Paul Singer, Investigations and Impact Editor at GBH",
+        "Tanisha Sullivan, President of Boston NAACP Chapter"
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
@@ -444,6 +459,81 @@
       "metaDataPresentation": [],
       "metaDataPublication": []
     },
+    {
+      "title": "COVID",
+      "titleDescription": "Clinical Testing Lab",
+      "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
+      "href": "../../../img/projects/illustrations/formula.png",
+      "projectType": "Digital Health",
+      "pi": null,
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "MTSS",
+      "titleDescription": "Unlocking Learning Insights",
+      "description": "The MTSS (Multi-Tiered System of Supports) project is a user-friendly web-based platform meticulously designed to gather and manage data pertaining to students with learning disabilities. This platform isn't just a data repository; it's a dynamic knowledge hub that streamlines the collection, organization, and redistribution of a wide range of educational, cognitive, neuroimaging, qualitative, and other data types. Going beyond data storage, it also actively analyzes the information, unveiling valuable insights. This educational intervention-focused repository is led by the project's Principal Investigator, Hank Fien, a distinguished Professor in Educational Innovation at Boston University's Wheelock College of Education & Human Development, and the Director of the Wheelock Institute for the Science of Education (WISE). The MTSS project holds the potential to significantly impact how we support students with learning disabilities, offering a comprehensive and user-friendly solution for data management and analysis.",
+      "href": "../../../img/projects/illustrations/security-key.png",
+      "projectType": "Ed Tech",
+      "pi": [
+        "Hank Fien, Professor of Educational Innovation in the Teaching & Learning Department at Boston University Wheelock College, DIrector of the Wheelock Institute for the science of Education"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "Career Map",
+      "titleDescription": "State Career Readiness",
+      "description": "Career Map is a dynamic web-based interactive platform that provides valuable insights into the career readiness landscape of US states. This user-friendly map offers a comprehensive view of career readiness resources and policies for each state, allowing users to make informed comparisons and evaluate their performance in specific areas based on CCD center recommendations. Led by Dr. V. Scott Solberg, a respected professor in the Counseling Psychology and Applied Human Development Department at BU Wheelock College of Education & Human Development, Career Map is set to become an invaluable resource for understanding and enhancing career readiness across the nation.",
+      "href": "../../../img/projects/illustrations/design.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Dr. V. Scott Solberg, Professor in the Counseling Psychology and Applied Human Development Department at Boston University Wheelock College"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    },
+    {
+      "title": "EcoForecast",
+      "titleDescription": "Nature's Predictive Trail",
+      "description": "EcoForecast is an innovative initiative aimed at transforming ecological forecasting. Its mission is to develop and deploy accessible, scalable, and reusable community cyberinfrastructure, designed to generate ecological forecasts consistently and efficiently. At its core, EcoForecast features a cloud-native workflow, functioning asynchronously and with distributed execution, all orchestrated by a state-of-the-art scheduler. The project has two primary objectives: to support a pending NSF Science and Technology Center (STC) proposal and to create an agile, cloud-based system. Through a combination of containerization and elastic load balancing, this innovation promises to make ecological forecasting more accessible, accurate, and practical, significantly enhancing our understanding of the natural world and bolstering informed environmental decision-making. Join us on this transformative journey to advance ecological predictions and contribute to a sustainable future.",
+      "href": "../../../img/projects/illustrations/tasks.png",
+      "projectType": "Data Science",
+      "pi": [
+        "Michael Dietz, Associate Professor at Earth and Environment Department at Boston University"
+      ],
+      "metaDataPresentation": [],
+      "metaDataPublication": []
+    }
+  ],
+  "projectsListed": [
+    "Web MPC",
+    "ASL-LEX",
+    "Camera Mouse",
+    "PACT",
+    "TPAT",
+    "SIEVE",
+    "Wage Gap Calculator",
+    "Noise Score",
+    "Cookie Monster",
+    "VA App",
+    "Microb-DB",
+    "Storm-Chaser",
+    "NIST",
+    "COMETS",
+    "Climate Lies",
+    "Web OMM",
+    "fNIRS",
+    "Center for Young Colorful Minds",
+    "BROC Online Inquiry System",
+    "RESTORE",
+    "Shape-Up",
+    "COVID",
+    "Anchor",
+    "SUDTraining",
+    "Black Women's Health Study"
+  ],
+  "oldProjects": [
     {
       "title": "COVID",
       "titleDescription": "Clinical Testing Lab",
