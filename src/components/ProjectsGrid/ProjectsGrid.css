@@ -1,17 +1,42 @@
-@media screen and (max-width: 299px) {
-  #glyphicon {
-    font-size: 1.2em;
-  }
-}
-
-@media screen and (min-width: 300px) and (max-width: 799px) {
-  #glyphicon {
+@media screen and (max-width: 664px) {
+  #icon {
     font-size: 2em;
   }
+  #categoriesBox {
+    width: 3.5em;
+    font-size: 0.75em;
+  }
+  #categoryText {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 800px) {
-  #glyphicon {
-    font-size: 3.5em;
+@media screen and (min-width: 665px) and (max-width: 819px) {
+  #icon {
+    font-size: 2.6em;
   }
+  #categoriesBox {
+    width: 5em;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  #icon {
+    font-size: 3.1em;
+  }
+
+  #categoriesBox {
+    width: 6em;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#icon {
+  transition: 'transform 350ms ease-in-out';
+}
+
+#icon:hover {
+  transform: scale(1.25);
+  transition: transform 300ms;
 }

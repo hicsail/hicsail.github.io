@@ -179,22 +179,19 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
           alignItems="flex-start"
         >
           {projectsOptions.map(({ title, icon, color }) => (
-            <Box maxWidth="7em" display="flex" flexDirection="column">
+            <Box id="categoriesBox">
               <IconButton
+                id="icon"
                 key={title}
                 aria-label="haha"
                 icon={icon}
                 variant="ghost"
                 color={color}
                 onClick={() => handleOptionSelect(title)}
-                transition="transform 350ms ease-in-out"
-                _hover={{
-                  transform: 'scale(1.25)',
-                  transition: 'transform 300ms',
-                }}
-                fontSize="45px"
               />
-              <Text whiteSpace="initial">{title}</Text>
+              <Text id="categoryText" whiteSpace="initial">
+                {title}
+              </Text>
             </Box>
           ))}
         </Box>

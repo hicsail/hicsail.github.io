@@ -6,9 +6,9 @@ import {
   HStack,
   Icon,
   Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { BiDollarCircle, BiBuilding, BiGroup } from 'react-icons/bi';
-import { Pie } from '../CircularProgress';
 import * as React from 'react';
 import './DataVisual.css';
 
@@ -16,10 +16,10 @@ export const DataVisual: React.FC = () => {
   return (
     <Box>
       <Card boxShadow={0}>
-        <CardBody backgroundColor="gray.800">
+        <CardBody backgroundColor={useColorModeValue('white', 'gray.800')}>
           <HStack
             id="stackityStack"
-            margin="0.3em 1.5em 0.3em 1.5em"
+            margin="0.3em 1.5em"
             justifyContent="space-between"
           >
             <Box id="innerCard">

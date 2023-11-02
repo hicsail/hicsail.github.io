@@ -21,9 +21,9 @@ interface Person {
   email: string;
 }
 
-export const CurrentMembers: React.VFC = () => {
+export const CurrentMembers: React.FC = () => {
   const avatarSize = useBreakpointValue({ base: 'xl', md: '2xl' });
-  let people: Person[] = data['people'];
+  const people = data['people'];
   return (
     <Layout title="Current Members">
       <SimpleGrid
@@ -32,7 +32,7 @@ export const CurrentMembers: React.VFC = () => {
         pt="3"
         borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
-        {people.map(({ picture, name, role, bio, email }, i) => (
+        {people.map(({ picture, name, role }, i) => (
           <Flex direction="row" marginBottom="30px" key={i}>
             <Avatar src={picture} size={avatarSize} name={name} />
             <Box paddingLeft="40px">
@@ -44,16 +44,6 @@ export const CurrentMembers: React.VFC = () => {
                       Role: {role}
                     </Text>
                   </Text>
-
-                  {bio ? (
-                    <Text>
-                      <Text as="span" fontWeight="900">
-                        Bio: {bio}
-                      </Text>
-                    </Text>
-                  ) : (
-                    <div />
-                  )}
                 </Stack>
               </Flex>
             </Box>

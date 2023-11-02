@@ -46,14 +46,15 @@ export const Projects: React.FC = () => {
             <Button
               sx={{
                 color: '#B7E0F1',
-                fontSize: '16px',
+                fontSize: '13px',
                 fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
                 fontWeight: 'bolder',
                 flex: '50%',
                 marginRight: 'auto',
                 lineHeight: '40px',
                 width: '150px',
-                borderColor: '#ADBAEF !important',
+                borderColor: '#B7E0F1 !important',
+                textTransform: 'uppercase',
               }}
               variant="outline"
             >

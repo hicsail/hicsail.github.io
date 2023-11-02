@@ -61,7 +61,7 @@ export const Card: React.FC<Props> = ({
         <Box backgroundColor="white">
           <Image
             src={imageHref}
-            fallbackSrc="../../img/research/placeholder-research.jpg"
+            fallbackSrc="../../img/research/placeholder-research.png"
             alt="Card Image"
             boxSize="300px"
             objectFit="cover"
