@@ -1,4 +1,4 @@
-import { Box, Grid, Button, Icon, Text } from '@chakra-ui/react';
+import { Box, Grid, IconButton, Icon, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useState } from 'react';
 import { Card } from '../Card';
@@ -39,14 +39,18 @@ interface ProjectSelectProps {
 }
 
 const options = [
-  { title: 'Featured', icon: BiData },
-  { title: 'All', icon: BiGridHorizontal },
-  { title: 'Data Science', icon: BiData },
-  { title: 'Digital Health', icon: BiHealth },
-  { title: 'Ed Tech', icon: BiBookBookmark },
-  { title: 'Legacy', icon: BiHourglass },
-  { title: 'Natural Sciences', icon: BiAtom },
-  { title: 'Privacy and Security', icon: BiShieldQuarter },
+  { title: 'Featured', icon: <BiData />, color: '#396CD6' },
+  { title: 'All', icon: <BiGridHorizontal />, color: '#D6CA39' },
+  { title: 'Data Science', icon: <BiData />, color: '#D6A339' },
+  { title: 'Digital Health', icon: <BiHealth />, color: '#BBD639' },
+  { title: 'Ed Tech', icon: <BiBookBookmark />, color: '#6CD639' },
+  { title: 'Legacy', icon: <BiHourglass />, color: '#39D654' },
+  { title: 'Natural Sciences', icon: <BiAtom />, color: '#39D6A3' },
+  {
+    title: 'Privacy and Security',
+    icon: <BiShieldQuarter />,
+    color: '#39BAD6',
+  },
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
@@ -165,35 +169,34 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
   };
 
   return (
-    <Box>
+    <Box display="grid" alignSelf="start">
       {showSelect ? (
-        <Box>
-          <Box
-            borderWidth="1px"
-            display="flex"
-            flexDirection="row"
-            padding="24px"
-            justifyContent="space-between"
-          >
-            {projectsOptions.map(({ title, icon }) => (
-              <Button
+        <Box
+          display="flex"
+          flexDirection="row"
+          padding="24px"
+          justifyContent="space-evenly"
+          alignItems="flex-start"
+        >
+          {projectsOptions.map(({ title, icon, color }) => (
+            <Box maxWidth="7em" display="flex" flexDirection="column">
+              <IconButton
                 key={title}
-                onClick={() => handleOptionSelect(title)}
+                aria-label="haha"
+                icon={icon}
                 variant="ghost"
-                display="flex"
-                flexDirection="column"
-                maxWidth="6em"
+                color={color}
+                onClick={() => handleOptionSelect(title)}
                 transition="transform 350ms ease-in-out"
                 _hover={{
-                  transform: 'scale(1.05)',
+                  transform: 'scale(1.25)',
                   transition: 'transform 300ms',
                 }}
-              >
-                <Icon id="glyphicon" as={icon} color="blue.400" />
-                <Text whiteSpace="initial">{title}</Text>
-              </Button>
-            ))}
-          </Box>
+                fontSize="45px"
+              />
+              <Text whiteSpace="initial">{title}</Text>
+            </Box>
+          ))}
         </Box>
       ) : (
         <></>
