@@ -11,35 +11,29 @@ import {
 import { BiDollarCircle, BiBuilding, BiGroup } from 'react-icons/bi';
 import * as React from 'react';
 import './DataVisual.css';
+import data from '../../utils/data/data.json';
 
 export const DataVisual: React.FC = () => {
+  const dataVisual = data['dataVisual'];
   return (
     <Box>
       <Card boxShadow={0}>
         <CardBody backgroundColor={useColorModeValue('white', 'gray.800')}>
-          <HStack
-            id="stackityStack"
-            margin="0.3em 1.5em"
-            justifyContent="space-between"
-          >
+          <HStack id="stackityStack">
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiBuilding} color="blue.400" />
-              <Heading id="cardHeading">30+</Heading>
-              <Text id="cardText">
-                Dynamic and enduring partnerships we've forged since 2022.
-              </Text>
+              <Heading id="cardHeading">{dataVisual[0].header}</Heading>
+              <Text id="cardText">{dataVisual[0].content}</Text>
             </Box>
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiDollarCircle} color="green.400" />
-              <Heading id="cardHeading">40+</Heading>
-              <Text id="cardText">Projects</Text>
+              <Heading id="cardHeading">{dataVisual[1].header}</Heading>
+              <Text id="cardText">{dataVisual[1].content}</Text>
             </Box>
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiGroup} color="red.400" />
-              <Heading id="cardHeading">100+</Heading>
-              <Text id="cardText">
-                Faculty members we have had pleasure collaborating.
-              </Text>
+              <Heading id="cardHeading">{dataVisual[2].header}</Heading>
+              <Text id="cardText">{dataVisual[2].content}</Text>
             </Box>
           </HStack>
         </CardBody>

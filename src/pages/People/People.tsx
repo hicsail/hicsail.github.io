@@ -1,5 +1,5 @@
 import './People.css';
-import { Box, Text, Container, Heading, Grid } from '@chakra-ui/react';
+import { Box, Text, Heading, Grid } from '@chakra-ui/react';
 import * as React from 'react';
 import data from '../../utils/data/data.json';
 import { Person } from '../../components/Person';

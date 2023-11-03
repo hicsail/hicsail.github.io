@@ -25,11 +25,7 @@ export const AboutBlurb: React.FC = () => {
       </Heading>
       <Card boxShadow={0}>
         <CardBody backgroundColor="gray.800">
-          <HStack
-            id="stackityStack"
-            margin="0.3em 1.5em 0.3em 1.5em"
-            justifyContent="space-between"
-          >
+          <HStack id="stackityStack">
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiLaptop} color="#178123" />
               <Heading id="h2">

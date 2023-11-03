@@ -32,11 +32,34 @@
   }
 }
 
+#outerBox {
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
 #icon {
-  transition: 'transform 350ms ease-in-out';
+  transition: transform 350ms ease-in-out;
 }
 
 #icon:hover {
   transform: scale(1.25);
   transition: transform 300ms;
+}
+
+#projectCard {
+  transition: transform 350ms ease-in-out;
+}
+
+#projectCard:hover {
+  transform: scale(1.05);
+  transition: transform 300ms;
+}
+
+#projectsGrid {
+  gap: 8px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }

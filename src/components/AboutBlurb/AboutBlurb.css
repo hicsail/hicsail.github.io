@@ -16,29 +16,7 @@
   font-size: 0.9em;
 }
 
-#boxForMovingText {
-  width: 100%;
-  color: rgb(0, 170, 77);
-  overflow: hidden;
-  font-size: 2em;
-  font-weight: 700;
-  font-family: 'Graphik,Helvetica,Arial,sans-serif !important';
-}
-
-#movingText {
-  display: block; /* Important to give the content a width */
-
-  width: 100%;
-  transform: translateX(100%); /* Animation start out of the screen */
-
-  /* Add the animation */
-  animation: move 30s linear infinite
-    /* infinite make reapeat the animation indefinitely */;
-}
-
-/* Create the animation */
-@keyframes move {
-  to {
-    transform: translateX(-100%);
-  }
+#stackityStack {
+  margin: 0.3em 1.5em;
+  justify-content: space-between;
 }

@@ -59,14 +59,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
     return (
       <>
         {list.map((project: ProjectInfo, index: number) => (
-          <Box
-            key={`${project.title}${index}`}
-            transition="transform 350ms ease-in-out"
-            _hover={{
-              transform: 'scale(1.05)',
-              transition: 'transform 300ms',
-            }}
-          >
+          <Box id="projectCard" key={`${project.title}${index}`}>
             <Card
               modalButtonText={project.title}
               modalButtonSubText={project.titleDescription}
@@ -85,14 +78,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
         {list.map((project: ProjectInfo, index: number) => (
           <>
             {project.featured == true && (
-              <Box
-                key={`${index}${project.title}`}
-                transition="transform 350ms ease-in-out"
-                _hover={{
-                  transform: 'scale(1.05)',
-                  transition: 'transform 300ms',
-                }}
-              >
+              <Box id="projectCard" key={`${index}${project.title}`}>
                 <Card
                   modalButtonText={project.title}
                   modalButtonSubText={project.titleDescription}
@@ -111,14 +97,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
     return (
       <>
         {oldProjects.map((project: ProjectInfo, index: number) => (
-          <Box
-            key={index}
-            transition="transform 350ms ease-in-out"
-            _hover={{
-              transform: 'scale(1.05)',
-              transition: 'transform 300ms',
-            }}
-          >
+          <Box id="projectCard" key={index}>
             <Card
               modalButtonText={project.title}
               modalButtonSubText={project.titleDescription}
@@ -137,14 +116,7 @@ const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
         {list
           .filter((project) => project.projectType == selected)
           .map((project: ProjectInfo, index: number) => (
-            <Box
-              key={project.title}
-              transition="transform 350ms ease-in-out"
-              _hover={{
-                transform: 'scale(1.05)',
-                transition: 'transform 300ms',
-              }}
-            >
+            <Box id="projectCard" key={project.title}>
               <Card
                 modalButtonText={project.title}
                 modalButtonSubText={project.titleDescription}
@@ -171,13 +143,7 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
   return (
     <Box display="grid" alignSelf="start">
       {showSelect ? (
-        <Box
-          display="flex"
-          flexDirection="row"
-          padding="24px"
-          justifyContent="space-evenly"
-          alignItems="flex-start"
-        >
+        <Box id="outerBox">
           {projectsOptions.map(({ title, icon, color }) => (
             <Box id="categoriesBox">
               <IconButton
@@ -199,12 +165,7 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
         <></>
       )}
       <Box mb="1rem">
-        <Grid
-          gridTemplateColumns="repeat(auto-fill, minmax(250px, 1fr))"
-          gap="8px"
-          mt="1rem"
-          boxSizing="border-box"
-        >
+        <Grid id="projectsGrid" mt="1rem">
           <ProjectSelect selected={selected} list={list} />
         </Grid>
       </Box>

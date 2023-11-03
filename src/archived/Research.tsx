@@ -1,8 +1,5 @@
 import * as React from 'react';
-import {
-  ONGOINGRESEARCH_LIST,
-  PASTRESEARCH_LIST,
-} from '../utils/data/researchInformation';
+import { ONGOINGRESEARCH_LIST, PASTRESEARCH_LIST } from './researchInformation';
 import { ResearchGrid } from './ResearchGrid';
 
 export const Research = () => {

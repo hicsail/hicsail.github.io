@@ -10,7 +10,6 @@
       "name": "Jeff Simeon",
       "picture": "../../img/team/JeffSimeon.jpg",
       "role": "Associate Director, Programs & Product Management",
-      "bio": "Jeff Simeon is a product specialist that has launched software in his own startups and inside institutions. In his current position, Jeff collaborates with researchers across Boston University. Jeff guides the engineering team through start, creation and launch of capable research software. He looks forward to solving your research problems!    ",
       "email": "simeon@bu.edu"
     },
     {
@@ -23,7 +22,6 @@
       "name": "Arezoo Sadeghi",
       "picture": "../../img/team/ArezooSadeghi.jpg",
       "role": "Senior Software Engineer",
-      "bio": "As a full stack software engineer, Arezoo loves working with different technology stacks and frameworks to build optimal software solutions and analytical tools for solving problems in variety of domains such as data science, digital health and synthetic biology. She got her master's degree in computer science from Boston University prior to joining SAIL",
       "email": "asadeg02@bu.edu"
     },
     {
@@ -117,18 +115,8 @@
       "href": "../../../img/projects/illustrations/sorting.png",
       "projectType": "Data Science",
       "pi": ["Dr. Naomi Caselli, Assistant Professor, Wheelock"],
-      "metaDataPresentation": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ],
-      "metaDataPublication": [
-        {
-          "name": "",
-          "href": ""
-        }
-      ]
+      "metaDataPresentation": [],
+      "metaDataPublication": []
     },
     {
       "featured": true,
@@ -418,36 +406,6 @@
       "metaDataPublication": []
     }
   ],
-  "projectsListed": [
-    "Web MPC",
-    "ASL-LEX",
-    "Camera Mouse",
-    "PACT",
-    "TPAT",
-    "SIEVE",
-    "Wage Gap Calculator",
-    "Noise Score",
-    "Cookie Monster",
-    "VA App",
-    "Microb-DB",
-    "Storm-Chaser",
-    "NIST",
-    "COMETS",
-    "Climate Lies",
-    "Web OMM",
-    "fNIRS",
-    "Center for Young Colorful Minds",
-    "BROC Online Inquiry System",
-    "RESTORE",
-    "Shape-Up",
-    "MTSS",
-    "Career Map",
-    "EcoForecast",
-    "SUDTraining",
-    "Black Women's Health Study",
-    "COVID",
-    "Anchor"
-  ],
   "oldProjects": [
     {
       "title": "Anchor",
@@ -504,45 +462,6 @@
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
-    }
-  ],
-  "projectsListed": [
-    "Web MPC",
-    "ASL-LEX",
-    "Camera Mouse",
-    "PACT",
-    "TPAT",
-    "SIEVE",
-    "Wage Gap Calculator",
-    "Noise Score",
-    "Cookie Monster",
-    "VA App",
-    "Microb-DB",
-    "Storm-Chaser",
-    "NIST",
-    "COMETS",
-    "Climate Lies",
-    "Web OMM",
-    "fNIRS",
-    "Center for Young Colorful Minds",
-    "BROC Online Inquiry System",
-    "RESTORE",
-    "Shape-Up",
-    "COVID",
-    "Anchor",
-    "SUDTraining",
-    "Black Women's Health Study"
-  ],
-  "oldProjects": [
-    {
-      "title": "COVID",
-      "titleDescription": "Clinical Testing Lab",
-      "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
-      "href": "../../../img/projects/illustrations/formula.png",
-      "projectType": "Digital Health",
-      "pi": null,
-      "metaDataPresentation": [],
-      "metaDataPublication": []
     },
     {
       "title": "Shape-Up",
@@ -579,6 +498,44 @@
       ],
       "metaDataPresentation": [],
       "metaDataPublication": []
+    }
+  ],
+  "projectsListed": [
+    "Web MPC",
+    "ASL-LEX",
+    "Camera Mouse",
+    "PACT",
+    "TPAT",
+    "SIEVE",
+    "Wage Gap Calculator",
+    "Noise Score",
+    "Cookie Monster",
+    "VA App",
+    "Microb-DB",
+    "Storm-Chaser",
+    "NIST",
+    "COMETS",
+    "Climate Lies",
+    "Web OMM",
+    "fNIRS",
+    "Center for Young Colorful Minds",
+    "BROC Online Inquiry System",
+    "RESTORE",
+    "Shape-Up",
+    "COVID",
+    "Anchor",
+    "SUDTraining",
+    "Black Women's Health Study"
+  ],
+  "dataVisual": [
+    {
+      "header": "30+",
+      "content": "Dynamic and enduring partnerships we've forged since 2022."
+    },
+    { "header": "40+", "content": "Projects" },
+    {
+      "header": "100+",
+      "content": "Faculty members we have had pleasure collaborating."
     }
   ]
 }
