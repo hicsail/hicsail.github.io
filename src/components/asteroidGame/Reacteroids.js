@@ -497,10 +497,6 @@ export class Reacteroids extends Component {
             textAlign: 'center',
             width: '100%',
             fontSize: '1.5rem',
-            // position: 'absolute',
-            // top: '80vh',
-            // right: '5vh',
-            // margin: '10px',
           }}
         >
           <button
@@ -508,9 +504,6 @@ export class Reacteroids extends Component {
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
               fontFamily: 'Karbon',
               cursor: 'pointer',
-              // position: 'absolute',
-              // top: '80vh',
-              // right: '5vh',
             }}
             onClick={this.startGame.bind(this)}
           >
@@ -519,6 +512,33 @@ export class Reacteroids extends Component {
         </div>
       );
     }
+
+    scrolling = (
+      <div
+        style={{
+          fontSize: '1.2rem',
+          fontWeight: '600',
+          position: 'absolute',
+          top: '80vh',
+          right: '5vh',
+          backgroundColor: 'orange',
+          color: 'black',
+          padding: '15px 15px',
+          boxShadow: '0 5px 25px 0 rgba(0, 0, 0, 0.25)',
+        }}
+      >
+        <button
+          style={{
+            color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
+            fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
+            cursor: 'pointer',
+          }}
+          onClick={this.launchShip.bind(this)}
+        >
+          Learn More
+        </button>
+      </div>
+    );
 
     if (!this.state.shipLoaded) {
       startgame = (
@@ -629,8 +649,6 @@ export class Reacteroids extends Component {
         <div
           style={{
             fontSize: '1.5rem',
-            // width: '100%',
-            // textAlign: 'center',
             backgroundColor: 'orange',
             position: 'absolute',
             top: '75vh',
@@ -640,7 +658,6 @@ export class Reacteroids extends Component {
             color: 'black',
             padding: '5px 15px',
             boxShadow: '0 5px 25px 0 rgba(0, 0, 0, 0.25)',
-            // margin: '10px',
           }}
         >
           Score: {this.state.currentScore}

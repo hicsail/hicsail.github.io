@@ -13,6 +13,7 @@ import {
   IconButton,
   ModalBody,
   ModalCloseButton,
+  Button,
 } from '@chakra-ui/react';
 import { isBrowser, isMobile } from 'react-device-detect';
 import * as React from 'react';

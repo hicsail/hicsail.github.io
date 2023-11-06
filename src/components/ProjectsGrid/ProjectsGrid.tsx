@@ -40,17 +40,17 @@ interface ProjectSelectProps {
 
 const options = [
   { title: 'Featured', icon: <BiData />, color: '#396CD6' },
-  { title: 'All', icon: <BiGridHorizontal />, color: '#D6CA39' },
-  { title: 'Data Science', icon: <BiData />, color: '#D6A339' },
+  { title: 'All', icon: <BiGridHorizontal />, color: '#D6A339' },
+  { title: 'Data Science', icon: <BiData />, color: '#D6CA39' },
   { title: 'Digital Health', icon: <BiHealth />, color: '#BBD639' },
   { title: 'Ed Tech', icon: <BiBookBookmark />, color: '#6CD639' },
-  { title: 'Legacy', icon: <BiHourglass />, color: '#39D654' },
-  { title: 'Natural Sciences', icon: <BiAtom />, color: '#39D6A3' },
+  { title: 'Natural Sciences', icon: <BiAtom />, color: '#39D654' },
   {
     title: 'Privacy and Security',
     icon: <BiShieldQuarter />,
-    color: '#39BAD6',
+    color: '#39D6A3',
   },
+  { title: 'Legacy', icon: <BiHourglass />, color: '#39BAD6' },
 ];
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {

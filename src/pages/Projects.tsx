@@ -6,6 +6,12 @@ import { Box, Button, Spacer, Text } from '@chakra-ui/react';
 import { Fade } from 'react-awesome-reveal';
 
 export const Projects: React.FC = () => {
+  const handleClickScroll = () => {
+    const element = document.getElementById('middle');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const projects = data['projects'];
   return (
     <Box>
@@ -57,8 +63,9 @@ export const Projects: React.FC = () => {
                 textTransform: 'uppercase',
               }}
               variant="outline"
+              onClick={handleClickScroll}
             >
-              <a href="#middle">Jump to Projects</a>
+              <a>Jump to Projects</a>
             </Button>
           </Box>
         </Fade>
@@ -90,6 +97,7 @@ export const Projects: React.FC = () => {
         fontSize="30px"
         fontWeight="700"
         marginLeft="40px"
+        paddingTop="30px"
         fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
       >
         Dive into different areas we work in
