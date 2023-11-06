@@ -149,7 +149,7 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
               <IconButton
                 id="icon"
                 key={title}
-                aria-label="haha"
+                aria-label="filtering"
                 icon={icon}
                 variant="ghost"
                 color={color}

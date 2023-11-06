@@ -19,4 +19,5 @@
 #stackityStack {
   margin: 0.3em 1.5em;
   justify-content: space-between;
+  align-items: flex-start;
 }
