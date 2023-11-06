@@ -497,10 +497,6 @@ export class Reacteroids extends Component {
             textAlign: 'center',
             width: '100%',
             fontSize: '1.5rem',
-            // position: 'absolute',
-            // top: '80vh',
-            // right: '5vh',
-            // margin: '10px',
           }}
         >
           <button
@@ -508,9 +504,6 @@ export class Reacteroids extends Component {
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
               fontFamily: 'Karbon',
               cursor: 'pointer',
-              // position: 'absolute',
-              // top: '80vh',
-              // right: '5vh',
             }}
             onClick={this.startGame.bind(this)}
           >
@@ -524,8 +517,6 @@ export class Reacteroids extends Component {
       startgame = (
         <div
           style={{
-            // textAlign: 'center',
-            // width: '100%',
             fontSize: '1.5rem',
             position: 'absolute',
             top: '80vh',
@@ -538,10 +529,7 @@ export class Reacteroids extends Component {
         >
           <button
             style={{
-              // position: 'absolute',
-              // padding: '10px 20px',
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              // margin: '10px',
               fontFamily: 'Karbon',
               cursor: 'pointer',
             }}
@@ -633,8 +621,6 @@ export class Reacteroids extends Component {
         <div
           style={{
             fontSize: '1.5rem',
-            // width: '100%',
-            // textAlign: 'center',
             backgroundColor: 'orange',
             position: 'absolute',
             top: '75vh',
@@ -644,7 +630,6 @@ export class Reacteroids extends Component {
             color: 'black',
             padding: '5px 15px',
             boxShadow: '0 5px 25px 0 rgba(0, 0, 0, 0.25)',
-            // margin: '10px',
           }}
         >
           Score: {this.state.currentScore}
