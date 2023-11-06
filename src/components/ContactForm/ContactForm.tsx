@@ -52,6 +52,34 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
       body: JSON.stringify({
         name: data.projectTitle,
         description: data.projectDescription,
+        custom_fields: [
+          {
+            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99d',
+            name: 'projectTitle',
+            value: data.name,
+          },
+          {
+            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
+            name: 'title',
+            value: data.title,
+          },
+          {
+            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99b',
+            name: 'college',
+            value: data.college,
+          },
+          {
+            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99c',
+            name: 'email',
+            type: 'email',
+            value: data.email,
+          },
+          {
+            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a3',
+            name: 'referral',
+            value: data.referral,
+          },
+        ],
       }),
     },
   );
@@ -314,7 +342,7 @@ export const ContactForm: React.FC = () => {
           <option value="Other">Other</option>
         </Select>
       </FormControl>
-      <Button id="submitButton" type="submit" size="lg">
+      <Button id="submitButton" type="submit" size="lg" colorScheme="blue">
         Submit
       </Button>
     </form>
