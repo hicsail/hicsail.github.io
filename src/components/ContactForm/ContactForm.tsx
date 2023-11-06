@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import './ContactForm.css';
 
 type Input = {
@@ -38,8 +38,7 @@ type CreateResponse = {
 };
 
 const onSubmit: SubmitHandler<Input> = async (data) => {
-  console.log('we end up here, ', data.applicationType);
-  const apiKey: string = process.env.REACT_APP_API_KEY || 'backup_api_key';
+  const apiKey = 'pk_48193489_A5GVMEA22YKXE7PJ8Z98KT1CNZ8GR86H';
   const collaboratorsId = 'dj3zz-11511';
   const projectsId = 'dj3zz-640';
   const collaborator = await fetch(
@@ -53,34 +52,6 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
       body: JSON.stringify({
         name: data.projectTitle,
         description: data.projectDescription,
-        custom_fields: [
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99d',
-            name: 'projectTitle',
-            value: data.name,
-          },
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
-            name: 'title',
-            value: data.title,
-          },
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99b',
-            name: 'college',
-            value: data.college,
-          },
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99c',
-            name: 'email',
-            type: 'email',
-            value: data.email,
-          },
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a3',
-            name: 'referral',
-            value: data.referral,
-          },
-        ],
       }),
     },
   );
@@ -133,6 +104,8 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
     },
   );
 
+  const hehe = await response.json();
+  console.log(hehe);
   if (!response.ok) {
     throw new Error(`Error! status: ${response.status}`);
   }
@@ -274,12 +247,7 @@ export const ContactForm: React.FC = () => {
           )}
         />
       </FormControl>
-      <Box
-        fontSize="15px"
-        fontWeight="600"
-        marginBottom="15px"
-        fontFamily="Segoe UI, Helvetica Neue, sans-serif"
-      >
+      <Box id="boxApplicationType">
         Content Management System, Blog, or Forum
         <blockquote>
           You would like to allow a group or community to assemble, present, or
@@ -346,7 +314,7 @@ export const ContactForm: React.FC = () => {
           <option value="Other">Other</option>
         </Select>
       </FormControl>
-      <Button mt={4} colorScheme="orange" type="submit" size="lg">
+      <Button id="submitButton" type="submit" size="lg">
         Submit
       </Button>
     </form>
