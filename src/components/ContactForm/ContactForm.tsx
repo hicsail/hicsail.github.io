@@ -341,7 +341,13 @@ export const ContactForm: React.FC = () => {
       <FormControl id="dept" isRequired>
         <FormLabel>College / Department</FormLabel>
         <Select {...register('college')} placeholder="Select option">
-          <option>1 </option>
+          {departments.map((dept: any) => (
+            <>
+              <option key={dept.value} value={dept.value}>
+                {dept.label}
+              </option>
+            </>
+          ))}
         </Select>
       </FormControl>
       <FormControl id="email" isRequired>
