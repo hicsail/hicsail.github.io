@@ -524,9 +524,8 @@ export class Reacteroids extends Component {
       startgame = (
         <div
           style={{
-            // textAlign: 'center',
-            // width: '100%',
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
+            fontWeight: '600',
             position: 'absolute',
             top: '80vh',
             right: '5vh',
@@ -538,11 +537,8 @@ export class Reacteroids extends Component {
         >
           <button
             style={{
-              // position: 'absolute',
-              // padding: '10px 20px',
               color: this.props.colorMode == 'white' ? '#000000' : '#FFFFFF',
-              // margin: '10px',
-              fontFamily: 'Karbon',
+              fontFamily: 'Graphik,Helvetica,Arial,sans-serif !important',
               cursor: 'pointer',
             }}
             onClick={this.launchShip.bind(this)}

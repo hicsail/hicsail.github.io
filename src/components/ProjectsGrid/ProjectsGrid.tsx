@@ -1,6 +1,6 @@
 import { Box, Grid, IconButton, Icon, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Card } from '../Card';
 import data from '../../utils/data/data.json';
 import './ProjectsGrid.css';

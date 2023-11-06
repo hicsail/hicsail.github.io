@@ -54,6 +54,13 @@ export const Home: React.FC = () => {
     );
   }
 
+  const handleClickScroll = () => {
+    const element = document.getElementById('about');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Box width="100%" boxSizing="border-box">
       {isMobile && (
@@ -160,7 +167,7 @@ export const Home: React.FC = () => {
             </Box>
           )}
           <Box gridArea="about" marginBottom="2em">
-            <Heading textStyle="h2" mt="2rem">
+            <Heading textStyle="h2" mt="2rem" id="about">
               About
             </Heading>
             <Text textStyle="paragraph">
