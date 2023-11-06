@@ -55,13 +55,6 @@ export const Home: React.FC = () => {
     );
   }
 
-  const handleClickScroll = () => {
-    const element = document.getElementById('about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <Box width="100%" boxSizing="border-box">
       {isMobile && (
