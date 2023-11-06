@@ -39,10 +39,10 @@ type CreateResponse = {
 
 const onSubmit: SubmitHandler<Input> = async (data) => {
   const apiKey = 'pk_48193489_A5GVMEA22YKXE7PJ8Z98KT1CNZ8GR86H';
-  const collaboratorsId = 'dj3zz-11511';
-  const projectsId = 'dj3zz-640';
+  const collaboratorsId = '901100186724';
+  const projectsId = '901100186744';
   const collaborator = await fetch(
-    `https://api.clickup.com/api/v2/list/${collaboratorsId}`,
+    `https://api.clickup.com/api/v2/list/${collaboratorsId}/task`,
     {
       method: 'POST',
       headers: {
@@ -85,7 +85,7 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
   );
 
   const response = await fetch(
-    `https://api.clickup.com/api/v2/list/${projectsId}`,
+    `https://api.clickup.com/api/v2/list/${projectsId}/task`,
     {
       method: 'POST',
       headers: {
