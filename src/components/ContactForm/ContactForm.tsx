@@ -10,6 +10,8 @@ import {
   Select,
   Textarea,
   Radio,
+  InputLeftAddon,
+  InputGroup,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
@@ -21,6 +23,7 @@ type Input = {
   title: string;
   college: string;
   email: string;
+  phone: string;
   projectTitle: string;
   projectDescription: string;
   applicationType: string;
@@ -52,21 +55,14 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
       body: JSON.stringify({
         name: data.projectTitle,
         description: data.projectDescription,
-        custom_fields: [
+        fields: [
           {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99d',
-            name: 'projectTitle',
-            value: data.name,
-          },
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
-            name: 'title',
-            value: data.title,
-          },
-          {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99b',
-            name: 'college',
+            id: '3fc4c175-b322-4863-a0f8-f398c79a062f',
             value: data.college,
+          },
+          {
+            id: '8db8f1f3-1f3d-4cc8-8fe9-eb644d1025bc',
+            value: data.title,
           },
           {
             id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99c',
@@ -75,8 +71,7 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
             value: data.email,
           },
           {
-            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b9a3',
-            name: 'referral',
+            id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
             value: data.referral,
           },
         ],
@@ -156,6 +151,179 @@ export const ContactForm: React.FC = () => {
     e.preventDefault();
     console.log(e);
   };
+  const departments = [
+    {
+      value: '759cc24e-9e5c-4e13-af97-1e9f267a8651',
+      label: 'Faculty of Computing & Data Sciences',
+    },
+    {
+      value: 'f0908240-67c8-40a0-9f77-3963fab67805',
+      label: 'College of Arts & Sciences - Earth and Environment',
+    },
+    {
+      value: '67a7e8ac-7974-478f-b31f-4ca48971758a',
+      label: 'College of Arts & Sciences - Economics',
+    },
+    {
+      value: 'c8fc55eb-d44a-4151-adf4-1ef0d27b80f7',
+      label: 'College of Arts & Sciences - Physics',
+    },
+    {
+      value: 'aab039e2-5750-498a-b343-648c4ec57860',
+      label: 'College of Arts & Sciences - Mathematics & Statistics',
+    },
+    {
+      value: 'c624a980-8a62-469a-936c-fc0159c16b79',
+      label: 'College of Arts & Sciences - Computer Science',
+    },
+    {
+      value: '9ad1096a-9727-4d34-b07b-8f082fc5a37b',
+      label: 'College of Engineering - ECE',
+    },
+    {
+      value: '50b243ef-48de-46f9-8688-5c91e6227150',
+      label: 'College of Engineering - Mechanical Engineering',
+    },
+    {
+      value: '916d6edc-2362-453c-8abf-24296840a910',
+      label: 'College of Engineering - Biomedical Engineering',
+    },
+    {
+      value: '3f53cac7-500b-4ce6-9bb8-86be8a51a3db',
+      label: 'Chobanian & Advesian School of Medicine',
+    },
+    {
+      value: 'b1d6f634-c586-4402-95d4-992b85742256',
+      label: 'School of Medicine - CNTR-Slone Epidemiology Center',
+    },
+    {
+      value: '0c08d77f-4749-4ef3-9ea2-63c089bcbf19',
+      label: 'School of Medicine - Computational Biomedicine',
+    },
+    {
+      value: 'd4152741-2115-40a1-87f8-1e9b94c27931',
+      label: 'School of Medicine - Behavioral Science',
+    },
+    {
+      value: '67168d8f-c228-49c2-8764-397678fff180',
+      label: 'School of Medicine - Neuroscience',
+    },
+    {
+      value: '1088fd6a-1a78-4fca-91e6-f0bbf5333e82',
+      label: 'School of Medicine - Mental Health Counseling',
+    },
+    {
+      value: '75c70402-5ed5-40ad-abeb-b95a5b006906',
+      label: 'School of Medicine - Psychiatry and Psychological Brain Sciences',
+    },
+    {
+      value: '45c1a0a3-ab8a-4728-8b49-860d43e4aa77',
+      label: 'School of Medicine - Psychiatry',
+    },
+    {
+      value: '0fbf948c-8929-46bf-b002-39b5cbad421c',
+      label: 'School of Medicine - Nephrology',
+    },
+    {
+      value: '94c186b7-8b9b-4a8a-aea0-73691367edac',
+      label: 'Henry M. Goldman School of Dental Medicine',
+    },
+    {
+      value: 'cf1c41ed-175c-4bca-bd51-6af769a1a2fc',
+      label: 'School of Dental Medicine - Prosthodontic Treatment Center',
+    },
+    {
+      value: 'c9c04aca-b6a6-4335-81de-afd60be4bbc3',
+      label: 'School of Dental Medicine - Orthodontics & Dental Orthopedics',
+    },
+    {
+      value: '2fbcee1d-4a2b-48a5-87fb-1ca5016b50a4',
+      label: 'School of Dental Medicine - General Dentistry',
+    },
+    {
+      value: '3e1cc3f1-7a19-49d2-b485-ae1985b54553',
+      label: 'School of Public Health',
+    },
+    {
+      value: '7e0f909b-392c-4fbd-a294-083c760a082b',
+      label: 'Sargent - Physical Therapy and Athletic Training',
+    },
+    {
+      value: '3f9a1c74-9876-474b-b69e-1262292c6ba7',
+      label: 'Occupational Therapy Department',
+    },
+    {
+      value: '2e0c4f8b-cc35-42e1-8086-9e8994bab288',
+      label: 'College of Communication',
+    },
+    {
+      value: 'ac39cd6b-6890-4ad5-b396-887d8e1393af',
+      label: 'Frederick S. Pardee School of Global Studies',
+    },
+    {
+      value: 'f3e680c8-4679-48a9-b175-365f2c915e5d',
+      label: 'Graduate School of Arts & Sciences',
+    },
+    {
+      value: '3f3faa9e-44b5-4d5b-b552-0b31ada50013',
+      label: 'Metropolitan College & Extended Education',
+    },
+    {
+      value: 'f525bfcd-2497-45bf-bffa-757ad1756bf8',
+      label: 'Questrom School of Business',
+    },
+    {
+      value: 'ccfc1351-c959-44eb-8025-56f0f81ae4d9',
+      label: 'School of Theology',
+    },
+    {
+      value: '7a0b7b96-45d3-4a47-bd71-975eab2334cb',
+      label: 'Wheelock College of Education & Human Development',
+    },
+    {
+      value: '162de623-bafa-429f-8b8e-6d2441b9af4b',
+      label: 'BMO: Office of Black Male Advancement',
+    },
+    {
+      value: '6317962c-6fe7-4096-878f-4e125564973f',
+      label: 'Boston Womens Workforce Council',
+    },
+    {
+      value: 'c7569646-a804-4ff3-b66d-69b03e1c7ce0',
+      label: 'Center for Antiracist Research',
+    },
+    {
+      value: '4973508b-e495-473a-b635-2efca1470eee',
+      label: 'Counseling Psychology and Applied Human Development',
+    },
+    {
+      value: '53fa6f8a-3d85-4d71-80e4-33f47459ac7e',
+      label: 'Digital Learning & Innovation',
+    },
+    {
+      value: '4477d278-3fe7-45bc-a31d-978a992b9072',
+      label: 'Global Development Policy Center',
+    },
+    {
+      value: '65d2fe9f-2c97-4407-b0e6-2ca3dbb28cba',
+      label: 'Hariri Institute',
+    },
+    {
+      value: 'b6e705a8-39e7-47d7-b591-5d087b3ed4cd',
+      label: 'Information Services & Technology',
+    },
+    {
+      value: '445d3d5c-e02d-4b71-b14b-1a2f5305c438',
+      label: 'Institute for Global Sustainability',
+    },
+    { value: '8d759ebe-49a8-4db6-97cf-3e82e31b5d19', label: 'Mass Open Cloud' },
+    {
+      value: 'f0ba285b-e128-4c96-a660-0e9947e34b44',
+      label: 'Office of the Dean - ASL',
+    },
+    { value: '559a8d3a-6d60-450e-bb3a-45376d55fac4', label: 'Provost Office' },
+    { value: 'b8fed1c7-2bb9-488a-9ada-465d1b2cfeab', label: 'External' },
+  ];
 
   return (
     <form ref={form} onSubmit={handleSubmit(onSubmit)}>
@@ -173,37 +341,7 @@ export const ContactForm: React.FC = () => {
       <FormControl id="dept" isRequired>
         <FormLabel>College / Department</FormLabel>
         <Select {...register('college')} placeholder="Select option">
-          <option value="busm">Chobanian & Advesian School of Medicine</option>
-          <option value="khc">Kilachand Honors College</option>
-          <option value="cas">College of Arts & Sciences</option>
-          <option value="com">College of Communication</option>
-          <option value="eng">College of Engineering</option>
-          <option value="cfa">College of Fine Arts</option>
-          <option value="cgs">College of General Studies</option>
-          <option value="cds">Faculty of Computing & Data Sciences</option>
-          <option value="pardee">
-            Frederick S. Pardee School of Global Studies
-          </option>
-          <option value="gms">Graduate Medical Sciences</option>
-          <option value="grs">Graduate School of Arts & Sciences</option>
-          <option value="sdm">
-            Henry M. Goldman School of Dental Medicine
-          </option>
-          <option value="met">Metropolitan College & Extended Education</option>
-          <option value="qst">Questrom School of Business</option>
-          <option value="sar">
-            Sargent College of Health & Rehabilitation Sciences
-          </option>
-          <option value="sha">School of Hospitality Administration</option>
-          <option value="sph">School of Public Health</option>
-          <option value="ssw">School of Social Work</option>
-          <option value="sth">School of Theology</option>
-          <option value="law">School of Law</option>
-          <option value="sed">
-            Wheelock College of Education & Human Development
-          </option>
-          <option value="military">Division of Military Education</option>
-          <option value="other">Other</option>
+          <option>1 </option>
         </Select>
       </FormControl>
       <FormControl id="email" isRequired>
@@ -212,6 +350,20 @@ export const ContactForm: React.FC = () => {
           type="email"
           {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
         />
+      </FormControl>
+      <FormControl id="phone" isRequired>
+        <FormLabel>Phone Number</FormLabel>
+        <InputGroup>
+          <InputLeftAddon children="+1" />
+          <Input
+            type="tel"
+            placeholder="Phone Number"
+            {...register('phone', {
+              required: true,
+              pattern: /^[0-9]{3}[-\s\.]?[0-9]{4,6}/,
+            })}
+          />
+        </InputGroup>
       </FormControl>
       <FormControl id="project" isRequired>
         <FormLabel>Project Title</FormLabel>
