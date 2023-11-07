@@ -1,4 +1,4 @@
-import { InternTestimonial, PersonInformation } from '../../types/types';
+import { InternTestimonial, PersonInformation } from '../types/types';
 
 export const CURRENTMEMBERS_LIST: Array<PersonInformation> = [
   {

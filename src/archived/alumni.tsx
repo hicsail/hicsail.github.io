@@ -1,4 +1,4 @@
-import { AlumniInformation } from '../../types/types';
+import { AlumniInformation } from '../types/types';
 
 export const ALUMNI: Array<AlumniInformation> = [
   {
