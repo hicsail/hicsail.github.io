@@ -56,7 +56,7 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
       body: JSON.stringify({
         name: data.projectTitle,
         description: data.projectDescription,
-        fields: [
+        custom_fields: [
           {
             id: '3fc4c175-b322-4863-a0f8-f398c79a062f',
             value: data.college,
@@ -66,7 +66,7 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
             value: data.title,
           },
           {
-            id: '5aefb3dc-97ea-4587-948d-302ba8b62fa2',
+            id: '9d420afa-4355-4eb6-840a-e3a8add43825',
             value: data.phone,
           },
           {
@@ -92,20 +92,19 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
         custom_fields: [
           {
             id: '3fc4c175-b322-4863-a0f8-f398c79a062f',
-            name: 'college',
             value: data.college,
           },
+          { id: '5aefb3dc-97ea-4587-948d-302ba8b62fa2', value: data.phone },
           {
             id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
             value: data.referral,
           },
+          { id: '616425f7-8385-4c54-8288-fd1074c02a35', value: data.email },
         ],
       }),
     },
   );
 
-  const hehe = await response.json();
-  console.log(hehe);
   if (!response.ok) {
     throw new Error(`Error! status: ${response.status}`);
   }
@@ -113,21 +112,17 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
     throw new Error(`Error! status: ${collaborator.status}`);
   }
 
-  const result = (await response.json()) as CreateResponse;
-  console.log('result is: ', JSON.stringify(result, null, 4));
+  const result1 = (await response.json()) as CreateResponse;
+  console.log('result is: ', JSON.stringify(result1, null, 4));
+  const result2 = (await collaborator.json()) as CreateResponse;
+  console.log('result is: ', JSON.stringify(result2, null, 4));
 
-  return result;
+  return result2;
 };
 
 export const ContactForm: React.FC = () => {
   const { control, register, handleSubmit } = useForm<Input>();
-  //const onSubmit: SubmitHandler<Input> = (data) => console.log(data.email)
   const form = useRef<any>();
-
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    console.log(e);
-  };
   const departments = data['departments'];
 
   return (
@@ -147,11 +142,9 @@ export const ContactForm: React.FC = () => {
         <FormLabel>College / Department</FormLabel>
         <Select {...register('college')} placeholder="Select option">
           {departments.map((dept: { value: string; label: string }) => (
-            <>
-              <option key={dept.value} value={dept.value}>
-                {dept.label}
-              </option>
-            </>
+            <option key={dept.label} value={dept.value}>
+              {dept.label}
+            </option>
           ))}
         </Select>
       </FormControl>
