@@ -10,4 +10,4 @@ generated
 .DS_Store
 docker-build
 
-.vscode
+.env

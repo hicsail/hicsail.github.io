@@ -1,5 +1,6 @@
 const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
 	entry: path.resolve(__dirname, 'src', 'index.tsx'),
@@ -50,4 +51,5 @@ module.exports = {
 			rewrites: [{ from: /.*/, to: '/404.html' }],
 		},
 	},
+	plugins: [new Dotenv()],
 }

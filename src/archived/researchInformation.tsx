@@ -1,6 +1,6 @@
 import { Box, Link, Text } from '@chakra-ui/react';
 import * as React from 'react';
-import { ResearchInformation, PublicationInformation } from '../../types/types';
+import { ResearchInformation, PublicationInformation } from '../types/types';
 
 export const ONGOINGRESEARCH_LIST: Array<ResearchInformation> = [
   {

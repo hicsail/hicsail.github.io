@@ -43,3 +43,20 @@ blockquote {
   font-weight: 400;
   margin-left: 15px;
 }
+
+#boxApplicationType {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family:
+    Segoe UI,
+    Helvetica Neue,
+    sans-serif;
+}
+
+#submitButton {
+  font-size: 1em;
+  font-weight: 600;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  text-transform: uppercase;
+}
