@@ -36,8 +36,6 @@ interface ProjectInfo {
   href: string;
   projectType: string;
   pi: any;
-  metaDataPresentation: any;
-  metaDataPublication: any;
 }
 
 interface ProjectSelectProps {
@@ -192,7 +190,7 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
         <></>
       )}
       <Box mb="1rem">
-        <Grid id="projectsGrid" mt="1rem">
+        <Grid id="projectsGrid" mt="1rem" justifyContent="space-around">
           <ProjectSelect selected={selected} list={list} />
         </Grid>
       </Box>

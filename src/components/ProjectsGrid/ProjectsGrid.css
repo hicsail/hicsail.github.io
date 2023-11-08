@@ -1,7 +1,3 @@
-#icon #categoryText {
-  transition: 2s ease-in;
-}
-
 #icon:active,
 .active {
   color: '#dcae34';
@@ -13,7 +9,7 @@
 
 @media screen and (max-width: 665px) {
   #icon {
-    width: 7.85vw;
+    width: 7.55vw;
   }
   #categoriesBox {
     width: 8vw;
@@ -25,7 +21,7 @@
     display: block;
     width: 20vw;
     position: relative;
-    margin-left: -5vw;
+    margin-left: -6.1vw;
   }
 }
 
@@ -48,14 +44,15 @@
   flex: 1 0 auto;
   flex-direction: row;
   padding: 24px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
+  height: 8.75rem;
 }
 
 #icon {
   transition: transform 350ms ease-in-out;
   margin-bottom: 1vh;
-  font-size: 3.7em;
+  font-size: 3.2em;
 }
 
 #icon:hover {

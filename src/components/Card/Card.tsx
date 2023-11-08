@@ -11,8 +11,6 @@ import {
   Image,
   Text,
   useColorModeValue,
-  Link,
-  List,
   Stack,
   ChakraProvider,
 } from '@chakra-ui/react';
@@ -37,8 +35,6 @@ export const Card: React.FC<Props> = ({
   imageHref,
   modalButtonSubText,
   pi,
-  metaDataPresentation,
-  metaDataPublication,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -52,7 +48,6 @@ export const Card: React.FC<Props> = ({
             alt="Card Image"
           />
         </Box>
-
         <Box p={5}>
           <Stack align="center">
             <Text id="modalText">{modalButtonText}</Text>
@@ -74,17 +69,13 @@ export const Card: React.FC<Props> = ({
                   />
                   <Box id="contentContainer">
                     <Text id="modalBodyText">{modalBody}</Text>
-                    {pi == null ? (
-                      <></>
-                    ) : (
+                    {pi && (
                       <>
                         <Text id="modalBodySubText">Collaborators: </Text>
                         {pi.map((person: string) => (
-                          <>
-                            <Text m="0" key={person}>
-                              {person}
-                            </Text>
-                          </>
+                          <Text m="0" key={person}>
+                            {person}
+                          </Text>
                         ))}
                       </>
                     )}
@@ -92,12 +83,7 @@ export const Card: React.FC<Props> = ({
                 </>
               </ModalBody>
               <ModalFooter>
-                <Button
-                  mr={3}
-                  onClick={onClose}
-                  textAlign="center"
-                  width="100%"
-                >
+                <Button id="modalButton" onClick={onClose}>
                   Close
                 </Button>
               </ModalFooter>

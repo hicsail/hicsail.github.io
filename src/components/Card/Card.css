@@ -56,3 +56,9 @@
   font-style: italic;
   margin-bottom: 5px;
 }
+
+#modalButton {
+  text-align: center;
+  width: 100%;
+  margin-right: 3;
+}
