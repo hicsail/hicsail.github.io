@@ -123,7 +123,7 @@
       "title": "Camera Mouse",
       "titleDescription": "Enhancing Accessibility through Eye Movements Tracking",
       "description": "Introducing 'Camera Mouse', a collaborative achievement between our team and Professor Margrit Betke, a distinguished Computer Science professor and co-leader of the Image and Video Computing Research Group at Boston University. This innovative software harnesses camera-based eye tracking, enabling effortless computer navigation without the need to lift a finger. The project's core mission is to enhance accessibility, seamlessly merging technological sophistication with user inclusivity. Camera Mouse is a significant step forward in redefining how we interact with computers, offering a more accessible and user-friendly digital experience.",
-      "href": "../../../img/projects/illustrations/cameraman.png",
+      "href": "../../../img/projects/illustrations/cameraman.webp",
       "projectType": "Data Science",
       "pi": [
         "Dr. Margrit Betke, Professor of Computer Science, Boston University"
@@ -215,7 +215,7 @@
       "title": "Shipley",
       "titleDescription": "Revealing Media Biases",
       "description": "Shipley, a groundbreaking platform, confronts racial bias within news articles. Offering two user views, it empowers local newsrooms to internally evaluate and address racial bias while allowing organizations like the NAACP to analyze data across geographic regions. Led by a dedicated team of SAIL engineers, the project employs machine learning and data science to gain insights into demographic portrayals in media coverage. Goals include developing an analysis tool, highlighting disparities in Boston's media coverage, and identifying correlations between specific regions and media representation, emphasizing demographics. Shipley is a pivotal step towards promoting fairness in journalism and media reporting through innovative, data-driven methods.",
-      "href": "../../../img/projects/illustrations/binoculars.png",
+      "href": "../../../img/projects/illustrations/binoculars.webp",
       "projectType": "Data Science",
       "pi": [
         "Ziba Cranmer, Director of BU Spark!",
@@ -229,7 +229,7 @@
       "title": "VA App",
       "titleDescription": "Veterans Empowered, Homes Secured",
       "description": "The VA App is a mobile application dedicated to ending veteran homelessness by allowing U.S. veterans to share their daily experiences and challenges through surveys. Through real-time data collection and analysis, this project seeks to uncover patterns that link survey responses with housing situations, thus informing targeted support and prevention strategies. With a focus on understanding precursors to homelessness, tailoring support, and implementing proactive measures, the VA App empowers veterans and plays a pivotal role in shaping policies and programs aimed at ensuring they receive the care and support they rightfully deserve.",
-      "href": "../../../img/projects/illustrations/house.png",
+      "href": "../../../img/projects/illustrations/house.webp",
       "projectType": "Digital Health",
       "pi": [
         "Donald Keith McInnes, Research Associate Professor, Boston University School of Public Health"
@@ -278,7 +278,7 @@
       "title": "COMETS",
       "titleDescription": "Precision Microbial Growth Simulation",
       "description": "COMETS represents an advanced simulation tool meticulously designed to replicate the growth patterns of microbes. This intricate simulation process demands substantial computational resources and time; however, the outcomes promise to significantly enhance users' research endeavors. Our primary deliverable is a user-friendly web application, purpose-built for conducting COMETS simulations with ease. This application provides a range of input mechanisms, including sliders, radio boxes, and checkboxes, empowering users to manipulate simulation variables effortlessly. Given the resource-intensive nature of these simulations, we prioritize efficiency by focusing on lightweight simulations, characterized by output sizes below 1GB and computation times less than 5 minutes. Further details and restrictions will be fine-tuned in collaboration with our project lead in later project stages.                                                Our project goals encompass the development of a web application for initiating COMETS simulations, displaying resulting simulations—comprising graphs, models, and other relevant outputs—and establishing a robust CI/CD pipeline that evolves alongside COMETS. Furthermore, we aim to deploy both the front-end and back-end components of this application on a remote server, ensuring accessibility and scalability for researchers.",
-      "href": "../../../img/projects/illustrations/archery.png",
+      "href": "../../../img/projects/illustrations/archery.webp",
       "projectType": "Natural Sciences",
       "pi": [
         "Iljia Dukovski, Research Assistant Professor, Bioinformatics Program at Boston University"
@@ -331,7 +331,7 @@
       "title": "Center for Young Colorful Minds",
       "titleDescription": "Youth Mental Wellness Hub",
       "description": "The 'Center for Young Colorful Minds (CYCM)' addresses the mental health crisis among youth of color and LGBTQ youth in Greater Boston and beyond. Our mission revolves around advancing mental health literacy and awareness through a dynamic online presence, focusing on culturally relevant mental health information, community engagement, and research initiatives. Collaborating with a youth advisory board and community partners, we disseminate accurate mental health content on social media. In addition, we strengthen ties with existing community programs, like the Boys and Girls Club, schools, and churches, to provide vital support. CYCM is also committed to research partnerships with academic institutions to develop evidence-based interventions that cater to the unique mental health needs of diverse youth. Our holistic approach empowers these communities by fostering resilience and well-being through knowledge, community, and research-backed initiatives.",
-      "href": "../../../img/projects/illustrations/chat.png",
+      "href": "../../../img/projects/illustrations/chat.webp",
       "projectType": "Digital Health",
       "pi": [
         "Dr. Christine M. Crawford, Director of Medical Student Education and Assistant Professor of Psychiatry at Boston University",
@@ -385,7 +385,7 @@
       "title": "Career Map",
       "titleDescription": "State Career Readiness",
       "description": "Career Map is a dynamic web-based interactive platform that provides valuable insights into the career readiness landscape of US states. This user-friendly map offers a comprehensive view of career readiness resources and policies for each state, allowing users to make informed comparisons and evaluate their performance in specific areas based on CCD center recommendations. Led by Dr. V. Scott Solberg, a respected professor in the Counseling Psychology and Applied Human Development Department at BU Wheelock College of Education & Human Development, Career Map is set to become an invaluable resource for understanding and enhancing career readiness across the nation.",
-      "href": "../../../img/projects/illustrations/design.png",
+      "href": "../../../img/projects/illustrations/design.webp",
       "projectType": "Data Science",
       "pi": [
         "Dr. V. Scott Solberg, Professor in the Counseling Psychology and Applied Human Development Department at Boston University Wheelock College"
@@ -421,7 +421,7 @@
       "title": "COVID",
       "titleDescription": "Clinical Testing Lab",
       "description": "To repopulate our three campuses, resume residential learning and student activities, and reopen research labs and clinics, Boston University took a comprehensive, multipronged approach to protecting the health and safety of our community and the public at large. At the center of this effort is testing. Once it became clear the novel coronavirus would persist into the fall of 2020, the University rapidly stood up a clinical testing lab. In addition to a trained staff, the BU Clinical Testing Laboratory is using specialized robots to accelerate testing capacity and, importantly, return results by the end of the next day. SAIL staff was instrumental in developing the automated software and data pipeline central to the testing process.",
-      "href": "../../../img/projects/illustrations/formula.png",
+      "href": "../../../img/projects/illustrations/formula.webp",
       "projectType": "Digital Health",
       "pi": null,
       "metaDataPresentation": [],
@@ -443,7 +443,7 @@
       "title": "Career Map",
       "titleDescription": "State Career Readiness",
       "description": "Career Map is a dynamic web-based interactive platform that provides valuable insights into the career readiness landscape of US states. This user-friendly map offers a comprehensive view of career readiness resources and policies for each state, allowing users to make informed comparisons and evaluate their performance in specific areas based on CCD center recommendations. Led by Dr. V. Scott Solberg, a respected professor in the Counseling Psychology and Applied Human Development Department at BU Wheelock College of Education & Human Development, Career Map is set to become an invaluable resource for understanding and enhancing career readiness across the nation.",
-      "href": "../../../img/projects/illustrations/design.png",
+      "href": "../../../img/projects/illustrations/design.webp",
       "projectType": "Data Science",
       "pi": [
         "Dr. V. Scott Solberg, Professor in the Counseling Psychology and Applied Human Development Department at Boston University Wheelock College"
@@ -479,7 +479,7 @@
       "title": "SUDTraining",
       "titleDescription": "Gateway to Substance Abuse Resources",
       "description": "SUDTraining is a comprehensive web-based platform that offers in-depth training and assessment in the fields of substance abuse and mental health disorders. With three distinct modules, registered users can engage in interactive training sessions, quizzes, and, upon successful completion of the entire course, earn certificates of achievement. The platform includes an intuitive admin and analytics dashboard enriched with various visualizations for a more insightful overview. Originally led by Thomas Andrew at BU School of Medicine, SUDTraining is now steered by Stephen Brady, an Associate Professor of Psychiatry at BU School of Medicine. As a collaborative endeavor, it strives to empower learners in these crucial domains.",
-      "href": "../../../img/projects/illustrations/door.png",
+      "href": "../../../img/projects/illustrations/door.webp",
       "projectType": "Ed Tech",
       "pi": [
         "Stephen Brady, Associate Professor of Psychiatry at Boston University School of Medicine"

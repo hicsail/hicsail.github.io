@@ -79,14 +79,11 @@ export const Home: React.FC = () => {
       {isBrowser && (
         <Box display={['none', 'initial']}>
           <HeroText>
-            <Heading
-              fontSize={['30px', '60px', '80px', '100px']}
-              textStyle="h1"
-            >
+            <Heading fontSize={['30px', '60px', '75px', '75px']} textStyle="h1">
               {' '}
               Software & Application Innovation Lab
             </Heading>
-            <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
+            <Heading fontSize={['10px', '30px', '35px', '45px']} textStyle="h1">
               {' '}
               Where Academia Meets Application
             </Heading>
@@ -160,7 +157,7 @@ export const Home: React.FC = () => {
               </Box>
             </Box>
           )}
-          <Box gridArea="about">
+          <Box gridArea="about" marginBottom="2em">
             <Heading textStyle="h2" mt="2rem" id="about">
               About
             </Heading>

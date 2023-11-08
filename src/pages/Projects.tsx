@@ -77,17 +77,13 @@ export const Projects: React.FC = () => {
         fontStyle="italic"
         sx={{ height: 'auto', textAlign: 'center' }}
       >
-        <Text
-          fontSize="22px !important"
-          marginBottom="20px"
-          _hover={{ color: '#dcae34' }}
-        >
+        <Text fontSize="22px !important" _hover={{ color: '#dcae34' }}>
           SAIL is committed to developing open-source software products that
           have direct impacts on academic research, public service, and
           industry.
         </Text>
       </Box>
-      <Box padding="20px 30px 20px 30px">
+      <Box>
         <DataVisual />
       </Box>
       <Spacer />

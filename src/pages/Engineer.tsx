@@ -42,7 +42,6 @@ export const Engineer: React.VFC = () => (
           'testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials testimonials'
           `,
         }}
-        // borderTop={useColorModeValue('2px solid black', '2px solid white')}
       >
         <Box gridArea="join">
           <Text textStyle="paragraph" mt="0">
@@ -61,9 +60,6 @@ export const Engineer: React.VFC = () => (
             and more.
           </Text>
         </Box>
-        {/* <Box marginTop="20px">
-          <Image src="../../img/team-image" />
-        </Box> */}
         <Box gridArea="teamImage">
           <Image src="../../img/data-science-building.jpeg" />
         </Box>
@@ -72,19 +68,6 @@ export const Engineer: React.VFC = () => (
         </Box>
         <Box gridArea="opportunities">
           <Box marginTop="20px" marginBottom="20px">
-            {/* <Heading>Active Opportunities</Heading> */}
-            {/* <br /> */}
-            {/* <Text as="u" textStyle="paragraph">
-                There are no current positions open at SAIL. Check back later!{' '}
-              </Text> */}
-            {/* <Text as="u" textStyle="paragraph" fontSize="1.5rem">
-              <a
-                href="https://jobs.silkroad.com/BUCareers/External/jobs/307903"
-                rel="noreferrer"
-              >
-                Associate Director, Engineering
-              </a>
-            </Text> */}
             <Text textStyle="paragraph" marginBlockStart="0">
               Every member of our team has the opportunity to contribute towards
               shaping the long-term vision of our research agenda. In addition

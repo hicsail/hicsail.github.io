@@ -4,36 +4,38 @@
 
 #icon:active,
 .active {
-  color: rgb(255, 150, 21);
+  color: '#dcae34';
+}
+
+#smallerScreenText {
+  display: none;
 }
 
 @media screen and (max-width: 665px) {
   #icon {
-    font-size: 5.5vw;
+    width: 7.85vw;
   }
   #categoriesBox {
-    width: 3.5em;
-    font-size: 0.75em;
+    width: 8vw;
   }
   #categoryText {
     display: none;
   }
+  #smallerScreenText {
+    display: block;
+    width: 20vw;
+    position: relative;
+    margin-left: -5vw;
+  }
 }
 
 @media screen and (min-width: 665px) and (max-width: 819px) {
-  #icon {
-    font-size: 5.7vw;
-  }
   #categoriesBox {
     width: 5em;
   }
 }
 
 @media screen and (min-width: 820px) {
-  #icon {
-    font-size: 3.1em;
-  }
-
   #categoriesBox {
     width: 6em;
     display: flex;
@@ -43,6 +45,7 @@
 
 #outerBox {
   display: flex;
+  flex: 1 0 auto;
   flex-direction: row;
   padding: 24px;
   justify-content: space-evenly;
@@ -51,10 +54,12 @@
 
 #icon {
   transition: transform 350ms ease-in-out;
+  margin-bottom: 1vh;
+  font-size: 3.7em;
 }
 
 #icon:hover {
-  transform: scale(1.25);
+  transform: scale(1.2);
   transition: transform 300ms;
 }
 
@@ -70,5 +75,5 @@
 #projectsGrid {
   gap: 8px;
   box-sizing: border-box;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 }

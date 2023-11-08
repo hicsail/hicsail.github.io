@@ -4,10 +4,11 @@ import {
   IconButton,
   useColorModeValue,
   Text,
+  Tooltip,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { useEffect, useRef, useState } from 'react';
-import { Card } from '../Card';
+import { Suspense, useState } from 'react';
+import { Card } from '../Card/Card';
 import data from '../../utils/data/data.json';
 import './ProjectsGrid.css';
 import {
@@ -61,6 +62,7 @@ const options = [
 
 const ProjectSelect: React.FC<ProjectSelectProps> = ({ selected, list }) => {
   const oldProjects = data['oldProjects'];
+
   if (selected == 'All') {
     return (
       <>
@@ -171,9 +173,15 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
                 whiteSpace="initial"
                 color={
                   selected == title
-                    ? '#fe9615'
+                    ? '#dcae34'
                     : useColorModeValue('gray.800', 'white')
                 }
+              >
+                {title}
+              </Text>
+              <Text
+                id="smallerScreenText"
+                display={selected == title ? 'block' : 'none !important'}
               >
                 {title}
               </Text>
