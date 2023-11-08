@@ -1,6 +1,15 @@
-@media screen and (max-width: 664px) {
+#icon #categoryText {
+  transition: 2s ease-in;
+}
+
+#icon:active,
+.active {
+  color: rgb(255, 150, 21);
+}
+
+@media screen and (max-width: 665px) {
   #icon {
-    font-size: 2em;
+    font-size: 5.5vw;
   }
   #categoriesBox {
     width: 3.5em;
@@ -13,7 +22,7 @@
 
 @media screen and (min-width: 665px) and (max-width: 819px) {
   #icon {
-    font-size: 2.6em;
+    font-size: 5.7vw;
   }
   #categoriesBox {
     width: 5em;

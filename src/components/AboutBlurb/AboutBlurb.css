@@ -3,21 +3,32 @@
   flex-direction: column;
   justify-content: space-between;
   max-width: 15em;
-  min-width: 8em;
-  padding: 0 0.5em 0 0.5em;
+  margin: 1.5em 0.5em 1.5em 0.5em;
 }
 
 #h2 {
   text-align: center;
-  color: rgb(255, 255, 255);
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
-  font-size: 0.9em;
+  font-size: 1.1em;
+}
+
+#cardIcon {
+  width: 4.5vw;
+  height: 4.5vw;
 }
 
 #stackityStack {
-  margin: 0.3em 1.5em;
+  margin: 0.3em 1.1em;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 1100px) {
+  #stackityStack {
+    flex-wrap: wrap;
+  }
 }

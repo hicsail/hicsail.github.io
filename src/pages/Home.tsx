@@ -160,7 +160,7 @@ export const Home: React.FC = () => {
               </Box>
             </Box>
           )}
-          <Box gridArea="about" marginBottom="2em">
+          <Box gridArea="about">
             <Heading textStyle="h2" mt="2rem" id="about">
               About
             </Heading>

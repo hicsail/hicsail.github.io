@@ -1,6 +1,12 @@
-import { Box, Grid, IconButton, Icon, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Grid,
+  IconButton,
+  useColorModeValue,
+  Text,
+} from '@chakra-ui/react';
 import * as React from 'react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Card } from '../Card';
 import data from '../../utils/data/data.json';
 import './ProjectsGrid.css';
@@ -153,10 +159,22 @@ export const ProjectsGrid: React.FC<Props> = ({ list, showSelect }) => {
                 aria-label="filtering"
                 icon={icon}
                 variant="ghost"
-                color={color}
+                color={
+                  selected == title
+                    ? useColorModeValue('gray.500', 'white')
+                    : color
+                }
                 onClick={() => handleOptionSelect(title)}
               />
-              <Text id="categoryText" whiteSpace="initial">
+              <Text
+                id="categoryText"
+                whiteSpace="initial"
+                color={
+                  selected == title
+                    ? '#fe9615'
+                    : useColorModeValue('gray.800', 'white')
+                }
+              >
                 {title}
               </Text>
             </Box>

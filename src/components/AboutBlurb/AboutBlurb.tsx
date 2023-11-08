@@ -5,7 +5,7 @@ import {
   HStack,
   Icon,
   Heading,
-  Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import {
   BiLaptop,
@@ -23,8 +23,8 @@ export const AboutBlurb: React.FC = () => {
       <Heading textStyle="h2" mt="5'0px">
         Our Services
       </Heading>
-      <Card boxShadow={0}>
-        <CardBody backgroundColor="gray.800">
+      <Card boxShadow={0} padding="0">
+        <CardBody backgroundColor={useColorModeValue('white', 'gray.800')}>
           <HStack id="stackityStack">
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiLaptop} color="#178123" />
