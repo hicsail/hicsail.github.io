@@ -59,15 +59,11 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
         custom_fields: [
           {
             id: '3fc4c175-b322-4863-a0f8-f398c79a062f',
-            value: data.college,
+            value: [data.college],
           },
           {
             id: '8db8f1f3-1f3d-4cc8-8fe9-eb644d1025bc',
             value: data.title,
-          },
-          {
-            id: '9d420afa-4355-4eb6-840a-e3a8add43825',
-            value: data.phone,
           },
           {
             id: '5d4542ff-84e4-49ac-9e03-1c96fdf9b99a',
@@ -92,7 +88,7 @@ const onSubmit: SubmitHandler<Input> = async (data) => {
         custom_fields: [
           {
             id: '3fc4c175-b322-4863-a0f8-f398c79a062f',
-            value: data.college,
+            value: [data.college],
           },
           { id: '5aefb3dc-97ea-4587-948d-302ba8b62fa2', value: data.phone },
           {
@@ -290,9 +286,6 @@ export const ContactForm: React.FC = () => {
       <FormControl id="referral">
         <FormLabel>How were you referred to this resource?</FormLabel>
         <Select placeholder="Choose" {...register('referral')}>
-          <option value="">Faculty Member</option>
-          <option value="">Student</option>
-          <option value="">Event and/or Talk</option>
           <option value="65947498-c700-4c29-92a6-fe52e55af229">
             SAIL/HIC Website
           </option>
@@ -314,7 +307,6 @@ export const ContactForm: React.FC = () => {
           <option value="fb27b74f-ccdd-428d-bba3-24ba9526a25b">
             Hariri Staff
           </option>
-          <option value="">Other</option>
         </Select>
       </FormControl>
       <Button id="submitButton" type="submit" size="lg" colorScheme="blue">
