@@ -15,20 +15,25 @@
 
 ###Structure
 
-| People  |       Projects       |     Old Projects     | Listed Projects | Data Visual |
-| ------- | :------------------: | :------------------: | :-------------: | ----------: |
-| name    |       feaured        |       feaured        |    an array     |      header |
-| picture |        title         |        title         |                 |     content |
-| role    |   titleDescription   |   titleDescription   |                 |             |
-| email   |     description      |     description      |                 |             |
-|         |         href         |         href         |                 |             |
-|         |     projectType      |     projectType      |                 |             |
-|         |          pi          |          pi          |                 |             |
-|         | metaDataPresentation | metaDataPresentation |                 |             |
-|         | metaDataPublication  | metaDataPublication  |                 |             |
+| People  |       Projects       |     Old Projects     | Departments | Data Visual |
+| ------- | :------------------: | :------------------: | :---------: | ----------: |
+| name    |       feaured        |       feaured        |    value    |      header |
+| picture |        title         |        title         |    label    |     content |
+| role    |   titleDescription   |   titleDescription   |             |             |
+| email   |     description      |     description      |             |             |
+|         |         href         |         href         |             |             |
+|         |     projectType      |     projectType      |             |             |
+|         |          pi          |          pi          |             |             |
+|         | metaDataPresentation | metaDataPresentation |             |             |
+|         | metaDataPublication  | metaDataPublication  |             |             |
 
 ###Where it's used
 **people** - People.tsx - `src/pages/People/People.tsx`
 **projects** - Home.tsx - `src/pages/Home.tsx`, Projects.tsx - `src/pages/Projects.tsx`
 **oldProjects** - ProjectsGrid.tsx - `src/components/ProjectsGrid/ProjectsGrid.tsx`
+**departments** - ContactForm.tsx - `src/components/ContactForm/ContactForm.tsx`
 **dataVisual** - Projects.tsx - `src/pages/Projects.tsx`
+
+add about blurb
+software best practice consulting
+remove periods
