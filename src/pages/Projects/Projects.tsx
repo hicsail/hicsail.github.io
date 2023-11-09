@@ -15,7 +15,7 @@ export const Projects: React.FC = () => {
   };
   const projects = data['projects'];
   return (
-    <Box>
+    <Box flex="1 0 auto">
       <Box
         id="imgContainer"
         sx={{

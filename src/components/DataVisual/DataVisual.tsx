@@ -8,7 +8,13 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { BiDollarCircle, BiBuilding, BiGroup } from 'react-icons/bi';
+import {
+  BiDollarCircle,
+  BiBuilding,
+  BiGroup,
+  BiCodeBlock,
+  BiIntersect,
+} from 'react-icons/bi';
 import * as React from 'react';
 import './DataVisual.css';
 import data from '../../utils/data/data.json';
@@ -20,12 +26,12 @@ export const DataVisual: React.FC = () => {
       <CardBody backgroundColor={useColorModeValue('white', 'gray.800')}>
         <HStack id="stackityStack">
           <Box id="innerCard">
-            <Icon id="cardIcon" as={BiBuilding} color="#396CD6" />
+            <Icon id="cardIcon" as={BiIntersect} color="#396CD6" />
             <Heading id="cardHeading">{dataVisual[0].header}</Heading>
             <Text id="cardText">{dataVisual[0].content}</Text>
           </Box>
           <Box id="innerCard">
-            <Icon id="cardIcon" as={BiDollarCircle} color="#6CD639" />
+            <Icon id="cardIcon" as={BiCodeBlock} color="#6CD639" />
             <Heading id="cardHeading">{dataVisual[1].header}</Heading>
             <Text id="cardText">{dataVisual[1].content}</Text>
           </Box>

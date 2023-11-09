@@ -532,10 +532,13 @@
       "header": "30+",
       "content": "Dynamic and enduring partnerships we've forged since 2022."
     },
-    { "header": "40+", "content": "Projects" },
+    {
+      "header": "40+",
+      "content": "Ongoing and completed projects represent our commitment to innovation and excellence."
+    },
     {
       "header": "100+",
-      "content": "Faculty members we have had pleasure collaborating."
+      "content": "Faculty members we have had pleasure collaborating with."
     }
   ]
 }
