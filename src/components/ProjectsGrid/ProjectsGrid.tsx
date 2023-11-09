@@ -7,7 +7,7 @@ import {
   Tooltip,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { Suspense, useState } from 'react';
+import { useState } from 'react';
 import { Card } from '../Card/Card';
 import data from '../../utils/data/data.json';
 import './ProjectsGrid.css';

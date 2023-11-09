@@ -17,8 +17,9 @@ import {
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import * as React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import ToggleColorButton from './ToggleColorButton';
+import ToggleColorButton from '../ToggleColorButton';
 import { HashLink } from 'react-router-hash-link';
+import './NavigationBar.css';
 
 const texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
 
@@ -26,72 +27,29 @@ export default function NavigationBar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box
-      width="100%"
-      marginTop="15px"
-      marginBottom="15px"
-      paddingLeft="40px"
-      paddingRight="20px"
-    >
-      <Flex
-        width="100%"
-        minH={'60px'}
-        paddingLeft="0"
-        paddingRight="0"
-        justifyContent="center"
-      >
-        <Flex
-          justifyContent="space-between"
-          align="center"
-          width="100%"
-          marginLeft="0px"
-        >
+    <Box id="outerContainer">
+      <Flex id="outerFlex">
+        <Flex id="innerFlex1">
           <Link as={ReactRouterLink} to="/" _hover={{ textDecoration: 'none' }}>
-            <Flex
-              fontFamily={'heading'}
-              display="flex"
-              alignItems="center"
-              fontWeight="normal"
-              lineHeight="50px"
-            >
-              <Box
-                boxSize="45px"
-                objectFit="cover"
-                marginRight="30px"
-                marginBottom="10px"
-                pb="5px"
-              >
-                <Image marginTop="-2px" src="../../img/circle_sail.png" />
+            <Flex fontFamily={'heading'} id="innerFlex2">
+              <Box id="imgBox">
+                <Image src="../../img/circle_sail.png" />
               </Box>
-              <Text
-                fontSize={'2.5rem'}
-                fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-                fontWeight={700}
-                _hover={{ textDecoration: 'none' }}
-              >
+              <Text id="sailText" _hover={{ textDecoration: 'none' }}>
                 SAIL
               </Text>
             </Flex>
           </Link>
-
-          <Flex
-            display={{ base: 'none', md: 'flex' }}
-            ml={10}
-            align="center"
-            justify="flex-end"
-            width="100%"
-          >
+          <Flex id="navItemsFlex" display={{ base: 'none', md: 'flex' }}>
             <DesktopNav />
-            <ToggleColorButton borderWidth={'0'}></ToggleColorButton>
+            <ToggleColorButton borderWidth={'0'} />
           </Flex>
         </Flex>
-
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}
-          width="100%"
-          alignItems="center"
+          id="flexToggleNav"
         >
           <IconButton
             onClick={onToggle}
@@ -157,7 +115,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href }: NavItem) => {
   return (
     <Link
       href={href}
@@ -178,7 +136,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           >
             {label}
           </Text>
-          <Text fontSize={'1rem'}>{subLabel}</Text>
         </Box>
         <Flex
           transition={'all .3s ease'}

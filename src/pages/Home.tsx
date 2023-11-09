@@ -185,7 +185,7 @@ export const Home: React.FC = () => {
                   contact us
                 </Text>
               </Link>
-              {' directly'}
+              {' directly.'}
             </Text>
             <AboutIcons />
           </Box>

@@ -27,7 +27,7 @@ export const AboutIcons: React.FC = () => {
       </Heading>
       <Card boxShadow={0} padding="0">
         <CardBody backgroundColor={useColorModeValue('white', 'gray.800')}>
-          <HStack id="stackityStack">
+          <HStack id="stack">
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiLaptop} color="#178123" />
               <Heading id="h2">{iconText[0]}</Heading>
