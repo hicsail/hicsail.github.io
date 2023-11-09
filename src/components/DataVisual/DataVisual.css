@@ -7,6 +7,12 @@
   padding: 0 0.5em 0 0.5em;
 }
 
+@media screen and (max-width: 665px) {
+  #cardIcon {
+    width: 8.5vw;
+  }
+}
+
 #cardIcon {
   font-size: 3rem;
   width: 7.85vw;

@@ -13,7 +13,6 @@ import {
   IconButton,
   ModalBody,
   ModalCloseButton,
-  Button,
 } from '@chakra-ui/react';
 import { isBrowser, isMobile } from 'react-device-detect';
 import * as React from 'react';
@@ -21,7 +20,7 @@ import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { IoRocketSharp } from 'react-icons/io5';
 import { ProjectsGrid } from '../components/ProjectsGrid/ProjectsGrid';
-import { AboutBlurb } from '../components/AboutBlurb/AboutBlurb';
+import { AboutIcons } from '../components/AboutIcons/AboutIcons';
 import data from '../utils/data/data.json';
 
 const HeroText = styled.div`
@@ -199,7 +198,7 @@ export const Home: React.FC = () => {
               </Link>
               {' directly'}
             </Text>
-            <AboutBlurb />
+            <AboutIcons />
           </Box>
           <Box gridArea="projectgrid">
             <Heading textStyle="h2" mt="5'0px">

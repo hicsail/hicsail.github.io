@@ -11,13 +11,15 @@ import {
   BiLaptop,
   BiCodeCurly,
   BiPencil,
-  BiClipboard,
   BiPieChart,
+  BiTrophy,
 } from 'react-icons/bi';
 import * as React from 'react';
-import './AboutBlurb.css';
+import './AboutIcons.css';
+import data from '../../utils/data/data.json';
 
-export const AboutBlurb: React.FC = () => {
+export const AboutIcons: React.FC = () => {
+  const iconText = data['aboutIcons'];
   return (
     <Box>
       <Heading textStyle="h2" mt="5'0px">
@@ -28,23 +30,23 @@ export const AboutBlurb: React.FC = () => {
           <HStack id="stackityStack">
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiLaptop} color="#178123" />
-              <Heading id="h2">
-                Full stack web and mobile app development.
-              </Heading>
+              <Heading id="h2">{iconText[0]}</Heading>
             </Box>
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiCodeCurly} color="#1b678d" />
-              <Heading id="h2">Code base refactoring and maintenance.</Heading>
+              <Heading id="h2">{iconText[1]}</Heading>
             </Box>
             <Box id="innerCard">
-              <Icon id="cardIcon" as={BiPieChart} color="#f58711" />
-              <Heading id="h2">
-                Project and product management guidance.
-              </Heading>
+              <Icon id="cardIcon" as={BiPieChart} color="#DFDF54" />
+              <Heading id="h2">{iconText[2]}</Heading>
+            </Box>
+            <Box id="innerCard">
+              <Icon id="cardIcon" as={BiTrophy} color="#f58711" />
+              <Heading id="h2">{iconText[3]}</Heading>
             </Box>
             <Box id="innerCard">
               <Icon id="cardIcon" as={BiPencil} color="#df5454" />
-              <Heading id="h2">Proposal and grant writing.</Heading>
+              <Heading id="h2">{iconText[4]}</Heading>
             </Box>
           </HStack>
         </CardBody>

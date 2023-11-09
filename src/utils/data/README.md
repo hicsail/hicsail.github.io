@@ -36,4 +36,3 @@
 
 add about blurb
 software best practice consulting
-remove periods

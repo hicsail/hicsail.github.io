@@ -533,7 +533,14 @@
     },
     {
       "header": "100+",
-      "content": "Faculty members we have had pleasure collaborating with."
+      "content": "Faculty members we have had the pleasure collaborating with."
     }
+  ],
+  "aboutIcons": [
+    "Full Stack Web and Mobile App Development.",
+    "Code Base Refactoring and Maintenance.",
+    "Project and Product Management Guidance.",
+    "Software Best Practice Consulting.",
+    "Proposal and Grant Writing."
   ]
 }
