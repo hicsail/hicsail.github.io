@@ -14,6 +14,7 @@ export const Projects: React.FC = () => {
     }
   };
   const projects = data['projects'];
+  const pageText = data['projectsPage'];
   return (
     <Box flex="1 0 auto">
       <Box
@@ -39,11 +40,7 @@ export const Projects: React.FC = () => {
         </Fade>
       </Box>
       <Box id="textBlurb">
-        <Text>
-          SAIL is committed to developing open-source software products that
-          have direct impacts on academic research, public service, and
-          industry.
-        </Text>
+        <Text>{pageText}</Text>
       </Box>
       <DataVisual />
       <Text id="middleText">Dive into different areas we work in</Text>

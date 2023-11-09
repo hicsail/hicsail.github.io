@@ -42,6 +42,7 @@ const PlayButton = styled.div`
 
 export const Home: React.FC = () => {
   const projects = data['projects'];
+  const aboutText = data['aboutText'];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const canvasBG = useColorModeValue('white', 'black');
   const itemColor = useColorModeValue('#000000', '#FFFFFF');
@@ -161,30 +162,18 @@ export const Home: React.FC = () => {
               About
             </Heading>
             <Text textStyle="paragraph">
-              The Software & Application Innovation Lab (SAIL) is the premier
-              professional research, software engineering, and consulting lab
-              within the
+              {aboutText[0]}
               <Link href="https://www.bu.edu/hic/">
                 <Text as="span" textStyle="link">
                   {' '}
                   Hariri Institute for Computing
                 </Text>
               </Link>{' '}
-              at Boston University. SAIL acts as both a driver and a
-              collaborative partner in the creation of cutting-edge solutions
-              for the data-driven, computational, and software engineering
-              aspects of research across the university and beyond.
+              {aboutText[1]}
             </Text>
+            <Text textStyle="paragraph">{aboutText[2]}</Text>
             <Text textStyle="paragraph">
-              As the desire for professional quality software applications and
-              services continues to rise within the realm of academia, SAIL
-              exists to develop production quality applications and services by
-              leveraging industry-leading software development practices.
-            </Text>
-            <Text textStyle="paragraph">
-              If you would like to explore how SAIL can help you achieve your
-              research objectives or would like to discuss what resources are
-              available, please fill out a{' '}
+              {aboutText[3]}
               <Link href="https://www.bu.edu/hic/forms/sail-request-form/">
                 <Text as="span" textStyle="link">
                   request form

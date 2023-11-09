@@ -536,11 +536,23 @@
       "content": "Faculty members we have had the pleasure collaborating with."
     }
   ],
+  "aboutText": [
+    "The Software & Application Innovation Lab (SAIL) is the premier professional research, software engineering, and consulting lab within the",
+    "at Boston University. SAIL acts as both a driver and a collaborative partner in the creation of cutting-edge solutions for the data-driven, computational, and software engineering aspects of research across the university and beyond.",
+    "As the desire for professional quality software applications and services continues to rise within the realm of academia, SAIL exists to develop production quality applications and services by leveraging industry-leading software development practices.",
+    "If you would like to explore how SAIL can help you achieve your research objectives or would like to discuss what resources are available, please fill out a "
+  ],
   "aboutIcons": [
     "Full Stack Web and Mobile App Development.",
     "Code Base Refactoring and Maintenance.",
     "Project and Product Management Guidance.",
     "Software Best Practice Consulting.",
     "Proposal and Grant Writing."
+  ],
+  "projectsPage": "SAIL is committed to developing open-source software products that have direct impacts on academic research, public service, and industry.",
+  "peoplePage": [
+    "OUR TEAM",
+    "Who we are",
+    "We are a company working on a multitude of interdisciplinary projects."
   ]
 }
