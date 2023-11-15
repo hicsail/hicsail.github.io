@@ -1,0 +1,63 @@
+#container {
+  width: 295px;
+  height: 480px;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  overflow: hidden;
+  text-align: center !important;
+  position: relative;
+  margin: auto auto 20px auto;
+}
+
+#imgContainer {
+  background-color: white;
+}
+
+.chakra-image {
+  width: 300px;
+  object-fit: cover;
+  margin: auto;
+}
+
+#modalText {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  margin: auto;
+}
+
+#modalSubText {
+  font-size: 17px;
+  margin: auto;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+}
+
+.chakra-modal__content-container {
+  padding: 1rem;
+}
+
+.chakra-modal__body {
+  margin: 20px;
+}
+
+#contentContainer {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#modalBodyText {
+  font-size: 16px;
+}
+
+#modalBodySubText {
+  margin-top: 20px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+#modalButton {
+  text-align: center;
+  width: 100%;
+  margin-right: 3;
+}

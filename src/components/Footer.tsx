@@ -41,7 +41,7 @@ const links = [
   {
     icon: FaMapMarkedAlt,
     label: 'location',
-    href: 'https://maps.bu.edu/?id=647#!ct/',
+    href: 'https://maps.bu.edu/?id=647#!ce/29650?m/558432?sbc/',
   },
   {
     icon: GrMail,

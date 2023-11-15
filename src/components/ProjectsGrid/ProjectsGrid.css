@@ -1,0 +1,76 @@
+#icon:active,
+.active {
+  color: '#dcae34';
+}
+
+#smallerScreenText {
+  display: none;
+}
+
+@media screen and (max-width: 665px) {
+  #icon {
+    width: 7.55vw;
+  }
+  #categoriesBox {
+    width: 8vw;
+  }
+  #categoryText {
+    display: none;
+  }
+  #smallerScreenText {
+    display: block;
+    width: 20vw;
+    position: relative;
+    margin-left: -6.1vw;
+  }
+}
+
+@media screen and (min-width: 665px) and (max-width: 819px) {
+  #categoriesBox {
+    width: 5em;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  #categoriesBox {
+    width: 6em;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#outerBox {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+  padding: 24px;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 8.75rem;
+}
+
+#icon {
+  transition: transform 350ms ease-in-out;
+  margin-bottom: 1vh;
+  font-size: 3.2em;
+}
+
+#icon:hover {
+  transform: scale(1.2);
+  transition: transform 300ms;
+}
+
+#projectCard {
+  transition: transform 350ms ease-in-out;
+}
+
+#projectCard:hover {
+  transform: scale(1.05);
+  transition: transform 300ms;
+}
+
+#projectsGrid {
+  gap: 8px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}

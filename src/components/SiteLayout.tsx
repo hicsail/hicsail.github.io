@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { Banner } from './Banner';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './NavigationBar/NavigationBar';
 import { OpportunitiesBanner } from './OpportunitiesBanner';
 import { Outlet } from 'react-router-dom';
 

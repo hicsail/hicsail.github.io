@@ -1,0 +1,35 @@
+#outerContainer {
+  padding: 20px;
+}
+
+#textContainer {
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  margin: 1em 3em 1em 1.3em;
+}
+
+#header1 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#header2 {
+  font-size: 30px;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  font-weight: 900;
+}
+
+#header3 {
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+#grid {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  row-gap: 60px;
+}
+
+#personBox {
+  min-width: 300px;
+  resize: horizontal;
+}

@@ -1,0 +1,51 @@
+#outerContainer {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+#outerFlex {
+  width: 100%;
+  min-height: 60px;
+  padding-left: 0;
+  padding-right: 0;
+  justify-content: center;
+}
+
+#innerFlex1 {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 0px;
+}
+
+#innerFlex2 {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  line-height: 50px;
+}
+
+#imgBox {
+  width: 45px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+#sailText {
+  font-size: 2.5rem;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  font-weight: 700;
+}
+
+#navItemsFlex {
+  margin-left: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#flexToggleNav {
+  width: 100%;
+  align-items: center;
+}

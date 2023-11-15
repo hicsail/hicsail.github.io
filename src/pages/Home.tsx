@@ -19,7 +19,8 @@ import * as React from 'react';
 import { Reacteroids } from '../components/asteroidGame/Reacteroids';
 import styled from 'styled-components';
 import { IoRocketSharp } from 'react-icons/io5';
-import { ProjectsGrid } from '../components/ProjectsGrid';
+import { ProjectsGrid } from '../components/ProjectsGrid/ProjectsGrid';
+import { AboutIcons } from '../components/AboutIcons/AboutIcons';
 import data from '../utils/data/data.json';
 
 const HeroText = styled.div`
@@ -41,6 +42,7 @@ const PlayButton = styled.div`
 
 export const Home: React.FC = () => {
   const projects = data['projects'];
+  const aboutText = data['aboutText'];
   const { isOpen, onOpen, onClose } = useDisclosure();
   const canvasBG = useColorModeValue('white', 'black');
   const itemColor = useColorModeValue('#000000', '#FFFFFF');
@@ -77,14 +79,11 @@ export const Home: React.FC = () => {
       {isBrowser && (
         <Box display={['none', 'initial']}>
           <HeroText>
-            <Heading
-              fontSize={['30px', '60px', '80px', '100px']}
-              textStyle="h1"
-            >
+            <Heading fontSize={['30px', '60px', '75px', '75px']} textStyle="h1">
               {' '}
               Software & Application Innovation Lab
             </Heading>
-            <Heading fontSize={['10px', '30px', '50px', '50px']} textStyle="h1">
+            <Heading fontSize={['10px', '30px', '35px', '45px']} textStyle="h1">
               {' '}
               Where Academia Meets Application
             </Heading>
@@ -159,42 +158,22 @@ export const Home: React.FC = () => {
             </Box>
           )}
           <Box gridArea="about" marginBottom="2em">
-            <Heading textStyle="h2" mt="2rem">
+            <Heading textStyle="h2" mt="2rem" id="about">
               About
             </Heading>
             <Text textStyle="paragraph">
-              The Software & Application Innovation Lab (SAIL) is the premier
-              professional research, software engineering, and consulting lab
-              within the
+              {aboutText[0]}
               <Link href="https://www.bu.edu/hic/">
                 <Text as="span" textStyle="link">
                   {' '}
                   Hariri Institute for Computing
                 </Text>
               </Link>{' '}
-              at Boston University. SAIL acts as both a driver and a
-              collaborative partner in the creation of cutting-edge solutions
-              for the data-driven, computational, and software engineering
-              aspects of research across the university and beyond.
+              {aboutText[1]}
             </Text>
+            <Text textStyle="paragraph">{aboutText[2]}</Text>
             <Text textStyle="paragraph">
-              As the desire for professional quality software applications and
-              services continues to rise within the realm of academia, SAIL
-              exists to develop production quality applications and services by
-              leveraging industry-leading software development practices.
-            </Text>
-            <Text textStyle="paragraph">
-              Specifically, SAIL offers to its clients and collaborators
-              services in the form of full stack web and mobile application
-              development, code base refactoring and maintenance, software
-              best-practice consulting, project and product management guidance
-              and proposal and grant writing in the pursuit of extramural
-              funding for research projects.
-            </Text>
-            <Text textStyle="paragraph">
-              If you would like to explore how SAIL can help you achieve your
-              research objectives or would like to discuss what resources are
-              available, please fill out a{' '}
+              {aboutText[3]}
               <Link href="https://www.bu.edu/hic/forms/sail-request-form/">
                 <Text as="span" textStyle="link">
                   request form
@@ -206,8 +185,9 @@ export const Home: React.FC = () => {
                   contact us
                 </Text>
               </Link>
-              {' directly'}
+              {' directly.'}
             </Text>
+            <AboutIcons />
           </Box>
           <Box gridArea="projectgrid">
             <Heading textStyle="h2" mt="5'0px">

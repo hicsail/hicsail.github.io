@@ -1,0 +1,46 @@
+#innerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 15em;
+  min-width: 8em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+@media screen and (max-width: 665px) {
+  #cardIcon {
+    width: 8.5vw;
+  }
+}
+
+#cardIcon {
+  font-size: 3rem;
+  width: 7.85vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cardHeading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.3rem;
+}
+
+#innerCard:hover {
+  color: #dcae34;
+}
+
+#cardText {
+  margin-left: inherit;
+  margin-right: inherit;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#stackityStack {
+  margin-top: -1.5em;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+}

@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { InternTestimonial } from '../types/types';
-import { INTERNTESTIMONIALS_LIST } from '../utils/data/peopleInformation';
+import { INTERNTESTIMONIALS_LIST } from '../archived/peopleInformation';
 
 interface Props {}
 
