@@ -3,8 +3,8 @@ import { mode } from '@chakra-ui/theme-tools';
 
 const theme = extendTheme({
   fonts: {
-    heading: 'Karbon',
-    body: 'Karbon',
+    heading: 'Graphik,Helvetica,Arial,sans-serif',
+    body: 'Graphik,Helvetica,Arial,sans-serif',
   },
   colors: {
     sail: {

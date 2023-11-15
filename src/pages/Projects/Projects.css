@@ -1,0 +1,74 @@
+#container {
+  display: -webkit-flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+#imgContainer {
+  height: 950px;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 5.5rem 0rem 0rem 2.2rem;
+}
+
+#imgText {
+  font-weight: 900;
+  font-size: 2.5rem;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  margin-bottom: 1.3rem;
+  flex: 50%;
+  margin-right: auto;
+  text-align: left;
+  color: #addbef;
+}
+
+#jumpButton {
+  color: #b7e0f1;
+  font-size: 13px;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  font-weight: bolder;
+  flex: 50%;
+  margin-right: auto;
+  line-height: 40px;
+  width: 150px;
+  border-color: #b7e0f1 !important;
+  text-transform: uppercase;
+}
+
+#textBlurb {
+  font-size: 22px !important;
+  margin: 55px;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+  font-style: italic;
+  height: auto;
+  text-align: center;
+}
+
+#textBlurb:hover {
+  color: #dcae34;
+}
+
+#middleText {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 40px;
+  padding-top: 30px;
+  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+}
+
+#middleText:hover {
+  color: #dcae34;
+}
+
+#projectsContainer {
+  height: auto;
+  margin: 20px 2rem 20px 2rem;
+  text-align: center;
+}

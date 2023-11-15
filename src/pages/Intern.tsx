@@ -30,7 +30,7 @@ src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"
 export const Intern: React.FC = () => (
   <Layout title="Software Engineer Internships">
     <Flex borderBottom="2px solid black" pb="16px" pt="16px" gap="24px">
-      <Box>
+      <Box display="none">
         <Link
           href="https://forms.clickup.com/14225407/f/dj3zz-4800/IHJZ83PECPURVQH6H2"
           isExternal
@@ -64,18 +64,6 @@ export const Intern: React.FC = () => (
             <Text as="span" textStyle="link">
               <Link href="mailto:sail@bu.edu">sail@bu.edu</Link>
             </Text>
-          </Text>
-          <Text textStyle="paragraph">
-            SAIL 2023 Summer Internship Applications are now OPEN until April
-            2nd at midnight.{' '}
-            <Text as="span" textStyle="link">
-              <Link href="https://forms.clickup.com/14225407/f/dj3zz-4800/IHJZ83PECPURVQH6H2">
-                Apply using this link
-              </Link>
-            </Text>{' '}
-            or the button on this page. SAIL internships are paid full-time
-            (30-40 hours per week) software engineering positions. The
-            internship is 13 weeks, starting May 22nd and ending August 18th.
           </Text>
         </Text>
       </Box>

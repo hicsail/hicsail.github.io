@@ -56,11 +56,9 @@ export const Person: React.FC<PersonProps> = ({ person }: PersonProps) => {
           </Box>
         </PopoverTrigger>
         <PopoverContent marginTop="5px">
-          <PopoverCloseButton />
           <PopoverBody>
             <Text
               fontWeight={500}
-              fontStyle="italic"
               fontSize=".8rem"
               fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
             >
