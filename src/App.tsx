@@ -10,6 +10,7 @@ import { Contact } from './pages/Contact';
 import { Engineer } from './pages/Engineer';
 import { Intern } from './pages/Intern';
 import { SiteLayout } from './components/SiteLayout';
+import { DeleteAccount } from './pages/DeleteAccount';
 
 export const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ export const App: React.FC = () => {
           <Route path="/technicalstaff" element={<Engineer />} />
           <Route path="/interns" element={<Intern />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/delete-account" element={<DeleteAccount />} />
         </Route>
       </Routes>
     </Router>
