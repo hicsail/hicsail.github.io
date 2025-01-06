@@ -55,7 +55,7 @@ export const Intern: React.FC = () => (
             efforts in domains such as digital health, security and privacy,
             data science, synthetic biology and more.{' '}
           </Text>
-          <Text textStyle="paragraph">
+          {/* <Text textStyle="paragraph">
             SAIL offers the opportunity for students at Boston University to
             partake in part-time internships throughout the fall and spring
             semesters. If you are a Boston University student interested in a
@@ -64,7 +64,7 @@ export const Intern: React.FC = () => (
             <Text as="span" textStyle="link">
               <Link href="mailto:sail@bu.edu">sail@bu.edu</Link>
             </Text>
-          </Text>
+          </Text> */}
         </Text>
       </Box>
     </Flex>
