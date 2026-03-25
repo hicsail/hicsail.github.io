@@ -124,7 +124,7 @@ export const Home: React.FC = () => {
           {[
             { num: '40+', label: 'Projects Since 2022' },
             { num: '10+', label: 'Partner Institutions' },
-            { num: '$6M+', label: 'Research Funding' },
+            { num: '$6M+', label: 'Research Supported' },
             { num: '10+', label: 'Years at BU' },
           ].map((s) => (
             <div key={s.label} className={styles.heroStatItem}>
@@ -582,8 +582,8 @@ export const Home: React.FC = () => {
               </span>
               <h3 className={styles.infraCardTitle}>Compliance</h3>
               <p className={styles.infraCardBody}>
-                HIPAA-ready and NIST 800-171 environments designed for sensitive
-                medical and research data.
+                HIPAA-ready environments designed for sensitive medical and
+                research data.
               </p>
             </div>
           </div>
@@ -909,6 +909,7 @@ export const Home: React.FC = () => {
                       arrow_forward
                     </span>
                   </a>
+                  {/* Uncomment when meeting link is ready:
                   <a
                     href="https://calendly.com/placeholder"
                     target="_blank"
@@ -923,6 +924,7 @@ export const Home: React.FC = () => {
                     </span>
                     <span>Meet with SAIL</span>
                   </a>
+                  */}
                 </div>
                 <p className={styles.contactCtaNote}>
                   No commitment required. Free initial consultation.
