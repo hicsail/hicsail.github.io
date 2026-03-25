@@ -126,26 +126,57 @@ export const Join: React.FC = () => {
         <div className="joinSectionInner">
           <span className="joinEyebrowDark">Full-Time Roles</span>
           <h2 className="joinSectionTitle">Technical Staff</h2>
-          <div className="joinStaffNotice">
-            <div className="joinStaffNoticeIcon">
-              <span className="material-symbols-outlined">info</span>
+
+          {/* Director listing */}
+          <div className="joinJobCard">
+            <div className="joinJobCardHeader">
+              <div>
+                <h3 className="joinJobTitle">Director, SAIL</h3>
+                <p className="joinJobMeta">
+                  Hariri Institute for Computing &nbsp;·&nbsp; Boston, MA
+                  &nbsp;·&nbsp; Full-Time
+                </p>
+              </div>
+              <span className="joinJobBadge">Now Hiring</span>
             </div>
-            <div>
-              <p className="joinBody" style={{ margin: 0 }}>
-                There are currently no openings for full-time staff. For
-                additional opportunities at Boston University, visit{' '}
-                <a
-                  href="https://www.bu.edu/hr/careers/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="joinInlineLink"
-                >
-                  Boston University Careers
-                </a>
-                .
-              </p>
-            </div>
+            <p className="joinJobDesc">
+              The SAIL Director oversees overall operations of the Software
+              &amp; Application Innovation Lab, provides code review and
+              technical project management for major projects, and works closely
+              with Institute leadership to integrate SAIL capacity across the
+              spectrum of research at Hariri. The Director will shape long-term
+              plans for SAIL, manage a team of research software engineers, and
+              serve as a key bridge between SAIL, faculty researchers, and
+              computing efforts across Boston University.
+            </p>
+            <a
+              href="https://jobs.silkroad.com/BU/External/jobs/316478"
+              target="_blank"
+              rel="noreferrer"
+              className="joinApplyBtn"
+            >
+              Apply on BU Careers
+              <span
+                className="material-symbols-outlined"
+                style={{ fontSize: '1rem' }}
+              >
+                open_in_new
+              </span>
+            </a>
           </div>
+
+          <p className="joinStaffFootnote">
+            For all other Boston University opportunities, visit{' '}
+            <a
+              href="https://www.bu.edu/hr/careers/"
+              target="_blank"
+              rel="noreferrer"
+              className="joinInlineLink"
+            >
+              BU Careers
+            </a>
+            .
+          </p>
         </div>
       </section>
     </main>

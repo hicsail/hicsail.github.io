@@ -305,3 +305,90 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Job Card ── */
+.joinJobCard {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid rgba(12, 35, 64, 0.1);
+  border-left: 4px solid #9e0000;
+  padding: 2.25rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 16px rgba(12, 35, 64, 0.06);
+}
+
+.joinJobCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.joinJobTitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0c2340;
+  margin: 0 0 0.25rem;
+}
+
+.joinJobMeta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #5e5c71;
+  margin: 0;
+}
+
+.joinJobBadge {
+  flex-shrink: 0;
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9e0000;
+  background: rgba(232, 57, 42, 0.08);
+  border: 1px solid rgba(232, 57, 42, 0.25);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+}
+
+.joinJobDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+}
+
+.joinJobDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.joinJobDetail {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #5e5c71;
+}
+
+.joinApplyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.joinStaffFootnote {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #5e5c71;
+  margin-top: 1.5rem;
+}
