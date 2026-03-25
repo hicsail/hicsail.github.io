@@ -1,97 +1,167 @@
-import {
-  Box,
-  Stack,
-  Text,
-  useColorModeValue,
-  Image,
-  Flex,
-  Icon,
-  Link,
-} from '@chakra-ui/react';
-import {
-  FaGithub,
-  FaLinkedin,
-  FaMapMarkedAlt,
-  FaTwitter,
-} from 'react-icons/fa';
-import { GrMail } from 'react-icons/gr';
 import * as React from 'react';
-
-type FooterLinkProps = {
-  icon?: React.ElementType;
-  href?: string;
-  label?: string;
-};
-
-let texttheme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC'];
-
-const FooterLink: React.FC<FooterLinkProps> = ({ icon, href, label }) => (
-  <Link
-    bg={useColorModeValue('white', '#121212')}
-    display="inline-block"
-    href={href}
-    aria-label={label}
-    isExternal
-  >
-    <Icon as={icon} color={texttheme[0]} fontSize="xl" />
-  </Link>
-);
-
-const links = [
-  {
-    icon: FaMapMarkedAlt,
-    label: 'location',
-    href: 'https://maps.bu.edu/?id=647#!ce/29650?m/558432?sbc/',
-  },
-  {
-    icon: GrMail,
-    label: 'Mail',
-    href: 'mailto:sail@bu.edu',
-  },
-  {
-    icon: FaTwitter,
-    label: 'Twitter',
-    href: 'https://twitter.com/hicsail',
-  },
-  {
-    icon: FaLinkedin,
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/bu-sail/mycompany/',
-  },
-  {
-    icon: FaGithub,
-    label: 'Github',
-    href: 'https://github.com/hicsail',
-  },
-];
+import { Link as ReactRouterLink } from 'react-router-dom';
+import './Footer.css';
 
 export default function Footer() {
   return (
-    <Flex display="column" as="footer" m={12} justifyContent="center">
-      <Flex alignItems="center">
-        <Image
-          src="../../../img/bu-logo.png"
-          height="auto"
-          maxWidth="60px"
-          minWidth="40px"
-          width="100%"
-        />
+    <footer className="footer">
+      <div className="footerMain">
+        {/* Brand */}
+        <div className="footerBrand">
+          <ReactRouterLink to="/" className="footerLogo">
+            <img src="/img/s_logo.svg" alt="SAIL" className="footerLogoImg" />
+            <span className="footerLogoText">SAIL</span>
+          </ReactRouterLink>
+          <p className="footerDesc">
+            Boston University Hariri Institute for Computing.
+            <br />
+            Innovating at the intersection of computing and research.
+          </p>
+          {/* BU attribution */}
+          <div className="footerBuRow">
+            <img
+              src="/img/bu-logo.png"
+              alt="Boston University"
+              className="footerBuLogo"
+            />
+            <span className="footerBuText">
+              Boston University Rafik B. Hariri Institute for Computing and
+              Computational Science &amp; Engineering
+            </span>
+          </div>
+        </div>
 
-        <Text
-          fontSize={{ base: '1rem', md: '1.25rem' }}
-          display="inline-block"
-          ml="1rem"
-        >
-          Boston University Rafik B. Hariri Institute for Computing and
-          Computational Science & Engineering
-        </Text>
-      </Flex>
+        {/* Quick Links */}
+        <div className="footerCol">
+          <div className="footerColTitle">Quick Links</div>
+          <ReactRouterLink to="/" className="footerLink">
+            Home
+          </ReactRouterLink>
+          <ReactRouterLink to="/projects" className="footerLink">
+            Projects
+          </ReactRouterLink>
+          <ReactRouterLink to="/people" className="footerLink">
+            People
+          </ReactRouterLink>
+          <ReactRouterLink to="/#contact" className="footerLink">
+            Contact
+          </ReactRouterLink>
+          <ReactRouterLink to="/join" className="footerLink">
+            Join
+          </ReactRouterLink>
+        </div>
 
-      <Stack mt={4} direction="row" spacing={8} justify="center">
-        {links.map((link) => (
-          <FooterLink key={link.href} {...link} />
-        ))}
-      </Stack>
-    </Flex>
+        {/* Connect */}
+        <div className="footerCol">
+          <div className="footerColTitle">Connect</div>
+          <a href="mailto:sail@bu.edu" className="footerLink">
+            sail@bu.edu
+          </a>
+          <ReactRouterLink to="/#contact" className="footerLink">
+            Contact Us
+          </ReactRouterLink>
+          <a
+            href="https://github.com/hicsail"
+            className="footerLink"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.bu.edu"
+            className="footerLink"
+            target="_blank"
+            rel="noreferrer"
+          >
+            BU Home
+          </a>
+        </div>
+
+        {/* Location */}
+        <div className="footerCol">
+          <div className="footerColTitle">Our Location</div>
+          <p className="footerAddress">
+            Hariri Institute for Computing
+            <br />
+            665 Commonwealth Ave., 12th Floor
+            <br />
+            Boston, MA 02215
+          </p>
+          <a
+            href="https://maps.bu.edu/?id=647#!ce/29650?m/558432?sbc/"
+            className="footerMapBtn"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Find Us On Campus
+          </a>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="footerBottom">
+        <span className="footerCopy">
+          © {new Date().getFullYear()} Boston University Hariri Institute for
+          Computing. All rights reserved.
+        </span>
+        <div className="footerSocials">
+          <a
+            href="mailto:sail@bu.edu"
+            className="footerSocialLink"
+            aria-label="Email"
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: '1.1rem' }}
+            >
+              mail
+            </span>
+          </a>
+          <a
+            href="https://twitter.com/hicsail"
+            className="footerSocialLink"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: '1.1rem' }}
+            >
+              share
+            </span>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/bu-sail/"
+            className="footerSocialLink"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: '1.1rem' }}
+            >
+              language
+            </span>
+          </a>
+          <a
+            href="https://github.com/hicsail"
+            className="footerSocialLink"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: '1.1rem' }}
+            >
+              code
+            </span>
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 }
