@@ -1,58 +1,150 @@
 import * as React from 'react';
-import data from '../../utils/data/data.json';
-import { ProjectsGrid } from '../../components/ProjectsGrid/ProjectsGrid';
-import { DataVisual } from '../../components/DataVisual/DataVisual';
-import { Box, Button, Spacer, Text } from '@chakra-ui/react';
-import { Fade } from 'react-awesome-reveal';
 import './Projects.css';
+import data from '../../utils/data/data.json';
+
+interface Project {
+  featured?: boolean;
+  title: string;
+  titleDescription: string;
+  description: string;
+  href: string;
+  projectType: string;
+  pi: string[] | null;
+  metaDataPresentation: Array<{ name: string; href: string }>;
+  metaDataPublication: Array<{ name: string; href: string }>;
+}
+
+const TYPE_COLORS: Record<string, string> = {
+  'Privacy and Security': '#0C2340',
+  'Data Science': '#E8392A',
+  'Digital Health': '#2E7D32',
+  'Ed Tech': '#7B5EA7',
+};
 
 export const Projects: React.FC = () => {
-  const handleClickScroll = () => {
-    const element = document.getElementById('middleText');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  const projects = data['projects'];
-  const pageText = data['projectsPage'];
+  const projects: Project[] = data['projects'];
+  const [activeType, setActiveType] = React.useState<string>('All');
+
+  const types = [
+    'All',
+    ...Array.from(new Set(projects.map((p) => p.projectType))),
+  ];
+  const filtered =
+    activeType === 'All'
+      ? projects
+      : projects.filter((p) => p.projectType === activeType);
+
   return (
-    <Box flex="1 0 auto">
-      <Box
-        id="imgContainer"
-        sx={{
-          backgroundImage: `url($../../img/cds.webp)`,
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <Fade delay={300} duration={1500} cascade damping={0.3} fraction={0.15}>
-          <Box id="header">
-            <Text id="imgText" sx={{}}>
-              Explore Our Current and Past Work
-            </Text>
-            <Button
-              id="jumpButton"
-              variant="outline"
-              onClick={handleClickScroll}
-            >
-              <a>Jump to Projects</a>
-            </Button>
-          </Box>
-        </Fade>
-      </Box>
-      <Box id="textBlurb">
-        <Text>{pageText}</Text>
-      </Box>
-      <DataVisual />
-      <Text id="middleText">Dive into different areas we work in</Text>
-      <Box id="projectsContainer">
-        <ProjectsGrid
-          title="Projects"
-          list={projects}
-          showText={false}
-          showSelect={true}
+    <main className="projectsPage">
+      {/* Hero */}
+      <section className="projectsHero">
+        <img
+          src="/img/cds-building.svg"
+          alt=""
+          className="projectsHeroBg"
+          aria-hidden="true"
         />
-      </Box>
-      <Spacer />
-    </Box>
+        <div className="projectsHeroInner">
+          <span className="projectsEyebrow">Our Work</span>
+          <h1 className="projectsTitle">Research Projects</h1>
+          <p className="projectsSubtitle">
+            From privacy-preserving analytics to accessibility tools, explore
+            the software we build in partnership with researchers, faculty, and
+            institutions.
+          </p>
+        </div>
+      </section>
+
+      {/* Filter bar */}
+      <section className="projectsFilterSection">
+        <div className="projectsSectionInner">
+          <div className="projectsFilterBar">
+            {types.map((type) => (
+              <button
+                key={type}
+                className={`projectsFilterBtn${
+                  activeType === type ? ' active' : ''
+                }`}
+                onClick={() => setActiveType(type)}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Project cards */}
+      <section className="projectsSection">
+        <div className="projectsSectionInner">
+          <div className="projectsGrid">
+            {filtered.map((project, i) => {
+              const accent = TYPE_COLORS[project.projectType] || '#E8392A';
+              return (
+                <article
+                  className="projectCard"
+                  key={i}
+                  style={{ borderTopColor: accent }}
+                >
+                  <div className="projectCardBody">
+                    <span
+                      className="projectTypeTag"
+                      style={{
+                        color: accent,
+                        borderColor: accent + '33',
+                        background: accent + '0d',
+                      }}
+                    >
+                      {project.projectType}
+                    </span>
+                    <h2 className="projectCardTitle">{project.title}</h2>
+                    <p className="projectCardSubtitle">
+                      {project.titleDescription}
+                    </p>
+                    <p className="projectCardDesc">{project.description}</p>
+                    {project.pi && project.pi.length > 0 && (
+                      <div className="projectCardPi">
+                        <span className="projectPiLabel">PI:</span>{' '}
+                        {project.pi.join(', ')}
+                      </div>
+                    )}
+                    {project.metaDataPublication?.some((p) => p.name) && (
+                      <div className="projectCardLinks">
+                        {project.metaDataPublication
+                          .filter((p) => p.name)
+                          .map((pub, j) => (
+                            <a
+                              key={j}
+                              href={pub.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="projectCardLink"
+                            >
+                              Publication
+                            </a>
+                          ))}
+                        {project.metaDataPresentation
+                          ?.filter((p) => p.name)
+                          .map((pres, j) => (
+                            <a
+                              key={j}
+                              href={pres.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="projectCardLink"
+                            >
+                              Presentation
+                            </a>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };

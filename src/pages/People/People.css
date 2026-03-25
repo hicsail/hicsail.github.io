@@ -1,35 +1,155 @@
-#outerContainer {
-  padding: 20px;
+/* ── People Page ── */
+
+.peoplePage {
+  background: #fbf9f7;
+  min-height: 100vh;
 }
 
-#textContainer {
-  font-family: Graphik, Helvetica, Arial, sans-serif !important;
-  margin: 1em 3em 1em 1.3em;
+/* Hero */
+.peopleHero {
+  background: #0c2340;
+  padding: 5rem 2rem 4.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-#header1 {
-  font-size: 14px;
-  font-weight: 500;
+.peopleHeroBg {
+  position: absolute;
+  right: -2%;
+  bottom: -5%;
+  height: 420px;
+  width: auto;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: saturate(0.4);
 }
 
-#header2 {
-  font-size: 30px;
-  font-family: Graphik, Helvetica, Arial, sans-serif !important;
-  font-weight: 900;
+.peopleHeroInner {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-#header3 {
-  font-size: 15px;
-  margin-bottom: 60px;
+.peopleEyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e8392a;
+  margin-bottom: 1rem;
 }
 
-#grid {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 25px;
-  row-gap: 60px;
+.peopleTitle {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1rem;
 }
 
-#personBox {
-  min-width: 300px;
-  resize: horizontal;
+.peopleSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* Section */
+.peopleSection {
+  padding: 5rem 2rem;
+}
+
+.peopleSectionInner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.peopleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.personCard {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border-top: 4px solid #e8392a;
+  box-shadow: 0 2px 12px rgba(3, 28, 56, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.personCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(3, 28, 56, 0.1);
+}
+
+.personPhotoWrap {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #efedeb;
+}
+
+.personPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.personInfo {
+  padding: 1.25rem;
+}
+
+.personName {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1b1c1b;
+  margin-bottom: 0.3rem;
+}
+
+.personRole {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #5e5c71;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.personEmail {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #e8392a;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.personEmail:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .peopleGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .peopleHero {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .peopleSection {
+    padding: 3rem 1.25rem;
+  }
 }

@@ -1,51 +1,208 @@
-#outerContainer {
+.navOuter {
   width: 100%;
-  padding-left: 40px;
-  padding-right: 20px;
+  align-self: stretch;
+  background-color: rgba(12, 35, 64, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
-#outerFlex {
-  width: 100%;
-  min-height: 60px;
-  padding-left: 0;
-  padding-right: 0;
-  justify-content: center;
-}
-
-#innerFlex1 {
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-left: 0px;
-}
-
-#innerFlex2 {
+.navInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
   display: flex;
   align-items: center;
-  font-weight: normal;
-  line-height: 50px;
+  justify-content: space-between;
 }
 
-#imgBox {
-  width: 45px;
-  object-fit: cover;
-  margin-right: 30px;
+/* Logo */
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  line-height: 1;
 }
 
-#sailText {
-  font-size: 2.5rem;
-  font-family: Graphik, Helvetica, Arial, sans-serif !important;
+.navLogo img {
+  display: block;
+}
+
+.navLogoIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.navLogoText {
+  font-family: 'Newsreader', serif;
+  font-size: 1.4rem;
   font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  position: relative;
+  top: 0.05em;
 }
 
-#navItemsFlex {
-  margin-left: 10px;
+/* Desktop links */
+.navLinks {
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 100%;
+  gap: 0.25rem;
 }
 
-#flexToggleNav {
-  width: 100%;
-  align-items: center;
+.navLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.375rem;
+  transition:
+    color 0.15s,
+    background 0.15s;
+  letter-spacing: 0.03em;
+}
+
+.navLink:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+/* Dropdown */
+.navDropdown {
+  position: relative;
+}
+
+.navDropdownMenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: #0c2340;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-width: 180px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.navDropdownItem {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.375rem;
+  transition:
+    color 0.15s,
+    background 0.15s;
+}
+
+.navDropdownItem:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* CTA button */
+.navCta {
+  background: linear-gradient(135deg, #9e0000, #cc0000);
+  color: white !important;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s,
+    transform 0.1s;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 0.75rem;
+}
+
+.navCta:hover {
+  box-shadow: 0 4px 16px rgba(158, 0, 0, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.navCta:active {
+  transform: scale(0.97);
+}
+
+/* Mobile hamburger */
+.navHamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: white;
+}
+
+/* Mobile menu */
+.mobileMenu {
+  background: #0c2340;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.mobileLink {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.15s;
+}
+
+.mobileLink:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.mobileCta {
+  display: block;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #9e0000, #cc0000);
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navLinks,
+  .navCta {
+    display: none;
+  }
+  .navHamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobileMenu {
+    display: none !important;
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "SAIL Website (webpack-dev-server)",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["webpack", "serve", "--mode", "development"],
+      "port": 8080
+    }
+  ]
+}

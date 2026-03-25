@@ -6,9 +6,8 @@ import { Projects } from './pages/Projects/Projects';
 import { Research } from './archived/Research';
 import { People } from './pages/People/People';
 import { Presentations } from './archived/Presentations';
-import { Contact } from './pages/Contact';
-import { Engineer } from './pages/Engineer';
-import { Intern } from './pages/Intern';
+import { Navigate } from 'react-router-dom';
+import { Join } from './pages/Join';
 import { SiteLayout } from './components/SiteLayout';
 
 export const App: React.FC = () => {
@@ -22,9 +21,16 @@ export const App: React.FC = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/presentations" element={<Presentations />} />
           <Route path="/publications" element={<Publications />} />
-          <Route path="/technicalstaff" element={<Engineer />} />
-          <Route path="/interns" element={<Intern />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/join" element={<Join />} />
+          <Route
+            path="/technicalstaff"
+            element={<Navigate to="/join" replace />}
+          />
+          <Route path="/interns" element={<Navigate to="/join" replace />} />
+          <Route
+            path="/contact"
+            element={<Navigate to="/#contact" replace />}
+          />
         </Route>
       </Routes>
     </Router>

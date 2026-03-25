@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/frascog/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/adcba372-ec1b-4d0b-a511-34e11ced8607/7b2c2426-1bdc-40f9-aef5-a7387ba9428c/skills/pptx/**)",
+      "Bash(python -m markitdown \"/Users/frascog/Library/CloudStorage/OneDrive-BostonUniversity/SAIL Marketing.pptx\")",
+      "Bash(python3 -m markitdown \"/Users/frascog/Library/CloudStorage/OneDrive-BostonUniversity/SAIL Marketing.pptx\")",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k: d[k] for k in [''''aboutText''''] if k in d}, indent=2\\)\\)\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(find /Users/frascog/Software/hicsail/src/pages/People -name *.css -o -name *.scss)",
+      "Bash(find /Users/frascog/Software/hicsail/src/pages/Projects -name *.css -o -name *.scss)"
+    ]
+  }
+}

@@ -1,258 +1,141 @@
-import {
-  Box,
-  Flex,
-  Text,
-  IconButton,
-  Stack,
-  Collapse,
-  Icon,
-  Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  useColorModeValue,
-  useDisclosure,
-  Image,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import * as React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import ToggleColorButton from '../ToggleColorButton';
-import { HashLink } from 'react-router-hash-link';
 import './NavigationBar.css';
-
-const texttheme = ['#E0533B', '#EBB54A', '#94ED6B'];
-
-export default function NavigationBar() {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <Box id="outerContainer">
-      <Flex id="outerFlex">
-        <Flex id="innerFlex1">
-          <Link as={ReactRouterLink} to="/" _hover={{ textDecoration: 'none' }}>
-            <Flex fontFamily={'heading'} id="innerFlex2">
-              <Box id="imgBox">
-                <Image src="../../img/circle_sail.png" />
-              </Box>
-              <Text id="sailText" _hover={{ textDecoration: 'none' }}>
-                SAIL
-              </Text>
-            </Flex>
-          </Link>
-          <Flex id="navItemsFlex" display={{ base: 'none', md: 'flex' }}>
-            <DesktopNav />
-            <ToggleColorButton borderWidth={'0'} />
-          </Flex>
-        </Flex>
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
-          id="flexToggleNav"
-        >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={5} h={5} /> : <HamburgerIcon w={9} h={9} />
-            }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-      </Flex>
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
-  );
-}
-
-const DesktopNav = () => {
-  const texttheme = ['#E0533B', '#EBB54A', '#94ED6B', '#73A6FC'];
-  return (
-    <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
-          <Popover trigger={'hover'} placement={'bottom-start'}>
-            <PopoverTrigger>
-              <Link
-                as={navItem.hash ? HashLink : ReactRouterLink}
-                to={navItem.href}
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'1rem'}
-                fontFamily="Graphik,Helvetica,Arial,sans-serif !important"
-                fontWeight={550}
-                _hover={{
-                  color:
-                    texttheme[Math.floor(Math.random() * texttheme.length)],
-                  textDecoration: 'none',
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
-            {navItem.children && (
-              <PopoverContent
-                border="5px solid white"
-                p={4}
-                rounded={'xl'}
-                minW={'sm'}
-                bg={useColorModeValue('white', '#121212')}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
-  );
-};
-
-const DesktopSubNav = ({ label, href }: NavItem) => {
-  return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      style={{ textDecoration: 'none' }}
-    >
-      <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{
-              color: texttheme[Math.floor(Math.random() * texttheme.length)],
-            }}
-            fontWeight={500}
-          >
-            {label}
-          </Text>
-        </Box>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          opacity={0}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}
-        ></Flex>
-      </Stack>
-    </Link>
-  );
-};
-
-const MobileNav = () => {
-  return (
-    <Stack p={4} display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
-      ))}
-      <ToggleColorButton borderWidth={'1px'}></ToggleColorButton>
-    </Stack>
-  );
-};
-
-const MobileNavItem = ({ label, children, href }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure();
-
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}
-        >
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
-  );
-};
 
 interface NavItem {
   label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
   href: string;
-  hash?: boolean;
+  children?: Array<{ label: string; href: string }>;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'PEOPLE',
-    href: '/people',
-    hash: false,
-  },
-  {
-    label: 'PROJECTS',
-    href: '/projects',
-    hash: false,
-  },
-  {
-    label: 'CONTACT',
-    href: '/contact',
-    hash: false,
-  },
-  {
-    label: 'JOIN',
-    href: '#',
-    hash: false,
-    children: [
-      {
-        label: 'TECHNICAL STAFF',
-        href: '/technicalstaff',
-        hash: false,
-      },
-      {
-        label: 'INTERNS',
-        href: '/interns',
-        hash: false,
-      },
-    ],
-  },
+  { label: 'Home', href: '/' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'People', href: '/people' },
+  { label: 'Contact', href: '/#contact' },
+  { label: 'Join', href: '/join' },
 ];
+
+const SailLogo = () => (
+  <img src="/img/s_logo.svg" alt="SAIL" className="navLogoIcon" />
+);
+
+const DropdownItem: React.FC<{ label: string; href: string }> = ({
+  label,
+  href,
+}) => (
+  <ReactRouterLink to={href} className="navDropdownItem">
+    {label}
+  </ReactRouterLink>
+);
+
+const DesktopNavItem: React.FC<NavItem> = ({ label, href, children }) => {
+  const [open, setOpen] = React.useState(false);
+
+  if (!children) {
+    return (
+      <ReactRouterLink to={href} className="navLink">
+        {label}
+      </ReactRouterLink>
+    );
+  }
+
+  return (
+    <div
+      className="navDropdown"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <span className="navLink" style={{ cursor: 'pointer' }}>
+        {label}
+      </span>
+      {open && (
+        <div className="navDropdownMenu">
+          {children.map((child) => (
+            <DropdownItem key={child.href} {...child} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default function NavigationBar() {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  return (
+    <div style={{ width: '100%', alignSelf: 'stretch' }}>
+      <nav className="navOuter">
+        <div className="navInner">
+          {/* Logo */}
+          <ReactRouterLink to="/" className="navLogo">
+            <SailLogo />
+            <span className="navLogoText">SAIL</span>
+          </ReactRouterLink>
+
+          {/* Desktop links */}
+          <div className="navLinks">
+            {NAV_ITEMS.map((item) => (
+              <DesktopNavItem key={item.href} {...item} />
+            ))}
+          </div>
+
+          {/* CTA */}
+          <ReactRouterLink to="/#contact" className="navCta">
+            Get Started
+          </ReactRouterLink>
+
+          {/* Mobile hamburger */}
+          <button
+            className="navHamburger"
+            aria-label="Toggle menu"
+            onClick={() => setMobileOpen((o) => !o)}
+          >
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: '1.75rem', color: 'white' }}
+            >
+              {mobileOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="mobileMenu">
+          {NAV_ITEMS.flatMap((item) =>
+            item.children
+              ? item.children.map((child) => (
+                  <ReactRouterLink
+                    key={child.href}
+                    to={child.href}
+                    className="mobileLink"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {child.label}
+                  </ReactRouterLink>
+                ))
+              : [
+                  <ReactRouterLink
+                    key={item.href}
+                    to={item.href}
+                    className="mobileLink"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </ReactRouterLink>,
+                ],
+          )}
+          <ReactRouterLink
+            to="/#contact"
+            className="mobileCta"
+            onClick={() => setMobileOpen(false)}
+          >
+            Get Started
+          </ReactRouterLink>
+        </div>
+      )}
+    </div>
+  );
+}
