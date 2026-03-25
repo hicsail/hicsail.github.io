@@ -17,7 +17,5 @@ export const OpportunitiesBanner: React.FC<Props> = ({
         </Link>
       </Button>
     </Box>
-  ) : (
-    <Box></Box>
-  );
+  ) : null;
 };

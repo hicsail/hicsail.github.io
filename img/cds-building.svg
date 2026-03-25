@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 452" fill="none">
+  <defs>
+    <!-- Angled copper fins (~40°, facing the other direction) -->
+    <pattern id="fins" x="0" y="0" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
+      <rect width="9" height="9" fill="#C87840"/>
+      <rect x="0" width="2.5" height="9" fill="#7A3E18"/>
+    </pattern>
+    <!-- Reflective glass: horizontal floor bands -->
+    <pattern id="glass" x="0" y="0" width="1" height="24" patternUnits="userSpaceOnUse">
+      <rect width="1" height="22" fill="#A8C4D8"/>
+      <rect y="22" width="1" height="2" fill="#4A7090"/>
+    </pattern>
+
+    <clipPath id="f1-4"><rect x="20" y="350" width="240" height="96"/></clipPath>
+    <clipPath id="f5-6"><rect x="5" y="302" width="210" height="48"/></clipPath>
+    <clipPath id="f7-9"><rect x="65" y="230" width="210" height="72"/></clipPath>
+    <clipPath id="f10-11"><rect x="65" y="182" width="210" height="48"/></clipPath>
+    <clipPath id="f12-14"><rect x="5" y="110" width="210" height="72"/></clipPath>
+    <clipPath id="f15"><rect x="5" y="86" width="210" height="24"/></clipPath>
+    <clipPath id="f16-17"><rect x="65" y="38" width="210" height="48"/></clipPath>
+    <clipPath id="f18"><rect x="65" y="14" width="210" height="24"/></clipPath>
+  </defs>
+
+  <!-- ══ F1–4: BARS, base (centered) ══ -->
+  <rect x="20" y="350" width="240" height="96" fill="url(#fins)" clip-path="url(#f1-4)"/>
+  <rect x="20" y="348" width="240" height="3" fill="#5A2808"/>
+  <rect x="17" y="350" width="4"   height="96" fill="#8A4820"/>
+  <rect x="258" y="350" width="4"  height="96" fill="#8A4820"/>
+  <rect x="20" y="374" width="240" height="1" fill="#5A2808" opacity="0.4"/>
+  <rect x="20" y="398" width="240" height="1" fill="#5A2808" opacity="0.4"/>
+  <rect x="20" y="422" width="240" height="1" fill="#5A2808" opacity="0.4"/>
+  <rect x="20" y="446" width="240" height="3" fill="#2A1008"/>
+
+  <!-- ══ F5–6: GLASS, LEFT ══ -->
+  <rect x="5"  y="302" width="210" height="48" fill="url(#glass)" clip-path="url(#f5-6)"/>
+  <rect x="5"  y="300" width="210" height="3"  fill="#2A3848"/>
+  <rect x="3"  y="302" width="4"   height="48" fill="#3A5870"/>
+  <rect x="213" y="302" width="4"  height="48" fill="#3A5870"/>
+  <rect x="5"  y="326" width="210" height="1" fill="#3A5870" opacity="0.5"/>
+  <rect x="5"  y="348" width="210" height="3" fill="#2A3848"/>
+
+  <!-- ══ F7–9: GLASS, RIGHT ══ -->
+  <rect x="65" y="230" width="210" height="72" fill="url(#glass)" clip-path="url(#f7-9)"/>
+  <rect x="65" y="228" width="210" height="3"  fill="#2A3848"/>
+  <rect x="63" y="230" width="4"   height="72" fill="#3A5870"/>
+  <rect x="273" y="230" width="4"  height="72" fill="#3A5870"/>
+  <rect x="65" y="254" width="210" height="1" fill="#3A5870" opacity="0.5"/>
+  <rect x="65" y="278" width="210" height="1" fill="#3A5870" opacity="0.5"/>
+  <rect x="65" y="300" width="210" height="3" fill="#2A3848"/>
+
+  <!-- ══ F10–11: BARS, RIGHT ══ -->
+  <rect x="65" y="182" width="210" height="48" fill="url(#fins)" clip-path="url(#f10-11)"/>
+  <rect x="65" y="180" width="210" height="3"  fill="#5A2808"/>
+  <rect x="63" y="182" width="4"   height="48" fill="#8A4820"/>
+  <rect x="273" y="182" width="4"  height="48" fill="#8A4820"/>
+  <rect x="65" y="206" width="210" height="1" fill="#5A2808" opacity="0.4"/>
+  <rect x="65" y="228" width="210" height="3" fill="#2A1008"/>
+
+  <!-- ══ F12–14: BARS, LEFT ══ -->
+  <rect x="5"  y="110" width="210" height="72" fill="url(#fins)" clip-path="url(#f12-14)"/>
+  <rect x="5"  y="108" width="210" height="3"  fill="#5A2808"/>
+  <rect x="3"  y="110" width="4"   height="72" fill="#8A4820"/>
+  <rect x="213" y="110" width="4"  height="72" fill="#8A4820"/>
+  <rect x="5"  y="134" width="210" height="1" fill="#5A2808" opacity="0.4"/>
+  <rect x="5"  y="158" width="210" height="1" fill="#5A2808" opacity="0.4"/>
+  <rect x="5"  y="180" width="210" height="3" fill="#2A1008"/>
+
+  <!-- ══ F15: GLASS, LEFT ══ -->
+  <rect x="5"  y="86"  width="210" height="24" fill="url(#glass)" clip-path="url(#f15)"/>
+  <rect x="5"  y="84"  width="210" height="3"  fill="#2A3848"/>
+  <rect x="3"  y="86"  width="4"   height="24" fill="#3A5870"/>
+  <rect x="213" y="86" width="4"   height="24" fill="#3A5870"/>
+  <rect x="5"  y="108" width="210" height="3"  fill="#2A3848"/>
+
+  <!-- ══ F16–17: GLASS, RIGHT ══ -->
+  <rect x="65" y="38"  width="210" height="48" fill="url(#glass)" clip-path="url(#f16-17)"/>
+  <rect x="65" y="36"  width="210" height="3"  fill="#2A3848"/>
+  <rect x="63" y="38"  width="4"   height="48" fill="#3A5870"/>
+  <rect x="273" y="38" width="4"   height="48" fill="#3A5870"/>
+  <rect x="65" y="62"  width="210" height="1" fill="#3A5870" opacity="0.5"/>
+  <rect x="65" y="84"  width="210" height="3" fill="#2A3848"/>
+
+  <!-- ══ F18: SERVICE GLASS, RIGHT ══ -->
+  <rect x="65" y="14"  width="210" height="24" fill="url(#glass)" clip-path="url(#f18)"/>
+  <rect x="65" y="12"  width="210" height="3"  fill="#2A3848"/>
+  <rect x="63" y="14"  width="4"   height="24" fill="#3A5870"/>
+  <rect x="273" y="14" width="4"   height="24" fill="#3A5870"/>
+  <rect x="65" y="36"  width="210" height="3"  fill="#2A3848"/>
+  <!-- Parapet / roof -->
+  <rect x="65" y="8"   width="210" height="6"  fill="#4A6A80"/>
+  <rect x="65" y="4"   width="210" height="5"  fill="#3A5060"/>
+</svg>
