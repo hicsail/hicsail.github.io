@@ -96,32 +96,30 @@ export const Join: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials — hidden until content is ready */}
-      {false && (
-        <section className="joinTestimonialsSection">
-          <div className="joinSectionInner">
-            <span className="joinEyebrowDark">Intern Voices</span>
-            <h2 className="joinSectionTitle">What Our Interns Say</h2>
-            <div className="joinTestimonialsGrid">
-              {INTERNTESTIMONIALS_LIST.map((intern, i) => (
-                <div className="joinTestimonialCard" key={i}>
-                  <p className="joinTestimonialQuote">"{intern.quote}"</p>
-                  <div className="joinTestimonialAuthor">
-                    <div>
-                      <div className="joinTestimonialName">{intern.name}</div>
-                      {intern.season && (
-                        <div className="joinTestimonialSeason">
-                          {intern.season}
-                        </div>
-                      )}
-                    </div>
+      {/* Testimonials */}
+      <section className="joinTestimonialsSection">
+        <div className="joinSectionInner">
+          <span className="joinEyebrowDark">Intern Voices</span>
+          <h2 className="joinSectionTitle">What Our Interns Say</h2>
+          <div className="joinTestimonialsGrid">
+            {INTERNTESTIMONIALS_LIST.map((intern, i) => (
+              <div className="joinTestimonialCard" key={i}>
+                <p className="joinTestimonialQuote">"{intern.quote}"</p>
+                <div className="joinTestimonialAuthor">
+                  <div>
+                    <div className="joinTestimonialName">{intern.name}</div>
+                    {intern.season && (
+                      <div className="joinTestimonialSeason">
+                        {intern.season}
+                      </div>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Technical Staff */}
       <section className="joinSection joinStaffSection" id="technical-staff">

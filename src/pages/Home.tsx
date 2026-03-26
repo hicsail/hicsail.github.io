@@ -269,50 +269,52 @@ export const Home: React.FC = () => {
       </section>
 
       {/* ══ TESTIMONIALS ══ */}
-      <section className={`${styles.section} ${styles.testimonialsSection}`}>
-        <div className={styles.sectionInner}>
-          <span className={styles.eyebrow}>What Researchers Say</span>
-          <h2 className={styles.sectionTitle}>
-            Trusted by Researchers Across BU
-          </h2>
-          <div className={styles.testimonialsGrid}>
-            {[
-              {
-                quote:
-                  'The SAIL team took our complex neurological data and turned it into a dashboard that our participants actually enjoy using. Their technical rigor is matched only by their understanding of the research process.',
-                name: 'Dr. Sarah Chen',
-                title: 'Lead Researcher, BU Neurosciences',
-              },
-              {
-                quote:
-                  'Working with SAIL was like having a dedicated CTO for our grant project. They understood the constraints of NIH funding and delivered a secure, HIPAA-compliant platform ahead of schedule.',
-                name: 'Prof. James Wilson',
-                title: 'Director, Population Health Initiative',
-              },
-              {
-                quote:
-                  "We came to SAIL with a rough idea and they helped us scope, build, and launch a tool that's now used by over 200 researchers internationally. I can't imagine having done this with an outside agency.",
-                name: 'Dr. Priya Nair',
-                title: 'Principal Investigator, BU School of Public Health',
-              },
-            ].map(({ quote, name, title }) => (
-              <div key={name} className={styles.testimonialCard}>
-                <span className={styles.testimonialQuoteMark}>&ldquo;</span>
-                <p className={styles.testimonialQuote}>{quote}</p>
-                <div className={styles.testimonialAuthor}>
-                  <div className={styles.testimonialAvatar}>
-                    {name.split(' ').pop()![0]}
-                  </div>
-                  <div>
-                    <div className={styles.testimonialName}>{name}</div>
-                    <div className={styles.testimonialTitle}>{title}</div>
+      {false && (
+        <section className={`${styles.section} ${styles.testimonialsSection}`}>
+          <div className={styles.sectionInner}>
+            <span className={styles.eyebrow}>What Researchers Say</span>
+            <h2 className={styles.sectionTitle}>
+              Trusted by Researchers Across BU
+            </h2>
+            <div className={styles.testimonialsGrid}>
+              {[
+                {
+                  quote:
+                    'The SAIL team took our complex neurological data and turned it into a dashboard that our participants actually enjoy using. Their technical rigor is matched only by their understanding of the research process.',
+                  name: 'Dr. Sarah Chen',
+                  title: 'Lead Researcher, BU Neurosciences',
+                },
+                {
+                  quote:
+                    'Working with SAIL was like having a dedicated CTO for our grant project. They understood the constraints of NIH funding and delivered a secure, HIPAA-compliant platform ahead of schedule.',
+                  name: 'Prof. James Wilson',
+                  title: 'Director, Population Health Initiative',
+                },
+                {
+                  quote:
+                    "We came to SAIL with a rough idea and they helped us scope, build, and launch a tool that's now used by over 200 researchers internationally. I can't imagine having done this with an outside agency.",
+                  name: 'Dr. Priya Nair',
+                  title: 'Principal Investigator, BU School of Public Health',
+                },
+              ].map(({ quote, name, title }) => (
+                <div key={name} className={styles.testimonialCard}>
+                  <span className={styles.testimonialQuoteMark}>&ldquo;</span>
+                  <p className={styles.testimonialQuote}>{quote}</p>
+                  <div className={styles.testimonialAuthor}>
+                    <div className={styles.testimonialAvatar}>
+                      {name.split(' ').pop()![0]}
+                    </div>
+                    <div>
+                      <div className={styles.testimonialName}>{name}</div>
+                      <div className={styles.testimonialTitle}>{title}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ══ BU ADVANTAGE ══ */}
       <section className={`${styles.section} ${styles.advantageSection}`}>
