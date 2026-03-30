@@ -713,7 +713,7 @@ export const Home: React.FC = () => {
           <span className={styles.eyebrow}>Why SAIL</span>
           <h2 className={styles.sectionTitle}>SAIL vs. The Alternatives</h2>
           <p className={styles.tableSubtitle}>
-            How we compare to outside consultants and other internal teams.
+            How we compare to outside consultants.
           </p>
           <div className={styles.tableWrapper}>
             <table className={styles.compTable}>
@@ -721,40 +721,27 @@ export const Home: React.FC = () => {
                 <tr>
                   <th>Feature</th>
                   <th>Outside Consultants</th>
-                  <th>Other Internal Teams</th>
                   <th>SAIL</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  [
-                    'BU Legal / Contracting',
-                    '✗ Yes, months',
-                    '✓ No, internal',
-                    '✓ No, internal',
-                  ],
-                  ['Understands Research', '✗ Rarely', 'Sometimes', '✓ Always'],
+                  ['BU Legal / Contracting', '✗ Yes, months', '✓ No, internal'],
+                  ['Understands Research', '✗ Rarely', '✓ Always'],
                   [
                     'Adapts to Research Changes',
                     '✗ Change Orders $$$',
-                    'Varies',
                     '✓ Included',
                   ],
-                  ['Grant Assistance', '✗ Payment First', 'Limited', '✓ Yes'],
+                  ['Grant Assistance', '✗ Payment First', '✓ Yes'],
                   [
                     'Stays after Handoff',
                     '✗ Additional Funds',
-                    'Varies',
                     '✓ Yes, ongoing',
                   ],
-                  ['Shared Services', '✗ Not Included', 'None', '✓ Full Stack'],
-                  [
-                    'AI Infrastructure',
-                    'Varies',
-                    'Limited',
-                    '✓ Core Experience',
-                  ],
-                ].map(([feature, col1, col2, col3]) => (
+                  ['Shared Services', '✗ Not Included', '✓ Full Stack'],
+                  ['AI Infrastructure', 'Varies', '✓ Core Experience'],
+                ].map(([feature, col1, col2]) => (
                   <tr key={feature}>
                     <td>{feature}</td>
                     <td>
@@ -777,7 +764,6 @@ export const Home: React.FC = () => {
                         col2
                       )}
                     </td>
-                    <td>{col3}</td>
                   </tr>
                 ))}
               </tbody>
