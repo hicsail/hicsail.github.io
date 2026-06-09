@@ -1,12 +1,6 @@
 {
   "people": [
     {
-      "name": "Greg Frasco",
-      "picture": "../../img/team/GregFrasco.jpg",
-      "role": "Interim Director, Associate Director of Engineering",
-      "email": "frascog@bu.edu"
-    },
-    {
       "name": "Arezoo Sadeghi",
       "picture": "../../img/team/ArezooSadeghi.jpg",
       "role": "Senior Software Engineer",
