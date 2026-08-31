@@ -1,6 +1,12 @@
 {
   "people": [
     {
+      "name": "Ian Westmacott",
+      "picture": "../../img/team/IanWestmacott.jpg",
+      "role": "Director",
+      "email": "ianw@bu.edu"
+    },
+    {
       "name": "Arezoo Sadeghi",
       "picture": "../../img/team/ArezooSadeghi.jpg",
       "role": "Senior Software Engineer",
