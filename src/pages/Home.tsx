@@ -884,7 +884,7 @@ export const Home: React.FC = () => {
                 </p>
                 <div className={styles.contactCtaBtns}>
                   <a
-                    href="https://forms.clickup.com/14225407/f/dj3zz-19191/O5PXWT7BHU30PBMMZP"
+                    href="https://unique-empress-568.notion.site/3fe3183fba7180fe841bcbb43adadd8e?pvs=105"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.contactCtaBtn}
