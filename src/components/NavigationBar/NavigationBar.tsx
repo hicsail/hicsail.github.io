@@ -11,6 +11,7 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
+  { label: 'Services', href: '/services' },
   { label: 'People', href: '/people' },
   { label: 'Contact', href: '/#contact' },
   { label: 'Join', href: '/join' },
