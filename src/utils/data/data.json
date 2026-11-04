@@ -511,5 +511,13 @@
     "Every member of our team has the opportunity to contribute towards shaping the long-term vision of our research agenda. In addition to working alongside other professional staff members with diverse backgrounds, members of SAIL collaborate with researchers at Boston University, and beyond, who are nationally respected as leaders in their corresponding fields. Being a part of Boston University also means that our team members can develop new skills classically, through access to university classes, or practically, by way of our diverse project offerings. As a unit, we take pride in tackling unique challenges, in a flexible work environment, while promoting the professional and personal growth of our staff.",
     "../../img/team/currentTeam.jpg",
     "../../img/team/Asad&Students.png"
+  ],
+  "services": [
+    {
+      "title": "TriNetX",
+      "subtitle": "BU-BMC EHR Exploration Program",
+      "description": "A collaborative platform connecting researchers with electronic health record data from Boston Medical Center through the TriNetX network, enabling clinical research and data-driven healthcare insights.",
+      "href": "https://trinetx-web.sail.codes"
+    }
   ]
 }

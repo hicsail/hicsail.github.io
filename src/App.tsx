@@ -8,6 +8,7 @@ import { People } from './pages/People/People';
 import { Presentations } from './archived/Presentations';
 import { Navigate } from 'react-router-dom';
 import { Join } from './pages/Join';
+import { Services } from './pages/Services/Services';
 import { SiteLayout } from './components/SiteLayout';
 
 export const App: React.FC = () => {
@@ -19,6 +20,7 @@ export const App: React.FC = () => {
           <Route path="/people" element={<People />} />
           <Route path="/research" element={<Research />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/presentations" element={<Presentations />} />
           <Route path="/publications" element={<Publications />} />
           <Route path="/join" element={<Join />} />

@@ -1,0 +1,160 @@
+/* ── Services Page ── */
+
+.servicesPage {
+  background: #fbf9f7;
+  min-height: 100vh;
+}
+
+/* Hero */
+.servicesHero {
+  background: #0c2340;
+  padding: 5rem 2rem 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicesHeroBg {
+  position: absolute;
+  right: -2%;
+  bottom: -5%;
+  height: 420px;
+  width: auto;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: saturate(0.4);
+}
+
+.servicesHeroInner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.servicesEyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e8392a;
+  margin-bottom: 1rem;
+}
+
+.servicesTitle {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.servicesSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0;
+}
+
+/* Section */
+.servicesSection {
+  padding: 4rem 2rem 6rem;
+}
+
+.servicesSectionInner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Card */
+.serviceCard {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  border-top: 4px solid #2e7d32;
+  box-shadow: 0 2px 12px rgba(3, 28, 56, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(3, 28, 56, 0.1);
+}
+
+.serviceCardBody {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.serviceCardTitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b1c1b;
+  margin: 0 0 0.4rem;
+  line-height: 1.2;
+}
+
+.serviceCardSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #5e5c71;
+  margin: 0 0 0.85rem;
+}
+
+.serviceCardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.serviceCardLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e8392a;
+  text-decoration: none;
+  border: 1.5px solid #e8392a;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.18s ease;
+  width: fit-content;
+}
+
+.serviceCardLink:hover {
+  background: #e8392a;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesHero {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+
+  .servicesSection {
+    padding: 3rem 1.25rem 4rem;
+  }
+}
